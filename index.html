@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aerial object-detection benchmark viewer for comparing model outputs against ground truth.">
+    <title>Aerial Detection Atlas</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand-block">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">Benchmark evaluation</p>
+            <h1>Detection Atlas</h1>
+          </div>
+        </div>
+
+        <div class="scene-summary" aria-live="polite">
+          <strong id="sceneTitle">Loading scene</strong>
+          <span id="sceneMeta">Preparing viewer</span>
+        </div>
+
+        <div class="topbar-controls">
+          <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <span class="theme-toggle-sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+            </span>
+            <span class="theme-toggle-moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3c-.02.27-.03.54-.03.81A9 9 0 0 0 20.19 12c.27 0 .54-.01.81-.03Z"></path></svg>
+            </span>
+          </button>
+
+          <div class="mode-control" role="group" aria-label="Viewer mode">
+            <button class="mode-button is-active" data-mode="overlay" type="button">Overlay</button>
+            <button class="mode-button" data-mode="split" type="button">Split</button>
+            <button class="mode-button" data-mode="focus" type="button">Focus</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="scene-panel" aria-label="Scenes">
+          <div class="panel-heading">
+            <span>Scenes</span>
+            <small id="sceneCount">0 samples</small>
+          </div>
+          <div id="sceneList" class="scene-list"></div>
+        </aside>
+
+        <section class="viewer-panel" aria-label="Detection viewer">
+          <div class="viewer-toolbar">
+            <button id="prevScene" class="icon-button" type="button" aria-label="Previous scene" title="Previous scene">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6 9 12l6 6"></path></svg>
+            </button>
+            <button id="nextScene" class="icon-button" type="button" aria-label="Next scene" title="Next scene">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+            </button>
+            <span class="toolbar-divider"></span>
+            <button id="zoomOut" class="icon-button" type="button" aria-label="Zoom out" title="Zoom out">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><path d="M15 15 21 21M7.5 10.5h6"></path></svg>
+            </button>
+            <button id="fitView" class="icon-button" type="button" aria-label="Fit view" title="Fit view">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"></path></svg>
+            </button>
+            <button id="zoomIn" class="icon-button" type="button" aria-label="Zoom in" title="Zoom in">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><path d="M15 15 21 21M10.5 7.5v6M7.5 10.5h6"></path></svg>
+            </button>
+            <span id="zoomReadout" class="zoom-readout">100%</span>
+            <span class="toolbar-spacer"></span>
+            <button id="toggleGroundTruth" class="text-button gt-toggle is-active" type="button" aria-pressed="true">
+              <span class="toggle-indicator" aria-hidden="true"></span>
+              <span id="groundTruthText">Ground truth On</span>
+            </button>
+          </div>
+
+          <div id="viewerFrame" class="viewer-frame" tabindex="0">
+            <div id="viewerContent" class="viewer-content">
+              <div id="overlayStack" class="image-stack overlay-stack"></div>
+              <div id="splitLeft" class="image-stack split-stack split-left"></div>
+              <div id="splitRight" class="image-stack split-stack split-right"></div>
+              <div id="splitDivider" class="split-divider" role="separator" aria-label="Drag to compare split" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+              <div id="splitLeftBadge" class="split-badge split-badge-left"></div>
+              <div id="splitRightBadge" class="split-badge split-badge-right"></div>
+              <div id="focusLens" class="focus-lens" aria-hidden="true">
+                <div id="focusLensContent" class="focus-lens-content"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-strip">
+            <div>
+              <span id="activeModelLabel" class="status-label">Active models</span>
+              <strong id="activeModelCount">0</strong>
+            </div>
+            <div>
+              <span id="bestIouLabel" class="status-label">GT boxes</span>
+              <strong id="bestIou">0.00</strong>
+            </div>
+            <div>
+              <span id="predictionCountLabel" class="status-label">Pred boxes</span>
+              <strong id="predictionCount">0</strong>
+            </div>
+          </div>
+        </section>
+
+        <aside class="model-panel" aria-label="Models">
+          <div class="panel-heading">
+            <span>Predictions</span>
+            <small id="hoverHint">Hover to isolate</small>
+          </div>
+
+          <section class="legend-block" aria-label="Segmentation classes">
+            <div class="subheading-row">
+              <span>Classes</span>
+              <small id="taskLabel">Object detection</small>
+            </div>
+            <div id="classLegend" class="class-legend"></div>
+          </section>
+
+          <div class="actions-row">
+            <button id="selectAll" class="small-button" type="button">Select all</button>
+            <button id="clearAll" class="small-button subtle" type="button">Clear</button>
+          </div>
+
+          <div class="control-block">
+            <label class="range-group" for="opacityRange">
+              <span>Opacity</span>
+              <input id="opacityRange" type="range" min="15" max="100" value="100">
+            </label>
+          </div>
+
+          <div id="splitSelectors" class="split-selectors">
+            <label>
+              <span>Left side</span>
+              <select id="splitA"></select>
+            </label>
+            <label>
+              <span>Right side</span>
+              <select id="splitB"></select>
+            </label>
+          </div>
+
+          <div id="modelList" class="model-list"></div>
+        </aside>
+      </main>
+
+      <div id="detectionModal" class="detection-modal" hidden aria-hidden="true">
+        <div id="detectionModalBackdrop" class="detection-modal-backdrop"></div>
+        <section class="detection-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="detectionModalTitle">
+          <header class="detection-modal-header">
+            <div class="detection-modal-copy">
+              <strong id="detectionModalTitle">Detection detail</strong>
+              <span id="detectionModalMeta">Zoomed detail</span>
+            </div>
+            <button id="detectionModalClose" class="icon-button detection-modal-close" type="button" aria-label="Close detail view" title="Close detail view">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+            </button>
+          </header>
+          <div class="detection-modal-grid">
+            <section class="crop-card">
+              <div class="crop-card-head">
+                <span>Real image</span>
+              </div>
+              <div id="detectionCropPlain" class="crop-stage"></div>
+            </section>
+            <section class="crop-card">
+              <div class="crop-card-head">
+                <span id="detectionOverlayTitle">Detection</span>
+              </div>
+              <div id="detectionCropOverlay" class="crop-stage"></div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="data/sample-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10231d"/>
+      <stop offset="0.5" stop-color="#17382d"/>
+      <stop offset="1" stop-color="#16334d"/>
+    </linearGradient>
+    <linearGradient id="splitGlow" x1="18" y1="46" x2="46" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b8fff1"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="url(#bg)"/>
+
+  <g opacity="0.22">
+    <path d="M6 28h52M6 40h52M24 6v52M37 6v52" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <g>
+    <path d="M8 58V6h50" fill="none" stroke="#2ed39d" stroke-opacity=".16" stroke-width="10"/>
+    <path d="M34 14 47 18 52 29 44 40 30 37 26 25Z" fill="#ff1b12" fill-opacity=".78"/>
+    <path d="M15 35 27 31 33 39 28 50 15 49 10 40Z" fill="#35d8eb" fill-opacity=".88"/>
+    <path d="M25 45 48 45" stroke="#fff000" stroke-opacity=".9" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="22" cy="21" r="4" fill="#1a18ff" fill-opacity=".82"/>
+  </g>
+
+  <path d="M16 48 48 16" stroke="#08110e" stroke-opacity=".34" stroke-width="4" stroke-linecap="round"/>
+  <path d="M15 49 49 15" stroke="url(#splitGlow)" stroke-width="2.8" stroke-linecap="round"/>
+
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="none" stroke="#ffffff" stroke-opacity=".32"/>
+</svg>
