@@ -9,7 +9,7 @@ const state = {
   selected: new Set(),
   hoveredModel: null,
   showGroundTruth: false,
-  overlayOpacity: 1,
+  overlayOpacity: 0.5,
   split: 50,
   splitA: data.models[0]?.id || "",
   splitB: "all-other-models",
@@ -357,6 +357,9 @@ function openDetectionModal(detection) {
 function createBoxesLayer(scene, boxes, options = {}) {
   const layer = document.createElement("div");
   layer.className = `box-layer${options.kind === "ground-truth" ? " is-ground-truth" : ""}`;
+  layer.dataset.kind = options.kind || "prediction";
+  if (options.model?.id) layer.dataset.modelId = options.model.id;
+  layer.style.opacity = String(options.opacity ?? 1);
   const occupiedLabels = options.occupiedLabels || [];
 
   boxes.forEach((box) => {
@@ -380,7 +383,6 @@ function createBoxesLayer(scene, boxes, options = {}) {
     boxEl.style.height = `${(height / scene.height) * 100}%`;
     boxEl.style.setProperty("--box-color", modelColor);
     boxEl.style.setProperty("--box-fill", withAlpha(modelColor, options.kind === "ground-truth" ? 0.08 : 0.14));
-    boxEl.style.opacity = String(options.opacity ?? 1);
     boxEl.style.zIndex = String(options.zIndex || 2);
     boxEl.tabIndex = 0;
     boxEl.role = "button";
@@ -447,7 +449,7 @@ function renderStack(container, scene, models, options = {}) {
   if (state.showGroundTruth && scene.groundTruth?.length) {
     container.append(createBoxesLayer(scene, scene.groundTruth, {
       kind: "ground-truth",
-      opacity: 1,
+      opacity: state.overlayOpacity,
       zIndex: 12,
       occupiedLabels
     }));
@@ -512,8 +514,26 @@ function viewerSignature(scene = currentScene()) {
     displayed: [...displayedModels(scene)].map((model) => model.id),
     hoveredModel: state.hoveredModel,
     splitA: state.splitA,
-    splitB: state.splitB,
-    overlayOpacity: state.overlayOpacity
+    splitB: state.splitB
+  });
+}
+
+function boxLayerOpacity(layer) {
+  const kind = layer.dataset.kind;
+  const modelId = layer.dataset.modelId;
+  if (kind === "ground-truth") return state.overlayOpacity;
+  if (kind === "prediction" && modelId) {
+    const isHovered = Boolean(state.hoveredModel && state.hoveredModel === modelId);
+    const isDimmed = Boolean(state.hoveredModel && state.hoveredModel !== modelId);
+    if (isDimmed) return 0.05;
+    if (isHovered) return Math.min(state.overlayOpacity + 0.24, 0.98);
+  }
+  return state.overlayOpacity;
+}
+
+function updateExistingLayerOpacity() {
+  document.querySelectorAll(".box-layer").forEach((layer) => {
+    layer.style.opacity = String(boxLayerOpacity(layer));
   });
 }
 
@@ -775,7 +795,7 @@ function renderMode() {
   els.taskLabel.textContent = "Object detection";
   els.toggleGroundTruth.classList.toggle("is-active", state.showGroundTruth);
   els.toggleGroundTruth.setAttribute("aria-pressed", String(state.showGroundTruth));
-  els.groundTruthText.textContent = `Ground truth ${state.showGroundTruth ? "On" : "Off"}`;
+  els.groundTruthText.textContent = "Ground Truth";
 }
 
 function render() {
@@ -843,7 +863,7 @@ els.modeButtons.forEach((button) => {
 
 els.opacityRange.addEventListener("input", () => {
   state.overlayOpacity = Number(els.opacityRange.value) / 100;
-  renderViewer();
+  updateExistingLayerOpacity();
 });
 
 els.splitA.addEventListener("change", () => {
