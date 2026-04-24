@@ -719,6 +719,8 @@ function renderViewer(force = false) {
 
 function renderScenes() {
   const scenes = visibleScenes();
+  const preserveVerticalScroll = !window.matchMedia("(max-width: 760px)").matches;
+  const previousScrollTop = preserveVerticalScroll ? els.sceneList.scrollTop : 0;
   els.sceneCount.textContent = `${scenes.length} samples`;
   const fragment = document.createDocumentFragment();
 
@@ -750,6 +752,10 @@ function renderScenes() {
   });
 
   els.sceneList.replaceChildren(fragment);
+
+  if (preserveVerticalScroll) {
+    els.sceneList.scrollTop = previousScrollTop;
+  }
 
   const activeCard = els.sceneList.querySelector(`[data-scene-index="${state.sceneIndex}"]`);
   if (activeCard && window.matchMedia("(max-width: 760px)").matches) {
