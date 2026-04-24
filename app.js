@@ -85,6 +85,7 @@ let lastViewerSignature = "";
 let lastRenderedSceneId = "";
 let scenesInitialized = false;
 let viewerRefreshTimer = 0;
+let focusLensRefreshFrame = 0;
 
 function resolveInitialTheme() {
   const stored = window.localStorage.getItem(themeStorageKey);
@@ -347,9 +348,17 @@ function createBaseImageLayer(scene) {
   const primary = sceneBaseImage(scene);
   const fallback = resolveAssetPath(scene.sourceImage || scene.thumbnailImage || scene.baseImage);
   const img = createImageLayer(primary, "base-layer");
+  const queueFocusLensRefresh = () => {
+    if (state.mode !== "focus") return;
+    window.cancelAnimationFrame(focusLensRefreshFrame);
+    focusLensRefreshFrame = window.requestAnimationFrame(() => {
+      renderFocusLens();
+    });
+  };
   const reveal = () => {
     img.classList.add("is-ready");
     img.parentElement?.classList.remove("is-loading");
+    queueFocusLensRefresh();
   };
   const handleError = () => {
     if (fallback && fallback !== primary && img.dataset.fallbackApplied !== "true") {
@@ -359,6 +368,7 @@ function createBaseImageLayer(scene) {
       return;
     }
     img.parentElement?.classList.remove("is-loading");
+    queueFocusLensRefresh();
   };
 
   img.addEventListener("load", reveal);
@@ -577,13 +587,24 @@ function renderStack(container, scene, models, options = {}) {
 
 function renderFocusLens() {
   if (state.mode !== "focus") {
+    window.cancelAnimationFrame(focusLensRefreshFrame);
     els.focusLensContent.replaceChildren();
     return;
   }
 
-  const clone = els.overlayStack.cloneNode(true);
+  const sourceStack = els.overlayStack;
+  const clone = sourceStack.cloneNode(true);
   clone.removeAttribute("id");
   clone.className = "image-stack overlay-stack focus-lens-stack";
+  const sourceImages = [...sourceStack.querySelectorAll("img")];
+  const cloneImages = [...clone.querySelectorAll("img")];
+  cloneImages.forEach((image, index) => {
+    const sourceImage = sourceImages[index];
+    if (!sourceImage) return;
+    if (sourceImage.classList.contains("is-ready") || (sourceImage.complete && sourceImage.naturalWidth > 0)) {
+      image.classList.add("is-ready");
+    }
+  });
   els.focusLensContent.replaceChildren(clone);
   updateFocusLensPosition();
 }
