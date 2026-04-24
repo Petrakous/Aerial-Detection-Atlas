@@ -1,4 +1,5 @@
 const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.TRIFID_DEMO_DATA;
+const releaseAssetBase = "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-v1/";
 
 const availableModelIds = new Set(data.models.map((model) => model.id));
 
@@ -96,8 +97,26 @@ function currentScene() {
   return data.scenes[state.sceneIndex];
 }
 
+function resolveAssetPath(path) {
+  if (!path) return path;
+  const isPagesHost = window.location.hostname === "petrakous.github.io";
+  if (!isPagesHost) return path;
+
+  if (path.startsWith("viewer/LADD/")) {
+    const fileName = path.slice("viewer/LADD/".length);
+    return `${releaseAssetBase}viewer-LADD-${fileName}`;
+  }
+
+  if (path.startsWith("thumbnails/LADD/")) {
+    const fileName = path.slice("thumbnails/LADD/".length);
+    return `${releaseAssetBase}thumbnail-LADD-${fileName}`;
+  }
+
+  return path;
+}
+
 function sceneBaseImage(scene) {
-  return scene.baseImage || scene.sourceImage || scene.thumbnailImage;
+  return resolveAssetPath(scene.baseImage || scene.sourceImage || scene.thumbnailImage);
 }
 
 function readyModels(scene = currentScene()) {
@@ -260,7 +279,7 @@ function createImageLayer(src, className) {
 
 function createBaseImageLayer(scene) {
   const primary = sceneBaseImage(scene);
-  const fallback = scene.sourceImage || scene.thumbnailImage || scene.baseImage;
+  const fallback = resolveAssetPath(scene.sourceImage || scene.thumbnailImage || scene.baseImage);
   const img = createImageLayer(primary, "base-layer");
   if (fallback && fallback !== primary) {
     img.addEventListener("error", () => {
@@ -638,7 +657,7 @@ function renderScenes() {
     });
 
     const image = document.createElement("img");
-    image.src = scene.thumbnailImage || scene.baseImage;
+    image.src = resolveAssetPath(scene.thumbnailImage || scene.baseImage);
     image.alt = "";
     image.draggable = false;
     image.loading = index < 6 ? "eager" : "lazy";
