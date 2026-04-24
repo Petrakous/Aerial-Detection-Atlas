@@ -2,9 +2,11 @@ const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.T
 const releaseAssetBase = "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-v1/";
 
 const availableModelIds = new Set(data.models.map((model) => model.id));
+const availableDatasets = [...new Set(data.scenes.map((scene) => scene.dataset))];
 
 const state = {
   sceneIndex: 0,
+  datasetId: availableDatasets[0] || "",
   mode: "overlay",
   theme: "light",
   selected: new Set(),
@@ -20,13 +22,19 @@ const state = {
   dragging: false,
   splitDragging: false,
   dragStart: { x: 0, y: 0, panX: 0, panY: 0 },
-  activeDetection: null
+  pointerX: null,
+  pointerY: null,
+  activeDetection: null,
+  skipNextViewerAnimation: false
 };
 
 const els = {
   sceneTitle: document.querySelector("#sceneTitle"),
   sceneMeta: document.querySelector("#sceneMeta"),
   sceneCount: document.querySelector("#sceneCount"),
+  datasetControl: document.querySelector("#datasetControl"),
+  datasetSelect: document.querySelector("#datasetSelect"),
+  datasetMeta: document.querySelector("#datasetMeta"),
   sceneList: document.querySelector("#sceneList"),
   modelList: document.querySelector("#modelList"),
   viewerFrame: document.querySelector("#viewerFrame"),
@@ -72,8 +80,9 @@ const els = {
 
 const themeStorageKey = "detection-atlas-theme";
 const groundTruthColor = "#ff5d5d";
-const viewerFadeMs = 180;
+const viewerFadeMs = 500;
 let lastViewerSignature = "";
+let lastRenderedSceneId = "";
 let scenesInitialized = false;
 let viewerRefreshTimer = 0;
 
@@ -94,7 +103,25 @@ function applyTheme(theme) {
 }
 
 function currentScene() {
-  return data.scenes[state.sceneIndex];
+  return visibleScenes()[state.sceneIndex];
+}
+
+function datasetOptions() {
+  return availableDatasets.map((datasetId) => {
+    const scenes = data.scenes.filter((scene) => scene.dataset === datasetId);
+    return {
+      id: datasetId,
+      label: datasetId,
+      count: scenes.length,
+      taskTypes: [...new Set(scenes.map((scene) => scene.taskType).filter(Boolean))]
+    };
+  });
+}
+
+function visibleScenes() {
+  return state.datasetId
+    ? data.scenes.filter((scene) => scene.dataset === state.datasetId)
+    : data.scenes;
 }
 
 function resolveAssetPath(path) {
@@ -120,6 +147,7 @@ function sceneBaseImage(scene) {
 }
 
 function readyModels(scene = currentScene()) {
+  if (!scene) return [];
   return data.models.filter((model) => Array.isArray(scene.predictions?.[model.id]));
 }
 
@@ -135,6 +163,12 @@ function displayedModels(scene = currentScene()) {
     return readyModels(scene).filter((model) => model.id === state.hoveredModel);
   }
   return [];
+}
+
+function effectiveHoverModel(scene = currentScene()) {
+  if (state.mode === "split" || !state.hoveredModel) return null;
+  const displayedModelIds = new Set(displayedModels(scene).map((model) => model.id));
+  return displayedModelIds.has(state.hoveredModel) ? state.hoveredModel : null;
 }
 
 function modelStatsForScene(scene, modelId) {
@@ -189,6 +223,9 @@ function splitSideForModel(modelId, scene = currentScene()) {
 }
 
 function ensureSceneState() {
+  const scenes = visibleScenes();
+  if (!scenes.length) return;
+  if (state.sceneIndex >= scenes.length) state.sceneIndex = 0;
   const scene = currentScene();
   const sceneModelIds = new Set(readyModels(scene).map((model) => model.id));
 
@@ -208,8 +245,37 @@ function ensureSceneState() {
 function normalizeHoveredModel(scene = currentScene()) {
   const sceneModelIds = new Set(readyModels(scene).map((model) => model.id));
   if (!state.hoveredModel) return;
-  if (!sceneModelIds.has(state.hoveredModel) || !state.selected.has(state.hoveredModel) || state.mode === "split") {
+  if (!sceneModelIds.has(state.hoveredModel) || state.mode === "split") {
     state.hoveredModel = null;
+  }
+}
+
+function syncHoveredModelFromPointer(scene = currentScene()) {
+  if (state.mode === "split" || state.pointerX == null || state.pointerY == null) {
+    state.hoveredModel = null;
+    return;
+  }
+
+  const hoveredElement = document.elementFromPoint(state.pointerX, state.pointerY);
+  const modelRow = hoveredElement?.closest?.(".model-row");
+  const modelId = modelRow?.dataset.modelId || null;
+  const sceneModelIds = new Set(readyModels(scene).map((model) => model.id));
+  state.hoveredModel = modelId && sceneModelIds.has(modelId) ? modelId : null;
+}
+
+function updateModelHoverGlow(scene = currentScene()) {
+  const activeHoverModel = effectiveHoverModel(scene);
+  els.modelList.querySelectorAll(".model-row").forEach((row) => {
+    row.classList.toggle("is-hovered", row.dataset.modelId === activeHoverModel);
+  });
+}
+
+function syncPointerHoverState(scene = currentScene()) {
+  const previousHoveredModel = state.hoveredModel;
+  syncHoveredModelFromPointer(scene);
+  if (previousHoveredModel !== state.hoveredModel) {
+    updateModelHoverGlow(scene);
+    renderViewer();
   }
 }
 
@@ -281,12 +347,24 @@ function createBaseImageLayer(scene) {
   const primary = sceneBaseImage(scene);
   const fallback = resolveAssetPath(scene.sourceImage || scene.thumbnailImage || scene.baseImage);
   const img = createImageLayer(primary, "base-layer");
-  if (fallback && fallback !== primary) {
-    img.addEventListener("error", () => {
-      if (img.dataset.fallbackApplied === "true") return;
+  const reveal = () => {
+    img.classList.add("is-ready");
+    img.parentElement?.classList.remove("is-loading");
+  };
+  const handleError = () => {
+    if (fallback && fallback !== primary && img.dataset.fallbackApplied !== "true") {
       img.dataset.fallbackApplied = "true";
+      img.classList.remove("is-ready");
       img.src = fallback;
-    }, { once: true });
+      return;
+    }
+    img.parentElement?.classList.remove("is-loading");
+  };
+
+  img.addEventListener("load", reveal);
+  img.addEventListener("error", handleError);
+  if (img.complete && img.naturalWidth > 0) {
+    queueMicrotask(reveal);
   }
   return img;
 }
@@ -460,10 +538,12 @@ function renderStack(container, scene, models, options = {}) {
     container.querySelectorAll(".box-layer").forEach((layer) => layer.remove());
   } else {
     container.replaceChildren();
+    container.classList.toggle("is-loading", Boolean(baseImage));
     if (baseImage) container.append(createBaseImageLayer(scene));
   }
 
   const occupiedLabels = [];
+  const hoverModel = effectiveHoverModel(scene);
 
   if (state.showGroundTruth && scene.groundTruth?.length) {
     container.append(createBoxesLayer(scene, scene.groundTruth, {
@@ -478,8 +558,8 @@ function renderStack(container, scene, models, options = {}) {
     const boxes = scene.predictions?.[model.id];
     if (!boxes?.length) return;
 
-    const isHovered = Boolean(state.hoveredModel && state.hoveredModel === model.id);
-    const isDimmed = Boolean(state.hoveredModel && state.hoveredModel !== model.id);
+    const isHovered = Boolean(hoverModel && hoverModel === model.id);
+    const isDimmed = Boolean(hoverModel && hoverModel !== model.id);
     const opacity = isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 0.98) : state.overlayOpacity;
 
     container.append(createBoxesLayer(scene, boxes, {
@@ -490,7 +570,7 @@ function renderStack(container, scene, models, options = {}) {
       isEmphasized: isHovered,
       zIndex: 4 + index,
       occupiedLabels,
-      showLabels: !state.hoveredModel || isHovered
+      showLabels: !hoverModel || isHovered
     }));
   });
 }
@@ -529,9 +609,8 @@ function viewerSignature(scene = currentScene()) {
     scene: scene.id,
     mode: state.mode,
     showGroundTruth: state.showGroundTruth,
-    selected: [...visibleSelectedModels(scene)].map((model) => model.id),
     displayed: [...displayedModels(scene)].map((model) => model.id),
-    hoveredModel: state.hoveredModel,
+    hoverModel: effectiveHoverModel(scene),
     splitA: state.splitA,
     splitB: state.splitB
   });
@@ -540,10 +619,11 @@ function viewerSignature(scene = currentScene()) {
 function boxLayerOpacity(layer) {
   const kind = layer.dataset.kind;
   const modelId = layer.dataset.modelId;
+  const hoverModel = effectiveHoverModel();
   if (kind === "ground-truth") return state.overlayOpacity;
   if (kind === "prediction" && modelId) {
-    const isHovered = Boolean(state.hoveredModel && state.hoveredModel === modelId);
-    const isDimmed = Boolean(state.hoveredModel && state.hoveredModel !== modelId);
+    const isHovered = Boolean(hoverModel && hoverModel === modelId);
+    const isDimmed = Boolean(hoverModel && hoverModel !== modelId);
     if (isDimmed) return 0.05;
     if (isHovered) return Math.min(state.overlayOpacity + 0.24, 0.98);
   }
@@ -554,6 +634,10 @@ function updateExistingLayerOpacity() {
   document.querySelectorAll(".box-layer").forEach((layer) => {
     layer.style.opacity = String(boxLayerOpacity(layer));
   });
+}
+
+function fadeLayerToTarget(layer, targetOpacity) {
+  layer.style.opacity = String(targetOpacity);
 }
 
 function updateViewerFrame() {
@@ -594,56 +678,51 @@ function animateViewerLayerRefresh() {
   const targets = viewerStacks()
     .flatMap((target) => [...target.querySelectorAll(".box-layer")]);
   window.clearTimeout(viewerRefreshTimer);
-  targets.forEach((target) => {
-    target.classList.remove("is-fading-in");
-    target.classList.add("is-fading-out");
-  });
+  targets.forEach((target) => fadeLayerToTarget(target, 0));
 
   viewerRefreshTimer = window.setTimeout(() => {
     rebuildViewerLayers({ preserveBaseImage: true });
     const nextTargets = viewerStacks()
       .flatMap((target) => [...target.querySelectorAll(".box-layer")]);
-    nextTargets.forEach((target) => {
-      target.classList.remove("is-fading-out");
-      target.classList.add("is-fading-in");
-    });
+    nextTargets.forEach((target) => fadeLayerToTarget(target, 0));
 
-    window.setTimeout(() => {
-      nextTargets.forEach((target) => target.classList.remove("is-fading-in"));
-    }, viewerFadeMs);
-  }, Math.round(viewerFadeMs * 0.45));
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        nextTargets.forEach((target) => fadeLayerToTarget(target, boxLayerOpacity(target)));
+      });
+    });
+  }, Math.round(viewerFadeMs * 0.5));
 }
 
 function renderViewer(force = false) {
+  const scene = currentScene();
+  if (!scene) return;
   const signature = viewerSignature();
   if (force || signature !== lastViewerSignature) {
-    const shouldAnimate = !force && lastViewerSignature;
+    const sceneChanged = scene.id !== lastRenderedSceneId;
+    const shouldAnimate = !force && lastViewerSignature && !state.skipNextViewerAnimation && !sceneChanged;
     if (shouldAnimate) {
       animateViewerLayerRefresh();
     } else {
+      window.clearTimeout(viewerRefreshTimer);
+      viewerStacks()
+        .flatMap((target) => [...target.querySelectorAll(".box-layer")])
+        .forEach((target) => fadeLayerToTarget(target, boxLayerOpacity(target)));
       rebuildViewerLayers();
     }
+    state.skipNextViewerAnimation = false;
     lastViewerSignature = signature;
+    lastRenderedSceneId = scene.id;
   }
   updateViewerFrame();
 }
 
 function renderScenes() {
-  if (scenesInitialized) {
-    els.sceneList.querySelectorAll(".scene-card").forEach((card) => {
-      card.classList.toggle("is-active", Number(card.dataset.sceneIndex) === state.sceneIndex);
-    });
-    const activeCard = els.sceneList.querySelector(`[data-scene-index="${state.sceneIndex}"]`);
-    if (activeCard && window.matchMedia("(max-width: 760px)").matches) {
-      activeCard.scrollIntoView({ inline: "center", block: "nearest", behavior: "auto" });
-    }
-    return;
-  }
-
-  els.sceneCount.textContent = `${data.scenes.length} samples`;
+  const scenes = visibleScenes();
+  els.sceneCount.textContent = `${scenes.length} samples`;
   const fragment = document.createDocumentFragment();
 
-  data.scenes.forEach((scene, index) => {
+  scenes.forEach((scene, index) => {
     const button = document.createElement("button");
     button.className = `scene-card${index === state.sceneIndex ? " is-active" : ""}`;
     button.type = "button";
@@ -679,38 +758,72 @@ function renderScenes() {
   scenesInitialized = true;
 }
 
+function renderDatasetControl() {
+  const datasets = datasetOptions();
+  els.datasetControl.hidden = datasets.length < 1;
+  els.datasetSelect.innerHTML = datasets
+    .map((dataset) => `<option value="${dataset.id}">${dataset.label}</option>`)
+    .join("");
+  els.datasetSelect.value = state.datasetId;
+  const activeDataset = datasets.find((dataset) => dataset.id === state.datasetId);
+  if (activeDataset) {
+    const taskLabel = activeDataset.taskTypes.length > 1
+      ? `${activeDataset.taskTypes.length} tasks`
+      : (activeDataset.taskTypes[0] || "Object detection").replace(/-/g, " ");
+    els.datasetMeta.textContent = `${activeDataset.count} scenes · ${taskLabel}`;
+  } else {
+    els.datasetMeta.textContent = "No dataset loaded";
+  }
+}
+
 function renderModels() {
   const scene = currentScene();
   const fragment = document.createDocumentFragment();
   const splitMode = state.mode === "split";
   const sceneModels = readyModels(scene);
   normalizeHoveredModel(scene);
+  syncHoveredModelFromPointer(scene);
+  const activeHoverModel = effectiveHoverModel(scene);
 
   data.models.forEach((model) => {
     const sceneStats = modelStatsForScene(scene, model.id);
     const hasSceneOutput = sceneModels.some((item) => item.id === model.id);
     const row = document.createElement("button");
     row.type = "button";
-    row.className = `model-row${state.selected.has(model.id) ? " is-selected" : ""}${state.hoveredModel === model.id ? " is-hovered" : ""}${splitMode ? " is-readonly" : ""}${hasSceneOutput ? "" : " is-pending"}`;
+    row.dataset.modelId = model.id;
+    row.className = `model-row${state.selected.has(model.id) ? " is-selected" : ""}${activeHoverModel === model.id ? " is-hovered" : ""}${splitMode ? " is-readonly" : ""}${hasSceneOutput ? "" : " is-pending"}`;
     row.style.setProperty("--model-color", model.color);
     row.disabled = !hasSceneOutput && !splitMode;
 
-    row.addEventListener("pointerenter", () => {
+    row.addEventListener("pointerenter", (event) => {
       if (!hasSceneOutput || splitMode) return;
+      state.pointerX = event.clientX;
+      state.pointerY = event.clientY;
       state.hoveredModel = model.id;
+      updateModelHoverGlow(scene);
       renderViewer();
     });
 
-    row.addEventListener("pointerleave", () => {
+    row.addEventListener("pointerleave", (event) => {
       if (!hasSceneOutput || splitMode) return;
-      state.hoveredModel = null;
+      state.pointerX = event.clientX;
+      state.pointerY = event.clientY;
+      syncHoveredModelFromPointer(scene);
+      updateModelHoverGlow(scene);
       renderViewer();
+    });
+
+    row.addEventListener("pointermove", (event) => {
+      state.pointerX = event.clientX;
+      state.pointerY = event.clientY;
     });
 
     if (!splitMode) {
       row.addEventListener("click", () => {
         if (!hasSceneOutput) return;
-        state.hoveredModel = null;
+        const keepHoverState = state.hoveredModel === model.id;
+        state.skipNextViewerAnimation = keepHoverState;
+        if (!keepHoverState) state.hoveredModel = null;
         if (state.selected.has(model.id)) state.selected.delete(model.id);
         else state.selected.add(model.id);
         render();
@@ -742,6 +855,7 @@ function renderModels() {
   });
 
   els.modelList.replaceChildren(fragment);
+  updateModelHoverGlow(scene);
 }
 
 function renderLegend() {
@@ -776,6 +890,7 @@ function renderSplitSelectors() {
 
 function renderSummary() {
   const scene = currentScene();
+  if (!scene) return;
   const visibleModels = displayedModels(scene);
   const leftModels = modelsForSplitChoice(state.splitA, state.splitB, scene);
   const rightModels = modelsForSplitChoice(state.splitB, state.splitA, scene);
@@ -794,6 +909,7 @@ function renderSummary() {
 
 function renderMode() {
   const scene = currentScene();
+  if (!scene) return;
   const sceneModels = readyModels(scene);
   const allReadySelected = sceneModels.length > 0 && sceneModels.every((model) => state.selected.has(model.id));
 
@@ -819,7 +935,10 @@ function renderMode() {
 
 function render() {
   ensureSceneState();
-  if (state.activeDetection && state.activeDetection.scene.id !== currentScene().id) {
+  const scene = currentScene();
+  renderDatasetControl();
+  if (!scene) return;
+  if (state.activeDetection && state.activeDetection.scene.id !== scene.id) {
     closeDetectionModal();
   }
   renderScenes();
@@ -828,7 +947,7 @@ function render() {
   renderSplitSelectors();
   renderSummary();
   renderMode();
-  renderViewer(true);
+  renderViewer();
 }
 
 function resetView() {
@@ -849,7 +968,8 @@ function setZoom(nextZoom) {
 }
 
 document.querySelector("#prevScene").addEventListener("click", () => {
-  state.sceneIndex = (state.sceneIndex - 1 + data.scenes.length) % data.scenes.length;
+  const scenes = visibleScenes();
+  state.sceneIndex = (state.sceneIndex - 1 + scenes.length) % scenes.length;
   state.hoveredModel = null;
   resetView();
   ensureSceneState();
@@ -857,7 +977,8 @@ document.querySelector("#prevScene").addEventListener("click", () => {
 });
 
 document.querySelector("#nextScene").addEventListener("click", () => {
-  state.sceneIndex = (state.sceneIndex + 1) % data.scenes.length;
+  const scenes = visibleScenes();
+  state.sceneIndex = (state.sceneIndex + 1) % scenes.length;
   state.hoveredModel = null;
   resetView();
   ensureSceneState();
@@ -869,6 +990,23 @@ document.querySelector("#zoomIn").addEventListener("click", () => setZoom(state.
 document.querySelector("#fitView").addEventListener("click", () => {
   resetView();
   renderViewer();
+});
+
+document.addEventListener("pointermove", (event) => {
+  state.pointerX = event.clientX;
+  state.pointerY = event.clientY;
+  if (currentScene()) syncPointerHoverState(currentScene());
+});
+
+els.datasetSelect.addEventListener("change", () => {
+  state.datasetId = els.datasetSelect.value;
+  state.sceneIndex = 0;
+  state.hoveredModel = null;
+  state.selected.clear();
+  resetView();
+  lastViewerSignature = "";
+  lastRenderedSceneId = "";
+  render();
 });
 
 els.modeButtons.forEach((button) => {
