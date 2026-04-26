@@ -18,7 +18,7 @@ const MODEL_COLORS = [
   "#f97316"
 ];
 
-const CLASS_COLORS = [
+const DETECTION_CLASS_COLORS = [
   "#ffe66d",
   "#5eead4",
   "#fca5a5",
@@ -29,13 +29,40 @@ const CLASS_COLORS = [
   "#fdba74"
 ];
 
+const SEGMENTATION_CLASS_COLORS = {
+  0: "#000000",
+  1: "#4f87bd",
+  2: "#e11d48",
+  3: "#1b1699",
+  4: "#7e1020",
+  5: "#1e22e8",
+  6: "#6b8f1a",
+  7: "#0f4f79",
+  8: "#ff1010",
+  9: "#18f40d"
+};
+
 const IGNORED_DIRS = new Set([
   ".git",
   "assets",
   "data",
   "scripts",
-  "node_modules"
+  "node_modules",
+  "viewer",
+  "thumbnails",
+  "visualisations"
 ]);
+
+const TASK_META = {
+  "semantic-segmentation": {
+    name: "Semantic Segmentation",
+    priority: 0
+  },
+  "object-detection": {
+    name: "Object Detection",
+    priority: 1
+  }
+};
 
 function isDirectory(targetPath) {
   return fs.existsSync(targetPath) && fs.statSync(targetPath).isDirectory();
@@ -49,6 +76,7 @@ function listDirectories(targetPath) {
 }
 
 function listJsonIds(targetPath) {
+  if (!isDirectory(targetPath)) return new Set();
   return new Set(
     fs.readdirSync(targetPath)
       .filter((name) => name.endsWith(".json"))
@@ -80,6 +108,10 @@ function humanizeModelName(raw) {
   }
 
   if (/^yolo\d+[a-z]?$/i.test(compact)) return compact.toUpperCase();
+  if (/^pspnet/i.test(compact)) return "PSPNet";
+  if (/^ccnet/i.test(compact)) return "CCNet";
+  if (/^segformer/i.test(compact)) return "SegFormer";
+  if (/^deeplabv3plus/i.test(compact)) return "DeepLabV3+";
 
   return raw
     .split(/[_-]+/)
@@ -104,182 +136,342 @@ function round(value, digits = 3) {
   return Math.round(value * factor) / factor;
 }
 
-function buildDatasets() {
-  const datasetDirs = listDirectories(demoRoot)
-    .filter((name) => !IGNORED_DIRS.has(name))
-    .filter((name) => {
-      const target = path.join(demoRoot, name);
-      return listDirectories(target).some((child) => {
-        const childDir = path.join(target, child);
-        return isDirectory(path.join(childDir, "samples_gt_with_json")) && isDirectory(path.join(childDir, "visualised_samples_with_json"));
-      });
-    })
-    .sort();
+function slugify(value) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
 
+function assignDetectionClassColors(names) {
+  return [...names].sort().map((name, index) => ({
+    id: slugify(name),
+    name,
+    color: DETECTION_CLASS_COLORS[index % DETECTION_CLASS_COLORS.length]
+  }));
+}
+
+function segmentationLegendFromSegments(segments) {
+  return segments.map((segment) => ({
+    id: slugify(segment.className),
+    name: segment.className,
+    labelIndex: segment.labelIndex,
+    color: SEGMENTATION_CLASS_COLORS[segment.labelIndex] || "#ffffff"
+  }));
+}
+
+function sceneTaskTypeFromJson(json) {
+  if (Array.isArray(json.segments)) return "semantic-segmentation";
+  return "object-detection";
+}
+
+function modelDirLooksValid(datasetRoot, childName) {
+  if (IGNORED_DIRS.has(childName)) return false;
+  const childDir = path.join(datasetRoot, childName);
+  return isDirectory(path.join(childDir, "samples_gt_with_json"))
+    && isDirectory(path.join(childDir, "visualised_samples_with_json"))
+    && isDirectory(path.join(childDir, "ground_truth_images"));
+}
+
+function collectDatasetDirs() {
+  return listDirectories(demoRoot)
+    .filter((name) => !IGNORED_DIRS.has(name))
+    .filter((name) => listDirectories(path.join(demoRoot, name)).some((child) => modelDirLooksValid(path.join(demoRoot, name), child)))
+    .sort();
+}
+
+function ensureModel(modelMap, modelId, taskType) {
+  if (!modelMap.has(modelId)) {
+    modelMap.set(modelId, {
+      id: modelId,
+      name: humanizeModelName(modelId),
+      shortName: humanizeModelName(modelId),
+      color: MODEL_COLORS[modelMap.size % MODEL_COLORS.length],
+      datasets: new Set(),
+      taskTypes: new Set(),
+      sceneCount: 0
+    });
+  }
+  const model = modelMap.get(modelId);
+  model.taskTypes.add(taskType);
+  return model;
+}
+
+function buildDetectionScene({ datasetName, sceneId, sceneRoots, modelDirs, modelMap, detectionClassSet }) {
+  const sourceRoot = sceneRoots[0];
+  const gtPath = path.join(sourceRoot, "samples_gt_with_json", `${sceneId}.json`);
+  const groundTruth = readJson(gtPath);
+  const width = groundTruth.width;
+  const height = groundTruth.height;
+  const gtBoxes = (groundTruth.annotations || []).map((annotation) => {
+    detectionClassSet.add(annotation.class_name);
+    return {
+      className: annotation.class_name,
+      bbox: annotation.bbox.map((value) => round(Number(value), 2))
+    };
+  });
+
+  const rawImagePath = existsFile(path.join(sourceRoot, "ground_truth_images", groundTruth.file_name))
+    ? toPosix(path.relative(demoRoot, path.join(sourceRoot, "ground_truth_images", groundTruth.file_name)))
+    : "";
+
+  const generatedViewer = path.join(demoRoot, "viewer", datasetName, groundTruth.file_name);
+  const generatedThumb = path.join(demoRoot, "thumbnails", datasetName, groundTruth.file_name);
+  const fallbackGtImage = path.join(sourceRoot, "samples_gt_with_json", groundTruth.file_name);
+
+  const predictions = {};
+  const predictionImages = {};
+  const sceneModelStats = {};
+
+  for (const modelId of modelDirs) {
+    const modelRoot = path.join(demoRoot, datasetName, modelId);
+    const predictionPath = path.join(modelRoot, "visualised_samples_with_json", `${sceneId}.json`);
+    if (!existsFile(predictionPath)) continue;
+
+    const prediction = readJson(predictionPath);
+    const detections = (prediction.detections || []).map((detection) => {
+      detectionClassSet.add(detection.class_name);
+      const confidence = detection.confidence == null ? null : round(Number(detection.confidence), 4);
+      return {
+        className: detection.class_name,
+        confidence,
+        bbox: detection.bbox.map((value) => round(Number(value), 2))
+      };
+    });
+
+    predictions[modelId] = detections;
+    const predictionImage = path.join(modelRoot, "visualised_samples_with_json", prediction.file_name || groundTruth.file_name);
+    if (existsFile(predictionImage)) predictionImages[modelId] = toPosix(path.relative(demoRoot, predictionImage));
+
+    const confidences = detections
+      .map((detection) => detection.confidence)
+      .filter((confidence) => typeof confidence === "number");
+
+    sceneModelStats[modelId] = {
+      count: detections.length,
+      maxConfidence: confidences.length ? round(Math.max(...confidences), 3) : null,
+      avgConfidence: confidences.length ? round(confidences.reduce((sum, value) => sum + value, 0) / confidences.length, 3) : null
+    };
+
+    const model = modelMap.get(modelId);
+    model.sceneCount += 1;
+    model.datasets.add(datasetName);
+  }
+
+  return {
+    id: `${slugify(datasetName)}-${sceneId}`,
+    dataset: datasetName,
+    taskType: "object-detection",
+    imageId: sceneId,
+    title: `Image ${sceneId}`,
+    location: `${datasetName} benchmark sample`,
+    baseImage: existsFile(generatedViewer)
+      ? toPosix(path.relative(demoRoot, generatedViewer))
+      : rawImagePath || toPosix(path.relative(demoRoot, fallbackGtImage)),
+    sourceImage: rawImagePath || toPosix(path.relative(demoRoot, fallbackGtImage)),
+    thumbnailImage: existsFile(generatedThumb)
+      ? toPosix(path.relative(demoRoot, generatedThumb))
+      : toPosix(path.relative(demoRoot, fallbackGtImage)),
+    rawImageAvailable: Boolean(rawImagePath),
+    width,
+    height,
+    dimensions: `${width} x ${height}`,
+    groundTruth: gtBoxes,
+    predictions,
+    predictionImages,
+    sceneModelStats,
+    classNames: [...new Set(gtBoxes.map((box) => box.className))],
+    classLegend: [],
+    summary: `${gtBoxes.length} ground-truth box${gtBoxes.length === 1 ? "" : "es"} with ${Object.keys(predictions).length} model output${Object.keys(predictions).length === 1 ? "" : "s"} loaded.`
+  };
+}
+
+function buildSegmentationScene({ datasetName, sceneId, sceneRoots, modelDirs, modelMap }) {
+  const sourceRoot = sceneRoots[0];
+  const gtPath = path.join(sourceRoot, "samples_gt_with_json", `${sceneId}.json`);
+  const groundTruth = readJson(gtPath);
+  const width = groundTruth.width;
+  const height = groundTruth.height;
+  const gtSegments = (groundTruth.segments || []).map((segment) => ({
+    labelIndex: Number(segment.label_index),
+    className: segment.class_name,
+    pixelCount: Number(segment.pixel_count)
+  })).sort((a, b) => a.labelIndex - b.labelIndex);
+
+  const rawImagePath = existsFile(path.join(sourceRoot, "ground_truth_images", groundTruth.file_name))
+    ? toPosix(path.relative(demoRoot, path.join(sourceRoot, "ground_truth_images", groundTruth.file_name)))
+    : "";
+
+  const generatedViewer = path.join(demoRoot, "viewer", datasetName, groundTruth.file_name);
+  const generatedThumb = path.join(demoRoot, "thumbnails", datasetName, groundTruth.file_name);
+  const gtImagePath = path.join(sourceRoot, "samples_gt_with_json", groundTruth.file_name);
+  const predictions = {};
+  const predictionImages = {};
+  const sceneModelStats = {};
+
+  for (const modelId of modelDirs) {
+    const modelRoot = path.join(demoRoot, datasetName, modelId);
+    const predictionPath = path.join(modelRoot, "visualised_samples_with_json", `${sceneId}.json`);
+    if (!existsFile(predictionPath)) continue;
+
+    const prediction = readJson(predictionPath);
+    const segments = (prediction.segments || []).map((segment) => ({
+      labelIndex: Number(segment.label_index),
+      className: segment.class_name,
+      pixelCount: Number(segment.pixel_count)
+    })).sort((a, b) => a.labelIndex - b.labelIndex);
+
+    predictions[modelId] = segments;
+    const predictionImage = path.join(modelRoot, "visualised_samples_with_json", prediction.file_name || groundTruth.file_name);
+    if (existsFile(predictionImage)) predictionImages[modelId] = toPosix(path.relative(demoRoot, predictionImage));
+
+    const labeledPixels = segments.reduce((sum, segment) => sum + segment.pixelCount, 0);
+    sceneModelStats[modelId] = {
+      classCount: segments.length,
+      labeledPixels,
+      coverage: round(labeledPixels / (width * height), 3)
+    };
+
+    const model = modelMap.get(modelId);
+    model.sceneCount += 1;
+    model.datasets.add(datasetName);
+  }
+
+  const gtPixels = gtSegments.reduce((sum, segment) => sum + segment.pixelCount, 0);
+
+  return {
+    id: `${slugify(datasetName)}-${sceneId}`,
+    dataset: datasetName,
+    taskType: "semantic-segmentation",
+    imageId: sceneId,
+    title: `Scene ${sceneId}`,
+    location: `${datasetName} benchmark sample`,
+    baseImage: existsFile(generatedViewer)
+      ? toPosix(path.relative(demoRoot, generatedViewer))
+      : rawImagePath,
+    sourceImage: rawImagePath,
+    thumbnailImage: existsFile(generatedThumb)
+      ? toPosix(path.relative(demoRoot, generatedThumb))
+      : rawImagePath || toPosix(path.relative(demoRoot, gtImagePath)),
+    rawImageAvailable: Boolean(rawImagePath),
+    width,
+    height,
+    dimensions: `${width} x ${height}`,
+    groundTruth: gtSegments,
+    groundTruthImage: toPosix(path.relative(demoRoot, gtImagePath)),
+    predictions,
+    predictionImages,
+    sceneModelStats,
+    classNames: gtSegments.map((segment) => segment.className),
+    classLegend: segmentationLegendFromSegments(gtSegments),
+    summary: `${gtSegments.length} classes with ${Object.keys(predictions).length} model segmentations loaded.`,
+    groundTruthStats: {
+      classCount: gtSegments.length,
+      labeledPixels: gtPixels,
+      coverage: round(gtPixels / (width * height), 3)
+    }
+  };
+}
+
+function buildDatasets() {
+  const datasetDirs = collectDatasetDirs();
   const modelMap = new Map();
-  const classSet = new Set();
+  const detectionClassSet = new Set();
   const scenes = [];
+  const datasets = [];
 
   for (const datasetName of datasetDirs) {
     const datasetRoot = path.join(demoRoot, datasetName);
     const modelDirs = listDirectories(datasetRoot)
-      .filter((name) => {
-        const modelRoot = path.join(datasetRoot, name);
-        return isDirectory(path.join(modelRoot, "samples_gt_with_json")) && isDirectory(path.join(modelRoot, "visualised_samples_with_json"));
-      })
+      .filter((name) => modelDirLooksValid(datasetRoot, name))
       .sort();
 
     if (!modelDirs.length) continue;
 
+    const firstJsonPath = path.join(datasetRoot, modelDirs[0], "samples_gt_with_json", `${[...listJsonIds(path.join(datasetRoot, modelDirs[0], "samples_gt_with_json"))][0]}.json`);
+    const firstJson = readJson(firstJsonPath);
+    const taskType = sceneTaskTypeFromJson(firstJson);
+
     modelDirs.forEach((modelId) => {
-      if (!modelMap.has(modelId)) {
-        modelMap.set(modelId, {
-          id: modelId,
-          name: humanizeModelName(modelId),
-          shortName: humanizeModelName(modelId),
-          color: MODEL_COLORS[modelMap.size % MODEL_COLORS.length],
-          sceneCount: 0,
-          totalDetections: 0,
-          confidenceSum: 0,
-          confidenceCount: 0,
-          maxConfidence: 0
-        });
-      }
+      const model = ensureModel(modelMap, modelId, taskType);
+      model.datasets.add(datasetName);
     });
 
-    const sceneIds = [...listJsonIds(path.join(datasetRoot, modelDirs[0], "samples_gt_with_json"))].sort(safeNumericSort);
+    const sceneIdSet = new Set();
+    for (const modelId of modelDirs) {
+      for (const sceneId of listJsonIds(path.join(datasetRoot, modelId, "samples_gt_with_json"))) {
+        sceneIdSet.add(sceneId);
+      }
+    }
+    const sceneIds = [...sceneIdSet].sort(safeNumericSort);
 
     for (const sceneId of sceneIds) {
-      const gtPath = path.join(datasetRoot, modelDirs[0], "samples_gt_with_json", `${sceneId}.json`);
-      const groundTruth = readJson(gtPath);
-      const width = groundTruth.width;
-      const height = groundTruth.height;
-      const gtBoxes = (groundTruth.annotations || []).map((annotation) => {
-        classSet.add(annotation.class_name);
-        return {
-          className: annotation.class_name,
-          bbox: annotation.bbox.map((value) => round(Number(value), 2))
-        };
-      });
+      const sceneRoots = modelDirs
+        .map((modelId) => path.join(datasetRoot, modelId))
+        .filter((root) => existsFile(path.join(root, "samples_gt_with_json", `${sceneId}.json`)));
 
-      let rawImagePath = "";
-      let viewerImagePath = "";
-      let rawImageAvailable = false;
-      const generatedViewer = path.join(demoRoot, "viewer", datasetName, groundTruth.file_name);
-      const generatedThumb = path.join(demoRoot, "thumbnails", datasetName, groundTruth.file_name);
-      let thumbnailImagePath = existsFile(generatedThumb)
-        ? toPosix(path.relative(demoRoot, generatedThumb))
-        : toPosix(path.relative(demoRoot, path.join(datasetRoot, modelDirs[0], "samples_gt_with_json", groundTruth.file_name)));
-      if (existsFile(generatedViewer)) viewerImagePath = toPosix(path.relative(demoRoot, generatedViewer));
+      if (!sceneRoots.length) continue;
 
-      for (const modelId of modelDirs) {
-        const candidate = path.join(datasetRoot, modelId, "ground_truth_images", groundTruth.file_name);
-        if (existsFile(candidate)) {
-          rawImagePath = toPosix(path.relative(demoRoot, candidate));
-          rawImageAvailable = true;
-          break;
-        }
-      }
+      const scene = taskType === "semantic-segmentation"
+        ? buildSegmentationScene({ datasetName, sceneId, sceneRoots, modelDirs, modelMap })
+        : buildDetectionScene({ datasetName, sceneId, sceneRoots, modelDirs, modelMap, detectionClassSet });
 
-      if (!rawImagePath) {
-        const fallback = path.join(datasetRoot, modelDirs[0], "samples_gt_with_json", groundTruth.file_name);
-        if (existsFile(fallback)) rawImagePath = toPosix(path.relative(demoRoot, fallback));
-      }
-
-      const predictions = {};
-      const sceneModelStats = {};
-
-      for (const modelId of modelDirs) {
-        const predictionPath = path.join(datasetRoot, modelId, "visualised_samples_with_json", `${sceneId}.json`);
-        if (!existsFile(predictionPath)) continue;
-
-        const prediction = readJson(predictionPath);
-        const detections = (prediction.detections || []).map((detection) => {
-          classSet.add(detection.class_name);
-          const confidence = detection.confidence == null ? null : round(Number(detection.confidence), 4);
-          return {
-            className: detection.class_name,
-            confidence,
-            bbox: detection.bbox.map((value) => round(Number(value), 2))
-          };
-        });
-
-        predictions[modelId] = detections;
-
-        const confidences = detections
-          .map((detection) => detection.confidence)
-          .filter((confidence) => typeof confidence === "number");
-
-        sceneModelStats[modelId] = {
-          count: detections.length,
-          maxConfidence: confidences.length ? round(Math.max(...confidences), 3) : null,
-          avgConfidence: confidences.length ? round(confidences.reduce((sum, value) => sum + value, 0) / confidences.length, 3) : null
-        };
-
-        const model = modelMap.get(modelId);
-        model.sceneCount += 1;
-        model.totalDetections += detections.length;
-        model.maxConfidence = Math.max(model.maxConfidence, ...confidences, 0);
-        confidences.forEach((confidence) => {
-          model.confidenceSum += confidence;
-          model.confidenceCount += 1;
-        });
-      }
-
-      scenes.push({
-        id: `${datasetName.toLowerCase()}-${sceneId}`,
-        dataset: datasetName,
-        taskType: "object-detection",
-        imageId: sceneId,
-        title: `Image ${sceneId}`,
-        location: `${datasetName} benchmark sample`,
-        baseImage: viewerImagePath || rawImagePath,
-        sourceImage: rawImagePath,
-        thumbnailImage: thumbnailImagePath,
-        rawImageAvailable,
-        width,
-        height,
-        dimensions: `${width} x ${height}`,
-        groundTruth: gtBoxes,
-        predictions,
-        sceneModelStats,
-        classNames: [...new Set(gtBoxes.map((box) => box.className))],
-        summary: rawImageAvailable
-          ? `${gtBoxes.length} ground-truth box${gtBoxes.length === 1 ? "" : "es"} with ${Object.keys(predictions).length} model output${Object.keys(predictions).length === 1 ? "" : "s"} loaded.`
-          : `${gtBoxes.length} ground-truth box${gtBoxes.length === 1 ? "" : "es"} loaded. Raw image was missing, so this scene uses the GT preview image as fallback.`
-      });
+      scenes.push(scene);
     }
+
+    datasets.push({
+      id: datasetName,
+      name: datasetName,
+      taskType,
+      sceneCount: sceneIds.length,
+      modelIds: modelDirs
+    });
   }
 
-  const classes = [...classSet].sort().map((name, index) => ({
-    id: name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
-    name,
-    color: CLASS_COLORS[index % CLASS_COLORS.length]
-  }));
+  const detectionClasses = assignDetectionClassColors(detectionClassSet);
+  const segmentationClasses = [...new Map(
+    scenes
+      .filter((scene) => scene.taskType === "semantic-segmentation")
+      .flatMap((scene) => scene.classLegend)
+      .map((item) => [item.id, item])
+  ).values()].sort((a, b) => (a.labelIndex ?? 0) - (b.labelIndex ?? 0));
 
   const models = [...modelMap.values()].map((model) => ({
     id: model.id,
     name: model.name,
     shortName: model.shortName,
     color: model.color,
+    datasets: [...model.datasets].sort(),
+    taskTypes: [...model.taskTypes].sort(),
     stats: {
-      scenes: model.sceneCount,
-      avgDetections: model.sceneCount ? round(model.totalDetections / model.sceneCount, 2) : 0,
-      avgConfidence: model.confidenceCount ? round(model.confidenceSum / model.confidenceCount, 3) : null,
-      maxConfidence: model.confidenceCount ? round(clamp(model.maxConfidence, 0, 1), 3) : null
+      scenes: model.sceneCount
     }
-  }));
+  })).sort((a, b) => a.name.localeCompare(b.name));
 
   scenes.sort((a, b) => {
-    if (a.dataset === b.dataset) return safeNumericSort(a.imageId, b.imageId);
-    return a.dataset.localeCompare(b.dataset);
+    if (a.taskType !== b.taskType) {
+      return TASK_META[a.taskType].priority - TASK_META[b.taskType].priority;
+    }
+    if (a.dataset !== b.dataset) return a.dataset.localeCompare(b.dataset);
+    return safeNumericSort(a.imageId, b.imageId);
+  });
+
+  datasets.sort((a, b) => {
+    if (a.taskType !== b.taskType) {
+      return TASK_META[a.taskType].priority - TASK_META[b.taskType].priority;
+    }
+    return a.name.localeCompare(b.name);
   });
 
   return {
-    title: "Aerial Detection Atlas",
-    subtitle: "Benchmark evaluation viewer",
-    taskTypes: [{ id: "object-detection", name: "Object Detection" }],
-    classes,
+    title: "Aerial Benchmark Atlas",
+    subtitle: "Segmentation and detection benchmark viewer",
+    taskTypes: [
+      { id: "semantic-segmentation", name: TASK_META["semantic-segmentation"].name },
+      { id: "object-detection", name: TASK_META["object-detection"].name }
+    ],
+    datasets,
+    classes: {
+      "object-detection": detectionClasses,
+      "semantic-segmentation": segmentationClasses
+    },
     models,
     scenes
   };

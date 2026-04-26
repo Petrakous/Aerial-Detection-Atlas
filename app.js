@@ -1,8 +1,8 @@
 const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.TRIFID_DEMO_DATA;
-const releaseAssetBase = "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-v1/";
+const releaseAssetBase = "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-v2/";
 
 const availableModelIds = new Set(data.models.map((model) => model.id));
-const availableDatasets = [...new Set(data.scenes.map((scene) => scene.dataset))];
+const availableDatasets = (data.datasets?.map((dataset) => dataset.id) || [...new Set(data.scenes.map((scene) => scene.dataset))]);
 
 const state = {
   sceneIndex: 0,
@@ -86,6 +86,7 @@ let lastRenderedSceneId = "";
 let scenesInitialized = false;
 let viewerRefreshTimer = 0;
 let focusLensRefreshFrame = 0;
+let resetSceneListScroll = false;
 
 function resolveInitialTheme() {
   const stored = window.localStorage.getItem(themeStorageKey);
@@ -107,7 +108,57 @@ function currentScene() {
   return visibleScenes()[state.sceneIndex];
 }
 
+function currentDataset() {
+  return data.datasets?.find((dataset) => dataset.id === state.datasetId) || null;
+}
+
+function currentTaskType(scene = currentScene()) {
+  return scene?.taskType || currentDataset()?.taskType || "object-detection";
+}
+
+function isSegmentationScene(scene = currentScene()) {
+  return currentTaskType(scene) === "semantic-segmentation";
+}
+
+function datasetModels(datasetId = state.datasetId) {
+  const dataset = data.datasets?.find((item) => item.id === datasetId);
+  if (!dataset) return data.models;
+  const modelIds = new Set(dataset.modelIds || []);
+  return data.models.filter((model) => modelIds.has(model.id));
+}
+
+function formatTaskType(taskType) {
+  return data.taskTypes?.find((item) => item.id === taskType)?.name || taskType.replace(/-/g, " ");
+}
+
+function round(value, places = 0) {
+  const factor = 10 ** places;
+  return Math.round(value * factor) / factor;
+}
+
+function formatPixels(value) {
+  if (!Number.isFinite(value)) return "--";
+  if (value >= 1_000_000) return `${round(value / 1_000_000, 1)}M`;
+  if (value >= 1_000) return `${round(value / 1_000, 1)}K`;
+  return String(Math.round(value));
+}
+
+function sceneClassLegend(scene = currentScene()) {
+  if (isSegmentationScene(scene)) {
+    return scene?.classLegend || data.classes?.["semantic-segmentation"] || [];
+  }
+  return data.classes?.["object-detection"] || [];
+}
+
 function datasetOptions() {
+  if (Array.isArray(data.datasets) && data.datasets.length) {
+    return data.datasets.map((dataset) => ({
+      id: dataset.id,
+      label: dataset.name || dataset.id,
+      count: dataset.sceneCount,
+      taskTypes: [dataset.taskType]
+    }));
+  }
   return availableDatasets.map((datasetId) => {
     const scenes = data.scenes.filter((scene) => scene.dataset === datasetId);
     return {
@@ -130,15 +181,11 @@ function resolveAssetPath(path) {
   const isPagesHost = window.location.hostname === "petrakous.github.io";
   if (!isPagesHost) return path;
 
-  if (path.startsWith("viewer/LADD/")) {
-    const fileName = path.slice("viewer/LADD/".length);
-    return `${releaseAssetBase}viewer-LADD-${fileName}`;
-  }
+  const viewerMatch = path.match(/^viewer\/([^/]+)\/(.+)$/);
+  if (viewerMatch) return `${releaseAssetBase}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
 
-  if (path.startsWith("thumbnails/LADD/")) {
-    const fileName = path.slice("thumbnails/LADD/".length);
-    return `${releaseAssetBase}thumbnail-LADD-${fileName}`;
-  }
+  const thumbMatch = path.match(/^thumbnails\/([^/]+)\/(.+)$/);
+  if (thumbMatch) return `${releaseAssetBase}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
 
   return path;
 }
@@ -149,12 +196,12 @@ function sceneBaseImage(scene) {
 
 function readyModels(scene = currentScene()) {
   if (!scene) return [];
-  return data.models.filter((model) => Array.isArray(scene.predictions?.[model.id]));
+  return datasetModels(scene.dataset).filter((model) => Array.isArray(scene.predictions?.[model.id]));
 }
 
 function visibleSelectedModels(scene = currentScene()) {
   const sceneModelIds = new Set(readyModels(scene).map((model) => model.id));
-  return data.models.filter((model) => sceneModelIds.has(model.id) && state.selected.has(model.id));
+  return datasetModels(scene.dataset).filter((model) => sceneModelIds.has(model.id) && state.selected.has(model.id));
 }
 
 function displayedModels(scene = currentScene()) {
@@ -173,6 +220,13 @@ function effectiveHoverModel(scene = currentScene()) {
 }
 
 function modelStatsForScene(scene, modelId) {
+  if (isSegmentationScene(scene)) {
+    return scene.sceneModelStats?.[modelId] || {
+      classCount: scene.predictions?.[modelId]?.length || 0,
+      labeledPixels: 0,
+      coverage: 0
+    };
+  }
   return scene.sceneModelStats?.[modelId] || {
     count: scene.predictions?.[modelId]?.length || 0,
     maxConfidence: null,
@@ -181,7 +235,21 @@ function modelStatsForScene(scene, modelId) {
 }
 
 function totalPredictionCount(models, scene = currentScene()) {
+  if (isSegmentationScene(scene)) {
+    return models.reduce((sum, model) => sum + (modelStatsForScene(scene, model.id).classCount || 0), 0);
+  }
   return models.reduce((sum, model) => sum + modelStatsForScene(scene, model.id).count, 0);
+}
+
+function uniquePredictionClassCount(models, scene = currentScene()) {
+  const classIds = new Set();
+  models.forEach((model) => {
+    const segments = scene.predictions?.[model.id] || [];
+    segments.forEach((segment) => {
+      classIds.add(segment.labelIndex ?? segment.className ?? JSON.stringify(segment));
+    });
+  });
+  return classIds.size;
 }
 
 function splitOptions(scene = currentScene()) {
@@ -275,6 +343,10 @@ function syncPointerHoverState(scene = currentScene()) {
   const previousHoveredModel = state.hoveredModel;
   syncHoveredModelFromPointer(scene);
   if (previousHoveredModel !== state.hoveredModel) {
+    state.skipNextViewerAnimation = Boolean(
+      (previousHoveredModel && state.selected.has(previousHoveredModel))
+      || (state.hoveredModel && state.selected.has(state.hoveredModel))
+    );
     updateModelHoverGlow(scene);
     renderViewer();
   }
@@ -376,6 +448,21 @@ function createBaseImageLayer(scene) {
   if (img.complete && img.naturalWidth > 0) {
     queueMicrotask(reveal);
   }
+  return img;
+}
+
+function queueFocusLensRefresh() {
+  if (state.mode !== "focus") return;
+  window.cancelAnimationFrame(focusLensRefreshFrame);
+  focusLensRefreshFrame = window.requestAnimationFrame(() => {
+    renderFocusLens();
+  });
+}
+
+function createSegmentationImageLayer(imagePath, className = "segmentation-visual") {
+  const img = createImageLayer(resolveAssetPath(imagePath), className);
+  img.addEventListener("load", queueFocusLensRefresh);
+  img.addEventListener("error", queueFocusLensRefresh);
   return img;
 }
 
@@ -539,6 +626,23 @@ function createBoxesLayer(scene, boxes, options = {}) {
   return layer;
 }
 
+function createSegmentationLayer(scene, imagePath, options = {}) {
+  const layer = document.createElement("div");
+  layer.className = `box-layer segmentation-layer${options.kind === "ground-truth" ? " is-ground-truth" : ""}`;
+  layer.dataset.kind = options.kind || "prediction";
+  if (options.model?.id) layer.dataset.modelId = options.model.id;
+  layer.style.opacity = String(options.opacity ?? 1);
+  if (options.isDimmed) layer.classList.add("is-dimmed");
+  if (options.isEmphasized) layer.classList.add("is-emphasized");
+  layer.style.zIndex = String(options.zIndex || 2);
+
+  const img = createSegmentationImageLayer(imagePath);
+  if (options.isDimmed) img.classList.add("is-dimmed");
+  if (options.isEmphasized) img.classList.add("is-emphasized");
+  layer.append(img);
+  return layer;
+}
+
 function renderStack(container, scene, models, options = {}) {
   const baseImage = sceneBaseImage(scene);
   const existingBase = container.querySelector(".base-layer");
@@ -554,6 +658,35 @@ function renderStack(container, scene, models, options = {}) {
 
   const occupiedLabels = [];
   const hoverModel = effectiveHoverModel(scene);
+
+  if (isSegmentationScene(scene)) {
+    if (state.showGroundTruth && scene.groundTruthImage) {
+      container.append(createSegmentationLayer(scene, scene.groundTruthImage, {
+        kind: "ground-truth",
+        opacity: state.overlayOpacity,
+        zIndex: 12
+      }));
+    }
+
+    models.forEach((model, index) => {
+      const overlayImage = scene.predictionImages?.[model.id];
+      if (!overlayImage) return;
+
+      const isHovered = Boolean(hoverModel && hoverModel === model.id);
+      const isDimmed = Boolean(hoverModel && hoverModel !== model.id);
+      const opacity = isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 0.98) : state.overlayOpacity;
+
+      container.append(createSegmentationLayer(scene, overlayImage, {
+        kind: "prediction",
+        model,
+        opacity,
+        isDimmed,
+        isEmphasized: isHovered,
+        zIndex: 4 + index
+      }));
+    });
+    return;
+  }
 
   if (state.showGroundTruth && scene.groundTruth?.length) {
     container.append(createBoxesLayer(scene, scene.groundTruth, {
@@ -741,7 +874,7 @@ function renderViewer(force = false) {
 function renderScenes() {
   const scenes = visibleScenes();
   const preserveVerticalScroll = !window.matchMedia("(max-width: 760px)").matches;
-  const previousScrollTop = preserveVerticalScroll ? els.sceneList.scrollTop : 0;
+  const previousScrollTop = preserveVerticalScroll && !resetSceneListScroll ? els.sceneList.scrollTop : 0;
   els.sceneCount.textContent = `${scenes.length} samples`;
   const fragment = document.createDocumentFragment();
 
@@ -765,8 +898,11 @@ function renderScenes() {
     image.loading = index < 6 ? "eager" : "lazy";
     image.decoding = "async";
 
+    const gtSummary = isSegmentationScene(scene)
+      ? `${scene.groundTruthStats?.classCount || scene.groundTruth.length} classes`
+      : `${scene.groundTruth.length} GT`;
     const copy = document.createElement("span");
-    copy.innerHTML = `<strong>${scene.title}</strong><small>${scene.dataset} · ${scene.groundTruth.length} GT</small>`;
+    copy.innerHTML = `<strong>${scene.title}</strong><small>${scene.dataset} · ${gtSummary}</small>`;
 
     button.append(image, copy);
     fragment.append(button);
@@ -775,8 +911,9 @@ function renderScenes() {
   els.sceneList.replaceChildren(fragment);
 
   if (preserveVerticalScroll) {
-    els.sceneList.scrollTop = previousScrollTop;
+    els.sceneList.scrollTop = resetSceneListScroll ? 0 : previousScrollTop;
   }
+  resetSceneListScroll = false;
 
   const activeCard = els.sceneList.querySelector(`[data-scene-index="${state.sceneIndex}"]`);
   if (activeCard && window.matchMedia("(max-width: 760px)").matches) {
@@ -796,8 +933,8 @@ function renderDatasetControl() {
   if (activeDataset) {
     const taskLabel = activeDataset.taskTypes.length > 1
       ? `${activeDataset.taskTypes.length} tasks`
-      : (activeDataset.taskTypes[0] || "Object detection").replace(/-/g, " ");
-    els.datasetMeta.textContent = `${activeDataset.count} scenes · ${taskLabel}`;
+      : formatTaskType(activeDataset.taskTypes[0] || "object-detection");
+    els.datasetMeta.textContent = taskLabel;
   } else {
     els.datasetMeta.textContent = "No dataset loaded";
   }
@@ -812,7 +949,7 @@ function renderModels() {
   syncHoveredModelFromPointer(scene);
   const activeHoverModel = effectiveHoverModel(scene);
 
-  data.models.forEach((model) => {
+  datasetModels(scene.dataset).forEach((model) => {
     const sceneStats = modelStatsForScene(scene, model.id);
     const hasSceneOutput = sceneModels.some((item) => item.id === model.id);
     const row = document.createElement("button");
@@ -827,6 +964,7 @@ function renderModels() {
       state.pointerX = event.clientX;
       state.pointerY = event.clientY;
       state.hoveredModel = model.id;
+      state.skipNextViewerAnimation = state.selected.has(model.id);
       updateModelHoverGlow(scene);
       renderViewer();
     });
@@ -835,6 +973,7 @@ function renderModels() {
       if (!hasSceneOutput || splitMode) return;
       state.pointerX = event.clientX;
       state.pointerY = event.clientY;
+      state.skipNextViewerAnimation = state.selected.has(model.id);
       syncHoveredModelFromPointer(scene);
       updateModelHoverGlow(scene);
       renderViewer();
@@ -860,14 +999,18 @@ function renderModels() {
     const meta = splitMode
       ? splitSideForModel(model.id, scene)
       : hasSceneOutput
-        ? `${sceneStats.count} detections${sceneStats.maxConfidence != null ? ` / max ${sceneStats.maxConfidence.toFixed(2)}` : ""}`
+        ? isSegmentationScene(scene)
+          ? `${sceneStats.classCount || 0} classes / ${formatPixels(sceneStats.labeledPixels || 0)} px`
+          : `${sceneStats.count} detections${sceneStats.maxConfidence != null ? ` / max ${sceneStats.maxConfidence.toFixed(2)}` : ""}`
         : "not available in this scene";
 
-    const pill = hasSceneOutput && sceneStats.avgConfidence != null
-      ? `${Math.round(sceneStats.avgConfidence * 100)}%`
-      : hasSceneOutput
-        ? String(sceneStats.count)
-        : "--";
+    const pill = hasSceneOutput
+      ? isSegmentationScene(scene)
+        ? `${Math.round((sceneStats.coverage || 0) * 100)}%`
+        : sceneStats.avgConfidence != null
+          ? `${Math.round(sceneStats.avgConfidence * 100)}%`
+          : String(sceneStats.count)
+      : "--";
 
     row.innerHTML = `
       <span class="model-swatch" aria-hidden="true"></span>
@@ -886,13 +1029,14 @@ function renderModels() {
 }
 
 function renderLegend() {
+  const scene = currentScene();
   const fragment = document.createDocumentFragment();
-  data.classes.forEach((item) => {
+  sceneClassLegend(scene).forEach((item) => {
     const row = document.createElement("div");
     row.className = "class-row";
     row.innerHTML = `
       <span class="class-swatch" style="background:${item.color}"></span>
-      <span>${item.name}</span>
+      <span>${item.className || item.name}</span>
     `;
     fragment.append(row);
   });
@@ -921,17 +1065,30 @@ function renderSummary() {
   const visibleModels = displayedModels(scene);
   const leftModels = modelsForSplitChoice(state.splitA, state.splitB, scene);
   const rightModels = modelsForSplitChoice(state.splitB, state.splitA, scene);
-  const splitCounts = `${totalPredictionCount(leftModels, scene)} / ${totalPredictionCount(rightModels, scene)}`;
-  const fallbackTag = scene.rawImageAvailable ? "optimized aerial image" : "GT preview fallback";
+  const segmentationScene = isSegmentationScene(scene);
+  const splitCounts = segmentationScene
+    ? `${uniquePredictionClassCount(leftModels, scene)} / ${uniquePredictionClassCount(rightModels, scene)}`
+    : `${totalPredictionCount(leftModels, scene)} / ${totalPredictionCount(rightModels, scene)}`;
+  const fallbackTag = scene.rawImageAvailable
+    ? (segmentationScene ? "raw aerial image" : "optimized aerial image")
+    : "GT preview fallback";
+  const groundTruthCount = segmentationScene
+    ? (scene.groundTruthStats?.classCount || scene.groundTruth.length)
+    : scene.groundTruth.length;
+  const predictionCount = segmentationScene
+    ? uniquePredictionClassCount(visibleModels, scene)
+    : totalPredictionCount(visibleModels, scene);
 
   els.sceneTitle.textContent = scene.title;
   els.sceneMeta.textContent = `${scene.dataset} / ${scene.dimensions} / ${fallbackTag}`;
   els.activeModelLabel.textContent = state.mode === "split" ? "Split models" : "Visible models";
   els.activeModelCount.textContent = state.mode === "split" ? `${leftModels.length} / ${rightModels.length}` : String(visibleModels.length);
-  els.bestIouLabel.textContent = "GT boxes";
-  els.bestIou.textContent = String(scene.groundTruth.length);
-  els.predictionCountLabel.textContent = state.mode === "split" ? "Pred boxes L/R" : "Pred boxes";
-  els.predictionCount.textContent = state.mode === "split" ? splitCounts : String(totalPredictionCount(visibleModels, scene));
+  els.bestIouLabel.textContent = segmentationScene ? "GT classes" : "GT boxes";
+  els.bestIou.textContent = String(groundTruthCount);
+  els.predictionCountLabel.textContent = state.mode === "split"
+    ? (segmentationScene ? "Classes L/R" : "Pred boxes L/R")
+    : (segmentationScene ? "Visible classes" : "Pred boxes");
+  els.predictionCount.textContent = state.mode === "split" ? splitCounts : String(predictionCount);
 }
 
 function renderMode() {
@@ -954,7 +1111,7 @@ function renderMode() {
   els.selectAll.textContent = allReadySelected ? "Deselect all" : "Select all";
   els.selectAll.disabled = sceneModels.length === 0;
   els.clearAll.disabled = sceneModels.length === 0;
-  els.taskLabel.textContent = "Object detection";
+  els.taskLabel.textContent = formatTaskType(currentTaskType(scene));
   els.toggleGroundTruth.classList.toggle("is-active", state.showGroundTruth);
   els.toggleGroundTruth.setAttribute("aria-pressed", String(state.showGroundTruth));
   els.groundTruthText.textContent = "Ground Truth";
@@ -1030,6 +1187,7 @@ els.datasetSelect.addEventListener("change", () => {
   state.sceneIndex = 0;
   state.hoveredModel = null;
   state.selected.clear();
+  resetSceneListScroll = true;
   resetView();
   lastViewerSignature = "";
   lastRenderedSceneId = "";

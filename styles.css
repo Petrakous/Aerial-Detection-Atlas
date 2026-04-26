@@ -656,6 +656,19 @@ body[data-mode="split"] .viewer-content {
   transition: opacity 500ms ease;
 }
 
+.segmentation-visual {
+  object-fit: contain;
+  transition: opacity 500ms ease, filter 500ms ease;
+}
+
+.segmentation-layer.is-dimmed .segmentation-visual {
+  filter: saturate(0.76) brightness(0.94);
+}
+
+.segmentation-layer.is-emphasized .segmentation-visual {
+  filter: saturate(1.04) brightness(1.02);
+}
+
 .detection-box {
   position: absolute;
   border: 3px solid var(--box-color);
@@ -906,7 +919,7 @@ body[data-mode="split"] .split-badge {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 body[data-mode="focus"] .focus-lens {

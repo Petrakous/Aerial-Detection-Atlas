@@ -1,58 +1,19556 @@
 window.DETECTION_ATLAS_DATA = {
-  "title": "Aerial Detection Atlas",
-  "subtitle": "Benchmark evaluation viewer",
+  "title": "Aerial Benchmark Atlas",
+  "subtitle": "Segmentation and detection benchmark viewer",
   "taskTypes": [
+    {
+      "id": "semantic-segmentation",
+      "name": "Semantic Segmentation"
+    },
     {
       "id": "object-detection",
       "name": "Object Detection"
     }
   ],
-  "classes": [
+  "datasets": [
     {
-      "id": "pedestrian",
-      "name": "Pedestrian",
-      "color": "#ffe66d"
+      "id": "FloodNetPlus",
+      "name": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "sceneCount": 171,
+      "modelIds": [
+        "ccnet_floodnetplus",
+        "deeplabv3plus_floodnet",
+        "pspnet_floodnet",
+        "segformer_floodnet"
+      ]
+    },
+    {
+      "id": "LADD",
+      "name": "LADD",
+      "taskType": "object-detection",
+      "sceneCount": 50,
+      "modelIds": [
+        "rtdetrv2_l",
+        "yolo11l",
+        "yolo26l"
+      ]
     }
   ],
+  "classes": {
+    "object-detection": [
+      {
+        "id": "pedestrian",
+        "name": "Pedestrian",
+        "color": "#ffe66d"
+      }
+    ],
+    "semantic-segmentation": [
+      {
+        "id": "background",
+        "name": "Background",
+        "labelIndex": 0,
+        "color": "#000000"
+      },
+      {
+        "id": "building-flooded",
+        "name": "Building-flooded",
+        "labelIndex": 1,
+        "color": "#4f87bd"
+      },
+      {
+        "id": "building-non-flooded",
+        "name": "Building-non-flooded",
+        "labelIndex": 2,
+        "color": "#e11d48"
+      },
+      {
+        "id": "road-flooded",
+        "name": "Road-flooded",
+        "labelIndex": 3,
+        "color": "#1b1699"
+      },
+      {
+        "id": "road-non-flooded",
+        "name": "Road-non-flooded",
+        "labelIndex": 4,
+        "color": "#7e1020"
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "labelIndex": 5,
+        "color": "#1e22e8"
+      },
+      {
+        "id": "tree",
+        "name": "Tree",
+        "labelIndex": 6,
+        "color": "#6b8f1a"
+      },
+      {
+        "id": "vehicle",
+        "name": "Vehicle",
+        "labelIndex": 7,
+        "color": "#0f4f79"
+      },
+      {
+        "id": "pool",
+        "name": "Pool",
+        "labelIndex": 8,
+        "color": "#ff1010"
+      },
+      {
+        "id": "grass",
+        "name": "Grass",
+        "labelIndex": 9,
+        "color": "#18f40d"
+      }
+    ]
+  },
   "models": [
+    {
+      "id": "ccnet_floodnetplus",
+      "name": "CCNet",
+      "shortName": "CCNet",
+      "color": "#36c3a0",
+      "datasets": [
+        "FloodNetPlus"
+      ],
+      "taskTypes": [
+        "semantic-segmentation"
+      ],
+      "stats": {
+        "scenes": 50
+      }
+    },
+    {
+      "id": "deeplabv3plus_floodnet",
+      "name": "DeepLabV3+",
+      "shortName": "DeepLabV3+",
+      "color": "#4d8cff",
+      "datasets": [
+        "FloodNetPlus"
+      ],
+      "taskTypes": [
+        "semantic-segmentation"
+      ],
+      "stats": {
+        "scenes": 50
+      }
+    },
+    {
+      "id": "pspnet_floodnet",
+      "name": "PSPNet",
+      "shortName": "PSPNet",
+      "color": "#f59e0b",
+      "datasets": [
+        "FloodNetPlus"
+      ],
+      "taskTypes": [
+        "semantic-segmentation"
+      ],
+      "stats": {
+        "scenes": 50
+      }
+    },
     {
       "id": "rtdetrv2_l",
       "name": "RT-DETRv2-L",
       "shortName": "RT-DETRv2-L",
-      "color": "#36c3a0",
+      "color": "#ef4444",
+      "datasets": [
+        "LADD"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
       "stats": {
-        "scenes": 50,
-        "avgDetections": 3.92,
-        "avgConfidence": 0.728,
-        "maxConfidence": 0.912
+        "scenes": 50
+      }
+    },
+    {
+      "id": "segformer_floodnet",
+      "name": "SegFormer",
+      "shortName": "SegFormer",
+      "color": "#d946ef",
+      "datasets": [
+        "FloodNetPlus"
+      ],
+      "taskTypes": [
+        "semantic-segmentation"
+      ],
+      "stats": {
+        "scenes": 50
       }
     },
     {
       "id": "yolo11l",
       "name": "YOLO11L",
       "shortName": "YOLO11L",
-      "color": "#4d8cff",
+      "color": "#14b8a6",
+      "datasets": [
+        "LADD"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
       "stats": {
-        "scenes": 50,
-        "avgDetections": 3.58,
-        "avgConfidence": 0.705,
-        "maxConfidence": 0.895
+        "scenes": 50
       }
     },
     {
       "id": "yolo26l",
       "name": "YOLO26L",
       "shortName": "YOLO26L",
-      "color": "#f59e0b",
+      "color": "#a855f7",
+      "datasets": [
+        "LADD"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
       "stats": {
-        "scenes": 50,
-        "avgDetections": 3.08,
-        "avgConfidence": 0.764,
-        "maxConfidence": 0.924
+        "scenes": 50
       }
     }
   ],
   "scenes": [
+    {
+      "id": "floodnetplus-6336",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6336",
+      "title": "Scene 6336",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6336.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6336.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6336.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 3001038
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 721702
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 24758
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8252502
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6336.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2953683
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 756318
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 26336
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8237796
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6336.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11974133,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6383",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6383",
+      "title": "Scene 6383",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6383.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/6383.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6383.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1413512
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 980407
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 9204
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9596877
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/6383.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1443202
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 951538
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 8396
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9596022
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/6383.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11999158,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6394",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6394",
+      "title": "Scene 6394",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6394.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6394.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6394.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2806615
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 433061
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8760324
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6394.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2350204
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 422385
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9221563
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6394.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11994152,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6417",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6417",
+      "title": "Scene 6417",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6417.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6417.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6417.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 881043
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1170594
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 204212
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4289829
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 148998
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 16623
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5288701
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6417.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 919232
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1100056
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 206050
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4248590
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 178028
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 16350
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5236641
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6417.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 11904947,
+          "coverage": 0.992
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6420",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6420",
+      "title": "Scene 6420",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6420.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/6420.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6420.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1109184
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1800674
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 96173
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3306064
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 46226
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5641679
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/6420.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1088657
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1750932
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 106216
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3299899
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 43146
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5623957
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/6420.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11912807,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6445",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6445",
+      "title": "Scene 6445",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6445.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/6445.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6445.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1213110
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 158830
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 3621288
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 563444
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 86399
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 97210
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6259719
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/6445.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1179373
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 168
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3639446
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 494884
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 58017
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 108094
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6497927
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/6445.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 11977909,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6517",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6517",
+      "title": "Scene 6517",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6517.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/6517.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6517.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1096808
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 136933
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 7282903
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3483356
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/6517.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1038065
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 91120
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 7246816
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3539177
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/6517.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11915178,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6550",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6550",
+      "title": "Scene 6550",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6550.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/6550.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6550.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 947831
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 1090279
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3777997
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6183893
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/6550.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 773677
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1066649
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4255619
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5832711
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 443529
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1058965
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3656487
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6687189
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/6550.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6550.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11928656,
+          "coverage": 0.994
+        },
+        "segformer_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11846170,
+          "coverage": 0.987
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6553",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6553",
+      "title": "Scene 6553",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6553.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6553.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6553.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 170703
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 911927
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 6061703
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 68149
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4787518
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6553.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 131079
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 791877
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 6022883
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 95887
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4900306
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 148843
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 854093
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5923747
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 93676
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4891822
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6553.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6553.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 5,
+          "labeledPixels": 11942032,
+          "coverage": 0.995
+        },
+        "segformer_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11912181,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Water",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6557",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6557",
+      "title": "Scene 6557",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6557.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6557.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6557.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 712814
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 448327
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 5570113
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 27144
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 82057
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5159545
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6557.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 701421
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 94498
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 430108
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5646919
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 7001
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 82459
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4943233
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6557.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 7,
+          "labeledPixels": 11905639,
+          "coverage": 0.992
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6561",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6561",
+      "title": "Scene 6561",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6561.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/6561.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6561.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 401430
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1749608
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 270332
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 6225851
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 48514
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 42856
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3261409
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/6561.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 382869
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1770708
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 295286
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5884803
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 34399
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 24052
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3456647
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/6561.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 11848764,
+          "coverage": 0.987
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6567",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6567",
+      "title": "Scene 6567",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6567.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6567.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6567.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 943979
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 157769
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 6761036
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4137216
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6567.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 969241
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 152321
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 6714805
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4142986
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6567.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 4,
+          "labeledPixels": 11979353,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6593",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6593",
+      "title": "Scene 6593",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6593.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6593.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6593.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 2950555
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 104184
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11051885
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6593.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3004057
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 86946
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11012488
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6593.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 14103491,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6602",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6602",
+      "title": "Scene 6602",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6602.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6602.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6602.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 4807846
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 240690
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9058088
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6602.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 4983003
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 293693
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8827839
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6602.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 14104535,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6619",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6619",
+      "title": "Scene 6619",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6619.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6619.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6619.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 684790
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 554368
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 840465
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 12027001
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6619.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 713143
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 740523
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 802486
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11786124
+          }
+        ],
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 19970
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 653961
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 534819
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 772633
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12024568
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6619.jpg",
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/6619.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 4,
+          "labeledPixels": 14042276,
+          "coverage": 0.995
+        },
+        "deeplabv3plus_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 14005951,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6632",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6632",
+      "title": "Scene 6632",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6632.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6632.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6632.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 841860
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1397469
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1588462
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10278833
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6632.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 770231
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1277535
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 26859
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1750042
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10128303
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6632.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 13952970,
+          "coverage": 0.989
+        }
+      },
+      "classNames": [
+        "Background",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6680",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6680",
+      "title": "Scene 6680",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6680.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6680.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6680.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 9477037
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2522963
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6680.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 9206675
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2791312
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6680.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11997987,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6691",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6691",
+      "title": "Scene 6691",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6691.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6691.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6691.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 931469
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 422247
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 771311
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 6154703
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1675778
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 70243
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 10847
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4070026
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6691.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 841002
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 12283
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 54225
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 6471803
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1208446
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 30503
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 15234
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5162652
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6691.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 8,
+          "labeledPixels": 13796148,
+          "coverage": 0.978
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "8 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 8,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6761",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6761",
+      "title": "Scene 6761",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6761.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6761.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6761.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 179907
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 3804589
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3610692
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 10161
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4394651
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6761.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 172075
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 9432
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 4058062
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3227089
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4464013
+          }
+        ],
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 156342
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3821
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3948372
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3201467
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 5654
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4577596
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6761.jpg",
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/6761.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 5,
+          "labeledPixels": 11930671,
+          "coverage": 0.994
+        },
+        "deeplabv3plus_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11893252,
+          "coverage": 0.991
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Water",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6765",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6765",
+      "title": "Scene 6765",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6765.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/6765.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6765.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 230112
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 35688
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 3554883
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4329871
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 18297
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3831149
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/6765.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 168517
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 25565
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3573291
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4440983
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 15198
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3696455
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/6765.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11920009,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6775",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6775",
+      "title": "Scene 6775",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6775.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/6775.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6775.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 311094
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 68682
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 3416047
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 5308711
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 10335
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2885131
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/6775.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 306606
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 48998
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3399748
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5334444
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 6501
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2855867
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/6775.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11952164,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6786",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6786",
+      "title": "Scene 6786",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6786.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6786.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6786.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 354486
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 32285
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 3202786
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 5168429
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 2366
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3239648
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6786.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 295360
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 43023
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 914747
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5247091
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5459552
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6786.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 5,
+          "labeledPixels": 11959773,
+          "coverage": 0.997
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6795",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6795",
+      "title": "Scene 6795",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6795.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6795.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6795.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 813453
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1265153
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3228434
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 20133
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 108876
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6563951
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6795.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 778330
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1315893
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3346181
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 22895
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 70923
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6429272
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6795.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11963494,
+          "coverage": 0.997
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6796",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6796",
+      "title": "Scene 6796",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6796.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6796.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6796.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 932629
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 61541
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4938094
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 13996
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 104822
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5948918
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6796.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 999706
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 281801
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5058472
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 13123
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 85023
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5512996
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6796.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 11951121,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6815",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6815",
+      "title": "Scene 6815",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6815.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/6815.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6815.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 169694
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 8701223
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 48176
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3080907
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/6815.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 142754
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 8722595
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 43972
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3072964
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 17202
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 8648595
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 47162
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3260735
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/6815.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6815.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11982285,
+          "coverage": 0.999
+        },
+        "segformer_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11973694,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6850",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6850",
+      "title": "Scene 6850",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6850.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/6850.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6850.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 108595
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 6368759
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5522646
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/6850.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 89154
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 6095207
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5808510
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6850.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11992871,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6910",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6910",
+      "title": "Scene 6910",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6910.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6910.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6910.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 888902
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 762642
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 589092
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4514065
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 44280
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5201019
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6910.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 813276
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 757204
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 456517
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4653079
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 33026
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5226368
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6910.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 11939470,
+          "coverage": 0.995
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6915",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6915",
+      "title": "Scene 6915",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6915.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/6915.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6915.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 522876
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 8016767
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3460357
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/6915.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 359086
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 65312
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1627
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 8207423
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3251907
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/6915.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 5,
+          "labeledPixels": 11885355,
+          "coverage": 0.99
+        }
+      },
+      "classNames": [
+        "Background",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-6963",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "6963",
+      "title": "Scene 6963",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/6963.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/6963.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/6963.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1808571
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 485327
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4799704
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 94577
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 410968
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4400853
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/6963.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1770016
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 554654
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 86526
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4753362
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 75611
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 232865
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4405496
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1941612
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 568956
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 107037
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4778889
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 93363
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 261361
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4045688
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/6963.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/6963.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 11878530,
+          "coverage": 0.99
+        },
+        "segformer_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 11796906,
+          "coverage": 0.983
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7023",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7023",
+      "title": "Scene 7023",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7023.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7023.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7023.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 5308018
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6691982
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7023.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 6085102
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5912273
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7023.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11997375,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7031",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7031",
+      "title": "Scene 7031",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7031.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7031.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7031.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3899080
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8100920
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7031.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3900133
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8089589
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7031.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11989722,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7042",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7042",
+      "title": "Scene 7042",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7042.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7042.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7042.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 890146
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4328627
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 53816
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 233233
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6494178
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7042.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1116426
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 151143
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3818506
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 67950
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 219190
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6526883
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7042.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11900098,
+          "coverage": 0.992
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7054",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7054",
+      "title": "Scene 7054",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7054.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7054.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7054.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 987462
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11012538
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7054.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 15904
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 963430
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 553
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11016239
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7054.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 4,
+          "labeledPixels": 11996126,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7063",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7063",
+      "title": "Scene 7063",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7063.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7063.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7063.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 314092
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 830837
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10855071
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7063.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 270477
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 804006
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10924721
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7063.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11999204,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7085",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7085",
+      "title": "Scene 7085",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7085.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7085.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7085.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 363498
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11636502
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7085.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 376385
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11622332
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7085.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11998717,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7092",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7092",
+      "title": "Scene 7092",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7092.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7092.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7092.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 580318
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 13252
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11406430
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7092.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 584382
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11408834
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7092.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11993216,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7149",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7149",
+      "title": "Scene 7149",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7149.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7149.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7149.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1267174
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2880225
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1453291
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 26046
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6373264
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7149.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1184428
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3096405
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1598534
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 22984
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5986761
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7149.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 5,
+          "labeledPixels": 11889112,
+          "coverage": 0.991
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7154",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7154",
+      "title": "Scene 7154",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7154.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7154.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7154.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1536693
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2696188
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1739842
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 51242
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5976035
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7154.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1579841
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2767488
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1881443
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 26968
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5534392
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7154.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11790132,
+          "coverage": 0.983
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7158",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7158",
+      "title": "Scene 7158",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7158.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7158.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7158.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 126859
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2940793
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8932348
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7158.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 143691
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3159576
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8695606
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7158.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11998873,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7172",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7172",
+      "title": "Scene 7172",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7172.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7172.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7172.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1052773
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10947227
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7172.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 902318
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11096883
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7172.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999201,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7191",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7191",
+      "title": "Scene 7191",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7191.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7191.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7191.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2328026
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9671974
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7191.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2677504
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9318992
+          }
+        ],
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2735234
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9263937
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7191.jpg",
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7191.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11996496,
+          "coverage": 1
+        },
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999171,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7231",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7231",
+      "title": "Scene 7231",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7231.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7231.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7231.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 690992
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 634143
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 6503299
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4171566
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7231.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 738640
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 730721
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 6458331
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3955281
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7231.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11882973,
+          "coverage": 0.99
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7233",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7233",
+      "title": "Scene 7233",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7233.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7233.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7233.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1558092
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 771133
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4028337
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5642438
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7233.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1616312
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 754120
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3755819
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5840372
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7233.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11966623,
+          "coverage": 0.997
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7241",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7241",
+      "title": "Scene 7241",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7241.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7241.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7241.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 2884807
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 2793650
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 4132624
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4108376
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 102223
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 84944
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7241.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 2669575
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 3176157
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3984594
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3786079
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 70140
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 62955
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7241.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 13749500,
+          "coverage": 0.975
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7284",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7284",
+      "title": "Scene 7284",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7284.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7284.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7284.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 159188
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 341494
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 13421425
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 141383
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 43134
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7284.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 522708
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 23447
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 13140980
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 43259
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 9
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 38183
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 286725
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7284.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 7,
+          "labeledPixels": 14055311,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Building-non-flooded",
+        "Water",
+        "Tree",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7300",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7300",
+      "title": "Scene 7300",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7300.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7300.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7300.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 3081455
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 3540094
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 139033
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3952438
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 49595
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 117453
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3226556
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7300.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 835006
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1951851
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 3605217
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3721942
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 36365
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 138520
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3191449
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7300.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 13480350,
+          "coverage": 0.956
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7315",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7315",
+      "title": "Scene 7315",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7315.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7315.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7315.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 2870939
+        },
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 3526449
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 3839516
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3645564
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 55855
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 168301
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7315.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 3332641
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 3560025
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3047712
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3596880
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 41607
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 197692
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 134
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 3459990
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 3549172
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 107269
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3768952
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 56131
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 232937
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1727853
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7315.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7315.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 13776691,
+          "coverage": 0.977
+        },
+        "segformer_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 12902304,
+          "coverage": 0.915
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        }
+      ],
+      "summary": "6 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7339",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7339",
+      "title": "Scene 7339",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7339.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7339.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7339.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 3332089
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 5560355
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2703189
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 68934
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2442057
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7339.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 3351371
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 3835158
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1461432
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2605352
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 81399
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2338874
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7339.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 13673586,
+          "coverage": 0.969
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7348",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7348",
+      "title": "Scene 7348",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7348.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7348.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7348.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 12737413
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1369211
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7348.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 11187332
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 111441
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1388565
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1049810
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7348.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 13737148,
+          "coverage": 0.974
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7359",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7359",
+      "title": "Scene 7359",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7359.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7359.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7359.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 467830
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 155961
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 388482
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 12251002
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 797205
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 46144
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7359.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 631556
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 357126
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 10167620
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 852436
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 41470
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1840919
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7359.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 13891127,
+          "coverage": 0.985
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Building-non-flooded",
+        "Road-flooded",
+        "Water",
+        "Tree",
+        "Vehicle"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7370",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7370",
+      "title": "Scene 7370",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7370.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7370.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7370.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 925070
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 83602
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 11424205
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1374469
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 22322
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 276956
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7370.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 581743
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 194901
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 573586
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 11065366
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1243039
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 14697
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 230924
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 7542
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7370.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 8,
+          "labeledPixels": 13911798,
+          "coverage": 0.986
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7413",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7413",
+      "title": "Scene 7413",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7413.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7413.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7413.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 3204359
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 2744839
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4447779
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 66078
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3643569
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7413.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 3370722
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 2962105
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 2598101
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4678064
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 92664
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 13416
+          }
+        ],
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 3289186
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 3025068
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1370792
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4735440
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 81755
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 16608
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 233656
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7413.jpg",
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7413.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 13715072,
+          "coverage": 0.972
+        },
+        "deeplabv3plus_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 12752505,
+          "coverage": 0.904
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7450",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7450",
+      "title": "Scene 7450",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7450.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7450.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7450.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 11440597
+        },
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 1100773
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 1230512
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 334742
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7450.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 1060481
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1177
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 6781745
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 5425844
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 339129
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 463
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 1012244
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 11501806
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1147979
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 332935
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 515
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7450.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7450.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 13608839,
+          "coverage": 0.965
+        },
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 13995479,
+          "coverage": 0.992
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building-flooded",
+        "Water",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        }
+      ],
+      "summary": "4 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7457",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7457",
+      "title": "Scene 7457",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7457.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7457.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7457.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 1257254
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 10199623
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1277578
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 34814
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 1337355
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7457.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 1230002
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 10680086
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 393605
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1146160
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 14989
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 21322
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 34685
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 1123470
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 42586
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 10626445
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 60783
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1293431
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 16193
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 25029
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 184732
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7457.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7457.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 13520849,
+          "coverage": 0.958
+        },
+        "segformer_floodnet": {
+          "classCount": 8,
+          "labeledPixels": 13372669,
+          "coverage": 0.948
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7461",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7461",
+      "title": "Scene 7461",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7461.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7461.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7461.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 1364257
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 8624831
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1971796
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 52602
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2093138
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7461.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 1403351
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 8980814
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 54907
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1847920
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 38602
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1060365
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7461.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 13385959,
+          "coverage": 0.949
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7464",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7464",
+      "title": "Scene 7464",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7464.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7464.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7464.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 1818051
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 7379667
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2075072
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 7233
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2826601
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7464.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 1620512
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 7619302
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1907904
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 14767
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 1437
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2776869
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7464.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 13940791,
+          "coverage": 0.988
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7486",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7486",
+      "title": "Scene 7486",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7486.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7486.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7486.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 2766800
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 1467749
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 7169024
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2564003
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 61299
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 77749
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7486.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 2722019
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 1352477
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 6938955
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2587678
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 33727
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 78591
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7486.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 13713447,
+          "coverage": 0.972
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7581",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7581",
+      "title": "Scene 7581",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7581.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7581.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7581.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 3193642
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 1899714
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2588377
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 81978
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 229318
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6113595
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7581.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 3250379
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 1676940
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2586897
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 19499
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 195410
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6115489
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7581.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 13844614,
+          "coverage": 0.981
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7584",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7584",
+      "title": "Scene 7584",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7584.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7584.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7584.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 3291477
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 2133501
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2803537
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 106014
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 170100
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5601995
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7584.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 3002969
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 312881
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 2227565
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2940979
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 50118
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 149491
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5025686
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7584.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 13709689,
+          "coverage": 0.972
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7590",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7590",
+      "title": "Scene 7590",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7590.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7590.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7590.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 2775772
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 3270165
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3985345
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 87850
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 117709
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3869783
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7590.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 2720885
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 3156777
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3968758
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 57940
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 88650
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3742628
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7590.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 13735638,
+          "coverage": 0.974
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7593",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7593",
+      "title": "Scene 7593",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7593.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7593.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7593.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 1714689
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1335687
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 2688005
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3975414
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 98811
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 119375
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4174643
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7593.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 2682301
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 8239
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 2948764
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3374037
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 102260
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 84401
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4395576
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7593.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 13595578,
+          "coverage": 0.964
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Building-non-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7611",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7611",
+      "title": "Scene 7611",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7611.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7611.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7611.jpg",
+      "rawImageAvailable": true,
+      "width": 4592,
+      "height": 3072,
+      "dimensions": "4592 x 3072",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Building-flooded",
+          "pixelCount": 3661140
+        },
+        {
+          "labelIndex": 3,
+          "className": "Road-flooded",
+          "pixelCount": 2415519
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4100278
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 133465
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 157570
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3638652
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7611.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 5690
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 3438097
+          },
+          {
+            "labelIndex": 3,
+            "className": "Road-flooded",
+            "pixelCount": 2783842
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 274
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4114484
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 78624
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 138910
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1916768
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7611.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 8,
+          "labeledPixels": 12476689,
+          "coverage": 0.884
+        }
+      },
+      "classNames": [
+        "Building-flooded",
+        "Road-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4f87bd"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#1b1699"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 14106624,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7644",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7644",
+      "title": "Scene 7644",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7644.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7644.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7644.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2786946
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 5074637
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1536967
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 64971
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2536479
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7644.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2830439
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 5304156
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1585778
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 88324
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1825132
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7644.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11633829,
+          "coverage": 0.969
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7647",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7647",
+      "title": "Scene 7647",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7647.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7647.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7647.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2931884
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 5670113
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1080896
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 94978
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2222129
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7647.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2904522
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 5626133
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 983740
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 85566
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2250379
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7647.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11850340,
+          "coverage": 0.988
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7651",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7651",
+      "title": "Scene 7651",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7651.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7651.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7651.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 3769378
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 3984895
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1086712
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3159015
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7651.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 3675128
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 4255952
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1051012
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 90066
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2780581
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7651.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11852739,
+          "coverage": 0.988
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7666",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7666",
+      "title": "Scene 7666",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7666.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7666.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7666.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 2688997
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 134469
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9176534
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7666.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 90977
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 2297079
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 125868
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9458168
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7666.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 4,
+          "labeledPixels": 11972092,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7689",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7689",
+      "title": "Scene 7689",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7689.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7689.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7689.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1633949
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 4365507
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1527877
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4472667
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7689.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1648041
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 4214287
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 602070
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1549850
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 18566
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3770233
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7689.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 11803047,
+          "coverage": 0.984
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7708",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7708",
+      "title": "Scene 7708",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7708.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7708.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7708.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 62378
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 6990574
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4947048
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7708.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 7000260
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4999631
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7708.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11999891,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7723",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7723",
+      "title": "Scene 7723",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7723.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7723.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7723.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 187601
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 4145166
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 458623
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 5921
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7202689
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7723.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 195303
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 4207137
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 444820
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 45
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 7128071
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7723.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11975376,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Water",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7740",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7740",
+      "title": "Scene 7740",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7740.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7740.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7740.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8317675
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3682325
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7740.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 8110709
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 22144
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 181236
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3628857
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7740.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11942946,
+          "coverage": 0.995
+        }
+      },
+      "classNames": [
+        "Background",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7758",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7758",
+      "title": "Scene 7758",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7758.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7758.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7758.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 11394430
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 605570
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7758.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 11486599
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 510041
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7758.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11996640,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7763",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7763",
+      "title": "Scene 7763",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7763.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7763.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7763.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 10475718
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1524282
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7763.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 10658235
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1337619
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7763.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11995854,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7771",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7771",
+      "title": "Scene 7771",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7771.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7771.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7771.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 11273727
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 726273
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7771.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 11549012
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 449508
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7771.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11998520,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7794",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7794",
+      "title": "Scene 7794",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7794.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7794.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7794.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 2594655
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1467844
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7937501
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7794.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 2419032
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1451003
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8127369
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7794.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11997404,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7803",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7803",
+      "title": "Scene 7803",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7803.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7803.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7803.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 4103003
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3087986
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4809011
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7803.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 4102214
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3394306
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4502629
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7803.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11999149,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7812",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7812",
+      "title": "Scene 7812",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7812.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7812.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7812.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 5038820
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1597897
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5363283
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7812.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 5033580
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1466415
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5498180
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7812.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11998175,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7813",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7813",
+      "title": "Scene 7813",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7813.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7813.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7813.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 5043007
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1900306
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5056687
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7813.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 5030432
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1802283
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5166429
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7813.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11999144,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7817",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7817",
+      "title": "Scene 7817",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7817.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7817.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7817.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 6651334
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2453262
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2895404
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7817.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 6667885
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2503122
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2828348
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7817.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11999355,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7840",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7840",
+      "title": "Scene 7840",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7840.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7840.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7840.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 552405
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 861782
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10585813
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7840.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 596432
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 952371
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10450014
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 582169
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 785130
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10632043
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7840.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7840.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11998817,
+          "coverage": 1
+        },
+        "pspnet_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11999342,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7880",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7880",
+      "title": "Scene 7880",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7880.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7880.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7880.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 10216679
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 1783321
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7880.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 140
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 10260001
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1726047
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7880.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11986188,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7881",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7881",
+      "title": "Scene 7881",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7881.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7881.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7881.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 263089
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 9587611
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2149300
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7881.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 220343
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 10367183
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1400196
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 186444
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 10251964
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 1541333
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7881.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7881.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11987722,
+          "coverage": 0.999
+        },
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11979741,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7888",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7888",
+      "title": "Scene 7888",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7888.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7888.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7888.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 510382
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1421141
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10068477
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7888.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 295476
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 761901
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10935378
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7888.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11992755,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7889",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7889",
+      "title": "Scene 7889",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7889.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7889.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7889.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 559584
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1242891
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10197525
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7889.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 295610
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1212320
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10490770
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 268596
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1166889
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10564185
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7889.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7889.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11998700,
+          "coverage": 1
+        },
+        "pspnet_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11999670,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7899",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7899",
+      "title": "Scene 7899",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7899.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7899.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7899.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 4285594
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 298790
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1602194
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 31612
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5781810
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7899.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3997757
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 316719
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1478501
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 32053
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6150596
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7899.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11975626,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7904",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7904",
+      "title": "Scene 7904",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7904.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7904.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7904.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 3352173
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3802345
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4845482
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7904.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3025688
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4726199
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4199157
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7904.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11951044,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7911",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7911",
+      "title": "Scene 7911",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7911.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7911.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7911.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 331944
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11668056
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7911.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 26150
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 87
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11973126
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7911.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11999363,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7915",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7915",
+      "title": "Scene 7915",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7915.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7915.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7915.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 603525
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11396475
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7915.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 467169
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 10097
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11513879
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7915.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11991145,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7921",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7921",
+      "title": "Scene 7921",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7921.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7921.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7921.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7921.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7921.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7926",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7926",
+      "title": "Scene 7926",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7926.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/7926.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7926.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/7926.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 585654
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11402445
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/7926.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11988099,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7928",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7928",
+      "title": "Scene 7928",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7928.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7928.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7928.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1091548
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10908452
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7928.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2606664
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9376407
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7928.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11983071,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7946",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7946",
+      "title": "Scene 7946",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7946.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/7946.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7946.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 2371383
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 587525
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9041092
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/7946.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 2279804
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 343401
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9376464
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/7946.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11999669,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7969",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7969",
+      "title": "Scene 7969",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7969.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7969.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7969.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 51904
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11948096
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7969.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 59553
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11940440
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7969.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999993,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7985",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7985",
+      "title": "Scene 7985",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7985.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/7985.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7985.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 5187989
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1471922
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 28538
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5311551
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/7985.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 5265327
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1593117
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 30705
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5091810
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/7985.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11980959,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-7993",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "7993",
+      "title": "Scene 7993",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/7993.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/7993.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/7993.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1101787
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 111993
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10786220
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/7993.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1256100
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 79540
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10658443
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/7993.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11994083,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8017",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8017",
+      "title": "Scene 8017",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8017.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8017.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8017.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 282616
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11717384
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8017.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 304884
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11691094
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8017.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11995978,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8021",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8021",
+      "title": "Scene 8021",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8021.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8021.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8021.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 941333
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11058667
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8021.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 930567
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11067203
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8021.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11997770,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8028",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8028",
+      "title": "Scene 8028",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8028.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8028.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8028.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8028.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8028.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8040",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8040",
+      "title": "Scene 8040",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8040.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8040.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8040.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8040.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12000000
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8040.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8040.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        },
+        "pspnet_floodnet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "1 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8041",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8041",
+      "title": "Scene 8041",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8041.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8041.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8041.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8041.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8041.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8048",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8048",
+      "title": "Scene 8048",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8048.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8048.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8048.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 21635
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11978365
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8048.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8048.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8064",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8064",
+      "title": "Scene 8064",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8064.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8064.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8064.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 164735
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 33519
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11801746
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8064.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 154483
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 43845
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11801317
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8064.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11999645,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8066",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8066",
+      "title": "Scene 8066",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8066.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8066.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8066.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 718056
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 68199
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11213745
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8066.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 739320
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 203802
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11050611
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 695438
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11302074
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8066.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8066.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11993733,
+          "coverage": 0.999
+        },
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11997512,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8069",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8069",
+      "title": "Scene 8069",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8069.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8069.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8069.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1182118
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 696915
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10120967
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8069.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1249333
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1868317
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8876101
+          }
+        ],
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1240955
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1583148
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9160812
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1122100
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 315231
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10546277
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8069.jpg",
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8069.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8069.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11993751,
+          "coverage": 0.999
+        },
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11984915,
+          "coverage": 0.999
+        },
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11983608,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 3 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8073",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8073",
+      "title": "Scene 8073",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8073.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8073.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8073.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1070705
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 927677
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10001618
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8073.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1026431
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1097789
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9855565
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8073.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11979785,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8076",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8076",
+      "title": "Scene 8076",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8076.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8076.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8076.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2649322
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 47656
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9303022
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8076.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2834769
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 47047
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9116783
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8076.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11998599,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8104",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8104",
+      "title": "Scene 8104",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8104.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8104.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8104.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 261443
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11738557
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8104.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 272491
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11726449
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8104.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11998940,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8111",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8111",
+      "title": "Scene 8111",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8111.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8111.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8111.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 260466
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11739534
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8111.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 239899
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11758730
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8111.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11998629,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8154",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8154",
+      "title": "Scene 8154",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8154.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8154.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8154.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1416816
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10583184
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8154.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1373547
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 16434
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10609891
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1548293
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2771
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10447850
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8154.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8154.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11999872,
+          "coverage": 1
+        },
+        "pspnet_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11998914,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8160",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8160",
+      "title": "Scene 8160",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8160.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8160.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8160.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 327586
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4710060
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6962354
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8160.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 422811
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3435957
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8131671
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8160.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11990439,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8170",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8170",
+      "title": "Scene 8170",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8170.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8170.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8170.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1528390
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10471610
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8170.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1120119
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 73303
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10804568
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8170.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11997990,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8183",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8183",
+      "title": "Scene 8183",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8183.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8183.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8183.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 3041467
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 285126
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8673407
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8183.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3250028
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 325579
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8423290
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8183.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11998897,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8194",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8194",
+      "title": "Scene 8194",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8194.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8194.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8194.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8194.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8194.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8219",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8219",
+      "title": "Scene 8219",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8219.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8219.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8219.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4727014
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7272986
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8219.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4256161
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 7743449
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8219.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999610,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8250",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8250",
+      "title": "Scene 8250",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8250.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8250.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8250.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2845901
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9154099
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8250.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3105801
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8893553
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8250.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999354,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8262",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8262",
+      "title": "Scene 8262",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8262.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8262.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8262.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2461106
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9538894
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8262.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2738362
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9261250
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8262.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11999612,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8279",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8279",
+      "title": "Scene 8279",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8279.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8279.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8279.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 3741457
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 980716
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 59934
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7217893
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8279.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3926987
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1121608
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 58987
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6889378
+          }
+        ],
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3952281
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1040766
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 63820
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6936141
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8279.jpg",
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8279.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 4,
+          "labeledPixels": 11996960,
+          "coverage": 1
+        },
+        "deeplabv3plus_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11993008,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8287",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8287",
+      "title": "Scene 8287",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8287.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8287.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8287.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4618808
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7381192
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8287.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4751169
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 7248401
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8287.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999570,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8290",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8290",
+      "title": "Scene 8290",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8290.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8290.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8290.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4079804
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7920196
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8290.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3827555
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8171953
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3739982
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8259470
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8290.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8290.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999508,
+          "coverage": 1
+        },
+        "pspnet_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999452,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8292",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8292",
+      "title": "Scene 8292",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8292.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8292.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8292.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2130768
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9869232
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8292.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1776461
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10223000
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8292.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999461,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8303",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8303",
+      "title": "Scene 8303",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8303.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8303.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8303.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 70765
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 188662
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11740573
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8303.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 59385
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 189907
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11750355
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8303.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11999647,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8308",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8308",
+      "title": "Scene 8308",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8308.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8308.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8308.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1048989
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10951011
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8308.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1060701
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10939128
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8308.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11999829,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8310",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8310",
+      "title": "Scene 8310",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8310.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8310.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8310.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1441583
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10558417
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8310.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1446768
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10550371
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8310.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11997139,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8339",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8339",
+      "title": "Scene 8339",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8339.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8339.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8339.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 188633
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2460584
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9350783
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8339.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 196222
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 104777
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2361083
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9325845
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8339.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11987927,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8340",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8340",
+      "title": "Scene 8340",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8340.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8340.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8340.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 190125
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1489744
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10320131
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8340.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 190568
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 77717
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1561846
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10161552
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8340.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11991683,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8341",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8341",
+      "title": "Scene 8341",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8341.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8341.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8341.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 136541
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 901097
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10962362
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8341.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 139358
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 717323
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11140615
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 139112
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 664999
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11190788
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8341.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8341.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11997296,
+          "coverage": 1
+        },
+        "pspnet_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11994899,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8356",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8356",
+      "title": "Scene 8356",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8356.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8356.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8356.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 580665
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4790435
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 51675
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6577225
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8356.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 580810
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4820509
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 51172
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6533869
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8356.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11986360,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8367",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8367",
+      "title": "Scene 8367",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8367.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8367.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8367.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 3720833
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 594563
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 24959
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7659645
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8367.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3925957
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 660126
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 27439
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 7383355
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8367.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11996877,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8372",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8372",
+      "title": "Scene 8372",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8372.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8372.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8372.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2042697
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1781839
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4893595
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 33538
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3248331
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8372.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2066518
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1760432
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5127568
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 33889
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2988519
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8372.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11976926,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8376",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8376",
+      "title": "Scene 8376",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8376.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8376.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8376.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 962498
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1365251
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 5434026
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 110950
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4127275
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8376.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 968608
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1354550
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4206768
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 79636
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5348591
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8376.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11958153,
+          "coverage": 0.997
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8494",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8494",
+      "title": "Scene 8494",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8494.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8494.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8494.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 181986
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1071158
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 1961761
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1709024
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7076071
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8494.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 139363
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1009737
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 2128544
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1528396
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 7080472
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8494.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11886512,
+          "coverage": 0.991
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8511",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8511",
+      "title": "Scene 8511",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8511.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8511.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8511.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 11137
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 8695
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1324371
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10655797
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8511.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 6848
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 8246607
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1069537
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2546974
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8511.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 4,
+          "labeledPixels": 11869966,
+          "coverage": 0.989
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8514",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8514",
+      "title": "Scene 8514",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8514.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8514.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8514.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1219974
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2894599
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1930015
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 51982
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5903430
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8514.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1229278
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2689794
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2004149
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 41555
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5864555
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8514.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11829331,
+          "coverage": 0.986
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8525",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8525",
+      "title": "Scene 8525",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8525.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8525.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8525.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 38089
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1124733
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10837178
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8525.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 49190
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1236071
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10711461
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 38455
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1190492
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10768260
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8525.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8525.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11996722,
+          "coverage": 1
+        },
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11997207,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8533",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8533",
+      "title": "Scene 8533",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8533.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8533.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8533.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 816171
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11183829
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8533.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 759264
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11235334
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8533.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11994598,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8543",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8543",
+      "title": "Scene 8543",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8543.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8543.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8543.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 53486
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11946514
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8543.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 123058
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11876454
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8543.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11999512,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8544",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8544",
+      "title": "Scene 8544",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8544.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8544.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8544.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 130352
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11869648
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8544.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 170062
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11828943
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8544.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11999005,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8558",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8558",
+      "title": "Scene 8558",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8558.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/8558.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8558.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 194062
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 713739
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11092199
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/8558.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 89392
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 930727
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 10927309
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8558.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11947428,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8592",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8592",
+      "title": "Scene 8592",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8592.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8592.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8592.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 879907
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11120093
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8592.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 965759
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11033199
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8592.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11998958,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8767",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8767",
+      "title": "Scene 8767",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8767.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8767.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8767.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1667057
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 800885
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 10115
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9521943
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8767.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1402652
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 727879
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 3889
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9864690
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8767.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11999110,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8776",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8776",
+      "title": "Scene 8776",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8776.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8776.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8776.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2058051
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 12720
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9929229
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8776.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2074297
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 107086
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 11520
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9803547
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8776.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11996450,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8781",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8781",
+      "title": "Scene 8781",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8781.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8781.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8781.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1723069
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 679920
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 7038
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9589973
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8781.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1862519
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 738318
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 52784
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 7948
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9310469
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1764224
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 707267
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 41755
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 4597
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9472764
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8781.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/8781.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11972038,
+          "coverage": 0.998
+        },
+        "segformer_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11990607,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8795",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8795",
+      "title": "Scene 8795",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8795.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8795.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8795.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8795.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8795.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8810",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8810",
+      "title": "Scene 8810",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8810.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8810.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8810.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 210423
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 358775
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 105224
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11325578
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8810.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 167087
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 404260
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 106625
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11301292
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8810.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11979264,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8814",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8814",
+      "title": "Scene 8814",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8814.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8814.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8814.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 553134
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 230666
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 137845
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 11078355
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8814.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 38533
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 426235
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 194697
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 134304
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11184326
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8814.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 5,
+          "labeledPixels": 11978095,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Tree",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8860",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8860",
+      "title": "Scene 8860",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8860.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8860.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8860.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 3758838
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8241162
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8860.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 239100
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3429676
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8292395
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8860.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 3,
+          "labeledPixels": 11961171,
+          "coverage": 0.997
+        }
+      },
+      "classNames": [
+        "Background",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8898",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8898",
+      "title": "Scene 8898",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8898.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8898.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8898.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1569603
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 1347810
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 25490
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 9057097
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8898.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1558867
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1394908
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 9045919
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8898.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 3,
+          "labeledPixels": 11999694,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8959",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8959",
+      "title": "Scene 8959",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8959.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8959.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8959.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2608722
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 4328814
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5062464
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8959.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2590883
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 4417060
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 703
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4987694
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8959.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11996340,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8989",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8989",
+      "title": "Scene 8989",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8989.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/8989.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8989.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1547958
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 1925348
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 185111
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8341583
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/8989.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1560754
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 2069067
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 39137
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 3756
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8320885
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/8989.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11993599,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8991",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8991",
+      "title": "Scene 8991",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8991.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/8991.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8991.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 1952527
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1451733
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 398523
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8197217
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/8991.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1594117
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1985167
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 156941
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8258675
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/8991.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 4,
+          "labeledPixels": 11994900,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-8999",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "8999",
+      "title": "Scene 8999",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/8999.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/8999.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/8999.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 2480465
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 3327779
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 520394
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5671362
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/8999.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 1688691
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2288207
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 355189
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 178061
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 11282
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6993528
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/8999.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11514958,
+          "coverage": 0.96
+        }
+      },
+      "classNames": [
+        "Background",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9002",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9002",
+      "title": "Scene 9002",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9002.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/9002.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9002.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 2715287
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2417658
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 16262
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6850793
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/9002.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 252266
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2602912
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1831864
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 12425
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6842701
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/9002.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 5,
+          "labeledPixels": 11542168,
+          "coverage": 0.962
+        }
+      },
+      "classNames": [
+        "Background",
+        "Road-non-flooded",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9004",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9004",
+      "title": "Scene 9004",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9004.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/9004.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9004.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 3110629
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 694526
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 8237
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8186608
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/9004.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 682803
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 2769682
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 6900
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8454963
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/9004.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 4,
+          "labeledPixels": 11914348,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Background",
+        "Road-non-flooded",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9013",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9013",
+      "title": "Scene 9013",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9013.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/9013.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9013.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 468006
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 162228
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 416712
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 158279
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 10794775
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/9013.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 152631
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 357984
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 44789
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 8055
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 11381698
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9013.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11945157,
+          "coverage": 0.995
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9018",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9018",
+      "title": "Scene 9018",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9018.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/9018.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9018.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8474440
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 884779
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1616792
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 430419
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 537681
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 55889
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/9018.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 8447857
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 618160
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1715738
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 506344
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 424487
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 45857
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 774
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/9018.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 7,
+          "labeledPixels": 11759217,
+          "coverage": 0.98
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9032",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9032",
+      "title": "Scene 9032",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9032.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/9032.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9032.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 7832842
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 708238
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 3447951
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 10969
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/9032.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 10721571
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 609834
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 657253
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 5548
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 94
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 7293615
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 791781
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 2995448
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 9207
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 178498
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/9032.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9032.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11994300,
+          "coverage": 1
+        },
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11268549,
+          "coverage": 0.939
+        }
+      },
+      "classNames": [
+        "Background",
+        "Road-non-flooded",
+        "Water",
+        "Vehicle"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        }
+      ],
+      "summary": "4 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9037",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9037",
+      "title": "Scene 9037",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9037.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/9037.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9037.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 1269673
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2215843
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 3363823
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 998648
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 332486
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3819527
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/9037.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 140544
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2167483
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3899724
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1089813
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 295123
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4191323
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2206940
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3535089
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1094097
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 342807
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4523733
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/9037.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9037.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 11784010,
+          "coverage": 0.982
+        },
+        "pspnet_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11702666,
+          "coverage": 0.975
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9045",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9045",
+      "title": "Scene 9045",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9045.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/9045.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9045.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 3235326
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 3414582
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1636164
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 73441
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 37520
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3602967
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/9045.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 3160513
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 3293474
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1480998
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 110178
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 31220
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3682274
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/9045.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11758657,
+          "coverage": 0.98
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9054",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9054",
+      "title": "Scene 9054",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9054.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/9054.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9054.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1933208
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1434520
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4202526
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 37821
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 213439
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4178486
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/9054.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1979710
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1400669
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4259613
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 14022
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 110869
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 4147637
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9054.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11912520,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9060",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9060",
+      "title": "Scene 9060",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9060.jpg",
+      "sourceImage": "FloodNetPlus/segformer_floodnet/ground_truth_images/9060.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9060.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2059356
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2113189
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1928138
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 19076
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5880241
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/segformer_floodnet/samples_gt_with_json/9060.jpg",
+      "predictions": {
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2119107
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2061999
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2012717
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 19849
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5663093
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/9060.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_floodnet": {
+          "classCount": 5,
+          "labeledPixels": 11876765,
+          "coverage": 0.99
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9068",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9068",
+      "title": "Scene 9068",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9068.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/9068.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9068.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2281590
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 841052
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 1427582
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 60812
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 96414
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 7292550
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/9068.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2330772
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 818199
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 1439360
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 49750
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 78206
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 7203611
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9068.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11919898,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9092",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9092",
+      "title": "Scene 9092",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9092.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/9092.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9092.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 4184649
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2461072
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 765607
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4385034
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 29609
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 174029
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/9092.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2540134
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1086647
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4196882
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 22931
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 184878
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3885273
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9092.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11916745,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9096",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9096",
+      "title": "Scene 9096",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9096.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/9096.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9096.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 3531646
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2490477
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2247459
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 3472469
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 167534
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 90415
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/9096.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2577187
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 2682503
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3625398
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 108965
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 96236
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2573859
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9096.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11664148,
+          "coverage": 0.972
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9113",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9113",
+      "title": "Scene 9113",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9113.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/9113.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9113.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 65322
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1715428
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 1052846
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2507133
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 14492
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6644779
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/9113.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 59025
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1865808
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1020902
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2549469
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 14665
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6471231
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/9113.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11981100,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9114",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9114",
+      "title": "Scene 9114",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9114.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/9114.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9114.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 65306
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1746317
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 1495289
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2507462
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 14502
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 6171124
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/9114.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 53998
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1910620
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1471863
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2541189
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 15827
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 5982561
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 57072
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1875414
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 1514186
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2416018
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 14945
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 6074709
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/9114.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9114.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 6,
+          "labeledPixels": 11976058,
+          "coverage": 0.998
+        },
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11952344,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-9872",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "9872",
+      "title": "Scene 9872",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/9872.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/9872.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/9872.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 335360
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 345297
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2422148
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 8897195
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/9872.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 296794
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 310228
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 2447976
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 8930655
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/9872.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11985653,
+          "coverage": 0.999
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-10163",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "10163",
+      "title": "Scene 10163",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/10163.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/10163.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/10163.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 7450703
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 4549297
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/10163.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 11980181
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 19235
+          }
+        ],
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 11975279
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 21829
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/10163.jpg",
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/10163.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 2,
+          "labeledPixels": 11999416,
+          "coverage": 1
+        },
+        "pspnet_floodnet": {
+          "classCount": 2,
+          "labeledPixels": 11997108,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Water",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "2 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-10167",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "10167",
+      "title": "Scene 10167",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/10167.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/10167.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/10167.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 11993372
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 6628
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/10167.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 11360175
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 10694
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 13050
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 593329
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/10167.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 4,
+          "labeledPixels": 11977248,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Water",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-10174",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "10174",
+      "title": "Scene 10174",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/10174.jpg",
+      "sourceImage": "FloodNetPlus/deeplabv3plus_floodnet/ground_truth_images/10174.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/10174.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 3437566
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 385262
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 5295242
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 111118
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 438910
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2331902
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/deeplabv3plus_floodnet/samples_gt_with_json/10174.jpg",
+      "predictions": {
+        "deeplabv3plus_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 3545746
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 242027
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5208595
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 102364
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 488948
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2045317
+          }
+        ],
+        "segformer_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 3673026
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 55499
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5176206
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 108493
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 468043
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2043169
+          }
+        ]
+      },
+      "predictionImages": {
+        "deeplabv3plus_floodnet": "FloodNetPlus/deeplabv3plus_floodnet/visualised_samples_with_json/10174.jpg",
+        "segformer_floodnet": "FloodNetPlus/segformer_floodnet/visualised_samples_with_json/10174.jpg"
+      },
+      "sceneModelStats": {
+        "deeplabv3plus_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11632997,
+          "coverage": 0.969
+        },
+        "segformer_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11524436,
+          "coverage": 0.96
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 2 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-10812",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "10812",
+      "title": "Scene 10812",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/10812.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/10812.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/10812.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 2426940
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 1681786
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 4086558
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 42239
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 482400
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 3280077
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/10812.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 2543842
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1422491
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 4075871
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 37006
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 376889
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3365448
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/10812.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 6,
+          "labeledPixels": 11821547,
+          "coverage": 0.985
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-10814",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "10814",
+      "title": "Scene 10814",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/10814.jpg",
+      "sourceImage": "FloodNetPlus/ccnet_floodnetplus/ground_truth_images/10814.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/10814.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 1892621
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 2104611
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 5034504
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 49167
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 48068
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 2871029
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/ccnet_floodnetplus/samples_gt_with_json/10814.jpg",
+      "predictions": {
+        "ccnet_floodnetplus": [
+          {
+            "labelIndex": 1,
+            "className": "Building-flooded",
+            "pixelCount": 117869
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 1734111
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 1934670
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 5159995
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 43035
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 65604
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 2817470
+          }
+        ]
+      },
+      "predictionImages": {
+        "ccnet_floodnetplus": "FloodNetPlus/ccnet_floodnetplus/visualised_samples_with_json/10814.jpg"
+      },
+      "sceneModelStats": {
+        "ccnet_floodnetplus": {
+          "classCount": 7,
+          "labeledPixels": 11872754,
+          "coverage": 0.989
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "floodnetplus-11483",
+      "dataset": "FloodNetPlus",
+      "taskType": "semantic-segmentation",
+      "imageId": "11483",
+      "title": "Scene 11483",
+      "location": "FloodNetPlus benchmark sample",
+      "baseImage": "viewer/FloodNetPlus/11483.jpg",
+      "sourceImage": "FloodNetPlus/pspnet_floodnet/ground_truth_images/11483.jpg",
+      "thumbnailImage": "thumbnails/FloodNetPlus/11483.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Building-non-flooded",
+          "pixelCount": 774100
+        },
+        {
+          "labelIndex": 4,
+          "className": "Road-non-flooded",
+          "pixelCount": 137353
+        },
+        {
+          "labelIndex": 5,
+          "className": "Water",
+          "pixelCount": 2905353
+        },
+        {
+          "labelIndex": 6,
+          "className": "Tree",
+          "pixelCount": 2780524
+        },
+        {
+          "labelIndex": 7,
+          "className": "Vehicle",
+          "pixelCount": 11447
+        },
+        {
+          "labelIndex": 8,
+          "className": "Pool",
+          "pixelCount": 97770
+        },
+        {
+          "labelIndex": 9,
+          "className": "Grass",
+          "pixelCount": 5293453
+        }
+      ],
+      "groundTruthImage": "FloodNetPlus/pspnet_floodnet/samples_gt_with_json/11483.jpg",
+      "predictions": {
+        "pspnet_floodnet": [
+          {
+            "labelIndex": 2,
+            "className": "Building-non-flooded",
+            "pixelCount": 930181
+          },
+          {
+            "labelIndex": 4,
+            "className": "Road-non-flooded",
+            "pixelCount": 179346
+          },
+          {
+            "labelIndex": 5,
+            "className": "Water",
+            "pixelCount": 3038036
+          },
+          {
+            "labelIndex": 6,
+            "className": "Tree",
+            "pixelCount": 3419693
+          },
+          {
+            "labelIndex": 7,
+            "className": "Vehicle",
+            "pixelCount": 3465
+          },
+          {
+            "labelIndex": 8,
+            "className": "Pool",
+            "pixelCount": 83216
+          },
+          {
+            "labelIndex": 9,
+            "className": "Grass",
+            "pixelCount": 3813709
+          }
+        ]
+      },
+      "predictionImages": {
+        "pspnet_floodnet": "FloodNetPlus/pspnet_floodnet/visualised_samples_with_json/11483.jpg"
+      },
+      "sceneModelStats": {
+        "pspnet_floodnet": {
+          "classCount": 7,
+          "labeledPixels": 11467646,
+          "coverage": 0.956
+        }
+      },
+      "classNames": [
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
+        "Tree",
+        "Vehicle",
+        "Pool",
+        "Grass"
+      ],
+      "classLegend": [
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#e11d48"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#7e1020"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#1e22e8"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8f1a"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#0f4f79"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff1010"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#18f40d"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
     {
       "id": "ladd-2",
       "dataset": "LADD",
@@ -116,6 +19614,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -136,6 +19635,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -241,6 +19741,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 4,
@@ -261,6 +19762,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -454,6 +19956,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 7,
@@ -474,6 +19977,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "3 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -539,6 +20043,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -559,6 +20064,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -751,6 +20257,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 5,
@@ -771,6 +20278,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "4 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -1109,6 +20617,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 8,
@@ -1129,6 +20638,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "8 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -1487,6 +20997,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 10,
@@ -1507,6 +21018,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "8 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -1865,6 +21377,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 9,
@@ -1885,6 +21398,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "8 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -2028,6 +21542,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 3,
@@ -2048,6 +21563,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "3 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -2152,6 +21668,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 2,
@@ -2172,6 +21689,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "2 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -2237,6 +21755,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -2257,6 +21776,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -2400,6 +21920,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 3,
@@ -2420,6 +21941,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "3 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -2485,6 +22007,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -2505,6 +22028,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -2855,6 +22379,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 12,
@@ -2875,6 +22400,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "6 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -2940,6 +22466,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -2960,6 +22487,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -3074,6 +22602,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 2,
@@ -3094,6 +22623,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "2 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -3159,6 +22689,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -3179,6 +22710,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -3244,6 +22776,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -3264,6 +22797,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -3339,6 +22873,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 2,
@@ -3359,6 +22894,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -3463,6 +22999,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 2,
@@ -3483,6 +23020,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "2 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -3585,6 +23123,7 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo26l": []
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 4,
@@ -3605,6 +23144,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "3 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -3670,6 +23210,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -3690,6 +23231,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -3755,6 +23297,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -3775,6 +23318,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -3919,6 +23463,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 4,
@@ -3939,6 +23484,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "2 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -4024,6 +23570,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -4044,6 +23591,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -4109,6 +23657,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -4129,6 +23678,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -4204,6 +23754,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -4224,6 +23775,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -4309,6 +23861,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 2,
@@ -4329,7 +23882,8 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
-      "summary": "1 ground-truth box loaded. Raw image was missing, so this scene uses the GT preview image as fallback."
+      "classLegend": [],
+      "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
       "id": "ladd-898",
@@ -4394,6 +23948,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 1,
@@ -4414,7 +23969,8 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
-      "summary": "1 ground-truth box loaded. Raw image was missing, so this scene uses the GT preview image as fallback."
+      "classLegend": [],
+      "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
       "id": "ladd-1012",
@@ -4499,6 +24055,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 3,
@@ -4519,6 +24076,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -4562,6 +24120,7 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo26l": []
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 0,
@@ -4582,6 +24141,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -4604,6 +24164,7 @@ window.DETECTION_ATLAS_DATA = {
         "yolo11l": [],
         "yolo26l": []
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 0,
@@ -4622,6 +24183,7 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [],
+      "classLegend": [],
       "summary": "0 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -4804,6 +24366,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 5,
@@ -4824,6 +24387,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "4 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -5016,6 +24580,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 4,
@@ -5036,6 +24601,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "4 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -5170,6 +24736,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 3,
@@ -5190,6 +24757,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "2 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -5489,6 +25057,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 7,
@@ -5509,6 +25078,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "7 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -5857,6 +25427,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 9,
@@ -5877,6 +25448,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "8 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -6098,6 +25670,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 5,
@@ -6118,6 +25691,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "5 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -6556,6 +26130,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 15,
@@ -6576,6 +26151,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "8 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -6719,6 +26295,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 3,
@@ -6739,6 +26316,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "3 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -6921,6 +26499,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 4,
@@ -6941,6 +26520,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "4 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -7104,6 +26684,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 3,
@@ -7124,6 +26705,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "3 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -7267,6 +26849,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 3,
@@ -7287,6 +26870,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "3 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -7430,6 +27014,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 3,
@@ -7450,6 +27035,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "3 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -7632,6 +27218,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 4,
@@ -7652,6 +27239,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "4 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -7826,6 +27414,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 5,
@@ -7846,6 +27435,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "2 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -7951,6 +27541,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 4,
@@ -7971,6 +27562,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "1 ground-truth box with 3 model outputs loaded."
     },
     {
@@ -8349,6 +27941,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 10,
@@ -8369,6 +27962,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "8 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -8717,6 +28311,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 8,
@@ -8737,6 +28332,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "8 ground-truth boxes with 3 model outputs loaded."
     },
     {
@@ -9007,6 +28603,7 @@ window.DETECTION_ATLAS_DATA = {
           }
         ]
       },
+      "predictionImages": {},
       "sceneModelStats": {
         "rtdetrv2_l": {
           "count": 6,
@@ -9027,6 +28624,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Pedestrian"
       ],
+      "classLegend": [],
       "summary": "6 ground-truth boxes with 3 model outputs loaded."
     }
   ]
