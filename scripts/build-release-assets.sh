@@ -4,7 +4,7 @@ set -euo pipefail
 setopt local_options no_nomatch
 
 ROOT="/Users/peter/Scripts/Triffid/aerial-segmentation-demo"
-OUT_DIR="/tmp/aerial-atlas-release-assets-v2"
+OUT_DIR="/tmp/aerial-atlas-release-assets-v3"
 
 rm -rf "$OUT_DIR"
 mkdir -p "$OUT_DIR"

@@ -313,6 +313,12 @@ h1 {
   background: var(--button-bg);
 }
 
+.dataset-select-wrap optgroup {
+  font-style: normal;
+  font-weight: 760;
+  color: var(--muted);
+}
+
 .dataset-control small {
   color: var(--muted);
   font-size: 12px;

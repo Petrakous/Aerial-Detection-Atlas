@@ -1,6 +1,9 @@
 .DS_Store
 LADD/
 FloodNetPlus/
+RescueNet/
 *.zip
 viewer/FloodNetPlus/
+viewer/RescueNet/
 thumbnails/FloodNetPlus/
+thumbnails/RescueNet/

@@ -30,17 +30,34 @@ const DETECTION_CLASS_COLORS = [
 ];
 
 const SEGMENTATION_CLASS_COLORS = {
-  0: "#000000",
-  1: "#4f87bd",
-  2: "#e11d48",
-  3: "#1b1699",
-  4: "#7e1020",
-  5: "#1e22e8",
-  6: "#6b8f1a",
-  7: "#0f4f79",
-  8: "#ff1010",
-  9: "#18f40d"
+  FloodNetPlus: {
+    0: "#000000",
+    1: "#4f87bd",
+    2: "#e11d48",
+    3: "#1b1699",
+    4: "#7e1020",
+    5: "#1e22e8",
+    6: "#6b8f1a",
+    7: "#0f4f79",
+    8: "#ff1010",
+    9: "#18f40d"
+  },
+  RescueNet: {
+    0: "#5a5a5a",
+    1: "#18a2e6",
+    2: "#73ebe5",
+    3: "#fff65b",
+    4: "#ffa05b",
+    5: "#ef0000",
+    6: "#ed00d7",
+    7: "#b17cbc",
+    8: "#49ff00",
+    9: "#1b18ec",
+    10: "#d7a200"
+  }
 };
+
+const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD"];
 
 const IGNORED_DIRS = new Set([
   ".git",
@@ -140,6 +157,11 @@ function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+function preferredDatasetOrder(name) {
+  const explicitIndex = DATASET_ORDER.indexOf(name);
+  return explicitIndex === -1 ? DATASET_ORDER.length : explicitIndex;
+}
+
 function assignDetectionClassColors(names) {
   return [...names].sort().map((name, index) => ({
     id: slugify(name),
@@ -148,12 +170,16 @@ function assignDetectionClassColors(names) {
   }));
 }
 
-function segmentationLegendFromSegments(segments) {
+function segmentationColorFor(datasetName, labelIndex) {
+  return SEGMENTATION_CLASS_COLORS[datasetName]?.[labelIndex] || "#ffffff";
+}
+
+function segmentationLegendFromSegments(datasetName, segments) {
   return segments.map((segment) => ({
     id: slugify(segment.className),
     name: segment.className,
     labelIndex: segment.labelIndex,
-    color: SEGMENTATION_CLASS_COLORS[segment.labelIndex] || "#ffffff"
+    color: segmentationColorFor(datasetName, segment.labelIndex)
   }));
 }
 
@@ -174,7 +200,7 @@ function collectDatasetDirs() {
   return listDirectories(demoRoot)
     .filter((name) => !IGNORED_DIRS.has(name))
     .filter((name) => listDirectories(path.join(demoRoot, name)).some((child) => modelDirLooksValid(path.join(demoRoot, name), child)))
-    .sort();
+    .sort((a, b) => preferredDatasetOrder(a) - preferredDatasetOrder(b) || a.localeCompare(b));
 }
 
 function ensureModel(modelMap, modelId, taskType) {
@@ -360,7 +386,7 @@ function buildSegmentationScene({ datasetName, sceneId, sceneRoots, modelDirs, m
     predictionImages,
     sceneModelStats,
     classNames: gtSegments.map((segment) => segment.className),
-    classLegend: segmentationLegendFromSegments(gtSegments),
+    classLegend: segmentationLegendFromSegments(datasetName, gtSegments),
     summary: `${gtSegments.length} classes with ${Object.keys(predictions).length} model segmentations loaded.`,
     groundTruthStats: {
       classCount: gtSegments.length,
@@ -449,7 +475,10 @@ function buildDatasets() {
     if (a.taskType !== b.taskType) {
       return TASK_META[a.taskType].priority - TASK_META[b.taskType].priority;
     }
-    if (a.dataset !== b.dataset) return a.dataset.localeCompare(b.dataset);
+    if (a.dataset !== b.dataset) {
+      return preferredDatasetOrder(a.dataset) - preferredDatasetOrder(b.dataset)
+        || a.dataset.localeCompare(b.dataset);
+    }
     return safeNumericSort(a.imageId, b.imageId);
   });
 
@@ -457,7 +486,8 @@ function buildDatasets() {
     if (a.taskType !== b.taskType) {
       return TASK_META[a.taskType].priority - TASK_META[b.taskType].priority;
     }
-    return a.name.localeCompare(b.name);
+    return preferredDatasetOrder(a.name) - preferredDatasetOrder(b.name)
+      || a.name.localeCompare(b.name);
   });
 
   return {

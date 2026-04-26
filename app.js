@@ -1,5 +1,5 @@
 const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.TRIFID_DEMO_DATA;
-const releaseAssetBase = "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-v2/";
+const releaseAssetBase = "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-v3/";
 
 const availableModelIds = new Set(data.models.map((model) => model.id));
 const availableDatasets = (data.datasets?.map((dataset) => dataset.id) || [...new Set(data.scenes.map((scene) => scene.dataset))]);
@@ -156,16 +156,19 @@ function datasetOptions() {
       id: dataset.id,
       label: dataset.name || dataset.id,
       count: dataset.sceneCount,
+      taskType: dataset.taskType,
       taskTypes: [dataset.taskType]
     }));
   }
   return availableDatasets.map((datasetId) => {
     const scenes = data.scenes.filter((scene) => scene.dataset === datasetId);
+    const taskTypes = [...new Set(scenes.map((scene) => scene.taskType).filter(Boolean))];
     return {
       id: datasetId,
       label: datasetId,
       count: scenes.length,
-      taskTypes: [...new Set(scenes.map((scene) => scene.taskType).filter(Boolean))]
+      taskType: taskTypes[0] || "object-detection",
+      taskTypes
     };
   });
 }
@@ -925,8 +928,18 @@ function renderScenes() {
 function renderDatasetControl() {
   const datasets = datasetOptions();
   els.datasetControl.hidden = datasets.length < 1;
-  els.datasetSelect.innerHTML = datasets
-    .map((dataset) => `<option value="${dataset.id}">${dataset.label}</option>`)
+  const grouped = new Map();
+  datasets.forEach((dataset) => {
+    const taskType = dataset.taskType || dataset.taskTypes?.[0] || "object-detection";
+    if (!grouped.has(taskType)) grouped.set(taskType, []);
+    grouped.get(taskType).push(dataset);
+  });
+  els.datasetSelect.innerHTML = [...grouped.entries()]
+    .map(([taskType, entries]) => `
+      <optgroup label="${formatTaskType(taskType)}">
+        ${entries.map((dataset) => `<option value="${dataset.id}">${dataset.label}</option>`).join("")}
+      </optgroup>
+    `)
     .join("");
   els.datasetSelect.value = state.datasetId;
   const activeDataset = datasets.find((dataset) => dataset.id === state.datasetId);

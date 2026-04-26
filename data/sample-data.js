@@ -25,6 +25,15 @@ window.DETECTION_ATLAS_DATA = {
       ]
     },
     {
+      "id": "RescueNet",
+      "name": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "sceneCount": 50,
+      "modelIds": [
+        "segformer_rescuenet"
+      ]
+    },
+    {
       "id": "LADD",
       "name": "LADD",
       "taskType": "object-detection",
@@ -49,7 +58,13 @@ window.DETECTION_ATLAS_DATA = {
         "id": "background",
         "name": "Background",
         "labelIndex": 0,
-        "color": "#000000"
+        "color": "#5a5a5a"
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "labelIndex": 1,
+        "color": "#18a2e6"
       },
       {
         "id": "building-flooded",
@@ -64,10 +79,22 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#e11d48"
       },
       {
+        "id": "building-no-damage",
+        "name": "Building_No_Damage",
+        "labelIndex": 2,
+        "color": "#73ebe5"
+      },
+      {
         "id": "road-flooded",
         "name": "Road-flooded",
         "labelIndex": 3,
         "color": "#1b1699"
+      },
+      {
+        "id": "building-minor-damage",
+        "name": "Building_Minor_Damage",
+        "labelIndex": 3,
+        "color": "#fff65b"
       },
       {
         "id": "road-non-flooded",
@@ -76,34 +103,52 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#7e1020"
       },
       {
-        "id": "water",
-        "name": "Water",
-        "labelIndex": 5,
-        "color": "#1e22e8"
+        "id": "building-major-damage",
+        "name": "Building_Major_Damage",
+        "labelIndex": 4,
+        "color": "#ffa05b"
       },
       {
-        "id": "tree",
-        "name": "Tree",
-        "labelIndex": 6,
-        "color": "#6b8f1a"
+        "id": "building-total-destruction",
+        "name": "Building_Total_Destruction",
+        "labelIndex": 5,
+        "color": "#ef0000"
       },
       {
         "id": "vehicle",
         "name": "Vehicle",
-        "labelIndex": 7,
-        "color": "#0f4f79"
+        "labelIndex": 6,
+        "color": "#ed00d7"
       },
       {
-        "id": "pool",
-        "name": "Pool",
+        "id": "road-clear",
+        "name": "Road-Clear",
+        "labelIndex": 7,
+        "color": "#b17cbc"
+      },
+      {
+        "id": "road-blocked",
+        "name": "Road-Blocked",
         "labelIndex": 8,
-        "color": "#ff1010"
+        "color": "#49ff00"
       },
       {
         "id": "grass",
         "name": "Grass",
         "labelIndex": 9,
         "color": "#18f40d"
+      },
+      {
+        "id": "tree",
+        "name": "Tree",
+        "labelIndex": 9,
+        "color": "#1b18ec"
+      },
+      {
+        "id": "pool",
+        "name": "Pool",
+        "labelIndex": 10,
+        "color": "#d7a200"
       }
     ]
   },
@@ -157,7 +202,7 @@ window.DETECTION_ATLAS_DATA = {
       "id": "rtdetrv2_l",
       "name": "RT-DETRv2-L",
       "shortName": "RT-DETRv2-L",
-      "color": "#ef4444",
+      "color": "#14b8a6",
       "datasets": [
         "LADD"
       ],
@@ -184,10 +229,25 @@ window.DETECTION_ATLAS_DATA = {
       }
     },
     {
+      "id": "segformer_rescuenet",
+      "name": "SegFormer",
+      "shortName": "SegFormer",
+      "color": "#ef4444",
+      "datasets": [
+        "RescueNet"
+      ],
+      "taskTypes": [
+        "semantic-segmentation"
+      ],
+      "stats": {
+        "scenes": 50
+      }
+    },
+    {
       "id": "yolo11l",
       "name": "YOLO11L",
       "shortName": "YOLO11L",
-      "color": "#14b8a6",
+      "color": "#a855f7",
       "datasets": [
         "LADD"
       ],
@@ -202,7 +262,7 @@ window.DETECTION_ATLAS_DATA = {
       "id": "yolo26l",
       "name": "YOLO26L",
       "shortName": "YOLO26L",
-      "color": "#a855f7",
+      "color": "#f97316",
       "datasets": [
         "LADD"
       ],
@@ -19542,6 +19602,5897 @@ window.DETECTION_ATLAS_DATA = {
           "name": "Grass",
           "labelIndex": 9,
           "color": "#18f40d"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-10844",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "10844",
+      "title": "Scene 10844",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "viewer/RescueNet/10844.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/10844.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/10844.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 9609179
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 1313189
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 96469
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 981163
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/10844.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 6892872
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 3063849
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 114922
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 1154614
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 104547
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 338897
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/10844.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 6,
+          "labeledPixels": 11669701,
+          "coverage": 0.972
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_Total_Destruction",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-10894",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "10894",
+      "title": "Scene 10894",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/10894.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/10894.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/10894.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 9335881
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 1323956
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 1340163
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/10894.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 6109520
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 2067497
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 1873638
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 609189
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/10894.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 4,
+          "labeledPixels": 10659844,
+          "coverage": 0.888
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_Total_Destruction",
+        "Road-Blocked"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11028",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11028",
+      "title": "Scene 11028",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11028.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11028.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11028.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8207919
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 2317183
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 1474898
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11028.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 5602347
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 206484
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 3490957
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 1384503
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 232309
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11028.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 10916600,
+          "coverage": 0.91
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_Total_Destruction",
+        "Road-Blocked"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11096",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11096",
+      "title": "Scene 11096",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11096.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11096.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11096.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 1080205
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 441784
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 474043
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 10003968
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11096.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 460663
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 567121
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 587319
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 10339334
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11096.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 4,
+          "labeledPixels": 11954437,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Road-Clear",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11103",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11103",
+      "title": "Scene 11103",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11103.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11103.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11103.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8773428
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 1929168
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 318702
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 978702
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11103.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 7433258
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 1887199
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 447367
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 1224499
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 911651
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11103.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11903974,
+          "coverage": 0.992
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11117",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11117",
+      "title": "Scene 11117",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11117.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11117.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11117.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 7345330
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 3571992
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 1082678
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11117.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 3457893
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 4787108
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 93855
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 222
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 1069982
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 2205891
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11117.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 6,
+          "labeledPixels": 11614951,
+          "coverage": 0.968
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Road-Blocked"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11461",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11461",
+      "title": "Scene 11461",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11461.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11461.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11461.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 5822395
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 6177605
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11461.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11461.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11653",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11653",
+      "title": "Scene 11653",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11653.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11653.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11653.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11653.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11653.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11916",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11916",
+      "title": "Scene 11916",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11916.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11916.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11916.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 7875155
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 575114
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 396094
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 3153637
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11916.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 6655299
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 13661
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 183640
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 349652
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 379014
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 156867
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 3281881
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 477846
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11916.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 8,
+          "labeledPixels": 11497860,
+          "coverage": 0.958
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11946",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11946",
+      "title": "Scene 11946",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11946.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11946.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11946.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 6219755
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 2624870
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1712169
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 212144
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 51671
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 1179391
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11946.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 3788951
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 3054776
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1751150
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 219327
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 49382
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 2441790
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 49071
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11946.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 7,
+          "labeledPixels": 11354447,
+          "coverage": 0.946
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_No_Damage",
+        "Building_Major_Damage",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-11979",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "11979",
+      "title": "Scene 11979",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11979.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11979.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11979.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 2186524
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1047276
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 444256
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 2283345
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 6038599
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/11979.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 399782
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 722354
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 1130023
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 3026571
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 6146105
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/11979.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11424835,
+          "coverage": 0.952
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Road-Blocked",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12054",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12054",
+      "title": "Scene 12054",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12054.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12054.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12054.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 7305068
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 485284
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1102033
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 1475867
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 1631748
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12054.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 6009203
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 660537
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1172731
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 1565713
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 2568367
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12054.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11976551,
+          "coverage": 0.998
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_No_Damage",
+        "Road-Clear",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12129",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12129",
+      "title": "Scene 12129",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12129.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12129.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12129.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 10249372
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 211865
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 386123
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 1152640
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12129.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 8902966
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 447699
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 381936
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 88064
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 1992796
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12129.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11813461,
+          "coverage": 0.984
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_Minor_Damage",
+        "Road-Blocked"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12156",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12156",
+      "title": "Scene 12156",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12156.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12156.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12156.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 5633580
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 2536455
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1538828
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 269584
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 98606
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 817764
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 1105183
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12156.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 2866250
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 3197334
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1540176
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 423162
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 54336
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 699086
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 31898
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 2269849
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12156.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 8,
+          "labeledPixels": 11082091,
+          "coverage": 0.924
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Vehicle",
+        "Road-Clear",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12169",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12169",
+      "title": "Scene 12169",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12169.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12169.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12169.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8833792
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 1513686
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 482052
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 1170470
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12169.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 7853913
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 1717446
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 886765
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 1417779
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 8897
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12169.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11884800,
+          "coverage": 0.99
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_Total_Destruction",
+        "Road-Blocked"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12306",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12306",
+      "title": "Scene 12306",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12306.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12306.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12306.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 6566131
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 88674
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 218823
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 940954
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 891964
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 1977559
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 1315895
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12306.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 5177798
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 110
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 386285
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 1584768
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 435416
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 411
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 3986703
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12306.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 7,
+          "labeledPixels": 11571491,
+          "coverage": 0.964
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Building_Total_Destruction",
+        "Road-Clear",
+        "Road-Blocked"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12445",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12445",
+      "title": "Scene 12445",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12445.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12445.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12445.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 9324215
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 147545
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 157500
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 474611
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 908184
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 987945
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12445.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 7189135
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 70709
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 403999
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 587003
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 1952671
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 1398369
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 63623
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12445.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 7,
+          "labeledPixels": 11665509,
+          "coverage": 0.972
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Building_Total_Destruction",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12560",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12560",
+      "title": "Scene 12560",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12560.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12560.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12560.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 10077879
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 1696907
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 155549
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 23709
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 45956
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12560.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 989388
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 2263973
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 29737
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 322401
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 8139574
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12560.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11745073,
+          "coverage": 0.979
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_Total_Destruction",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12579",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12579",
+      "title": "Scene 12579",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12579.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12579.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12579.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12579.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 11994076
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 5599
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12579.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 2,
+          "labeledPixels": 11999675,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12580",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12580",
+      "title": "Scene 12580",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12580.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12580.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12580.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 11853346
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 146654
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12580.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 11968907
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 30950
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12580.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 2,
+          "labeledPixels": 11999857,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12666",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12666",
+      "title": "Scene 12666",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12666.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12666.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12666.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12666.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12666.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12702",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12702",
+      "title": "Scene 12702",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12702.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12702.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12702.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8840882
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 688843
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 796573
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 952639
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 465305
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 242879
+        },
+        {
+          "labelIndex": 10,
+          "className": "Pool",
+          "pixelCount": 12879
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12702.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 7905444
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 6855
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 466179
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 1930387
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 696610
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 577998
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 95458
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12702.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 7,
+          "labeledPixels": 11678931,
+          "coverage": 0.973
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Building_Total_Destruction",
+        "Road-Clear",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 10,
+          "color": "#d7a200"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12742",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12742",
+      "title": "Scene 12742",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12742.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12742.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12742.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 9248861
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 2751139
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12742.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 8910997
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 3088381
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12742.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 2,
+          "labeledPixels": 11999378,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12866",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12866",
+      "title": "Scene 12866",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12866.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12866.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12866.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 4768549
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 7231451
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12866.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 1376601
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 24162
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 1205916
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 9248986
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12866.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 4,
+          "labeledPixels": 11855665,
+          "coverage": 0.988
+        }
+      },
+      "classNames": [
+        "Background",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12948",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12948",
+      "title": "Scene 12948",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12948.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12948.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12948.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 5503195
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1399001
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 557424
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 2278262
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 184723
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 2077395
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12948.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 3763659
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1235081
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 219546
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 3405028
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 56426
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 2038190
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 414065
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12948.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 7,
+          "labeledPixels": 11131995,
+          "coverage": 0.928
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12963",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12963",
+      "title": "Scene 12963",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12963.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12963.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12963.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12963.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 12000000
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12963.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 1,
+          "labeledPixels": 12000000,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-12981",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "12981",
+      "title": "Scene 12981",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12981.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12981.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12981.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8043479
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 172624
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 992712
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 970617
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 1296636
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 523932
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/12981.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 6722825
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 176526
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 1223062
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 1898194
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 1702867
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 36699
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/12981.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 6,
+          "labeledPixels": 11760173,
+          "coverage": 0.98
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Total_Destruction",
+        "Road-Clear",
+        "Road-Blocked"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-13050",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "13050",
+      "title": "Scene 13050",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13050.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13050.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13050.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 5270924
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 90784
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 448157
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 843750
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 204347
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 55755
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 4423559
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 662724
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/13050.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 5888718
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 976
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 230344
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 147976
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 916581
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 308322
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 41431
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 3870301
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 1412
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/13050.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 9,
+          "labeledPixels": 11406061,
+          "coverage": 0.951
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Building_Total_Destruction",
+        "Vehicle",
+        "Road-Clear",
+        "Road-Blocked"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        }
+      ],
+      "summary": "8 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 8,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-13226",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "13226",
+      "title": "Scene 13226",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13226.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13226.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13226.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 1347228
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 515789
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 10136983
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/13226.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 653583
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 524842
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 10773033
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/13226.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 3,
+          "labeledPixels": 11951458,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_Minor_Damage",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-13395",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "13395",
+      "title": "Scene 13395",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13395.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13395.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13395.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 10544955
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 1455045
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/13395.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 10546092
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 1453658
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/13395.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 2,
+          "labeledPixels": 11999750,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        }
+      ],
+      "summary": "2 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 2,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-13575",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "13575",
+      "title": "Scene 13575",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13575.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13575.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13575.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 9036500
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 166078
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 653141
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 72063
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 2072218
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/13575.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 8428442
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 660927
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 192595
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 87440
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 2365125
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/13575.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11734529,
+          "coverage": 0.978
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Major_Damage",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-13667",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "13667",
+      "title": "Scene 13667",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13667.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13667.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13667.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8101707
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 2828071
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 557417
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 393342
+        },
+        {
+          "labelIndex": 10,
+          "className": "Pool",
+          "pixelCount": 119463
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/13667.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 7693834
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 48780
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 3309836
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 608596
+          },
+          {
+            "labelIndex": 10,
+            "className": "Pool",
+            "pixelCount": 67837
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/13667.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11728883,
+          "coverage": 0.977
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Building_Total_Destruction",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 10,
+          "color": "#d7a200"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-13982",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "13982",
+      "title": "Scene 13982",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13982.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13982.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13982.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 2535960
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 380690
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 151957
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 33103
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 8898290
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/13982.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 1613836
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 313215
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 129177
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 53
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 19716
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 9783316
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/13982.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 6,
+          "labeledPixels": 11859313,
+          "coverage": 0.988
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Major_Damage",
+        "Vehicle",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-14170",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "14170",
+      "title": "Scene 14170",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14170.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14170.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14170.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 3228730
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 899486
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 107885
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 1371174
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 6392725
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/14170.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 1077227
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 2060270
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 95430
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 1990016
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 6555102
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/14170.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11778045,
+          "coverage": 0.982
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Vehicle",
+        "Road-Clear",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-14326",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "14326",
+      "title": "Scene 14326",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14326.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14326.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14326.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8058693
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 1334085
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 2607222
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/14326.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 9226722
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 1438570
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 1218382
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/14326.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 3,
+          "labeledPixels": 11883674,
+          "coverage": 0.99
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-14393",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "14393",
+      "title": "Scene 14393",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14393.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14393.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14393.jpg",
+      "rawImageAvailable": true,
+      "width": 4056,
+      "height": 3040,
+      "dimensions": "4056 x 3040",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8200850
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1490271
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 320011
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 156720
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 418134
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 95715
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 1648539
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/14393.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 5856547
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1508076
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 314254
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 245910
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 399884
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 171300
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 2118422
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 22245
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 332112
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/14393.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 9,
+          "labeledPixels": 10968750,
+          "coverage": 0.89
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Building_Total_Destruction",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12330240,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-14541",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "14541",
+      "title": "Scene 14541",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14541.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14541.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14541.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 4922998
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 2533940
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 405588
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 671847
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 170360
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 3295267
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/14541.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 2200371
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 2133035
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 1103930
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 311595
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 132367
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 5695827
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/14541.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 6,
+          "labeledPixels": 11577125,
+          "coverage": 0.965
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-14813",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "14813",
+      "title": "Scene 14813",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14813.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14813.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14813.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 1913274
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 769768
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 357174
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 1141205
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 1234652
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 6583927
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/14813.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 493513
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 1993530
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 21665
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 1212652
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 1606802
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 6385981
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/14813.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 6,
+          "labeledPixels": 11714143,
+          "coverage": 0.976
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Road-Clear",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-14816",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "14816",
+      "title": "Scene 14816",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14816.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14816.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14816.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 3000
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 196448
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 11800552
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/14816.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 200303
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 11798108
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/14816.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 2,
+          "labeledPixels": 11998411,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_Major_Damage",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-14879",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "14879",
+      "title": "Scene 14879",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14879.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14879.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14879.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 9683382
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 459058
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 564567
+        },
+        {
+          "labelIndex": 5,
+          "className": "Building_Total_Destruction",
+          "pixelCount": 323655
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 969338
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/14879.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 5998065
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 596778
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 637773
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 252988
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 24330
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 1238485
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 2984407
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/14879.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 7,
+          "labeledPixels": 11732826,
+          "coverage": 0.978
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_Minor_Damage",
+        "Building_Total_Destruction",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#ef0000"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-15202",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "15202",
+      "title": "Scene 15202",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15202.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15202.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15202.jpg",
+      "rawImageAvailable": true,
+      "width": 4056,
+      "height": 3040,
+      "dimensions": "4056 x 3040",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 4502911
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 2447280
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 5380049
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/15202.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 2541385
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 2770224
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 6874734
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/15202.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 3,
+          "labeledPixels": 12186343,
+          "coverage": 0.988
+        }
+      },
+      "classNames": [
+        "Background",
+        "Road-Clear",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12330240,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-15270",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "15270",
+      "title": "Scene 15270",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15270.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15270.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15270.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 1657154
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 485677
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 193984
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 9568912
+        },
+        {
+          "labelIndex": 10,
+          "className": "Pool",
+          "pixelCount": 94273
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/15270.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 988048
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 529301
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 233195
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 10045024
+          },
+          {
+            "labelIndex": 10,
+            "className": "Pool",
+            "pixelCount": 157096
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/15270.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11952664,
+          "coverage": 0.996
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Road-Clear",
+        "Tree",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 10,
+          "color": "#d7a200"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-15356",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "15356",
+      "title": "Scene 15356",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15356.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15356.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15356.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 3961440
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 230264
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 21032
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 1999462
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 5787802
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/15356.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 2835827
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 248090
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 15281
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 2445104
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 6375918
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/15356.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11920220,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Vehicle",
+        "Road-Clear",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-15394",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "15394",
+      "title": "Scene 15394",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15394.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15394.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15394.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8818045
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1054051
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 92853
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 2035051
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/15394.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 7023031
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1161563
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 112998
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 3591052
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 3371
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/15394.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11892015,
+          "coverage": 0.991
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Vehicle",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-15540",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "15540",
+      "title": "Scene 15540",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15540.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15540.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15540.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 9584989
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1583107
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 831904
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/15540.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 9267771
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1477413
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 145676
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 64652
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 956161
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 907
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/15540.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 6,
+          "labeledPixels": 11912580,
+          "coverage": 0.993
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Road-Clear"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-15747",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "15747",
+      "title": "Scene 15747",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15747.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15747.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15747.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 8468886
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 2001705
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 321253
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 458670
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 693417
+        },
+        {
+          "labelIndex": 10,
+          "className": "Pool",
+          "pixelCount": 56069
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/15747.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 7466615
+          },
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 2476183
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 382393
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 1181671
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 72878
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 88681
+          },
+          {
+            "labelIndex": 10,
+            "className": "Pool",
+            "pixelCount": 61296
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/15747.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 7,
+          "labeledPixels": 11729717,
+          "coverage": 0.977
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Building_Major_Damage",
+        "Pool"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 10,
+          "color": "#d7a200"
+        }
+      ],
+      "summary": "6 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 6,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-15841",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "15841",
+      "title": "Scene 15841",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15841.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15841.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15841.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 2986446
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 244512
+        },
+        {
+          "labelIndex": 3,
+          "className": "Building_Minor_Damage",
+          "pixelCount": 148204
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 8620838
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/15841.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 817418
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 100445
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 100904
+          },
+          {
+            "labelIndex": 5,
+            "className": "Building_Total_Destruction",
+            "pixelCount": 263872
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 10359648
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/15841.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 5,
+          "labeledPixels": 11642287,
+          "coverage": 0.97
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Minor_Damage",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#fff65b"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-15885",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "15885",
+      "title": "Scene 15885",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15885.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15885.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15885.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 4906985
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 1119415
+        },
+        {
+          "labelIndex": 4,
+          "className": "Building_Major_Damage",
+          "pixelCount": 886056
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 23863
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 156261
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 174432
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 4732988
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/15885.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 2421180
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1058525
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 177655
+          },
+          {
+            "labelIndex": 4,
+            "className": "Building_Major_Damage",
+            "pixelCount": 796973
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 30479
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 74512
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 891060
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 5707450
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/15885.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 8,
+          "labeledPixels": 11157834,
+          "coverage": 0.93
+        }
+      },
+      "classNames": [
+        "Background",
+        "Building_No_Damage",
+        "Building_Major_Damage",
+        "Vehicle",
+        "Road-Clear",
+        "Road-Blocked",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "building-major-damage",
+          "name": "Building_Major_Damage",
+          "labelIndex": 4,
+          "color": "#ffa05b"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "7 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 7,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-16064",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "16064",
+      "title": "Scene 16064",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/16064.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/16064.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/16064.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 12000000
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/16064.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 53841
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 11944135
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/16064.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 2,
+          "labeledPixels": 11997976,
+          "coverage": 1
+        }
+      },
+      "classNames": [
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
+        }
+      ],
+      "summary": "1 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 1,
+        "labeledPixels": 12000000,
+        "coverage": 1
+      }
+    },
+    {
+      "id": "rescuenet-16508",
+      "dataset": "RescueNet",
+      "taskType": "semantic-segmentation",
+      "imageId": "16508",
+      "title": "Scene 16508",
+      "location": "RescueNet benchmark sample",
+      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/16508.jpg",
+      "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/16508.jpg",
+      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/16508.jpg",
+      "rawImageAvailable": true,
+      "width": 4000,
+      "height": 3000,
+      "dimensions": "4000 x 3000",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Background",
+          "pixelCount": 2687465
+        },
+        {
+          "labelIndex": 1,
+          "className": "Water",
+          "pixelCount": 3730
+        },
+        {
+          "labelIndex": 2,
+          "className": "Building_No_Damage",
+          "pixelCount": 2375018
+        },
+        {
+          "labelIndex": 6,
+          "className": "Vehicle",
+          "pixelCount": 56719
+        },
+        {
+          "labelIndex": 7,
+          "className": "Road-Clear",
+          "pixelCount": 2159370
+        },
+        {
+          "labelIndex": 8,
+          "className": "Road-Blocked",
+          "pixelCount": 490451
+        },
+        {
+          "labelIndex": 9,
+          "className": "Tree",
+          "pixelCount": 4227247
+        }
+      ],
+      "groundTruthImage": "RescueNet/segformer_rescuenet/samples_gt_with_json/16508.jpg",
+      "predictions": {
+        "segformer_rescuenet": [
+          {
+            "labelIndex": 0,
+            "className": "Background",
+            "pixelCount": 1166291
+          },
+          {
+            "labelIndex": 2,
+            "className": "Building_No_Damage",
+            "pixelCount": 1792941
+          },
+          {
+            "labelIndex": 3,
+            "className": "Building_Minor_Damage",
+            "pixelCount": 674511
+          },
+          {
+            "labelIndex": 6,
+            "className": "Vehicle",
+            "pixelCount": 14510
+          },
+          {
+            "labelIndex": 7,
+            "className": "Road-Clear",
+            "pixelCount": 6735
+          },
+          {
+            "labelIndex": 8,
+            "className": "Road-Blocked",
+            "pixelCount": 2581519
+          },
+          {
+            "labelIndex": 9,
+            "className": "Tree",
+            "pixelCount": 4991677
+          }
+        ]
+      },
+      "predictionImages": {
+        "segformer_rescuenet": "RescueNet/segformer_rescuenet/visualised_samples_with_json/16508.jpg"
+      },
+      "sceneModelStats": {
+        "segformer_rescuenet": {
+          "classCount": 7,
+          "labeledPixels": 11228184,
+          "coverage": 0.936
+        }
+      },
+      "classNames": [
+        "Background",
+        "Water",
+        "Building_No_Damage",
+        "Vehicle",
+        "Road-Clear",
+        "Road-Blocked",
+        "Tree"
+      ],
+      "classLegend": [
+        {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#5a5a5a"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#18a2e6"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ebe5"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ed00d7"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b17cbc"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#49ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#1b18ec"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
