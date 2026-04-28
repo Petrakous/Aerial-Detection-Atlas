@@ -625,6 +625,7 @@ body[data-mode="split"] .viewer-content {
 }
 
 .base-layer {
+  z-index: 1;
   filter: saturate(0.96) contrast(1.02);
   opacity: 0;
   transition: opacity 180ms ease;
@@ -637,6 +638,7 @@ body[data-mode="split"] .viewer-content {
 .box-layer {
   position: absolute;
   inset: 0;
+  z-index: 2;
   pointer-events: none;
   opacity: 1;
   will-change: opacity;
