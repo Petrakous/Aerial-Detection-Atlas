@@ -58,97 +58,97 @@ window.DETECTION_ATLAS_DATA = {
         "id": "background",
         "name": "Background",
         "labelIndex": 0,
-        "color": "#5a5a5a"
+        "color": "#505050"
       },
       {
         "id": "water",
         "name": "Water",
         "labelIndex": 1,
-        "color": "#18a2e6"
+        "color": "#00b0f0"
       },
       {
         "id": "building-flooded",
         "name": "Building-flooded",
         "labelIndex": 1,
-        "color": "#4f87bd"
+        "color": "#4682b4"
       },
       {
         "id": "building-non-flooded",
         "name": "Building-non-flooded",
         "labelIndex": 2,
-        "color": "#e11d48"
+        "color": "#dc143c"
       },
       {
         "id": "building-no-damage",
         "name": "Building_No_Damage",
         "labelIndex": 2,
-        "color": "#73ebe5"
+        "color": "#73ffdf"
       },
       {
         "id": "road-flooded",
         "name": "Road-flooded",
         "labelIndex": 3,
-        "color": "#1b1699"
+        "color": "#00008e"
       },
       {
         "id": "building-minor-damage",
         "name": "Building_Minor_Damage",
         "labelIndex": 3,
-        "color": "#fff65b"
+        "color": "#ffff73"
       },
       {
         "id": "road-non-flooded",
         "name": "Road-non-flooded",
         "labelIndex": 4,
-        "color": "#7e1020"
+        "color": "#770b20"
       },
       {
         "id": "building-major-damage",
         "name": "Building_Major_Damage",
         "labelIndex": 4,
-        "color": "#ffa05b"
+        "color": "#ff9966"
       },
       {
         "id": "building-total-destruction",
         "name": "Building_Total_Destruction",
         "labelIndex": 5,
-        "color": "#ef0000"
+        "color": "#e60000"
       },
       {
         "id": "vehicle",
         "name": "Vehicle",
         "labelIndex": 6,
-        "color": "#ed00d7"
+        "color": "#ff00c5"
       },
       {
         "id": "road-clear",
         "name": "Road-Clear",
         "labelIndex": 7,
-        "color": "#b17cbc"
+        "color": "#b077b0"
       },
       {
         "id": "road-blocked",
         "name": "Road-Blocked",
         "labelIndex": 8,
-        "color": "#49ff00"
+        "color": "#55ff00"
       },
       {
         "id": "grass",
         "name": "Grass",
         "labelIndex": 9,
-        "color": "#18f40d"
+        "color": "#00ff00"
       },
       {
         "id": "tree",
         "name": "Tree",
         "labelIndex": 9,
-        "color": "#1b18ec"
+        "color": "#0000ff"
       },
       {
         "id": "pool",
         "name": "Pool",
         "labelIndex": 10,
-        "color": "#d7a200"
+        "color": "#cc9900"
       }
     ]
   },
@@ -357,25 +357,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -467,25 +467,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -566,19 +566,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -703,43 +703,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -853,37 +853,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -1008,43 +1008,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -1136,25 +1136,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -1274,25 +1274,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 2 model segmentations loaded.",
@@ -1428,31 +1428,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 2 model segmentations loaded.",
@@ -1560,6 +1560,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-non-flooded",
+        "Road-non-flooded",
         "Water",
         "Tree",
         "Vehicle",
@@ -1571,37 +1572,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -1726,43 +1733,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -1854,25 +1861,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -1953,19 +1960,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -2046,19 +2053,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -2173,6 +2180,7 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Background",
         "Road-non-flooded",
         "Water",
         "Tree",
@@ -2180,28 +2188,34 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [
         {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 2 model segmentations loaded.",
@@ -2290,6 +2304,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Road-non-flooded",
+        "Water",
         "Tree",
         "Grass"
       ],
@@ -2304,19 +2319,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -2386,13 +2407,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -2528,49 +2549,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "8 classes with 1 model segmentations loaded.",
@@ -2701,6 +2722,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-non-flooded",
+        "Road-non-flooded",
         "Water",
         "Tree",
         "Pool",
@@ -2711,31 +2733,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 2 model segmentations loaded.",
@@ -2849,37 +2877,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -2993,37 +3021,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -3132,37 +3160,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -3276,37 +3304,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -3420,37 +3448,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -3570,25 +3598,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 2 model segmentations loaded.",
@@ -3669,19 +3697,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -3795,37 +3823,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -3908,6 +3936,9 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Background",
+        "Building-non-flooded",
+        "Road-non-flooded",
+        "Water",
         "Tree",
         "Grass"
       ],
@@ -3919,16 +3950,34 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#000000"
         },
         {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#dc143c"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
+        },
+        {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -4080,6 +4129,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Building-non-flooded",
         "Road-non-flooded",
+        "Water",
         "Tree",
         "Vehicle",
         "Pool",
@@ -4090,37 +4140,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 2 model segmentations loaded.",
@@ -4190,13 +4246,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -4266,13 +4322,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -4370,6 +4426,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-non-flooded",
+        "Road-non-flooded",
         "Tree",
         "Vehicle",
         "Pool",
@@ -4380,31 +4437,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -4476,21 +4539,35 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Road-non-flooded",
         "Water",
+        "Tree",
         "Grass"
       ],
       "classLegend": [
         {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
+        },
+        {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -4571,19 +4648,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -4653,13 +4730,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -4735,19 +4812,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -4850,31 +4927,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -4977,31 +5054,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -5082,19 +5159,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -5164,13 +5241,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -5258,13 +5335,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 2 model segmentations loaded.",
@@ -5356,25 +5433,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -5466,25 +5543,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -5598,37 +5675,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -5732,40 +5809,61 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Building-flooded",
         "Building-non-flooded",
+        "Road-flooded",
         "Water",
         "Tree",
-        "Pool"
+        "Vehicle",
+        "Pool",
+        "Grass"
       ],
       "classLegend": [
         {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#00008e"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -5878,6 +5976,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-flooded",
+        "Building-non-flooded",
         "Road-flooded",
         "Road-non-flooded",
         "Tree",
@@ -5890,43 +5989,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#dc143c"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -6079,9 +6184,11 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Building-flooded",
         "Road-flooded",
+        "Water",
         "Tree",
         "Vehicle",
-        "Pool"
+        "Pool",
+        "Grass"
       ],
       "classLegend": [
         {
@@ -6094,31 +6201,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 2 model segmentations loaded.",
@@ -6217,6 +6336,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Building-flooded",
         "Road-flooded",
+        "Water",
         "Tree",
         "Vehicle",
         "Grass"
@@ -6226,31 +6346,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -6322,21 +6448,35 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Road-flooded",
         "Water",
-        "Tree"
+        "Tree",
+        "Grass"
       ],
       "classLegend": [
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#00008e"
+        },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -6443,44 +6583,51 @@ window.DETECTION_ATLAS_DATA = {
         "Road-flooded",
         "Water",
         "Tree",
-        "Vehicle"
+        "Vehicle",
+        "Grass"
       ],
       "classLegend": [
         {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -6593,48 +6740,62 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-flooded",
+        "Building-non-flooded",
         "Road-flooded",
         "Water",
         "Tree",
         "Vehicle",
-        "Pool"
+        "Pool",
+        "Grass"
       ],
       "classLegend": [
         {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#dc143c"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -6776,8 +6937,10 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Building-flooded",
         "Road-flooded",
+        "Water",
         "Tree",
         "Vehicle",
+        "Pool",
         "Grass"
       ],
       "classLegend": [
@@ -6785,31 +6948,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 2 model segmentations loaded.",
@@ -6936,8 +7111,11 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Building-flooded",
+        "Building-non-flooded",
+        "Road-flooded",
         "Water",
-        "Tree"
+        "Tree",
+        "Vehicle"
       ],
       "classLegend": [
         {
@@ -6950,19 +7128,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#dc143c"
+        },
+        {
+          "id": "road-flooded",
+          "name": "Road-flooded",
+          "labelIndex": 3,
+          "color": "#00008e"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#003c64"
         }
       ],
       "summary": "4 classes with 2 model segmentations loaded.",
@@ -7113,9 +7309,12 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-flooded",
+        "Building-non-flooded",
         "Road-flooded",
+        "Water",
         "Tree",
         "Vehicle",
+        "Pool",
         "Grass"
       ],
       "classLegend": [
@@ -7123,31 +7322,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#dc143c"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 2 model segmentations loaded.",
@@ -7246,6 +7463,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Building-flooded",
         "Road-flooded",
+        "Water",
         "Tree",
         "Vehicle",
         "Grass"
@@ -7255,31 +7473,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -7380,6 +7604,7 @@ window.DETECTION_ATLAS_DATA = {
         "Road-flooded",
         "Tree",
         "Vehicle",
+        "Pool",
         "Grass"
       ],
       "classLegend": [
@@ -7387,31 +7612,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -7525,37 +7756,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -7669,37 +7900,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -7807,6 +8038,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-flooded",
+        "Building-non-flooded",
         "Road-flooded",
         "Tree",
         "Vehicle",
@@ -7818,37 +8050,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#dc143c"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -7962,37 +8200,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -8117,43 +8355,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
         },
         {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -8266,7 +8504,9 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-flooded",
+        "Building-non-flooded",
         "Road-flooded",
+        "Water",
         "Tree",
         "Vehicle",
         "Pool",
@@ -8277,37 +8517,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-flooded",
           "name": "Building-flooded",
           "labelIndex": 1,
-          "color": "#4f87bd"
+          "color": "#4682b4"
+        },
+        {
+          "id": "building-non-flooded",
+          "name": "Building-non-flooded",
+          "labelIndex": 2,
+          "color": "#dc143c"
         },
         {
           "id": "road-flooded",
           "name": "Road-flooded",
           "labelIndex": 3,
-          "color": "#1b1699"
+          "color": "#00008e"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -8410,31 +8662,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -8537,31 +8789,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -8651,6 +8903,7 @@ window.DETECTION_ATLAS_DATA = {
         "Building-non-flooded",
         "Road-non-flooded",
         "Tree",
+        "Vehicle",
         "Grass"
       ],
       "classLegend": [
@@ -8658,25 +8911,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -8753,28 +9012,35 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Background",
         "Water",
         "Tree",
         "Grass"
       ],
       "classLegend": [
         {
+          "id": "background",
+          "name": "Background",
+          "labelIndex": 0,
+          "color": "#000000"
+        },
+        {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -8868,7 +9134,9 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Building-non-flooded",
         "Road-non-flooded",
+        "Water",
         "Tree",
+        "Vehicle",
         "Grass"
       ],
       "classLegend": [
@@ -8876,25 +9144,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -8976,13 +9256,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -9085,31 +9365,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -9182,6 +9462,8 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Background",
+        "Road-non-flooded",
+        "Water",
         "Grass"
       ],
       "classLegend": [
@@ -9192,10 +9474,22 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#000000"
         },
         {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
+        },
+        {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -9265,13 +9559,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -9341,13 +9635,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -9417,13 +9711,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -9504,19 +9798,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -9597,19 +9891,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -9690,19 +9984,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -9783,19 +10077,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -9876,19 +10170,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -9992,19 +10286,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 2 model segmentations loaded.",
@@ -10071,21 +10365,28 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Road-non-flooded",
         "Tree",
         "Grass"
       ],
       "classLegend": [
         {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
+        },
+        {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -10189,19 +10490,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 2 model segmentations loaded.",
@@ -10282,19 +10583,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -10398,19 +10699,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 2 model segmentations loaded.",
@@ -10513,31 +10814,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -10618,19 +10919,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -10697,21 +10998,28 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Road-non-flooded",
         "Tree",
         "Grass"
       ],
       "classLegend": [
         {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
+        },
+        {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -10779,6 +11087,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Road-non-flooded",
+        "Tree",
         "Grass"
       ],
       "classLegend": [
@@ -10786,13 +11095,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -10851,7 +11166,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -10908,14 +11223,21 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Tree",
         "Grass"
       ],
       "classLegend": [
         {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
+        },
+        {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -10985,13 +11307,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -11072,19 +11394,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -11154,13 +11476,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -11252,25 +11574,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -11351,19 +11673,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -11433,13 +11755,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -11509,13 +11831,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -11574,7 +11896,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -11646,7 +11968,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "1 classes with 2 model segmentations loaded.",
@@ -11705,7 +12027,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -11770,13 +12092,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -11857,19 +12179,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -11968,19 +12290,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 2 model segmentations loaded.",
@@ -12107,19 +12429,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 3 model segmentations loaded.",
@@ -12200,19 +12522,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -12293,19 +12615,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -12375,13 +12697,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -12451,13 +12773,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -12548,6 +12870,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Road-non-flooded",
+        "Tree",
         "Grass"
       ],
       "classLegend": [
@@ -12555,13 +12878,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 2 model segmentations loaded.",
@@ -12642,19 +12971,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -12722,6 +13051,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Road-non-flooded",
+        "Tree",
         "Grass"
       ],
       "classLegend": [
@@ -12729,13 +13059,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -12816,19 +13152,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -12887,7 +13223,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -12957,13 +13293,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -13033,13 +13369,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -13109,13 +13445,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -13235,25 +13571,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 2 model segmentations loaded.",
@@ -13323,13 +13659,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -13417,13 +13753,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 2 model segmentations loaded.",
@@ -13493,13 +13829,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -13580,19 +13916,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -13662,13 +13998,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -13738,13 +14074,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -13822,6 +14158,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-non-flooded",
+        "Road-non-flooded",
         "Tree",
         "Grass"
       ],
@@ -13830,19 +14167,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -13920,6 +14263,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Building-non-flooded",
+        "Road-non-flooded",
         "Tree",
         "Grass"
       ],
@@ -13928,19 +14272,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
+        },
+        {
+          "id": "road-non-flooded",
+          "name": "Road-non-flooded",
+          "labelIndex": 4,
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -14044,19 +14394,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 2 model segmentations loaded.",
@@ -14148,25 +14498,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -14258,25 +14608,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -14379,31 +14729,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -14506,31 +14856,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -14633,31 +14983,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -14741,6 +15091,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Building-non-flooded",
         "Road-non-flooded",
+        "Water",
         "Tree",
         "Grass"
       ],
@@ -14749,25 +15100,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -14870,31 +15227,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -14998,19 +15355,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 2 model segmentations loaded.",
@@ -15080,13 +15437,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -15156,13 +15513,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -15232,13 +15589,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -15319,19 +15676,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -15401,13 +15758,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -15499,25 +15856,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -15595,6 +15952,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Road-non-flooded",
+        "Tree",
         "Vehicle",
         "Grass"
       ],
@@ -15603,19 +15961,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -15737,6 +16101,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Road-non-flooded",
         "Water",
+        "Tree",
         "Vehicle",
         "Grass"
       ],
@@ -15745,25 +16110,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 2 model segmentations loaded.",
@@ -15822,7 +16193,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -15914,25 +16285,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -16019,6 +16390,7 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Building-flooded",
         "Building-non-flooded",
         "Tree",
         "Pool",
@@ -16026,28 +16398,34 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [
         {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4682b4"
+        },
+        {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -16115,6 +16493,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Background",
+        "Water",
         "Grass"
       ],
       "classLegend": [
@@ -16125,10 +16504,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#000000"
         },
         {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
+        },
+        {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -16215,25 +16600,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -16312,6 +16697,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Road-non-flooded",
         "Water",
+        "Tree",
         "Grass"
       ],
       "classLegend": [
@@ -16319,19 +16705,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -16421,6 +16813,7 @@ window.DETECTION_ATLAS_DATA = {
         "Road-non-flooded",
         "Water",
         "Tree",
+        "Pool",
         "Grass"
       ],
       "classLegend": [
@@ -16428,25 +16821,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -16530,6 +16929,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Road-non-flooded",
+        "Water",
         "Tree",
         "Grass"
       ],
@@ -16544,19 +16944,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -16650,7 +17056,9 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Road-non-flooded",
+        "Water",
         "Tree",
+        "Vehicle",
         "Grass"
       ],
       "classLegend": [
@@ -16664,19 +17072,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 7,
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -16765,6 +17185,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Road-non-flooded",
+        "Water",
         "Vehicle",
         "Grass"
       ],
@@ -16779,19 +17200,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -16875,6 +17302,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Road-non-flooded",
+        "Water",
         "Vehicle",
         "Grass"
       ],
@@ -16889,19 +17317,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -16996,6 +17430,7 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Building-non-flooded",
         "Road-non-flooded",
+        "Water",
         "Tree",
         "Grass"
       ],
@@ -17010,25 +17445,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 5,
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -17140,7 +17581,8 @@ window.DETECTION_ATLAS_DATA = {
         "Road-non-flooded",
         "Water",
         "Tree",
-        "Vehicle"
+        "Vehicle",
+        "Pool"
       ],
       "classLegend": [
         {
@@ -17153,31 +17595,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
+        },
+        {
+          "id": "pool",
+          "name": "Pool",
+          "labelIndex": 8,
+          "color": "#ff0000"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -17300,7 +17748,8 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Road-non-flooded",
         "Water",
-        "Vehicle"
+        "Vehicle",
+        "Grass"
       ],
       "classLegend": [
         {
@@ -17313,19 +17762,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 2 model segmentations loaded.",
@@ -17478,31 +17933,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 2 model segmentations loaded.",
@@ -17616,37 +18071,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -17760,37 +18215,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -17893,31 +18348,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -18031,37 +18486,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -18168,7 +18623,8 @@ window.DETECTION_ATLAS_DATA = {
         "Road-non-flooded",
         "Tree",
         "Vehicle",
-        "Pool"
+        "Pool",
+        "Grass"
       ],
       "classLegend": [
         {
@@ -18181,31 +18637,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -18312,7 +18774,8 @@ window.DETECTION_ATLAS_DATA = {
         "Road-non-flooded",
         "Tree",
         "Vehicle",
-        "Pool"
+        "Pool",
+        "Grass"
       ],
       "classLegend": [
         {
@@ -18325,31 +18788,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -18463,37 +18932,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -18645,37 +19114,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 2 model segmentations loaded.",
@@ -18767,25 +19236,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -18866,6 +19335,7 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Water",
+        "Tree",
         "Grass"
       ],
       "classLegend": [
@@ -18873,13 +19343,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 2 model segmentations loaded.",
@@ -18952,20 +19428,34 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Water",
-        "Pool"
+        "Tree",
+        "Pool",
+        "Grass"
       ],
       "classLegend": [
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 6,
+          "color": "#6b8e23"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "labelIndex": 9,
+          "color": "#00ff00"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -19117,37 +19607,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 2 model segmentations loaded.",
@@ -19261,37 +19751,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -19398,6 +19888,7 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Building-flooded",
         "Building-non-flooded",
         "Road-non-flooded",
         "Tree",
@@ -19407,40 +19898,46 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [
         {
+          "id": "building-flooded",
+          "name": "Building-flooded",
+          "labelIndex": 1,
+          "color": "#4682b4"
+        },
+        {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -19565,43 +20062,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "building-non-flooded",
           "name": "Building-non-flooded",
           "labelIndex": 2,
-          "color": "#e11d48"
+          "color": "#dc143c"
         },
         {
           "id": "road-non-flooded",
           "name": "Road-non-flooded",
           "labelIndex": 4,
-          "color": "#7e1020"
+          "color": "#770b20"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 5,
-          "color": "#1e22e8"
+          "color": "#0000e6"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 6,
-          "color": "#6b8f1a"
+          "color": "#6b8e23"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 7,
-          "color": "#0f4f79"
+          "color": "#003c64"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#ff1010"
+          "color": "#ff0000"
         },
         {
           "id": "grass",
           "name": "Grass",
           "labelIndex": 9,
-          "color": "#18f40d"
+          "color": "#00ff00"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -19620,7 +20117,7 @@ window.DETECTION_ATLAS_DATA = {
       "location": "RescueNet benchmark sample",
       "baseImage": "viewer/RescueNet/10844.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/10844.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/10844.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/10844.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -19696,32 +20193,46 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Building_Total_Destruction",
         "Vehicle",
-        "Road-Clear"
+        "Road-Clear",
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -19738,9 +20249,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "10894",
       "title": "Scene 10894",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/10894.jpg",
+      "baseImage": "viewer/RescueNet/10894.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/10894.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/10894.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/10894.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -19800,26 +20311,33 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Building_Total_Destruction",
-        "Road-Blocked"
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -19836,9 +20354,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11028",
       "title": "Scene 11028",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11028.jpg",
+      "baseImage": "viewer/RescueNet/11028.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11028.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11028.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11028.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -19902,27 +20420,41 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Background",
+        "Water",
         "Building_Total_Destruction",
-        "Road-Blocked"
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#00b0f0"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -19939,9 +20471,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11096",
       "title": "Scene 11096",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11096.jpg",
+      "baseImage": "viewer/RescueNet/11096.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11096.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11096.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11096.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20014,25 +20546,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -20049,9 +20581,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11103",
       "title": "Scene 11103",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11103.jpg",
+      "baseImage": "viewer/RescueNet/11103.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11103.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11103.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11103.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20122,32 +20654,39 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Water",
         "Vehicle",
-        "Road-Clear"
+        "Road-Clear",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -20164,9 +20703,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11117",
       "title": "Scene 11117",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11117.jpg",
+      "baseImage": "viewer/RescueNet/11117.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11117.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11117.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11117.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20236,26 +20775,47 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Water",
-        "Road-Blocked"
+        "Vehicle",
+        "Road-Clear",
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ff00c5"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b077b0"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -20272,9 +20832,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11461",
       "title": "Scene 11461",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11461.jpg",
+      "baseImage": "viewer/RescueNet/11461.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11461.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11461.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11461.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20320,13 +20880,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -20343,9 +20903,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11653",
       "title": "Scene 11653",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11653.jpg",
+      "baseImage": "viewer/RescueNet/11653.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11653.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11653.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11653.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20385,7 +20945,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -20402,9 +20962,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11916",
       "title": "Scene 11916",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11916.jpg",
+      "baseImage": "viewer/RescueNet/11916.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11916.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11916.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11916.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20488,34 +21048,62 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Background",
+        "Water",
+        "Building_No_Damage",
         "Building_Minor_Damage",
         "Building_Major_Damage",
-        "Road-Clear"
+        "Building_Total_Destruction",
+        "Road-Clear",
+        "Road-Blocked"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#00b0f0"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#e60000"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#55ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -20532,9 +21120,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11946",
       "title": "Scene 11946",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11946.jpg",
+      "baseImage": "viewer/RescueNet/11946.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11946.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11946.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11946.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20627,44 +21215,51 @@ window.DETECTION_ATLAS_DATA = {
         "Building_No_Damage",
         "Building_Major_Damage",
         "Vehicle",
-        "Road-Clear"
+        "Road-Clear",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -20681,9 +21276,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "11979",
       "title": "Scene 11979",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/11979.jpg",
+      "baseImage": "viewer/RescueNet/11979.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/11979.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/11979.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/11979.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20767,31 +21362,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -20808,9 +21403,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12054",
       "title": "Scene 12054",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12054.jpg",
+      "baseImage": "viewer/RescueNet/12054.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12054.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12054.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12054.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -20894,31 +21489,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -20935,9 +21530,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12129",
       "title": "Scene 12129",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12129.jpg",
+      "baseImage": "viewer/RescueNet/12129.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12129.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12129.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12129.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21008,6 +21603,7 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Water",
         "Building_Minor_Damage",
+        "Building_Total_Destruction",
         "Road-Blocked"
       ],
       "classLegend": [
@@ -21015,25 +21611,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#e60000"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -21050,9 +21652,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12156",
       "title": "Scene 12156",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12156.jpg",
+      "baseImage": "viewer/RescueNet/12156.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12156.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12156.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12156.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21156,6 +21758,7 @@ window.DETECTION_ATLAS_DATA = {
         "Building_Minor_Damage",
         "Vehicle",
         "Road-Clear",
+        "Road-Blocked",
         "Tree"
       ],
       "classLegend": [
@@ -21163,43 +21766,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#55ff00"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -21216,9 +21825,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12169",
       "title": "Scene 12169",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12169.jpg",
+      "baseImage": "viewer/RescueNet/12169.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12169.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12169.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12169.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21289,32 +21898,39 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Water",
         "Building_Total_Destruction",
-        "Road-Blocked"
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -21331,9 +21947,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12306",
       "title": "Scene 12306",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12306.jpg",
+      "baseImage": "viewer/RescueNet/12306.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12306.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12306.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12306.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21431,6 +22047,7 @@ window.DETECTION_ATLAS_DATA = {
         "Building_Minor_Damage",
         "Building_Major_Damage",
         "Building_Total_Destruction",
+        "Vehicle",
         "Road-Clear",
         "Road-Blocked"
       ],
@@ -21439,43 +22056,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -21492,9 +22115,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12445",
       "title": "Scene 12445",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12445.jpg",
+      "baseImage": "viewer/RescueNet/12445.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12445.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12445.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12445.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21587,44 +22210,58 @@ window.DETECTION_ATLAS_DATA = {
         "Building_Minor_Damage",
         "Building_Major_Damage",
         "Building_Total_Destruction",
-        "Road-Clear"
+        "Road-Clear",
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -21641,9 +22278,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12560",
       "title": "Scene 12560",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12560.jpg",
+      "baseImage": "viewer/RescueNet/12560.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12560.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12560.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12560.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21720,38 +22357,45 @@ window.DETECTION_ATLAS_DATA = {
         "Water",
         "Building_Total_Destruction",
         "Vehicle",
-        "Road-Clear"
+        "Road-Clear",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -21768,9 +22412,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12579",
       "title": "Scene 12579",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12579.jpg",
+      "baseImage": "viewer/RescueNet/12579.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12579.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12579.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12579.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21808,14 +22452,21 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
-        "Background"
+        "Background",
+        "Water"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#00b0f0"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -21832,9 +22483,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12580",
       "title": "Scene 12580",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12580.jpg",
+      "baseImage": "viewer/RescueNet/12580.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12580.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12580.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12580.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21885,13 +22536,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -21908,9 +22559,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12666",
       "title": "Scene 12666",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12666.jpg",
+      "baseImage": "viewer/RescueNet/12666.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12666.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12666.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12666.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -21950,7 +22601,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -21967,9 +22618,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12702",
       "title": "Scene 12702",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12702.jpg",
+      "baseImage": "viewer/RescueNet/12702.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12702.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12702.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12702.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22068,6 +22719,7 @@ window.DETECTION_ATLAS_DATA = {
         "Building_Major_Damage",
         "Building_Total_Destruction",
         "Road-Clear",
+        "Tree",
         "Pool"
       ],
       "classLegend": [
@@ -22075,43 +22727,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#d7a200"
+          "color": "#cc9900"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -22128,9 +22786,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12742",
       "title": "Scene 12742",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12742.jpg",
+      "baseImage": "viewer/RescueNet/12742.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12742.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12742.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12742.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22181,13 +22839,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -22204,9 +22862,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12866",
       "title": "Scene 12866",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12866.jpg",
+      "baseImage": "viewer/RescueNet/12866.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12866.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12866.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12866.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22260,6 +22918,8 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Background",
+        "Building_No_Damage",
+        "Road-Clear",
         "Tree"
       ],
       "classLegend": [
@@ -22267,13 +22927,25 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
+        },
+        {
+          "id": "building-no-damage",
+          "name": "Building_No_Damage",
+          "labelIndex": 2,
+          "color": "#73ffdf"
+        },
+        {
+          "id": "road-clear",
+          "name": "Road-Clear",
+          "labelIndex": 7,
+          "color": "#b077b0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -22290,9 +22962,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12948",
       "title": "Scene 12948",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12948.jpg",
+      "baseImage": "viewer/RescueNet/12948.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12948.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12948.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12948.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22385,44 +23057,51 @@ window.DETECTION_ATLAS_DATA = {
         "Building_Minor_Damage",
         "Building_Major_Damage",
         "Vehicle",
-        "Road-Clear"
+        "Road-Clear",
+        "Road-Blocked"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#55ff00"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -22439,9 +23118,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12963",
       "title": "Scene 12963",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12963.jpg",
+      "baseImage": "viewer/RescueNet/12963.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12963.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12963.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12963.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22481,7 +23160,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -22498,9 +23177,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "12981",
       "title": "Scene 12981",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/12981.jpg",
+      "baseImage": "viewer/RescueNet/12981.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/12981.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/12981.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/12981.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22588,44 +23267,51 @@ window.DETECTION_ATLAS_DATA = {
         "Building_Minor_Damage",
         "Building_Total_Destruction",
         "Road-Clear",
-        "Road-Blocked"
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -22642,9 +23328,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "13050",
       "title": "Scene 13050",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13050.jpg",
+      "baseImage": "viewer/RescueNet/13050.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13050.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13050.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/13050.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22753,62 +23439,76 @@ window.DETECTION_ATLAS_DATA = {
       },
       "classNames": [
         "Background",
+        "Water",
         "Building_No_Damage",
         "Building_Minor_Damage",
         "Building_Major_Damage",
         "Building_Total_Destruction",
         "Vehicle",
         "Road-Clear",
-        "Road-Blocked"
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#00b0f0"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "8 classes with 1 model segmentations loaded.",
@@ -22825,9 +23525,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "13226",
       "title": "Scene 13226",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13226.jpg",
+      "baseImage": "viewer/RescueNet/13226.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13226.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13226.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/13226.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22889,19 +23589,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -22918,9 +23618,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "13395",
       "title": "Scene 13395",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13395.jpg",
+      "baseImage": "viewer/RescueNet/13395.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13395.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13395.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/13395.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -22971,13 +23671,13 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         }
       ],
       "summary": "2 classes with 1 model segmentations loaded.",
@@ -22994,9 +23694,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "13575",
       "title": "Scene 13575",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13575.jpg",
+      "baseImage": "viewer/RescueNet/13575.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13575.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13575.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/13575.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -23071,7 +23771,9 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Building_No_Damage",
+        "Building_Minor_Damage",
         "Building_Major_Damage",
+        "Building_Total_Destruction",
         "Vehicle",
         "Road-Clear"
       ],
@@ -23080,31 +23782,43 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#e60000"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -23121,9 +23835,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "13667",
       "title": "Scene 13667",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13667.jpg",
+      "baseImage": "viewer/RescueNet/13667.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13667.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13667.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/13667.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -23207,31 +23921,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#d7a200"
+          "color": "#cc9900"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -23248,9 +23962,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "13982",
       "title": "Scene 13982",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/13982.jpg",
+      "baseImage": "viewer/RescueNet/13982.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/13982.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/13982.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/13982.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -23330,6 +24044,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Building_No_Damage",
+        "Building_Minor_Damage",
         "Building_Major_Damage",
         "Vehicle",
         "Tree"
@@ -23339,31 +24054,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -23380,9 +24101,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "14170",
       "title": "Scene 14170",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14170.jpg",
+      "baseImage": "viewer/RescueNet/14170.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14170.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14170.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/14170.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -23466,31 +24187,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -23507,9 +24228,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "14326",
       "title": "Scene 14326",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14326.jpg",
+      "baseImage": "viewer/RescueNet/14326.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14326.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14326.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/14326.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -23571,19 +24292,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -23600,9 +24321,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "14393",
       "title": "Scene 14393",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14393.jpg",
+      "baseImage": "viewer/RescueNet/14393.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14393.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14393.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/14393.jpg",
       "rawImageAvailable": true,
       "width": 4056,
       "height": 3040,
@@ -23711,50 +24432,64 @@ window.DETECTION_ATLAS_DATA = {
         "Building_Major_Damage",
         "Building_Total_Destruction",
         "Vehicle",
-        "Road-Clear"
+        "Road-Clear",
+        "Road-Blocked",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "road-blocked",
+          "name": "Road-Blocked",
+          "labelIndex": 8,
+          "color": "#55ff00"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -23771,9 +24506,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "14541",
       "title": "Scene 14541",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14541.jpg",
+      "baseImage": "viewer/RescueNet/14541.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14541.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14541.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/14541.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -23868,37 +24603,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -23915,9 +24650,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "14813",
       "title": "Scene 14813",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14813.jpg",
+      "baseImage": "viewer/RescueNet/14813.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14813.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14813.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/14813.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -24012,37 +24747,37 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -24059,9 +24794,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "14816",
       "title": "Scene 14816",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14816.jpg",
+      "baseImage": "viewer/RescueNet/14816.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14816.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14816.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/14816.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -24118,19 +24853,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -24147,9 +24882,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "14879",
       "title": "Scene 14879",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/14879.jpg",
+      "baseImage": "viewer/RescueNet/14879.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/14879.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/14879.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/14879.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -24236,38 +24971,52 @@ window.DETECTION_ATLAS_DATA = {
         "Water",
         "Building_Minor_Damage",
         "Building_Total_Destruction",
-        "Road-Clear"
+        "Vehicle",
+        "Road-Clear",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-total-destruction",
           "name": "Building_Total_Destruction",
           "labelIndex": 5,
-          "color": "#ef0000"
+          "color": "#e60000"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -24284,9 +25033,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "15202",
       "title": "Scene 15202",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15202.jpg",
+      "baseImage": "viewer/RescueNet/15202.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15202.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15202.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/15202.jpg",
       "rawImageAvailable": true,
       "width": 4056,
       "height": 3040,
@@ -24348,19 +25097,19 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -24377,9 +25126,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "15270",
       "title": "Scene 15270",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15270.jpg",
+      "baseImage": "viewer/RescueNet/15270.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15270.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15270.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/15270.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -24463,31 +25212,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#d7a200"
+          "color": "#cc9900"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -24504,9 +25253,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "15356",
       "title": "Scene 15356",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15356.jpg",
+      "baseImage": "viewer/RescueNet/15356.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15356.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15356.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/15356.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -24590,31 +25339,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -24631,9 +25380,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "15394",
       "title": "Scene 15394",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15394.jpg",
+      "baseImage": "viewer/RescueNet/15394.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15394.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15394.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/15394.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -24704,32 +25453,39 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Building_No_Damage",
         "Vehicle",
-        "Road-Clear"
+        "Road-Clear",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -24746,9 +25502,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "15540",
       "title": "Scene 15540",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15540.jpg",
+      "baseImage": "viewer/RescueNet/15540.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15540.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15540.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/15540.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -24818,26 +25574,47 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Building_No_Damage",
-        "Road-Clear"
+        "Building_Minor_Damage",
+        "Vehicle",
+        "Road-Clear",
+        "Tree"
       ],
       "classLegend": [
         {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#ffff73"
+        },
+        {
+          "id": "vehicle",
+          "name": "Vehicle",
+          "labelIndex": 6,
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         }
       ],
       "summary": "3 classes with 1 model segmentations loaded.",
@@ -24854,9 +25631,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "15747",
       "title": "Scene 15747",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15747.jpg",
+      "baseImage": "viewer/RescueNet/15747.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15747.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15747.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/15747.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -24949,6 +25726,8 @@ window.DETECTION_ATLAS_DATA = {
         "Building_No_Damage",
         "Building_Minor_Damage",
         "Building_Major_Damage",
+        "Building_Total_Destruction",
+        "Tree",
         "Pool"
       ],
       "classLegend": [
@@ -24956,37 +25735,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#e60000"
+        },
+        {
+          "id": "tree",
+          "name": "Tree",
+          "labelIndex": 9,
+          "color": "#0000ff"
         },
         {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#d7a200"
+          "color": "#cc9900"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -25003,9 +25794,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "15841",
       "title": "Scene 15841",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15841.jpg",
+      "baseImage": "viewer/RescueNet/15841.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15841.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15841.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/15841.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -25076,6 +25867,7 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Building_No_Damage",
         "Building_Minor_Damage",
+        "Building_Total_Destruction",
         "Tree"
       ],
       "classLegend": [
@@ -25083,25 +25875,31 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
         },
         {
           "id": "building-minor-damage",
           "name": "Building_Minor_Damage",
           "labelIndex": 3,
-          "color": "#fff65b"
+          "color": "#ffff73"
+        },
+        {
+          "id": "building-total-destruction",
+          "name": "Building_Total_Destruction",
+          "labelIndex": 5,
+          "color": "#e60000"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -25118,9 +25916,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "15885",
       "title": "Scene 15885",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/15885.jpg",
+      "baseImage": "viewer/RescueNet/15885.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/15885.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/15885.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/15885.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -25220,6 +26018,7 @@ window.DETECTION_ATLAS_DATA = {
       "classNames": [
         "Background",
         "Building_No_Damage",
+        "Building_Minor_Damage",
         "Building_Major_Damage",
         "Vehicle",
         "Road-Clear",
@@ -25231,43 +26030,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#ffff73"
         },
         {
           "id": "building-major-damage",
           "name": "Building_Major_Damage",
           "labelIndex": 4,
-          "color": "#ffa05b"
+          "color": "#ff9966"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -25284,9 +26089,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "16064",
       "title": "Scene 16064",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/16064.jpg",
+      "baseImage": "viewer/RescueNet/16064.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/16064.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/16064.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/16064.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -25324,14 +26129,21 @@ window.DETECTION_ATLAS_DATA = {
         }
       },
       "classNames": [
+        "Water",
         "Tree"
       ],
       "classLegend": [
         {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 1,
+          "color": "#00b0f0"
+        },
+        {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "1 classes with 1 model segmentations loaded.",
@@ -25348,9 +26160,9 @@ window.DETECTION_ATLAS_DATA = {
       "imageId": "16508",
       "title": "Scene 16508",
       "location": "RescueNet benchmark sample",
-      "baseImage": "RescueNet/segformer_rescuenet/ground_truth_images/16508.jpg",
+      "baseImage": "viewer/RescueNet/16508.jpg",
       "sourceImage": "RescueNet/segformer_rescuenet/ground_truth_images/16508.jpg",
-      "thumbnailImage": "RescueNet/segformer_rescuenet/ground_truth_images/16508.jpg",
+      "thumbnailImage": "thumbnails/RescueNet/16508.jpg",
       "rawImageAvailable": true,
       "width": 4000,
       "height": 3000,
@@ -25446,6 +26258,7 @@ window.DETECTION_ATLAS_DATA = {
         "Background",
         "Water",
         "Building_No_Damage",
+        "Building_Minor_Damage",
         "Vehicle",
         "Road-Clear",
         "Road-Blocked",
@@ -25456,43 +26269,49 @@ window.DETECTION_ATLAS_DATA = {
           "id": "background",
           "name": "Background",
           "labelIndex": 0,
-          "color": "#5a5a5a"
+          "color": "#505050"
         },
         {
           "id": "water",
           "name": "Water",
           "labelIndex": 1,
-          "color": "#18a2e6"
+          "color": "#00b0f0"
         },
         {
           "id": "building-no-damage",
           "name": "Building_No_Damage",
           "labelIndex": 2,
-          "color": "#73ebe5"
+          "color": "#73ffdf"
+        },
+        {
+          "id": "building-minor-damage",
+          "name": "Building_Minor_Damage",
+          "labelIndex": 3,
+          "color": "#ffff73"
         },
         {
           "id": "vehicle",
           "name": "Vehicle",
           "labelIndex": 6,
-          "color": "#ed00d7"
+          "color": "#ff00c5"
         },
         {
           "id": "road-clear",
           "name": "Road-Clear",
           "labelIndex": 7,
-          "color": "#b17cbc"
+          "color": "#b077b0"
         },
         {
           "id": "road-blocked",
           "name": "Road-Blocked",
           "labelIndex": 8,
-          "color": "#49ff00"
+          "color": "#55ff00"
         },
         {
           "id": "tree",
           "name": "Tree",
           "labelIndex": 9,
-          "color": "#1b18ec"
+          "color": "#0000ff"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",

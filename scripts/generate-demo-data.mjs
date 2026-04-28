@@ -32,28 +32,28 @@ const DETECTION_CLASS_COLORS = [
 const SEGMENTATION_CLASS_COLORS = {
   FloodNetPlus: {
     0: "#000000",
-    1: "#4f87bd",
-    2: "#e11d48",
-    3: "#1b1699",
-    4: "#7e1020",
-    5: "#1e22e8",
-    6: "#6b8f1a",
-    7: "#0f4f79",
-    8: "#ff1010",
-    9: "#18f40d"
+    1: "#4682b4",
+    2: "#dc143c",
+    3: "#00008e",
+    4: "#770b20",
+    5: "#0000e6",
+    6: "#6b8e23",
+    7: "#003c64",
+    8: "#ff0000",
+    9: "#00ff00"
   },
   RescueNet: {
-    0: "#5a5a5a",
-    1: "#18a2e6",
-    2: "#73ebe5",
-    3: "#fff65b",
-    4: "#ffa05b",
-    5: "#ef0000",
-    6: "#ed00d7",
-    7: "#b17cbc",
-    8: "#49ff00",
-    9: "#1b18ec",
-    10: "#d7a200"
+    0: "#505050",
+    1: "#00b0f0",
+    2: "#73ffdf",
+    3: "#ffff73",
+    4: "#ff9966",
+    5: "#e60000",
+    6: "#ff00c5",
+    7: "#b077b0",
+    8: "#55ff00",
+    9: "#0000ff",
+    10: "#cc9900"
   }
 };
 
@@ -181,6 +181,23 @@ function segmentationLegendFromSegments(datasetName, segments) {
     labelIndex: segment.labelIndex,
     color: segmentationColorFor(datasetName, segment.labelIndex)
   }));
+}
+
+function mergeSegmentationLegendEntries(datasetName, segmentsBySource) {
+  const merged = new Map();
+  segmentsBySource.flat().forEach((segment) => {
+    if (!segment?.className) return;
+    const key = `${segment.labelIndex}:${segment.className}`;
+    if (!merged.has(key)) {
+      merged.set(key, {
+        id: slugify(segment.className),
+        name: segment.className,
+        labelIndex: segment.labelIndex,
+        color: segmentationColorFor(datasetName, segment.labelIndex)
+      });
+    }
+  });
+  return [...merged.values()].sort((a, b) => (a.labelIndex ?? 0) - (b.labelIndex ?? 0) || a.name.localeCompare(b.name));
 }
 
 function sceneTaskTypeFromJson(json) {
@@ -361,6 +378,10 @@ function buildSegmentationScene({ datasetName, sceneId, sceneRoots, modelDirs, m
   }
 
   const gtPixels = gtSegments.reduce((sum, segment) => sum + segment.pixelCount, 0);
+  const mergedSceneLegend = mergeSegmentationLegendEntries(datasetName, [
+    gtSegments,
+    ...Object.values(predictions)
+  ]);
 
   return {
     id: `${slugify(datasetName)}-${sceneId}`,
@@ -385,8 +406,8 @@ function buildSegmentationScene({ datasetName, sceneId, sceneRoots, modelDirs, m
     predictions,
     predictionImages,
     sceneModelStats,
-    classNames: gtSegments.map((segment) => segment.className),
-    classLegend: segmentationLegendFromSegments(datasetName, gtSegments),
+    classNames: mergedSceneLegend.map((segment) => segment.name),
+    classLegend: mergedSceneLegend,
     summary: `${gtSegments.length} classes with ${Object.keys(predictions).length} model segmentations loaded.`,
     groundTruthStats: {
       classCount: gtSegments.length,
