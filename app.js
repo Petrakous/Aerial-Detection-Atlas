@@ -16,6 +16,7 @@ const state = {
   selected: new Set(),
   hoveredModel: null,
   hoveredGroundTruth: false,
+  suppressGroundTruthHover: false,
   showGroundTruth: false,
   overlayOpacity: 1,
   split: 50,
@@ -385,7 +386,7 @@ function syncHoveredModelFromPointer(scene = currentScene()) {
 
   const hoveredElement = document.elementFromPoint(state.pointerX, state.pointerY);
   const gtToggle = hoveredElement?.closest?.(".gt-toggle");
-  if (gtToggle && !gtToggle.disabled) {
+  if (gtToggle && !gtToggle.disabled && !state.suppressGroundTruthHover) {
     state.hoveredGroundTruth = true;
     state.hoveredModel = null;
     return;
@@ -1049,6 +1050,7 @@ function renderScenes() {
       state.sceneIndex = index;
       state.hoveredModel = null;
       state.hoveredGroundTruth = false;
+      state.suppressGroundTruthHover = false;
       resetView();
       ensureSceneState();
       render();
@@ -1160,6 +1162,7 @@ function renderModels() {
           state.selected.clear();
           state.selected.add(model.id);
           state.showGroundTruth = false;
+          state.suppressGroundTruthHover = false;
         }
         render();
       });
@@ -1332,6 +1335,7 @@ document.querySelector("#prevScene").addEventListener("click", () => {
   state.sceneIndex = (state.sceneIndex - 1 + scenes.length) % scenes.length;
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
+  state.suppressGroundTruthHover = false;
   resetView();
   ensureSceneState();
   render();
@@ -1342,6 +1346,7 @@ document.querySelector("#nextScene").addEventListener("click", () => {
   state.sceneIndex = (state.sceneIndex + 1) % scenes.length;
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
+  state.suppressGroundTruthHover = false;
   resetView();
   ensureSceneState();
   render();
@@ -1365,6 +1370,7 @@ els.datasetSelect.addEventListener("change", () => {
   state.sceneIndex = 0;
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
+  state.suppressGroundTruthHover = false;
   state.selected.clear();
   resetSceneListScroll = true;
   resetView();
@@ -1378,6 +1384,7 @@ els.modeButtons.forEach((button) => {
     state.mode = button.dataset.mode;
     state.hoveredModel = null;
     state.hoveredGroundTruth = false;
+    state.suppressGroundTruthHover = false;
     resetView();
     render();
   });
@@ -1397,13 +1404,22 @@ els.splitB.addEventListener("change", () => {
 els.toggleGroundTruth.addEventListener("click", () => {
   const shouldShowGroundTruth = !state.showGroundTruth;
   state.showGroundTruth = shouldShowGroundTruth;
+  state.suppressGroundTruthHover = !shouldShowGroundTruth;
   if (shouldShowGroundTruth) state.selected.clear();
   state.hoveredGroundTruth = false;
-  render();
+  state.skipNextViewerAnimation = false;
+  if (shouldShowGroundTruth) {
+    render();
+  } else {
+    renderSummary();
+    renderMode();
+    renderViewer();
+  }
 });
 
 els.toggleGroundTruth.addEventListener("pointerenter", (event) => {
   if (state.mode === "split") return;
+  state.suppressGroundTruthHover = false;
   state.pointerX = event.clientX;
   state.pointerY = event.clientY;
   state.hoveredGroundTruth = true;
@@ -1414,6 +1430,7 @@ els.toggleGroundTruth.addEventListener("pointerenter", (event) => {
 
 els.toggleGroundTruth.addEventListener("pointerleave", (event) => {
   if (state.mode === "split") return;
+  state.suppressGroundTruthHover = false;
   state.pointerX = event.clientX;
   state.pointerY = event.clientY;
   syncHoveredModelFromPointer();
@@ -1425,6 +1442,7 @@ els.selectAll.addEventListener("click", () => {
   const sceneModels = readyModels(currentScene());
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
+  state.suppressGroundTruthHover = false;
   if (state.selected.size > 0) {
     state.selected.clear();
   } else {
@@ -1437,6 +1455,7 @@ els.selectAll.addEventListener("click", () => {
 els.clearAll.addEventListener("click", () => {
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
+  state.suppressGroundTruthHover = false;
   state.selected.clear();
   state.showGroundTruth = false;
   render();
