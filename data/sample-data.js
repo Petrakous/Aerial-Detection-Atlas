@@ -151,7 +151,7 @@ window.DETECTION_ATLAS_DATA = {
         "id": "pool",
         "name": "Pool",
         "labelIndex": 10,
-        "color": "#00FFE6"
+        "color": "#4B0082"
       }
     ]
   },
@@ -818,7 +818,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -957,7 +957,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -1096,7 +1096,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -1656,7 +1656,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -1800,7 +1800,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -2955,7 +2955,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -4460,7 +4460,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -4616,7 +4616,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -4772,7 +4772,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -5093,7 +5093,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -5994,7 +5994,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -6254,7 +6254,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -6511,7 +6511,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -6857,7 +6857,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -7025,7 +7025,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -7188,7 +7188,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -7500,7 +7500,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -7668,7 +7668,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -7819,7 +7819,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -8114,7 +8114,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -8294,7 +8294,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -8455,7 +8455,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -8599,7 +8599,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -8760,7 +8760,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -8916,7 +8916,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -9501,7 +9501,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -9708,7 +9708,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -16189,7 +16189,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -16306,7 +16306,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -16521,7 +16521,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -17616,7 +17616,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -17882,7 +17882,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -18026,7 +18026,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -18170,7 +18170,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -18601,7 +18601,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -18891,7 +18891,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -19462,7 +19462,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -20054,7 +20054,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 8,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         },
         {
           "id": "grass",
@@ -20666,7 +20666,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -21046,7 +21046,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "4 classes with 1 model segmentations loaded.",
@@ -21494,7 +21494,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -26347,7 +26347,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -27061,7 +27061,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "5 classes with 1 model segmentations loaded.",
@@ -27652,7 +27652,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -30594,7 +30594,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -31624,7 +31624,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -32842,7 +32842,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "6 classes with 2 model segmentations loaded.",
@@ -33005,7 +33005,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -33347,7 +33347,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "4 classes with 2 model segmentations loaded.",
@@ -34108,7 +34108,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "6 classes with 1 model segmentations loaded.",
@@ -34471,7 +34471,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -35064,7 +35064,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "5 classes with 2 model segmentations loaded.",
@@ -37999,7 +37999,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "5 classes with 2 model segmentations loaded.",
@@ -41196,7 +41196,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "6 classes with 2 model segmentations loaded.",
@@ -41781,7 +41781,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "7 classes with 1 model segmentations loaded.",
@@ -42883,7 +42883,7 @@ window.DETECTION_ATLAS_DATA = {
           "id": "pool",
           "name": "Pool",
           "labelIndex": 10,
-          "color": "#00FFE6"
+          "color": "#4B0082"
         }
       ],
       "summary": "8 classes with 1 model segmentations loaded.",

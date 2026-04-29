@@ -43,7 +43,7 @@ const SEGMENTATION_CLASS_COLORS = {
   Grass: "#39FF14",
   Tree: "#006400",
   Vehicle: "#FF00D4",
-  Pool: "#00FFE6",
+  Pool: "#4B0082",
   Building_No_Damage: "#00E676",
   Building_Minor_Damage: "#FFD600",
   Building_Major_Damage: "#FF6D00",
