@@ -414,8 +414,6 @@ function syncPointerHoverState(scene = currentScene()) {
     state.skipNextViewerAnimation = Boolean(
       (previousHoveredModel && state.selected.has(previousHoveredModel))
       || (state.hoveredModel && state.selected.has(state.hoveredModel))
-      || previousHoveredGroundTruth
-      || state.hoveredGroundTruth
     );
     updateModelHoverGlow(scene);
     renderViewer();
@@ -1410,7 +1408,6 @@ els.toggleGroundTruth.addEventListener("pointerenter", (event) => {
   state.pointerY = event.clientY;
   state.hoveredGroundTruth = true;
   state.hoveredModel = null;
-  state.skipNextViewerAnimation = true;
   updateModelHoverGlow();
   renderViewer();
 });
@@ -1419,7 +1416,6 @@ els.toggleGroundTruth.addEventListener("pointerleave", (event) => {
   if (state.mode === "split") return;
   state.pointerX = event.clientX;
   state.pointerY = event.clientY;
-  state.skipNextViewerAnimation = true;
   syncHoveredModelFromPointer();
   updateModelHoverGlow();
   renderViewer();
