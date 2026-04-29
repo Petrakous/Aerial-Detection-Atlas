@@ -1156,8 +1156,13 @@ function renderModels() {
         const keepHoverState = state.hoveredModel === model.id;
         state.skipNextViewerAnimation = keepHoverState;
         if (!keepHoverState) state.hoveredModel = null;
-        if (state.selected.has(model.id)) state.selected.delete(model.id);
-        else state.selected.add(model.id);
+        if (state.selected.has(model.id)) {
+          state.selected.delete(model.id);
+        } else {
+          state.selected.clear();
+          state.selected.add(model.id);
+          state.showGroundTruth = false;
+        }
         render();
       });
     }
@@ -1266,7 +1271,7 @@ function renderMode() {
   const scene = currentScene();
   if (!scene) return;
   const sceneModels = readyModels(scene);
-  const allReadySelected = sceneModels.length > 0 && sceneModels.every((model) => state.selected.has(model.id));
+  const hasSelection = state.selected.size > 0;
 
   document.body.dataset.mode = state.mode;
   els.modeButtons.forEach((button) => {
@@ -1279,7 +1284,7 @@ function renderMode() {
       ? "Split comparison"
       : "Hover to isolate"
     : "No outputs";
-  els.selectAll.textContent = allReadySelected ? "Deselect all" : "Select all";
+  els.selectAll.textContent = hasSelection ? "Deselect" : "Select first";
   els.selectAll.disabled = sceneModels.length === 0;
   els.clearAll.disabled = sceneModels.length === 0;
   els.taskLabel.textContent = formatTaskType(currentTaskType(scene));
@@ -1392,7 +1397,9 @@ els.splitB.addEventListener("change", () => {
 });
 
 els.toggleGroundTruth.addEventListener("click", () => {
-  state.showGroundTruth = !state.showGroundTruth;
+  const shouldShowGroundTruth = !state.showGroundTruth;
+  state.showGroundTruth = shouldShowGroundTruth;
+  if (shouldShowGroundTruth) state.selected.clear();
   state.hoveredGroundTruth = false;
   render();
 });
@@ -1420,13 +1427,13 @@ els.toggleGroundTruth.addEventListener("pointerleave", (event) => {
 
 els.selectAll.addEventListener("click", () => {
   const sceneModels = readyModels(currentScene());
-  const allReadySelected = sceneModels.length > 0 && sceneModels.every((model) => state.selected.has(model.id));
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
-  if (allReadySelected) {
-    sceneModels.forEach((model) => state.selected.delete(model.id));
+  if (state.selected.size > 0) {
+    state.selected.clear();
   } else {
-    sceneModels.forEach((model) => state.selected.add(model.id));
+    state.showGroundTruth = false;
+    if (sceneModels[0]) state.selected.add(sceneModels[0].id);
   }
   render();
 });
@@ -1435,6 +1442,7 @@ els.clearAll.addEventListener("click", () => {
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
   state.selected.clear();
+  state.showGroundTruth = false;
   render();
 });
 
