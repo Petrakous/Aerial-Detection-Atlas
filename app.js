@@ -15,6 +15,7 @@ const state = {
   theme: "light",
   selected: new Set(),
   hoveredModel: null,
+  hoveredGroundTruth: false,
   showGroundTruth: false,
   overlayOpacity: 1,
   split: 50,
@@ -231,7 +232,7 @@ function displayedModels(scene = currentScene()) {
 }
 
 function effectiveHoverModel(scene = currentScene()) {
-  if (state.mode === "split" || !state.hoveredModel) return null;
+  if (state.mode === "split" || state.hoveredGroundTruth || !state.hoveredModel) return null;
   const displayedModelIds = new Set(displayedModels(scene).map((model) => model.id));
   return displayedModelIds.has(state.hoveredModel) ? state.hoveredModel : null;
 }
@@ -368,6 +369,7 @@ function ensureSceneState() {
 
 function normalizeHoveredModel(scene = currentScene()) {
   const sceneModelIds = new Set(readyModels(scene).map((model) => model.id));
+  if (state.mode === "split") state.hoveredGroundTruth = false;
   if (!state.hoveredModel) return;
   if (!sceneModelIds.has(state.hoveredModel) || state.mode === "split") {
     state.hoveredModel = null;
@@ -377,13 +379,22 @@ function normalizeHoveredModel(scene = currentScene()) {
 function syncHoveredModelFromPointer(scene = currentScene()) {
   if (state.mode === "split" || state.pointerX == null || state.pointerY == null) {
     state.hoveredModel = null;
+    state.hoveredGroundTruth = false;
     return;
   }
 
   const hoveredElement = document.elementFromPoint(state.pointerX, state.pointerY);
+  const gtToggle = hoveredElement?.closest?.(".gt-toggle");
+  if (gtToggle && !gtToggle.disabled) {
+    state.hoveredGroundTruth = true;
+    state.hoveredModel = null;
+    return;
+  }
+
   const modelRow = hoveredElement?.closest?.(".model-row");
   const modelId = modelRow?.dataset.modelId || null;
   const sceneModelIds = new Set(readyModels(scene).map((model) => model.id));
+  state.hoveredGroundTruth = false;
   state.hoveredModel = modelId && sceneModelIds.has(modelId) ? modelId : null;
 }
 
@@ -392,15 +403,19 @@ function updateModelHoverGlow(scene = currentScene()) {
   els.modelList.querySelectorAll(".model-row").forEach((row) => {
     row.classList.toggle("is-hovered", row.dataset.modelId === activeHoverModel);
   });
+  els.toggleGroundTruth.classList.toggle("is-hovered", state.mode !== "split" && state.hoveredGroundTruth);
 }
 
 function syncPointerHoverState(scene = currentScene()) {
   const previousHoveredModel = state.hoveredModel;
+  const previousHoveredGroundTruth = state.hoveredGroundTruth;
   syncHoveredModelFromPointer(scene);
-  if (previousHoveredModel !== state.hoveredModel) {
+  if (previousHoveredModel !== state.hoveredModel || previousHoveredGroundTruth !== state.hoveredGroundTruth) {
     state.skipNextViewerAnimation = Boolean(
       (previousHoveredModel && state.selected.has(previousHoveredModel))
       || (state.hoveredModel && state.selected.has(state.hoveredModel))
+      || previousHoveredGroundTruth
+      || state.hoveredGroundTruth
     );
     updateModelHoverGlow(scene);
     renderViewer();
@@ -766,13 +781,15 @@ function buildSceneLayers(scene, models, options = {}) {
   const layers = [];
   const occupiedLabels = [];
   const hoverModel = effectiveHoverModel(scene);
-  const showGroundTruth = options.showGroundTruth ?? state.showGroundTruth;
+  const hoverGroundTruth = state.mode !== "split" && state.hoveredGroundTruth;
+  const showGroundTruth = options.showGroundTruth ?? (state.showGroundTruth || hoverGroundTruth);
 
   if (isSegmentationScene(scene)) {
     if (showGroundTruth && scene.groundTruthImage) {
       layers.push(createSegmentationLayer(scene, scene.groundTruthImage, {
         kind: "ground-truth",
-        opacity: state.overlayOpacity,
+        opacity: hoverGroundTruth ? 1 : state.overlayOpacity,
+        isEmphasized: hoverGroundTruth,
         zIndex: 12
       }));
     }
@@ -783,7 +800,7 @@ function buildSceneLayers(scene, models, options = {}) {
 
       const isHovered = Boolean(hoverModel && hoverModel === model.id);
       const isDimmed = Boolean(hoverModel && hoverModel !== model.id);
-      const opacity = isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 1) : state.overlayOpacity;
+      const opacity = hoverGroundTruth || isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 1) : state.overlayOpacity;
 
       layers.push(createSegmentationLayer(scene, overlayImage, {
         kind: "prediction",
@@ -800,7 +817,8 @@ function buildSceneLayers(scene, models, options = {}) {
   if (showGroundTruth && scene.groundTruth?.length) {
     layers.push(createBoxesLayer(scene, scene.groundTruth, {
       kind: "ground-truth",
-      opacity: state.overlayOpacity,
+      opacity: hoverGroundTruth ? 1 : state.overlayOpacity,
+      isEmphasized: hoverGroundTruth,
       zIndex: 12,
       occupiedLabels
     }));
@@ -812,7 +830,7 @@ function buildSceneLayers(scene, models, options = {}) {
 
     const isHovered = Boolean(hoverModel && hoverModel === model.id);
     const isDimmed = Boolean(hoverModel && hoverModel !== model.id);
-    const opacity = isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 1) : state.overlayOpacity;
+    const opacity = hoverGroundTruth || isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 1) : state.overlayOpacity;
 
     layers.push(createBoxesLayer(scene, boxes, {
       kind: "prediction",
@@ -897,6 +915,7 @@ function viewerSignature(scene = currentScene()) {
     scene: scene.id,
     mode: state.mode,
     showGroundTruth: state.showGroundTruth,
+    hoverGroundTruth: state.mode !== "split" && state.hoveredGroundTruth,
     displayed: [...displayedModels(scene)].map((model) => model.id),
     hoverModel: effectiveHoverModel(scene),
     splitA: state.splitA,
@@ -908,7 +927,9 @@ function boxLayerOpacity(layer) {
   const kind = layer.dataset.kind;
   const modelId = layer.dataset.modelId;
   const hoverModel = effectiveHoverModel();
-  if (kind === "ground-truth") return state.overlayOpacity;
+  const hoverGroundTruth = state.mode !== "split" && state.hoveredGroundTruth;
+  if (kind === "ground-truth") return hoverGroundTruth ? 1 : state.overlayOpacity;
+  if (kind === "prediction" && hoverGroundTruth) return 0.05;
   if (kind === "prediction" && modelId) {
     const isHovered = Boolean(hoverModel && hoverModel === modelId);
     const isDimmed = Boolean(hoverModel && hoverModel !== modelId);
@@ -1029,6 +1050,7 @@ function renderScenes() {
     button.addEventListener("click", () => {
       state.sceneIndex = index;
       state.hoveredModel = null;
+      state.hoveredGroundTruth = false;
       resetView();
       ensureSceneState();
       render();
@@ -1262,6 +1284,7 @@ function renderMode() {
   els.clearAll.disabled = sceneModels.length === 0;
   els.taskLabel.textContent = formatTaskType(currentTaskType(scene));
   els.toggleGroundTruth.classList.toggle("is-active", state.showGroundTruth);
+  els.toggleGroundTruth.classList.toggle("is-hovered", state.mode !== "split" && state.hoveredGroundTruth);
   els.toggleGroundTruth.setAttribute("aria-pressed", String(state.showGroundTruth));
   els.groundTruthText.textContent = "Ground Truth";
 }
@@ -1305,6 +1328,7 @@ document.querySelector("#prevScene").addEventListener("click", () => {
   const scenes = visibleScenes();
   state.sceneIndex = (state.sceneIndex - 1 + scenes.length) % scenes.length;
   state.hoveredModel = null;
+  state.hoveredGroundTruth = false;
   resetView();
   ensureSceneState();
   render();
@@ -1314,6 +1338,7 @@ document.querySelector("#nextScene").addEventListener("click", () => {
   const scenes = visibleScenes();
   state.sceneIndex = (state.sceneIndex + 1) % scenes.length;
   state.hoveredModel = null;
+  state.hoveredGroundTruth = false;
   resetView();
   ensureSceneState();
   render();
@@ -1336,6 +1361,7 @@ els.datasetSelect.addEventListener("change", () => {
   state.datasetId = els.datasetSelect.value;
   state.sceneIndex = 0;
   state.hoveredModel = null;
+  state.hoveredGroundTruth = false;
   state.selected.clear();
   resetSceneListScroll = true;
   resetView();
@@ -1348,6 +1374,7 @@ els.modeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     state.mode = button.dataset.mode;
     state.hoveredModel = null;
+    state.hoveredGroundTruth = false;
     resetView();
     render();
   });
@@ -1366,13 +1393,36 @@ els.splitB.addEventListener("change", () => {
 
 els.toggleGroundTruth.addEventListener("click", () => {
   state.showGroundTruth = !state.showGroundTruth;
+  state.hoveredGroundTruth = false;
   render();
+});
+
+els.toggleGroundTruth.addEventListener("pointerenter", (event) => {
+  if (state.mode === "split") return;
+  state.pointerX = event.clientX;
+  state.pointerY = event.clientY;
+  state.hoveredGroundTruth = true;
+  state.hoveredModel = null;
+  state.skipNextViewerAnimation = true;
+  updateModelHoverGlow();
+  renderViewer();
+});
+
+els.toggleGroundTruth.addEventListener("pointerleave", (event) => {
+  if (state.mode === "split") return;
+  state.pointerX = event.clientX;
+  state.pointerY = event.clientY;
+  state.skipNextViewerAnimation = true;
+  syncHoveredModelFromPointer();
+  updateModelHoverGlow();
+  renderViewer();
 });
 
 els.selectAll.addEventListener("click", () => {
   const sceneModels = readyModels(currentScene());
   const allReadySelected = sceneModels.length > 0 && sceneModels.every((model) => state.selected.has(model.id));
   state.hoveredModel = null;
+  state.hoveredGroundTruth = false;
   if (allReadySelected) {
     sceneModels.forEach((model) => state.selected.delete(model.id));
   } else {
@@ -1383,6 +1433,7 @@ els.selectAll.addEventListener("click", () => {
 
 els.clearAll.addEventListener("click", () => {
   state.hoveredModel = null;
+  state.hoveredGroundTruth = false;
   state.selected.clear();
   render();
 });

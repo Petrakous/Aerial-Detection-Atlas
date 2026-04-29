@@ -535,7 +535,8 @@ h1 {
   border-color: color-mix(in srgb, #ff5d5d, transparent 72%);
 }
 
-.gt-toggle:hover {
+.gt-toggle:hover,
+.gt-toggle.is-hovered {
   border-color: color-mix(in srgb, #ff5d5d, transparent 48%);
 }
 
