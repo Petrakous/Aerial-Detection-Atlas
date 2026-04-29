@@ -1214,7 +1214,7 @@ function renderModels() {
       ? splitSideForModel(model.id, scene)
       : hasSceneOutput
         ? isSegmentationScene(scene)
-          ? `${sceneStats.classCount || 0} classes / ${formatPixels(sceneStats.labeledPixels || 0)} px`
+          ? `${sceneStats.classCount || 0} classes`
           : `${sceneStats.count} detections${sceneStats.maxConfidence != null ? ` / max ${sceneStats.maxConfidence.toFixed(2)}` : ""}`
         : "not available in this scene";
 
