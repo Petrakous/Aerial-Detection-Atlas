@@ -5,6 +5,10 @@ const releaseBases = {
   segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/"
 };
 
+const minZoom = 0.25;
+const maxZoom = 2.4;
+const fitViewPadding = 0.98;
+
 const availableModelIds = new Set(data.models.map((model) => model.id));
 const availableDatasets = (data.datasets?.map((dataset) => dataset.id) || [...new Set(data.scenes.map((scene) => scene.dataset))]);
 
@@ -23,6 +27,7 @@ const state = {
   splitA: data.models[0]?.id || "",
   splitB: "all-other-models",
   zoom: 1,
+  fitToView: false,
   panX: 0,
   panY: 0,
   dragging: false,
@@ -947,6 +952,43 @@ function fadeLayerToTarget(layer, targetOpacity) {
   layer.style.opacity = String(targetOpacity);
 }
 
+function clampZoom(zoom) {
+  return Math.min(maxZoom, Math.max(minZoom, zoom));
+}
+
+function viewerFrameInnerSize() {
+  const bounds = els.viewerFrame.getBoundingClientRect();
+  const styles = window.getComputedStyle(els.viewerFrame);
+  const horizontalPadding = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight);
+  const verticalPadding = parseFloat(styles.paddingTop) + parseFloat(styles.paddingBottom);
+  return {
+    width: Math.max(1, bounds.width - horizontalPadding),
+    height: Math.max(1, bounds.height - verticalPadding)
+  };
+}
+
+function fitZoomForViewport() {
+  const { width, height } = viewerFrameInnerSize();
+  const contentWidth = els.viewerContent.offsetWidth || width;
+  const contentHeight = els.viewerContent.offsetHeight || height;
+  return clampZoom(Math.min(width / contentWidth, height / contentHeight) * fitViewPadding);
+}
+
+function fitViewToViewport() {
+  state.panX = 0;
+  state.panY = 0;
+  state.dragging = false;
+  state.splitDragging = false;
+  state.fitToView = true;
+  updateViewerFrame();
+  window.requestAnimationFrame(() => {
+    state.zoom = fitZoomForViewport();
+    state.panX = 0;
+    state.panY = 0;
+    updateViewerFrame();
+  });
+}
+
 function updateViewerFrame() {
   const scene = currentScene();
   document.body.dataset.mode = state.mode;
@@ -1315,6 +1357,7 @@ function render() {
 
 function resetView() {
   state.zoom = 1;
+  state.fitToView = false;
   state.panX = 0;
   state.panY = 0;
   state.dragging = false;
@@ -1322,7 +1365,8 @@ function resetView() {
 }
 
 function setZoom(nextZoom) {
-  state.zoom = Math.min(2.4, Math.max(0.65, nextZoom));
+  state.fitToView = false;
+  state.zoom = clampZoom(nextZoom);
   if (state.zoom === 1) {
     state.panX = 0;
     state.panY = 0;
@@ -1355,8 +1399,7 @@ document.querySelector("#nextScene").addEventListener("click", () => {
 document.querySelector("#zoomOut").addEventListener("click", () => setZoom(state.zoom - 0.12));
 document.querySelector("#zoomIn").addEventListener("click", () => setZoom(state.zoom + 0.12));
 document.querySelector("#fitView").addEventListener("click", () => {
-  resetView();
-  renderViewer();
+  fitViewToViewport();
 });
 
 document.addEventListener("pointermove", (event) => {
@@ -1529,6 +1572,7 @@ els.viewerFrame.addEventListener("pointermove", (event) => {
 
   if (state.mode === "split") return;
   if (!state.dragging || state.zoom <= 1) return;
+  state.fitToView = false;
   state.panX = state.dragStart.panX + event.clientX - state.dragStart.x;
   state.panY = state.dragStart.panY + event.clientY - state.dragStart.y;
   updateViewerFrame();
@@ -1546,6 +1590,14 @@ els.viewerFrame.addEventListener("wheel", (event) => {
   event.preventDefault();
   setZoom(state.zoom + (event.deltaY > 0 ? -0.08 : 0.08));
 }, { passive: false });
+
+window.addEventListener("resize", () => {
+  if (state.fitToView) {
+    fitViewToViewport();
+  } else {
+    updateViewerFrame();
+  }
+});
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !els.detectionModal.hidden) {
