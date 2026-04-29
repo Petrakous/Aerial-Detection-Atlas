@@ -1,8 +1,8 @@
 const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.TRIFID_DEMO_DATA;
 const releaseBases = {
-  core: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v1/",
-  segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v1/",
-  segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v1/"
+  core: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v2/",
+  segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v2/",
+  segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/"
 };
 
 const availableModelIds = new Set(data.models.map((model) => model.id));

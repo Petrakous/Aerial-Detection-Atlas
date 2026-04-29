@@ -18,43 +18,38 @@ const MODEL_COLORS = [
   "#f97316"
 ];
 
-const DETECTION_CLASS_COLORS = [
-  "#ffe66d",
-  "#5eead4",
-  "#fca5a5",
-  "#93c5fd",
-  "#c4b5fd",
-  "#f9a8d4",
-  "#86efac",
-  "#fdba74"
+const DETECTION_CLASS_COLORS = {
+  Pedestrian: "#FF69B4"
+};
+
+const FALLBACK_DETECTION_CLASS_COLORS = [
+  "#FF69B4",
+  "#FFD60A",
+  "#00FFE6",
+  "#FF1744",
+  "#8A00FF",
+  "#39FF14",
+  "#0047FF",
+  "#FFB300"
 ];
 
 const SEGMENTATION_CLASS_COLORS = {
-  FloodNetPlus: {
-    0: "#000000",
-    1: "#4682b4",
-    2: "#dc143c",
-    3: "#00008e",
-    4: "#770b20",
-    5: "#0000e6",
-    6: "#6b8e23",
-    7: "#003c64",
-    8: "#ff0000",
-    9: "#00ff00"
-  },
-  RescueNet: {
-    0: "#505050",
-    1: "#00b0f0",
-    2: "#73ffdf",
-    3: "#ffff73",
-    4: "#ff9966",
-    5: "#e60000",
-    6: "#ff00c5",
-    7: "#b077b0",
-    8: "#55ff00",
-    9: "#0000ff",
-    10: "#cc9900"
-  }
+  Background: "#000000",
+  Water: "#0047FF",
+  "Building-flooded": "#00FFD1",
+  "Building-non-flooded": "#FF1744",
+  "Road-flooded": "#8A00FF",
+  "Road-non-flooded": "#FFB300",
+  Grass: "#39FF14",
+  Tree: "#006400",
+  Vehicle: "#FF00D4",
+  Pool: "#00FFE6",
+  Building_No_Damage: "#00E676",
+  Building_Minor_Damage: "#FFD600",
+  Building_Major_Damage: "#FF6D00",
+  Building_Total_Destruction: "#FF0000",
+  "Road-Clear": "#C77DFF",
+  "Road-Blocked": "#B6FF00"
 };
 
 const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD"];
@@ -63,6 +58,7 @@ const IGNORED_DIRS = new Set([
   ".git",
   "assets",
   "data",
+  "Datasets",
   "scripts",
   "node_modules",
   "viewer",
@@ -166,20 +162,20 @@ function assignDetectionClassColors(names) {
   return [...names].sort().map((name, index) => ({
     id: slugify(name),
     name,
-    color: DETECTION_CLASS_COLORS[index % DETECTION_CLASS_COLORS.length]
+    color: DETECTION_CLASS_COLORS[name] || FALLBACK_DETECTION_CLASS_COLORS[index % FALLBACK_DETECTION_CLASS_COLORS.length]
   }));
 }
 
-function segmentationColorFor(datasetName, labelIndex) {
-  return SEGMENTATION_CLASS_COLORS[datasetName]?.[labelIndex] || "#ffffff";
+function segmentationColorFor(className) {
+  return SEGMENTATION_CLASS_COLORS[className] || "#ffffff";
 }
 
-function segmentationLegendFromSegments(datasetName, segments) {
+function segmentationLegendFromSegments(segments) {
   return segments.map((segment) => ({
     id: slugify(segment.className),
     name: segment.className,
     labelIndex: segment.labelIndex,
-    color: segmentationColorFor(datasetName, segment.labelIndex)
+    color: segmentationColorFor(segment.className)
   }));
 }
 
@@ -193,7 +189,7 @@ function mergeSegmentationLegendEntries(datasetName, segmentsBySource) {
         id: slugify(segment.className),
         name: segment.className,
         labelIndex: segment.labelIndex,
-        color: segmentationColorFor(datasetName, segment.labelIndex)
+        color: segmentationColorFor(segment.className)
       });
     }
   });
