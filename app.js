@@ -90,6 +90,8 @@ let scenesInitialized = false;
 let viewerRefreshTimer = 0;
 let focusLensRefreshFrame = 0;
 let resetSceneListScroll = false;
+const preloadedImages = new Map();
+let preloadSceneTimer = 0;
 
 function resolveInitialTheme() {
   const stored = window.localStorage.getItem(themeStorageKey);
@@ -515,9 +517,61 @@ function queueFocusLensRefresh() {
 
 function createSegmentationImageLayer(imagePath, className = "segmentation-visual") {
   const img = createImageLayer(resolveAssetPath(imagePath), className);
-  img.addEventListener("load", queueFocusLensRefresh);
+  img.addEventListener("load", () => {
+    img.classList.add("is-ready");
+    queueFocusLensRefresh();
+  });
   img.addEventListener("error", queueFocusLensRefresh);
+  if (img.complete && img.naturalWidth > 0) {
+    queueMicrotask(() => {
+      img.classList.add("is-ready");
+      queueFocusLensRefresh();
+    });
+  }
   return img;
+}
+
+function preloadImage(src) {
+  if (!src) return null;
+  const resolved = resolveAssetPath(src);
+  if (preloadedImages.has(resolved)) return preloadedImages.get(resolved);
+
+  const image = new Image();
+  image.decoding = "async";
+  image.loading = "eager";
+  image.src = resolved;
+
+  const preload = new Promise((resolve) => {
+    const finish = () => resolve(resolved);
+    image.addEventListener("load", finish, { once: true });
+    image.addEventListener("error", finish, { once: true });
+    if (image.complete) queueMicrotask(finish);
+  }).then(async () => {
+    if (typeof image.decode === "function" && image.naturalWidth > 0) {
+      try {
+        await image.decode();
+      } catch {
+        // Some browsers reject decode() for cached or already-decoded images.
+      }
+    }
+    return resolved;
+  });
+
+  preloadedImages.set(resolved, preload);
+  return preload;
+}
+
+function preloadSceneSegmentationAssets(scene = currentScene()) {
+  if (!scene || !isSegmentationScene(scene)) return;
+  window.clearTimeout(preloadSceneTimer);
+  preloadSceneTimer = window.setTimeout(() => {
+    const urls = [
+      scene.groundTruthImage,
+      ...Object.values(scene.predictionImages || {})
+    ].filter(Boolean);
+
+    urls.forEach((url) => preloadImage(url));
+  }, 120);
 }
 
 function detectionTitle(detection) {
@@ -685,12 +739,24 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
   layer.className = `box-layer segmentation-layer${options.kind === "ground-truth" ? " is-ground-truth" : ""}`;
   layer.dataset.kind = options.kind || "prediction";
   if (options.model?.id) layer.dataset.modelId = options.model.id;
-  layer.style.opacity = String(options.opacity ?? 1);
+  const targetOpacity = options.opacity ?? 1;
+  layer.dataset.targetOpacity = String(targetOpacity);
+  layer.dataset.waitForImage = "true";
+  layer.style.opacity = "0";
   if (options.isDimmed) layer.classList.add("is-dimmed");
   if (options.isEmphasized) layer.classList.add("is-emphasized");
   layer.style.zIndex = String(options.zIndex || 2);
 
   const img = createSegmentationImageLayer(imagePath);
+  const reveal = () => {
+    layer.dataset.waitForImage = "false";
+    window.requestAnimationFrame(() => {
+      layer.style.opacity = layer.dataset.pendingOpacity || layer.dataset.targetOpacity || String(targetOpacity);
+      delete layer.dataset.pendingOpacity;
+    });
+  };
+  img.addEventListener("load", reveal, { once: true });
+  if (img.complete && img.naturalWidth > 0) queueMicrotask(reveal);
   if (options.isDimmed) img.classList.add("is-dimmed");
   if (options.isEmphasized) img.classList.add("is-emphasized");
   layer.append(img);
@@ -860,6 +926,11 @@ function updateExistingLayerOpacity() {
 }
 
 function fadeLayerToTarget(layer, targetOpacity) {
+  if (layer.dataset.waitForImage === "true") {
+    layer.dataset.pendingOpacity = String(targetOpacity);
+    layer.style.opacity = "0";
+    return;
+  }
   layer.style.opacity = String(targetOpacity);
 }
 
@@ -1217,6 +1288,7 @@ function render() {
   renderSummary();
   renderMode();
   renderViewer();
+  preloadSceneSegmentationAssets(scene);
 }
 
 function resetView() {
