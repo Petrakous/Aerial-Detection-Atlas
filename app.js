@@ -16,7 +16,7 @@ const state = {
   selected: new Set(),
   hoveredModel: null,
   showGroundTruth: false,
-  overlayOpacity: 0.5,
+  overlayOpacity: 1,
   split: 50,
   splitA: data.models[0]?.id || "",
   splitB: "all-other-models",
@@ -55,7 +55,6 @@ const els = {
   splitSelectors: document.querySelector("#splitSelectors"),
   splitA: document.querySelector("#splitA"),
   splitB: document.querySelector("#splitB"),
-  opacityRange: document.querySelector("#opacityRange"),
   toggleGroundTruth: document.querySelector("#toggleGroundTruth"),
   groundTruthText: document.querySelector("#groundTruthText"),
   hoverHint: document.querySelector("#hoverHint"),
@@ -784,7 +783,7 @@ function buildSceneLayers(scene, models, options = {}) {
 
       const isHovered = Boolean(hoverModel && hoverModel === model.id);
       const isDimmed = Boolean(hoverModel && hoverModel !== model.id);
-      const opacity = isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 0.98) : state.overlayOpacity;
+      const opacity = isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 1) : state.overlayOpacity;
 
       layers.push(createSegmentationLayer(scene, overlayImage, {
         kind: "prediction",
@@ -813,7 +812,7 @@ function buildSceneLayers(scene, models, options = {}) {
 
     const isHovered = Boolean(hoverModel && hoverModel === model.id);
     const isDimmed = Boolean(hoverModel && hoverModel !== model.id);
-    const opacity = isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 0.98) : state.overlayOpacity;
+    const opacity = isDimmed ? 0.05 : isHovered ? Math.min(state.overlayOpacity + 0.24, 1) : state.overlayOpacity;
 
     layers.push(createBoxesLayer(scene, boxes, {
       kind: "prediction",
@@ -914,15 +913,9 @@ function boxLayerOpacity(layer) {
     const isHovered = Boolean(hoverModel && hoverModel === modelId);
     const isDimmed = Boolean(hoverModel && hoverModel !== modelId);
     if (isDimmed) return 0.05;
-    if (isHovered) return Math.min(state.overlayOpacity + 0.24, 0.98);
+    if (isHovered) return Math.min(state.overlayOpacity + 0.24, 1);
   }
   return state.overlayOpacity;
-}
-
-function updateExistingLayerOpacity() {
-  document.querySelectorAll(".box-layer").forEach((layer) => {
-    layer.style.opacity = String(boxLayerOpacity(layer));
-  });
 }
 
 function fadeLayerToTarget(layer, targetOpacity) {
@@ -1358,11 +1351,6 @@ els.modeButtons.forEach((button) => {
     resetView();
     render();
   });
-});
-
-els.opacityRange.addEventListener("input", () => {
-  state.overlayOpacity = Number(els.opacityRange.value) / 100;
-  updateExistingLayerOpacity();
 });
 
 els.splitA.addEventListener("change", () => {
