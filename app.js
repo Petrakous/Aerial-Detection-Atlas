@@ -1,5 +1,9 @@
 const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.TRIFID_DEMO_DATA;
-const releaseAssetBase = "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-v3/";
+const releaseBases = {
+  core: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v1/",
+  segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v1/",
+  segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v1/"
+};
 
 const availableModelIds = new Set(data.models.map((model) => model.id));
 const availableDatasets = (data.datasets?.map((dataset) => dataset.id) || [...new Set(data.scenes.map((scene) => scene.dataset))]);
@@ -184,10 +188,20 @@ function resolveAssetPath(path) {
   if (!isPagesHost) return path;
 
   const viewerMatch = path.match(/^viewer\/([^/]+)\/(.+)$/);
-  if (viewerMatch) return `${releaseAssetBase}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
+  if (viewerMatch) return `${releaseBases.core}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
 
   const thumbMatch = path.match(/^thumbnails\/([^/]+)\/(.+)$/);
-  if (thumbMatch) return `${releaseAssetBase}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
+  if (thumbMatch) return `${releaseBases.core}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
+
+  const segmentationGtMatch = path.match(/^([^/]+)\/([^/]+)\/samples_gt_with_json\/(.+)$/);
+  if (segmentationGtMatch) {
+    return `${releaseBases.segmentationGt}segment-gt-${segmentationGtMatch[1]}-${segmentationGtMatch[2]}-${segmentationGtMatch[3]}`;
+  }
+
+  const segmentationPredMatch = path.match(/^([^/]+)\/([^/]+)\/visualised_samples_with_json\/(.+)$/);
+  if (segmentationPredMatch) {
+    return `${releaseBases.segmentationPred}segment-pred-${segmentationPredMatch[1]}-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
+  }
 
   return path;
 }
