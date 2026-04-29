@@ -27,7 +27,7 @@ const state = {
   splitA: data.models[0]?.id || "",
   splitB: "all-other-models",
   zoom: 1,
-  fitToView: false,
+  fitToView: true,
   panX: 0,
   panY: 0,
   dragging: false,
@@ -1074,6 +1074,7 @@ function renderViewer(force = false) {
     lastRenderedSceneId = scene.id;
   }
   updateViewerFrame();
+  if (state.fitToView) fitViewToViewport();
 }
 
 function renderScenes() {
@@ -1357,7 +1358,7 @@ function render() {
 
 function resetView() {
   state.zoom = 1;
-  state.fitToView = false;
+  state.fitToView = true;
   state.panX = 0;
   state.panY = 0;
   state.dragging = false;
