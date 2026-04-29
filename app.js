@@ -989,6 +989,11 @@ function fitViewToViewport() {
   });
 }
 
+function zoomReadoutPercent() {
+  const fitZoom = fitZoomForViewport();
+  return Math.round((state.zoom / fitZoom) * 100);
+}
+
 function updateViewerFrame() {
   const scene = currentScene();
   document.body.dataset.mode = state.mode;
@@ -998,7 +1003,7 @@ function updateViewerFrame() {
   els.splitDivider.setAttribute("aria-valuenow", String(Math.round(state.split)));
   els.splitLeftBadge.textContent = splitOptionLabel(state.splitA);
   els.splitRightBadge.textContent = splitOptionLabel(state.splitB);
-  els.zoomReadout.textContent = `${Math.round(state.zoom * 100)}%`;
+  els.zoomReadout.textContent = `${zoomReadoutPercent()}%`;
 }
 
 function rebuildViewerLayers(options = {}) {
@@ -1368,7 +1373,7 @@ function resetView() {
 function setZoom(nextZoom) {
   state.fitToView = false;
   state.zoom = clampZoom(nextZoom);
-  if (state.zoom === 1) {
+  if (state.zoom <= fitZoomForViewport()) {
     state.panX = 0;
     state.panY = 0;
   }
@@ -1572,7 +1577,7 @@ els.viewerFrame.addEventListener("pointermove", (event) => {
   updateFocusLensPosition(Math.min(100, Math.max(0, x)), Math.min(100, Math.max(0, y)));
 
   if (state.mode === "split") return;
-  if (!state.dragging || state.zoom <= 1) return;
+  if (!state.dragging || state.zoom <= fitZoomForViewport()) return;
   state.fitToView = false;
   state.panX = state.dragStart.panX + event.clientX - state.dragStart.x;
   state.panY = state.dragStart.panY + event.clientY - state.dragStart.y;
