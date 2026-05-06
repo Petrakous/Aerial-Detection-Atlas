@@ -1,0 +1,1342 @@
+{
+  "split": "test",
+  "split_dir": "/home/huacv/anna/DFire/test/images",
+  "labels_dir": "/home/huacv/anna/DFire/test/labels",
+  "total_images": 100,
+  "total_annotations": 118,
+  "class_map": {
+    "0": "smoke",
+    "1": "fire"
+  },
+  "annotations": {
+    "AoF07635.jpg": [],
+    "AoF06927.jpg": [],
+    "WEB09754.jpg": [],
+    "WEB09507.jpg": [],
+    "PublicDataset01222.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          187,
+          259,
+          246,
+          276
+        ]
+      }
+    ],
+    "AoF07866.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          1392,
+          172,
+          1467,
+          317
+        ]
+      }
+    ],
+    "AoF07562.jpg": [],
+    "AoF07435.jpg": [],
+    "WEB10957.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          4,
+          95,
+          809,
+          718
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          375,
+          682,
+          405,
+          719
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          478,
+          524,
+          534,
+          573
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          611,
+          347,
+          697,
+          423
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          691,
+          242,
+          717,
+          267
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          742,
+          260,
+          781,
+          285
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          521,
+          449,
+          651,
+          490
+        ]
+      }
+    ],
+    "AoF06983.jpg": [],
+    "AoF06967.jpg": [],
+    "AoF07490.jpg": [],
+    "PublicDataset01185.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          5,
+          121,
+          311,
+          290
+        ]
+      }
+    ],
+    "PublicDataset01299.jpg": [],
+    "WEB11640.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          5,
+          5,
+          542,
+          525
+        ]
+      }
+    ],
+    "AoF06940.jpg": [],
+    "AoF08351.jpg": [],
+    "WEB10937.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          270,
+          240,
+          307,
+          256
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          53,
+          220,
+          68,
+          229
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          42,
+          253,
+          53,
+          262
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          45,
+          145,
+          354,
+          271
+        ]
+      }
+    ],
+    "PublicDataset01199.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          6,
+          13,
+          631,
+          241
+        ]
+      }
+    ],
+    "WEB11180.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          89,
+          404,
+          111,
+          433
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          129,
+          292,
+          159,
+          332
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          328,
+          351,
+          356,
+          391
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          591,
+          151,
+          620,
+          189
+        ]
+      }
+    ],
+    "WEB09779.jpg": [],
+    "AoF06776.jpg": [],
+    "AoF08030.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          1221,
+          62,
+          1268,
+          149
+        ]
+      }
+    ],
+    "WEB10963.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          551,
+          376,
+          576,
+          387
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          667,
+          374,
+          689,
+          388
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          756,
+          374,
+          782,
+          390
+        ]
+      }
+    ],
+    "WEB10288.jpg": [],
+    "WEB09777.jpg": [],
+    "AoF07996.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          777,
+          139,
+          850,
+          196
+        ]
+      }
+    ],
+    "PublicDataset01157.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          243,
+          138,
+          350,
+          170
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          7,
+          25,
+          182,
+          169
+        ]
+      }
+    ],
+    "WEB10258.jpg": [],
+    "AoF07560.jpg": [],
+    "AoF07482.jpg": [],
+    "WEB10613.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          216,
+          154,
+          332,
+          332
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          404,
+          155,
+          494,
+          322
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          340,
+          183,
+          367,
+          202
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          135,
+          196,
+          160,
+          211
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          191,
+          184,
+          210,
+          206
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          191,
+          28,
+          217,
+          62
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          12,
+          6,
+          537,
+          330
+        ]
+      }
+    ],
+    "AoF07515.jpg": [],
+    "WEB10441.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          121,
+          277,
+          250,
+          316
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          624,
+          355,
+          669,
+          377
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          902,
+          335,
+          932,
+          369
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          793,
+          346,
+          812,
+          368
+        ]
+      }
+    ],
+    "WEB10318.jpg": [],
+    "WEB09667.jpg": [],
+    "AoF07078.jpg": [],
+    "WEB11264.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          221,
+          8,
+          681,
+          489
+        ]
+      }
+    ],
+    "AoF07745.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          6,
+          518,
+          77,
+          597
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          102,
+          489,
+          156,
+          532
+        ]
+      }
+    ],
+    "WEB10601.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          6,
+          80,
+          269,
+          239
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          291,
+          117,
+          322,
+          136
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          2,
+          231,
+          126,
+          268
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          139,
+          215,
+          183,
+          246
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          208,
+          188,
+          266,
+          213
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          279,
+          170,
+          291,
+          186
+        ]
+      }
+    ],
+    "AoF07368.jpg": [],
+    "WEB09902.jpg": [],
+    "WEB10463.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          61,
+          109,
+          69,
+          116
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          192,
+          93,
+          218,
+          115
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          2,
+          10,
+          278,
+          122
+        ]
+      }
+    ],
+    "AoF08298.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          858,
+          202,
+          905,
+          238
+        ]
+      }
+    ],
+    "AoF07292.jpg": [],
+    "AoF07098.jpg": [],
+    "PublicDataset01260.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          392,
+          264,
+          423,
+          313
+        ]
+      }
+    ],
+    "WEB09871.jpg": [],
+    "AoF07376.jpg": [],
+    "PublicDataset01301.jpg": [],
+    "AoF07550.jpg": [],
+    "WEB10614.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          934,
+          378,
+          1161,
+          569
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          608,
+          477,
+          963,
+          608
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          536,
+          396,
+          600,
+          494
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          575,
+          338,
+          714,
+          395
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          281,
+          259,
+          487,
+          407
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          141,
+          239,
+          238,
+          328
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          738,
+          384,
+          801,
+          411
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          390,
+          170,
+          428,
+          204
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          212,
+          195,
+          236,
+          234
+        ]
+      }
+    ],
+    "WEB09778.jpg": [],
+    "WEB11215.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          651,
+          219,
+          954,
+          337
+        ]
+      }
+    ],
+    "WEB10489.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          10,
+          2,
+          763,
+          212
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          268,
+          148,
+          607,
+          257
+        ]
+      }
+    ],
+    "AoF08055.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          121,
+          212,
+          186,
+          291
+        ]
+      }
+    ],
+    "WEB10533.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          132,
+          124,
+          182,
+          154
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          55,
+          125,
+          127,
+          151
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          4,
+          6,
+          278,
+          153
+        ]
+      }
+    ],
+    "WEB10411.jpg": [],
+    "PublicDataset01110.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          116,
+          58,
+          462,
+          163
+        ]
+      }
+    ],
+    "WEB09688.jpg": [],
+    "AoF07307.jpg": [],
+    "AoF08124.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          1143,
+          122,
+          1216,
+          216
+        ]
+      }
+    ],
+    "WEB09506.jpg": [],
+    "AoF08061.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          107,
+          208,
+          167,
+          295
+        ]
+      }
+    ],
+    "WEB11287.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          121,
+          134,
+          260,
+          192
+        ]
+      }
+    ],
+    "WEB10609.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          97,
+          139,
+          294,
+          217
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          369,
+          170,
+          412,
+          208
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          239,
+          106,
+          488,
+          161
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          9,
+          46,
+          501,
+          226
+        ]
+      }
+    ],
+    "WEB09712.jpg": [],
+    "PublicDataset01193.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          2,
+          63,
+          292,
+          158
+        ]
+      }
+    ],
+    "WEB10157.jpg": [],
+    "AoF07181.jpg": [],
+    "PublicDataset01270.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          518,
+          297,
+          537,
+          328
+        ]
+      }
+    ],
+    "AoF06985.jpg": [],
+    "WEB10085.jpg": [],
+    "WEB10787.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          376,
+          95,
+          557,
+          201
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          72,
+          149,
+          199,
+          231
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          246,
+          168,
+          311,
+          224
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          2,
+          130,
+          51,
+          162
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          13,
+          1,
+          448,
+          186
+        ]
+      }
+    ],
+    "WEB09694.jpg": [],
+    "AoF07265.jpg": [],
+    "PublicDataset01122.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          89,
+          112,
+          366,
+          203
+        ]
+      }
+    ],
+    "WEB10078.jpg": [],
+    "PublicDataset01135.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          2,
+          5,
+          204,
+          84
+        ]
+      }
+    ],
+    "WEB11590.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          268,
+          0,
+          633,
+          294
+        ]
+      }
+    ],
+    "WEB10742.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          294,
+          136,
+          375,
+          225
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          469,
+          140,
+          552,
+          228
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          126,
+          105,
+          239,
+          194
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          584,
+          112,
+          639,
+          150
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          55,
+          174,
+          106,
+          194
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          142,
+          0,
+          609,
+          200
+        ]
+      }
+    ],
+    "WEB11259.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          550,
+          18,
+          809,
+          390
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          420,
+          345,
+          600,
+          610
+        ]
+      }
+    ],
+    "AoF07893.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          0,
+          212,
+          74,
+          292
+        ]
+      }
+    ],
+    "WEB09670.jpg": [],
+    "WEB09521.jpg": [],
+    "WEB09653.jpg": [],
+    "WEB11010.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          592,
+          8,
+          939,
+          419
+        ]
+      }
+    ],
+    "WEB10772.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          368,
+          162,
+          425,
+          179
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          282,
+          163,
+          298,
+          176
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          521,
+          121,
+          639,
+          181
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          36,
+          158,
+          115,
+          176
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          154,
+          161,
+          202,
+          176
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          238,
+          165,
+          266,
+          176
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          40,
+          13,
+          623,
+          171
+        ]
+      }
+    ],
+    "WEB10466.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          45,
+          74,
+          59,
+          88
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          66,
+          69,
+          120,
+          104
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          125,
+          90,
+          167,
+          113
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          9,
+          7,
+          237,
+          111
+        ]
+      }
+    ],
+    "PublicDataset01190.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          191,
+          114,
+          277,
+          155
+        ]
+      }
+    ],
+    "AoF07856.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          1374,
+          229,
+          1446,
+          319
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          1451,
+          298,
+          1595,
+          433
+        ]
+      }
+    ],
+    "WEB11675.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          6,
+          6,
+          633,
+          256
+        ]
+      }
+    ],
+    "WEB11543.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          68,
+          15,
+          631,
+          253
+        ]
+      }
+    ],
+    "AoF07467.jpg": [],
+    "AoF07108.jpg": [],
+    "AoF07621.jpg": [],
+    "AoF07975.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          601,
+          1,
+          808,
+          86
+        ]
+      }
+    ],
+    "AoF08033.jpg": [
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          109,
+          232,
+          144,
+          285
+        ]
+      }
+    ],
+    "WEB10959.jpg": [
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          333,
+          223,
+          456,
+          321
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          507,
+          448,
+          628,
+          606
+        ]
+      },
+      {
+        "class_name": "fire",
+        "confidence": 1.0,
+        "bbox": [
+          605,
+          680,
+          707,
+          717
+        ]
+      },
+      {
+        "class_name": "smoke",
+        "confidence": 1.0,
+        "bbox": [
+          42,
+          9,
+          942,
+          602
+        ]
+      }
+    ],
+    "AoF07243.jpg": []
+  }
+}

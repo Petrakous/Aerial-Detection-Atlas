@@ -21,7 +21,7 @@ mkdir -p "$VIEWER_DIR" "$THUMB_DIR"
 typeset -A seen
 count=0
 
-for src in $(find "$DATASET_ROOT" -path '*/ground_truth_images/*.*' | sort); do
+for src in $(find "$DATASET_ROOT" \( -path '*/ORIGINAL_IMAGES/*.*' -o -path '*/ground_truth_images/*.*' -o -path '*/GROUND-TRUTH/*.*' \) | sort); do
   [[ -f "$src" ]] || continue
   base=${src:t}
   ext=${base:e:l}

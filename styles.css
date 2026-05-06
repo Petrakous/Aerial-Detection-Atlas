@@ -236,10 +236,11 @@ h1 {
 }
 
 .workspace {
+  --scene-panel-width: 252px;
   min-height: 0;
   height: 100%;
   display: grid;
-  grid-template-columns: 252px minmax(420px, 1fr) 326px;
+  grid-template-columns: var(--scene-panel-width) minmax(420px, 1fr) 326px;
   gap: 1px;
   background: var(--workspace-grid);
   overflow: hidden;
@@ -354,6 +355,39 @@ h1 {
   overflow-x: hidden;
   padding-right: 6px;
   scrollbar-gutter: stable;
+}
+
+.scene-group {
+  display: grid;
+  gap: 10px;
+}
+
+.scene-group-list {
+  display: grid;
+  gap: 12px;
+}
+
+.scene-group-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.scene-group-heading::before,
+.scene-group-heading::after {
+  content: "";
+  height: 1px;
+  background: color-mix(in srgb, var(--faint), var(--ink) 10%);
+}
+
+.scene-group-heading span {
+  white-space: nowrap;
 }
 
 .scene-list::-webkit-scrollbar {
@@ -528,8 +562,13 @@ h1 {
   border-color: color-mix(in srgb, var(--accent), transparent 38%);
 }
 
+.ground-truth-row {
+  display: flex;
+  margin-bottom: 14px;
+}
+
 .gt-toggle {
-  min-width: 152px;
+  width: 100%;
   justify-content: center;
   color: var(--ink);
   border-color: color-mix(in srgb, #ff5d5d, transparent 72%);
@@ -676,8 +715,8 @@ body[data-mode="split"] .viewer-content {
 .detection-box.is-ground-truth {
   border-width: 2px;
   border-style: dashed;
-  background: rgba(255, 93, 93, 0.08);
-  box-shadow: 0 0 0 1px rgba(255, 93, 93, 0.25);
+  background: var(--box-fill);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--box-color), transparent 75%);
 }
 
 .detection-box.is-emphasized {
@@ -716,14 +755,14 @@ body[data-mode="split"] .viewer-content {
   gap: 1px;
   min-width: 76px;
   padding: 5px 8px;
-  border: 1px solid color-mix(in srgb, var(--box-color), white 18%);
+  border: 1px solid color-mix(in srgb, var(--label-color), white 18%);
   border-radius: 6px 6px 6px 0;
   color: #fff;
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 760;
   white-space: nowrap;
-  background: var(--box-fill);
+  background: var(--label-fill);
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
 }
 
@@ -1357,6 +1396,16 @@ body[data-mode="split"] .split-selectors {
     overflow-x: auto;
     padding-bottom: 6px;
     scroll-snap-type: x proximity;
+  }
+
+  .scene-group,
+  .scene-group-list {
+    display: contents;
+  }
+
+  .scene-group-heading {
+    grid-column: 1 / -1;
+    min-width: 210px;
   }
 
   .dataset-control {

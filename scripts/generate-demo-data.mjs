@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -18,8 +19,14 @@ const MODEL_COLORS = [
   "#f97316"
 ];
 
+const MODEL_COLOR_OVERRIDES = {
+  yolo11l: "#84CC16"
+};
+
 const DETECTION_CLASS_COLORS = {
-  Pedestrian: "#FF69B4"
+  Pedestrian: "#FF69B4",
+  smoke: "#7C3AED",
+  fire: "#FF5A36"
 };
 
 const FALLBACK_DETECTION_CLASS_COLORS = [
@@ -52,7 +59,7 @@ const SEGMENTATION_CLASS_COLORS = {
   "Road-Blocked": "#B6FF00"
 };
 
-const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD"];
+const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD", "DFire"];
 
 const IGNORED_DIRS = new Set([
   ".git",
@@ -121,6 +128,7 @@ function humanizeModelName(raw) {
   }
 
   if (/^yolo\d+[a-z]?$/i.test(compact)) return compact.toUpperCase();
+  if (/^deimv2$/i.test(compact)) return "DEIMv2";
   if (/^pspnet/i.test(compact)) return "PSPNet";
   if (/^ccnet/i.test(compact)) return "CCNet";
   if (/^segformer/i.test(compact)) return "SegFormer";
@@ -137,7 +145,14 @@ function humanizeModelName(raw) {
 }
 
 function safeNumericSort(a, b) {
-  return Number(a) - Number(b);
+  const aNumber = Number(a);
+  const bNumber = Number(b);
+  const aIsNumeric = Number.isFinite(aNumber);
+  const bIsNumeric = Number.isFinite(bNumber);
+  if (aIsNumeric && bIsNumeric) return aNumber - bNumber;
+  if (aIsNumeric) return -1;
+  if (bIsNumeric) return 1;
+  return String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: "base" });
 }
 
 function clamp(value, min, max) {
@@ -209,11 +224,36 @@ function modelDirLooksValid(datasetRoot, childName) {
     && isDirectory(path.join(childDir, "ground_truth_images"));
 }
 
+function datasetLooksLikeDFire(datasetRoot) {
+  return existsFile(path.join(datasetRoot, "GROUND-TRUTH", "gt.json"));
+}
+
+function dfireModelDirLooksValid(datasetRoot, childName) {
+  if (IGNORED_DIRS.has(childName) || childName === "GROUND-TRUTH") return false;
+  const childDir = path.join(datasetRoot, childName);
+  return existsFile(path.join(childDir, "predictions.json"))
+    || existsFile(path.join(childDir, "inference_results.json"));
+}
+
 function collectDatasetDirs() {
   return listDirectories(demoRoot)
     .filter((name) => !IGNORED_DIRS.has(name))
-    .filter((name) => listDirectories(path.join(demoRoot, name)).some((child) => modelDirLooksValid(path.join(demoRoot, name), child)))
+    .filter((name) => {
+      const datasetRoot = path.join(demoRoot, name);
+      if (datasetLooksLikeDFire(datasetRoot)) return true;
+      return listDirectories(datasetRoot).some((child) => modelDirLooksValid(datasetRoot, child));
+    })
     .sort((a, b) => preferredDatasetOrder(a) - preferredDatasetOrder(b) || a.localeCompare(b));
+}
+
+function imageDimensions(imagePath) {
+  const output = execFileSync("sips", ["-g", "pixelWidth", "-g", "pixelHeight", imagePath], { encoding: "utf8" });
+  const width = Number(output.match(/pixelWidth:\s*(\d+)/)?.[1]);
+  const height = Number(output.match(/pixelHeight:\s*(\d+)/)?.[1]);
+  if (!Number.isFinite(width) || !Number.isFinite(height)) {
+    throw new Error(`Could not read dimensions for ${imagePath}`);
+  }
+  return { width, height };
 }
 
 function ensureModel(modelMap, modelId, taskType) {
@@ -222,7 +262,7 @@ function ensureModel(modelMap, modelId, taskType) {
       id: modelId,
       name: humanizeModelName(modelId),
       shortName: humanizeModelName(modelId),
-      color: MODEL_COLORS[modelMap.size % MODEL_COLORS.length],
+      color: MODEL_COLOR_OVERRIDES[modelId] || MODEL_COLORS[modelMap.size % MODEL_COLORS.length],
       datasets: new Set(),
       taskTypes: new Set(),
       sceneCount: 0
@@ -315,6 +355,199 @@ function buildDetectionScene({ datasetName, sceneId, sceneRoots, modelDirs, mode
     groundTruth: gtBoxes,
     predictions,
     predictionImages,
+    sceneModelStats,
+    classNames: [...new Set(gtBoxes.map((box) => box.className))],
+    classLegend: [],
+    summary: `${gtBoxes.length} ground-truth box${gtBoxes.length === 1 ? "" : "es"} with ${Object.keys(predictions).length} model output${Object.keys(predictions).length === 1 ? "" : "s"} loaded.`
+  };
+}
+
+function dfireLabelName(label, classMap) {
+  if (typeof label === "number") return classMap[String(label)] || String(label);
+  if (typeof label === "string") return classMap[label] || label;
+  return String(label);
+}
+
+function normalizeDFireBbox(bbox) {
+  const [x1, y1, x2, y2] = (bbox || []).map((value) => Number(value));
+  if (![x1, y1, x2, y2].every(Number.isFinite)) return [0, 0, 0, 0];
+  return [
+    round(x1, 2),
+    round(y1, 2),
+    round(Math.max(0, x2 - x1), 2),
+    round(Math.max(0, y2 - y1), 2)
+  ];
+}
+
+function buildDFirePredictionIndex(modelRoot, classMap) {
+  const standardPredictionPath = path.join(modelRoot, "predictions.json");
+  if (existsFile(standardPredictionPath)) {
+    const prediction = readJson(standardPredictionPath);
+    const predictionEntries = prediction.predictions || {};
+    return new Map(
+      Object.entries(predictionEntries).map(([fileName, detections]) => [
+        fileName,
+        (detections || []).map((detection) => ({
+          className: dfireLabelName(detection.label, classMap),
+          confidence: detection.confidence == null ? null : round(Number(detection.confidence), 4),
+          bbox: normalizeDFireBbox(detection.bbox)
+        }))
+      ])
+    );
+  }
+
+  const inferencePath = path.join(modelRoot, "inference_results.json");
+  if (existsFile(inferencePath)) {
+    const inference = readJson(inferencePath);
+    const threshold = Number(inference.confidence_threshold ?? 0.5);
+    return new Map(
+      (inference.results || []).map((result) => {
+        const boxes = result.boxes || [];
+        const scores = result.scores || [];
+        const labels = result.labels || [];
+        const detections = [];
+        const count = Math.min(boxes.length, scores.length, labels.length);
+        for (let index = 0; index < count; index += 1) {
+          const confidence = Number(scores[index]);
+          if (!Number.isFinite(confidence) || confidence < threshold) continue;
+          detections.push({
+            className: dfireLabelName(labels[index], classMap),
+            confidence: round(confidence, 4),
+            bbox: normalizeDFireBbox(boxes[index])
+          });
+        }
+        return [result.file_name, detections];
+      })
+    );
+  }
+
+  return new Map();
+}
+
+function collectDFireSceneFiles(groundTruthAnnotations, modelPredictionIndexes) {
+  const orderedGtFiles = Object.keys(groundTruthAnnotations || {});
+  return orderedGtFiles.filter((fileName) => {
+    for (const predictionIndex of modelPredictionIndexes.values()) {
+      if (predictionIndex.has(fileName)) return true;
+    }
+    return false;
+  });
+}
+
+function hasFireAndSmoke(annotations) {
+  const classes = new Set((annotations || []).map((annotation) => annotation.class_name));
+  return classes.has("fire") && classes.has("smoke");
+}
+
+function hasFireOrSmoke(annotations) {
+  const classes = new Set((annotations || []).map((annotation) => annotation.class_name));
+  return classes.has("fire") || classes.has("smoke");
+}
+
+function filterDFireGroundTruthAnnotations(groundTruthAnnotations) {
+  const entries = Object.entries(groundTruthAnnotations || {});
+  const both = entries.filter(([, annotations]) => hasFireAndSmoke(annotations));
+  const singles = entries.filter(([, annotations]) => hasFireOrSmoke(annotations) && !hasFireAndSmoke(annotations));
+  const selected = [...both, ...singles].slice(0, 50);
+  return Object.fromEntries(selected);
+}
+
+function indexDFireOriginalImages(gtAnnotations, datasetRoot) {
+  const originalDir = path.join(datasetRoot, "ORIGINAL_IMAGES");
+  if (!isDirectory(originalDir)) return new Map();
+
+  const gtFiles = Object.keys(gtAnnotations || {});
+  const originalFiles = new Set(
+    fs.readdirSync(originalDir).filter((name) => /\.(jpg|jpeg|png)$/i.test(name))
+  );
+
+  return new Map(
+    gtFiles
+      .filter((fileName) => originalFiles.has(fileName))
+      .map((fileName) => [fileName, path.join(originalDir, fileName)])
+  );
+}
+
+function buildDFireScene({
+  datasetName,
+  fileName,
+  sceneOrder,
+  gtAnnotations,
+  modelDirs,
+  modelMap,
+  detectionClassSet,
+  modelPredictionIndexes,
+  originalImageIndex
+}) {
+  const fallbackImagePath = path.join(demoRoot, datasetName, "GROUND-TRUTH", fileName);
+  const rawImagePath = originalImageIndex.get(fileName) || fallbackImagePath;
+  if (!existsFile(rawImagePath)) return null;
+
+  const { width, height } = imageDimensions(rawImagePath);
+  const sceneId = path.basename(fileName, path.extname(fileName));
+  const gtBoxes = (gtAnnotations || []).map((annotation) => {
+    const className = annotation.class_name;
+    detectionClassSet.add(className);
+    return {
+      className,
+      bbox: normalizeDFireBbox(annotation.bbox)
+    };
+  });
+
+  const generatedViewer = path.join(demoRoot, "viewer", datasetName, path.basename(rawImagePath));
+  const generatedThumb = path.join(demoRoot, "thumbnails", datasetName, path.basename(rawImagePath));
+  const predictions = {};
+  const sceneModelStats = {};
+
+  for (const modelId of modelDirs) {
+    const predictionIndex = modelPredictionIndexes.get(modelId) || new Map();
+    if (!predictionIndex.has(fileName)) continue;
+
+    const detections = predictionIndex.get(fileName) || [];
+    detections.forEach((detection) => detectionClassSet.add(detection.className));
+    predictions[modelId] = detections;
+
+    const confidences = detections
+      .map((detection) => detection.confidence)
+      .filter((confidence) => typeof confidence === "number");
+
+    sceneModelStats[modelId] = {
+      count: detections.length,
+      maxConfidence: confidences.length ? round(Math.max(...confidences), 3) : null,
+      avgConfidence: confidences.length ? round(confidences.reduce((sum, value) => sum + value, 0) / confidences.length, 3) : null
+    };
+
+    const modelRoot = path.join(demoRoot, datasetName, modelId);
+    const modelImagePath = path.join(modelRoot, fileName);
+    if (existsFile(modelImagePath)) {
+      const model = modelMap.get(modelId);
+      model.sceneCount += 1;
+      model.datasets.add(datasetName);
+    }
+  }
+
+  return {
+    id: `${slugify(datasetName)}-${slugify(sceneId)}`,
+    dataset: datasetName,
+    taskType: "object-detection",
+    imageId: sceneId,
+    sceneOrder,
+    title: `Image ${sceneId}`,
+    location: `${datasetName} benchmark sample`,
+    baseImage: existsFile(generatedViewer)
+      ? toPosix(path.relative(demoRoot, generatedViewer))
+      : toPosix(path.relative(demoRoot, rawImagePath)),
+    sourceImage: toPosix(path.relative(demoRoot, rawImagePath)),
+    thumbnailImage: existsFile(generatedThumb)
+      ? toPosix(path.relative(demoRoot, generatedThumb))
+      : toPosix(path.relative(demoRoot, rawImagePath)),
+    rawImageAvailable: true,
+    width,
+    height,
+    dimensions: `${width} x ${height}`,
+    groundTruth: gtBoxes,
+    predictions,
+    predictionImages: {},
     sceneModelStats,
     classNames: [...new Set(gtBoxes.map((box) => box.className))],
     classLegend: [],
@@ -422,6 +655,67 @@ function buildDatasets() {
 
   for (const datasetName of datasetDirs) {
     const datasetRoot = path.join(demoRoot, datasetName);
+    if (datasetLooksLikeDFire(datasetRoot)) {
+      const taskType = "object-detection";
+      const modelDirs = listDirectories(datasetRoot)
+        .filter((name) => dfireModelDirLooksValid(datasetRoot, name))
+        .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
+
+      if (!modelDirs.length) continue;
+
+      const groundTruth = readJson(path.join(datasetRoot, "GROUND-TRUTH", "gt.json"));
+      const filteredGroundTruthAnnotations = filterDFireGroundTruthAnnotations(groundTruth.annotations || {});
+      const classMap = Object.fromEntries(
+        Object.entries(groundTruth.class_map || {}).map(([key, value]) => [String(key), value])
+      );
+      const modelPredictionIndexes = new Map(
+        modelDirs.map((modelId) => [
+          modelId,
+          buildDFirePredictionIndex(path.join(datasetRoot, modelId), classMap)
+        ])
+      );
+      const originalImageIndex = indexDFireOriginalImages(filteredGroundTruthAnnotations, datasetRoot);
+
+      const sceneFiles = collectDFireSceneFiles(filteredGroundTruthAnnotations, modelPredictionIndexes)
+        .filter((fileName) => existsFile(path.join(datasetRoot, "GROUND-TRUTH", fileName)))
+        .filter((fileName) => originalImageIndex.has(fileName));
+
+      if (!sceneFiles.length) {
+        console.warn(`Skipping ${datasetName}: no overlap between ground truth and model prediction scenes.`);
+        continue;
+      }
+
+      modelDirs.forEach((modelId) => {
+        const model = ensureModel(modelMap, modelId, taskType);
+        model.datasets.add(datasetName);
+      });
+
+      sceneFiles.forEach((fileName, sceneOrder) => {
+        const scene = buildDFireScene({
+          datasetName,
+          fileName,
+          sceneOrder,
+          gtAnnotations: filteredGroundTruthAnnotations[fileName],
+          modelDirs,
+          modelMap,
+          detectionClassSet,
+          modelPredictionIndexes,
+          originalImageIndex
+        });
+        if (scene) scenes.push(scene);
+      });
+
+      datasets.push({
+        id: datasetName,
+        name: datasetName,
+        taskType,
+        sceneCount: sceneFiles.length,
+        modelIds: modelDirs
+      });
+
+      continue;
+    }
+
     const modelDirs = listDirectories(datasetRoot)
       .filter((name) => modelDirLooksValid(datasetRoot, name))
       .sort();
@@ -495,6 +789,9 @@ function buildDatasets() {
     if (a.dataset !== b.dataset) {
       return preferredDatasetOrder(a.dataset) - preferredDatasetOrder(b.dataset)
         || a.dataset.localeCompare(b.dataset);
+    }
+    if (a.dataset === "DFire" && typeof a.sceneOrder === "number" && typeof b.sceneOrder === "number") {
+      return a.sceneOrder - b.sceneOrder;
     }
     return safeNumericSort(a.imageId, b.imageId);
   });

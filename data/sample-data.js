@@ -46,6 +46,19 @@ window.DETECTION_ATLAS_DATA = {
         "yolo11l",
         "yolo26l"
       ]
+    },
+    {
+      "id": "DFire",
+      "name": "DFire",
+      "taskType": "object-detection",
+      "sceneCount": 49,
+      "modelIds": [
+        "DEIMv2",
+        "RT-DETR-L",
+        "yolo11l",
+        "yolo11n",
+        "yolo12n"
+      ]
     }
   ],
   "classes": {
@@ -54,6 +67,16 @@ window.DETECTION_ATLAS_DATA = {
         "id": "pedestrian",
         "name": "Pedestrian",
         "color": "#FF69B4"
+      },
+      {
+        "id": "fire",
+        "name": "fire",
+        "color": "#FF5A36"
+      },
+      {
+        "id": "smoke",
+        "name": "smoke",
+        "color": "#7C3AED"
       }
     ],
     "semantic-segmentation": [
@@ -189,6 +212,21 @@ window.DETECTION_ATLAS_DATA = {
       }
     },
     {
+      "id": "DEIMv2",
+      "name": "DEIMv2",
+      "shortName": "DEIMv2",
+      "color": "#f97316",
+      "datasets": [
+        "DFire"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
+      "stats": {
+        "scenes": 49
+      }
+    },
+    {
       "id": "pspnet",
       "name": "PSPNet",
       "shortName": "PSPNet",
@@ -202,6 +240,21 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "stats": {
         "scenes": 100
+      }
+    },
+    {
+      "id": "RT-DETR-L",
+      "name": "RT DETR L",
+      "shortName": "RT DETR L",
+      "color": "#36c3a0",
+      "datasets": [
+        "DFire"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
+      "stats": {
+        "scenes": 49
       }
     },
     {
@@ -239,15 +292,46 @@ window.DETECTION_ATLAS_DATA = {
       "id": "yolo11l",
       "name": "YOLO11L",
       "shortName": "YOLO11L",
-      "color": "#14b8a6",
+      "color": "#84CC16",
       "datasets": [
+        "DFire",
         "LADD"
       ],
       "taskTypes": [
         "object-detection"
       ],
       "stats": {
-        "scenes": 50
+        "scenes": 99
+      }
+    },
+    {
+      "id": "yolo11n",
+      "name": "YOLO11N",
+      "shortName": "YOLO11N",
+      "color": "#4d8cff",
+      "datasets": [
+        "DFire"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
+      "stats": {
+        "scenes": 49
+      }
+    },
+    {
+      "id": "yolo12n",
+      "name": "YOLO12N",
+      "shortName": "YOLO12N",
+      "color": "#f59e0b",
+      "datasets": [
+        "DFire"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
+      "stats": {
+        "scenes": 49
       }
     },
     {
@@ -52302,6 +52386,11132 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [],
       "summary": "6 ground-truth boxes with 3 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10957",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10957",
+      "sceneOrder": 0,
+      "title": "Image WEB10957",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10957.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10957.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10957.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            4,
+            95,
+            805,
+            623
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            375,
+            682,
+            30,
+            37
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            478,
+            524,
+            56,
+            49
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            611,
+            347,
+            86,
+            76
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            691,
+            242,
+            26,
+            25
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            742,
+            260,
+            39,
+            25
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            521,
+            449,
+            130,
+            41
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8956,
+            "bbox": [
+              12.35,
+              67.04,
+              775.22,
+              640.71
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8273,
+            "bbox": [
+              620.66,
+              341.89,
+              78.51,
+              79.36
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7951,
+            "bbox": [
+              529.03,
+              452.42,
+              123.67,
+              39.48
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6796,
+            "bbox": [
+              473.67,
+              511.3,
+              58.84,
+              62.08
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6064,
+            "bbox": [
+              668.89,
+              237.38,
+              111.79,
+              49.26
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5962,
+            "bbox": [
+              375.35,
+              678.68,
+              31.27,
+              40.8
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9137,
+            "bbox": [
+              -3.34,
+              77.83,
+              786.65,
+              640.04
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7835,
+            "bbox": [
+              622.12,
+              342.32,
+              83.34,
+              78.29
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7278,
+            "bbox": [
+              478.4,
+              513.2,
+              55.69,
+              58.76
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7498,
+            "bbox": [
+              674,
+              236.42,
+              107.97,
+              50.68
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7043,
+            "bbox": [
+              526.68,
+              452,
+              125.96,
+              40.7
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4156,
+            "bbox": [
+              372.87,
+              679.76,
+              39.48,
+              39.81
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4773,
+            "bbox": [
+              352.31,
+              680.45,
+              56.71,
+              39.18
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3425,
+            "bbox": [
+              745.8,
+              259.3,
+              36.83,
+              28.15
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2859,
+            "bbox": [
+              275.51,
+              681.34,
+              134.23,
+              38.2
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8607,
+            "bbox": [
+              0,
+              49.79,
+              784.16,
+              646.33
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7713,
+            "bbox": [
+              619.62,
+              342.84,
+              79.55,
+              78.14
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6872,
+            "bbox": [
+              527.68,
+              452.21,
+              122.36,
+              42.26
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6264,
+            "bbox": [
+              680.65,
+              238.04,
+              100.03,
+              48.22
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5786,
+            "bbox": [
+              476.15,
+              512.62,
+              52.4,
+              54.58
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4019,
+            "bbox": [
+              376.34,
+              680.16,
+              32,
+              38.19
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7695,
+            "bbox": [
+              0.26,
+              46.89,
+              782.56,
+              655.1
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6498,
+            "bbox": [
+              619.22,
+              341.28,
+              81.62,
+              79.71
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5239,
+            "bbox": [
+              687.16,
+              237.71,
+              93.04,
+              48.64
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4965,
+            "bbox": [
+              475.72,
+              512.61,
+              58.05,
+              58.25
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4523,
+            "bbox": [
+              377.07,
+              680.21,
+              30.03,
+              38.51
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3241,
+            "bbox": [
+              535.5,
+              455.56,
+              114.84,
+              39.32
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8332,
+            "bbox": [
+              0,
+              41.89,
+              771.82,
+              665.42
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7219,
+            "bbox": [
+              618.95,
+              341.33,
+              81.81,
+              80.02
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6107,
+            "bbox": [
+              477.57,
+              514.3,
+              53.94,
+              56.73
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4804,
+            "bbox": [
+              529.65,
+              454.95,
+              120.18,
+              37.54
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4618,
+            "bbox": [
+              681.29,
+              235.68,
+              100.62,
+              51.67
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3544,
+            "bbox": [
+              685.02,
+              236.21,
+              45.06,
+              37.56
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 6,
+          "maxConfidence": 0.896,
+          "avgConfidence": 0.733
+        },
+        "RT-DETR-L": {
+          "count": 9,
+          "maxConfidence": 0.914,
+          "avgConfidence": 0.6
+        },
+        "yolo11l": {
+          "count": 6,
+          "maxConfidence": 0.861,
+          "avgConfidence": 0.654
+        },
+        "yolo11n": {
+          "count": 6,
+          "maxConfidence": 0.77,
+          "avgConfidence": 0.536
+        },
+        "yolo12n": {
+          "count": 6,
+          "maxConfidence": 0.833,
+          "avgConfidence": 0.577
+        }
+      },
+      "classNames": [
+        "smoke",
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "7 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10937",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10937",
+      "sceneOrder": 1,
+      "title": "Image WEB10937",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10937.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10937.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10937.jpg",
+      "rawImageAvailable": true,
+      "width": 360,
+      "height": 360,
+      "dimensions": "360 x 360",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            270,
+            240,
+            37,
+            16
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            53,
+            220,
+            15,
+            9
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            42,
+            253,
+            11,
+            9
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            45,
+            145,
+            309,
+            126
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.635,
+            "bbox": [
+              275.03,
+              240.16,
+              32.34,
+              17.98
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5548,
+            "bbox": [
+              36.86,
+              142.31,
+              322.03,
+              115.53
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5402,
+            "bbox": [
+              37.32,
+              163.76,
+              166.18,
+              89.88
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.7629,
+            "bbox": [
+              274.84,
+              241.72,
+              32.32,
+              16.12
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.715,
+            "bbox": [
+              34.04,
+              115.05,
+              324.17,
+              149.23
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6167,
+            "bbox": [
+              56.19,
+              218.51,
+              10.85,
+              11.34
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4542,
+            "bbox": [
+              42.41,
+              252.33,
+              8.54,
+              9.65
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5481,
+            "bbox": [
+              14.76,
+              2.34,
+              343.38,
+              262.34
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.5434,
+            "bbox": [
+              275.12,
+              241.12,
+              32.07,
+              15.76
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4391,
+            "bbox": [
+              56.49,
+              220.85,
+              10.05,
+              8.45
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.6018,
+            "bbox": [
+              275.55,
+              241.55,
+              31.2,
+              15.82
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3108,
+            "bbox": [
+              56.53,
+              220.96,
+              9.6,
+              8.27
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2562,
+            "bbox": [
+              40.93,
+              162.15,
+              172.46,
+              93.16
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.5793,
+            "bbox": [
+              274.76,
+              240.85,
+              32.22,
+              17.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4298,
+            "bbox": [
+              56.69,
+              220.81,
+              9.48,
+              8.6
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3212,
+            "bbox": [
+              44.21,
+              129.57,
+              315.4,
+              134.34
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 3,
+          "maxConfidence": 0.635,
+          "avgConfidence": 0.577
+        },
+        "RT-DETR-L": {
+          "count": 5,
+          "maxConfidence": 0.763,
+          "avgConfidence": 0.619
+        },
+        "yolo11l": {
+          "count": 2,
+          "maxConfidence": 0.543,
+          "avgConfidence": 0.491
+        },
+        "yolo11n": {
+          "count": 3,
+          "maxConfidence": 0.602,
+          "avgConfidence": 0.39
+        },
+        "yolo12n": {
+          "count": 3,
+          "maxConfidence": 0.579,
+          "avgConfidence": 0.443
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "4 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10613",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10613",
+      "sceneOrder": 2,
+      "title": "Image WEB10613",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10613.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10613.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10613.jpg",
+      "rawImageAvailable": true,
+      "width": 702,
+      "height": 336,
+      "dimensions": "702 x 336",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            216,
+            154,
+            116,
+            178
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            404,
+            155,
+            90,
+            167
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            340,
+            183,
+            27,
+            19
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            135,
+            196,
+            25,
+            15
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            191,
+            184,
+            19,
+            22
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            191,
+            28,
+            26,
+            34
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            12,
+            6,
+            525,
+            324
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.8152,
+            "bbox": [
+              404.59,
+              160.09,
+              86.65,
+              167.39
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7951,
+            "bbox": [
+              222.49,
+              160.45,
+              123.16,
+              175.34
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6666,
+            "bbox": [
+              176.88,
+              3.68,
+              316.45,
+              183.23
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5899,
+            "bbox": [
+              138.9,
+              189.03,
+              21.57,
+              25.07
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.7724,
+            "bbox": [
+              216.24,
+              152.23,
+              148.86,
+              184.48
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8464,
+            "bbox": [
+              156.46,
+              -0.22,
+              327.48,
+              183.97
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8079,
+            "bbox": [
+              397.1,
+              158.46,
+              96.66,
+              172.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4645,
+            "bbox": [
+              136.9,
+              181.41,
+              87.58,
+              34.21
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.52,
+            "bbox": [
+              139.46,
+              189.01,
+              21.97,
+              25.15
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3469,
+            "bbox": [
+              212.03,
+              152.46,
+              283.69,
+              184.33
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2607,
+            "bbox": [
+              5.77,
+              1.42,
+              491.83,
+              333.32
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3629,
+            "bbox": [
+              176.27,
+              -0.15,
+              75.16,
+              61.47
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2513,
+            "bbox": [
+              342.41,
+              186.08,
+              23.42,
+              15.64
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2735,
+            "bbox": [
+              192.01,
+              183.91,
+              23.42,
+              24.64
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2796,
+            "bbox": [
+              174.83,
+              0.01,
+              76.93,
+              60.49
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3272,
+            "bbox": [
+              192.69,
+              183.86,
+              30.04,
+              25.43
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.337,
+            "bbox": [
+              1.21,
+              1.35,
+              485.37,
+              333.75
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3299,
+            "bbox": [
+              119.58,
+              145.46,
+              373.42,
+              190.32
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.7827,
+            "bbox": [
+              222.76,
+              165.73,
+              117.05,
+              168.04
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7686,
+            "bbox": [
+              405.4,
+              153.99,
+              85.45,
+              162.86
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7093,
+            "bbox": [
+              179.59,
+              4.3,
+              312.9,
+              201.17
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5926,
+            "bbox": [
+              138.24,
+              189.56,
+              22.67,
+              25
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4802,
+            "bbox": [
+              191.89,
+              184.04,
+              33.77,
+              23.81
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3505,
+            "bbox": [
+              343.88,
+              185.75,
+              24.97,
+              22.12
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.8013,
+            "bbox": [
+              222.5,
+              159.65,
+              127.23,
+              174.18
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7117,
+            "bbox": [
+              411.46,
+              156.59,
+              80.44,
+              161.69
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5282,
+            "bbox": [
+              139.22,
+              190.48,
+              20.58,
+              23.08
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.4488,
+            "bbox": [
+              160.6,
+              4.05,
+              315.52,
+              194.26
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.309,
+            "bbox": [
+              154.89,
+              3.03,
+              324.9,
+              319.51
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2857,
+            "bbox": [
+              192.96,
+              182.66,
+              29.94,
+              24.52
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.7479,
+            "bbox": [
+              402.18,
+              155.39,
+              89.85,
+              170.72
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7378,
+            "bbox": [
+              221.62,
+              159.63,
+              127.57,
+              175.03
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5178,
+            "bbox": [
+              138.53,
+              188.46,
+              22.86,
+              24.94
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.4735,
+            "bbox": [
+              158.09,
+              3.55,
+              342.81,
+              202.35
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.303,
+            "bbox": [
+              191.75,
+              183.22,
+              31.45,
+              24.23
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 4,
+          "maxConfidence": 0.815,
+          "avgConfidence": 0.717
+        },
+        "RT-DETR-L": {
+          "count": 14,
+          "maxConfidence": 0.846,
+          "avgConfidence": 0.441
+        },
+        "yolo11l": {
+          "count": 6,
+          "maxConfidence": 0.783,
+          "avgConfidence": 0.614
+        },
+        "yolo11n": {
+          "count": 6,
+          "maxConfidence": 0.801,
+          "avgConfidence": 0.514
+        },
+        "yolo12n": {
+          "count": 5,
+          "maxConfidence": 0.748,
+          "avgConfidence": 0.556
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "7 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10601",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10601",
+      "sceneOrder": 3,
+      "title": "Image WEB10601",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10601.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10601.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10601.jpg",
+      "rawImageAvailable": true,
+      "width": 848,
+      "height": 480,
+      "dimensions": "848 x 480",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            6,
+            80,
+            263,
+            159
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            291,
+            117,
+            31,
+            19
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            2,
+            231,
+            124,
+            37
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            139,
+            215,
+            44,
+            31
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            208,
+            188,
+            58,
+            25
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            279,
+            170,
+            12,
+            16
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.829,
+            "bbox": [
+              3.38,
+              61.9,
+              275.93,
+              186.42
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7822,
+            "bbox": [
+              205.66,
+              172.96,
+              84.41,
+              41.67
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7222,
+            "bbox": [
+              141.18,
+              212.52,
+              45.11,
+              36.23
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6667,
+            "bbox": [
+              290.34,
+              113.02,
+              29.82,
+              24.7
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6403,
+            "bbox": [
+              0.74,
+              232.63,
+              125.61,
+              47.15
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.8113,
+            "bbox": [
+              141.41,
+              212.25,
+              44.81,
+              35.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7679,
+            "bbox": [
+              207.47,
+              174.06,
+              82.7,
+              39.41
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6322,
+            "bbox": [
+              -2.57,
+              0.58,
+              287.72,
+              313.68
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7308,
+            "bbox": [
+              291.36,
+              112.91,
+              31.22,
+              24.98
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7753,
+            "bbox": [
+              0.08,
+              233.2,
+              125.01,
+              50.09
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5834,
+            "bbox": [
+              -2.68,
+              0.4,
+              296.56,
+              431.07
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2659,
+            "bbox": [
+              0.08,
+              226.66,
+              124.1,
+              125.6
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5072,
+            "bbox": [
+              -1.49,
+              0.58,
+              285.81,
+              461.3
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.7997,
+            "bbox": [
+              208.84,
+              173.73,
+              81.9,
+              38.55
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.758,
+            "bbox": [
+              0.07,
+              7.87,
+              293.28,
+              260.66
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7492,
+            "bbox": [
+              141.32,
+              212.67,
+              43.86,
+              35.4
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7015,
+            "bbox": [
+              0.26,
+              232.01,
+              124.16,
+              51.74
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.62,
+            "bbox": [
+              291.68,
+              114.17,
+              27.4,
+              21.72
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.7079,
+            "bbox": [
+              0,
+              234.72,
+              123.74,
+              47.37
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6763,
+            "bbox": [
+              140.79,
+              213.25,
+              46.39,
+              33.95
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6738,
+            "bbox": [
+              0.31,
+              28.37,
+              283.24,
+              258.41
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5962,
+            "bbox": [
+              207.89,
+              171.07,
+              83.96,
+              41.26
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5503,
+            "bbox": [
+              292.05,
+              114.4,
+              26.87,
+              22.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4264,
+            "bbox": [
+              206.9,
+              183.95,
+              75.42,
+              29.1
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7499,
+            "bbox": [
+              0.15,
+              63.67,
+              288.13,
+              224.02
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7377,
+            "bbox": [
+              207.32,
+              173.44,
+              84.27,
+              39.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6937,
+            "bbox": [
+              140.84,
+              213.4,
+              44.95,
+              33.83
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6725,
+            "bbox": [
+              0.04,
+              233.23,
+              124.91,
+              45.85
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5931,
+            "bbox": [
+              292.43,
+              115.69,
+              27.07,
+              21.42
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 5,
+          "maxConfidence": 0.829,
+          "avgConfidence": 0.728
+        },
+        "RT-DETR-L": {
+          "count": 8,
+          "maxConfidence": 0.811,
+          "avgConfidence": 0.634
+        },
+        "yolo11l": {
+          "count": 5,
+          "maxConfidence": 0.8,
+          "avgConfidence": 0.726
+        },
+        "yolo11n": {
+          "count": 6,
+          "maxConfidence": 0.708,
+          "avgConfidence": 0.605
+        },
+        "yolo12n": {
+          "count": 5,
+          "maxConfidence": 0.75,
+          "avgConfidence": 0.689
+        }
+      },
+      "classNames": [
+        "smoke",
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "6 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10463",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10463",
+      "sceneOrder": 4,
+      "title": "Image WEB10463",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10463.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10463.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10463.jpg",
+      "rawImageAvailable": true,
+      "width": 300,
+      "height": 168,
+      "dimensions": "300 x 168",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            61,
+            109,
+            8,
+            7
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            192,
+            93,
+            26,
+            22
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            2,
+            10,
+            276,
+            112
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.6361,
+            "bbox": [
+              194.17,
+              88.14,
+              16.87,
+              28.17
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.636,
+            "bbox": [
+              1.67,
+              25.37,
+              252.44,
+              94.31
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.8448,
+            "bbox": [
+              0.63,
+              22.46,
+              256.44,
+              95.02
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5635,
+            "bbox": [
+              195.05,
+              89.79,
+              13.56,
+              19.99
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.564,
+            "bbox": [
+              60.19,
+              109.34,
+              11.29,
+              7.73
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8071,
+            "bbox": [
+              0.22,
+              31.68,
+              260.88,
+              89.33
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6491,
+            "bbox": [
+              194.64,
+              89.06,
+              14.48,
+              26.93
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6002,
+            "bbox": [
+              60.42,
+              109.72,
+              10.4,
+              7.05
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7294,
+            "bbox": [
+              0.11,
+              26.6,
+              224.68,
+              93.38
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4972,
+            "bbox": [
+              192.44,
+              87.05,
+              17.11,
+              29.85
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4421,
+            "bbox": [
+              60.5,
+              109.61,
+              10.36,
+              7.11
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7748,
+            "bbox": [
+              0.71,
+              26.59,
+              264.78,
+              94.27
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5952,
+            "bbox": [
+              193.75,
+              89.1,
+              15.39,
+              26.17
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.49,
+            "bbox": [
+              60.52,
+              109.51,
+              10.52,
+              7.13
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 2,
+          "maxConfidence": 0.636,
+          "avgConfidence": 0.636
+        },
+        "RT-DETR-L": {
+          "count": 3,
+          "maxConfidence": 0.845,
+          "avgConfidence": 0.657
+        },
+        "yolo11l": {
+          "count": 3,
+          "maxConfidence": 0.807,
+          "avgConfidence": 0.685
+        },
+        "yolo11n": {
+          "count": 3,
+          "maxConfidence": 0.729,
+          "avgConfidence": 0.556
+        },
+        "yolo12n": {
+          "count": 3,
+          "maxConfidence": 0.775,
+          "avgConfidence": 0.62
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "3 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10614",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10614",
+      "sceneOrder": 5,
+      "title": "Image WEB10614",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10614.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10614.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10614.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            934,
+            378,
+            227,
+            191
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            608,
+            477,
+            355,
+            131
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            536,
+            396,
+            64,
+            98
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            575,
+            338,
+            139,
+            57
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            281,
+            259,
+            206,
+            148
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            141,
+            239,
+            97,
+            89
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            738,
+            384,
+            63,
+            27
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            390,
+            170,
+            38,
+            34
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            212,
+            195,
+            24,
+            39
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.848,
+            "bbox": [
+              264.87,
+              237.43,
+              219.84,
+              173.78
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8037,
+            "bbox": [
+              144.92,
+              245.92,
+              92.21,
+              81.7
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7947,
+            "bbox": [
+              578.76,
+              338.18,
+              134.8,
+              55.9
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7652,
+            "bbox": [
+              533.43,
+              402.95,
+              63.96,
+              92.34
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7458,
+            "bbox": [
+              612.65,
+              476.44,
+              361.5,
+              135.91
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6026,
+            "bbox": [
+              392.35,
+              174.76,
+              34.06,
+              27.41
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5899,
+            "bbox": [
+              778.24,
+              377.24,
+              365.28,
+              189.57
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5895,
+            "bbox": [
+              938.44,
+              376.91,
+              206.81,
+              192.5
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5419,
+            "bbox": [
+              732.72,
+              387.59,
+              65.29,
+              19.77
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.8446,
+            "bbox": [
+              608.54,
+              477.13,
+              354.11,
+              134.53
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8484,
+            "bbox": [
+              262.17,
+              233.37,
+              221.47,
+              177.34
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8071,
+            "bbox": [
+              578.75,
+              334.06,
+              134.24,
+              61.98
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7787,
+            "bbox": [
+              534.61,
+              407.81,
+              65.03,
+              88.62
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.752,
+            "bbox": [
+              942.65,
+              398.04,
+              202.6,
+              170.44
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8028,
+            "bbox": [
+              138.96,
+              243.27,
+              95.95,
+              87.29
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.599,
+            "bbox": [
+              737.06,
+              387.36,
+              65.35,
+              20.79
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.442,
+            "bbox": [
+              392.5,
+              173.19,
+              37.33,
+              29.6
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4598,
+            "bbox": [
+              608.02,
+              481.5,
+              63.11,
+              64.03
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.7746,
+            "bbox": [
+              264.95,
+              239.94,
+              218.06,
+              171.41
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7593,
+            "bbox": [
+              936.04,
+              374.07,
+              205.55,
+              194.23
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7295,
+            "bbox": [
+              578.87,
+              336.6,
+              134.48,
+              59.3
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7256,
+            "bbox": [
+              534.04,
+              406.86,
+              64.39,
+              89.46
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7068,
+            "bbox": [
+              665.07,
+              472.18,
+              305.22,
+              140.95
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6514,
+            "bbox": [
+              143.81,
+              244.32,
+              91.16,
+              84.91
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6139,
+            "bbox": [
+              732.9,
+              387.07,
+              68.04,
+              20.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4557,
+            "bbox": [
+              392.18,
+              174.29,
+              35.12,
+              27.92
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3727,
+            "bbox": [
+              608.46,
+              477.96,
+              64.94,
+              66.81
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.7655,
+            "bbox": [
+              266.95,
+              253.59,
+              215.8,
+              155.74
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6388,
+            "bbox": [
+              580.27,
+              338.57,
+              134.46,
+              57.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6199,
+            "bbox": [
+              140.49,
+              245.23,
+              96.81,
+              81.33
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5676,
+            "bbox": [
+              686.1,
+              475.84,
+              289.15,
+              135.14
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5541,
+            "bbox": [
+              733.01,
+              387.73,
+              67.11,
+              21.24
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.4464,
+            "bbox": [
+              930.41,
+              355.98,
+              213.73,
+              215.36
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4161,
+            "bbox": [
+              392.11,
+              174.25,
+              35.31,
+              28.19
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3266,
+            "bbox": [
+              535.33,
+              407.51,
+              65.29,
+              92.07
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2849,
+            "bbox": [
+              536.73,
+              435.85,
+              450.85,
+              173.18
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.8022,
+            "bbox": [
+              266.7,
+              232.69,
+              216.72,
+              174.98
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7086,
+            "bbox": [
+              683.69,
+              479.35,
+              304.72,
+              135.32
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6998,
+            "bbox": [
+              580.03,
+              338.71,
+              133.36,
+              55.97
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6608,
+            "bbox": [
+              533.07,
+              406.76,
+              65.9,
+              92.37
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5618,
+            "bbox": [
+              391.99,
+              174.9,
+              35.75,
+              27.17
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5416,
+            "bbox": [
+              731.63,
+              387.53,
+              71.55,
+              20.84
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5213,
+            "bbox": [
+              951.09,
+              376.46,
+              189.83,
+              187.04
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4753,
+            "bbox": [
+              137.02,
+              245.67,
+              101.6,
+              80.3
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4465,
+            "bbox": [
+              136.2,
+              245.07,
+              102.55,
+              47.44
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2781,
+            "bbox": [
+              136.59,
+              244.52,
+              87.17,
+              38.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2678,
+            "bbox": [
+              197.45,
+              283.32,
+              39.83,
+              38.67
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 9,
+          "maxConfidence": 0.848,
+          "avgConfidence": 0.698
+        },
+        "RT-DETR-L": {
+          "count": 9,
+          "maxConfidence": 0.848,
+          "avgConfidence": 0.704
+        },
+        "yolo11l": {
+          "count": 9,
+          "maxConfidence": 0.775,
+          "avgConfidence": 0.643
+        },
+        "yolo11n": {
+          "count": 9,
+          "maxConfidence": 0.766,
+          "avgConfidence": 0.513
+        },
+        "yolo12n": {
+          "count": 11,
+          "maxConfidence": 0.802,
+          "avgConfidence": 0.542
+        }
+      },
+      "classNames": [
+        "smoke",
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "9 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10489",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10489",
+      "sceneOrder": 6,
+      "title": "Image WEB10489",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10489.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10489.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10489.jpg",
+      "rawImageAvailable": true,
+      "width": 774,
+      "height": 538,
+      "dimensions": "774 x 538",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            10,
+            2,
+            753,
+            210
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            268,
+            148,
+            339,
+            109
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8486,
+            "bbox": [
+              11.02,
+              7.76,
+              692.99,
+              215.84
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7979,
+            "bbox": [
+              283.4,
+              162.58,
+              300.56,
+              83.31
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.8418,
+            "bbox": [
+              284.66,
+              161.08,
+              298.53,
+              82.71
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.912,
+            "bbox": [
+              -1.44,
+              -0.36,
+              763.67,
+              218.98
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4494,
+            "bbox": [
+              691.9,
+              212.24,
+              15.8,
+              11.46
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.524,
+            "bbox": [
+              632.88,
+              190.86,
+              28.51,
+              15.77
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3585,
+            "bbox": [
+              291.54,
+              175.13,
+              49.84,
+              41.98
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8881,
+            "bbox": [
+              0.66,
+              3.7,
+              769.22,
+              218.42
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7505,
+            "bbox": [
+              287.55,
+              165.37,
+              291.68,
+              77.18
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.349,
+            "bbox": [
+              692.56,
+              213.88,
+              14.46,
+              10.53
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.8026,
+            "bbox": [
+              289.58,
+              161.5,
+              287.31,
+              86.64
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7886,
+            "bbox": [
+              2.98,
+              4.04,
+              767.45,
+              228.7
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3473,
+            "bbox": [
+              634.25,
+              193.16,
+              26.25,
+              13.49
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3143,
+            "bbox": [
+              691.98,
+              214.48,
+              13.26,
+              9.31
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8265,
+            "bbox": [
+              0.67,
+              3.21,
+              758.11,
+              229.46
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5457,
+            "bbox": [
+              286.49,
+              164.84,
+              300.13,
+              78.13
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3159,
+            "bbox": [
+              632.65,
+              190.07,
+              28.58,
+              16.38
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 2,
+          "maxConfidence": 0.849,
+          "avgConfidence": 0.823
+        },
+        "RT-DETR-L": {
+          "count": 5,
+          "maxConfidence": 0.912,
+          "avgConfidence": 0.617
+        },
+        "yolo11l": {
+          "count": 3,
+          "maxConfidence": 0.888,
+          "avgConfidence": 0.663
+        },
+        "yolo11n": {
+          "count": 4,
+          "maxConfidence": 0.803,
+          "avgConfidence": 0.563
+        },
+        "yolo12n": {
+          "count": 3,
+          "maxConfidence": 0.827,
+          "avgConfidence": 0.563
+        }
+      },
+      "classNames": [
+        "smoke",
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10533",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10533",
+      "sceneOrder": 7,
+      "title": "Image WEB10533",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10533.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10533.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10533.jpg",
+      "rawImageAvailable": true,
+      "width": 280,
+      "height": 180,
+      "dimensions": "280 x 180",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            132,
+            124,
+            50,
+            30
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            55,
+            125,
+            72,
+            26
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            4,
+            6,
+            274,
+            147
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8386,
+            "bbox": [
+              0.24,
+              0.97,
+              279.54,
+              158.82
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5952,
+            "bbox": [
+              146.54,
+              128.36,
+              35.92,
+              24.13
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9287,
+            "bbox": [
+              -0.44,
+              0.63,
+              279.44,
+              149.8
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7446,
+            "bbox": [
+              146.84,
+              126.12,
+              45.92,
+              25.04
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6456,
+            "bbox": [
+              60.95,
+              116.27,
+              66.38,
+              36.1
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4466,
+            "bbox": [
+              0.3,
+              137.11,
+              28.38,
+              18.84
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2995,
+            "bbox": [
+              267.78,
+              117.29,
+              12.43,
+              30.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2729,
+            "bbox": [
+              268.83,
+              125.5,
+              11.17,
+              21.92
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.9055,
+            "bbox": [
+              0.26,
+              4.57,
+              279.57,
+              135.34
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4798,
+            "bbox": [
+              146.88,
+              125.28,
+              44.8,
+              26.95
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3767,
+            "bbox": [
+              59.72,
+              111.16,
+              68.47,
+              41.54
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8438,
+            "bbox": [
+              0,
+              3.77,
+              280,
+              138.36
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4567,
+            "bbox": [
+              145.73,
+              124.56,
+              48.92,
+              27.29
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8848,
+            "bbox": [
+              0,
+              3.36,
+              279.92,
+              139.03
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4974,
+            "bbox": [
+              146.92,
+              126.02,
+              41.73,
+              25.17
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2529,
+            "bbox": [
+              60.48,
+              113.09,
+              66.32,
+              39.08
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 2,
+          "maxConfidence": 0.839,
+          "avgConfidence": 0.717
+        },
+        "RT-DETR-L": {
+          "count": 6,
+          "maxConfidence": 0.929,
+          "avgConfidence": 0.556
+        },
+        "yolo11l": {
+          "count": 3,
+          "maxConfidence": 0.906,
+          "avgConfidence": 0.587
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.844,
+          "avgConfidence": 0.65
+        },
+        "yolo12n": {
+          "count": 3,
+          "maxConfidence": 0.885,
+          "avgConfidence": 0.545
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "3 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10609",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10609",
+      "sceneOrder": 8,
+      "title": "Image WEB10609",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10609.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10609.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10609.jpg",
+      "rawImageAvailable": true,
+      "width": 540,
+      "height": 293,
+      "dimensions": "540 x 293",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            97,
+            139,
+            197,
+            78
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            369,
+            170,
+            43,
+            38
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            239,
+            106,
+            249,
+            55
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            9,
+            46,
+            492,
+            180
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.7208,
+            "bbox": [
+              40.68,
+              51.19,
+              458.65,
+              143.78
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6308,
+            "bbox": [
+              373.53,
+              172.14,
+              38.17,
+              36.43
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5108,
+            "bbox": [
+              89.4,
+              124.91,
+              343.43,
+              82.2
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.859,
+            "bbox": [
+              36.62,
+              40.25,
+              462.8,
+              161.84
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.807,
+            "bbox": [
+              100.89,
+              145.84,
+              133.2,
+              58.01
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6873,
+            "bbox": [
+              241.15,
+              132.54,
+              150.32,
+              33.26
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.483,
+            "bbox": [
+              372.97,
+              173.98,
+              36.37,
+              34.74
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4679,
+            "bbox": [
+              454.32,
+              126.63,
+              26.03,
+              17.08
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5742,
+            "bbox": [
+              346,
+              173.5,
+              63.49,
+              54.22
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.379,
+            "bbox": [
+              379.97,
+              192.53,
+              19.93,
+              15.58
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.7899,
+            "bbox": [
+              38,
+              35.49,
+              464.08,
+              185.6
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7294,
+            "bbox": [
+              103.3,
+              147.25,
+              140.61,
+              56.49
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4927,
+            "bbox": [
+              453.05,
+              127.33,
+              26.65,
+              14.49
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3792,
+            "bbox": [
+              242.57,
+              135,
+              153.75,
+              30.98
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3135,
+            "bbox": [
+              308.22,
+              137.29,
+              85.31,
+              26.26
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2693,
+            "bbox": [
+              239.36,
+              132.64,
+              170.43,
+              96.07
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7288,
+            "bbox": [
+              39.16,
+              37.79,
+              468.82,
+              177.86
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4562,
+            "bbox": [
+              101.77,
+              145.56,
+              147.64,
+              57.28
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.444,
+            "bbox": [
+              240.28,
+              133.55,
+              155.14,
+              29.3
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3466,
+            "bbox": [
+              452.97,
+              125.97,
+              26.89,
+              16.2
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3035,
+            "bbox": [
+              374.35,
+              173.02,
+              35.41,
+              34.95
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.7683,
+            "bbox": [
+              102.29,
+              147.16,
+              135.13,
+              56.07
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7513,
+            "bbox": [
+              53.53,
+              35.91,
+              452.22,
+              191.71
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2805,
+            "bbox": [
+              453.11,
+              126.02,
+              29.59,
+              16.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2568,
+            "bbox": [
+              376.25,
+              174.22,
+              31.67,
+              33.15
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2553,
+            "bbox": [
+              240.1,
+              129.76,
+              154.91,
+              37.06
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 3,
+          "maxConfidence": 0.721,
+          "avgConfidence": 0.621
+        },
+        "RT-DETR-L": {
+          "count": 7,
+          "maxConfidence": 0.859,
+          "avgConfidence": 0.608
+        },
+        "yolo11l": {
+          "count": 6,
+          "maxConfidence": 0.79,
+          "avgConfidence": 0.496
+        },
+        "yolo11n": {
+          "count": 5,
+          "maxConfidence": 0.729,
+          "avgConfidence": 0.456
+        },
+        "yolo12n": {
+          "count": 5,
+          "maxConfidence": 0.768,
+          "avgConfidence": 0.462
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "4 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10787",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10787",
+      "sceneOrder": 9,
+      "title": "Image WEB10787",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10787.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10787.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10787.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 360,
+      "dimensions": "640 x 360",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            376,
+            95,
+            181,
+            106
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            72,
+            149,
+            127,
+            82
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            246,
+            168,
+            65,
+            56
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            2,
+            130,
+            49,
+            32
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            13,
+            1,
+            435,
+            185
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8747,
+            "bbox": [
+              10.32,
+              6.08,
+              430.6,
+              178.75
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8691,
+            "bbox": [
+              83.02,
+              151.35,
+              104.66,
+              81.95
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7905,
+            "bbox": [
+              1.14,
+              132.96,
+              49.83,
+              28.64
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7863,
+            "bbox": [
+              248.4,
+              170.42,
+              58.29,
+              53.8
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7625,
+            "bbox": [
+              379.31,
+              89.24,
+              175.51,
+              113.61
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5946,
+            "bbox": [
+              473.79,
+              174.01,
+              88.63,
+              28.52
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5152,
+            "bbox": [
+              379.43,
+              88.6,
+              95.03,
+              113.34
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.8886,
+            "bbox": [
+              79.49,
+              150.91,
+              108.84,
+              82.73
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8063,
+            "bbox": [
+              248.4,
+              169.4,
+              59.74,
+              52.53
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7936,
+            "bbox": [
+              379.07,
+              88.67,
+              87.22,
+              112.51
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.9115,
+            "bbox": [
+              3.16,
+              0.2,
+              452.71,
+              182.22
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7758,
+            "bbox": [
+              0.19,
+              132.33,
+              49.65,
+              29.11
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7182,
+            "bbox": [
+              470.83,
+              173.07,
+              88.88,
+              29.85
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4657,
+            "bbox": [
+              377.4,
+              90.49,
+              178.65,
+              113.59
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3829,
+            "bbox": [
+              377.41,
+              90.52,
+              180.61,
+              113.33
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.9124,
+            "bbox": [
+              0.06,
+              3.7,
+              447.14,
+              180.2
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8511,
+            "bbox": [
+              82.98,
+              151.99,
+              104.01,
+              82.54
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8384,
+            "bbox": [
+              375.87,
+              90.25,
+              183.61,
+              113.95
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8145,
+            "bbox": [
+              248.83,
+              169.57,
+              59.06,
+              53.64
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.754,
+            "bbox": [
+              0,
+              133.4,
+              50.33,
+              27.96
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.868,
+            "bbox": [
+              1,
+              4.49,
+              445.32,
+              177.44
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.842,
+            "bbox": [
+              378.13,
+              90.67,
+              174.43,
+              112.17
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8372,
+            "bbox": [
+              82.13,
+              150.4,
+              102.94,
+              83.64
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7804,
+            "bbox": [
+              247.12,
+              169.61,
+              59.99,
+              53.08
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5536,
+            "bbox": [
+              0.48,
+              133.06,
+              50.75,
+              28.6
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8623,
+            "bbox": [
+              0,
+              4.49,
+              446.52,
+              181
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8346,
+            "bbox": [
+              84.41,
+              151.08,
+              102.17,
+              82.86
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7436,
+            "bbox": [
+              251.04,
+              169.26,
+              57.44,
+              52.2
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6834,
+            "bbox": [
+              0.1,
+              133.16,
+              51.16,
+              28.46
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6284,
+            "bbox": [
+              376.6,
+              88.5,
+              173.89,
+              114.8
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6178,
+            "bbox": [
+              377.61,
+              88.21,
+              90.57,
+              115.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.289,
+            "bbox": [
+              469.79,
+              173.51,
+              85.54,
+              29.43
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 7,
+          "maxConfidence": 0.875,
+          "avgConfidence": 0.742
+        },
+        "RT-DETR-L": {
+          "count": 8,
+          "maxConfidence": 0.912,
+          "avgConfidence": 0.718
+        },
+        "yolo11l": {
+          "count": 5,
+          "maxConfidence": 0.912,
+          "avgConfidence": 0.834
+        },
+        "yolo11n": {
+          "count": 5,
+          "maxConfidence": 0.868,
+          "avgConfidence": 0.776
+        },
+        "yolo12n": {
+          "count": 7,
+          "maxConfidence": 0.862,
+          "avgConfidence": 0.666
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "5 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10742",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10742",
+      "sceneOrder": 10,
+      "title": "Image WEB10742",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10742.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10742.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10742.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 360,
+      "dimensions": "640 x 360",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            294,
+            136,
+            81,
+            89
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            469,
+            140,
+            83,
+            88
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            126,
+            105,
+            113,
+            89
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            584,
+            112,
+            55,
+            38
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            55,
+            174,
+            51,
+            20
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            142,
+            0,
+            467,
+            200
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.8689,
+            "bbox": [
+              470.59,
+              140.4,
+              82.09,
+              87.82
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8653,
+            "bbox": [
+              149.23,
+              3.93,
+              472.1,
+              191.95
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.863,
+            "bbox": [
+              288.99,
+              134.81,
+              87.24,
+              87.01
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8629,
+            "bbox": [
+              128.24,
+              112.24,
+              109.45,
+              83.94
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.765,
+            "bbox": [
+              584.28,
+              111.88,
+              55.17,
+              37.6
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6957,
+            "bbox": [
+              56.64,
+              174.63,
+              40.71,
+              18.63
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5674,
+            "bbox": [
+              414.79,
+              209.97,
+              18.15,
+              22.37
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.921,
+            "bbox": [
+              146.01,
+              0.04,
+              490.48,
+              192.28
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8865,
+            "bbox": [
+              124.19,
+              100.28,
+              115.57,
+              95.76
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8836,
+            "bbox": [
+              467.52,
+              139.74,
+              84.63,
+              88.92
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8531,
+            "bbox": [
+              288.18,
+              135.02,
+              88.36,
+              85.75
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6951,
+            "bbox": [
+              54.81,
+              174.17,
+              49.13,
+              19.57
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7242,
+            "bbox": [
+              584.69,
+              111.87,
+              55.22,
+              38.77
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4292,
+            "bbox": [
+              17.91,
+              172.18,
+              84.84,
+              22.05
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2984,
+            "bbox": [
+              18.11,
+              174.69,
+              13.4,
+              13.37
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3129,
+            "bbox": [
+              415.61,
+              210.69,
+              17.3,
+              21.74
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8765,
+            "bbox": [
+              143.02,
+              3.55,
+              496.84,
+              199.34
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8584,
+            "bbox": [
+              467.77,
+              139.51,
+              84.78,
+              89.47
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8555,
+            "bbox": [
+              289.65,
+              134.28,
+              86.48,
+              86.9
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.853,
+            "bbox": [
+              125.91,
+              100.95,
+              111.86,
+              94.65
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6898,
+            "bbox": [
+              55.34,
+              174.91,
+              47.87,
+              18.22
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6842,
+            "bbox": [
+              584.02,
+              113.6,
+              55.98,
+              36.67
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.8525,
+            "bbox": [
+              470.36,
+              140.34,
+              82.83,
+              88.15
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8413,
+            "bbox": [
+              143.93,
+              3.82,
+              491.4,
+              192.4
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8103,
+            "bbox": [
+              123.79,
+              99.53,
+              115.41,
+              96.91
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.807,
+            "bbox": [
+              289.09,
+              135.15,
+              82.26,
+              84.41
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6163,
+            "bbox": [
+              584.9,
+              114.08,
+              55.1,
+              35.74
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5351,
+            "bbox": [
+              55.6,
+              174.68,
+              48.22,
+              18.69
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.318,
+            "bbox": [
+              414.84,
+              210.25,
+              18.09,
+              22.11
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.8601,
+            "bbox": [
+              126.66,
+              98.99,
+              112.61,
+              96.62
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8504,
+            "bbox": [
+              148.73,
+              4.43,
+              489.03,
+              191.8
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8194,
+            "bbox": [
+              468.49,
+              141.19,
+              85.39,
+              87.12
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8179,
+            "bbox": [
+              287.79,
+              134.4,
+              89.17,
+              86.3
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6638,
+            "bbox": [
+              583.35,
+              114.8,
+              56.65,
+              35.63
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5473,
+            "bbox": [
+              55.26,
+              174.89,
+              49.8,
+              17.97
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 7,
+          "maxConfidence": 0.869,
+          "avgConfidence": 0.784
+        },
+        "RT-DETR-L": {
+          "count": 9,
+          "maxConfidence": 0.921,
+          "avgConfidence": 0.667
+        },
+        "yolo11l": {
+          "count": 6,
+          "maxConfidence": 0.877,
+          "avgConfidence": 0.803
+        },
+        "yolo11n": {
+          "count": 7,
+          "maxConfidence": 0.853,
+          "avgConfidence": 0.683
+        },
+        "yolo12n": {
+          "count": 6,
+          "maxConfidence": 0.86,
+          "avgConfidence": 0.76
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "6 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10772",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10772",
+      "sceneOrder": 11,
+      "title": "Image WEB10772",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10772.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10772.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10772.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 360,
+      "dimensions": "640 x 360",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            368,
+            162,
+            57,
+            17
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            282,
+            163,
+            16,
+            13
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            521,
+            121,
+            118,
+            60
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            36,
+            158,
+            79,
+            18
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            154,
+            161,
+            48,
+            15
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            238,
+            165,
+            28,
+            11
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            40,
+            13,
+            583,
+            158
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8466,
+            "bbox": [
+              35.37,
+              3.3,
+              600.74,
+              159.65
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7777,
+            "bbox": [
+              367.37,
+              160.67,
+              58.14,
+              17.86
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7669,
+            "bbox": [
+              519.58,
+              131.36,
+              120.1,
+              46.44
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6964,
+            "bbox": [
+              32.98,
+              155.68,
+              83.88,
+              20.78
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.649,
+            "bbox": [
+              281.49,
+              162.38,
+              17.63,
+              13.49
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6431,
+            "bbox": [
+              239.19,
+              164.27,
+              27.63,
+              11.65
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6223,
+            "bbox": [
+              158.69,
+              161.1,
+              50.73,
+              14.39
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9094,
+            "bbox": [
+              12.39,
+              0.59,
+              629.99,
+              162.37
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7469,
+            "bbox": [
+              366.17,
+              162.09,
+              58.81,
+              16.89
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7301,
+            "bbox": [
+              522.34,
+              132.59,
+              116.93,
+              45.5
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7227,
+            "bbox": [
+              32.23,
+              156.81,
+              83.79,
+              20.53
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5831,
+            "bbox": [
+              237.05,
+              161.3,
+              62.43,
+              16.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4105,
+            "bbox": [
+              282.28,
+              162.69,
+              18.19,
+              13.9
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5498,
+            "bbox": [
+              157.37,
+              160.88,
+              50.57,
+              15.76
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4151,
+            "bbox": [
+              521.63,
+              89.5,
+              117.96,
+              87.36
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4068,
+            "bbox": [
+              235.47,
+              164.58,
+              28.98,
+              11.69
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2931,
+            "bbox": [
+              457.27,
+              162.96,
+              37.32,
+              14.08
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.355,
+            "bbox": [
+              85.08,
+              158.4,
+              30.7,
+              17.89
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2916,
+            "bbox": [
+              237.34,
+              165.06,
+              27.91,
+              11.75
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2575,
+            "bbox": [
+              521.64,
+              61.67,
+              117.89,
+              115.32
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.341,
+            "bbox": [
+              282.89,
+              163.13,
+              18.21,
+              13.36
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2677,
+            "bbox": [
+              240.91,
+              165.02,
+              30.39,
+              11.7
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8737,
+            "bbox": [
+              25.5,
+              6.74,
+              614.5,
+              161.08
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7171,
+            "bbox": [
+              33.28,
+              157.17,
+              82.04,
+              18.67
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.646,
+            "bbox": [
+              367.56,
+              162.15,
+              57.6,
+              16.53
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4928,
+            "bbox": [
+              158.01,
+              161.61,
+              45.39,
+              13.57
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4868,
+            "bbox": [
+              281.73,
+              162.93,
+              17.62,
+              13.5
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4676,
+            "bbox": [
+              522.48,
+              125.17,
+              117.21,
+              52.37
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4443,
+            "bbox": [
+              237.97,
+              164.94,
+              28.38,
+              11.06
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8418,
+            "bbox": [
+              13.14,
+              7.71,
+              626.38,
+              163.37
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5875,
+            "bbox": [
+              367.07,
+              162.56,
+              58.42,
+              16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5587,
+            "bbox": [
+              519.23,
+              132.49,
+              120.4,
+              46.42
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5246,
+            "bbox": [
+              33.05,
+              158.02,
+              83.48,
+              17.69
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3966,
+            "bbox": [
+              281.54,
+              163.63,
+              16.99,
+              12.48
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3936,
+            "bbox": [
+              237.88,
+              165.52,
+              27.91,
+              10.48
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3439,
+            "bbox": [
+              85.93,
+              158.95,
+              29.86,
+              17.01
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2504,
+            "bbox": [
+              156.85,
+              161.64,
+              51.65,
+              13.49
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.836,
+            "bbox": [
+              22.56,
+              6.57,
+              617.41,
+              163.49
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6513,
+            "bbox": [
+              368.32,
+              161.4,
+              56.59,
+              16.69
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5031,
+            "bbox": [
+              33.11,
+              158.31,
+              83.05,
+              17.57
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3853,
+            "bbox": [
+              281.44,
+              163.55,
+              17.46,
+              12.62
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3609,
+            "bbox": [
+              524.65,
+              141.71,
+              75.86,
+              35.66
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3592,
+            "bbox": [
+              238.54,
+              165.2,
+              28.16,
+              10.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3293,
+            "bbox": [
+              84.83,
+              159.42,
+              30.5,
+              16.78
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3069,
+            "bbox": [
+              522.91,
+              135.24,
+              117.09,
+              42.67
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2598,
+            "bbox": [
+              237.75,
+              161.83,
+              63.22,
+              14.21
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 7,
+          "maxConfidence": 0.847,
+          "avgConfidence": 0.715
+        },
+        "RT-DETR-L": {
+          "count": 15,
+          "maxConfidence": 0.909,
+          "avgConfidence": 0.485
+        },
+        "yolo11l": {
+          "count": 7,
+          "maxConfidence": 0.874,
+          "avgConfidence": 0.59
+        },
+        "yolo11n": {
+          "count": 8,
+          "maxConfidence": 0.842,
+          "avgConfidence": 0.487
+        },
+        "yolo12n": {
+          "count": 9,
+          "maxConfidence": 0.836,
+          "avgConfidence": 0.444
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "7 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10466",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10466",
+      "sceneOrder": 12,
+      "title": "Image WEB10466",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10466.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10466.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10466.jpg",
+      "rawImageAvailable": true,
+      "width": 300,
+      "height": 201,
+      "dimensions": "300 x 201",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            45,
+            74,
+            14,
+            14
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            66,
+            69,
+            54,
+            35
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            125,
+            90,
+            42,
+            23
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            9,
+            7,
+            228,
+            104
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.7533,
+            "bbox": [
+              2.33,
+              2.05,
+              235.49,
+              106.07
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7414,
+            "bbox": [
+              65.67,
+              68.37,
+              54.67,
+              33.46
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7397,
+            "bbox": [
+              125.09,
+              91.57,
+              42.96,
+              19.54
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6368,
+            "bbox": [
+              199.14,
+              77.4,
+              32.28,
+              31.25
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5326,
+            "bbox": [
+              47.11,
+              72.43,
+              13.3,
+              15.53
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.8954,
+            "bbox": [
+              1.27,
+              -0.06,
+              241.38,
+              110.95
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7705,
+            "bbox": [
+              51.41,
+              68.15,
+              69.11,
+              34.97
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6931,
+            "bbox": [
+              123.32,
+              90.94,
+              65.14,
+              20.82
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3983,
+            "bbox": [
+              198.24,
+              72.59,
+              42.21,
+              38.93
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3642,
+            "bbox": [
+              47.07,
+              73.05,
+              14.19,
+              16.54
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2843,
+            "bbox": [
+              31.26,
+              61.41,
+              9.58,
+              7.68
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3238,
+            "bbox": [
+              47.24,
+              67.77,
+              140.58,
+              44.52
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3367,
+            "bbox": [
+              123.49,
+              91.75,
+              43,
+              19.6
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.7792,
+            "bbox": [
+              48.24,
+              68.74,
+              73.15,
+              33.66
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7725,
+            "bbox": [
+              0.23,
+              3.04,
+              239.45,
+              106.96
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7091,
+            "bbox": [
+              124.83,
+              92.89,
+              43.31,
+              18.18
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7815,
+            "bbox": [
+              0,
+              2.73,
+              240.7,
+              98.37
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6895,
+            "bbox": [
+              124.86,
+              92.84,
+              43.8,
+              17.41
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6659,
+            "bbox": [
+              62.55,
+              68.64,
+              58.44,
+              33.44
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.396,
+            "bbox": [
+              197.99,
+              73,
+              38.42,
+              35.32
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2538,
+            "bbox": [
+              47.25,
+              73.81,
+              14.78,
+              12.71
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7898,
+            "bbox": [
+              2.78,
+              3.14,
+              232.05,
+              93.38
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7833,
+            "bbox": [
+              63.85,
+              69.25,
+              57.82,
+              32.86
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6719,
+            "bbox": [
+              124.85,
+              92.88,
+              43.78,
+              17.83
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4411,
+            "bbox": [
+              47.35,
+              74.36,
+              14.29,
+              14.07
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3854,
+            "bbox": [
+              198.31,
+              77.22,
+              35.49,
+              31.27
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3849,
+            "bbox": [
+              198.18,
+              81.35,
+              29.72,
+              25.44
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3173,
+            "bbox": [
+              0.01,
+              3.15,
+              51.12,
+              66.18
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 5,
+          "maxConfidence": 0.753,
+          "avgConfidence": 0.681
+        },
+        "RT-DETR-L": {
+          "count": 8,
+          "maxConfidence": 0.895,
+          "avgConfidence": 0.508
+        },
+        "yolo11l": {
+          "count": 3,
+          "maxConfidence": 0.779,
+          "avgConfidence": 0.754
+        },
+        "yolo11n": {
+          "count": 5,
+          "maxConfidence": 0.782,
+          "avgConfidence": 0.557
+        },
+        "yolo12n": {
+          "count": 7,
+          "maxConfidence": 0.79,
+          "avgConfidence": 0.539
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "4 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10959",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10959",
+      "sceneOrder": 13,
+      "title": "Image WEB10959",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10959.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10959.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10959.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            333,
+            223,
+            123,
+            98
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            507,
+            448,
+            121,
+            158
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            605,
+            680,
+            102,
+            37
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            42,
+            9,
+            900,
+            593
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8779,
+            "bbox": [
+              164.28,
+              6.32,
+              848.09,
+              589.23
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8329,
+            "bbox": [
+              335.14,
+              220.49,
+              116.33,
+              99.7
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.736,
+            "bbox": [
+              501.22,
+              410.43,
+              112.99,
+              194.95
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6517,
+            "bbox": [
+              599.13,
+              679.64,
+              111.71,
+              40.07
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6516,
+            "bbox": [
+              28.32,
+              19.98,
+              83.6,
+              46.11
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.8926,
+            "bbox": [
+              58.41,
+              0.42,
+              1008.04,
+              561.91
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8335,
+            "bbox": [
+              331.18,
+              219.59,
+              121.57,
+              99.74
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7331,
+            "bbox": [
+              485.55,
+              389.54,
+              131.05,
+              214.88
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6613,
+            "bbox": [
+              26.27,
+              18.35,
+              87.57,
+              46.65
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5854,
+            "bbox": [
+              592.63,
+              681.21,
+              132.57,
+              39.04
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2573,
+            "bbox": [
+              436.35,
+              356.9,
+              185.2,
+              243.01
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8788,
+            "bbox": [
+              135.55,
+              8.24,
+              918.45,
+              567.89
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.8062,
+            "bbox": [
+              332.85,
+              216.7,
+              121.02,
+              103.49
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5918,
+            "bbox": [
+              32.8,
+              24.04,
+              78.55,
+              39.35
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5304,
+            "bbox": [
+              593.89,
+              678.32,
+              119.06,
+              41.68
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4447,
+            "bbox": [
+              496.78,
+              407.58,
+              124.34,
+              195.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3273,
+            "bbox": [
+              456.62,
+              368.7,
+              164.73,
+              235.32
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8423,
+            "bbox": [
+              85.22,
+              9.04,
+              964.39,
+              560.13
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7513,
+            "bbox": [
+              333.76,
+              219.55,
+              116.41,
+              99.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5869,
+            "bbox": [
+              437.35,
+              359.57,
+              180.96,
+              246.6
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4618,
+            "bbox": [
+              492.65,
+              390.15,
+              124.76,
+              214.52
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2895,
+            "bbox": [
+              591.07,
+              675.94,
+              119.8,
+              44.06
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7892,
+            "bbox": [
+              124.75,
+              6.38,
+              891.56,
+              586.04
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7576,
+            "bbox": [
+              333.37,
+              219.51,
+              118.58,
+              102.05
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5339,
+            "bbox": [
+              500.73,
+              403.51,
+              115.45,
+              199.79
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4165,
+            "bbox": [
+              438.21,
+              356.78,
+              181.92,
+              248.75
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 5,
+          "maxConfidence": 0.878,
+          "avgConfidence": 0.75
+        },
+        "RT-DETR-L": {
+          "count": 6,
+          "maxConfidence": 0.893,
+          "avgConfidence": 0.661
+        },
+        "yolo11l": {
+          "count": 6,
+          "maxConfidence": 0.879,
+          "avgConfidence": 0.597
+        },
+        "yolo11n": {
+          "count": 5,
+          "maxConfidence": 0.842,
+          "avgConfidence": 0.586
+        },
+        "yolo12n": {
+          "count": 4,
+          "maxConfidence": 0.789,
+          "avgConfidence": 0.624
+        }
+      },
+      "classNames": [
+        "fire",
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "4 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01222",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01222",
+      "sceneOrder": 14,
+      "title": "Image PublicDataset01222",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01222.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01222.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01222.jpg",
+      "rawImageAvailable": true,
+      "width": 540,
+      "height": 360,
+      "dimensions": "540 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            187,
+            259,
+            59,
+            17
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.5935,
+            "bbox": [
+              195.28,
+              255.4,
+              47.99,
+              17.1
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.6685,
+            "bbox": [
+              195.47,
+              255.43,
+              45.23,
+              15.84
+            ]
+          }
+        ],
+        "yolo11l": [],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.3514,
+            "bbox": [
+              185.36,
+              251.11,
+              57.61,
+              23.75
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.2753,
+            "bbox": [
+              185.21,
+              253.43,
+              59.11,
+              18.57
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.594,
+          "avgConfidence": 0.594
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.669,
+          "avgConfidence": 0.669
+        },
+        "yolo11l": {
+          "count": 0,
+          "maxConfidence": null,
+          "avgConfidence": null
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.351,
+          "avgConfidence": 0.351
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.275,
+          "avgConfidence": 0.275
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof07866",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF07866",
+      "sceneOrder": 15,
+      "title": "Image AoF07866",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF07866.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF07866.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF07866.jpg",
+      "rawImageAvailable": true,
+      "width": 1471,
+      "height": 813,
+      "dimensions": "1471 x 813",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            1392,
+            172,
+            75,
+            145
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.8067,
+            "bbox": [
+              1395.96,
+              169.49,
+              74.71,
+              150.3
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.8318,
+            "bbox": [
+              1398.85,
+              163.35,
+              73.08,
+              155.93
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3017,
+            "bbox": [
+              1318.03,
+              148.88,
+              155.79,
+              178.78
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3062,
+            "bbox": [
+              1311.87,
+              123.58,
+              163.31,
+              205.66
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.6966,
+            "bbox": [
+              1395.97,
+              171.99,
+              75.03,
+              147.47
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.5941,
+            "bbox": [
+              1394.47,
+              168.98,
+              76.53,
+              151.79
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.6337,
+            "bbox": [
+              1396.89,
+              176.73,
+              74.11,
+              142.43
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.807,
+          "avgConfidence": 0.807
+        },
+        "RT-DETR-L": {
+          "count": 3,
+          "maxConfidence": 0.832,
+          "avgConfidence": 0.48
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.697,
+          "avgConfidence": 0.697
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.594,
+          "avgConfidence": 0.594
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.634,
+          "avgConfidence": 0.634
+        }
+      },
+      "classNames": [
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01185",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01185",
+      "sceneOrder": 16,
+      "title": "Image PublicDataset01185",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01185.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01185.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01185.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 360,
+      "dimensions": "640 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            5,
+            121,
+            306,
+            169
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8603,
+            "bbox": [
+              8.62,
+              89.92,
+              316.88,
+              201.88
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9207,
+            "bbox": [
+              -0.69,
+              90.12,
+              331.03,
+              205.99
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.9056,
+            "bbox": [
+              0.2,
+              91.96,
+              327.8,
+              204.26
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8856,
+            "bbox": [
+              0,
+              90.49,
+              326.69,
+              206.82
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8806,
+            "bbox": [
+              1.05,
+              90.58,
+              327.19,
+              203.37
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.86,
+          "avgConfidence": 0.86
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.921,
+          "avgConfidence": 0.921
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.906,
+          "avgConfidence": 0.906
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.886,
+          "avgConfidence": 0.886
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.881,
+          "avgConfidence": 0.881
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11640",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11640",
+      "sceneOrder": 17,
+      "title": "Image WEB11640",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11640.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11640.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11640.jpg",
+      "rawImageAvailable": true,
+      "width": 774,
+      "height": 533,
+      "dimensions": "774 x 533",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            5,
+            5,
+            537,
+            520
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.9169,
+            "bbox": [
+              2.16,
+              2.37,
+              561.58,
+              529.32
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9426,
+            "bbox": [
+              -3.27,
+              1.99,
+              547.01,
+              530.03
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.9179,
+            "bbox": [
+              0,
+              5.15,
+              542.01,
+              521.23
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8168,
+            "bbox": [
+              0.18,
+              5.33,
+              545.84,
+              521.75
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8568,
+            "bbox": [
+              0.76,
+              3.17,
+              551.71,
+              526.11
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.917,
+          "avgConfidence": 0.917
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.943,
+          "avgConfidence": 0.943
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.918,
+          "avgConfidence": 0.918
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.817,
+          "avgConfidence": 0.817
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.857,
+          "avgConfidence": 0.857
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01199",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01199",
+      "sceneOrder": 18,
+      "title": "Image PublicDataset01199",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01199.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01199.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01199.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 360,
+      "dimensions": "640 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            6,
+            13,
+            625,
+            228
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.7792,
+            "bbox": [
+              8.15,
+              15.1,
+              629.54,
+              233.22
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9421,
+            "bbox": [
+              0.28,
+              5.24,
+              638.54,
+              236.02
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.6667,
+            "bbox": [
+              1.63,
+              14.29,
+              638.37,
+              230.32
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.3095,
+            "bbox": [
+              307.8,
+              119.93,
+              332.2,
+              119.34
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2564,
+            "bbox": [
+              0.3,
+              119.02,
+              638.49,
+              124.05
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.838,
+            "bbox": [
+              0.15,
+              9.93,
+              639.76,
+              231.57
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.779,
+          "avgConfidence": 0.779
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.942,
+          "avgConfidence": 0.942
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.667,
+          "avgConfidence": 0.667
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.31,
+          "avgConfidence": 0.283
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.838,
+          "avgConfidence": 0.838
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11180",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11180",
+      "sceneOrder": 19,
+      "title": "Image WEB11180",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11180.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11180.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11180.jpg",
+      "rawImageAvailable": true,
+      "width": 1024,
+      "height": 576,
+      "dimensions": "1024 x 576",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            89,
+            404,
+            22,
+            29
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            129,
+            292,
+            30,
+            40
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            328,
+            351,
+            28,
+            40
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            591,
+            151,
+            29,
+            38
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8418,
+            "bbox": [
+              328.26,
+              348.77,
+              26,
+              40.81
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8346,
+            "bbox": [
+              130.31,
+              289.95,
+              29.7,
+              42.57
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8268,
+            "bbox": [
+              591.15,
+              150.93,
+              27.9,
+              39.02
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7895,
+            "bbox": [
+              90.8,
+              405.71,
+              19.3,
+              26.03
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.7889,
+            "bbox": [
+              130.11,
+              291.13,
+              29.64,
+              40.79
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7814,
+            "bbox": [
+              326.57,
+              349.57,
+              28.05,
+              38.92
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6889,
+            "bbox": [
+              589.81,
+              151.26,
+              30.86,
+              37.51
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7375,
+            "bbox": [
+              91.63,
+              407.06,
+              19.97,
+              24.69
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8171,
+            "bbox": [
+              328.03,
+              350.03,
+              26.27,
+              39.14
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8159,
+            "bbox": [
+              129.3,
+              290.77,
+              30.65,
+              42.45
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.774,
+            "bbox": [
+              90.55,
+              406.05,
+              19.86,
+              26.27
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.4853,
+            "bbox": [
+              590.14,
+              149.71,
+              30.57,
+              40.7
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8488,
+            "bbox": [
+              327.75,
+              350.28,
+              26.74,
+              39.44
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8343,
+            "bbox": [
+              129.42,
+              290.75,
+              29.93,
+              41.81
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7882,
+            "bbox": [
+              89.73,
+              407.02,
+              20,
+              24.91
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5441,
+            "bbox": [
+              589.22,
+              150.45,
+              29.48,
+              38.95
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2796,
+            "bbox": [
+              880.28,
+              387.37,
+              32.99,
+              120.65
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8501,
+            "bbox": [
+              130.39,
+              290.79,
+              28.67,
+              41.03
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.8048,
+            "bbox": [
+              328.08,
+              349.44,
+              27.19,
+              40.02
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6722,
+            "bbox": [
+              91.3,
+              407.25,
+              17.95,
+              23.44
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 4,
+          "maxConfidence": 0.842,
+          "avgConfidence": 0.823
+        },
+        "RT-DETR-L": {
+          "count": 4,
+          "maxConfidence": 0.789,
+          "avgConfidence": 0.749
+        },
+        "yolo11l": {
+          "count": 4,
+          "maxConfidence": 0.817,
+          "avgConfidence": 0.723
+        },
+        "yolo11n": {
+          "count": 5,
+          "maxConfidence": 0.849,
+          "avgConfidence": 0.659
+        },
+        "yolo12n": {
+          "count": 3,
+          "maxConfidence": 0.85,
+          "avgConfidence": 0.776
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "4 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof08030",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF08030",
+      "sceneOrder": 20,
+      "title": "Image AoF08030",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF08030.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF08030.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF08030.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            1221,
+            62,
+            47,
+            87
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.6494,
+            "bbox": [
+              1213.66,
+              21.59,
+              55.25,
+              123.22
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.6372,
+            "bbox": [
+              1214.65,
+              21.04,
+              65.98,
+              124.91
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3405,
+            "bbox": [
+              1254.63,
+              105.56,
+              24.94,
+              39.42
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2585,
+            "bbox": [
+              1081.62,
+              1.23,
+              198.79,
+              146.6
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.5786,
+            "bbox": [
+              1208.97,
+              15.86,
+              70.97,
+              130.26
+            ]
+          }
+        ],
+        "yolo11n": [],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.2993,
+            "bbox": [
+              1205.6,
+              15.68,
+              74.4,
+              131.64
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.649,
+          "avgConfidence": 0.649
+        },
+        "RT-DETR-L": {
+          "count": 3,
+          "maxConfidence": 0.637,
+          "avgConfidence": 0.412
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.579,
+          "avgConfidence": 0.579
+        },
+        "yolo11n": {
+          "count": 0,
+          "maxConfidence": null,
+          "avgConfidence": null
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.299,
+          "avgConfidence": 0.299
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10963",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10963",
+      "sceneOrder": 21,
+      "title": "Image WEB10963",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10963.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10963.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10963.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            551,
+            376,
+            25,
+            11
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            667,
+            374,
+            22,
+            14
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            756,
+            374,
+            26,
+            16
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.6121,
+            "bbox": [
+              666.27,
+              371.57,
+              26.93,
+              15.95
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.538,
+            "bbox": [
+              597.85,
+              371.47,
+              41.04,
+              12.71
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5038,
+            "bbox": [
+              550.85,
+              373.05,
+              22.62,
+              14.95
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.5538,
+            "bbox": [
+              668.54,
+              372.38,
+              28.38,
+              16.18
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5019,
+            "bbox": [
+              547.72,
+              372.81,
+              29.01,
+              16.17
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5009,
+            "bbox": [
+              754.64,
+              373.27,
+              21.21,
+              15.05
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4996,
+            "bbox": [
+              597.03,
+              371.27,
+              43.62,
+              13.97
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2595,
+            "bbox": [
+              762.73,
+              372.55,
+              21.97,
+              15.29
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3603,
+            "bbox": [
+              545.55,
+              370.74,
+              30.76,
+              17.48
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2889,
+            "bbox": [
+              670.64,
+              371.11,
+              31.16,
+              18.29
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3367,
+            "bbox": [
+              596.33,
+              371.66,
+              42.99,
+              13.93
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3804,
+            "bbox": [
+              656.82,
+              371.55,
+              42.36,
+              13.79
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2876,
+            "bbox": [
+              556.01,
+              375.25,
+              15.02,
+              11.14
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.5384,
+            "bbox": [
+              666.15,
+              372.49,
+              27.28,
+              14.64
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3581,
+            "bbox": [
+              551.21,
+              373.98,
+              25.07,
+              13.94
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.352,
+            "bbox": [
+              755.75,
+              373.44,
+              22.19,
+              13.62
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.5099,
+            "bbox": [
+              666.55,
+              371.91,
+              27.57,
+              15.53
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4035,
+            "bbox": [
+              550.58,
+              372.9,
+              26.79,
+              15.07
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2533,
+            "bbox": [
+              755.73,
+              372.76,
+              21.48,
+              14.03
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.2837,
+            "bbox": [
+              550.19,
+              373.39,
+              27.02,
+              14.8
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 3,
+          "maxConfidence": 0.612,
+          "avgConfidence": 0.551
+        },
+        "RT-DETR-L": {
+          "count": 10,
+          "maxConfidence": 0.554,
+          "avgConfidence": 0.397
+        },
+        "yolo11l": {
+          "count": 3,
+          "maxConfidence": 0.538,
+          "avgConfidence": 0.416
+        },
+        "yolo11n": {
+          "count": 3,
+          "maxConfidence": 0.51,
+          "avgConfidence": 0.389
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.284,
+          "avgConfidence": 0.284
+        }
+      },
+      "classNames": [
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "3 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof07996",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF07996",
+      "sceneOrder": 22,
+      "title": "Image AoF07996",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF07996.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF07996.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF07996.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            777,
+            139,
+            73,
+            57
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.6842,
+            "bbox": [
+              747.44,
+              150.95,
+              108.2,
+              50.26
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.6864,
+            "bbox": [
+              753.89,
+              139.25,
+              97.47,
+              61.33
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3184,
+            "bbox": [
+              749.68,
+              179.39,
+              32.33,
+              23.13
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.4524,
+            "bbox": [
+              750.7,
+              178.51,
+              32.15,
+              23.22
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.5068,
+            "bbox": [
+              747.72,
+              147.01,
+              112.59,
+              55.21
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.4095,
+            "bbox": [
+              749.78,
+              144.67,
+              110.7,
+              56.34
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.4241,
+            "bbox": [
+              757.66,
+              140.35,
+              91.95,
+              59.87
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.684,
+          "avgConfidence": 0.684
+        },
+        "RT-DETR-L": {
+          "count": 3,
+          "maxConfidence": 0.686,
+          "avgConfidence": 0.486
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.507,
+          "avgConfidence": 0.507
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.41,
+          "avgConfidence": 0.41
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.424,
+          "avgConfidence": 0.424
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01157",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01157",
+      "sceneOrder": 23,
+      "title": "Image PublicDataset01157",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01157.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01157.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01157.jpg",
+      "rawImageAvailable": true,
+      "width": 480,
+      "height": 360,
+      "dimensions": "480 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            243,
+            138,
+            107,
+            32
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            7,
+            25,
+            175,
+            144
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.5272,
+            "bbox": [
+              234.22,
+              132.24,
+              167.3,
+              41.97
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.5095,
+            "bbox": [
+              91.24,
+              111.02,
+              307.66,
+              62.24
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.7281,
+            "bbox": [
+              1.77,
+              23.75,
+              395.15,
+              150.24
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.4016,
+            "bbox": [
+              232.14,
+              132.41,
+              162.35,
+              41.11
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.258,
+            "bbox": [
+              3.94,
+              102.92,
+              390.86,
+              70.69
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3307,
+            "bbox": [
+              5.21,
+              111.26,
+              391.17,
+              62.13
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3409,
+            "bbox": [
+              11.52,
+              113.5,
+              382.1,
+              59.88
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.4731,
+            "bbox": [
+              0.42,
+              104.03,
+              400.38,
+              70.83
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.3707,
+            "bbox": [
+              153.21,
+              123.03,
+              251.88,
+              52.74
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.3522,
+            "bbox": [
+              0,
+              15.07,
+              400.85,
+              160.48
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2964,
+            "bbox": [
+              0,
+              67.63,
+              392.47,
+              107.52
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2959,
+            "bbox": [
+              4,
+              115.08,
+              387.04,
+              58.73
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.527,
+          "avgConfidence": 0.527
+        },
+        "RT-DETR-L": {
+          "count": 6,
+          "maxConfidence": 0.728,
+          "avgConfidence": 0.428
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.473,
+          "avgConfidence": 0.473
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.371,
+          "avgConfidence": 0.371
+        },
+        "yolo12n": {
+          "count": 3,
+          "maxConfidence": 0.352,
+          "avgConfidence": 0.315
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web10441",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB10441",
+      "sceneOrder": 24,
+      "title": "Image WEB10441",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB10441.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB10441.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB10441.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            121,
+            277,
+            129,
+            39
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            624,
+            355,
+            45,
+            22
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            902,
+            335,
+            30,
+            34
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            793,
+            346,
+            19,
+            22
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.6905,
+            "bbox": [
+              894.02,
+              337.82,
+              39.21,
+              33.36
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6367,
+            "bbox": [
+              627.86,
+              356.06,
+              40.65,
+              21.47
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6307,
+            "bbox": [
+              127.89,
+              280.81,
+              133.38,
+              33.42
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.7381,
+            "bbox": [
+              125.99,
+              279.78,
+              138.26,
+              36.79
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2924,
+            "bbox": [
+              625.59,
+              352.45,
+              48.61,
+              25.73
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6636,
+            "bbox": [
+              894.31,
+              335.99,
+              41.22,
+              37.49
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6347,
+            "bbox": [
+              625.5,
+              354.1,
+              47.44,
+              26.08
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4866,
+            "bbox": [
+              24.71,
+              267.92,
+              29.18,
+              24.12
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3687,
+            "bbox": [
+              792.15,
+              346.28,
+              28.42,
+              24.91
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3516,
+            "bbox": [
+              527.02,
+              341.73,
+              39.6,
+              24.64
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5178,
+            "bbox": [
+              24,
+              266.84,
+              30.39,
+              24.79
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3535,
+            "bbox": [
+              391.66,
+              316.06,
+              28.26,
+              22.8
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4439,
+            "bbox": [
+              522.39,
+              341.67,
+              43.04,
+              25.17
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2745,
+            "bbox": [
+              543.31,
+              206.66,
+              424.62,
+              142.27
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2545,
+            "bbox": [
+              796.1,
+              345.06,
+              32.04,
+              27.05
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2737,
+            "bbox": [
+              790.26,
+              343.73,
+              29.55,
+              26.8
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.6291,
+            "bbox": [
+              124.92,
+              281.57,
+              141.31,
+              33.22
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5801,
+            "bbox": [
+              893.28,
+              335.39,
+              40.53,
+              36.33
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.539,
+            "bbox": [
+              629.01,
+              355.46,
+              40.08,
+              23.44
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.295,
+            "bbox": [
+              527.25,
+              345.35,
+              34.28,
+              20.93
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2554,
+            "bbox": [
+              792.74,
+              344.35,
+              26.4,
+              25.22
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.5497,
+            "bbox": [
+              628.57,
+              353.96,
+              41.29,
+              25.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5465,
+            "bbox": [
+              894.84,
+              336.06,
+              38.08,
+              35.31
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4809,
+            "bbox": [
+              124.55,
+              278.24,
+              137.76,
+              37.58
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.4609,
+            "bbox": [
+              525.44,
+              343.76,
+              36.95,
+              22.16
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.426,
+            "bbox": [
+              790.69,
+              344.46,
+              25.24,
+              25.47
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3541,
+            "bbox": [
+              25.53,
+              267.8,
+              28.3,
+              23.12
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2839,
+            "bbox": [
+              391.24,
+              316.31,
+              25.09,
+              21.42
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.6028,
+            "bbox": [
+              125.36,
+              277.07,
+              137.46,
+              38.99
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5462,
+            "bbox": [
+              627.41,
+              353.86,
+              42.37,
+              25.62
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5067,
+            "bbox": [
+              894.51,
+              337.33,
+              38.4,
+              34.12
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3972,
+            "bbox": [
+              791.88,
+              344.7,
+              27.72,
+              23.97
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3134,
+            "bbox": [
+              26.3,
+              268.25,
+              26.74,
+              22.82
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2673,
+            "bbox": [
+              527.65,
+              343.75,
+              35.56,
+              22.97
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 3,
+          "maxConfidence": 0.691,
+          "avgConfidence": 0.653
+        },
+        "RT-DETR-L": {
+          "count": 13,
+          "maxConfidence": 0.738,
+          "avgConfidence": 0.435
+        },
+        "yolo11l": {
+          "count": 5,
+          "maxConfidence": 0.629,
+          "avgConfidence": 0.46
+        },
+        "yolo11n": {
+          "count": 7,
+          "maxConfidence": 0.55,
+          "avgConfidence": 0.443
+        },
+        "yolo12n": {
+          "count": 6,
+          "maxConfidence": 0.603,
+          "avgConfidence": 0.439
+        }
+      },
+      "classNames": [
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "4 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11264",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11264",
+      "sceneOrder": 25,
+      "title": "Image WEB11264",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11264.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11264.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11264.jpg",
+      "rawImageAvailable": true,
+      "width": 720,
+      "height": 514,
+      "dimensions": "720 x 514",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            221,
+            8,
+            460,
+            481
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8858,
+            "bbox": [
+              50.97,
+              8.91,
+              628.53,
+              481.28
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9088,
+            "bbox": [
+              32.71,
+              0.52,
+              654.31,
+              493.2
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.859,
+            "bbox": [
+              217.55,
+              14.75,
+              484.86,
+              472.63
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7735,
+            "bbox": [
+              16.36,
+              8.56,
+              698.88,
+              481.44
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6414,
+            "bbox": [
+              200.17,
+              16.01,
+              497.96,
+              467.99
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8298,
+            "bbox": [
+              220.98,
+              10.24,
+              464.35,
+              474.85
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.886,
+          "avgConfidence": 0.886
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.909,
+          "avgConfidence": 0.909
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.859,
+          "avgConfidence": 0.859
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.774,
+          "avgConfidence": 0.707
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.83,
+          "avgConfidence": 0.83
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof07745",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF07745",
+      "sceneOrder": 26,
+      "title": "Image AoF07745",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF07745.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF07745.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF07745.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            6,
+            518,
+            71,
+            79
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            102,
+            489,
+            54,
+            43
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.8068,
+            "bbox": [
+              3.37,
+              516.05,
+              81.23,
+              75.39
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6688,
+            "bbox": [
+              109.56,
+              490.93,
+              48.52,
+              37.11
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.7975,
+            "bbox": [
+              -0.61,
+              516.78,
+              82.97,
+              79.02
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7586,
+            "bbox": [
+              104.69,
+              492.03,
+              53.7,
+              38.18
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.7498,
+            "bbox": [
+              104.25,
+              491.41,
+              53.41,
+              38.42
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6677,
+            "bbox": [
+              0.04,
+              519.85,
+              84.04,
+              76.58
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.7389,
+            "bbox": [
+              0.13,
+              518.67,
+              81.07,
+              79.91
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6958,
+            "bbox": [
+              102.83,
+              491.86,
+              55.38,
+              37.77
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.6654,
+            "bbox": [
+              106.71,
+              491.77,
+              52.27,
+              37.1
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6533,
+            "bbox": [
+              0,
+              516.05,
+              83.38,
+              84.43
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 2,
+          "maxConfidence": 0.807,
+          "avgConfidence": 0.738
+        },
+        "RT-DETR-L": {
+          "count": 2,
+          "maxConfidence": 0.798,
+          "avgConfidence": 0.778
+        },
+        "yolo11l": {
+          "count": 2,
+          "maxConfidence": 0.75,
+          "avgConfidence": 0.709
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.739,
+          "avgConfidence": 0.717
+        },
+        "yolo12n": {
+          "count": 2,
+          "maxConfidence": 0.665,
+          "avgConfidence": 0.659
+        }
+      },
+      "classNames": [
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof08298",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF08298",
+      "sceneOrder": 27,
+      "title": "Image AoF08298",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF08298.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF08298.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF08298.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            858,
+            202,
+            47,
+            36
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.6007,
+            "bbox": [
+              861.58,
+              198.45,
+              45.07,
+              34.37
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.5797,
+            "bbox": [
+              862.1,
+              184.7,
+              52.43,
+              46.4
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5379,
+            "bbox": [
+              123.04,
+              333.88,
+              19.65,
+              19.21
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5813,
+            "bbox": [
+              865.18,
+              197.65,
+              42.92,
+              34.15
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.3625,
+            "bbox": [
+              861.48,
+              192.69,
+              50.68,
+              40.76
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.337,
+            "bbox": [
+              860.73,
+              177.95,
+              62.01,
+              55.02
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2725,
+            "bbox": [
+              124.15,
+              333.68,
+              18.63,
+              20.71
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.4873,
+            "bbox": [
+              862.23,
+              199.02,
+              42.98,
+              35.34
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3913,
+            "bbox": [
+              862.19,
+              189.24,
+              52.23,
+              44.63
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3074,
+            "bbox": [
+              861.87,
+              177.46,
+              61.14,
+              55.79
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.3491,
+            "bbox": [
+              861.26,
+              188.95,
+              53.15,
+              44.38
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3356,
+            "bbox": [
+              861.51,
+              176.68,
+              60.93,
+              56.71
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3298,
+            "bbox": [
+              861.05,
+              200.2,
+              45.94,
+              33.3
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.601,
+          "avgConfidence": 0.601
+        },
+        "RT-DETR-L": {
+          "count": 3,
+          "maxConfidence": 0.581,
+          "avgConfidence": 0.566
+        },
+        "yolo11l": {
+          "count": 3,
+          "maxConfidence": 0.363,
+          "avgConfidence": 0.324
+        },
+        "yolo11n": {
+          "count": 3,
+          "maxConfidence": 0.487,
+          "avgConfidence": 0.395
+        },
+        "yolo12n": {
+          "count": 3,
+          "maxConfidence": 0.349,
+          "avgConfidence": 0.338
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01260",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01260",
+      "sceneOrder": 28,
+      "title": "Image PublicDataset01260",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01260.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01260.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01260.jpg",
+      "rawImageAvailable": true,
+      "width": 720,
+      "height": 576,
+      "dimensions": "720 x 576",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            392,
+            264,
+            31,
+            49
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.566,
+            "bbox": [
+              395.33,
+              265.6,
+              30.54,
+              54.82
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.498,
+            "bbox": [
+              398.68,
+              290.86,
+              17.22,
+              29.17
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2625,
+            "bbox": [
+              401.43,
+              291.18,
+              17.42,
+              28.43
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.5788,
+            "bbox": [
+              394.89,
+              263.11,
+              31.56,
+              56.22
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.3947,
+            "bbox": [
+              397.39,
+              291.78,
+              19.11,
+              28.31
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3694,
+            "bbox": [
+              396.95,
+              278.72,
+              22.64,
+              39.67
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.3344,
+            "bbox": [
+              397,
+              291.72,
+              18.74,
+              28.13
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.258,
+            "bbox": [
+              395.52,
+              283.24,
+              23.54,
+              36.1
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 0,
+          "maxConfidence": null,
+          "avgConfidence": null
+        },
+        "RT-DETR-L": {
+          "count": 3,
+          "maxConfidence": 0.566,
+          "avgConfidence": 0.442
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.579,
+          "avgConfidence": 0.579
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.395,
+          "avgConfidence": 0.382
+        },
+        "yolo12n": {
+          "count": 2,
+          "maxConfidence": 0.334,
+          "avgConfidence": 0.296
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11215",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11215",
+      "sceneOrder": 29,
+      "title": "Image WEB11215",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11215.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11215.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11215.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            651,
+            219,
+            303,
+            118
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.7769,
+            "bbox": [
+              660.58,
+              211.31,
+              269.24,
+              111.66
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.7816,
+            "bbox": [
+              642.5,
+              211.71,
+              292.82,
+              119.44
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.6585,
+            "bbox": [
+              652.87,
+              212.49,
+              287.53,
+              113.74
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.6187,
+            "bbox": [
+              642.69,
+              254.83,
+              295.77,
+              73.52
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3755,
+            "bbox": [
+              638.76,
+              221.05,
+              304.05,
+              107.77
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7329,
+            "bbox": [
+              641.08,
+              209.39,
+              301.42,
+              122.39
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.777,
+          "avgConfidence": 0.777
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.782,
+          "avgConfidence": 0.782
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.659,
+          "avgConfidence": 0.659
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.619,
+          "avgConfidence": 0.497
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.733,
+          "avgConfidence": 0.733
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof08055",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF08055",
+      "sceneOrder": 30,
+      "title": "Image AoF08055",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF08055.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF08055.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF08055.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            121,
+            212,
+            65,
+            79
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8056,
+            "bbox": [
+              117.12,
+              189.02,
+              119.34,
+              99.63
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.8205,
+            "bbox": [
+              115.1,
+              188.47,
+              122.51,
+              98.97
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8365,
+            "bbox": [
+              117.01,
+              191.24,
+              119.42,
+              95.35
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7766,
+            "bbox": [
+              114.19,
+              191.05,
+              121.83,
+              96.17
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7687,
+            "bbox": [
+              117.92,
+              191.25,
+              123.7,
+              95.87
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.806,
+          "avgConfidence": 0.806
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.821,
+          "avgConfidence": 0.821
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.837,
+          "avgConfidence": 0.837
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.777,
+          "avgConfidence": 0.777
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.769,
+          "avgConfidence": 0.769
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01110",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01110",
+      "sceneOrder": 31,
+      "title": "Image PublicDataset01110",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01110.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01110.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01110.jpg",
+      "rawImageAvailable": true,
+      "width": 480,
+      "height": 360,
+      "dimensions": "480 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            116,
+            58,
+            346,
+            105
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8738,
+            "bbox": [
+              114.9,
+              61.25,
+              345.64,
+              99.91
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9064,
+            "bbox": [
+              116.61,
+              62.41,
+              360.65,
+              98.44
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8988,
+            "bbox": [
+              121.27,
+              58.98,
+              358.47,
+              104.38
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8373,
+            "bbox": [
+              117.36,
+              57.69,
+              362.14,
+              103.9
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8731,
+            "bbox": [
+              118.17,
+              56.42,
+              361.6,
+              104.13
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.874,
+          "avgConfidence": 0.874
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.906,
+          "avgConfidence": 0.906
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.899,
+          "avgConfidence": 0.899
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.837,
+          "avgConfidence": 0.837
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.873,
+          "avgConfidence": 0.873
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof08124",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF08124",
+      "sceneOrder": 32,
+      "title": "Image AoF08124",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF08124.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF08124.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF08124.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            1143,
+            122,
+            73,
+            94
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.5567,
+            "bbox": [
+              1137.42,
+              109.58,
+              83.04,
+              108.99
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.6515,
+            "bbox": [
+              1158.72,
+              135.67,
+              60.57,
+              82.28
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5539,
+            "bbox": [
+              1150.09,
+              116.68,
+              69.01,
+              100.44
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.6058,
+            "bbox": [
+              1139.81,
+              111.04,
+              76.57,
+              106.98
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.5161,
+            "bbox": [
+              1108.52,
+              91.49,
+              109.86,
+              122.19
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.348,
+            "bbox": [
+              1145.82,
+              119.1,
+              75.44,
+              97.62
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.4877,
+            "bbox": [
+              1109.03,
+              84.75,
+              109.64,
+              128.91
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2909,
+            "bbox": [
+              1135.13,
+              95.71,
+              84.35,
+              118.64
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.557,
+          "avgConfidence": 0.557
+        },
+        "RT-DETR-L": {
+          "count": 2,
+          "maxConfidence": 0.652,
+          "avgConfidence": 0.603
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.606,
+          "avgConfidence": 0.606
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.516,
+          "avgConfidence": 0.432
+        },
+        "yolo12n": {
+          "count": 2,
+          "maxConfidence": 0.488,
+          "avgConfidence": 0.389
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof08061",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF08061",
+      "sceneOrder": 33,
+      "title": "Image AoF08061",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF08061.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF08061.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF08061.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            107,
+            208,
+            60,
+            87
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.7956,
+            "bbox": [
+              107.73,
+              200.83,
+              64.79,
+              92.11
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.7656,
+            "bbox": [
+              107.45,
+              204.53,
+              62.83,
+              85.92
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8,
+            "bbox": [
+              108.31,
+              207.38,
+              59.2,
+              85.69
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.6828,
+            "bbox": [
+              109.75,
+              204.7,
+              59.02,
+              85.87
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3301,
+            "bbox": [
+              107.19,
+              189.46,
+              123.57,
+              96.68
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2874,
+            "bbox": [
+              109.49,
+              196.51,
+              93.71,
+              91.83
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.5974,
+            "bbox": [
+              110.58,
+              208.21,
+              54,
+              83.38
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.431,
+            "bbox": [
+              107.59,
+              192.02,
+              117.06,
+              99.44
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.796,
+          "avgConfidence": 0.796
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.766,
+          "avgConfidence": 0.766
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.8,
+          "avgConfidence": 0.8
+        },
+        "yolo11n": {
+          "count": 3,
+          "maxConfidence": 0.683,
+          "avgConfidence": 0.433
+        },
+        "yolo12n": {
+          "count": 2,
+          "maxConfidence": 0.597,
+          "avgConfidence": 0.514
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11287",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11287",
+      "sceneOrder": 34,
+      "title": "Image WEB11287",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11287.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11287.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11287.jpg",
+      "rawImageAvailable": true,
+      "width": 269,
+      "height": 361,
+      "dimensions": "269 x 361",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            121,
+            134,
+            139,
+            58
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.5366,
+            "bbox": [
+              139.69,
+              155.61,
+              59.63,
+              33.39
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.4911,
+            "bbox": [
+              138.86,
+              156.77,
+              57.8,
+              34.44
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3576,
+            "bbox": [
+              135.6,
+              114.28,
+              132.83,
+              78.02
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2645,
+            "bbox": [
+              136.45,
+              145.86,
+              131.03,
+              45.88
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.3281,
+            "bbox": [
+              127.48,
+              130.42,
+              128.44,
+              62.21
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3258,
+            "bbox": [
+              125.95,
+              105.8,
+              135.49,
+              86.75
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.5068,
+            "bbox": [
+              125.92,
+              115.3,
+              118.99,
+              77.09
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.4402,
+            "bbox": [
+              125.45,
+              137.83,
+              136.21,
+              55.73
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2773,
+            "bbox": [
+              125.56,
+              157.23,
+              72.1,
+              35.64
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.537,
+          "avgConfidence": 0.537
+        },
+        "RT-DETR-L": {
+          "count": 3,
+          "maxConfidence": 0.491,
+          "avgConfidence": 0.371
+        },
+        "yolo11l": {
+          "count": 2,
+          "maxConfidence": 0.328,
+          "avgConfidence": 0.327
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.507,
+          "avgConfidence": 0.507
+        },
+        "yolo12n": {
+          "count": 2,
+          "maxConfidence": 0.44,
+          "avgConfidence": 0.359
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01193",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01193",
+      "sceneOrder": 35,
+      "title": "Image PublicDataset01193",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01193.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01193.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01193.jpg",
+      "rawImageAvailable": true,
+      "width": 540,
+      "height": 360,
+      "dimensions": "540 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            2,
+            63,
+            290,
+            95
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8466,
+            "bbox": [
+              8.83,
+              61.22,
+              275.04,
+              99.41
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.8494,
+            "bbox": [
+              0.67,
+              62.38,
+              282.35,
+              96.64
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2681,
+            "bbox": [
+              -0.88,
+              112.09,
+              283.9,
+              52.39
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8301,
+            "bbox": [
+              0.24,
+              55.77,
+              290.01,
+              108.81
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7721,
+            "bbox": [
+              1.02,
+              52.15,
+              292.7,
+              112.46
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7408,
+            "bbox": [
+              3.27,
+              65.83,
+              288.27,
+              97.8
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.847,
+          "avgConfidence": 0.847
+        },
+        "RT-DETR-L": {
+          "count": 2,
+          "maxConfidence": 0.849,
+          "avgConfidence": 0.559
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.83,
+          "avgConfidence": 0.83
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.772,
+          "avgConfidence": 0.772
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.741,
+          "avgConfidence": 0.741
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01270",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01270",
+      "sceneOrder": 36,
+      "title": "Image PublicDataset01270",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01270.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01270.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01270.jpg",
+      "rawImageAvailable": true,
+      "width": 720,
+      "height": 576,
+      "dimensions": "720 x 576",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            518,
+            297,
+            19,
+            31
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.7329,
+            "bbox": [
+              516.3,
+              297.46,
+              25.6,
+              29.33
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.7183,
+            "bbox": [
+              515.34,
+              297.87,
+              25.71,
+              27.47
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.7438,
+            "bbox": [
+              515.39,
+              298.71,
+              26.29,
+              28.19
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7055,
+            "bbox": [
+              514.79,
+              296.78,
+              28.44,
+              29.78
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.6633,
+            "bbox": [
+              513.88,
+              297.4,
+              28.03,
+              28.65
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.733,
+          "avgConfidence": 0.733
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.718,
+          "avgConfidence": 0.718
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.744,
+          "avgConfidence": 0.744
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.706,
+          "avgConfidence": 0.706
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.663,
+          "avgConfidence": 0.663
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01122",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01122",
+      "sceneOrder": 37,
+      "title": "Image PublicDataset01122",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01122.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01122.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01122.jpg",
+      "rawImageAvailable": true,
+      "width": 480,
+      "height": 360,
+      "dimensions": "480 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            89,
+            112,
+            277,
+            91
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.5517,
+            "bbox": [
+              340.62,
+              172.67,
+              24.37,
+              29.01
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5073,
+            "bbox": [
+              289.22,
+              143.19,
+              76.07,
+              60.83
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2632,
+            "bbox": [
+              301.3,
+              188.46,
+              22.26,
+              14.13
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3547,
+            "bbox": [
+              296.19,
+              185.2,
+              28.41,
+              17.05
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2721,
+            "bbox": [
+              294.35,
+              172.36,
+              71.4,
+              31.02
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.2574,
+            "bbox": [
+              288.6,
+              145.06,
+              78.15,
+              58.35
+            ]
+          }
+        ],
+        "yolo11n": [],
+        "yolo12n": []
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 0,
+          "maxConfidence": null,
+          "avgConfidence": null
+        },
+        "RT-DETR-L": {
+          "count": 5,
+          "maxConfidence": 0.552,
+          "avgConfidence": 0.39
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.257,
+          "avgConfidence": 0.257
+        },
+        "yolo11n": {
+          "count": 0,
+          "maxConfidence": null,
+          "avgConfidence": null
+        },
+        "yolo12n": {
+          "count": 0,
+          "maxConfidence": null,
+          "avgConfidence": null
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01135",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01135",
+      "sceneOrder": 38,
+      "title": "Image PublicDataset01135",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01135.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01135.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01135.jpg",
+      "rawImageAvailable": true,
+      "width": 480,
+      "height": 360,
+      "dimensions": "480 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            2,
+            5,
+            202,
+            79
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.6123,
+            "bbox": [
+              6.79,
+              12.19,
+              278.74,
+              147.83
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.543,
+            "bbox": [
+              -1.42,
+              9.36,
+              295.69,
+              156
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3594,
+            "bbox": [
+              449.44,
+              1.26,
+              30.67,
+              166.22
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.59,
+            "bbox": [
+              0,
+              10.32,
+              297.95,
+              164.38
+            ]
+          }
+        ],
+        "yolo11n": [],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.4762,
+            "bbox": [
+              0.11,
+              8.46,
+              289.98,
+              170.37
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.612,
+          "avgConfidence": 0.612
+        },
+        "RT-DETR-L": {
+          "count": 2,
+          "maxConfidence": 0.543,
+          "avgConfidence": 0.451
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.59,
+          "avgConfidence": 0.59
+        },
+        "yolo11n": {
+          "count": 0,
+          "maxConfidence": null,
+          "avgConfidence": null
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.476,
+          "avgConfidence": 0.476
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11590",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11590",
+      "sceneOrder": 39,
+      "title": "Image WEB11590",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11590.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11590.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11590.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 360,
+      "dimensions": "640 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            268,
+            0,
+            365,
+            294
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8738,
+            "bbox": [
+              274.13,
+              3.61,
+              359.81,
+              287.18
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9391,
+            "bbox": [
+              263.07,
+              -0.61,
+              376.85,
+              280.18
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.9097,
+            "bbox": [
+              265.74,
+              6.26,
+              374.25,
+              277.66
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8938,
+            "bbox": [
+              268.44,
+              5.74,
+              371.3,
+              277.91
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.89,
+            "bbox": [
+              271.25,
+              5.44,
+              368.71,
+              280.45
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.874,
+          "avgConfidence": 0.874
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.939,
+          "avgConfidence": 0.939
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.91,
+          "avgConfidence": 0.91
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.894,
+          "avgConfidence": 0.894
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.89,
+          "avgConfidence": 0.89
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11259",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11259",
+      "sceneOrder": 40,
+      "title": "Image WEB11259",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11259.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11259.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11259.jpg",
+      "rawImageAvailable": true,
+      "width": 1024,
+      "height": 768,
+      "dimensions": "1024 x 768",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            550,
+            18,
+            259,
+            372
+          ]
+        },
+        {
+          "className": "smoke",
+          "bbox": [
+            420,
+            345,
+            180,
+            265
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8173,
+            "bbox": [
+              530.04,
+              5.91,
+              261.74,
+              389.91
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.7432,
+            "bbox": [
+              499.74,
+              1.3,
+              326.27,
+              416.74
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3786,
+            "bbox": [
+              561.42,
+              382.87,
+              87.3,
+              98.38
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.299,
+            "bbox": [
+              561.66,
+              406.97,
+              46.18,
+              74.78
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2784,
+            "bbox": [
+              500.62,
+              -0.95,
+              513.42,
+              434.84
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3093,
+            "bbox": [
+              502.99,
+              -0.95,
+              511.15,
+              414.68
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3595,
+            "bbox": [
+              446.63,
+              2.27,
+              365.57,
+              606.44
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.7283,
+            "bbox": [
+              420.05,
+              8.33,
+              402.41,
+              587.19
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2518,
+            "bbox": [
+              463.04,
+              591.09,
+              31.34,
+              21.4
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.5754,
+            "bbox": [
+              523.1,
+              6.74,
+              282.05,
+              387.32
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.3677,
+            "bbox": [
+              484.35,
+              8.08,
+              322.93,
+              518.23
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.6964,
+            "bbox": [
+              453.65,
+              7.06,
+              341.42,
+              581.53
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.817,
+          "avgConfidence": 0.817
+        },
+        "RT-DETR-L": {
+          "count": 6,
+          "maxConfidence": 0.743,
+          "avgConfidence": 0.395
+        },
+        "yolo11l": {
+          "count": 2,
+          "maxConfidence": 0.728,
+          "avgConfidence": 0.49
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.575,
+          "avgConfidence": 0.472
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.696,
+          "avgConfidence": 0.696
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof07893",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF07893",
+      "sceneOrder": 41,
+      "title": "Image AoF07893",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF07893.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF07893.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF07893.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            0,
+            212,
+            74,
+            80
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.8749,
+            "bbox": [
+              0.21,
+              210.71,
+              72.99,
+              76.97
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.8372,
+            "bbox": [
+              -0.32,
+              208.29,
+              75.82,
+              84.01
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.5845,
+            "bbox": [
+              0.4,
+              185.52,
+              79.88,
+              100.01
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.7648,
+            "bbox": [
+              0,
+              207.19,
+              74.35,
+              82.95
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.7157,
+            "bbox": [
+              0,
+              206.7,
+              77.59,
+              81.57
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.688,
+            "bbox": [
+              0,
+              207.69,
+              74.99,
+              80.99
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.875,
+          "avgConfidence": 0.875
+        },
+        "RT-DETR-L": {
+          "count": 2,
+          "maxConfidence": 0.837,
+          "avgConfidence": 0.711
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.765,
+          "avgConfidence": 0.765
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.716,
+          "avgConfidence": 0.716
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.688,
+          "avgConfidence": 0.688
+        }
+      },
+      "classNames": [
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11010",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11010",
+      "sceneOrder": 42,
+      "title": "Image WEB11010",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11010.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11010.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11010.jpg",
+      "rawImageAvailable": true,
+      "width": 1357,
+      "height": 641,
+      "dimensions": "1357 x 641",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            592,
+            8,
+            347,
+            411
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.8465,
+            "bbox": [
+              614.88,
+              3.57,
+              441.17,
+              412.02
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.8151,
+            "bbox": [
+              635.04,
+              0.45,
+              441.97,
+              388.69
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8191,
+            "bbox": [
+              642.77,
+              9.26,
+              397.67,
+              413.88
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7907,
+            "bbox": [
+              609.1,
+              9.86,
+              447.85,
+              380.9
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7994,
+            "bbox": [
+              618.33,
+              9.82,
+              490.11,
+              373.72
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2562,
+            "bbox": [
+              1170.67,
+              206.04,
+              36.97,
+              67.98
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.847,
+          "avgConfidence": 0.847
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.815,
+          "avgConfidence": 0.815
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.819,
+          "avgConfidence": 0.819
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.791,
+          "avgConfidence": 0.791
+        },
+        "yolo12n": {
+          "count": 2,
+          "maxConfidence": 0.799,
+          "avgConfidence": 0.528
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-publicdataset01190",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "PublicDataset01190",
+      "sceneOrder": 43,
+      "title": "Image PublicDataset01190",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/PublicDataset01190.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/PublicDataset01190.jpg",
+      "thumbnailImage": "thumbnails/DFire/PublicDataset01190.jpg",
+      "rawImageAvailable": true,
+      "width": 540,
+      "height": 360,
+      "dimensions": "540 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            191,
+            114,
+            86,
+            41
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.6288,
+            "bbox": [
+              184.16,
+              113.68,
+              96.52,
+              42.76
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.7354,
+            "bbox": [
+              85.41,
+              87.32,
+              199.51,
+              68.67
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6476,
+            "bbox": [
+              186.4,
+              111.29,
+              94.79,
+              44.61
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.5798,
+            "bbox": [
+              89.78,
+              86.22,
+              207.83,
+              69.98
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.5083,
+            "bbox": [
+              99.06,
+              82.82,
+              202.44,
+              73.09
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.2829,
+            "bbox": [
+              0,
+              81.47,
+              305.29,
+              77.39
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.6614,
+            "bbox": [
+              129.02,
+              84.28,
+              172.57,
+              71.56
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.629,
+          "avgConfidence": 0.629
+        },
+        "RT-DETR-L": {
+          "count": 2,
+          "maxConfidence": 0.735,
+          "avgConfidence": 0.692
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.58,
+          "avgConfidence": 0.58
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.508,
+          "avgConfidence": 0.396
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.661,
+          "avgConfidence": 0.661
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof07856",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF07856",
+      "sceneOrder": 44,
+      "title": "Image AoF07856",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF07856.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF07856.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF07856.jpg",
+      "rawImageAvailable": true,
+      "width": 1901,
+      "height": 911,
+      "dimensions": "1901 x 911",
+      "groundTruth": [
+        {
+          "className": "fire",
+          "bbox": [
+            1374,
+            229,
+            72,
+            90
+          ]
+        },
+        {
+          "className": "fire",
+          "bbox": [
+            1451,
+            298,
+            144,
+            135
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "fire",
+            "confidence": 0.8132,
+            "bbox": [
+              1392.99,
+              236.93,
+              204.36,
+              184.42
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "fire",
+            "confidence": 0.7126,
+            "bbox": [
+              1432.39,
+              289.68,
+              167.84,
+              132.61
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6242,
+            "bbox": [
+              1391.48,
+              234.09,
+              59.5,
+              80.81
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6465,
+            "bbox": [
+              1395.9,
+              234.27,
+              59.09,
+              80.53
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.6694,
+            "bbox": [
+              1397.64,
+              233.77,
+              58.39,
+              81.6
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.7314,
+            "bbox": [
+              1393.12,
+              237.24,
+              203.58,
+              185.03
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "fire",
+            "confidence": 0.8058,
+            "bbox": [
+              1392.92,
+              233.27,
+              205.38,
+              194.5
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2696,
+            "bbox": [
+              1392.85,
+              233.44,
+              63.78,
+              81.66
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "fire",
+            "confidence": 0.7392,
+            "bbox": [
+              1399.45,
+              231.93,
+              193.07,
+              192.67
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.5258,
+            "bbox": [
+              1443.45,
+              289.01,
+              150.26,
+              135.73
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2816,
+            "bbox": [
+              1393.11,
+              232.2,
+              63.26,
+              83.13
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "fire",
+            "confidence": 0.7613,
+            "bbox": [
+              1394.12,
+              232.23,
+              201.59,
+              193.8
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.813,
+          "avgConfidence": 0.813
+        },
+        "RT-DETR-L": {
+          "count": 5,
+          "maxConfidence": 0.731,
+          "avgConfidence": 0.677
+        },
+        "yolo11l": {
+          "count": 2,
+          "maxConfidence": 0.806,
+          "avgConfidence": 0.538
+        },
+        "yolo11n": {
+          "count": 3,
+          "maxConfidence": 0.739,
+          "avgConfidence": 0.516
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.761,
+          "avgConfidence": 0.761
+        }
+      },
+      "classNames": [
+        "fire"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11675",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11675",
+      "sceneOrder": 45,
+      "title": "Image WEB11675",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11675.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11675.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11675.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 360,
+      "dimensions": "640 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            6,
+            6,
+            627,
+            250
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.93,
+            "bbox": [
+              4.56,
+              5.2,
+              632.51,
+              250.13
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9523,
+            "bbox": [
+              -0.4,
+              0.58,
+              637.62,
+              249.99
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.8959,
+            "bbox": [
+              0,
+              7.15,
+              640,
+              241.82
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.8529,
+            "bbox": [
+              0.2,
+              6.84,
+              639.8,
+              247.94
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.9019,
+            "bbox": [
+              0,
+              5.7,
+              639.96,
+              245.52
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.93,
+          "avgConfidence": 0.93
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.952,
+          "avgConfidence": 0.952
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.896,
+          "avgConfidence": 0.896
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.853,
+          "avgConfidence": 0.853
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.902,
+          "avgConfidence": 0.902
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-web11543",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "WEB11543",
+      "sceneOrder": 46,
+      "title": "Image WEB11543",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/WEB11543.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/WEB11543.jpg",
+      "thumbnailImage": "thumbnails/DFire/WEB11543.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 360,
+      "dimensions": "640 x 360",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            68,
+            15,
+            563,
+            238
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.9146,
+            "bbox": [
+              64.97,
+              7.11,
+              569.04,
+              244.72
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.9514,
+            "bbox": [
+              65.51,
+              0.07,
+              574.99,
+              255.04
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.2878,
+            "bbox": [
+              173.22,
+              225.11,
+              14.14,
+              9.12
+            ]
+          },
+          {
+            "className": "fire",
+            "confidence": 0.3659,
+            "bbox": [
+              175.74,
+              224.98,
+              14.26,
+              9.37
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.9257,
+            "bbox": [
+              65.51,
+              6.88,
+              574.49,
+              249.92
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.9024,
+            "bbox": [
+              69.44,
+              5.35,
+              570.51,
+              251.45
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.9062,
+            "bbox": [
+              68.54,
+              6.54,
+              571.46,
+              245.85
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.915,
+          "avgConfidence": 0.915
+        },
+        "RT-DETR-L": {
+          "count": 3,
+          "maxConfidence": 0.951,
+          "avgConfidence": 0.535
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.926,
+          "avgConfidence": 0.926
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.902,
+          "avgConfidence": 0.902
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.906,
+          "avgConfidence": 0.906
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof07975",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF07975",
+      "sceneOrder": 47,
+      "title": "Image AoF07975",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF07975.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF07975.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF07975.jpg",
+      "rawImageAvailable": true,
+      "width": 1327,
+      "height": 607,
+      "dimensions": "1327 x 607",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            601,
+            1,
+            207,
+            85
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.6676,
+            "bbox": [
+              588.36,
+              0.15,
+              232.6,
+              92.01
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.7964,
+            "bbox": [
+              582.27,
+              -0.4,
+              259.07,
+              85.55
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.7256,
+            "bbox": [
+              589.83,
+              3.83,
+              223.75,
+              74.86
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.6595,
+            "bbox": [
+              584.18,
+              0.29,
+              229.03,
+              80.82
+            ]
+          },
+          {
+            "className": "smoke",
+            "confidence": 0.6166,
+            "bbox": [
+              585.66,
+              2.16,
+              139.41,
+              76.22
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.7401,
+            "bbox": [
+              589.6,
+              0,
+              222.08,
+              86.83
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.668,
+          "avgConfidence": 0.668
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.796,
+          "avgConfidence": 0.796
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.726,
+          "avgConfidence": 0.726
+        },
+        "yolo11n": {
+          "count": 2,
+          "maxConfidence": 0.66,
+          "avgConfidence": 0.638
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.74,
+          "avgConfidence": 0.74
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "dfire-aof08033",
+      "dataset": "DFire",
+      "taskType": "object-detection",
+      "imageId": "AoF08033",
+      "sceneOrder": 48,
+      "title": "Image AoF08033",
+      "location": "DFire benchmark sample",
+      "baseImage": "viewer/DFire/AoF08033.jpg",
+      "sourceImage": "DFire/ORIGINAL_IMAGES/AoF08033.jpg",
+      "thumbnailImage": "thumbnails/DFire/AoF08033.jpg",
+      "rawImageAvailable": true,
+      "width": 1280,
+      "height": 720,
+      "dimensions": "1280 x 720",
+      "groundTruth": [
+        {
+          "className": "smoke",
+          "bbox": [
+            109,
+            232,
+            35,
+            53
+          ]
+        }
+      ],
+      "predictions": {
+        "DEIMv2": [
+          {
+            "className": "smoke",
+            "confidence": 0.6431,
+            "bbox": [
+              108.92,
+              224.15,
+              42.4,
+              58.4
+            ]
+          }
+        ],
+        "RT-DETR-L": [
+          {
+            "className": "smoke",
+            "confidence": 0.6414,
+            "bbox": [
+              113.21,
+              228.31,
+              32.51,
+              52.82
+            ]
+          }
+        ],
+        "yolo11l": [
+          {
+            "className": "smoke",
+            "confidence": 0.6951,
+            "bbox": [
+              111.59,
+              225.05,
+              37.18,
+              59.74
+            ]
+          }
+        ],
+        "yolo11n": [
+          {
+            "className": "smoke",
+            "confidence": 0.5583,
+            "bbox": [
+              109.53,
+              229.99,
+              35.81,
+              55.7
+            ]
+          }
+        ],
+        "yolo12n": [
+          {
+            "className": "smoke",
+            "confidence": 0.5982,
+            "bbox": [
+              109.11,
+              231.78,
+              31.61,
+              51.25
+            ]
+          }
+        ]
+      },
+      "predictionImages": {},
+      "sceneModelStats": {
+        "DEIMv2": {
+          "count": 1,
+          "maxConfidence": 0.643,
+          "avgConfidence": 0.643
+        },
+        "RT-DETR-L": {
+          "count": 1,
+          "maxConfidence": 0.641,
+          "avgConfidence": 0.641
+        },
+        "yolo11l": {
+          "count": 1,
+          "maxConfidence": 0.695,
+          "avgConfidence": 0.695
+        },
+        "yolo11n": {
+          "count": 1,
+          "maxConfidence": 0.558,
+          "avgConfidence": 0.558
+        },
+        "yolo12n": {
+          "count": 1,
+          "maxConfidence": 0.598,
+          "avgConfidence": 0.598
+        }
+      },
+      "classNames": [
+        "smoke"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 5 model outputs loaded."
     }
   ]
 };

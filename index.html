@@ -78,9 +78,6 @@
             </button>
             <span id="zoomReadout" class="zoom-readout">100%</span>
             <span class="toolbar-spacer"></span>
-            <button id="toggleGroundTruth" class="text-button gt-toggle" type="button" aria-pressed="false">
-              <span id="groundTruthText">Ground Truth</span>
-            </button>
           </div>
 
           <div id="viewerFrame" class="viewer-frame" tabindex="0">
@@ -117,6 +114,12 @@
           <div class="panel-heading">
             <span>Predictions</span>
             <small id="hoverHint">Hover to isolate</small>
+          </div>
+
+          <div class="ground-truth-row">
+            <button id="toggleGroundTruth" class="text-button gt-toggle" type="button" aria-pressed="false">
+              <span id="groundTruthText">Ground Truth</span>
+            </button>
           </div>
 
           <section class="legend-block" aria-label="Segmentation classes">

@@ -40,6 +40,7 @@ const state = {
 };
 
 const els = {
+  workspace: document.querySelector(".workspace"),
   sceneTitle: document.querySelector("#sceneTitle"),
   sceneMeta: document.querySelector("#sceneMeta"),
   sceneCount: document.querySelector("#sceneCount"),
@@ -98,6 +99,37 @@ let focusLensRefreshFrame = 0;
 let resetSceneListScroll = false;
 const preloadedImages = new Map();
 let preloadSceneTimer = 0;
+
+function updateScenePanelWidth(sceneList = visibleScenes()) {
+  if (!els.workspace) return;
+  if (window.matchMedia("(max-width: 1100px)").matches) {
+    els.workspace.style.removeProperty("--scene-panel-width");
+    return;
+  }
+
+  const canvas = updateScenePanelWidth.canvas || (updateScenePanelWidth.canvas = document.createElement("canvas"));
+  const context = canvas.getContext("2d");
+  if (!context) return;
+
+  let maxTextWidth = 0;
+  sceneList.forEach((scene) => {
+    const gtSummary = isSegmentationScene(scene)
+      ? `${scene.groundTruthStats?.classCount || scene.groundTruth.length} classes`
+      : `${scene.groundTruth.length} GT`;
+    const title = scene.title || "";
+    const meta = `${scene.dataset} · ${gtSummary}`;
+
+    context.font = '780 13px Aptos, "IBM Plex Sans", "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif';
+    const titleWidth = context.measureText(title).width;
+    context.font = '650 12px Aptos, "IBM Plex Sans", "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif';
+    const metaWidth = context.measureText(meta).width;
+
+    maxTextWidth = Math.max(maxTextWidth, titleWidth, metaWidth);
+  });
+
+  const panelWidth = clamp(Math.ceil(maxTextWidth + 72 + 12 + 24 + 26), 252, 380);
+  els.workspace.style.setProperty("--scene-panel-width", `${panelWidth}px`);
+}
 
 function resolveInitialTheme() {
   const stored = window.localStorage.getItem(themeStorageKey);
@@ -158,7 +190,20 @@ function sceneClassLegend(scene = currentScene()) {
   if (isSegmentationScene(scene)) {
     return scene?.classLegend || data.classes?.["semantic-segmentation"] || [];
   }
-  return data.classes?.["object-detection"] || [];
+  const detectionLegend = data.classes?.["object-detection"] || [];
+  if (scene?.classLegend?.length) return scene.classLegend;
+  if (scene?.classNames?.length) {
+    const sceneClassNames = new Set(scene.classNames);
+    return detectionLegend.filter((item) => sceneClassNames.has(item.className || item.name));
+  }
+  return detectionLegend;
+}
+
+function detectionClassColor(className, scene = currentScene()) {
+  const legendEntry = sceneClassLegend(scene).find((item) => (item.className || item.name) === className);
+  if (legendEntry?.color) return legendEntry.color;
+  const fallbackEntry = (data.classes?.["object-detection"] || []).find((item) => (item.className || item.name) === className);
+  return fallbackEntry?.color || groundTruthColor;
 }
 
 function datasetOptions() {
@@ -188,6 +233,21 @@ function visibleScenes() {
   return state.datasetId
     ? data.scenes.filter((scene) => scene.dataset === state.datasetId)
     : data.scenes;
+}
+
+function dfireSceneGroup(scene) {
+  if (scene?.dataset !== "DFire" || isSegmentationScene(scene)) return null;
+  const classes = new Set((scene.groundTruth || []).map((item) => item.className));
+  if (classes.has("fire") && classes.has("smoke")) {
+    return { id: "fire-smoke", label: "Fire & Smoke" };
+  }
+  if (classes.has("fire")) {
+    return { id: "fire", label: "Fire" };
+  }
+  if (classes.has("smoke")) {
+    return { id: "smoke", label: "Smoke" };
+  }
+  return { id: "other", label: "Other" };
 }
 
 function resolveAssetPath(path) {
@@ -230,7 +290,15 @@ function visibleSelectedModels(scene = currentScene()) {
 
 function displayedModels(scene = currentScene()) {
   const selectedModels = visibleSelectedModels(scene);
-  if (selectedModels.length) return selectedModels;
+  if (selectedModels.length) {
+    if (!isSegmentationScene(scene) && state.hoveredModel) {
+      const hovered = readyModels(scene).find((model) => model.id === state.hoveredModel);
+      if (hovered && !selectedModels.some((model) => model.id === hovered.id)) {
+        return [...selectedModels, hovered];
+      }
+    }
+    return selectedModels;
+  }
   if (state.hoveredModel) {
     return readyModels(scene).filter((model) => model.id === state.hoveredModel);
   }
@@ -351,6 +419,12 @@ function splitSideForModel(modelId, scene = currentScene()) {
   return "not in split";
 }
 
+function applyDefaultSplitSelection(scene = currentScene()) {
+  const firstModelId = readyModels(scene)[0]?.id || "";
+  state.splitA = "ground-truth";
+  state.splitB = firstModelId || "all-other-models";
+}
+
 function ensureSceneState() {
   const scenes = visibleScenes();
   if (!scenes.length) return;
@@ -359,6 +433,11 @@ function ensureSceneState() {
   const sceneModelIds = new Set(readyModels(scene).map((model) => model.id));
 
   state.selected = new Set([...state.selected].filter((modelId) => sceneModelIds.has(modelId) || !availableModelIds.has(modelId)));
+
+  if (state.mode === "split") {
+    applyDefaultSplitSelection(scene);
+    return;
+  }
 
   const validSplitValues = new Set(["ground-truth", "all-other-models", "all-models", ...sceneModelIds]);
 
@@ -656,7 +735,8 @@ function closeDetectionModal() {
 function openDetectionModal(detection) {
   state.activeDetection = detection;
   const crop = computeCropRect(detection.scene, detection.box.bbox);
-  const highlightColor = detection.kind === "ground-truth" ? groundTruthColor : detection.model?.color || groundTruthColor;
+  const classColor = detectionClassColor(detection.box.className, detection.scene);
+  const highlightColor = classColor || (detection.kind === "ground-truth" ? groundTruthColor : detection.model?.color || groundTruthColor);
   const overlayLabel = detection.kind === "ground-truth"
     ? "Ground truth"
     : `${detection.model?.shortName || detection.model?.name || "Detection"}`;
@@ -685,6 +765,7 @@ function createBoxesLayer(scene, boxes, options = {}) {
   boxes.forEach((box) => {
     const [x, y, width, height] = box.bbox;
     const modelColor = options.model?.color || groundTruthColor;
+    const classColor = detectionClassColor(box.className, scene);
     const confidence = typeof box.confidence === "number" ? `${Math.round(box.confidence * 100)}%` : "";
     const labelText = options.kind === "ground-truth"
       ? `GT ${box.className}`
@@ -701,8 +782,8 @@ function createBoxesLayer(scene, boxes, options = {}) {
     boxEl.style.top = `${(y / scene.height) * 100}%`;
     boxEl.style.width = `${(width / scene.width) * 100}%`;
     boxEl.style.height = `${(height / scene.height) * 100}%`;
-    boxEl.style.setProperty("--box-color", modelColor);
-    boxEl.style.setProperty("--box-fill", withAlpha(modelColor, options.kind === "ground-truth" ? 0.08 : 0.14));
+    boxEl.style.setProperty("--box-color", classColor);
+    boxEl.style.setProperty("--box-fill", withAlpha(classColor, options.kind === "ground-truth" ? 0.08 : 0.14));
     boxEl.style.zIndex = String(options.zIndex || 2);
     boxEl.tabIndex = 0;
     boxEl.role = "button";
@@ -725,8 +806,8 @@ function createBoxesLayer(scene, boxes, options = {}) {
     if (options.showLabels !== false) {
       const label = document.createElement("span");
       label.className = "box-label";
-      label.style.setProperty("--box-color", modelColor);
-      label.style.setProperty("--box-fill", withAlpha(modelColor, options.kind === "ground-truth" ? 0.9 : 0.84));
+      label.style.setProperty("--label-color", options.kind === "ground-truth" ? groundTruthColor : modelColor);
+      label.style.setProperty("--label-fill", withAlpha(options.kind === "ground-truth" ? groundTruthColor : modelColor, options.kind === "ground-truth" ? 0.9 : 0.84));
       const modelLabelText = options.kind === "ground-truth" ? "GT" : compactModelLabel(options.model?.shortName || options.model?.name || "Model");
       const chosenPosition = chooseLabelPosition(scene, box, options.kind, modelLabelText, labelText, occupiedLabels);
       label.style.left = `${chosenPosition.left}%`;
@@ -854,7 +935,11 @@ function buildSceneLayers(scene, models, options = {}) {
 function renderStack(container, scene, models, options = {}) {
   const baseImage = sceneBaseImage(scene);
   const existingBase = container.querySelector(".base-layer");
-  const shouldPreserveBase = options.preserveBaseImage && existingBase && existingBase.getAttribute("src") === baseImage;
+  const expectedBaseSrc = baseImage ? new URL(baseImage, window.location.href).href : "";
+  const currentBaseSrc = existingBase?.currentSrc || existingBase?.src || "";
+  const shouldPreserveBase = options.preserveBaseImage
+    && existingBase
+    && (existingBase.getAttribute("src") === baseImage || currentBaseSrc === expectedBaseSrc);
 
   if (!shouldPreserveBase) {
     container.replaceChildren();
@@ -1072,7 +1157,7 @@ function renderViewer(force = false) {
       viewerStacks()
         .flatMap((target) => [...target.querySelectorAll(".box-layer")])
         .forEach((target) => fadeLayerToTarget(target, boxLayerOpacity(target)));
-      rebuildViewerLayers();
+      rebuildViewerLayers({ preserveBaseImage: !sceneChanged });
     }
     state.skipNextViewerAnimation = false;
     lastViewerSignature = signature;
@@ -1084,12 +1169,13 @@ function renderViewer(force = false) {
 
 function renderScenes() {
   const scenes = visibleScenes();
+  updateScenePanelWidth(scenes);
   const preserveVerticalScroll = !window.matchMedia("(max-width: 760px)").matches;
   const previousScrollTop = preserveVerticalScroll && !resetSceneListScroll ? els.sceneList.scrollTop : 0;
   els.sceneCount.textContent = `${scenes.length} samples`;
   const fragment = document.createDocumentFragment();
 
-  scenes.forEach((scene, index) => {
+  const appendSceneCard = (scene, index) => {
     const button = document.createElement("button");
     button.className = `scene-card${index === state.sceneIndex ? " is-active" : ""}`;
     button.type = "button";
@@ -1118,8 +1204,42 @@ function renderScenes() {
     copy.innerHTML = `<strong>${scene.title}</strong><small>${scene.dataset} · ${gtSummary}</small>`;
 
     button.append(image, copy);
-    fragment.append(button);
-  });
+    return button;
+  };
+
+  if (state.datasetId === "DFire") {
+    const groups = [
+      { id: "fire-smoke", label: "Fire & Smoke" },
+      { id: "fire", label: "Fire" },
+      { id: "smoke", label: "Smoke" }
+    ];
+
+    groups.forEach((group) => {
+      const groupedScenes = scenes
+        .map((scene, index) => ({ scene, index }))
+        .filter(({ scene }) => dfireSceneGroup(scene)?.id === group.id);
+
+      if (!groupedScenes.length) return;
+
+      const section = document.createElement("section");
+      section.className = "scene-group";
+
+      const heading = document.createElement("div");
+      heading.className = "scene-group-heading";
+      heading.innerHTML = `<span>${group.label}</span>`;
+      section.append(heading);
+
+      const list = document.createElement("div");
+      list.className = "scene-group-list";
+      groupedScenes.forEach(({ scene, index }) => list.append(appendSceneCard(scene, index)));
+      section.append(list);
+      fragment.append(section);
+    });
+  } else {
+    scenes.forEach((scene, index) => {
+      fragment.append(appendSceneCard(scene, index));
+    });
+  }
 
   els.sceneList.replaceChildren(fragment);
 
@@ -1158,6 +1278,7 @@ function renderModels() {
   const scene = currentScene();
   const fragment = document.createDocumentFragment();
   const splitMode = state.mode === "split";
+  const segmentationScene = isSegmentationScene(scene);
   const sceneModels = readyModels(scene);
   normalizeHoveredModel(scene);
   syncHoveredModelFromPointer(scene);
@@ -1202,15 +1323,31 @@ function renderModels() {
       row.addEventListener("click", () => {
         if (!hasSceneOutput) return;
         const keepHoverState = state.hoveredModel === model.id;
+        const wasSelected = state.selected.has(model.id);
+        const hadAnySelected = state.selected.size > 0;
         state.skipNextViewerAnimation = keepHoverState;
         if (!keepHoverState) state.hoveredModel = null;
-        if (state.selected.has(model.id)) {
+        if (segmentationScene) {
+          if (wasSelected) {
+            state.selected.delete(model.id);
+          } else {
+            state.selected.clear();
+            state.selected.add(model.id);
+            state.showGroundTruth = false;
+            state.suppressGroundTruthHover = false;
+          }
+        } else if (wasSelected) {
           state.selected.delete(model.id);
         } else {
-          state.selected.clear();
           state.selected.add(model.id);
-          state.showGroundTruth = false;
-          state.suppressGroundTruthHover = false;
+        }
+        if (!segmentationScene && keepHoverState && !wasSelected && !hadAnySelected) {
+          row.classList.add("is-selected");
+          renderSummary();
+          renderMode();
+          lastViewerSignature = viewerSignature();
+          lastRenderedSceneId = scene.id;
+          return;
         }
         render();
       });
@@ -1292,9 +1429,6 @@ function renderSummary() {
   const splitCounts = segmentationScene
     ? `${leftChoice.showGroundTruth ? (scene.groundTruthStats?.classCount || scene.groundTruth.length) : uniquePredictionClassCount(leftChoice.models, scene)} / ${rightChoice.showGroundTruth ? (scene.groundTruthStats?.classCount || scene.groundTruth.length) : uniquePredictionClassCount(rightChoice.models, scene)}`
     : `${leftChoice.showGroundTruth ? scene.groundTruth.length : totalPredictionCount(leftChoice.models, scene)} / ${rightChoice.showGroundTruth ? scene.groundTruth.length : totalPredictionCount(rightChoice.models, scene)}`;
-  const fallbackTag = scene.rawImageAvailable
-    ? (segmentationScene ? "raw aerial image" : "optimized aerial image")
-    : "GT preview fallback";
   const groundTruthCount = segmentationScene
     ? (scene.groundTruthStats?.classCount || scene.groundTruth.length)
     : scene.groundTruth.length;
@@ -1303,7 +1437,7 @@ function renderSummary() {
     : totalPredictionCount(visibleModels, scene);
 
   els.sceneTitle.textContent = scene.title;
-  els.sceneMeta.textContent = `${scene.dataset} / ${scene.dimensions} / ${fallbackTag}`;
+  els.sceneMeta.textContent = `${scene.dataset} / ${scene.dimensions}`;
   els.activeModelLabel.textContent = state.mode === "split" ? "Split models" : "Visible models";
   els.activeModelCount.textContent = state.mode === "split"
     ? `${leftChoice.showGroundTruth ? "GT" : leftChoice.models.length} / ${rightChoice.showGroundTruth ? "GT" : rightChoice.models.length}`
@@ -1320,20 +1454,21 @@ function renderMode() {
   const scene = currentScene();
   if (!scene) return;
   const sceneModels = readyModels(scene);
-  const hasSelection = state.selected.size > 0;
+  const segmentationScene = isSegmentationScene(scene);
+  const allReadySelected = sceneModels.length > 0 && sceneModels.every((model) => state.selected.has(model.id));
 
   document.body.dataset.mode = state.mode;
   els.modeButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.mode === state.mode);
   });
   els.splitSelectors.classList.toggle("is-visible", state.mode === "split");
-  els.actionsRow.classList.toggle("is-hidden", state.mode === "split");
   els.hoverHint.textContent = sceneModels.length
     ? state.mode === "split"
       ? "Split comparison"
       : "Hover to isolate"
     : "No outputs";
-  els.selectAll.textContent = hasSelection ? "Deselect" : "Select first";
+  els.actionsRow.classList.toggle("is-hidden", state.mode === "split" || segmentationScene);
+  els.selectAll.textContent = allReadySelected ? "Deselect all" : "Select all";
   els.selectAll.disabled = sceneModels.length === 0;
   els.clearAll.disabled = sceneModels.length === 0;
   els.taskLabel.textContent = formatTaskType(currentTaskType(scene));
@@ -1434,6 +1569,9 @@ els.modeButtons.forEach((button) => {
     state.hoveredModel = null;
     state.hoveredGroundTruth = false;
     state.suppressGroundTruthHover = false;
+    if (state.mode === "split") {
+      applyDefaultSplitSelection();
+    }
     resetView();
     render();
   });
@@ -1451,10 +1589,12 @@ els.splitB.addEventListener("change", () => {
 });
 
 els.toggleGroundTruth.addEventListener("click", () => {
+  const scene = currentScene();
+  const segmentationScene = isSegmentationScene(scene);
   const shouldShowGroundTruth = !state.showGroundTruth;
   state.showGroundTruth = shouldShowGroundTruth;
   state.suppressGroundTruthHover = !shouldShowGroundTruth;
-  if (shouldShowGroundTruth) state.selected.clear();
+  if (segmentationScene && shouldShowGroundTruth) state.selected.clear();
   state.hoveredGroundTruth = false;
   state.skipNextViewerAnimation = false;
   if (shouldShowGroundTruth) {
@@ -1489,19 +1629,20 @@ els.toggleGroundTruth.addEventListener("pointerleave", (event) => {
 
 els.selectAll.addEventListener("click", () => {
   const sceneModels = readyModels(currentScene());
+  if (isSegmentationScene(currentScene())) return;
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
   state.suppressGroundTruthHover = false;
-  if (state.selected.size > 0) {
-    state.selected.clear();
+  if (sceneModels.length > 0 && sceneModels.every((model) => state.selected.has(model.id))) {
+    sceneModels.forEach((model) => state.selected.delete(model.id));
   } else {
-    state.showGroundTruth = false;
-    if (sceneModels[0]) state.selected.add(sceneModels[0].id);
+    sceneModels.forEach((model) => state.selected.add(model.id));
   }
   render();
 });
 
 els.clearAll.addEventListener("click", () => {
+  if (isSegmentationScene(currentScene())) return;
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
   state.suppressGroundTruthHover = false;
