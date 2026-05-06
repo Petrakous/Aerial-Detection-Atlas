@@ -1,6 +1,7 @@
 const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.TRIFID_DEMO_DATA;
 const releaseBases = {
   core: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v2/",
+  coreDFire: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-dfire-v1/",
   segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v2/",
   segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/"
 };
@@ -256,10 +257,16 @@ function resolveAssetPath(path) {
   if (!isPagesHost) return path;
 
   const viewerMatch = path.match(/^viewer\/([^/]+)\/(.+)$/);
-  if (viewerMatch) return `${releaseBases.core}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
+  if (viewerMatch) {
+    const base = viewerMatch[1] === "DFire" ? releaseBases.coreDFire : releaseBases.core;
+    return `${base}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
+  }
 
   const thumbMatch = path.match(/^thumbnails\/([^/]+)\/(.+)$/);
-  if (thumbMatch) return `${releaseBases.core}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
+  if (thumbMatch) {
+    const base = thumbMatch[1] === "DFire" ? releaseBases.coreDFire : releaseBases.core;
+    return `${base}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
+  }
 
   const segmentationGtMatch = path.match(/^([^/]+)\/([^/]+)\/samples_gt_with_json\/(.+)$/);
   if (segmentationGtMatch) {
