@@ -119,11 +119,15 @@ button {
   gap: 10px;
 }
 
+.brand-copy {
+  min-width: 0;
+}
+
 .brand-mark {
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
-  background: center / contain no-repeat url("assets/brand/atlas-icon-64.png");
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  background: center / contain no-repeat url("assets/brand/triffid-aerial-logo.png");
   filter: drop-shadow(0 8px 18px rgba(12, 26, 56, 0.18));
 }
 
