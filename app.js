@@ -14,6 +14,10 @@ const availableModelIds = new Set(data.models.map((model) => model.id));
 const availableDatasets = (data.datasets?.map((dataset) => dataset.id) || [...new Set(data.scenes.map((scene) => scene.dataset))]);
 
 const state = {
+  route: "home",
+  menuOpen: false,
+  viewerOpen: false,
+  galleryView: "dense",
   sceneIndex: 0,
   datasetId: availableDatasets[0] || "",
   mode: "overlay",
@@ -41,12 +45,33 @@ const state = {
 };
 
 const els = {
+  appMenuOverlay: document.querySelector("#appMenuOverlay"),
+  appMenuPanel: document.querySelector("#appMenuPanel"),
+  appMenuClose: document.querySelector("#appMenuClose"),
+  appMenuNav: document.querySelector("#appMenuNav"),
+  menuThemeToggle: document.querySelector("#menuThemeToggle"),
+  landingMenuButton: document.querySelector("#landingMenuButton"),
+  datasetMenuButton: document.querySelector("#datasetMenuButton"),
+  landingPage: document.querySelector("#landingPage"),
+  datasetPage: document.querySelector("#datasetPage"),
+  datasetSourceLink: document.querySelector("#datasetSourceLink"),
+  datasetPageMeta: document.querySelector("#datasetPageMeta"),
+  datasetPageTask: document.querySelector("#datasetPageTask"),
+  datasetPageHeading: document.querySelector("#datasetPageHeading"),
+  datasetPageSummary: document.querySelector("#datasetPageSummary"),
+  datasetInstructionsButton: document.querySelector("#datasetInstructionsButton"),
+  datasetInstructionsBody: document.querySelector("#datasetInstructionsBody"),
+  galleryGrid: document.querySelector("#galleryGrid"),
+  galleryDenseButton: document.querySelector("#galleryDenseButton"),
+  galleryLargeButton: document.querySelector("#galleryLargeButton"),
+  viewerOverlay: document.querySelector("#viewerOverlay"),
+  viewerApp: document.querySelector("#viewerApp"),
+  datasetGrid: document.querySelector("#datasetGrid"),
+  backButton: document.querySelector("#backButton"),
   workspace: document.querySelector(".workspace"),
   sceneTitle: document.querySelector("#sceneTitle"),
   sceneMeta: document.querySelector("#sceneMeta"),
   sceneCount: document.querySelector("#sceneCount"),
-  datasetControl: document.querySelector("#datasetControl"),
-  datasetSelect: document.querySelector("#datasetSelect"),
   sceneList: document.querySelector("#sceneList"),
   modelList: document.querySelector("#modelList"),
   viewerFrame: document.querySelector("#viewerFrame"),
@@ -59,7 +84,6 @@ const els = {
   splitRightBadge: document.querySelector("#splitRightBadge"),
   focusLens: document.querySelector("#focusLens"),
   focusLensContent: document.querySelector("#focusLensContent"),
-  themeToggle: document.querySelector("#themeToggle"),
   modeButtons: [...document.querySelectorAll(".mode-button")],
   splitSelectors: document.querySelector("#splitSelectors"),
   splitA: document.querySelector("#splitA"),
@@ -80,6 +104,9 @@ const els = {
   predictionCount: document.querySelector("#predictionCount"),
   zoomReadout: document.querySelector("#zoomReadout"),
   detectionModal: document.querySelector("#detectionModal"),
+  instructionsModal: document.querySelector("#instructionsModal"),
+  instructionsModalBackdrop: document.querySelector("#instructionsModalBackdrop"),
+  instructionsModalClose: document.querySelector("#instructionsModalClose"),
   detectionModalBackdrop: document.querySelector("#detectionModalBackdrop"),
   detectionModalClose: document.querySelector("#detectionModalClose"),
   detectionModalTitle: document.querySelector("#detectionModalTitle"),
@@ -100,6 +127,197 @@ let focusLensRefreshFrame = 0;
 let resetSceneListScroll = false;
 const preloadedImages = new Map();
 let preloadSceneTimer = 0;
+let appMenuHideTimer = 0;
+let scrollLockY = 0;
+
+const datasetDescriptions = {
+  DFire: {
+    title: "DFire",
+    task: "Object Detection",
+    summary: "Large-scale image dataset for fire and smoke object detection, designed for machine-learning detection algorithms with YOLO-format bounding-box annotations.",
+    previewImage: "DFire/ORIGINAL_IMAGES/WEB10489.jpg",
+    sourceUrl: "https://github.com/gaia-solutions-on-demand/DFireDataset",
+    sourceLabel: "Original dataset"
+  },
+  LADD: {
+    title: "LADD",
+    task: "Object Detection",
+    summary: "Drone-based pedestrian detection dataset for search-and-rescue scenarios, containing aerial images with bounding-box annotations for the pedestrian class.",
+    sourceUrl: "https://github.com/lacmus-foundation/ladd-utils",
+    sourceLabel: "Original dataset"
+  },
+  RescueNet: {
+    title: "RescueNet",
+    task: "Semantic Segmentation",
+    summary: "High-resolution UAV semantic segmentation benchmark for natural disaster damage assessment, providing pixel-level annotations of post-disaster scenes including buildings, roads and damage-aware scene elements.",
+    previewImage: "RescueNet/ccnet/ground_truth_images/11236.jpg",
+    sourceUrl: "https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation",
+    sourceLabel: "Original dataset"
+  },
+  FloodNetPlus: {
+    title: "FloodNetPlus",
+    task: "Semantic Segmentation",
+    summary: "High-resolution post-disaster aerial imagery benchmark for flood scene understanding, with pixel-level annotations for flooded and non-flooded buildings, roads, water, vegetation, vehicles, pools and background.",
+    previewImage: "FloodNetPlus/ccnet/ground_truth_images/7577.jpg",
+    sourceUrl: "https://github.com/LDS614705356/FloodNet-plus",
+    sourceLabel: "Original dataset"
+  }
+};
+
+function updatePageScrollLock() {
+  const shouldLock = state.viewerOpen || (els.instructionsModal && !els.instructionsModal.hidden);
+  if (shouldLock) {
+    if (!document.body.classList.contains("is-scroll-locked")) {
+      scrollLockY = window.scrollY;
+    }
+    document.documentElement.style.overflow = "hidden";
+    document.body.classList.add("is-scroll-locked");
+    document.body.style.overflow = "hidden";
+    document.body.style.top = `${-scrollLockY}px`;
+    return;
+  }
+
+  const restoreY = document.body.classList.contains("is-scroll-locked") ? scrollLockY : window.scrollY;
+  document.documentElement.style.overflow = "";
+  document.body.classList.remove("is-scroll-locked");
+  document.body.style.overflow = "";
+  document.body.style.top = "";
+  window.scrollTo(0, restoreY);
+}
+
+function parseRouteHash() {
+  const rawHash = window.location.hash.replace(/^#/, "");
+  if (!rawHash || rawHash === "/" || rawHash === "home") {
+    return { route: "home", datasetId: state.datasetId, sceneId: null };
+  }
+
+  if (rawHash.startsWith("dataset/")) {
+    const [datasetPart, sceneToken, ...sceneRest] = rawHash.slice("dataset/".length).split("/");
+    const datasetId = decodeURIComponent(datasetPart || "");
+    const sceneId = sceneToken === "scene" ? decodeURIComponent(sceneRest.join("/")) : null;
+    if (availableDatasets.includes(datasetId)) {
+      return { route: "dataset", datasetId, sceneId };
+    }
+  }
+
+  return { route: "home", datasetId: state.datasetId, sceneId: null };
+}
+
+function sceneIndexForImageId(datasetId, sceneId) {
+  if (!sceneId) return -1;
+  return data.scenes
+    .filter((scene) => scene.dataset === datasetId)
+    .findIndex((scene) => String(scene.imageId) === String(sceneId));
+}
+
+function currentSceneId() {
+  return currentScene()?.imageId || null;
+}
+
+function setRoute(nextRoute, nextDatasetId = state.datasetId, options = {}) {
+  const {
+    updateHash = true,
+    viewerOpen = state.viewerOpen,
+    sceneId = currentSceneId()
+  } = options;
+  state.route = nextRoute;
+  state.viewerOpen = nextRoute === "dataset" ? Boolean(viewerOpen) : false;
+  closeInstructionsModal();
+  if (nextDatasetId && availableDatasets.includes(nextDatasetId)) {
+    state.datasetId = nextDatasetId;
+  }
+
+  if (updateHash) {
+    const nextHash = nextRoute === "dataset"
+      ? state.viewerOpen && sceneId
+        ? `#dataset/${encodeURIComponent(state.datasetId)}/scene/${encodeURIComponent(sceneId)}`
+        : `#dataset/${encodeURIComponent(state.datasetId)}`
+      : "#home";
+    if (window.location.hash !== nextHash) {
+      window.location.hash = nextHash;
+      return;
+    }
+  }
+
+  render();
+}
+
+function routeDataset(datasetId) {
+  state.sceneIndex = 0;
+  state.hoveredModel = null;
+  state.hoveredGroundTruth = false;
+  state.suppressGroundTruthHover = false;
+  state.selected.clear();
+  resetView();
+  lastViewerSignature = "";
+  lastRenderedSceneId = "";
+  setRoute("dataset", datasetId, { viewerOpen: false, sceneId: null });
+}
+
+function openViewerForScene(sceneIndex, { updateHash = true } = {}) {
+  const scenes = visibleScenes();
+  if (!scenes[sceneIndex]) return;
+  state.sceneIndex = sceneIndex;
+  state.viewerOpen = true;
+  state.hoveredModel = null;
+  state.hoveredGroundTruth = false;
+  state.suppressGroundTruthHover = false;
+  closeDetectionModal();
+  resetView();
+  ensureSceneState();
+  lastViewerSignature = "";
+  lastRenderedSceneId = "";
+  setRoute("dataset", state.datasetId, {
+    updateHash,
+    viewerOpen: true,
+    sceneId: scenes[sceneIndex].imageId
+  });
+}
+
+function closeViewerOverlay({ updateHash = true } = {}) {
+  state.viewerOpen = false;
+  state.hoveredModel = null;
+  state.hoveredGroundTruth = false;
+  state.suppressGroundTruthHover = false;
+  closeDetectionModal();
+  setRoute("dataset", state.datasetId, {
+    updateHash,
+    viewerOpen: false,
+    sceneId: null
+  });
+}
+
+function openInstructionsModal() {
+  if (!els.instructionsModal) return;
+  els.instructionsModal.hidden = false;
+  els.instructionsModal.setAttribute("aria-hidden", "false");
+  updatePageScrollLock();
+}
+
+function closeInstructionsModal() {
+  if (!els.instructionsModal) return;
+  els.instructionsModal.hidden = true;
+  els.instructionsModal.setAttribute("aria-hidden", "true");
+  updatePageScrollLock();
+}
+
+function syncRouteFromLocation() {
+  const route = parseRouteHash();
+  state.route = route.route;
+  state.viewerOpen = route.route === "dataset" && Boolean(route.sceneId);
+  if (route.datasetId && availableDatasets.includes(route.datasetId)) {
+    state.datasetId = route.datasetId;
+  }
+  if (route.route === "dataset" && route.sceneId) {
+    const nextIndex = sceneIndexForImageId(state.datasetId, route.sceneId);
+    if (nextIndex >= 0) {
+      state.sceneIndex = nextIndex;
+    } else {
+      state.viewerOpen = false;
+    }
+  }
+  render();
+}
 
 function updateScenePanelWidth(sceneList = visibleScenes()) {
   if (!els.workspace) return;
@@ -117,7 +335,7 @@ function updateScenePanelWidth(sceneList = visibleScenes()) {
     const gtSummary = isSegmentationScene(scene)
       ? `${scene.groundTruthStats?.classCount || scene.groundTruth.length} classes`
       : `${scene.groundTruth.length} GT`;
-    const title = scene.title || "";
+    const title = formatSceneTitle(scene.title || "");
     const meta = `${scene.dataset} · ${gtSummary}`;
 
     context.font = '780 13px Aptos, "IBM Plex Sans", "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif';
@@ -133,19 +351,104 @@ function updateScenePanelWidth(sceneList = visibleScenes()) {
 }
 
 function resolveInitialTheme() {
-  const stored = window.localStorage.getItem(themeStorageKey);
-  if (stored === "light" || stored === "dark") return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  window.localStorage.removeItem(themeStorageKey);
+  return "light";
 }
 
 function applyTheme(theme) {
   state.theme = theme;
   document.documentElement.dataset.theme = theme;
   document.documentElement.style.colorScheme = theme;
-  els.themeToggle.classList.toggle("is-dark", theme === "dark");
-  els.themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
-  els.themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-  els.themeToggle.title = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+  if (els.menuThemeToggle) {
+    els.menuThemeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+    els.menuThemeToggle.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+  }
+}
+
+function openAppMenu() {
+  state.menuOpen = true;
+  window.clearTimeout(appMenuHideTimer);
+  els.appMenuOverlay.hidden = false;
+  els.appMenuOverlay.setAttribute("aria-hidden", "false");
+  window.requestAnimationFrame(() => {
+    els.appMenuOverlay.classList.add("is-open");
+  });
+}
+
+function closeAppMenu() {
+  state.menuOpen = false;
+  els.appMenuOverlay.classList.remove("is-open");
+  els.appMenuOverlay.setAttribute("aria-hidden", "true");
+  window.clearTimeout(appMenuHideTimer);
+  appMenuHideTimer = window.setTimeout(() => {
+    if (state.menuOpen) return;
+    els.appMenuOverlay.hidden = true;
+  }, 240);
+}
+
+function appMenuItems() {
+  return [
+    {
+      id: "home",
+      label: "Home",
+      meta: "Landing page",
+      active: state.route === "home",
+      action: () => setRoute("home")
+    },
+    ...datasetOptions().map((dataset) => ({
+      id: dataset.id,
+      label: dataset.label || dataset.id,
+      meta: `${dataset.count} scenes · ${formatTaskType(dataset.taskType)}`,
+      active: state.route === "dataset" && state.datasetId === dataset.id,
+      action: () => {
+        closeViewerOverlay({ updateHash: false });
+        routeDataset(dataset.id);
+      }
+    })),
+    {
+      id: "project",
+      label: "Visit Project",
+      meta: "",
+      active: false,
+      href: "https://triffid-project.eu/",
+      external: true
+    }
+  ];
+}
+
+function renderAppMenu() {
+  if (!els.appMenuNav) return;
+  const fragment = document.createDocumentFragment();
+  const footerFragment = document.createDocumentFragment();
+  appMenuItems().forEach((item) => {
+    const entry = document.createElement(item.href ? "a" : "button");
+    entry.className = `app-menu-link${item.active ? " is-active" : ""}`;
+    entry.innerHTML = item.external
+      ? `<strong>${item.label}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></strong>${item.meta ? `<span>${item.meta}</span>` : ""}`
+      : `<strong>${item.label}</strong>${item.meta ? `<span>${item.meta}</span>` : ""}`;
+    if (item.href) {
+      entry.href = item.href;
+      entry.target = "_blank";
+      entry.rel = "noreferrer";
+    } else {
+      entry.type = "button";
+      entry.addEventListener("click", () => {
+        closeAppMenu();
+        item.action();
+      });
+    }
+    if (item.external) {
+      footerFragment.append(entry);
+    } else {
+      fragment.append(entry);
+    }
+  });
+  els.appMenuNav.replaceChildren(fragment);
+  const footerEntries = [...footerFragment.childNodes];
+  const themeButton = els.menuThemeToggle;
+  if (themeButton?.parentElement) {
+    themeButton.parentElement.replaceChildren(...footerEntries, themeButton);
+  }
 }
 
 function currentScene() {
@@ -173,6 +476,10 @@ function datasetModels(datasetId = state.datasetId) {
 
 function formatTaskType(taskType) {
   return data.taskTypes?.find((item) => item.id === taskType)?.name || taskType.replace(/-/g, " ");
+}
+
+function formatSceneTitle(title = "") {
+  return title.replace(/^(scene|image)\s+/i, "").trim();
 }
 
 function round(value, places = 0) {
@@ -228,6 +535,178 @@ function datasetOptions() {
       taskTypes
     };
   });
+}
+
+function renderRouteChrome() {
+  document.body.dataset.route = state.route;
+  if (els.landingPage) els.landingPage.hidden = state.route !== "home";
+  if (els.datasetPage) els.datasetPage.hidden = state.route !== "dataset";
+  if (els.viewerOverlay) {
+    els.viewerOverlay.hidden = !(state.route === "dataset" && state.viewerOpen);
+    els.viewerOverlay.setAttribute("aria-hidden", String(!(state.route === "dataset" && state.viewerOpen)));
+  }
+  updatePageScrollLock();
+}
+
+function landingDatasetCards() {
+  return datasetOptions().map((dataset) => {
+    const scenes = data.scenes.filter((scene) => scene.dataset === dataset.id);
+    const previewScene = scenes[0];
+    const modelCount = datasetModels(dataset.id).length;
+    const meta = datasetDescriptions[dataset.id] || {};
+
+    return {
+      id: dataset.id,
+      title: meta.title || dataset.label || dataset.id,
+      task: meta.task || formatTaskType(dataset.taskType),
+      summary: meta.summary || `Benchmark workspace for ${dataset.id}.`,
+      sourceUrl: meta.sourceUrl || "",
+      sourceLabel: meta.sourceLabel || "Dataset page",
+      sampleCount: scenes.length,
+      modelCount,
+      previewImage: resolveAssetPath(meta.previewImage || previewScene?.thumbnailImage || previewScene?.baseImage || ""),
+      taskType: dataset.taskType
+    };
+  });
+}
+
+function renderLanding() {
+  if (!els.datasetGrid) return;
+  const fragment = document.createDocumentFragment();
+  landingDatasetCards().forEach((dataset) => {
+    const card = document.createElement("article");
+    card.className = "dataset-card";
+    card.innerHTML = `
+      <div class="dataset-card-media">
+        <img src="${dataset.previewImage}" alt="${dataset.title} preview" loading="lazy" decoding="async">
+      </div>
+      <div class="dataset-card-copy">
+        <div class="dataset-card-copy-top">
+          <span class="dataset-task">${dataset.task}</span>
+          <div>
+            <h3>${dataset.title}</h3>
+            <p>${dataset.summary}</p>
+          </div>
+          <div class="dataset-meta">
+            <span>${dataset.sampleCount} scenes</span>
+            <span>${dataset.modelCount} models</span>
+          </div>
+        </div>
+        <div class="dataset-actions">
+          <button class="dataset-open" type="button" data-dataset-id="${dataset.id}">
+            Open dataset
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+          </button>
+          <a class="dataset-source" href="${dataset.sourceUrl || "#"}" target="_blank" rel="noreferrer">
+            ${dataset.sourceLabel}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M10 14 19 5M19 13v5h-5M5 10V5h5M5 19h5v-5"></path></svg>
+          </a>
+        </div>
+      </div>
+    `;
+    card.querySelector(".dataset-open")?.addEventListener("click", () => routeDataset(dataset.id));
+    fragment.append(card);
+  });
+  els.datasetGrid.replaceChildren(fragment);
+}
+
+function datasetPageModelCount(datasetId) {
+  return datasetModels(datasetId).length;
+}
+
+function datasetInstructionsMarkup({ datasetTitle, taskLabel, sceneCount, modelCount, segmentation }) {
+  const viewerModeLabel = segmentation
+    ? "compare model overlays, split views, focus inspection, and ground-truth segmentation masks"
+    : "compare model detections, split views, focus inspection, and ground-truth bounding boxes";
+  const taskSpecific = segmentation
+    ? `
+      <li><strong>Semantic classes:</strong> Use the classes panel on the right to inspect the annotated scene categories and compare model coverage against the ground truth.</li>
+      <li><strong>Ground Truth:</strong> Toggle the <strong>Ground Truth</strong> control to view the reference segmentation mask and check where each model agrees or diverges.</li>
+    `
+    : `
+      <li><strong>Detections:</strong> Use the viewer to inspect predicted bounding boxes, class labels, and confidence values across the available models.</li>
+      <li><strong>Ground Truth:</strong> Toggle the <strong>Ground Truth</strong> control to compare the model detections against the expert-annotated boxes.</li>
+    `;
+
+  return `
+    <ul>
+      <li><strong>Dataset overview:</strong> This page presents the curated <strong>${datasetTitle}</strong> benchmark subset with <strong>${sceneCount} scenes</strong> and <strong>${modelCount} model outputs</strong> for <strong>${taskLabel}</strong> comparison.</li>
+      <li><strong>Browse scenes:</strong> Use the gallery below to scan the selected samples. The view switch lets you keep a denser grid or move to larger cards.</li>
+      <li><strong>Open the viewer:</strong> Click any scene card to open the interactive viewer as an overlay without leaving the dataset page.</li>
+      <li><strong>Compare results:</strong> Inside the viewer you can ${viewerModeLabel}.</li>
+      ${taskSpecific}
+      <li><strong>Navigate scenes:</strong> Move through the dataset with the previous and next controls inside the viewer, or close the overlay and choose another scene from the gallery.</li>
+    </ul>
+  `;
+}
+
+function renderDatasetPageHeader() {
+  const dataset = currentDataset();
+  const meta = datasetDescriptions[state.datasetId] || {};
+  const scenes = visibleScenes();
+  const taskLabel = meta.task || formatTaskType(dataset?.taskType || "object-detection");
+  const modelCount = datasetPageModelCount(state.datasetId);
+  const datasetTitle = meta.title || dataset?.name || state.datasetId;
+  const segmentation = (dataset?.taskType || "").includes("segmentation");
+
+  els.datasetPageMeta.textContent = `${scenes.length} scenes · ${modelCount} models`;
+  els.datasetPageTask.textContent = taskLabel;
+  els.datasetPageHeading.textContent = `${datasetTitle} Gallery`;
+  els.datasetPageSummary.textContent = meta.summary || `Browse the ${state.datasetId} benchmark gallery and open any scene in the interactive comparison viewer.`;
+  if (els.datasetInstructionsBody) {
+    els.datasetInstructionsBody.innerHTML = datasetInstructionsMarkup({
+      datasetTitle,
+      taskLabel,
+      sceneCount: scenes.length,
+      modelCount,
+      segmentation
+    });
+  }
+  els.datasetSourceLink.href = meta.sourceUrl || "#";
+}
+
+function renderGallery() {
+  if (!els.galleryGrid) return;
+  els.galleryGrid.classList.toggle("gallery-grid-large", state.galleryView === "large");
+  if (els.galleryDenseButton) {
+    const denseActive = state.galleryView === "dense";
+    els.galleryDenseButton.classList.toggle("is-active", denseActive);
+    els.galleryDenseButton.setAttribute("aria-pressed", String(denseActive));
+  }
+  if (els.galleryLargeButton) {
+    const largeActive = state.galleryView === "large";
+    els.galleryLargeButton.classList.toggle("is-active", largeActive);
+    els.galleryLargeButton.setAttribute("aria-pressed", String(largeActive));
+  }
+  const fragment = document.createDocumentFragment();
+
+  visibleScenes().forEach((scene, index) => {
+    const card = document.createElement("button");
+    const classCount = isSegmentationScene(scene)
+      ? (scene.groundTruthStats?.classCount || scene.groundTruth.length)
+      : scene.groundTruth.length;
+    const modelCount = readyModels(scene).length;
+    card.type = "button";
+    card.className = `gallery-card${state.viewerOpen && index === state.sceneIndex ? " is-active" : ""}`;
+    card.dataset.sceneIndex = String(index);
+    card.innerHTML = `
+      <span class="gallery-card-image">
+        <img src="${resolveAssetPath(scene.thumbnailImage || scene.baseImage)}" alt="${formatSceneTitle(scene.title)} preview" loading="${index < 8 ? "eager" : "lazy"}" decoding="async">
+      </span>
+      <span class="gallery-card-copy">
+        <strong>${formatSceneTitle(scene.title)}</strong>
+        <small>${scene.dimensions}</small>
+        <span class="gallery-card-meta">
+          <span>${classCount} ${isSegmentationScene(scene) ? "classes" : "GT"}</span>
+          <span>${modelCount} models</span>
+        </span>
+      </span>
+    `;
+    card.addEventListener("click", () => openViewerForScene(index));
+    fragment.append(card);
+  });
+
+  els.galleryGrid.replaceChildren(fragment);
 }
 
 function visibleScenes() {
@@ -310,6 +789,15 @@ function displayedModels(scene = currentScene()) {
     return readyModels(scene).filter((model) => model.id === state.hoveredModel);
   }
   return [];
+}
+
+function summaryModels(scene = currentScene()) {
+  if (state.mode === "split" || state.hoveredGroundTruth) return displayedModels(scene);
+  if (state.hoveredModel) {
+    const hovered = readyModels(scene).find((model) => model.id === state.hoveredModel);
+    if (hovered) return [hovered];
+  }
+  return displayedModels(scene);
 }
 
 function effectiveHoverModel(scene = currentScene()) {
@@ -438,15 +926,24 @@ function ensureSceneState() {
   if (state.sceneIndex >= scenes.length) state.sceneIndex = 0;
   const scene = currentScene();
   const sceneModelIds = new Set(readyModels(scene).map((model) => model.id));
+  const validSplitValues = new Set(["ground-truth", "all-other-models", "all-models", ...sceneModelIds]);
 
   state.selected = new Set([...state.selected].filter((modelId) => sceneModelIds.has(modelId) || !availableModelIds.has(modelId)));
 
   if (state.mode === "split") {
-    applyDefaultSplitSelection(scene);
+    if (!validSplitValues.has(state.splitA)) {
+      state.splitA = "ground-truth";
+    }
+
+    if (!validSplitValues.has(state.splitB)) {
+      state.splitB = readyModels(scene)[0]?.id || "all-other-models";
+    }
+
+    if (!state.splitA || !state.splitB) {
+      applyDefaultSplitSelection(scene);
+    }
     return;
   }
-
-  const validSplitValues = new Set(["ground-truth", "all-other-models", "all-models", ...sceneModelIds]);
 
   if (!validSplitValues.has(state.splitA)) {
     state.splitA = readyModels(scene)[0]?.id || "ground-truth";
@@ -508,6 +1005,7 @@ function syncPointerHoverState(scene = currentScene()) {
       || (state.hoveredModel && state.selected.has(state.hoveredModel))
     );
     updateModelHoverGlow(scene);
+    renderSummary();
     renderViewer();
   }
 }
@@ -623,13 +1121,10 @@ function createSegmentationImageLayer(imagePath, className = "segmentation-visua
   const img = createImageLayer(resolveAssetPath(imagePath), className);
   img.addEventListener("load", () => {
     img.classList.add("is-ready");
-    queueFocusLensRefresh();
   });
-  img.addEventListener("error", queueFocusLensRefresh);
   if (img.complete && img.naturalWidth > 0) {
     queueMicrotask(() => {
       img.classList.add("is-ready");
-      queueFocusLensRefresh();
     });
   }
   return img;
@@ -859,9 +1354,15 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
     window.requestAnimationFrame(() => {
       layer.style.opacity = layer.dataset.pendingOpacity || layer.dataset.targetOpacity || String(targetOpacity);
       delete layer.dataset.pendingOpacity;
+      queueFocusLensRefresh();
     });
   };
   img.addEventListener("load", reveal, { once: true });
+  img.addEventListener("error", () => {
+    layer.dataset.waitForImage = "false";
+    layer.style.opacity = "0";
+    queueFocusLensRefresh();
+  }, { once: true });
   if (img.complete && img.naturalWidth > 0) queueMicrotask(reveal);
   if (options.isDimmed) img.classList.add("is-dimmed");
   if (options.isEmphasized) img.classList.add("is-emphasized");
@@ -974,9 +1475,15 @@ function renderFocusLens() {
   }
 
   const sourceStack = els.overlayStack;
+  if (!sourceStack) {
+    els.focusLensContent.replaceChildren();
+    return;
+  }
+
   const clone = sourceStack.cloneNode(true);
   clone.removeAttribute("id");
   clone.className = "image-stack overlay-stack focus-lens-stack";
+
   const sourceImages = [...sourceStack.querySelectorAll("img")];
   const cloneImages = [...clone.querySelectorAll("img")];
   cloneImages.forEach((image, index) => {
@@ -986,6 +1493,7 @@ function renderFocusLens() {
       image.classList.add("is-ready");
     }
   });
+
   els.focusLensContent.replaceChildren(clone);
   updateFocusLensPosition();
 }
@@ -1061,9 +1569,29 @@ function viewerFrameInnerSize() {
 
 function fitZoomForViewport() {
   const { width, height } = viewerFrameInnerSize();
-  const contentWidth = els.viewerContent.offsetWidth || width;
-  const contentHeight = els.viewerContent.offsetHeight || height;
+  const { width: contentWidth, height: contentHeight } = viewerStageSize(currentScene());
   return clampZoom(Math.min(width / contentWidth, height / contentHeight) * fitViewPadding);
+}
+
+function viewerStageSize(scene = currentScene()) {
+  const { width, height } = viewerFrameInnerSize();
+  if (!scene) {
+    return { width, height };
+  }
+
+  const aspectRatio = scene.width / scene.height;
+  let stageWidth = width;
+  let stageHeight = stageWidth / aspectRatio;
+
+  if (stageHeight > height) {
+    stageHeight = height;
+    stageWidth = stageHeight * aspectRatio;
+  }
+
+  return {
+    width: Math.max(1, Math.floor(stageWidth)),
+    height: Math.max(1, Math.floor(stageHeight))
+  };
 }
 
 function fitViewToViewport() {
@@ -1088,9 +1616,14 @@ function zoomReadoutPercent() {
 
 function updateViewerFrame() {
   const scene = currentScene();
+  const stageSize = viewerStageSize(scene);
   document.body.dataset.mode = state.mode;
   els.viewerContent.style.setProperty("--split", `${state.split}%`);
   els.viewerContent.style.aspectRatio = `${scene.width} / ${scene.height}`;
+  els.viewerContent.style.width = `${stageSize.width}px`;
+  els.viewerContent.style.height = `${stageSize.height}px`;
+  els.viewerContent.style.maxWidth = "100%";
+  els.viewerContent.style.maxHeight = "100%";
   els.viewerContent.style.transform = `translate(${state.panX}px, ${state.panY}px) scale(${state.zoom})`;
   els.splitDivider.setAttribute("aria-valuenow", String(Math.round(state.split)));
   els.splitLeftBadge.textContent = splitOptionLabel(state.splitA);
@@ -1178,7 +1711,7 @@ function renderScenes() {
   const scenes = visibleScenes();
   updateScenePanelWidth(scenes);
   const preserveVerticalScroll = !window.matchMedia("(max-width: 760px)").matches;
-  const previousScrollTop = preserveVerticalScroll && !resetSceneListScroll ? els.sceneList.scrollTop : 0;
+  const targetScrollTop = preserveVerticalScroll && !resetSceneListScroll ? els.sceneList.scrollTop : 0;
   els.sceneCount.textContent = `${scenes.length} samples`;
   const fragment = document.createDocumentFragment();
 
@@ -1187,6 +1720,7 @@ function renderScenes() {
     button.className = `scene-card${index === state.sceneIndex ? " is-active" : ""}`;
     button.type = "button";
     button.dataset.sceneIndex = String(index);
+    button.dataset.resolution = scene.dimensions || "";
     button.addEventListener("click", () => {
       state.sceneIndex = index;
       state.hoveredModel = null;
@@ -1208,7 +1742,7 @@ function renderScenes() {
       ? `${scene.groundTruthStats?.classCount || scene.groundTruth.length} classes`
       : `${scene.groundTruth.length} GT`;
     const copy = document.createElement("span");
-    copy.innerHTML = `<strong>${scene.title}</strong><small>${scene.dataset} · ${gtSummary}</small>`;
+    copy.innerHTML = `<strong>${formatSceneTitle(scene.title)}</strong><small>${gtSummary}</small>`;
 
     button.append(image, copy);
     return button;
@@ -1251,7 +1785,11 @@ function renderScenes() {
   els.sceneList.replaceChildren(fragment);
 
   if (preserveVerticalScroll) {
-    els.sceneList.scrollTop = resetSceneListScroll ? 0 : previousScrollTop;
+    const restoredScrollTop = resetSceneListScroll ? 0 : targetScrollTop;
+    els.sceneList.scrollTop = restoredScrollTop;
+    window.requestAnimationFrame(() => {
+      els.sceneList.scrollTop = restoredScrollTop;
+    });
   }
   resetSceneListScroll = false;
 
@@ -1260,25 +1798,6 @@ function renderScenes() {
     activeCard.scrollIntoView({ inline: "center", block: "nearest", behavior: "auto" });
   }
   scenesInitialized = true;
-}
-
-function renderDatasetControl() {
-  const datasets = datasetOptions();
-  els.datasetControl.hidden = datasets.length < 1;
-  const grouped = new Map();
-  datasets.forEach((dataset) => {
-    const taskType = dataset.taskType || dataset.taskTypes?.[0] || "object-detection";
-    if (!grouped.has(taskType)) grouped.set(taskType, []);
-    grouped.get(taskType).push(dataset);
-  });
-  els.datasetSelect.innerHTML = [...grouped.entries()]
-    .map(([taskType, entries]) => `
-      <optgroup label="${formatTaskType(taskType)}">
-        ${entries.map((dataset) => `<option value="${dataset.id}">${dataset.label}</option>`).join("")}
-      </optgroup>
-    `)
-    .join("");
-  els.datasetSelect.value = state.datasetId;
 }
 
 function renderModels() {
@@ -1308,6 +1827,7 @@ function renderModels() {
       state.hoveredModel = model.id;
       state.skipNextViewerAnimation = state.selected.has(model.id);
       updateModelHoverGlow(scene);
+      renderSummary();
       renderViewer();
     });
 
@@ -1318,6 +1838,7 @@ function renderModels() {
       state.skipNextViewerAnimation = state.selected.has(model.id);
       syncHoveredModelFromPointer(scene);
       updateModelHoverGlow(scene);
+      renderSummary();
       renderViewer();
     });
 
@@ -1429,7 +1950,7 @@ function renderSplitSelectors() {
 function renderSummary() {
   const scene = currentScene();
   if (!scene) return;
-  const visibleModels = displayedModels(scene);
+  const visibleModels = summaryModels(scene);
   const leftChoice = splitChoiceConfig(state.splitA, state.splitB, scene);
   const rightChoice = splitChoiceConfig(state.splitB, state.splitA, scene);
   const segmentationScene = isSegmentationScene(scene);
@@ -1443,7 +1964,7 @@ function renderSummary() {
     ? uniquePredictionClassCount(visibleModels, scene)
     : totalPredictionCount(visibleModels, scene);
 
-  els.sceneTitle.textContent = scene.title;
+  els.sceneTitle.textContent = formatSceneTitle(scene.title);
   els.sceneMeta.textContent = `${scene.dataset} / ${scene.dimensions}`;
   els.activeModelLabel.textContent = state.mode === "split" ? "Split models" : "Visible models";
   els.activeModelCount.textContent = state.mode === "split"
@@ -1486,9 +2007,19 @@ function renderMode() {
 }
 
 function render() {
+  renderRouteChrome();
+  renderAppMenu();
+  if (state.route === "home") {
+    renderLanding();
+    return;
+  }
+
+  renderDatasetPageHeader();
+  renderGallery();
+  if (!state.viewerOpen) return;
+
   ensureSceneState();
   const scene = currentScene();
-  renderDatasetControl();
   if (!scene) return;
   if (state.activeDetection && state.activeDetection.scene.id !== scene.id) {
     closeDetectionModal();
@@ -1553,21 +2084,7 @@ document.querySelector("#fitView").addEventListener("click", () => {
 document.addEventListener("pointermove", (event) => {
   state.pointerX = event.clientX;
   state.pointerY = event.clientY;
-  if (currentScene()) syncPointerHoverState(currentScene());
-});
-
-els.datasetSelect.addEventListener("change", () => {
-  state.datasetId = els.datasetSelect.value;
-  state.sceneIndex = 0;
-  state.hoveredModel = null;
-  state.hoveredGroundTruth = false;
-  state.suppressGroundTruthHover = false;
-  state.selected.clear();
-  resetSceneListScroll = true;
-  resetView();
-  lastViewerSignature = "";
-  lastRenderedSceneId = "";
-  render();
+  if (state.viewerOpen && currentScene()) syncPointerHoverState(currentScene());
 });
 
 els.modeButtons.forEach((button) => {
@@ -1582,6 +2099,29 @@ els.modeButtons.forEach((button) => {
     resetView();
     render();
   });
+});
+
+els.landingMenuButton?.addEventListener("click", openAppMenu);
+els.datasetMenuButton?.addEventListener("click", openAppMenu);
+els.appMenuClose?.addEventListener("click", closeAppMenu);
+els.datasetInstructionsButton?.addEventListener("click", openInstructionsModal);
+els.galleryDenseButton?.addEventListener("click", () => {
+  state.galleryView = "dense";
+  renderGallery();
+});
+els.galleryLargeButton?.addEventListener("click", () => {
+  state.galleryView = "large";
+  renderGallery();
+});
+els.appMenuOverlay?.addEventListener("click", (event) => {
+  if (event.target === els.appMenuOverlay) closeAppMenu();
+});
+els.appMenuPanel?.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+els.backButton?.addEventListener("click", () => {
+  closeViewerOverlay();
 });
 
 els.splitA.addEventListener("change", () => {
@@ -1621,6 +2161,7 @@ els.toggleGroundTruth.addEventListener("pointerenter", (event) => {
   state.hoveredGroundTruth = true;
   state.hoveredModel = null;
   updateModelHoverGlow();
+  renderSummary();
   renderViewer();
 });
 
@@ -1631,6 +2172,7 @@ els.toggleGroundTruth.addEventListener("pointerleave", (event) => {
   state.pointerY = event.clientY;
   syncHoveredModelFromPointer();
   updateModelHoverGlow();
+  renderSummary();
   renderViewer();
 });
 
@@ -1659,9 +2201,17 @@ els.clearAll.addEventListener("click", () => {
 });
 
 els.detectionModalClose.addEventListener("click", closeDetectionModal);
+els.instructionsModalClose?.addEventListener("click", closeInstructionsModal);
+els.instructionsModalBackdrop?.addEventListener("click", closeInstructionsModal);
+els.instructionsModal?.addEventListener("click", (event) => {
+  if (event.target === els.instructionsModal) closeInstructionsModal();
+});
 els.detectionModalBackdrop.addEventListener("click", closeDetectionModal);
 els.detectionModal.addEventListener("click", (event) => {
   if (event.target === els.detectionModal) closeDetectionModal();
+});
+els.viewerOverlay?.addEventListener("click", (event) => {
+  if (event.target === els.viewerOverlay) closeViewerOverlay();
 });
 
 function setSplitFromPointer(event) {
@@ -1746,6 +2296,7 @@ els.viewerFrame.addEventListener("wheel", (event) => {
 }, { passive: false });
 
 window.addEventListener("resize", () => {
+  if (state.route !== "dataset" || !state.viewerOpen) return;
   if (state.fitToView) {
     fitViewToViewport();
   } else {
@@ -1754,21 +2305,51 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("keydown", (event) => {
+  if (state.route !== "dataset") return;
   if (event.key === "Escape" && !els.detectionModal.hidden) {
     closeDetectionModal();
     return;
   }
+  if (event.key === "Escape" && els.instructionsModal && !els.instructionsModal.hidden) {
+    closeInstructionsModal();
+    return;
+  }
+  if (event.key === "Escape" && state.menuOpen) {
+    closeAppMenu();
+    return;
+  }
+  if (event.key === "Escape" && state.viewerOpen) {
+    closeViewerOverlay();
+    return;
+  }
+  if (!state.viewerOpen) return;
   if (["INPUT", "SELECT", "TEXTAREA", "BUTTON"].includes(event.target.tagName)) return;
   if (event.key === "ArrowRight") document.querySelector("#nextScene").click();
   if (event.key === "ArrowLeft") document.querySelector("#prevScene").click();
   if (event.key.toLowerCase() === "g") els.toggleGroundTruth.click();
 });
 
+window.addEventListener("hashchange", syncRouteFromLocation);
+
 applyTheme(resolveInitialTheme());
 ensureSceneState();
+const initialRoute = parseRouteHash();
+state.route = initialRoute.route;
+if (initialRoute.datasetId && availableDatasets.includes(initialRoute.datasetId)) {
+  state.datasetId = initialRoute.datasetId;
+}
+state.viewerOpen = state.route === "dataset" && Boolean(initialRoute.sceneId);
+if (state.viewerOpen && initialRoute.sceneId) {
+  const nextIndex = sceneIndexForImageId(state.datasetId, initialRoute.sceneId);
+  if (nextIndex >= 0) {
+    state.sceneIndex = nextIndex;
+  } else {
+    state.viewerOpen = false;
+  }
+}
 render();
 
-els.themeToggle.addEventListener("click", () => {
+els.menuThemeToggle?.addEventListener("click", () => {
   const nextTheme = state.theme === "dark" ? "light" : "dark";
   applyTheme(nextTheme);
   window.localStorage.setItem(themeStorageKey, nextTheme);

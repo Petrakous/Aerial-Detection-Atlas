@@ -60,6 +60,10 @@ const SEGMENTATION_CLASS_COLORS = {
 };
 
 const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD", "DFire"];
+const DATASET_SCENE_LIMITS = {
+  FloodNetPlus: 50,
+  RescueNet: 50
+};
 
 const IGNORED_DIRS = new Set([
   ".git",
@@ -155,6 +159,23 @@ function safeNumericSort(a, b) {
   return String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: "base" });
 }
 
+function sortSceneCandidates(candidates) {
+  return [...candidates].sort((a, b) => {
+    const bActiveModels = b.activeModelCount ?? b.modelCount ?? 0;
+    const aActiveModels = a.activeModelCount ?? a.modelCount ?? 0;
+    if (bActiveModels !== aActiveModels) {
+      return bActiveModels - aActiveModels;
+    }
+    if ((b.classDiversity || 0) !== (a.classDiversity || 0)) {
+      return (b.classDiversity || 0) - (a.classDiversity || 0);
+    }
+    if ((b.qualityScore || 0) !== (a.qualityScore || 0)) {
+      return (b.qualityScore || 0) - (a.qualityScore || 0);
+    }
+    return safeNumericSort(a.sceneId, b.sceneId);
+  });
+}
+
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
@@ -214,6 +235,57 @@ function mergeSegmentationLegendEntries(datasetName, segmentsBySource) {
 function sceneTaskTypeFromJson(json) {
   if (Array.isArray(json.segments)) return "semantic-segmentation";
   return "object-detection";
+}
+
+function average(values) {
+  const numericValues = values.filter((value) => Number.isFinite(value));
+  return numericValues.length
+    ? numericValues.reduce((sum, value) => sum + value, 0) / numericValues.length
+    : 0;
+}
+
+function predictionAnnotationScore(json) {
+  if (Array.isArray(json.detections)) {
+    const activeDetections = json.detections.filter((detection) => Array.isArray(detection.bbox));
+    return {
+      active: activeDetections.length > 0,
+      quality: average(activeDetections.map((detection) => Number(detection.confidence))),
+      classKeys: activeDetections.map((detection) => detection.class_name).filter(Boolean)
+    };
+  }
+
+  if (Array.isArray(json.segments)) {
+    const activeSegments = json.segments.filter((segment) => Number(segment.pixel_count) > 0);
+    const classKeys = activeSegments
+      .map((segment) => `${segment.label_index}:${segment.class_name}`)
+      .filter(Boolean);
+    const confidenceValues = activeSegments
+      .flatMap((segment) => [segment.confidence, segment.score, segment.probability])
+      .map((value) => Number(value));
+    const confidenceQuality = average(confidenceValues);
+
+    if (confidenceQuality > 0) {
+      return {
+        active: activeSegments.length > 0,
+        quality: confidenceQuality,
+        classKeys
+      };
+    }
+
+    const labeledPixels = activeSegments.reduce((sum, segment) => sum + Number(segment.pixel_count), 0);
+    const totalPixels = Number(json.width) * Number(json.height);
+    return {
+      active: activeSegments.length > 0,
+      quality: Number.isFinite(totalPixels) && totalPixels > 0 ? labeledPixels / totalPixels : labeledPixels,
+      classKeys
+    };
+  }
+
+  return {
+    active: false,
+    quality: 0,
+    classKeys: []
+  };
 }
 
 function modelDirLooksValid(datasetRoot, childName) {
@@ -555,7 +627,7 @@ function buildDFireScene({
   };
 }
 
-function buildSegmentationScene({ datasetName, sceneId, sceneRoots, modelDirs, modelMap }) {
+function buildSegmentationScene({ datasetName, sceneId, sceneOrder = null, sceneRoots, modelDirs, modelMap }) {
   const sourceRoot = sceneRoots[0];
   const gtPath = path.join(sourceRoot, "samples_gt_with_json", `${sceneId}.json`);
   const groundTruth = readJson(gtPath);
@@ -617,6 +689,7 @@ function buildSegmentationScene({ datasetName, sceneId, sceneRoots, modelDirs, m
     dataset: datasetName,
     taskType: "semantic-segmentation",
     imageId: sceneId,
+    sceneOrder,
     title: `Scene ${sceneId}`,
     location: `${datasetName} benchmark sample`,
     baseImage: existsFile(generatedViewer)
@@ -737,27 +810,54 @@ function buildDatasets() {
         sceneIdSet.add(sceneId);
       }
     }
-    const sceneIds = [...sceneIdSet].sort(safeNumericSort);
+    const sceneCandidates = sortSceneCandidates(
+      [...sceneIdSet].map((sceneId) => {
+        const sceneRoots = modelDirs
+          .map((modelId) => path.join(datasetRoot, modelId))
+          .filter((root) => existsFile(path.join(root, "samples_gt_with_json", `${sceneId}.json`)));
+        const groundTruthClassKeys = sceneRoots
+          .map((root) => path.join(root, "samples_gt_with_json", `${sceneId}.json`))
+          .filter((gtPath) => existsFile(gtPath))
+          .flatMap((gtPath) => predictionAnnotationScore(readJson(gtPath)).classKeys || []);
+        const annotationScores = modelDirs
+          .map((modelId) => path.join(datasetRoot, modelId, "visualised_samples_with_json", `${sceneId}.json`))
+          .filter((predictionPath) => existsFile(predictionPath))
+          .map((predictionPath) => predictionAnnotationScore(readJson(predictionPath)));
+        const activeAnnotationScores = annotationScores.filter((score) => score.active);
+        const classDiversity = new Set([
+          ...groundTruthClassKeys,
+          ...activeAnnotationScores.flatMap((score) => score.classKeys || [])
+        ]).size;
+        return {
+          sceneId,
+          sceneRoots,
+          modelCount: sceneRoots.length,
+          activeModelCount: activeAnnotationScores.length,
+          classDiversity,
+          qualityScore: average(activeAnnotationScores.map((score) => score.quality))
+        };
+      })
+    );
+    const sceneLimit = DATASET_SCENE_LIMITS[datasetName] || null;
+    const selectedSceneCandidates = sceneLimit
+      ? sceneCandidates.slice(0, sceneLimit)
+      : sceneCandidates;
 
-    for (const sceneId of sceneIds) {
-      const sceneRoots = modelDirs
-        .map((modelId) => path.join(datasetRoot, modelId))
-        .filter((root) => existsFile(path.join(root, "samples_gt_with_json", `${sceneId}.json`)));
-
-      if (!sceneRoots.length) continue;
+    selectedSceneCandidates.forEach(({ sceneId, sceneRoots }, sceneOrder) => {
+      if (!sceneRoots.length) return;
 
       const scene = taskType === "semantic-segmentation"
-        ? buildSegmentationScene({ datasetName, sceneId, sceneRoots, modelDirs, modelMap })
+        ? buildSegmentationScene({ datasetName, sceneId, sceneOrder, sceneRoots, modelDirs, modelMap })
         : buildDetectionScene({ datasetName, sceneId, sceneRoots, modelDirs, modelMap, detectionClassSet });
 
       scenes.push(scene);
-    }
+    });
 
     datasets.push({
       id: datasetName,
       name: datasetName,
       taskType,
-      sceneCount: sceneIds.length,
+      sceneCount: selectedSceneCandidates.length,
       modelIds: modelDirs
     });
   }
@@ -790,7 +890,7 @@ function buildDatasets() {
       return preferredDatasetOrder(a.dataset) - preferredDatasetOrder(b.dataset)
         || a.dataset.localeCompare(b.dataset);
     }
-    if (a.dataset === "DFire" && typeof a.sceneOrder === "number" && typeof b.sceneOrder === "number") {
+    if (typeof a.sceneOrder === "number" && typeof b.sceneOrder === "number") {
       return a.sceneOrder - b.sceneOrder;
     }
     return safeNumericSort(a.imageId, b.imageId);
@@ -805,7 +905,7 @@ function buildDatasets() {
   });
 
   return {
-    title: "Aerial Benchmark Atlas",
+    title: "Visual Perception Engine",
     subtitle: "Segmentation and detection benchmark viewer",
     taskTypes: [
       { id: "semantic-segmentation", name: TASK_META["semantic-segmentation"].name },

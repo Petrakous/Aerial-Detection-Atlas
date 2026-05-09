@@ -4,181 +4,323 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Aerial benchmark viewer for comparing semantic segmentation and object detection outputs against ground truth.">
-    <title>Aerial Benchmark Atlas</title>
+    <title>Visual Perception Engine</title>
     <link rel="icon" href="assets/brand/atlas-icon-32.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/brand/atlas-icon-256.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="app">
-      <header class="topbar">
-        <div class="brand-block">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <div class="brand-copy">
-            <p class="eyebrow">TRIFFID AERIAL</p>
-            <h1>Benchmark Atlas</h1>
-          </div>
-        </div>
-
-        <div class="scene-summary" aria-live="polite">
-          <strong id="sceneTitle">Loading scene</strong>
-          <span id="sceneMeta">Preparing viewer</span>
-        </div>
-
-        <div class="topbar-controls">
-          <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
-            <span class="theme-toggle-sun" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-            </span>
-            <span class="theme-toggle-moon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3c-.02.27-.03.54-.03.81A9 9 0 0 0 20.19 12c.27 0 .54-.01.81-.03Z"></path></svg>
-            </span>
+    <div id="appMenuOverlay" class="app-menu-overlay" hidden aria-hidden="true">
+      <aside id="appMenuPanel" class="app-menu-panel" aria-label="Navigation menu">
+        <div class="app-menu-head">
+          <span>Menu</span>
+          <button id="appMenuClose" class="icon-button app-menu-close" type="button" aria-label="Close menu" title="Close menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
           </button>
+        </div>
+        <nav id="appMenuNav" class="app-menu-nav"></nav>
+        <div class="app-menu-footer">
+          <button id="menuThemeToggle" class="app-menu-theme" type="button" aria-pressed="false">Dark mode</button>
+        </div>
+      </aside>
+    </div>
 
-          <div class="mode-control" role="group" aria-label="Viewer mode">
-            <button class="mode-button is-active" data-mode="overlay" type="button">Overlay</button>
-            <button class="mode-button" data-mode="split" type="button">Split</button>
-            <button class="mode-button" data-mode="focus" type="button">Focus</button>
+    <main id="landingPage" class="landing-page">
+      <header class="landing-header">
+        <div class="landing-brand">
+          <button id="landingMenuButton" class="icon-button menu-button" type="button" aria-label="Open menu" title="Open menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          </button>
+          <span class="landing-brand-mark" aria-hidden="true"></span>
+          <div class="landing-brand-copy">
+            <strong>TRIFFID</strong>
+            <span>Visual Perception Engine</span>
           </div>
         </div>
       </header>
 
-      <main class="workspace">
-        <aside class="scene-panel" aria-label="Scenes">
-          <div class="panel-heading">
-            <span>Scenes</span>
-            <small id="sceneCount">0 samples</small>
+      <section class="landing-hero">
+        <div class="landing-hero-copy">
+          <a class="landing-hero-link landing-triffid-link" href="https://triffid-project.eu/" target="_blank" rel="noreferrer" aria-label="Visit TRIFFID project website">
+            <span class="landing-triffid-logo" aria-hidden="true"></span>
+          </a>
+          <div class="landing-partner-lockup" aria-label="Institutional logos">
+            <a class="landing-hero-link landing-hua-link" href="https://www.hua.gr/en/" target="_blank" rel="noreferrer" aria-label="Visit Harokopio University website">
+              <span class="landing-hua-logo" aria-hidden="true"></span>
+            </a>
+            <a class="landing-hero-link landing-cv-link" href="https://www.linkedin.com/company/hua-computer-vision-group/" target="_blank" rel="noreferrer" aria-label="Visit HUA Computer Vision Group LinkedIn page">
+              <span class="landing-hero-mark" aria-hidden="true"></span>
+            </a>
           </div>
-          <div id="datasetControl" class="dataset-control" aria-label="Dataset selection">
-            <label class="dataset-select-wrap" for="datasetSelect">
-              <span>Dataset</span>
-              <select id="datasetSelect"></select>
-            </label>
-          </div>
-          <div id="sceneList" class="scene-list"></div>
-        </aside>
+          <p class="landing-lead">
+            TRIFFID develops an integrated approach for maximizing the efficiency of First Responders’ field operations through remote and smart robotic reconnaissance in disaster sites. The project integrates AI-powered UGV/UAV robotic platforms, augmented-reality ground-station interfaces, and real-time situational awareness tools into European Civil Protection procedures.
+          </p>
+        </div>
+      </section>
 
-        <section class="viewer-panel" aria-label="Benchmark viewer">
-          <div class="viewer-toolbar">
-            <button id="prevScene" class="icon-button" type="button" aria-label="Previous scene" title="Previous scene">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6 9 12l6 6"></path></svg>
-            </button>
-            <button id="nextScene" class="icon-button" type="button" aria-label="Next scene" title="Next scene">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
-            </button>
-            <span class="toolbar-divider"></span>
-            <button id="zoomOut" class="icon-button" type="button" aria-label="Zoom out" title="Zoom out">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><path d="M15 15 21 21M7.5 10.5h6"></path></svg>
-            </button>
-            <button id="fitView" class="icon-button" type="button" aria-label="Fit view" title="Fit view">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"></path></svg>
-            </button>
-            <button id="zoomIn" class="icon-button" type="button" aria-label="Zoom in" title="Zoom in">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><path d="M15 15 21 21M10.5 7.5v6M7.5 10.5h6"></path></svg>
-            </button>
-            <span id="zoomReadout" class="zoom-readout">100%</span>
-            <span class="toolbar-spacer"></span>
-          </div>
+      <section class="landing-section">
+        <div class="landing-section-head">
+          <h2>Datasets</h2>
+          <p>Select a dataset to open its dedicated benchmark workspace.</p>
+        </div>
+        <div id="datasetGrid" class="dataset-grid"></div>
+      </section>
 
-          <div id="viewerFrame" class="viewer-frame" tabindex="0">
-            <div id="viewerContent" class="viewer-content">
-              <div id="overlayStack" class="image-stack overlay-stack"></div>
-              <div id="splitLeft" class="image-stack split-stack split-left"></div>
-              <div id="splitRight" class="image-stack split-stack split-right"></div>
-              <div id="splitDivider" class="split-divider" role="separator" aria-label="Drag to compare split" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
-              <div id="splitLeftBadge" class="split-badge split-badge-left"></div>
-              <div id="splitRightBadge" class="split-badge split-badge-right"></div>
-              <div id="focusLens" class="focus-lens" aria-hidden="true">
-                <div id="focusLensContent" class="focus-lens-content"></div>
-              </div>
-            </div>
-          </div>
+      <footer class="landing-footer">
+        <div class="eu-flag" aria-hidden="true">
+          <svg viewBox="0 0 60 40" role="img" aria-hidden="true">
+            <rect width="60" height="40" rx="3" fill="#003399"></rect>
+            <g fill="#FFCC00" transform="translate(30 20)">
+              <circle r="1.45" cx="0" cy="-12"></circle>
+              <circle r="1.45" cx="6" cy="-10.4"></circle>
+              <circle r="1.45" cx="10.4" cy="-6"></circle>
+              <circle r="1.45" cx="12" cy="0"></circle>
+              <circle r="1.45" cx="10.4" cy="6"></circle>
+              <circle r="1.45" cx="6" cy="10.4"></circle>
+              <circle r="1.45" cx="0" cy="12"></circle>
+              <circle r="1.45" cx="-6" cy="10.4"></circle>
+              <circle r="1.45" cx="-10.4" cy="6"></circle>
+              <circle r="1.45" cx="-12" cy="0"></circle>
+              <circle r="1.45" cx="-10.4" cy="-6"></circle>
+              <circle r="1.45" cx="-6" cy="-10.4"></circle>
+            </g>
+          </svg>
+        </div>
+        <p>This project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement No.101168042.</p>
+      </footer>
+    </main>
 
-          <div class="status-strip">
-            <div>
-              <span id="activeModelLabel" class="status-label">Active models</span>
-              <strong id="activeModelCount">0</strong>
-            </div>
-            <div>
-              <span id="bestIouLabel" class="status-label">GT boxes</span>
-              <strong id="bestIou">0.00</strong>
-            </div>
-            <div>
-              <span id="predictionCountLabel" class="status-label">Pred boxes</span>
-              <strong id="predictionCount">0</strong>
-            </div>
+    <main id="datasetPage" class="dataset-page" hidden>
+      <header class="dataset-header">
+        <div class="dataset-header-main">
+          <button id="datasetMenuButton" class="icon-button menu-button dataset-nav-button" type="button" aria-label="Open menu" title="Open menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          </button>
+          <span class="brand-mark dataset-brand-mark" aria-hidden="true"></span>
+          <div class="dataset-header-copy">
+            <strong>TRIFFID</strong>
+            <span>Visual Perception Engine</span>
           </div>
-        </section>
+        </div>
+        <a id="datasetSourceLink" class="landing-project-link dataset-source-link" href="#" target="_blank" rel="noreferrer">Original dataset</a>
+      </header>
 
-        <aside class="model-panel" aria-label="Models">
-          <div class="panel-heading">
-            <span>Predictions</span>
-            <small id="hoverHint">Hover to isolate</small>
-          </div>
-
-          <div class="ground-truth-row">
-            <button id="toggleGroundTruth" class="text-button gt-toggle" type="button" aria-pressed="false">
-              <span id="groundTruthText">Ground Truth</span>
+      <section class="dataset-hero">
+        <div class="dataset-hero-copy">
+          <span id="datasetPageTask" class="dataset-task">Semantic Segmentation</span>
+          <div class="dataset-hero-heading-row">
+            <h1 id="datasetPageHeading">Dataset Gallery</h1>
+            <button id="datasetInstructionsButton" class="dataset-instructions-trigger" type="button" aria-label="Open instructions" title="Instructions">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 10.2v5.1M12 7.8h.01"></path></svg>
+              <span>Instructions</span>
             </button>
           </div>
-
-          <section class="legend-block" aria-label="Segmentation classes">
-            <div class="subheading-row">
-              <span>Classes</span>
-              <small id="taskLabel">Object detection</small>
-            </div>
-            <div id="classLegend" class="class-legend"></div>
-          </section>
-
-          <div class="actions-row">
-            <button id="selectAll" class="small-button" type="button">Select all</button>
-            <button id="clearAll" class="small-button subtle" type="button">Clear</button>
+          <div class="dataset-hero-meta">
+            <span id="datasetPageMeta">0 scenes</span>
           </div>
+          <p id="datasetPageSummary" class="dataset-page-summary">Browse the selected dataset, then open any scene in the comparison viewer without leaving the gallery.</p>
+        </div>
+      </section>
 
-          <div id="splitSelectors" class="split-selectors">
-            <label>
-              <span>Left side</span>
-              <select id="splitA"></select>
-            </label>
-            <label>
-              <span>Right side</span>
-              <select id="splitB"></select>
-            </label>
-          </div>
-
-          <div id="modelList" class="model-list"></div>
-        </aside>
-      </main>
-
-      <div id="detectionModal" class="detection-modal" hidden aria-hidden="true">
-        <div id="detectionModalBackdrop" class="detection-modal-backdrop"></div>
-        <section class="detection-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="detectionModalTitle">
-          <header class="detection-modal-header">
-            <div class="detection-modal-copy">
-              <strong id="detectionModalTitle">Detection detail</strong>
-              <span id="detectionModalMeta">Zoomed detail</span>
+      <div id="instructionsModal" class="instructions-modal" hidden aria-hidden="true">
+        <div id="instructionsModalBackdrop" class="instructions-modal-backdrop"></div>
+        <section class="instructions-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="instructionsModalTitle">
+          <header class="instructions-modal-header">
+            <div class="instructions-modal-copy">
+              <strong id="instructionsModalTitle">Instructions</strong>
+              <span id="instructionsModalMeta">How to use this dataset page</span>
             </div>
-            <button id="detectionModalClose" class="icon-button detection-modal-close" type="button" aria-label="Close detail view" title="Close detail view">
+            <button id="instructionsModalClose" class="icon-button instructions-modal-close" type="button" aria-label="Close instructions" title="Close instructions">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
             </button>
           </header>
-          <div class="detection-modal-grid">
-            <section class="crop-card">
-              <div class="crop-card-head">
-                <span>Real image</span>
-              </div>
-              <div id="detectionCropPlain" class="crop-stage"></div>
-            </section>
-            <section class="crop-card">
-              <div class="crop-card-head">
-                <span id="detectionOverlayTitle">Detection</span>
-              </div>
-              <div id="detectionCropOverlay" class="crop-stage"></div>
-            </section>
-          </div>
+          <div id="datasetInstructionsBody" class="instructions-modal-body"></div>
         </section>
       </div>
-    </div>
+
+      <section class="dataset-gallery-section">
+        <div class="landing-section-head dataset-gallery-head">
+          <h2>Gallery</h2>
+          <div class="gallery-view-switch" role="group" aria-label="Gallery view mode">
+            <button id="galleryDenseButton" class="gallery-view-button is-active" type="button" aria-pressed="true" aria-label="Gallery view" title="Gallery view">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4.5" y="4.5" width="6" height="6" rx="1.2"></rect>
+                <rect x="13.5" y="4.5" width="6" height="6" rx="1.2"></rect>
+                <rect x="4.5" y="13.5" width="6" height="6" rx="1.2"></rect>
+                <rect x="13.5" y="13.5" width="6" height="6" rx="1.2"></rect>
+              </svg>
+            </button>
+            <button id="galleryLargeButton" class="gallery-view-button" type="button" aria-pressed="false" aria-label="Larger view" title="Larger view">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="5" width="16" height="5.5" rx="1.4"></rect>
+                <rect x="4" y="13.5" width="16" height="5.5" rx="1.4"></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+      </section>
+
+      <div id="viewerOverlay" class="viewer-overlay" hidden aria-hidden="true">
+        <div id="viewerApp" class="app viewer-shell">
+          <header class="topbar">
+            <div class="brand-block">
+              <button id="backButton" class="icon-button back-button" type="button" aria-label="Close viewer" title="Close viewer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+              </button>
+              <span class="brand-mark" aria-hidden="true"></span>
+              <div class="brand-copy">
+                <strong class="brand-title">TRIFFID</strong>
+                <span class="brand-subtitle">Visual Perception Engine</span>
+              </div>
+            </div>
+
+            <div class="scene-summary" aria-live="polite">
+              <strong id="sceneTitle">Loading scene</strong>
+              <span id="sceneMeta">Preparing viewer</span>
+            </div>
+
+            <div class="topbar-controls">
+              <div class="mode-control" role="group" aria-label="Viewer mode">
+                <button class="mode-button is-active" data-mode="overlay" type="button">Overlay</button>
+                <button class="mode-button" data-mode="split" type="button">Split</button>
+                <button class="mode-button" data-mode="focus" type="button">Focus</button>
+              </div>
+            </div>
+          </header>
+
+          <main class="workspace">
+            <aside class="scene-panel" aria-label="Scenes">
+              <div class="panel-heading">
+                <span>Scenes</span>
+                <small id="sceneCount">0 samples</small>
+              </div>
+              <div id="sceneList" class="scene-list"></div>
+            </aside>
+
+            <section class="viewer-panel" aria-label="Benchmark viewer">
+              <div class="viewer-toolbar">
+                <button id="prevScene" class="icon-button" type="button" aria-label="Previous scene" title="Previous scene">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6 9 12l6 6"></path></svg>
+                </button>
+                <button id="nextScene" class="icon-button" type="button" aria-label="Next scene" title="Next scene">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+                </button>
+                <span class="toolbar-divider"></span>
+                <button id="zoomOut" class="icon-button" type="button" aria-label="Zoom out" title="Zoom out">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><path d="M15 15 21 21M7.5 10.5h6"></path></svg>
+                </button>
+                <button id="fitView" class="icon-button" type="button" aria-label="Fit view" title="Fit view">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"></path></svg>
+                </button>
+                <button id="zoomIn" class="icon-button" type="button" aria-label="Zoom in" title="Zoom in">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><path d="M15 15 21 21M10.5 7.5v6M7.5 10.5h6"></path></svg>
+                </button>
+                <span id="zoomReadout" class="zoom-readout">100%</span>
+                <span class="toolbar-spacer"></span>
+              </div>
+
+              <div id="viewerFrame" class="viewer-frame" tabindex="0">
+                <div id="viewerContent" class="viewer-content">
+                  <div id="overlayStack" class="image-stack overlay-stack"></div>
+                  <div id="splitLeft" class="image-stack split-stack split-left"></div>
+                  <div id="splitRight" class="image-stack split-stack split-right"></div>
+                  <div id="splitDivider" class="split-divider" role="separator" aria-label="Drag to compare split" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+                  <div id="splitLeftBadge" class="split-badge split-badge-left"></div>
+                  <div id="splitRightBadge" class="split-badge split-badge-right"></div>
+                  <div id="focusLens" class="focus-lens" aria-hidden="true">
+                    <div id="focusLensContent" class="focus-lens-content"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="status-strip">
+                <div>
+                  <span id="activeModelLabel" class="status-label">Active models</span>
+                  <strong id="activeModelCount">0</strong>
+                </div>
+                <div>
+                  <span id="bestIouLabel" class="status-label">GT boxes</span>
+                  <strong id="bestIou">0.00</strong>
+                </div>
+                <div>
+                  <span id="predictionCountLabel" class="status-label">Pred boxes</span>
+                  <strong id="predictionCount">0</strong>
+                </div>
+              </div>
+            </section>
+
+            <aside class="model-panel" aria-label="Models">
+              <div class="panel-heading">
+                <span>Predictions</span>
+                <small id="hoverHint">Hover to isolate</small>
+              </div>
+
+              <div class="ground-truth-row">
+                <button id="toggleGroundTruth" class="text-button gt-toggle" type="button" aria-pressed="false">
+                  <span id="groundTruthText">Ground Truth</span>
+                </button>
+              </div>
+
+              <section class="legend-block" aria-label="Segmentation classes">
+                <div class="subheading-row">
+                  <span>Classes</span>
+                  <small id="taskLabel">Object detection</small>
+                </div>
+                <div id="classLegend" class="class-legend"></div>
+              </section>
+
+              <div class="actions-row">
+                <button id="selectAll" class="small-button" type="button">Select all</button>
+                <button id="clearAll" class="small-button subtle" type="button">Clear</button>
+              </div>
+
+              <div id="splitSelectors" class="split-selectors">
+                <label>
+                  <span>Left side</span>
+                  <select id="splitA"></select>
+                </label>
+                <label>
+                  <span>Right side</span>
+                  <select id="splitB"></select>
+                </label>
+              </div>
+
+              <div id="modelList" class="model-list"></div>
+            </aside>
+          </main>
+
+          <div id="detectionModal" class="detection-modal" hidden aria-hidden="true">
+            <div id="detectionModalBackdrop" class="detection-modal-backdrop"></div>
+            <section class="detection-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="detectionModalTitle">
+              <header class="detection-modal-header">
+                <div class="detection-modal-copy">
+                  <strong id="detectionModalTitle">Detection detail</strong>
+                  <span id="detectionModalMeta">Zoomed detail</span>
+                </div>
+                <button id="detectionModalClose" class="icon-button detection-modal-close" type="button" aria-label="Close detail view" title="Close detail view">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+                </button>
+              </header>
+              <div class="detection-modal-grid">
+                <section class="crop-card">
+                  <div class="crop-card-head">
+                    <span>Real image</span>
+                  </div>
+                  <div id="detectionCropPlain" class="crop-stage"></div>
+                </section>
+                <section class="crop-card">
+                  <div class="crop-card-head">
+                    <span id="detectionOverlayTitle">Detection</span>
+                  </div>
+                  <div id="detectionCropOverlay" class="crop-stage"></div>
+                </section>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="data/sample-data.js"></script>
     <script src="app.js"></script>
