@@ -2,6 +2,7 @@ const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.T
 const releaseBases = {
   core: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v2/",
   coreDFire: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-dfire-v1/",
+  thumbnails: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-thumbnails-v3/",
   segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v2/",
   segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/"
 };
@@ -58,6 +59,7 @@ const els = {
   datasetPageMeta: document.querySelector("#datasetPageMeta"),
   datasetPageTask: document.querySelector("#datasetPageTask"),
   datasetPageHeading: document.querySelector("#datasetPageHeading"),
+  datasetPageDomain: document.querySelector("#datasetPageDomain"),
   datasetPageSummary: document.querySelector("#datasetPageSummary"),
   datasetInstructionsButton: document.querySelector("#datasetInstructionsButton"),
   datasetInstructionsBody: document.querySelector("#datasetInstructionsBody"),
@@ -134,6 +136,7 @@ const datasetDescriptions = {
   DFire: {
     title: "DFire",
     task: "Object Detection",
+    useCase: "Fire",
     summary: "Large-scale image dataset for fire and smoke object detection, designed for machine-learning detection algorithms with YOLO-format bounding-box annotations.",
     previewImage: "DFire/ORIGINAL_IMAGES/WEB10489.jpg",
     sourceUrl: "https://github.com/gaia-solutions-on-demand/DFireDataset",
@@ -142,6 +145,7 @@ const datasetDescriptions = {
   LADD: {
     title: "LADD",
     task: "Object Detection",
+    useCase: "Human Detection",
     summary: "Drone-based pedestrian detection dataset for search-and-rescue scenarios, containing aerial images with bounding-box annotations for the pedestrian class.",
     sourceUrl: "https://github.com/lacmus-foundation/ladd-utils",
     sourceLabel: "Original dataset"
@@ -149,6 +153,7 @@ const datasetDescriptions = {
   RescueNet: {
     title: "RescueNet",
     task: "Semantic Segmentation",
+    useCase: "Earthquake",
     summary: "High-resolution UAV semantic segmentation benchmark for natural disaster damage assessment, providing pixel-level annotations of post-disaster scenes including buildings, roads and damage-aware scene elements.",
     previewImage: "RescueNet/ccnet/ground_truth_images/11236.jpg",
     sourceUrl: "https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation",
@@ -157,6 +162,7 @@ const datasetDescriptions = {
   FloodNetPlus: {
     title: "FloodNetPlus",
     task: "Semantic Segmentation",
+    useCase: "Flood",
     summary: "High-resolution post-disaster aerial imagery benchmark for flood scene understanding, with pixel-level annotations for flooded and non-flooded buildings, roads, water, vegetation, vehicles, pools and background.",
     previewImage: "FloodNetPlus/ccnet/ground_truth_images/7577.jpg",
     sourceUrl: "https://github.com/LDS614705356/FloodNet-plus",
@@ -559,12 +565,13 @@ function landingDatasetCards() {
       id: dataset.id,
       title: meta.title || dataset.label || dataset.id,
       task: meta.task || formatTaskType(dataset.taskType),
+      useCase: meta.useCase || "",
       summary: meta.summary || `Benchmark workspace for ${dataset.id}.`,
       sourceUrl: meta.sourceUrl || "",
       sourceLabel: meta.sourceLabel || "Dataset page",
       sampleCount: scenes.length,
       modelCount,
-      previewImage: resolveAssetPath(meta.previewImage || previewScene?.thumbnailImage || previewScene?.baseImage || ""),
+      previewImage: meta.previewImage || previewScene?.thumbnailImage || previewScene?.baseImage || "",
       taskType: dataset.taskType
     };
   });
@@ -578,11 +585,12 @@ function renderLanding() {
     card.className = "dataset-card";
     card.innerHTML = `
       <div class="dataset-card-media">
-        <img src="${dataset.previewImage}" alt="${dataset.title} preview" loading="lazy" decoding="async">
+        <img alt="${dataset.title} preview" loading="lazy" decoding="async">
       </div>
       <div class="dataset-card-copy">
         <div class="dataset-card-copy-top">
           <span class="dataset-task">${dataset.task}</span>
+          ${dataset.useCase ? `<span class="dataset-use-case">Application Domain: ${dataset.useCase}</span>` : ""}
           <div>
             <h3>${dataset.title}</h3>
             <p>${dataset.summary}</p>
@@ -604,6 +612,7 @@ function renderLanding() {
         </div>
       </div>
     `;
+    setImageSourceWithFallback(card.querySelector(".dataset-card-media img"), assetCandidates(dataset.previewImage));
     card.querySelector(".dataset-open")?.addEventListener("click", () => routeDataset(dataset.id));
     fragment.append(card);
   });
@@ -648,10 +657,12 @@ function renderDatasetPageHeader() {
   const modelCount = datasetPageModelCount(state.datasetId);
   const datasetTitle = meta.title || dataset?.name || state.datasetId;
   const segmentation = (dataset?.taskType || "").includes("segmentation");
+  const applicationDomain = meta.useCase ? `Application Domain: ${meta.useCase}` : "";
 
   els.datasetPageMeta.textContent = `${scenes.length} scenes · ${modelCount} models`;
   els.datasetPageTask.textContent = taskLabel;
   els.datasetPageHeading.textContent = `${datasetTitle} Gallery`;
+  if (els.datasetPageDomain) els.datasetPageDomain.textContent = applicationDomain;
   els.datasetPageSummary.textContent = meta.summary || `Browse the ${state.datasetId} benchmark gallery and open any scene in the interactive comparison viewer.`;
   if (els.datasetInstructionsBody) {
     els.datasetInstructionsBody.innerHTML = datasetInstructionsMarkup({
@@ -667,17 +678,10 @@ function renderDatasetPageHeader() {
 
 function renderGallery() {
   if (!els.galleryGrid) return;
-  els.galleryGrid.classList.toggle("gallery-grid-large", state.galleryView === "large");
-  if (els.galleryDenseButton) {
-    const denseActive = state.galleryView === "dense";
-    els.galleryDenseButton.classList.toggle("is-active", denseActive);
-    els.galleryDenseButton.setAttribute("aria-pressed", String(denseActive));
-  }
-  if (els.galleryLargeButton) {
-    const largeActive = state.galleryView === "large";
-    els.galleryLargeButton.classList.toggle("is-active", largeActive);
-    els.galleryLargeButton.setAttribute("aria-pressed", String(largeActive));
-  }
+  const isDenseView = true;
+  state.galleryView = "dense";
+  els.galleryGrid.classList.remove("gallery-grid-large");
+  els.galleryGrid.classList.add("gallery-grid-dense");
   const fragment = document.createDocumentFragment();
 
   visibleScenes().forEach((scene, index) => {
@@ -687,21 +691,29 @@ function renderGallery() {
       : scene.groundTruth.length;
     const modelCount = readyModels(scene).length;
     card.type = "button";
-    card.className = `gallery-card${state.viewerOpen && index === state.sceneIndex ? " is-active" : ""}`;
+    card.className = `gallery-card${isDenseView ? " is-image-only" : ""}${state.viewerOpen && index === state.sceneIndex ? " is-active" : ""}`;
     card.dataset.sceneIndex = String(index);
-    card.innerHTML = `
-      <span class="gallery-card-image">
-        <img src="${resolveAssetPath(scene.thumbnailImage || scene.baseImage)}" alt="${formatSceneTitle(scene.title)} preview" loading="${index < 8 ? "eager" : "lazy"}" decoding="async">
-      </span>
-      <span class="gallery-card-copy">
-        <strong>${formatSceneTitle(scene.title)}</strong>
-        <small>${scene.dimensions}</small>
-        <span class="gallery-card-meta">
-          <span>${classCount} ${isSegmentationScene(scene) ? "classes" : "GT"}</span>
-          <span>${modelCount} models</span>
+    card.setAttribute("aria-label", `${formatSceneTitle(scene.title)}. ${scene.dimensions}. ${classCount} ${isSegmentationScene(scene) ? "classes" : "ground truth"} and ${modelCount} models.`);
+    card.innerHTML = isDenseView
+      ? `
+        <span class="gallery-card-image">
+          <img alt="${formatSceneTitle(scene.title)} preview" loading="${index < 8 ? "eager" : "lazy"}" decoding="async">
         </span>
-      </span>
-    `;
+      `
+      : `
+        <span class="gallery-card-image">
+          <img alt="${formatSceneTitle(scene.title)} preview" loading="${index < 8 ? "eager" : "lazy"}" decoding="async">
+        </span>
+        <span class="gallery-card-copy">
+          <strong>${formatSceneTitle(scene.title)}</strong>
+          <small>${scene.dimensions}</small>
+          <span class="gallery-card-meta">
+            <span>${classCount} ${isSegmentationScene(scene) ? "classes" : "GT"}</span>
+            <span>${modelCount} models</span>
+          </span>
+        </span>
+      `;
+    setImageSourceWithFallback(card.querySelector(".gallery-card-image img"), assetCandidates(scene.thumbnailImage || scene.baseImage));
     card.addEventListener("click", () => openViewerForScene(index));
     fragment.append(card);
   });
@@ -743,8 +755,7 @@ function resolveAssetPath(path) {
 
   const thumbMatch = path.match(/^thumbnails\/([^/]+)\/(.+)$/);
   if (thumbMatch) {
-    const base = thumbMatch[1] === "DFire" ? releaseBases.coreDFire : releaseBases.core;
-    return `${base}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
+    return `${releaseBases.thumbnails}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
   }
 
   const segmentationGtMatch = path.match(/^([^/]+)\/([^/]+)\/samples_gt_with_json\/(.+)$/);
@@ -760,8 +771,38 @@ function resolveAssetPath(path) {
   return path;
 }
 
+function uniqueAssetCandidates(paths = []) {
+  return [...new Set(paths.filter(Boolean))];
+}
+
+function assetCandidates(path) {
+  if (!path) return [];
+  return uniqueAssetCandidates([resolveAssetPath(path), path]);
+}
+
+function setImageSourceWithFallback(img, sources) {
+  const candidates = uniqueAssetCandidates(Array.isArray(sources) ? sources : [sources]);
+  if (!img || !candidates.length) return;
+
+  const applyCandidate = (index) => {
+    img.dataset.assetCandidateIndex = String(index);
+    img.src = candidates[index];
+  };
+
+  img.addEventListener("error", () => {
+    const nextIndex = Number(img.dataset.assetCandidateIndex || 0) + 1;
+    if (nextIndex < candidates.length) {
+      applyCandidate(nextIndex);
+      return;
+    }
+    img.dataset.assetLoadFailed = "true";
+  });
+
+  applyCandidate(0);
+}
+
 function sceneBaseImage(scene) {
-  return resolveAssetPath(scene.baseImage || scene.sourceImage || scene.thumbnailImage);
+  return assetCandidates(scene.baseImage || scene.sourceImage || scene.thumbnailImage)[0] || "";
 }
 
 function readyModels(scene = currentScene()) {
@@ -1065,19 +1106,17 @@ function chooseLabelPosition(scene, box, kind, modelLabel, detailLabel, occupied
 function createImageLayer(src, className) {
   const img = document.createElement("img");
   img.className = className;
-  img.src = src;
   img.alt = "";
   img.draggable = false;
   img.decoding = "async";
   img.loading = "eager";
   img.fetchPriority = "high";
+  setImageSourceWithFallback(img, Array.isArray(src) ? src : [src]);
   return img;
 }
 
 function createBaseImageLayer(scene) {
-  const primary = sceneBaseImage(scene);
-  const fallback = resolveAssetPath(scene.sourceImage || scene.thumbnailImage || scene.baseImage);
-  const img = createImageLayer(primary, "base-layer");
+  const img = createImageLayer(assetCandidates(scene.baseImage || scene.sourceImage || scene.thumbnailImage), "base-layer");
   const queueFocusLensRefresh = () => {
     if (state.mode !== "focus") return;
     window.cancelAnimationFrame(focusLensRefreshFrame);
@@ -1091,12 +1130,6 @@ function createBaseImageLayer(scene) {
     queueFocusLensRefresh();
   };
   const handleError = () => {
-    if (fallback && fallback !== primary && img.dataset.fallbackApplied !== "true") {
-      img.dataset.fallbackApplied = "true";
-      img.classList.remove("is-ready");
-      img.src = fallback;
-      return;
-    }
     img.parentElement?.classList.remove("is-loading");
     queueFocusLensRefresh();
   };
@@ -1118,7 +1151,7 @@ function queueFocusLensRefresh() {
 }
 
 function createSegmentationImageLayer(imagePath, className = "segmentation-visual") {
-  const img = createImageLayer(resolveAssetPath(imagePath), className);
+  const img = createImageLayer(assetCandidates(imagePath), className);
   img.addEventListener("load", () => {
     img.classList.add("is-ready");
   });
@@ -1132,31 +1165,53 @@ function createSegmentationImageLayer(imagePath, className = "segmentation-visua
 
 function preloadImage(src) {
   if (!src) return null;
-  const resolved = resolveAssetPath(src);
-  if (preloadedImages.has(resolved)) return preloadedImages.get(resolved);
-
-  const image = new Image();
-  image.decoding = "async";
-  image.loading = "eager";
-  image.src = resolved;
+  const candidates = assetCandidates(src);
+  const cacheKey = candidates.join("|");
+  if (preloadedImages.has(cacheKey)) return preloadedImages.get(cacheKey);
 
   const preload = new Promise((resolve) => {
-    const finish = () => resolve(resolved);
-    image.addEventListener("load", finish, { once: true });
-    image.addEventListener("error", finish, { once: true });
-    if (image.complete) queueMicrotask(finish);
-  }).then(async () => {
-    if (typeof image.decode === "function" && image.naturalWidth > 0) {
-      try {
-        await image.decode();
-      } catch {
-        // Some browsers reject decode() for cached or already-decoded images.
+    const tryCandidate = (index) => {
+      const candidate = candidates[index];
+      if (!candidate) {
+        resolve(candidates[0] || src);
+        return;
       }
-    }
-    return resolved;
+
+      const image = new Image();
+      image.decoding = "async";
+      image.loading = "eager";
+      image.addEventListener("load", async () => {
+        if (typeof image.decode === "function" && image.naturalWidth > 0) {
+          try {
+            await image.decode();
+          } catch {
+            // Some browsers reject decode() for cached or already-decoded images.
+          }
+        }
+        resolve(candidate);
+      }, { once: true });
+      image.addEventListener("error", () => {
+        tryCandidate(index + 1);
+      }, { once: true });
+      image.src = candidate;
+      if (image.complete && image.naturalWidth > 0) {
+        queueMicrotask(async () => {
+          if (typeof image.decode === "function") {
+            try {
+              await image.decode();
+            } catch {
+              // Some browsers reject decode() for cached or already-decoded images.
+            }
+          }
+          resolve(candidate);
+        });
+      }
+    };
+
+    tryCandidate(0);
   });
 
-  preloadedImages.set(resolved, preload);
+  preloadedImages.set(cacheKey, preload);
   return preload;
 }
 
@@ -1732,11 +1787,11 @@ function renderScenes() {
     });
 
     const image = document.createElement("img");
-    image.src = resolveAssetPath(scene.thumbnailImage || scene.baseImage);
     image.alt = "";
     image.draggable = false;
     image.loading = index < 6 ? "eager" : "lazy";
     image.decoding = "async";
+    setImageSourceWithFallback(image, assetCandidates(scene.thumbnailImage || scene.baseImage));
 
     const gtSummary = isSegmentationScene(scene)
       ? `${scene.groundTruthStats?.classCount || scene.groundTruth.length} classes`
@@ -2105,14 +2160,6 @@ els.landingMenuButton?.addEventListener("click", openAppMenu);
 els.datasetMenuButton?.addEventListener("click", openAppMenu);
 els.appMenuClose?.addEventListener("click", closeAppMenu);
 els.datasetInstructionsButton?.addEventListener("click", openInstructionsModal);
-els.galleryDenseButton?.addEventListener("click", () => {
-  state.galleryView = "dense";
-  renderGallery();
-});
-els.galleryLargeButton?.addEventListener("click", () => {
-  state.galleryView = "large";
-  renderGallery();
-});
 els.appMenuOverlay?.addEventListener("click", (event) => {
   if (event.target === els.appMenuOverlay) closeAppMenu();
 });

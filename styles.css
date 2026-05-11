@@ -341,15 +341,32 @@ button {
 }
 
 .dataset-hero-copy {
-  width: min(1360px, 100%);
+  --dataset-content-edge: clamp(20px, 7vw, 120px);
+  width: min(1360px, calc(100% - (var(--dataset-content-edge) * 2)));
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 720px) minmax(0, 1fr);
+  column-gap: 24px;
+  align-items: start;
 }
 
 .dataset-hero-heading-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  display: contents;
+}
+
+#datasetPageTask,
+.dataset-domain,
+.dataset-hero-copy h1,
+.dataset-hero-meta,
+.dataset-page-summary {
+  grid-column: 1;
+  width: 100%;
+  justify-self: start;
+}
+
+.dataset-instructions-trigger {
+  grid-column: 2;
+  grid-row: 1 / span 4;
 }
 
 .dataset-hero-meta {
@@ -371,6 +388,7 @@ button {
 
 .dataset-hero-copy h1 {
   margin: 10px 0 0;
+  justify-self: start;
   font-size: clamp(34px, 4vw, 52px);
   line-height: 0.96;
 }
@@ -383,9 +401,12 @@ button {
   line-height: 1.7;
 }
 
-.dataset-hero-meta,
-.dataset-page-summary {
-  width: 100%;
+.dataset-domain {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .dataset-instructions-trigger {
@@ -394,6 +415,7 @@ button {
   gap: 8px;
   flex: 0 0 auto;
   align-self: center;
+  justify-self: end;
   min-height: 38px;
   padding: 0 14px;
   margin-top: 0;
@@ -502,58 +524,23 @@ button {
 .dataset-gallery-head {
   display: flex;
   align-items: end;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 18px;
-}
-
-.gallery-view-switch {
-  display: inline-grid;
-  grid-auto-flow: column;
-  align-items: center;
-  gap: 4px;
-  padding: 4px;
-  border: 1px solid var(--faint);
-  border-radius: 9px;
-  background: color-mix(in srgb, var(--surface), transparent 2%);
-  box-shadow: 0 10px 24px rgba(19, 28, 40, 0.12);
-}
-
-.gallery-view-button {
-  width: 42px;
-  height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  border-radius: 7px;
-  color: var(--muted);
-  background: transparent;
-  transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
-}
-
-.gallery-view-button svg {
-  width: 18px;
-  height: 18px;
-  stroke: currentColor;
-  stroke-width: 1.9;
-  fill: none;
-}
-
-.gallery-view-button.is-active {
-  color: var(--button-active-text);
-  background: var(--button-active-bg);
-  box-shadow: 0 8px 20px rgba(19, 28, 40, 0.14);
+  width: min(100%, calc(100% - (clamp(20px, 7vw, 120px) * 2)));
+  margin: 0 auto;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: min(100%, calc(100% - (clamp(20px, 7vw, 120px) * 2)));
+  margin: 0 auto;
 }
 
 .gallery-grid.gallery-grid-large {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .gallery-card {
@@ -567,6 +554,13 @@ button {
   background: color-mix(in srgb, var(--surface), transparent 3%);
   box-shadow: 0 14px 30px rgba(19, 28, 40, 0.08);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.gallery-card.is-image-only {
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--surface);
 }
 
 .gallery-card:hover {
@@ -587,6 +581,12 @@ button {
   border-radius: 8px;
   aspect-ratio: 1.18;
   background: var(--panel);
+}
+
+.gallery-card.is-image-only .gallery-card-image {
+  border-radius: 0;
+  aspect-ratio: 1.02;
+  background: color-mix(in srgb, var(--surface), white 2%);
 }
 
 .gallery-card-image img {
@@ -880,14 +880,17 @@ button {
 
 .landing-hero-copy {
   width: min(760px, 100%);
+  container-type: inline-size;
 }
 
 .landing-partner-lockup {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
-  margin: 14px 0 22px;
+  gap: clamp(12px, 2vw, 18px);
+  width: min(100%, 620px);
+  margin: 14px auto 22px;
+  flex-wrap: nowrap;
 }
 
 .landing-hero-link {
@@ -916,28 +919,88 @@ button {
   margin: 0 auto 6px;
 }
 
+.landing-hua-link {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.landing-cv-link {
+  flex: 0 1 auto;
+}
+
 .landing-hua-logo {
-  width: min(430px, 48vw);
-  height: 102px;
+  width: min(100%, 430px);
+  aspect-ratio: 430 / 102;
+  height: auto;
   display: block;
   background: center / contain no-repeat url("assets/brand/hua-logo-blue-rgb.png");
 }
 
 .landing-hero-mark {
   width: 118px;
-  height: 118px;
+  aspect-ratio: 1;
+  height: auto;
   display: block;
-  flex: 0 0 118px;
+  flex: 0 1 118px;
   background: center / contain no-repeat url("assets/brand/hua-computer-vision-group-logo-transparent.png");
   filter: drop-shadow(0 18px 34px rgba(10, 19, 42, 0.24));
 }
 
 .landing-triffid-logo {
   width: min(760px, 100%);
-  height: 108px;
+  aspect-ratio: 760 / 108;
+  height: auto;
   display: block;
   margin: 0 auto;
   background: center / contain no-repeat url("assets/brand/triffid-logo-wordmark-transparent.png");
+}
+
+@container (max-width: 680px) {
+  .landing-triffid-link {
+    width: min(100%, 620px);
+  }
+
+  .landing-triffid-logo {
+    width: min(100%, 620px);
+  }
+
+  .landing-partner-lockup {
+    width: min(100%, 520px);
+    gap: 14px;
+  }
+
+  .landing-hua-logo {
+    width: min(100%, 360px);
+  }
+
+  .landing-hero-mark {
+    width: 98px;
+    flex-basis: 98px;
+  }
+}
+
+@container (max-width: 540px) {
+  .landing-triffid-link {
+    width: min(100%, 460px);
+  }
+
+  .landing-triffid-logo {
+    width: min(100%, 460px);
+  }
+
+  .landing-partner-lockup {
+    width: min(100%, 400px);
+    gap: 12px;
+  }
+
+  .landing-hua-logo {
+    width: min(100%, 280px);
+  }
+
+  .landing-hero-mark {
+    width: 82px;
+    flex-basis: 82px;
+  }
 }
 
 .landing-lead {
@@ -1031,6 +1094,13 @@ button {
   font-weight: 780;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.dataset-use-case {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .dataset-card h3 {
@@ -2485,31 +2555,29 @@ body[data-mode="split"] .split-selectors {
 
   .landing-hero {
     padding: 34px 0 20px;
-    text-align: left;
-    place-items: start;
+    text-align: center;
+    place-items: center;
   }
 
   .landing-partner-lockup {
-    justify-content: flex-start;
-    gap: 18px;
-    margin: 8px 0 18px;
+    justify-content: center;
+    width: min(100%, 430px);
+    gap: 12px;
+    margin: 8px auto 18px;
   }
 
   .landing-hua-logo {
-    width: min(100%, 320px);
-    height: 78px;
+    width: min(100%, 300px);
   }
 
   .landing-hero-mark {
     width: 92px;
-    height: 92px;
     flex-basis: 92px;
   }
 
   .landing-triffid-logo {
     width: min(100%, 480px);
-    height: 70px;
-    margin: 0 0 6px;
+    margin: 0 auto 6px;
   }
 
   .landing-kicker {
@@ -2553,10 +2621,30 @@ body[data-mode="split"] .split-selectors {
     font-size: 32px;
   }
 
+  .dataset-hero-copy {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
   .dataset-hero-heading-row {
     align-items: start;
     flex-direction: column;
     gap: 10px;
+  }
+
+  #datasetPageTask,
+  .dataset-domain,
+  .dataset-hero-copy h1,
+  .dataset-hero-meta,
+  .dataset-page-summary,
+  .dataset-instructions-trigger {
+    grid-column: 1;
+    width: 100%;
+    justify-self: start;
+  }
+
+  .dataset-instructions-trigger {
+    grid-row: auto;
   }
 
   .dataset-instructions-trigger {
@@ -2607,8 +2695,16 @@ body[data-mode="split"] .split-selectors {
     padding: 12px;
   }
 
+  .gallery-card.is-image-only {
+    padding: 0;
+  }
+
   .gallery-card-image {
     aspect-ratio: 1.26;
+  }
+
+  .gallery-card.is-image-only .gallery-card-image {
+    aspect-ratio: 1.02;
   }
 
   .viewer-overlay {

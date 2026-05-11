@@ -6,13 +6,14 @@ setopt local_options no_nomatch
 ROOT="/Users/peter/Scripts/Triffid/aerial-segmentation-demo"
 OUT_ROOT="/tmp/aerial-atlas-release-assets-v2"
 CORE_DIR="$OUT_ROOT/core"
+THUMBS_DIR="$OUT_ROOT/thumbs"
 SEG_GT_DIR="$OUT_ROOT/seg-gt"
 SEG_PRED_DIR="$OUT_ROOT/seg-pred"
 SEGMENTATION_MAX_WIDTH="${SEGMENTATION_MAX_WIDTH:-2200}"
 SEGMENTATION_JPEG_QUALITY="${SEGMENTATION_JPEG_QUALITY:-4}"
 
 rm -rf "$OUT_ROOT"
-mkdir -p "$CORE_DIR" "$SEG_GT_DIR" "$SEG_PRED_DIR"
+mkdir -p "$CORE_DIR" "$THUMBS_DIR" "$SEG_GT_DIR" "$SEG_PRED_DIR"
 
 for datasetDir in "$ROOT"/viewer/*; do
   [[ -d "$datasetDir" ]] || continue
@@ -28,7 +29,7 @@ for datasetDir in "$ROOT"/thumbnails/*; do
   dataset=${datasetDir:t}
   for file in "$datasetDir"/*; do
     [[ -f "$file" ]] || continue
-    cp "$file" "$CORE_DIR/thumbnail-$dataset-${file:t}"
+    cp "$file" "$THUMBS_DIR/thumbnail-$dataset-${file:t}"
   done
 done
 
@@ -52,5 +53,6 @@ for datasetRoot in "$ROOT"/FloodNetPlus "$ROOT"/RescueNet; do
 done
 
 printf "core=%s\n" "$(find "$CORE_DIR" -type f | wc -l | tr -d ' ')"
+printf "thumbs=%s\n" "$(find "$THUMBS_DIR" -type f | wc -l | tr -d ' ')"
 printf "seg-gt=%s\n" "$(find "$SEG_GT_DIR" -type f | wc -l | tr -d ' ')"
 printf "seg-pred=%s\n" "$(find "$SEG_PRED_DIR" -type f | wc -l | tr -d ' ')"

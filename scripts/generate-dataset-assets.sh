@@ -11,7 +11,8 @@ fi
 ROOT="/Users/peter/Scripts/Triffid/aerial-segmentation-demo"
 DATASET="$1"
 VIEWER_MAX_WIDTH="${2:-2200}"
-THUMB_WIDTH="${3:-360}"
+THUMB_WIDTH="${3:-800}"
+THUMB_JPEG_QUALITY="${THUMB_JPEG_QUALITY:-6}"
 DATASET_ROOT="$ROOT/$DATASET"
 VIEWER_DIR="$ROOT/viewer/$DATASET"
 THUMB_DIR="$ROOT/thumbnails/$DATASET"
@@ -35,7 +36,7 @@ collect_and_render() {
     seen[$base]=1
 
     ffmpeg -y -loglevel error -i "$src" -vf "scale='min($VIEWER_MAX_WIDTH,iw)':-2" "$VIEWER_DIR/$base" >/dev/null 2>&1
-    ffmpeg -y -loglevel error -i "$src" -vf "scale=$THUMB_WIDTH:-2" "$THUMB_DIR/$base" >/dev/null 2>&1
+    ffmpeg -y -loglevel error -i "$src" -vf "scale='min($THUMB_WIDTH,iw)':-2" -q:v "$THUMB_JPEG_QUALITY" "$THUMB_DIR/$base" >/dev/null 2>&1
     count=$((count + 1))
   done
 }
