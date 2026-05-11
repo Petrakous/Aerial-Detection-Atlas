@@ -138,7 +138,7 @@ const datasetDescriptions = {
     task: "Object Detection",
     useCase: "Fire",
     summary: "Large-scale image dataset for fire and smoke object detection, designed for machine-learning detection algorithms with YOLO-format bounding-box annotations.",
-    previewImage: "DFire/ORIGINAL_IMAGES/WEB10489.jpg",
+    previewImage: "thumbnails/DFire/WEB10489.jpg",
     sourceUrl: "https://github.com/gaia-solutions-on-demand/DFireDataset",
     sourceLabel: "Original dataset"
   },
@@ -155,7 +155,7 @@ const datasetDescriptions = {
     task: "Semantic Segmentation",
     useCase: "Earthquake",
     summary: "High-resolution UAV semantic segmentation benchmark for natural disaster damage assessment, providing pixel-level annotations of post-disaster scenes including buildings, roads and damage-aware scene elements.",
-    previewImage: "RescueNet/ccnet/ground_truth_images/11236.jpg",
+    previewImage: "thumbnails/RescueNet/11236.jpg",
     sourceUrl: "https://github.com/BinaLab/RescueNet-A-High-Resolution-Post-Disaster-UAV-Dataset-for-Semantic-Segmentation",
     sourceLabel: "Original dataset"
   },
@@ -164,7 +164,7 @@ const datasetDescriptions = {
     task: "Semantic Segmentation",
     useCase: "Flood",
     summary: "High-resolution post-disaster aerial imagery benchmark for flood scene understanding, with pixel-level annotations for flooded and non-flooded buildings, roads, water, vegetation, vehicles, pools and background.",
-    previewImage: "FloodNetPlus/ccnet/ground_truth_images/7577.jpg",
+    previewImage: "thumbnails/FloodNetPlus/7577.jpg",
     sourceUrl: "https://github.com/LDS614705356/FloodNet-plus",
     sourceLabel: "Original dataset"
   }
