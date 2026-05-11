@@ -887,10 +887,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(12px, 2vw, 18px);
-  width: min(100%, 620px);
+  gap: clamp(10px, 1.6vw, 14px);
+  width: min(100%, 650px);
   margin: 14px auto 22px;
   flex-wrap: nowrap;
+  transform: translateX(-38px);
 }
 
 .landing-hero-link {
@@ -929,7 +930,7 @@ button {
 }
 
 .landing-hua-logo {
-  width: min(100%, 430px);
+  width: min(100%, 454px);
   aspect-ratio: 430 / 102;
   height: auto;
   display: block;
@@ -937,11 +938,11 @@ button {
 }
 
 .landing-hero-mark {
-  width: 118px;
+  width: 112px;
   aspect-ratio: 1;
   height: auto;
   display: block;
-  flex: 0 1 118px;
+  flex: 0 1 112px;
   background: center / contain no-repeat url("assets/brand/hua-computer-vision-group-logo-transparent.png");
   filter: drop-shadow(0 18px 34px rgba(10, 19, 42, 0.24));
 }
@@ -965,17 +966,18 @@ button {
   }
 
   .landing-partner-lockup {
-    width: min(100%, 520px);
+    width: min(100%, 544px);
     gap: 14px;
+    transform: translateX(-28px);
   }
 
   .landing-hua-logo {
-    width: min(100%, 360px);
+    width: min(100%, 374px);
   }
 
   .landing-hero-mark {
-    width: 98px;
-    flex-basis: 98px;
+    width: 94px;
+    flex-basis: 94px;
   }
 }
 
@@ -991,15 +993,16 @@ button {
   .landing-partner-lockup {
     width: min(100%, 400px);
     gap: 12px;
+    transform: translateX(-18px);
   }
 
   .landing-hua-logo {
-    width: min(100%, 280px);
+    width: min(100%, 292px);
   }
 
   .landing-hero-mark {
-    width: 82px;
-    flex-basis: 82px;
+    width: 80px;
+    flex-basis: 80px;
   }
 }
 
