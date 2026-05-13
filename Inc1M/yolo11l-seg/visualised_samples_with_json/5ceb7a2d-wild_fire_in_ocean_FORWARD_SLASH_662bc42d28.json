@@ -1,0 +1,26 @@
+{
+  "image_id": "5ceb7a2d-wild_fire_in_ocean_FORWARD_SLASH_662bc42d28",
+  "file_name": "5ceb7a2d-wild_fire_in_ocean_FORWARD_SLASH_662bc42d28.jpg",
+  "width": 852,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 137454,
+      "score": 0.962
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 52189,
+      "score": 0.3892
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 14605,
+      "score": 0.5748
+    }
+  ]
+}

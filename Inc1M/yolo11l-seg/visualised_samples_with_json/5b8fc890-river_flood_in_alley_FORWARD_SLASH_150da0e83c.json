@@ -1,0 +1,32 @@
+{
+  "image_id": "5b8fc890-river_flood_in_alley_FORWARD_SLASH_150da0e83c",
+  "file_name": "5b8fc890-river_flood_in_alley_FORWARD_SLASH_150da0e83c.jpg",
+  "width": 1600,
+  "height": 1067,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 834635,
+      "score": 0.9473
+    },
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 19171,
+      "score": 0.5826
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 141081,
+      "score": 0.7471
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 25539,
+      "score": 0.6387
+    }
+  ]
+}

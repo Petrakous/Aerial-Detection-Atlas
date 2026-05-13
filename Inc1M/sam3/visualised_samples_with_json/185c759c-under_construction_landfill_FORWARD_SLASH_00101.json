@@ -1,0 +1,32 @@
+{
+  "image_id": "185c759c-under_construction_landfill_FORWARD_SLASH_00101",
+  "file_name": "185c759c-under_construction_landfill_FORWARD_SLASH_00101.jpg",
+  "width": 852,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 9398,
+      "score": 0.4072
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 6316,
+      "score": 0.6388
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 4044,
+      "score": 0.3345
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 1298,
+      "score": 0.6467
+    }
+  ]
+}

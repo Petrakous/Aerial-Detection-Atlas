@@ -33,17 +33,34 @@ for datasetDir in "$ROOT"/thumbnails/*; do
   done
 done
 
-for datasetRoot in "$ROOT"/FloodNetPlus "$ROOT"/RescueNet; do
+for datasetRoot in "$ROOT"/*; do
   [[ -d "$datasetRoot" ]] || continue
   dataset=${datasetRoot:t}
+  case "$dataset" in
+    .git|assets|data|Datasets|scripts|node_modules|viewer|thumbnails|visualisations|Downloads|github)
+      continue
+      ;;
+  esac
+
+  if [[ -d "$datasetRoot"/shared_samples_gt_with_json ]]; then
+    for file in "$datasetRoot"/shared_samples_gt_with_json/*.jpg; do
+      [[ -f "$file" ]] || continue
+      ffmpeg -y -loglevel error -i "$file" -vf "scale='min($SEGMENTATION_MAX_WIDTH,iw)':-2" -q:v "$SEGMENTATION_JPEG_QUALITY" "$SEG_GT_DIR/segment-gt-$dataset-shared-${file:t}" >/dev/null 2>&1
+    done
+  fi
+
   for modelDir in "$datasetRoot"/*; do
     [[ -d "$modelDir" ]] || continue
+    [[ -d "$modelDir"/samples_gt_with_json ]] || continue
+    [[ -d "$modelDir"/visualised_samples_with_json ]] || continue
     model=${modelDir:t}
 
-    for file in "$modelDir"/samples_gt_with_json/*.jpg; do
-      [[ -f "$file" ]] || continue
-      ffmpeg -y -loglevel error -i "$file" -vf "scale='min($SEGMENTATION_MAX_WIDTH,iw)':-2" -q:v "$SEGMENTATION_JPEG_QUALITY" "$SEG_GT_DIR/segment-gt-$dataset-$model-${file:t}" >/dev/null 2>&1
-    done
+    if [[ ! -d "$datasetRoot"/shared_samples_gt_with_json ]]; then
+      for file in "$modelDir"/samples_gt_with_json/*.jpg; do
+        [[ -f "$file" ]] || continue
+        ffmpeg -y -loglevel error -i "$file" -vf "scale='min($SEGMENTATION_MAX_WIDTH,iw)':-2" -q:v "$SEGMENTATION_JPEG_QUALITY" "$SEG_GT_DIR/segment-gt-$dataset-$model-${file:t}" >/dev/null 2>&1
+      done
+    fi
 
     for file in "$modelDir"/visualised_samples_with_json/*.jpg; do
       [[ -f "$file" ]] || continue

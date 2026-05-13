@@ -1,0 +1,50 @@
+{
+  "image_id": "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267",
+  "file_name": "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267.jpg",
+  "width": 620,
+  "height": 350,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 45353,
+      "score": 0.6938
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 4931,
+      "score": 0.6484
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 493,
+      "score": 0.542
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 647,
+      "score": 0.4459
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "pixel_count": 61166,
+      "score": 0.9585
+    },
+    {
+      "label_index": 42,
+      "class_name": "Tower",
+      "pixel_count": 9466,
+      "score": 0.3394
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "pixel_count": 147,
+      "score": 0.4421
+    }
+  ]
+}

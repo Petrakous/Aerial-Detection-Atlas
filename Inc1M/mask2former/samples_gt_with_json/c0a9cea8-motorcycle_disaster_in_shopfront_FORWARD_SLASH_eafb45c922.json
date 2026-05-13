@@ -1,0 +1,28 @@
+{
+  "image_id": "c0a9cea8-motorcycle_disaster_in_shopfront_FORWARD_SLASH_eafb45c922",
+  "file_name": "c0a9cea8-motorcycle_disaster_in_shopfront_FORWARD_SLASH_eafb45c922.jpg",
+  "width": 920,
+  "height": 1227,
+  "segments": [
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 147730
+    },
+    {
+      "label_index": 17,
+      "class_name": "Destroyed building",
+      "pixel_count": 518986
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 337514
+    },
+    {
+      "label_index": 33,
+      "class_name": "Barrier",
+      "pixel_count": 68001
+    }
+  ]
+}

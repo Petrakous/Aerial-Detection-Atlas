@@ -1,0 +1,23 @@
+{
+  "image_id": "eb0f9752-flooded_forest_road_FORWARD_SLASH_3752f79c85",
+  "file_name": "eb0f9752-flooded_forest_road_FORWARD_SLASH_3752f79c85.jpg",
+  "width": 450,
+  "height": 320,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 19627
+    },
+    {
+      "label_index": 19,
+      "class_name": "Dry tree",
+      "pixel_count": 61079
+    },
+    {
+      "label_index": 28,
+      "class_name": "Dry grass",
+      "pixel_count": 25057
+    }
+  ]
+}

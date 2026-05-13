@@ -2,9 +2,12 @@ const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.T
 const releaseBases = {
   core: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v2/",
   coreDFire: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-dfire-v1/",
+  coreInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-inc1m-v1/",
   thumbnails: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-thumbnails-v3/",
   segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v2/",
-  segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/"
+  segmentationGtInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-inc1m-v1/",
+  segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/",
+  segmentationPredInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-inc1m-v1/"
 };
 
 const minZoom = 0.25;
@@ -68,7 +71,7 @@ const els = {
   galleryLargeButton: document.querySelector("#galleryLargeButton"),
   viewerOverlay: document.querySelector("#viewerOverlay"),
   viewerApp: document.querySelector("#viewerApp"),
-  datasetGrid: document.querySelector("#datasetGrid"),
+  datasetStructure: document.querySelector("#datasetStructure"),
   backButton: document.querySelector("#backButton"),
   workspace: document.querySelector(".workspace"),
   sceneTitle: document.querySelector("#sceneTitle"),
@@ -167,8 +170,45 @@ const datasetDescriptions = {
     previewImage: "thumbnails/FloodNetPlus/7577.jpg",
     sourceUrl: "https://github.com/LDS614705356/FloodNet-plus",
     sourceLabel: "Original dataset"
+  },
+  Inc1M: {
+    title: "Inc1M",
+    task: "Semantic Segmentation",
+    useCase: "Multi-hazard",
+    summary: "Multi-class disaster segmentation benchmark slice with ground and elevated-view scenes, showing class-rich ground-truth masks.",
+    previewImage: "thumbnails/Inc1M/001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
+    sourceUrl: "https://github.com/ethanweber/IncidentsDataset",
+    sourceLabel: "Original Dataset"
   }
 };
+
+const landingCollections = [
+  {
+    id: "ground-level",
+    title: "Ground-level",
+    summary: "Our internally curated scene-understanding benchmark from terrestrial and close-range disaster imagery.",
+    note: "CV group dataset",
+    datasetIds: ["Inc1M"],
+    variant: "featured"
+  },
+  {
+    id: "aerial",
+    title: "Aerial",
+    summary: "Airborne benchmark workspaces for detection and segmentation, kept in the current comparative layout.",
+    note: "Current datasets",
+    datasetIds: ["FloodNetPlus", "RescueNet", "LADD", "DFire"],
+    variant: "grid"
+  },
+  {
+    id: "satellite-eo",
+    title: "Satellite / EO",
+    summary: "Reserved for future Earth observation and wide-area remote-sensing benchmark collections.",
+    note: "Future expansion",
+    datasetIds: [],
+    variant: "placeholder",
+    hidden: true
+  }
+];
 
 function updatePageScrollLock() {
   const shouldLock = state.viewerOpen || (els.instructionsModal && !els.instructionsModal.hidden);
@@ -577,13 +617,8 @@ function landingDatasetCards() {
   });
 }
 
-function renderLanding() {
-  if (!els.datasetGrid) return;
-  const fragment = document.createDocumentFragment();
-  landingDatasetCards().forEach((dataset) => {
-    const card = document.createElement("article");
-    card.className = "dataset-card";
-    card.innerHTML = `
+function datasetCardMarkup(dataset) {
+  return `
       <div class="dataset-card-media">
         <img alt="${dataset.title} preview" loading="lazy" decoding="async">
       </div>
@@ -612,11 +647,70 @@ function renderLanding() {
         </div>
       </div>
     `;
-    setImageSourceWithFallback(card.querySelector(".dataset-card-media img"), assetCandidates(dataset.previewImage));
-    card.querySelector(".dataset-open")?.addEventListener("click", () => routeDataset(dataset.id));
-    fragment.append(card);
+}
+
+function buildLandingDatasetCard(dataset, { compact = false, featured = false } = {}) {
+  const card = document.createElement("article");
+  card.className = `dataset-card${compact ? " dataset-card-compact" : ""}${featured ? " dataset-card-featured" : ""}`;
+  card.innerHTML = datasetCardMarkup(dataset);
+  setImageSourceWithFallback(card.querySelector(".dataset-card-media img"), assetCandidates(dataset.previewImage));
+  card.querySelector(".dataset-open")?.addEventListener("click", () => routeDataset(dataset.id));
+  return card;
+}
+
+function buildPlaceholderCard(title, body) {
+  const card = document.createElement("article");
+  card.className = "dataset-placeholder-card";
+  card.innerHTML = `
+    <span class="dataset-placeholder-kicker">Planned</span>
+    <strong>${title}</strong>
+    <p>${body}</p>
+  `;
+  return card;
+}
+
+function renderLanding() {
+  if (!els.datasetStructure) return;
+  const datasetMap = new Map(landingDatasetCards().map((dataset) => [dataset.id, dataset]));
+  const fragment = document.createDocumentFragment();
+
+  landingCollections.forEach((collection) => {
+    if (collection.hidden) return;
+    const section = document.createElement("section");
+    section.className = `landing-collection landing-collection-${collection.variant}`;
+    section.innerHTML = `
+      <div class="landing-collection-head">
+        <div>
+          <h3>${collection.title}</h3>
+          <p>${collection.summary}</p>
+        </div>
+      </div>
+      <div class="landing-collection-body"></div>
+    `;
+
+    const body = section.querySelector(".landing-collection-body");
+    const datasets = collection.datasetIds
+      .map((datasetId) => datasetMap.get(datasetId))
+      .filter(Boolean);
+
+    if (collection.variant === "featured") {
+      body.classList.add("landing-collection-featured-body");
+      datasets.forEach((dataset) => body.append(buildLandingDatasetCard(dataset, { featured: true })));
+    } else if (collection.variant === "grid") {
+      body.classList.add("landing-collection-grid-body");
+      datasets.forEach((dataset) => body.append(buildLandingDatasetCard(dataset, { compact: true })));
+    } else {
+      body.classList.add("landing-collection-placeholder-body");
+      body.append(
+        buildPlaceholderCard("EO disaster mapping", "Space for future satellite segmentation and detection benchmarks."),
+        buildPlaceholderCard("Wide-area monitoring", "Will host Earth observation datasets once the next benchmark group is finalized.")
+      );
+    }
+
+    fragment.append(section);
   });
-  els.datasetGrid.replaceChildren(fragment);
+
+  els.datasetStructure.replaceChildren(fragment);
 }
 
 function datasetPageModelCount(datasetId) {
@@ -749,7 +843,11 @@ function resolveAssetPath(path) {
 
   const viewerMatch = path.match(/^viewer\/([^/]+)\/(.+)$/);
   if (viewerMatch) {
-    const base = viewerMatch[1] === "DFire" ? releaseBases.coreDFire : releaseBases.core;
+    const base = viewerMatch[1] === "DFire"
+      ? releaseBases.coreDFire
+      : viewerMatch[1] === "Inc1M"
+        ? releaseBases.coreInc1M
+        : releaseBases.core;
     return `${base}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
   }
 
@@ -760,12 +858,26 @@ function resolveAssetPath(path) {
 
   const segmentationGtMatch = path.match(/^([^/]+)\/([^/]+)\/samples_gt_with_json\/(.+)$/);
   if (segmentationGtMatch) {
-    return `${releaseBases.segmentationGt}segment-gt-${segmentationGtMatch[1]}-${segmentationGtMatch[2]}-${segmentationGtMatch[3]}`;
+    const base = segmentationGtMatch[1] === "Inc1M"
+      ? releaseBases.segmentationGtInc1M
+      : releaseBases.segmentationGt;
+    return `${base}segment-gt-${segmentationGtMatch[1]}-${segmentationGtMatch[2]}-${segmentationGtMatch[3]}`;
+  }
+
+  const sharedSegmentationGtMatch = path.match(/^([^/]+)\/shared_samples_gt_with_json\/(.+)$/);
+  if (sharedSegmentationGtMatch) {
+    const base = sharedSegmentationGtMatch[1] === "Inc1M"
+      ? releaseBases.segmentationGtInc1M
+      : releaseBases.segmentationGt;
+    return `${base}segment-gt-${sharedSegmentationGtMatch[1]}-shared-${sharedSegmentationGtMatch[2]}`;
   }
 
   const segmentationPredMatch = path.match(/^([^/]+)\/([^/]+)\/visualised_samples_with_json\/(.+)$/);
   if (segmentationPredMatch) {
-    return `${releaseBases.segmentationPred}segment-pred-${segmentationPredMatch[1]}-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
+    const base = segmentationPredMatch[1] === "Inc1M"
+      ? releaseBases.segmentationPredInc1M
+      : releaseBases.segmentationPred;
+    return `${base}segment-pred-${segmentationPredMatch[1]}-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
   }
 
   return path;

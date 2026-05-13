@@ -1,0 +1,26 @@
+{
+  "image_id": "338b84a2-typhoon_in_landfill_FORWARD_SLASH_00241",
+  "file_name": "338b84a2-typhoon_in_landfill_FORWARD_SLASH_00241.jpg",
+  "width": 960,
+  "height": 720,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 148422,
+      "score": 0.5581
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 6605,
+      "score": 0.4686
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 36582,
+      "score": 0.3954
+    }
+  ]
+}

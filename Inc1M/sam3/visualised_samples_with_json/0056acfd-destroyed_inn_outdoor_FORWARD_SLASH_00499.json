@@ -1,0 +1,38 @@
+{
+  "image_id": "0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499",
+  "file_name": "0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499.jpg",
+  "width": 800,
+  "height": 533,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 46798,
+      "score": 0.4078
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 1262,
+      "score": 0.4486
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 1074,
+      "score": 0.6063
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 621,
+      "score": 0.6909
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 130495,
+      "score": 0.9409
+    }
+  ]
+}

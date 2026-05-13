@@ -1,0 +1,26 @@
+{
+  "image_id": "fbe97915-burned_port_FORWARD_SLASH_00008",
+  "file_name": "fbe97915-burned_port_FORWARD_SLASH_00008.jpg",
+  "width": 991,
+  "height": 557,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 49045,
+      "score": 0.3442
+    },
+    {
+      "label_index": 37,
+      "class_name": "Burnt tree",
+      "pixel_count": 21676,
+      "score": 0.6038
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 256058,
+      "score": 0.9307
+    }
+  ]
+}

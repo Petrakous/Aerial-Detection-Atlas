@@ -1,0 +1,26 @@
+{
+  "image_id": "e8e486d0-wild_fire_in_rope_bridge_FORWARD_SLASH_58a00df8f4",
+  "file_name": "e8e486d0-wild_fire_in_rope_bridge_FORWARD_SLASH_58a00df8f4.jpg",
+  "width": 486,
+  "height": 754,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 1473,
+      "score": 0.927
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 122319,
+      "score": 0.8662
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 61602,
+      "score": 0.4121
+    }
+  ]
+}

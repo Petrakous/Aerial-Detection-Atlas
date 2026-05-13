@@ -1,0 +1,44 @@
+{
+  "image_id": "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155",
+  "file_name": "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
+  "width": 590,
+  "height": 392,
+  "segments": [
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 819,
+      "score": 0.4106
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 387,
+      "score": 0.332
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 50,
+      "score": 0.356
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 2264,
+      "score": 0.3962
+    },
+    {
+      "label_index": 31,
+      "class_name": "Excavator",
+      "pixel_count": 2158,
+      "score": 0.5532
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 38835,
+      "score": 0.6875
+    }
+  ]
+}

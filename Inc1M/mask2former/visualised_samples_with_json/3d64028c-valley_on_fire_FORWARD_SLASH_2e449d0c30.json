@@ -1,0 +1,38 @@
+{
+  "image_id": "3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30",
+  "file_name": "3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
+  "width": 962,
+  "height": 640,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 154858,
+      "score": 0.6232
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 41012,
+      "score": 0.9317
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 71018,
+      "score": 0.8814
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 106025,
+      "score": 0.9313
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 129677,
+      "score": 0.7529
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "image_id": "8de67a5b-hurricaine_in_port_FORWARD_SLASH_ad49d28414",
+  "file_name": "8de67a5b-hurricaine_in_port_FORWARD_SLASH_ad49d28414.jpg",
+  "width": 1300,
+  "height": 956,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 3960,
+      "score": 0.5647
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 2233,
+      "score": 0.3369
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 22555,
+      "score": 0.489
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 20483,
+      "score": 0.3337
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 11862,
+      "score": 0.3323
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 121926,
+      "score": 0.5444
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 1842,
+      "score": 0.4446
+    },
+    {
+      "label_index": 51,
+      "class_name": "Furniture",
+      "pixel_count": 3582,
+      "score": 0.5225
+    }
+  ]
+}

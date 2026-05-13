@@ -1,0 +1,26 @@
+{
+  "image_id": "572a7fb8-flooded_residential_neighborhood_FORWARD_SLASH_00366",
+  "file_name": "572a7fb8-flooded_residential_neighborhood_FORWARD_SLASH_00366.jpg",
+  "width": 1920,
+  "height": 1080,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 321413,
+      "score": 0.6788
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 156549,
+      "score": 0.7346
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 23082,
+      "score": 0.7257
+    }
+  ]
+}

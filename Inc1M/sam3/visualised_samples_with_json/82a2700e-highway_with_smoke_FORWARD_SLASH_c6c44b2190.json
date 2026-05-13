@@ -1,0 +1,44 @@
+{
+  "image_id": "82a2700e-highway_with_smoke_FORWARD_SLASH_c6c44b2190",
+  "file_name": "82a2700e-highway_with_smoke_FORWARD_SLASH_c6c44b2190.jpg",
+  "width": 213,
+  "height": 160,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 209,
+      "score": 0.3169
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 7326,
+      "score": 0.9604
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 3227,
+      "score": 0.77
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 810,
+      "score": 0.8862
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 217,
+      "score": 0.5112
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 1464,
+      "score": 0.3152
+    }
+  ]
+}

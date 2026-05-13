@@ -1,0 +1,32 @@
+{
+  "image_id": "dc9ca70c-coastal_flood_in_bridge_FORWARD_SLASH_00012",
+  "file_name": "dc9ca70c-coastal_flood_in_bridge_FORWARD_SLASH_00012.jpg",
+  "width": 1280,
+  "height": 837,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 683054,
+      "score": 0.9204
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 2480,
+      "score": 0.4889
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 181,
+      "score": 0.3008
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 4642,
+      "score": 0.3732
+    }
+  ]
+}

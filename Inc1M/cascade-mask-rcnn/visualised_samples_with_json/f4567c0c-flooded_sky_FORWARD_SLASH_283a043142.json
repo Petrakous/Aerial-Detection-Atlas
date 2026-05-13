@@ -1,0 +1,26 @@
+{
+  "image_id": "f4567c0c-flooded_sky_FORWARD_SLASH_283a043142",
+  "file_name": "f4567c0c-flooded_sky_FORWARD_SLASH_283a043142.jpg",
+  "width": 680,
+  "height": 383,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 129435,
+      "score": 0.9969
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 6434,
+      "score": 0.7603
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "pixel_count": 23528,
+      "score": 0.8645
+    }
+  ]
+}

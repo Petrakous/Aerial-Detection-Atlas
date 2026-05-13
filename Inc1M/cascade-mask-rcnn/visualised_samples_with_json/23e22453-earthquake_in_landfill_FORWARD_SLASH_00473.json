@@ -1,0 +1,20 @@
+{
+  "image_id": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473",
+  "file_name": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473.jpg",
+  "width": 1200,
+  "height": 1690,
+  "segments": [
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 1071351,
+      "score": 0.9543
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "pixel_count": 8199,
+      "score": 0.9868
+    }
+  ]
+}

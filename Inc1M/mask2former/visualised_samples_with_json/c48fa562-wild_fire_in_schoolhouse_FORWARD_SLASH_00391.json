@@ -1,0 +1,38 @@
+{
+  "image_id": "c48fa562-wild_fire_in_schoolhouse_FORWARD_SLASH_00391",
+  "file_name": "c48fa562-wild_fire_in_schoolhouse_FORWARD_SLASH_00391.jpg",
+  "width": 300,
+  "height": 357,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 36551,
+      "score": 0.771
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 18211,
+      "score": 0.8107
+    },
+    {
+      "label_index": 18,
+      "class_name": "Destroyed building",
+      "pixel_count": 4063,
+      "score": 0.8433
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "pixel_count": 8098,
+      "score": 0.5925
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 21909,
+      "score": 0.4395
+    }
+  ]
+}

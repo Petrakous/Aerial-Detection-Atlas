@@ -1,0 +1,26 @@
+{
+  "image_id": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473",
+  "file_name": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473.jpg",
+  "width": 1200,
+  "height": 1690,
+  "segments": [
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 154935,
+      "score": 0.657
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 86698,
+      "score": 0.5874
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 79065,
+      "score": 0.4858
+    }
+  ]
+}

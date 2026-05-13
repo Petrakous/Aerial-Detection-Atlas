@@ -1,0 +1,32 @@
+{
+  "image_id": "aeaf667b-earthquake_in_schoolhouse_FORWARD_SLASH_4b86fdfb17",
+  "file_name": "aeaf667b-earthquake_in_schoolhouse_FORWARD_SLASH_4b86fdfb17.jpg",
+  "width": 640,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "pixel_count": 2537,
+      "score": 0.6936
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 51203,
+      "score": 0.6948
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 20170,
+      "score": 0.6958
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 34534,
+      "score": 0.6549
+    }
+  ]
+}

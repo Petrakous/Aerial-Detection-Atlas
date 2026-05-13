@@ -1,0 +1,44 @@
+{
+  "image_id": "338b84a2-typhoon_in_landfill_FORWARD_SLASH_00241",
+  "file_name": "338b84a2-typhoon_in_landfill_FORWARD_SLASH_00241.jpg",
+  "width": 960,
+  "height": 720,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 122953,
+      "score": 0.9188
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 7353,
+      "score": 0.7616
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 18122,
+      "score": 0.6708
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 87598,
+      "score": 0.6183
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 116602,
+      "score": 0.4317
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 35869,
+      "score": 0.919
+    }
+  ]
+}

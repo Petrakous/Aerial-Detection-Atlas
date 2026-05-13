@@ -1,0 +1,38 @@
+{
+  "image_id": "1cf03b16-burned_farm_FORWARD_SLASH_00221",
+  "file_name": "1cf03b16-burned_farm_FORWARD_SLASH_00221.jpg",
+  "width": 504,
+  "height": 378,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 851,
+      "score": 0.8034
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 10570,
+      "score": 0.5533
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 2306,
+      "score": 0.9009
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "pixel_count": 873,
+      "score": 0.3679
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 80844,
+      "score": 0.9608
+    }
+  ]
+}

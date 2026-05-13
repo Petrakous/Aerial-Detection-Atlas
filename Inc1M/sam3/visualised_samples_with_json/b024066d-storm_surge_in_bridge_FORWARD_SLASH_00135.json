@@ -1,0 +1,38 @@
+{
+  "image_id": "b024066d-storm_surge_in_bridge_FORWARD_SLASH_00135",
+  "file_name": "b024066d-storm_surge_in_bridge_FORWARD_SLASH_00135.jpg",
+  "width": 1141,
+  "height": 1258,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 530991,
+      "score": 0.8608
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 321791,
+      "score": 0.5968
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "pixel_count": 53074,
+      "score": 0.8042
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 4180,
+      "score": 0.5776
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 5986,
+      "score": 0.3766
+    }
+  ]
+}

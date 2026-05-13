@@ -59,6 +59,21 @@ const SEGMENTATION_CLASS_COLORS = {
   "Road-Blocked": "#B6FF00"
 };
 
+const FALLBACK_SEGMENTATION_CLASS_COLORS = [
+  "#00FFD1",
+  "#FF1744",
+  "#8A00FF",
+  "#FFB300",
+  "#39FF14",
+  "#0047FF",
+  "#FF00D4",
+  "#4B0082",
+  "#FFD600",
+  "#FF6D00",
+  "#00E676",
+  "#B6FF00"
+];
+
 const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD", "DFire"];
 const DATASET_SCENE_LIMITS = {
   FloodNetPlus: 50,
@@ -203,7 +218,15 @@ function assignDetectionClassColors(names) {
 }
 
 function segmentationColorFor(className) {
-  return SEGMENTATION_CLASS_COLORS[className] || "#ffffff";
+  if (SEGMENTATION_CLASS_COLORS[className]) return SEGMENTATION_CLASS_COLORS[className];
+
+  const normalized = String(className || "").trim().toLowerCase();
+  let hash = 0;
+  for (const char of normalized) {
+    hash = ((hash * 31) + char.charCodeAt(0)) >>> 0;
+  }
+
+  return FALLBACK_SEGMENTATION_CLASS_COLORS[hash % FALLBACK_SEGMENTATION_CLASS_COLORS.length] || "#ffffff";
 }
 
 function segmentationLegendFromSegments(segments) {
@@ -219,14 +242,22 @@ function mergeSegmentationLegendEntries(datasetName, segmentsBySource) {
   const merged = new Map();
   segmentsBySource.flat().forEach((segment) => {
     if (!segment?.className) return;
-    const key = `${segment.labelIndex}:${segment.className}`;
-    if (!merged.has(key)) {
+    const normalizedName = String(segment.className).trim();
+    const key = normalizedName.toLowerCase();
+    const existing = merged.get(key);
+
+    if (!existing) {
       merged.set(key, {
-        id: slugify(segment.className),
-        name: segment.className,
+        id: slugify(normalizedName),
+        name: normalizedName,
         labelIndex: segment.labelIndex,
-        color: segmentationColorFor(segment.className)
+        color: segmentationColorFor(normalizedName)
       });
+      return;
+    }
+
+    if (Number.isFinite(segment.labelIndex) && (!Number.isFinite(existing.labelIndex) || segment.labelIndex < existing.labelIndex)) {
+      existing.labelIndex = segment.labelIndex;
     }
   });
   return [...merged.values()].sort((a, b) => (a.labelIndex ?? 0) - (b.labelIndex ?? 0) || a.name.localeCompare(b.name));
@@ -628,8 +659,14 @@ function buildDFireScene({
 }
 
 function buildSegmentationScene({ datasetName, sceneId, sceneOrder = null, sceneRoots, modelDirs, modelMap }) {
-  const sourceRoot = sceneRoots[0];
-  const gtPath = path.join(sourceRoot, "samples_gt_with_json", `${sceneId}.json`);
+  const datasetRoot = path.dirname(sceneRoots[0]);
+  const sharedGtRoot = existsFile(path.join(datasetRoot, "shared_samples_gt_with_json", `${sceneId}.json`))
+    ? datasetRoot
+    : null;
+  const sourceRoot = sharedGtRoot || sceneRoots[0];
+  const gtPath = sharedGtRoot
+    ? path.join(sourceRoot, "shared_samples_gt_with_json", `${sceneId}.json`)
+    : path.join(sourceRoot, "samples_gt_with_json", `${sceneId}.json`);
   const groundTruth = readJson(gtPath);
   const width = groundTruth.width;
   const height = groundTruth.height;
@@ -639,13 +676,16 @@ function buildSegmentationScene({ datasetName, sceneId, sceneOrder = null, scene
     pixelCount: Number(segment.pixel_count)
   })).sort((a, b) => a.labelIndex - b.labelIndex);
 
-  const rawImagePath = existsFile(path.join(sourceRoot, "ground_truth_images", groundTruth.file_name))
-    ? toPosix(path.relative(demoRoot, path.join(sourceRoot, "ground_truth_images", groundTruth.file_name)))
+  const rawImageDir = sharedGtRoot ? "shared_ground_truth_images" : "ground_truth_images";
+  const gtImageDir = sharedGtRoot ? "shared_samples_gt_with_json" : "samples_gt_with_json";
+
+  const rawImagePath = existsFile(path.join(sourceRoot, rawImageDir, groundTruth.file_name))
+    ? toPosix(path.relative(demoRoot, path.join(sourceRoot, rawImageDir, groundTruth.file_name)))
     : "";
 
   const generatedViewer = path.join(demoRoot, "viewer", datasetName, groundTruth.file_name);
   const generatedThumb = path.join(demoRoot, "thumbnails", datasetName, groundTruth.file_name);
-  const gtImagePath = path.join(sourceRoot, "samples_gt_with_json", groundTruth.file_name);
+  const gtImagePath = path.join(sourceRoot, gtImageDir, groundTruth.file_name);
   const predictions = {};
   const predictionImages = {};
   const sceneModelStats = {};

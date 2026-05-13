@@ -1,0 +1,26 @@
+{
+  "image_id": "509aa0dd-burned_nuclear_power_plant_FORWARD_SLASH_944c0e77b1",
+  "file_name": "509aa0dd-burned_nuclear_power_plant_FORWARD_SLASH_944c0e77b1.jpg",
+  "width": 1428,
+  "height": 803,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 280844,
+      "score": 0.9474
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 215367,
+      "score": 0.9503
+    },
+    {
+      "label_index": 41,
+      "class_name": "Tower",
+      "pixel_count": 232762,
+      "score": 0.9248
+    }
+  ]
+}

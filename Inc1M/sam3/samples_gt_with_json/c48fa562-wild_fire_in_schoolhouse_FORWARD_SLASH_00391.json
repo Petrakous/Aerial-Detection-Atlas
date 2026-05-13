@@ -1,0 +1,28 @@
+{
+  "image_id": "c48fa562-wild_fire_in_schoolhouse_FORWARD_SLASH_00391",
+  "file_name": "c48fa562-wild_fire_in_schoolhouse_FORWARD_SLASH_00391.jpg",
+  "width": 300,
+  "height": 357,
+  "segments": [
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 18111
+    },
+    {
+      "label_index": 16,
+      "class_name": "Dirt road",
+      "pixel_count": 22759
+    },
+    {
+      "label_index": 19,
+      "class_name": "Dry tree",
+      "pixel_count": 29218
+    },
+    {
+      "label_index": 22,
+      "class_name": "Wall",
+      "pixel_count": 3552
+    }
+  ]
+}

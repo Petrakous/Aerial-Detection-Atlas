@@ -1,0 +1,38 @@
+{
+  "image_id": "7859a819-earthquake_in_diner_outdoor_FORWARD_SLASH_00006",
+  "file_name": "7859a819-earthquake_in_diner_outdoor_FORWARD_SLASH_00006.jpg",
+  "width": 1024,
+  "height": 512,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 118614,
+      "score": 0.9111
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 130915,
+      "score": 0.6726
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 5831,
+      "score": 0.5652
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 30445,
+      "score": 0.7776
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 51742,
+      "score": 0.6825
+    }
+  ]
+}

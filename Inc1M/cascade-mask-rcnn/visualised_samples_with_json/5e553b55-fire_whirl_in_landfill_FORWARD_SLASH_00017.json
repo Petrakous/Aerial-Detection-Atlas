@@ -1,0 +1,20 @@
+{
+  "image_id": "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017",
+  "file_name": "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017.jpg",
+  "width": 675,
+  "height": 900,
+  "segments": [
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 87208,
+      "score": 0.8589
+    },
+    {
+      "label_index": 37,
+      "class_name": "Burnt tree",
+      "pixel_count": 54983,
+      "score": 0.4489
+    }
+  ]
+}

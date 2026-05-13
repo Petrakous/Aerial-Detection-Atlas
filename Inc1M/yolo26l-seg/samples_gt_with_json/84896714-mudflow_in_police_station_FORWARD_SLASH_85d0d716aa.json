@@ -1,0 +1,28 @@
+{
+  "image_id": "84896714-mudflow_in_police_station_FORWARD_SLASH_85d0d716aa",
+  "file_name": "84896714-mudflow_in_police_station_FORWARD_SLASH_85d0d716aa.jpg",
+  "width": 1280,
+  "height": 720,
+  "segments": [
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 191679
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 11661
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 39635
+    },
+    {
+      "label_index": 32,
+      "class_name": "Mud",
+      "pixel_count": 382011
+    }
+  ]
+}

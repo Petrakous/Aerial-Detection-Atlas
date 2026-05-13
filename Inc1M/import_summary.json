@@ -1,0 +1,39 @@
+{
+  "archive": "Inc1M-seg-May-15k-images-20260513T140652Z-3-001.zip",
+  "dataset": "Inc1M",
+  "sampled_images": 100,
+  "models": [
+    "sam3",
+    "mask2former",
+    "cascade-mask-rcnn",
+    "yolo11l-seg",
+    "yolo26l-seg"
+  ],
+  "filter_reports": {
+    "sam3": {
+      "original_predictions": 6121,
+      "kept_predictions": 2233,
+      "removed_predictions": 3888
+    },
+    "mask2former": {
+      "original_predictions": 2115,
+      "kept_predictions": 906,
+      "removed_predictions": 1209
+    },
+    "cascade-mask-rcnn": {
+      "original_predictions": 1298,
+      "kept_predictions": 896,
+      "removed_predictions": 402
+    },
+    "yolo11l-seg": {
+      "original_predictions": 1196,
+      "kept_predictions": 753,
+      "removed_predictions": 443
+    },
+    "yolo26l-seg": {
+      "original_predictions": 1137,
+      "kept_predictions": 801,
+      "removed_predictions": 336
+    }
+  }
+}

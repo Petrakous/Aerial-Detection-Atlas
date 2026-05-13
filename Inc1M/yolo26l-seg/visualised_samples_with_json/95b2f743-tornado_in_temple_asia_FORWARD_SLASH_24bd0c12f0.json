@@ -1,0 +1,32 @@
+{
+  "image_id": "95b2f743-tornado_in_temple_asia_FORWARD_SLASH_24bd0c12f0",
+  "file_name": "95b2f743-tornado_in_temple_asia_FORWARD_SLASH_24bd0c12f0.jpg",
+  "width": 700,
+  "height": 394,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 54174,
+      "score": 0.688
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 47491,
+      "score": 0.6591
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 12993,
+      "score": 0.8136
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 4741,
+      "score": 0.5593
+    }
+  ]
+}

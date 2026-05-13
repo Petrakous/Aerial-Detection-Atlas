@@ -1,0 +1,56 @@
+{
+  "image_id": "93b68b9a-earthquake_in_power_line_FORWARD_SLASH_23fbf8e5d2",
+  "file_name": "93b68b9a-earthquake_in_power_line_FORWARD_SLASH_23fbf8e5d2.jpg",
+  "width": 2048,
+  "height": 1365,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 17370,
+      "score": 0.6467
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 274444,
+      "score": 0.7634
+    },
+    {
+      "label_index": 14,
+      "class_name": "Window",
+      "pixel_count": 7927,
+      "score": 0.5484
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 549962,
+      "score": 0.9334
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 535744,
+      "score": 0.6285
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 888,
+      "score": 0.4275
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 44959,
+      "score": 0.9428
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 86813,
+      "score": 0.5332
+    }
+  ]
+}

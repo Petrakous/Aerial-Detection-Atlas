@@ -1,0 +1,32 @@
+{
+  "image_id": "1834c783-frozen_flyover_FORWARD_SLASH_00136",
+  "file_name": "1834c783-frozen_flyover_FORWARD_SLASH_00136.jpg",
+  "width": 768,
+  "height": 1150,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 27184,
+      "score": 0.5294
+    },
+    {
+      "label_index": 19,
+      "class_name": "Dry tree",
+      "pixel_count": 7170,
+      "score": 0.6819
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 146870,
+      "score": 0.7394
+    },
+    {
+      "label_index": 43,
+      "class_name": "Military personnel",
+      "pixel_count": 3473,
+      "score": 0.3608
+    }
+  ]
+}

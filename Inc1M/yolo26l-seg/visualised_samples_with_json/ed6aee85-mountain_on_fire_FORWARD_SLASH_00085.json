@@ -1,0 +1,20 @@
+{
+  "image_id": "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085",
+  "file_name": "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085.jpg",
+  "width": 3888,
+  "height": 2592,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 64169,
+      "score": 0.803
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 2121252,
+      "score": 0.6515
+    }
+  ]
+}

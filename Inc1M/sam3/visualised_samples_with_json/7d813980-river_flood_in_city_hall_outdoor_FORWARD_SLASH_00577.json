@@ -1,0 +1,26 @@
+{
+  "image_id": "7d813980-river_flood_in_city_hall_outdoor_FORWARD_SLASH_00577",
+  "file_name": "7d813980-river_flood_in_city_hall_outdoor_FORWARD_SLASH_00577.jpg",
+  "width": 333,
+  "height": 250,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 45268,
+      "score": 0.9399
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 7821,
+      "score": 0.4281
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 2324,
+      "score": 0.5088
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "image_id": "1cf03b16-burned_farm_FORWARD_SLASH_00221",
+  "file_name": "1cf03b16-burned_farm_FORWARD_SLASH_00221.jpg",
+  "width": 504,
+  "height": 378,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 5668,
+      "score": 0.3705
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 2166,
+      "score": 0.6538
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 40914,
+      "score": 0.7871
+    }
+  ]
+}

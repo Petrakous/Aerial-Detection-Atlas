@@ -1,0 +1,38 @@
+{
+  "image_id": "24b0cd93-wild_fire_in_pavilion_FORWARD_SLASH_cf1dceb2fd",
+  "file_name": "24b0cd93-wild_fire_in_pavilion_FORWARD_SLASH_cf1dceb2fd.jpg",
+  "width": 700,
+  "height": 394,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 16100,
+      "score": 0.6877
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 66566,
+      "score": 0.6486
+    },
+    {
+      "label_index": 11,
+      "class_name": "Green plant",
+      "pixel_count": 7794,
+      "score": 0.3692
+    },
+    {
+      "label_index": 28,
+      "class_name": "Dry grass",
+      "pixel_count": 15107,
+      "score": 0.6988
+    },
+    {
+      "label_index": 58,
+      "class_name": "aerial vehicle",
+      "pixel_count": 5346,
+      "score": 0.9793
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "image_id": "a2b5909f-mudflow_in_house_FORWARD_SLASH_a717fcd107",
+  "file_name": "a2b5909f-mudflow_in_house_FORWARD_SLASH_a717fcd107.jpg",
+  "width": 723,
+  "height": 367,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 3407,
+      "score": 0.3184
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 18115,
+      "score": 0.4666
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "pixel_count": 3634,
+      "score": 0.4071
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 11723,
+      "score": 0.5432
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 9190,
+      "score": 0.7047
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 805,
+      "score": 0.4296
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 11735,
+      "score": 0.4046
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 4302,
+      "score": 0.3287
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 27696,
+      "score": 0.875
+    },
+    {
+      "label_index": 30,
+      "class_name": "Animal",
+      "pixel_count": 1142,
+      "score": 0.3398
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 3318,
+      "score": 0.5677
+    },
+    {
+      "label_index": 33,
+      "class_name": "Mud",
+      "pixel_count": 28270,
+      "score": 0.7944
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 3315,
+      "score": 0.8232
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "pixel_count": 529,
+      "score": 0.8862
+    }
+  ]
+}

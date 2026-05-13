@@ -1,0 +1,80 @@
+{
+  "image_id": "84896714-mudflow_in_police_station_FORWARD_SLASH_85d0d716aa",
+  "file_name": "84896714-mudflow_in_police_station_FORWARD_SLASH_85d0d716aa.jpg",
+  "width": 1280,
+  "height": 720,
+  "segments": [
+    {
+      "label_index": 6,
+      "class_name": "SCBA",
+      "pixel_count": 1179,
+      "score": 0.6885
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 35801,
+      "score": 0.5631
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 6538,
+      "score": 0.5713
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 1855,
+      "score": 0.5045
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 3001,
+      "score": 0.3765
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 22555,
+      "score": 0.5778
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 16016,
+      "score": 0.4167
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 496,
+      "score": 0.3916
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 66190,
+      "score": 0.3879
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 2874,
+      "score": 0.5353
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 49761,
+      "score": 0.3914
+    },
+    {
+      "label_index": 52,
+      "class_name": "Tank",
+      "pixel_count": 2828,
+      "score": 0.8569
+    }
+  ]
+}

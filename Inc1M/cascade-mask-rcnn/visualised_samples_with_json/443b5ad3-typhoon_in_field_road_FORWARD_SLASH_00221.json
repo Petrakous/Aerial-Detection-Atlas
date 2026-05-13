@@ -1,0 +1,62 @@
+{
+  "image_id": "443b5ad3-typhoon_in_field_road_FORWARD_SLASH_00221",
+  "file_name": "443b5ad3-typhoon_in_field_road_FORWARD_SLASH_00221.jpg",
+  "width": 5894,
+  "height": 3930,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 90310,
+      "score": 0.8357
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "pixel_count": 400767,
+      "score": 0.8609
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 31586,
+      "score": 0.5521
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 569245,
+      "score": 0.699
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 275465,
+      "score": 0.6516
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 63318,
+      "score": 0.7262
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 1403024,
+      "score": 0.7988
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 34642,
+      "score": 0.7194
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 1391090,
+      "score": 0.7511
+    }
+  ]
+}

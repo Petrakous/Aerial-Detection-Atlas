@@ -1,0 +1,56 @@
+{
+  "image_id": "777b8154-car_disaster_in_embassy_FORWARD_SLASH_149bbd2961",
+  "file_name": "777b8154-car_disaster_in_embassy_FORWARD_SLASH_149bbd2961.jpg",
+  "width": 805,
+  "height": 800,
+  "segments": [
+    {
+      "label_index": 6,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 133108,
+      "score": 0.9378
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 104408,
+      "score": 0.652
+    },
+    {
+      "label_index": 14,
+      "class_name": "Window",
+      "pixel_count": 634,
+      "score": 0.3392
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 6186,
+      "score": 0.7749
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 20125,
+      "score": 0.525
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 25094,
+      "score": 0.6396
+    },
+    {
+      "label_index": 40,
+      "class_name": "Bicycle",
+      "pixel_count": 995,
+      "score": 0.8247
+    },
+    {
+      "label_index": 43,
+      "class_name": "Military personnel",
+      "pixel_count": 2546,
+      "score": 0.6614
+    }
+  ]
+}

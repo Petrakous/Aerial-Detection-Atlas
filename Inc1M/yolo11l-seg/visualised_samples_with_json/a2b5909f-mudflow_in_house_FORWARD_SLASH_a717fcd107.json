@@ -1,0 +1,44 @@
+{
+  "image_id": "a2b5909f-mudflow_in_house_FORWARD_SLASH_a717fcd107",
+  "file_name": "a2b5909f-mudflow_in_house_FORWARD_SLASH_a717fcd107.jpg",
+  "width": 723,
+  "height": 367,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 37023,
+      "score": 0.9332
+    },
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 14230,
+      "score": 0.7013
+    },
+    {
+      "label_index": 2,
+      "class_name": "Fence",
+      "pixel_count": 6836,
+      "score": 0.3339
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 27066,
+      "score": 0.9177
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 11084,
+      "score": 0.9331
+    },
+    {
+      "label_index": 39,
+      "class_name": "Cone",
+      "pixel_count": 693,
+      "score": 0.7606
+    }
+  ]
+}

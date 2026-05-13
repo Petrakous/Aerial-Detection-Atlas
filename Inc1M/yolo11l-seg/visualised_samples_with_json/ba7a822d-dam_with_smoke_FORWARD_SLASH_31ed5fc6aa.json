@@ -1,0 +1,32 @@
+{
+  "image_id": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa",
+  "file_name": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa.jpg",
+  "width": 1280,
+  "height": 720,
+  "segments": [
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 25366,
+      "score": 0.6713
+    },
+    {
+      "label_index": 6,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 64244,
+      "score": 0.9183
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 13572,
+      "score": 0.7676
+    },
+    {
+      "label_index": 9,
+      "class_name": "Fire hose",
+      "pixel_count": 3982,
+      "score": 0.5354
+    }
+  ]
+}

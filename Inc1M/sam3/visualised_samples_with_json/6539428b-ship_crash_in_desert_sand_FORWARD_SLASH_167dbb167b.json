@@ -1,0 +1,14 @@
+{
+  "image_id": "6539428b-ship_crash_in_desert_sand_FORWARD_SLASH_167dbb167b",
+  "file_name": "6539428b-ship_crash_in_desert_sand_FORWARD_SLASH_167dbb167b.jpg",
+  "width": 640,
+  "height": 446,
+  "segments": [
+    {
+      "label_index": 18,
+      "class_name": "Destroyed building",
+      "pixel_count": 213768,
+      "score": 0.7373
+    }
+  ]
+}

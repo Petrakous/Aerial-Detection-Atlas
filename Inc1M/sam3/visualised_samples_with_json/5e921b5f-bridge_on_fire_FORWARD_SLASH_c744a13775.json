@@ -1,0 +1,56 @@
+{
+  "image_id": "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775",
+  "file_name": "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775.jpg",
+  "width": 652,
+  "height": 367,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 43501,
+      "score": 0.8628
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 12670,
+      "score": 0.5754
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 38006,
+      "score": 0.8008
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 9059,
+      "score": 0.673
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 495,
+      "score": 0.3167
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 727,
+      "score": 0.3596
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 3077,
+      "score": 0.626
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 10160,
+      "score": 0.5945
+    }
+  ]
+}

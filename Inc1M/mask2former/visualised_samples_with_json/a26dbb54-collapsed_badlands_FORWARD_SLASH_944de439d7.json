@@ -1,0 +1,26 @@
+{
+  "image_id": "a26dbb54-collapsed_badlands_FORWARD_SLASH_944de439d7",
+  "file_name": "a26dbb54-collapsed_badlands_FORWARD_SLASH_944de439d7.jpg",
+  "width": 652,
+  "height": 475,
+  "segments": [
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 100134,
+      "score": 0.6906
+    },
+    {
+      "label_index": 18,
+      "class_name": "Destroyed building",
+      "pixel_count": 167224,
+      "score": 0.3939
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 29447,
+      "score": 0.7239
+    }
+  ]
+}

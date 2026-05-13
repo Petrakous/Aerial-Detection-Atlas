@@ -1,0 +1,38 @@
+{
+  "image_id": "d748566f-plane_accident_in_house_FORWARD_SLASH_8920c996cb",
+  "file_name": "d748566f-plane_accident_in_house_FORWARD_SLASH_8920c996cb.jpg",
+  "width": 537,
+  "height": 404,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 1925,
+      "score": 0.9267
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 14734,
+      "score": 0.971
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 28416,
+      "score": 0.9123
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 57012,
+      "score": 0.3793
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 21704,
+      "score": 0.4682
+    }
+  ]
+}

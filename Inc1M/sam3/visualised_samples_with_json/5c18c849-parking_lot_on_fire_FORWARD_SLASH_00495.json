@@ -1,0 +1,80 @@
+{
+  "image_id": "5c18c849-parking_lot_on_fire_FORWARD_SLASH_00495",
+  "file_name": "5c18c849-parking_lot_on_fire_FORWARD_SLASH_00495.jpg",
+  "width": 1200,
+  "height": 630,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 40009,
+      "score": 0.6159
+    },
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 33145,
+      "score": 0.5412
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 13242,
+      "score": 0.3879
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 11211,
+      "score": 0.6466
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 1033,
+      "score": 0.324
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 6776,
+      "score": 0.3506
+    },
+    {
+      "label_index": 19,
+      "class_name": "Ladder",
+      "pixel_count": 2709,
+      "score": 0.3665
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 13056,
+      "score": 0.4089
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 212253,
+      "score": 0.8369
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 1493,
+      "score": 0.4451
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 5017,
+      "score": 0.5154
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 4960,
+      "score": 0.8262
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "image_id": "0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056",
+  "file_name": "0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056.jpg",
+  "width": 823,
+  "height": 516,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 29487,
+      "score": 0.8321
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 51965,
+      "score": 0.9377
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 907,
+      "score": 0.8104
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 35508,
+      "score": 0.5639
+    },
+    {
+      "label_index": 41,
+      "class_name": "Tower",
+      "pixel_count": 6576,
+      "score": 0.5114
+    }
+  ]
+}

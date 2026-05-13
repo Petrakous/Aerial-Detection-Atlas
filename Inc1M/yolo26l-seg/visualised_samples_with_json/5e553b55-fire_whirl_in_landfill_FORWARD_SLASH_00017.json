@@ -1,0 +1,20 @@
+{
+  "image_id": "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017",
+  "file_name": "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017.jpg",
+  "width": 675,
+  "height": 900,
+  "segments": [
+    {
+      "label_index": 6,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 63911,
+      "score": 0.6466
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 122365,
+      "score": 0.7137
+    }
+  ]
+}

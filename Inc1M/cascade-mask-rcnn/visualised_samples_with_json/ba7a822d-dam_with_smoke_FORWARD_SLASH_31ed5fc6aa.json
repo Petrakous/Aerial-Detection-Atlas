@@ -1,0 +1,38 @@
+{
+  "image_id": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa",
+  "file_name": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa.jpg",
+  "width": 1280,
+  "height": 720,
+  "segments": [
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 3323,
+      "score": 0.4443
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 15584,
+      "score": 0.9953
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 312092,
+      "score": 0.9462
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 64889,
+      "score": 0.8867
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 30722,
+      "score": 0.6881
+    }
+  ]
+}

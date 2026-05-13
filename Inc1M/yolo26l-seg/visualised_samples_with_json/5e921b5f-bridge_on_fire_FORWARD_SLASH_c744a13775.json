@@ -1,0 +1,50 @@
+{
+  "image_id": "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775",
+  "file_name": "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775.jpg",
+  "width": 652,
+  "height": 367,
+  "segments": [
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 2786,
+      "score": 0.8073
+    },
+    {
+      "label_index": 6,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 4706,
+      "score": 0.5762
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 52062,
+      "score": 0.8702
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 13358,
+      "score": 0.4237
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 60610,
+      "score": 0.9424
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 21854,
+      "score": 0.7204
+    },
+    {
+      "label_index": 33,
+      "class_name": "Barrier",
+      "pixel_count": 4462,
+      "score": 0.397
+    }
+  ]
+}

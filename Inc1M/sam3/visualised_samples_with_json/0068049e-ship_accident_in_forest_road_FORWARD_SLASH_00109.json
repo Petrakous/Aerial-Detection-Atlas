@@ -1,0 +1,44 @@
+{
+  "image_id": "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109",
+  "file_name": "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
+  "width": 1024,
+  "height": 576,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 129537,
+      "score": 0.9063
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 1364,
+      "score": 0.5317
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 75881,
+      "score": 0.6629
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 3133,
+      "score": 0.4384
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 69383,
+      "score": 0.8228
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 30261,
+      "score": 0.4424
+    }
+  ]
+}

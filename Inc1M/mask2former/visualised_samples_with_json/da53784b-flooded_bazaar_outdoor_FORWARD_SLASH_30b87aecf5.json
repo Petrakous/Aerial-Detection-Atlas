@@ -1,0 +1,32 @@
+{
+  "image_id": "da53784b-flooded_bazaar_outdoor_FORWARD_SLASH_30b87aecf5",
+  "file_name": "da53784b-flooded_bazaar_outdoor_FORWARD_SLASH_30b87aecf5.jpg",
+  "width": 634,
+  "height": 404,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 17399,
+      "score": 0.7363
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 2149,
+      "score": 0.7781
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 57639,
+      "score": 0.9127
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 21997,
+      "score": 0.9581
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "image_id": "094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640",
+  "file_name": "094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640.jpg",
+  "width": 640,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 14175,
+      "score": 0.6639
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "pixel_count": 15315,
+      "score": 0.5636
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 34340,
+      "score": 0.7222
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 48683,
+      "score": 0.919
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 53999,
+      "score": 0.9865
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 1614,
+      "score": 0.9374
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 3649,
+      "score": 0.4766
+    }
+  ]
+}

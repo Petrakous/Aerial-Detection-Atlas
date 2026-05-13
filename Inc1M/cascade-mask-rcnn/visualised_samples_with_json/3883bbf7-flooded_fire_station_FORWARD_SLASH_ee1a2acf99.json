@@ -1,0 +1,38 @@
+{
+  "image_id": "3883bbf7-flooded_fire_station_FORWARD_SLASH_ee1a2acf99",
+  "file_name": "3883bbf7-flooded_fire_station_FORWARD_SLASH_ee1a2acf99.jpg",
+  "width": 599,
+  "height": 337,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 45377,
+      "score": 0.9139
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 7436,
+      "score": 0.9111
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 567,
+      "score": 0.8439
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 41931,
+      "score": 0.395
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "pixel_count": 7321,
+      "score": 0.9988
+    }
+  ]
+}

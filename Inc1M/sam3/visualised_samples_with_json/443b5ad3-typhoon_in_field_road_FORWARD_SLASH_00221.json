@@ -1,0 +1,80 @@
+{
+  "image_id": "443b5ad3-typhoon_in_field_road_FORWARD_SLASH_00221",
+  "file_name": "443b5ad3-typhoon_in_field_road_FORWARD_SLASH_00221.jpg",
+  "width": 5894,
+  "height": 3930,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 628785,
+      "score": 0.5997
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "pixel_count": 340691,
+      "score": 0.7153
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "pixel_count": 4232,
+      "score": 0.4708
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 1296335,
+      "score": 0.524
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 265925,
+      "score": 0.3605
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 366670,
+      "score": 0.6564
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 163693,
+      "score": 0.615
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 2172148,
+      "score": 0.5445
+    },
+    {
+      "label_index": 31,
+      "class_name": "Excavator",
+      "pixel_count": 251114,
+      "score": 0.4827
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 156576,
+      "score": 0.528
+    },
+    {
+      "label_index": 44,
+      "class_name": "Military personnel",
+      "pixel_count": 21229,
+      "score": 0.386
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 69566,
+      "score": 0.6177
+    }
+  ]
+}

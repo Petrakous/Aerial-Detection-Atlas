@@ -1,0 +1,68 @@
+{
+  "image_id": "d140df0d-car_explosion_in_apartment_building_outdoor_FORWARD_SLASH_00044",
+  "file_name": "d140df0d-car_explosion_in_apartment_building_outdoor_FORWARD_SLASH_00044.jpg",
+  "width": 600,
+  "height": 399,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 6587,
+      "score": 0.3137
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 8195,
+      "score": 0.7965
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 8304,
+      "score": 0.7661
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 102970,
+      "score": 0.6506
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 221,
+      "score": 0.5317
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 4773,
+      "score": 0.8501
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 385,
+      "score": 0.5259
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 377,
+      "score": 0.3713
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 3505,
+      "score": 0.3918
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "pixel_count": 265,
+      "score": 0.6359
+    }
+  ]
+}

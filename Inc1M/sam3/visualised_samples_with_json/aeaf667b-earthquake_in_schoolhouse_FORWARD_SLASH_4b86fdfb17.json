@@ -1,0 +1,68 @@
+{
+  "image_id": "aeaf667b-earthquake_in_schoolhouse_FORWARD_SLASH_4b86fdfb17",
+  "file_name": "aeaf667b-earthquake_in_schoolhouse_FORWARD_SLASH_4b86fdfb17.jpg",
+  "width": 640,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 238,
+      "score": 0.4727
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "pixel_count": 7399,
+      "score": 0.671
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 67696,
+      "score": 0.9132
+    },
+    {
+      "label_index": 14,
+      "class_name": "Mask",
+      "pixel_count": 146,
+      "score": 0.8027
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 8960,
+      "score": 0.4256
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 7663,
+      "score": 0.7612
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 403,
+      "score": 0.434
+    },
+    {
+      "label_index": 35,
+      "class_name": "Hole in the ground",
+      "pixel_count": 567,
+      "score": 0.6007
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 5224,
+      "score": 0.3916
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "pixel_count": 2135,
+      "score": 0.5774
+    }
+  ]
+}

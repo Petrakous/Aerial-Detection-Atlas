@@ -1,0 +1,38 @@
+{
+  "image_id": "57df9db9-tornado_in_street_FORWARD_SLASH_00080",
+  "file_name": "57df9db9-tornado_in_street_FORWARD_SLASH_00080.jpg",
+  "width": 978,
+  "height": 470,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 42046,
+      "score": 0.9223
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 247418,
+      "score": 0.6628
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 53773,
+      "score": 0.9342
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 1573,
+      "score": 0.9421
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 6567,
+      "score": 0.7939
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "image_id": "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085",
+  "file_name": "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085.jpg",
+  "width": 3888,
+  "height": 2592,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 732161,
+      "score": 0.7428
+    },
+    {
+      "label_index": 11,
+      "class_name": "Green plant",
+      "pixel_count": 1983141,
+      "score": 0.5698
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "image_id": "d6b28f6e-plane_incident_in_valley_FORWARD_SLASH_00435",
+  "file_name": "d6b28f6e-plane_incident_in_valley_FORWARD_SLASH_00435.jpg",
+  "width": 320,
+  "height": 240,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 22765,
+      "score": 0.7023
+    },
+    {
+      "label_index": 58,
+      "class_name": "aerial vehicle",
+      "pixel_count": 655,
+      "score": 0.9697
+    }
+  ]
+}

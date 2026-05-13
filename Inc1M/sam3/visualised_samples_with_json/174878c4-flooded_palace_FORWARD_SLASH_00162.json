@@ -1,0 +1,50 @@
+{
+  "image_id": "174878c4-flooded_palace_FORWARD_SLASH_00162",
+  "file_name": "174878c4-flooded_palace_FORWARD_SLASH_00162.jpg",
+  "width": 900,
+  "height": 477,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 56263,
+      "score": 0.9272
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 7006,
+      "score": 0.546
+    },
+    {
+      "label_index": 19,
+      "class_name": "Ladder",
+      "pixel_count": 940,
+      "score": 0.4702
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 27042,
+      "score": 0.3451
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 570,
+      "score": 0.3451
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 7846,
+      "score": 0.6008
+    },
+    {
+      "label_index": 51,
+      "class_name": "Furniture",
+      "pixel_count": 23331,
+      "score": 0.4812
+    }
+  ]
+}

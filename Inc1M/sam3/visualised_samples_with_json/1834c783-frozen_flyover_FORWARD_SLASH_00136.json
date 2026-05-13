@@ -1,0 +1,50 @@
+{
+  "image_id": "1834c783-frozen_flyover_FORWARD_SLASH_00136",
+  "file_name": "1834c783-frozen_flyover_FORWARD_SLASH_00136.jpg",
+  "width": 768,
+  "height": 1150,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 36680,
+      "score": 0.4677
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 1621,
+      "score": 0.4279
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 4129,
+      "score": 0.8901
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 3318,
+      "score": 0.6587
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 2085,
+      "score": 0.3035
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 13516,
+      "score": 0.7119
+    },
+    {
+      "label_index": 59,
+      "class_name": "aerial vehicle",
+      "pixel_count": 248,
+      "score": 0.8022
+    }
+  ]
+}

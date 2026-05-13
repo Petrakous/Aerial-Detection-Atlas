@@ -1,0 +1,26 @@
+{
+  "image_id": "a26dbb54-collapsed_badlands_FORWARD_SLASH_944de439d7",
+  "file_name": "a26dbb54-collapsed_badlands_FORWARD_SLASH_944de439d7.jpg",
+  "width": 652,
+  "height": 475,
+  "segments": [
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 554,
+      "score": 0.4992
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 25951,
+      "score": 0.4387
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 2803,
+      "score": 0.4727
+    }
+  ]
+}

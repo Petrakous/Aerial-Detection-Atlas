@@ -1,0 +1,26 @@
+{
+  "image_id": "f19b82bd-tornado_in_mausoleum_FORWARD_SLASH_86fc45a268",
+  "file_name": "f19b82bd-tornado_in_mausoleum_FORWARD_SLASH_86fc45a268.jpg",
+  "width": 318,
+  "height": 300,
+  "segments": [
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 1057,
+      "score": 0.3755
+    },
+    {
+      "label_index": 18,
+      "class_name": "Destroyed building",
+      "pixel_count": 64445,
+      "score": 0.8794
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 3615,
+      "score": 0.6772
+    }
+  ]
+}

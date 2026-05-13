@@ -1,0 +1,20 @@
+{
+  "image_id": "8bdcd611-tornado_in_industrial_area_FORWARD_SLASH_00124",
+  "file_name": "8bdcd611-tornado_in_industrial_area_FORWARD_SLASH_00124.jpg",
+  "width": 1763,
+  "height": 1175,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 712918,
+      "score": 0.8846
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 228215,
+      "score": 0.6868
+    }
+  ]
+}

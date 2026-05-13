@@ -1,0 +1,44 @@
+{
+  "image_id": "62e20100-bus_accident_in_river_FORWARD_SLASH_fb06bbfe6a",
+  "file_name": "62e20100-bus_accident_in_river_FORWARD_SLASH_fb06bbfe6a.jpg",
+  "width": 660,
+  "height": 371,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 1216,
+      "score": 0.3984
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 7698,
+      "score": 0.8176
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 15091,
+      "score": 0.3634
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 481,
+      "score": 0.8594
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 9515,
+      "score": 0.5122
+    },
+    {
+      "label_index": 52,
+      "class_name": "Tank",
+      "pixel_count": 1701,
+      "score": 0.3638
+    }
+  ]
+}

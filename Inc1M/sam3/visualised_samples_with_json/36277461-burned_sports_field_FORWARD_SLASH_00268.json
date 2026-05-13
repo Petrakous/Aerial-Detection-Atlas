@@ -1,0 +1,38 @@
+{
+  "image_id": "36277461-burned_sports_field_FORWARD_SLASH_00268",
+  "file_name": "36277461-burned_sports_field_FORWARD_SLASH_00268.jpg",
+  "width": 1200,
+  "height": 1005,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 443278,
+      "score": 0.5846
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 79361,
+      "score": 0.8184
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 8594,
+      "score": 0.8904
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 5292,
+      "score": 0.4477
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 24013,
+      "score": 0.3909
+    }
+  ]
+}

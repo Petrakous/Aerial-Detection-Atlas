@@ -1,0 +1,38 @@
+{
+  "image_id": "e406384b-bus_explosion_in_mausoleum_FORWARD_SLASH_b5de9d9370",
+  "file_name": "e406384b-bus_explosion_in_mausoleum_FORWARD_SLASH_b5de9d9370.jpg",
+  "width": 564,
+  "height": 423,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 29496,
+      "score": 0.6807
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 12568,
+      "score": 0.9919
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 28429,
+      "score": 0.9966
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 83250,
+      "score": 0.9949
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 10880,
+      "score": 0.7962
+    }
+  ]
+}

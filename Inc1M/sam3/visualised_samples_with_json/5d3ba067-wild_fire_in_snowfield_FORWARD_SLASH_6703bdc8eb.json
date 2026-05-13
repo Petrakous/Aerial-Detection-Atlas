@@ -1,0 +1,56 @@
+{
+  "image_id": "5d3ba067-wild_fire_in_snowfield_FORWARD_SLASH_6703bdc8eb",
+  "file_name": "5d3ba067-wild_fire_in_snowfield_FORWARD_SLASH_6703bdc8eb.jpg",
+  "width": 403,
+  "height": 284,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 4636,
+      "score": 0.4804
+    },
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 1593,
+      "score": 0.3345
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 6439,
+      "score": 0.5161
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 10245,
+      "score": 0.7141
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 583,
+      "score": 0.4453
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 71,
+      "score": 0.4619
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 8394,
+      "score": 0.4922
+    },
+    {
+      "label_index": 31,
+      "class_name": "Excavator",
+      "pixel_count": 345,
+      "score": 0.4277
+    }
+  ]
+}

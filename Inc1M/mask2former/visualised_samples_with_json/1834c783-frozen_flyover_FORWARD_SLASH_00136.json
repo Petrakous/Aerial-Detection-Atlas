@@ -1,0 +1,56 @@
+{
+  "image_id": "1834c783-frozen_flyover_FORWARD_SLASH_00136",
+  "file_name": "1834c783-frozen_flyover_FORWARD_SLASH_00136.jpg",
+  "width": 768,
+  "height": 1150,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 28683,
+      "score": 0.9287
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "pixel_count": 6764,
+      "score": 0.8184
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 2551,
+      "score": 0.719
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 7292,
+      "score": 0.341
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 153396,
+      "score": 0.8646
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 7621,
+      "score": 0.8521
+    },
+    {
+      "label_index": 30,
+      "class_name": "Animal",
+      "pixel_count": 365,
+      "score": 0.5293
+    },
+    {
+      "label_index": 50,
+      "class_name": "Dry plant",
+      "pixel_count": 41357,
+      "score": 0.4908
+    }
+  ]
+}

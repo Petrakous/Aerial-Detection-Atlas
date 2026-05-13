@@ -1,0 +1,14 @@
+{
+  "image_id": "572a7fb8-flooded_residential_neighborhood_FORWARD_SLASH_00366",
+  "file_name": "572a7fb8-flooded_residential_neighborhood_FORWARD_SLASH_00366.jpg",
+  "width": 1920,
+  "height": 1080,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 851355,
+      "score": 0.9455
+    }
+  ]
+}

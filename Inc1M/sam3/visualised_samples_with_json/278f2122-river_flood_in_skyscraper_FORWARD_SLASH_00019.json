@@ -1,0 +1,32 @@
+{
+  "image_id": "278f2122-river_flood_in_skyscraper_FORWARD_SLASH_00019",
+  "file_name": "278f2122-river_flood_in_skyscraper_FORWARD_SLASH_00019.jpg",
+  "width": 1140,
+  "height": 641,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 108190,
+      "score": 0.6094
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 187711,
+      "score": 0.5227
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 2112,
+      "score": 0.5234
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 95679,
+      "score": 0.6443
+    }
+  ]
+}

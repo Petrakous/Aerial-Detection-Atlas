@@ -1,0 +1,26 @@
+{
+  "image_id": "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014",
+  "file_name": "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014.jpg",
+  "width": 640,
+  "height": 360,
+  "segments": [
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 6751,
+      "score": 0.8732
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 75769,
+      "score": 0.8374
+    },
+    {
+      "label_index": 9,
+      "class_name": "Fire hose",
+      "pixel_count": 4338,
+      "score": 0.4969
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "image_id": "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085",
+  "file_name": "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085.jpg",
+  "width": 3888,
+  "height": 2592,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 385745,
+      "score": 0.7402
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 92002,
+      "score": 0.4293
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 8991,
+      "score": 0.325
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 1730477,
+      "score": 0.8638
+    }
+  ]
+}

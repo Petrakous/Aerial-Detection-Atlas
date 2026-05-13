@@ -1,0 +1,32 @@
+{
+  "image_id": "33e86502-earthquake_in_house_FORWARD_SLASH_00570",
+  "file_name": "33e86502-earthquake_in_house_FORWARD_SLASH_00570.jpg",
+  "width": 992,
+  "height": 744,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 28784,
+      "score": 0.9505
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 14593,
+      "score": 0.6178
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 277601,
+      "score": 0.9202
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 19151,
+      "score": 0.5856
+    }
+  ]
+}

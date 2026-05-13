@@ -1,0 +1,26 @@
+{
+  "image_id": "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109",
+  "file_name": "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
+  "width": 1024,
+  "height": 576,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 154837,
+      "score": 0.9742
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 293,
+      "score": 0.5378
+    },
+    {
+      "label_index": 26,
+      "class_name": "Boat",
+      "pixel_count": 75760,
+      "score": 0.8108
+    }
+  ]
+}

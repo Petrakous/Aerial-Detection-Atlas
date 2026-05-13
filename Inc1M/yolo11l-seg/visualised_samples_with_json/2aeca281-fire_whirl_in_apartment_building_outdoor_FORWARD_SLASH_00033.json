@@ -1,0 +1,20 @@
+{
+  "image_id": "2aeca281-fire_whirl_in_apartment_building_outdoor_FORWARD_SLASH_00033",
+  "file_name": "2aeca281-fire_whirl_in_apartment_building_outdoor_FORWARD_SLASH_00033.jpg",
+  "width": 1862,
+  "height": 1048,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 549856,
+      "score": 0.9032
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 31411,
+      "score": 0.9364
+    }
+  ]
+}

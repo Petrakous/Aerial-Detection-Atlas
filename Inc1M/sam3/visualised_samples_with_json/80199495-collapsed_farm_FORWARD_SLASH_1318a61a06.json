@@ -1,0 +1,50 @@
+{
+  "image_id": "80199495-collapsed_farm_FORWARD_SLASH_1318a61a06",
+  "file_name": "80199495-collapsed_farm_FORWARD_SLASH_1318a61a06.jpg",
+  "width": 1023,
+  "height": 369,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 17851,
+      "score": 0.5608
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 54360,
+      "score": 0.7624
+    },
+    {
+      "label_index": 18,
+      "class_name": "Destroyed building",
+      "pixel_count": 16293,
+      "score": 0.7896
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 7777,
+      "score": 0.6582
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 109927,
+      "score": 0.4836
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 5071,
+      "score": 0.6575
+    },
+    {
+      "label_index": 43,
+      "class_name": "Silo",
+      "pixel_count": 2588,
+      "score": 0.937
+    }
+  ]
+}

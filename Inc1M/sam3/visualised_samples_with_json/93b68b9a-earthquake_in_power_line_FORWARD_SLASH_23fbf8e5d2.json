@@ -1,0 +1,68 @@
+{
+  "image_id": "93b68b9a-earthquake_in_power_line_FORWARD_SLASH_23fbf8e5d2",
+  "file_name": "93b68b9a-earthquake_in_power_line_FORWARD_SLASH_23fbf8e5d2.jpg",
+  "width": 2048,
+  "height": 1365,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 83342,
+      "score": 0.7161
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 77350,
+      "score": 0.4519
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 57421,
+      "score": 0.4422
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 52960,
+      "score": 0.6652
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 17075,
+      "score": 0.3613
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 434791,
+      "score": 0.8159
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 51254,
+      "score": 0.3835
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 20596,
+      "score": 0.4217
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 100984,
+      "score": 0.7086
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 3098,
+      "score": 0.429
+    }
+  ]
+}

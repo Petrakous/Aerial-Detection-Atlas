@@ -1,0 +1,44 @@
+{
+  "image_id": "343643ef-car_explosion_in_temple_asia_FORWARD_SLASH_f85517d5bf",
+  "file_name": "343643ef-car_explosion_in_temple_asia_FORWARD_SLASH_f85517d5bf.jpg",
+  "width": 675,
+  "height": 1200,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 157953,
+      "score": 0.7537
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 78391,
+      "score": 0.7378
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 7459,
+      "score": 0.5605
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 171584,
+      "score": 0.5728
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 46889,
+      "score": 0.6007
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 57374,
+      "score": 0.8589
+    }
+  ]
+}

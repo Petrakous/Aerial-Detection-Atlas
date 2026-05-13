@@ -1,0 +1,38 @@
+{
+  "image_id": "5535e502-heavy_rain_in_apartment_building_outdoor_FORWARD_SLASH_00216",
+  "file_name": "5535e502-heavy_rain_in_apartment_building_outdoor_FORWARD_SLASH_00216.jpg",
+  "width": 920,
+  "height": 601,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 205393,
+      "score": 0.9253
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 8621,
+      "score": 0.3052
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 1546,
+      "score": 0.4202
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 49742,
+      "score": 0.71
+    },
+    {
+      "label_index": 30,
+      "class_name": "Animal",
+      "pixel_count": 30149,
+      "score": 0.8809
+    }
+  ]
+}

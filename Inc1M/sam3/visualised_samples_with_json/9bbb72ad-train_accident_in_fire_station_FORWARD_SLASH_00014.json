@@ -1,0 +1,44 @@
+{
+  "image_id": "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014",
+  "file_name": "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014.jpg",
+  "width": 640,
+  "height": 360,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 55147,
+      "score": 0.9478
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "pixel_count": 1698,
+      "score": 0.4707
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 8426,
+      "score": 0.8459
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 3878,
+      "score": 0.6493
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 882,
+      "score": 0.3611
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "pixel_count": 161,
+      "score": 0.416
+    }
+  ]
+}

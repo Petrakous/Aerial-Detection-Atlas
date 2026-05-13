@@ -1,0 +1,62 @@
+{
+  "image_id": "b07d1863-typhoon_in_valley_FORWARD_SLASH_00158",
+  "file_name": "b07d1863-typhoon_in_valley_FORWARD_SLASH_00158.jpg",
+  "width": 389,
+  "height": 280,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 2362,
+      "score": 0.4084
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 377,
+      "score": 0.4529
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 770,
+      "score": 0.3989
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 702,
+      "score": 0.3359
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 1161,
+      "score": 0.5002
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 3704,
+      "score": 0.3347
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "pixel_count": 2226,
+      "score": 0.6063
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 2258,
+      "score": 0.3689
+    },
+    {
+      "label_index": 50,
+      "class_name": "Dry plant",
+      "pixel_count": 268,
+      "score": 0.457
+    }
+  ]
+}

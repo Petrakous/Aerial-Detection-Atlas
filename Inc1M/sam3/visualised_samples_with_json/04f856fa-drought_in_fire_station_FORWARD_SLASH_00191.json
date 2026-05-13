@@ -1,0 +1,62 @@
+{
+  "image_id": "04f856fa-drought_in_fire_station_FORWARD_SLASH_00191",
+  "file_name": "04f856fa-drought_in_fire_station_FORWARD_SLASH_00191.jpg",
+  "width": 494,
+  "height": 370,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 26806,
+      "score": 0.6823
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 11721,
+      "score": 0.8809
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 1266,
+      "score": 0.6068
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "pixel_count": 735,
+      "score": 0.4197
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 1573,
+      "score": 0.376
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 7283,
+      "score": 0.5883
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 748,
+      "score": 0.55
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 3813,
+      "score": 0.6289
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "pixel_count": 103,
+      "score": 0.5934
+    }
+  ]
+}

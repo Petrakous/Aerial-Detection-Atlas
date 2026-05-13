@@ -1,0 +1,56 @@
+{
+  "image_id": "3a7366c7-boat_disaster_in_alley_FORWARD_SLASH_00437",
+  "file_name": "3a7366c7-boat_disaster_in_alley_FORWARD_SLASH_00437.jpg",
+  "width": 1786,
+  "height": 1160,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 268776,
+      "score": 0.916
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 69676,
+      "score": 0.8672
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 144513,
+      "score": 0.7598
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 616928,
+      "score": 0.5421
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 185484,
+      "score": 0.853
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 52982,
+      "score": 0.7144
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 32337,
+      "score": 0.5618
+    },
+    {
+      "label_index": 52,
+      "class_name": "Tank",
+      "pixel_count": 24322,
+      "score": 0.7202
+    }
+  ]
+}

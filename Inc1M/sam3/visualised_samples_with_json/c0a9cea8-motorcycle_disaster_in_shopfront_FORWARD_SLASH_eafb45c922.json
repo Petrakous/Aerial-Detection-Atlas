@@ -1,0 +1,44 @@
+{
+  "image_id": "c0a9cea8-motorcycle_disaster_in_shopfront_FORWARD_SLASH_eafb45c922",
+  "file_name": "c0a9cea8-motorcycle_disaster_in_shopfront_FORWARD_SLASH_eafb45c922.jpg",
+  "width": 920,
+  "height": 1227,
+  "segments": [
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 173126,
+      "score": 0.5872
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 532,
+      "score": 0.3535
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 128572,
+      "score": 0.4615
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 26283,
+      "score": 0.5894
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 294309,
+      "score": 0.6162
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 39625,
+      "score": 0.589
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "image_id": "b07d1863-typhoon_in_valley_FORWARD_SLASH_00158",
+  "file_name": "b07d1863-typhoon_in_valley_FORWARD_SLASH_00158.jpg",
+  "width": 389,
+  "height": 280,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 2701,
+      "score": 0.6999
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 1331,
+      "score": 0.5455
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 434,
+      "score": 0.8032
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "pixel_count": 2093,
+      "score": 0.8486
+    },
+    {
+      "label_index": 50,
+      "class_name": "Dry plant",
+      "pixel_count": 804,
+      "score": 0.9648
+    }
+  ]
+}

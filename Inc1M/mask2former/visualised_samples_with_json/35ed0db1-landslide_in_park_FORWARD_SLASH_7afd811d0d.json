@@ -1,0 +1,32 @@
+{
+  "image_id": "35ed0db1-landslide_in_park_FORWARD_SLASH_7afd811d0d",
+  "file_name": "35ed0db1-landslide_in_park_FORWARD_SLASH_7afd811d0d.jpg",
+  "width": 360,
+  "height": 240,
+  "segments": [
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "pixel_count": 1945,
+      "score": 0.663
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 16514,
+      "score": 0.8595
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 8948,
+      "score": 0.9225
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "pixel_count": 264,
+      "score": 0.3937
+    }
+  ]
+}

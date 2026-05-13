@@ -1,0 +1,32 @@
+{
+  "image_id": "21e7f46c-flood_in_house_FORWARD_SLASH_00647",
+  "file_name": "21e7f46c-flood_in_house_FORWARD_SLASH_00647.jpg",
+  "width": 310,
+  "height": 415,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 71448,
+      "score": 0.6452
+    },
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 4160,
+      "score": 0.8195
+    },
+    {
+      "label_index": 11,
+      "class_name": "Green plant",
+      "pixel_count": 1837,
+      "score": 0.3627
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 15309,
+      "score": 0.9441
+    }
+  ]
+}

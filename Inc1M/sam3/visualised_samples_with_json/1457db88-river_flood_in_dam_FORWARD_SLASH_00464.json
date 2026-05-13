@@ -1,0 +1,50 @@
+{
+  "image_id": "1457db88-river_flood_in_dam_FORWARD_SLASH_00464",
+  "file_name": "1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
+  "width": 670,
+  "height": 376,
+  "segments": [
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "pixel_count": 7360,
+      "score": 0.5872
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 7604,
+      "score": 0.7822
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 6226,
+      "score": 0.9087
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 566,
+      "score": 0.6356
+    },
+    {
+      "label_index": 37,
+      "class_name": "Burnt tree",
+      "pixel_count": 4726,
+      "score": 0.4134
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 8914,
+      "score": 0.5165
+    },
+    {
+      "label_index": 51,
+      "class_name": "Furniture",
+      "pixel_count": 598,
+      "score": 0.5239
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "image_id": "d5eb9e28-demolition_in_bazaar_outdoor_FORWARD_SLASH_00239",
+  "file_name": "d5eb9e28-demolition_in_bazaar_outdoor_FORWARD_SLASH_00239.jpg",
+  "width": 2016,
+  "height": 1512,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 700988,
+      "score": 0.9629
+    },
+    {
+      "label_index": 2,
+      "class_name": "Fence",
+      "pixel_count": 269165,
+      "score": 0.4507
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 321061,
+      "score": 0.5064
+    },
+    {
+      "label_index": 30,
+      "class_name": "Excavator",
+      "pixel_count": 124710,
+      "score": 0.7403
+    }
+  ]
+}

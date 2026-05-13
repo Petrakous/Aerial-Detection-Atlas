@@ -1,0 +1,14 @@
+{
+  "image_id": "1a7bf422-nuclear_explosion_in_fire_station_FORWARD_SLASH_0c7bffd942",
+  "file_name": "1a7bf422-nuclear_explosion_in_fire_station_FORWARD_SLASH_0c7bffd942.jpg",
+  "width": 615,
+  "height": 652,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 65635,
+      "score": 0.587
+    }
+  ]
+}

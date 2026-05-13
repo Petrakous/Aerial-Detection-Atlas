@@ -1,0 +1,514 @@
+{
+  "model": "yolo26l-seg",
+  "config": {
+    "iouThreshold": 0.72,
+    "containThreshold": 0.88,
+    "nestedCenterThreshold": 0.96,
+    "minScore": 0.3
+  },
+  "original_predictions": 1137,
+  "kept_predictions": 801,
+  "removed_predictions": 336,
+  "scenes": [
+    {
+      "file_name": "001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
+      "original_predictions": 9,
+      "kept_predictions": 7
+    },
+    {
+      "file_name": "0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499.jpg",
+      "original_predictions": 15,
+      "kept_predictions": 13
+    },
+    {
+      "file_name": "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
+      "original_predictions": 10,
+      "kept_predictions": 7
+    },
+    {
+      "file_name": "0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056.jpg",
+      "original_predictions": 11,
+      "kept_predictions": 8
+    },
+    {
+      "file_name": "03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424.jpg",
+      "original_predictions": 9,
+      "kept_predictions": 8
+    },
+    {
+      "file_name": "04f856fa-drought_in_fire_station_FORWARD_SLASH_00191.jpg",
+      "original_predictions": 25,
+      "kept_predictions": 19
+    },
+    {
+      "file_name": "06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg",
+      "original_predictions": 12,
+      "kept_predictions": 9
+    },
+    {
+      "file_name": "0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 5
+    },
+    {
+      "file_name": "094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640.jpg",
+      "original_predictions": 14,
+      "kept_predictions": 9
+    },
+    {
+      "file_name": "10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507.jpg",
+      "original_predictions": 13,
+      "kept_predictions": 9
+    },
+    {
+      "file_name": "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "174878c4-flooded_palace_FORWARD_SLASH_00162.jpg",
+      "original_predictions": 6,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "1834c783-frozen_flyover_FORWARD_SLASH_00136.jpg",
+      "original_predictions": 14,
+      "kept_predictions": 11
+    },
+    {
+      "file_name": "185c759c-under_construction_landfill_FORWARD_SLASH_00101.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "1a7bf422-nuclear_explosion_in_fire_station_FORWARD_SLASH_0c7bffd942.jpg",
+      "original_predictions": 3,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127.jpg",
+      "original_predictions": 2,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "1cf03b16-burned_farm_FORWARD_SLASH_00221.jpg",
+      "original_predictions": 1,
+      "kept_predictions": 0
+    },
+    {
+      "file_name": "21e62969-drought_in_fire_station_FORWARD_SLASH_00289.jpg",
+      "original_predictions": 10,
+      "kept_predictions": 7
+    },
+    {
+      "file_name": "21e7f46c-flood_in_house_FORWARD_SLASH_00647.jpg",
+      "original_predictions": 9,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473.jpg",
+      "original_predictions": 6,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "24b0cd93-wild_fire_in_pavilion_FORWARD_SLASH_cf1dceb2fd.jpg",
+      "original_predictions": 15,
+      "kept_predictions": 8
+    },
+    {
+      "file_name": "278f2122-river_flood_in_skyscraper_FORWARD_SLASH_00019.jpg",
+      "original_predictions": 29,
+      "kept_predictions": 24
+    },
+    {
+      "file_name": "27a489d4-bicycle_disaster_in_street_FORWARD_SLASH_00146.jpg",
+      "original_predictions": 11,
+      "kept_predictions": 8
+    },
+    {
+      "file_name": "2aeca281-fire_whirl_in_apartment_building_outdoor_FORWARD_SLASH_00033.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "338b84a2-typhoon_in_landfill_FORWARD_SLASH_00241.jpg",
+      "original_predictions": 15,
+      "kept_predictions": 10
+    },
+    {
+      "file_name": "33e86502-earthquake_in_house_FORWARD_SLASH_00570.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "343643ef-car_explosion_in_temple_asia_FORWARD_SLASH_f85517d5bf.jpg",
+      "original_predictions": 27,
+      "kept_predictions": 20
+    },
+    {
+      "file_name": "35ed0db1-landslide_in_park_FORWARD_SLASH_7afd811d0d.jpg",
+      "original_predictions": 8,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "36277461-burned_sports_field_FORWARD_SLASH_00268.jpg",
+      "original_predictions": 7,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "3883bbf7-flooded_fire_station_FORWARD_SLASH_ee1a2acf99.jpg",
+      "original_predictions": 7,
+      "kept_predictions": 7
+    },
+    {
+      "file_name": "3a7366c7-boat_disaster_in_alley_FORWARD_SLASH_00437.jpg",
+      "original_predictions": 8,
+      "kept_predictions": 6
+    },
+    {
+      "file_name": "3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
+      "original_predictions": 9,
+      "kept_predictions": 7
+    },
+    {
+      "file_name": "443b5ad3-typhoon_in_field_road_FORWARD_SLASH_00221.jpg",
+      "original_predictions": 13,
+      "kept_predictions": 9
+    },
+    {
+      "file_name": "4affea7d-landslide_in_downtown_FORWARD_SLASH_00638.jpg",
+      "original_predictions": 13,
+      "kept_predictions": 8
+    },
+    {
+      "file_name": "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308.jpg",
+      "original_predictions": 7,
+      "kept_predictions": 6
+    },
+    {
+      "file_name": "509aa0dd-burned_nuclear_power_plant_FORWARD_SLASH_944c0e77b1.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "5535e502-heavy_rain_in_apartment_building_outdoor_FORWARD_SLASH_00216.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "572a7fb8-flooded_residential_neighborhood_FORWARD_SLASH_00366.jpg",
+      "original_predictions": 94,
+      "kept_predictions": 84
+    },
+    {
+      "file_name": "57df9db9-tornado_in_street_FORWARD_SLASH_00080.jpg",
+      "original_predictions": 17,
+      "kept_predictions": 11
+    },
+    {
+      "file_name": "5b8fc890-river_flood_in_alley_FORWARD_SLASH_150da0e83c.jpg",
+      "original_predictions": 18,
+      "kept_predictions": 12
+    },
+    {
+      "file_name": "5c18c849-parking_lot_on_fire_FORWARD_SLASH_00495.jpg",
+      "original_predictions": 26,
+      "kept_predictions": 22
+    },
+    {
+      "file_name": "5ceb7a2d-wild_fire_in_ocean_FORWARD_SLASH_662bc42d28.jpg",
+      "original_predictions": 8,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "5d3ba067-wild_fire_in_snowfield_FORWARD_SLASH_6703bdc8eb.jpg",
+      "original_predictions": 8,
+      "kept_predictions": 6
+    },
+    {
+      "file_name": "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017.jpg",
+      "original_predictions": 2,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775.jpg",
+      "original_predictions": 11,
+      "kept_predictions": 9
+    },
+    {
+      "file_name": "62e20100-bus_accident_in_river_FORWARD_SLASH_fb06bbfe6a.jpg",
+      "original_predictions": 17,
+      "kept_predictions": 13
+    },
+    {
+      "file_name": "6318df7b-fire_whirl_in_building_facade_FORWARD_SLASH_00249.jpg",
+      "original_predictions": 2,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "63ef9d0e-wild_fire_in_valley_FORWARD_SLASH_00447.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "6539428b-ship_crash_in_desert_sand_FORWARD_SLASH_167dbb167b.jpg",
+      "original_predictions": 3,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "6a27ade9-car_disaster_in_stadium_FORWARD_SLASH_9408391efc.jpg",
+      "original_predictions": 2,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "777b8154-car_disaster_in_embassy_FORWARD_SLASH_149bbd2961.jpg",
+      "original_predictions": 16,
+      "kept_predictions": 10
+    },
+    {
+      "file_name": "7859a819-earthquake_in_diner_outdoor_FORWARD_SLASH_00006.jpg",
+      "original_predictions": 8,
+      "kept_predictions": 6
+    },
+    {
+      "file_name": "7d813980-river_flood_in_city_hall_outdoor_FORWARD_SLASH_00577.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "7fe137e4-car_explosion_in_alley_FORWARD_SLASH_00001.jpg",
+      "original_predictions": 2,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "80199495-collapsed_farm_FORWARD_SLASH_1318a61a06.jpg",
+      "original_predictions": 11,
+      "kept_predictions": 10
+    },
+    {
+      "file_name": "82a2700e-highway_with_smoke_FORWARD_SLASH_c6c44b2190.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "84896714-mudflow_in_police_station_FORWARD_SLASH_85d0d716aa.jpg",
+      "original_predictions": 13,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "86b540a7-flooded_church_outdoor_FORWARD_SLASH_00206.jpg",
+      "original_predictions": 6,
+      "kept_predictions": 5
+    },
+    {
+      "file_name": "887251e0-river_flood_in_ocean_FORWARD_SLASH_cd6f15b85f.jpg",
+      "original_predictions": 3,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "8bdcd611-tornado_in_industrial_area_FORWARD_SLASH_00124.jpg",
+      "original_predictions": 11,
+      "kept_predictions": 9
+    },
+    {
+      "file_name": "8c966860-haboob_in_fire_station_FORWARD_SLASH_00133.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267.jpg",
+      "original_predictions": 6,
+      "kept_predictions": 5
+    },
+    {
+      "file_name": "8de67a5b-hurricaine_in_port_FORWARD_SLASH_ad49d28414.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "93b68b9a-earthquake_in_power_line_FORWARD_SLASH_23fbf8e5d2.jpg",
+      "original_predictions": 22,
+      "kept_predictions": 13
+    },
+    {
+      "file_name": "95b2f743-tornado_in_temple_asia_FORWARD_SLASH_24bd0c12f0.jpg",
+      "original_predictions": 12,
+      "kept_predictions": 10
+    },
+    {
+      "file_name": "99a06978-flood_in_forest_FORWARD_SLASH_00022.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014.jpg",
+      "original_predictions": 10,
+      "kept_predictions": 8
+    },
+    {
+      "file_name": "a26dbb54-collapsed_badlands_FORWARD_SLASH_944de439d7.jpg",
+      "original_predictions": 3,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "a2b5909f-mudflow_in_house_FORWARD_SLASH_a717fcd107.jpg",
+      "original_predictions": 12,
+      "kept_predictions": 6
+    },
+    {
+      "file_name": "a49f19c3-nuclear_explosion_in_river_FORWARD_SLASH_cf2b436483.jpg",
+      "original_predictions": 14,
+      "kept_predictions": 10
+    },
+    {
+      "file_name": "aeaf667b-earthquake_in_schoolhouse_FORWARD_SLASH_4b86fdfb17.jpg",
+      "original_predictions": 82,
+      "kept_predictions": 50
+    },
+    {
+      "file_name": "b024066d-storm_surge_in_bridge_FORWARD_SLASH_00135.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "b07d1863-typhoon_in_valley_FORWARD_SLASH_00158.jpg",
+      "original_predictions": 14,
+      "kept_predictions": 13
+    },
+    {
+      "file_name": "b893b49d-demolition_in_river_FORWARD_SLASH_00205.jpg",
+      "original_predictions": 49,
+      "kept_predictions": 40
+    },
+    {
+      "file_name": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa.jpg",
+      "original_predictions": 7,
+      "kept_predictions": 5
+    },
+    {
+      "file_name": "c0a9cea8-motorcycle_disaster_in_shopfront_FORWARD_SLASH_eafb45c922.jpg",
+      "original_predictions": 7,
+      "kept_predictions": 6
+    },
+    {
+      "file_name": "c2e2ee21-fog_in_hospital_FORWARD_SLASH_ac89240d02.jpg",
+      "original_predictions": 6,
+      "kept_predictions": 6
+    },
+    {
+      "file_name": "c41cf413-bicycle_disaster_in_museum_outdoor_FORWARD_SLASH_00303.jpg",
+      "original_predictions": 15,
+      "kept_predictions": 9
+    },
+    {
+      "file_name": "c43251f0-earthquake_in_village_FORWARD_SLASH_00111.jpg",
+      "original_predictions": 6,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "c48fa562-wild_fire_in_schoolhouse_FORWARD_SLASH_00391.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 5
+    },
+    {
+      "file_name": "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f.jpg",
+      "original_predictions": 16,
+      "kept_predictions": 10
+    },
+    {
+      "file_name": "cd92ed56-wild_fire_in_apartment_building_outdoor_FORWARD_SLASH_00357.jpg",
+      "original_predictions": 1,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "d140df0d-car_explosion_in_apartment_building_outdoor_FORWARD_SLASH_00044.jpg",
+      "original_predictions": 33,
+      "kept_predictions": 7
+    },
+    {
+      "file_name": "d5eb9e28-demolition_in_bazaar_outdoor_FORWARD_SLASH_00239.jpg",
+      "original_predictions": 6,
+      "kept_predictions": 4
+    },
+    {
+      "file_name": "d6b28f6e-plane_incident_in_valley_FORWARD_SLASH_00435.jpg",
+      "original_predictions": 1,
+      "kept_predictions": 1
+    },
+    {
+      "file_name": "d748566f-plane_accident_in_house_FORWARD_SLASH_8920c996cb.jpg",
+      "original_predictions": 14,
+      "kept_predictions": 13
+    },
+    {
+      "file_name": "d9e272df-demolition_in_motel_FORWARD_SLASH_5536afcb9e.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "da53784b-flooded_bazaar_outdoor_FORWARD_SLASH_30b87aecf5.jpg",
+      "original_predictions": 29,
+      "kept_predictions": 23
+    },
+    {
+      "file_name": "dc9ca70c-coastal_flood_in_bridge_FORWARD_SLASH_00012.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "e406384b-bus_explosion_in_mausoleum_FORWARD_SLASH_b5de9d9370.jpg",
+      "original_predictions": 28,
+      "kept_predictions": 13
+    },
+    {
+      "file_name": "e8e486d0-wild_fire_in_rope_bridge_FORWARD_SLASH_58a00df8f4.jpg",
+      "original_predictions": 3,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "eb0f9752-flooded_forest_road_FORWARD_SLASH_3752f79c85.jpg",
+      "original_predictions": 5,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "ec83f2df-flooded_bridge_FORWARD_SLASH_7232b01a4f.jpg",
+      "original_predictions": 6,
+      "kept_predictions": 5
+    },
+    {
+      "file_name": "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085.jpg",
+      "original_predictions": 4,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "f19b82bd-tornado_in_mausoleum_FORWARD_SLASH_86fc45a268.jpg",
+      "original_predictions": 3,
+      "kept_predictions": 3
+    },
+    {
+      "file_name": "f4567c0c-flooded_sky_FORWARD_SLASH_283a043142.jpg",
+      "original_predictions": 16,
+      "kept_predictions": 12
+    },
+    {
+      "file_name": "f4e964c0-dirty_landfill_FORWARD_SLASH_00050.jpg",
+      "original_predictions": 3,
+      "kept_predictions": 2
+    },
+    {
+      "file_name": "fbe97915-burned_port_FORWARD_SLASH_00008.jpg",
+      "original_predictions": 3,
+      "kept_predictions": 2
+    }
+  ]
+}

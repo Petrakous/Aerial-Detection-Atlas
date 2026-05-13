@@ -37,6 +37,15 @@ window.DETECTION_ATLAS_DATA = {
       ]
     },
     {
+      "id": "Inc1M",
+      "name": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "sceneCount": 14,
+      "modelIds": [
+        "sam3"
+      ]
+    },
+    {
       "id": "LADD",
       "name": "LADD",
       "taskType": "object-detection",
@@ -81,6 +90,12 @@ window.DETECTION_ATLAS_DATA = {
     ],
     "semantic-segmentation": [
       {
+        "id": "water",
+        "name": "Water",
+        "labelIndex": 0,
+        "color": "#0047FF"
+      },
+      {
         "id": "background",
         "name": "Background",
         "labelIndex": 0,
@@ -93,10 +108,10 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#00FFD1"
       },
       {
-        "id": "water",
-        "name": "Water",
+        "id": "green-tree",
+        "name": "Green tree",
         "labelIndex": 1,
-        "color": "#0047FF"
+        "color": "#FFB300"
       },
       {
         "id": "building-non-flooded",
@@ -111,6 +126,12 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#00E676"
       },
       {
+        "id": "fence",
+        "name": "Fence",
+        "labelIndex": 2,
+        "color": "#FF6D00"
+      },
+      {
         "id": "road-flooded",
         "name": "Road-flooded",
         "labelIndex": 3,
@@ -123,6 +144,12 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#FFD600"
       },
       {
+        "id": "helmet",
+        "name": "Helmet",
+        "labelIndex": 3,
+        "color": "#FF6D00"
+      },
+      {
         "id": "road-non-flooded",
         "name": "Road-non-flooded",
         "labelIndex": 4,
@@ -133,6 +160,12 @@ window.DETECTION_ATLAS_DATA = {
         "name": "Building_Major_Damage",
         "labelIndex": 4,
         "color": "#FF6D00"
+      },
+      {
+        "id": "first-responder",
+        "name": "First responder",
+        "labelIndex": 4,
+        "color": "#8A00FF"
       },
       {
         "id": "building-total-destruction",
@@ -153,10 +186,28 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#C77DFF"
       },
       {
+        "id": "smoke",
+        "name": "Smoke",
+        "labelIndex": 7,
+        "color": "#FFB300"
+      },
+      {
+        "id": "destroyed-vehicle",
+        "name": "Destroyed vehicle",
+        "labelIndex": 7,
+        "color": "#FF6D00"
+      },
+      {
         "id": "road-blocked",
         "name": "Road-Blocked",
         "labelIndex": 8,
         "color": "#B6FF00"
+      },
+      {
+        "id": "flame",
+        "name": "Flame",
+        "labelIndex": 8,
+        "color": "#4B0082"
       },
       {
         "id": "tree",
@@ -175,6 +226,186 @@ window.DETECTION_ATLAS_DATA = {
         "name": "Pool",
         "labelIndex": 10,
         "color": "#4B0082"
+      },
+      {
+        "id": "boot",
+        "name": "Boot",
+        "labelIndex": 11,
+        "color": "#00E676"
+      },
+      {
+        "id": "green-plant",
+        "name": "Green plant",
+        "labelIndex": 12,
+        "color": "#8A00FF"
+      },
+      {
+        "id": "building",
+        "name": "Building",
+        "labelIndex": 12,
+        "color": "#FFD600"
+      },
+      {
+        "id": "window",
+        "name": "Window",
+        "labelIndex": 14,
+        "color": "#39FF14"
+      },
+      {
+        "id": "debris",
+        "name": "Debris",
+        "labelIndex": 15,
+        "color": "#FFB300"
+      },
+      {
+        "id": "dirt-road",
+        "name": "Dirt road",
+        "labelIndex": 16,
+        "color": "#FF6D00"
+      },
+      {
+        "id": "dry-tree",
+        "name": "Dry tree",
+        "labelIndex": 19,
+        "color": "#FFB300"
+      },
+      {
+        "id": "road",
+        "name": "Road",
+        "labelIndex": 20,
+        "color": "#FFD600"
+      },
+      {
+        "id": "civilian-vehicle",
+        "name": "Civilian vehicle",
+        "labelIndex": 21,
+        "color": "#4B0082"
+      },
+      {
+        "id": "wall",
+        "name": "Wall",
+        "labelIndex": 22,
+        "color": "#FF00D4"
+      },
+      {
+        "id": "citizen",
+        "name": "Citizen",
+        "labelIndex": 23,
+        "color": "#FFD600"
+      },
+      {
+        "id": "green-grass",
+        "name": "Green grass",
+        "labelIndex": 25,
+        "color": "#FF6D00"
+      },
+      {
+        "id": "pole",
+        "name": "Pole",
+        "labelIndex": 26,
+        "color": "#00FFD1"
+      },
+      {
+        "id": "boat",
+        "name": "Boat",
+        "labelIndex": 26,
+        "color": "#FFD600"
+      },
+      {
+        "id": "pavement",
+        "name": "Pavement",
+        "labelIndex": 28,
+        "color": "#FF00D4"
+      },
+      {
+        "id": "dry-grass",
+        "name": "Dry grass",
+        "labelIndex": 29,
+        "color": "#0047FF"
+      },
+      {
+        "id": "excavator",
+        "name": "Excavator",
+        "labelIndex": 31,
+        "color": "#B6FF00"
+      },
+      {
+        "id": "door",
+        "name": "Door",
+        "labelIndex": 32,
+        "color": "#00E676"
+      },
+      {
+        "id": "mud",
+        "name": "Mud",
+        "labelIndex": 32,
+        "color": "#FFD600"
+      },
+      {
+        "id": "barrier",
+        "name": "Barrier",
+        "labelIndex": 34,
+        "color": "#FFB300"
+      },
+      {
+        "id": "bag",
+        "name": "Bag",
+        "labelIndex": 36,
+        "color": "#39FF14"
+      },
+      {
+        "id": "burnt-tree",
+        "name": "Burnt tree",
+        "labelIndex": 37,
+        "color": "#FF1744"
+      },
+      {
+        "id": "fire-truck",
+        "name": "Fire truck",
+        "labelIndex": 38,
+        "color": "#0047FF"
+      },
+      {
+        "id": "burnt-grass",
+        "name": "Burnt grass",
+        "labelIndex": 45,
+        "color": "#4B0082"
+      },
+      {
+        "id": "glove",
+        "name": "Glove",
+        "labelIndex": 47,
+        "color": "#FF1744"
+      },
+      {
+        "id": "crane",
+        "name": "Crane",
+        "labelIndex": 47,
+        "color": "#0047FF"
+      },
+      {
+        "id": "dry-plant",
+        "name": "Dry plant",
+        "labelIndex": 49,
+        "color": "#00E676"
+      },
+      {
+        "id": "furniture",
+        "name": "Furniture",
+        "labelIndex": 50,
+        "color": "#8A00FF"
+      },
+      {
+        "id": "protective-glasses",
+        "name": "Protective glasses",
+        "labelIndex": 53,
+        "color": "#FFB300"
+      },
+      {
+        "id": "aerial-vehicle",
+        "name": "aerial vehicle",
+        "labelIndex": 58,
+        "color": "#8A00FF"
       }
     ]
   },
@@ -270,6 +501,21 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "stats": {
         "scenes": 50
+      }
+    },
+    {
+      "id": "sam3",
+      "name": "SAM3",
+      "shortName": "SAM3",
+      "color": "#d946ef",
+      "datasets": [
+        "Inc1M"
+      ],
+      "taskTypes": [
+        "semantic-segmentation"
+      ],
+      "stats": {
+        "scenes": 13
       }
     },
     {
@@ -27228,6 +27474,2220 @@ window.DETECTION_ATLAS_DATA = {
         "classCount": 5,
         "labeledPixels": 12000000,
         "coverage": 1
+      }
+    },
+    {
+      "id": "inc1m-04f856fa-drought_in_fire_station_FORWARD_SLASH_00191",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "04f856fa-drought_in_fire_station_FORWARD_SLASH_00191",
+      "sceneOrder": 0,
+      "title": "Scene 04f856fa-drought_in_fire_station_FORWARD_SLASH_00191",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/04f856fa-drought_in_fire_station_FORWARD_SLASH_00191.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/04f856fa-drought_in_fire_station_FORWARD_SLASH_00191.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/04f856fa-drought_in_fire_station_FORWARD_SLASH_00191.jpg",
+      "rawImageAvailable": true,
+      "width": 494,
+      "height": 370,
+      "dimensions": "494 x 370",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Green tree",
+          "pixelCount": 13329
+        },
+        {
+          "labelIndex": 2,
+          "className": "Fence",
+          "pixelCount": 6436
+        },
+        {
+          "labelIndex": 3,
+          "className": "Helmet",
+          "pixelCount": 701
+        },
+        {
+          "labelIndex": 4,
+          "className": "First responder",
+          "pixelCount": 9538
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 15440
+        },
+        {
+          "labelIndex": 8,
+          "className": "Flame",
+          "pixelCount": 1149
+        },
+        {
+          "labelIndex": 11,
+          "className": "Green plant",
+          "pixelCount": 9542
+        },
+        {
+          "labelIndex": 16,
+          "className": "Dirt road",
+          "pixelCount": 42535
+        },
+        {
+          "labelIndex": 28,
+          "className": "Dry grass",
+          "pixelCount": 17093
+        },
+        {
+          "labelIndex": 35,
+          "className": "Bag",
+          "pixelCount": 3057
+        },
+        {
+          "labelIndex": 44,
+          "className": "Burnt grass",
+          "pixelCount": 10713
+        },
+        {
+          "labelIndex": 49,
+          "className": "Dry plant",
+          "pixelCount": 4028
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/04f856fa-drought_in_fire_station_FORWARD_SLASH_00191.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 2,
+            "className": "Green tree",
+            "pixelCount": 26806
+          },
+          {
+            "labelIndex": 5,
+            "className": "First responder",
+            "pixelCount": 11721
+          },
+          {
+            "labelIndex": 9,
+            "className": "Flame",
+            "pixelCount": 1266
+          },
+          {
+            "labelIndex": 11,
+            "className": "Boot",
+            "pixelCount": 735
+          },
+          {
+            "labelIndex": 12,
+            "className": "Green plant",
+            "pixelCount": 1573
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 7283
+          },
+          {
+            "labelIndex": 29,
+            "className": "Dry grass",
+            "pixelCount": 748
+          },
+          {
+            "labelIndex": 36,
+            "className": "Bag",
+            "pixelCount": 3813
+          },
+          {
+            "labelIndex": 47,
+            "className": "Glove",
+            "pixelCount": 103
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/04f856fa-drought_in_fire_station_FORWARD_SLASH_00191.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 9,
+          "labeledPixels": 54048,
+          "coverage": 0.296
+        }
+      },
+      "classNames": [
+        "Green tree",
+        "Fence",
+        "Helmet",
+        "First responder",
+        "Smoke",
+        "Flame",
+        "Boot",
+        "Green plant",
+        "Dirt road",
+        "Pole",
+        "Dry grass",
+        "Bag",
+        "Burnt grass",
+        "Glove",
+        "Dry plant"
+      ],
+      "classLegend": [
+        {
+          "id": "green-tree",
+          "name": "Green tree",
+          "labelIndex": 1,
+          "color": "#FFB300"
+        },
+        {
+          "id": "fence",
+          "name": "Fence",
+          "labelIndex": 2,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "helmet",
+          "name": "Helmet",
+          "labelIndex": 3,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "first-responder",
+          "name": "First responder",
+          "labelIndex": 4,
+          "color": "#8A00FF"
+        },
+        {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
+          "color": "#FFB300"
+        },
+        {
+          "id": "flame",
+          "name": "Flame",
+          "labelIndex": 8,
+          "color": "#4B0082"
+        },
+        {
+          "id": "boot",
+          "name": "Boot",
+          "labelIndex": 11,
+          "color": "#00E676"
+        },
+        {
+          "id": "green-plant",
+          "name": "Green plant",
+          "labelIndex": 11,
+          "color": "#8A00FF"
+        },
+        {
+          "id": "dirt-road",
+          "name": "Dirt road",
+          "labelIndex": 16,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 26,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "dry-grass",
+          "name": "Dry grass",
+          "labelIndex": 28,
+          "color": "#0047FF"
+        },
+        {
+          "id": "bag",
+          "name": "Bag",
+          "labelIndex": 35,
+          "color": "#39FF14"
+        },
+        {
+          "id": "burnt-grass",
+          "name": "Burnt grass",
+          "labelIndex": 44,
+          "color": "#4B0082"
+        },
+        {
+          "id": "glove",
+          "name": "Glove",
+          "labelIndex": 47,
+          "color": "#FF1744"
+        },
+        {
+          "id": "dry-plant",
+          "name": "Dry plant",
+          "labelIndex": 49,
+          "color": "#00E676"
+        }
+      ],
+      "summary": "12 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 12,
+        "labeledPixels": 133561,
+        "coverage": 0.731
+      }
+    },
+    {
+      "id": "inc1m-10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507",
+      "sceneOrder": 1,
+      "title": "Scene 10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507.jpg",
+      "rawImageAvailable": true,
+      "width": 1024,
+      "height": 768,
+      "dimensions": "1024 x 768",
+      "groundTruth": [
+        {
+          "labelIndex": 2,
+          "className": "Fence",
+          "pixelCount": 7942
+        },
+        {
+          "labelIndex": 12,
+          "className": "Building",
+          "pixelCount": 104388
+        },
+        {
+          "labelIndex": 14,
+          "className": "Window",
+          "pixelCount": 9946
+        },
+        {
+          "labelIndex": 19,
+          "className": "Dry tree",
+          "pixelCount": 57293
+        },
+        {
+          "labelIndex": 21,
+          "className": "Civilian vehicle",
+          "pixelCount": 41473
+        },
+        {
+          "labelIndex": 25,
+          "className": "Pole",
+          "pixelCount": 14526
+        },
+        {
+          "labelIndex": 38,
+          "className": "Fire truck",
+          "pixelCount": 78338
+        },
+        {
+          "labelIndex": 47,
+          "className": "Crane",
+          "pixelCount": 32320
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 3,
+            "className": "Fence",
+            "pixelCount": 23378
+          },
+          {
+            "labelIndex": 13,
+            "className": "Building",
+            "pixelCount": 14465
+          },
+          {
+            "labelIndex": 15,
+            "className": "Window",
+            "pixelCount": 31877
+          },
+          {
+            "labelIndex": 22,
+            "className": "Civilian vehicle",
+            "pixelCount": 4463
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 8705
+          },
+          {
+            "labelIndex": 28,
+            "className": "Pavement",
+            "pixelCount": 4972
+          },
+          {
+            "labelIndex": 32,
+            "className": "Door",
+            "pixelCount": 14502
+          },
+          {
+            "labelIndex": 39,
+            "className": "Fire truck",
+            "pixelCount": 37190
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 8,
+          "labeledPixels": 139552,
+          "coverage": 0.177
+        }
+      },
+      "classNames": [
+        "Fence",
+        "Building",
+        "Window",
+        "Dry tree",
+        "Civilian vehicle",
+        "Pole",
+        "Pavement",
+        "Door",
+        "Fire truck",
+        "Crane"
+      ],
+      "classLegend": [
+        {
+          "id": "fence",
+          "name": "Fence",
+          "labelIndex": 2,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "building",
+          "name": "Building",
+          "labelIndex": 12,
+          "color": "#FFD600"
+        },
+        {
+          "id": "window",
+          "name": "Window",
+          "labelIndex": 14,
+          "color": "#39FF14"
+        },
+        {
+          "id": "dry-tree",
+          "name": "Dry tree",
+          "labelIndex": 19,
+          "color": "#FFB300"
+        },
+        {
+          "id": "civilian-vehicle",
+          "name": "Civilian vehicle",
+          "labelIndex": 21,
+          "color": "#4B0082"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 25,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "pavement",
+          "name": "Pavement",
+          "labelIndex": 28,
+          "color": "#FF00D4"
+        },
+        {
+          "id": "door",
+          "name": "Door",
+          "labelIndex": 32,
+          "color": "#00E676"
+        },
+        {
+          "id": "fire-truck",
+          "name": "Fire truck",
+          "labelIndex": 38,
+          "color": "#0047FF"
+        },
+        {
+          "id": "crane",
+          "name": "Crane",
+          "labelIndex": 47,
+          "color": "#0047FF"
+        }
+      ],
+      "summary": "8 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 8,
+        "labeledPixels": 346226,
+        "coverage": 0.44
+      }
+    },
+    {
+      "id": "inc1m-094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640",
+      "sceneOrder": 2,
+      "title": "Scene 094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 480,
+      "dimensions": "640 x 480",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Water",
+          "pixelCount": 30267
+        },
+        {
+          "labelIndex": 1,
+          "className": "Green tree",
+          "pixelCount": 13311
+        },
+        {
+          "labelIndex": 12,
+          "className": "Building",
+          "pixelCount": 25459
+        },
+        {
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 54786
+        },
+        {
+          "labelIndex": 21,
+          "className": "Civilian vehicle",
+          "pixelCount": 229
+        },
+        {
+          "labelIndex": 25,
+          "className": "Pole",
+          "pixelCount": 1520
+        },
+        {
+          "labelIndex": 27,
+          "className": "Pavement",
+          "pixelCount": 15236
+        },
+        {
+          "labelIndex": 33,
+          "className": "Barrier",
+          "pixelCount": 23169
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 45893
+          },
+          {
+            "labelIndex": 2,
+            "className": "Green tree",
+            "pixelCount": 15276
+          },
+          {
+            "labelIndex": 13,
+            "className": "Building",
+            "pixelCount": 15950
+          },
+          {
+            "labelIndex": 21,
+            "className": "Road",
+            "pixelCount": 46927
+          },
+          {
+            "labelIndex": 22,
+            "className": "Civilian vehicle",
+            "pixelCount": 339
+          },
+          {
+            "labelIndex": 23,
+            "className": "Wall",
+            "pixelCount": 12940
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 2201
+          },
+          {
+            "labelIndex": 28,
+            "className": "Pavement",
+            "pixelCount": 15582
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 8,
+          "labeledPixels": 155108,
+          "coverage": 0.505
+        }
+      },
+      "classNames": [
+        "Water",
+        "Green tree",
+        "Building",
+        "Road",
+        "Civilian vehicle",
+        "Wall",
+        "Pole",
+        "Pavement",
+        "Barrier"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
+          "id": "green-tree",
+          "name": "Green tree",
+          "labelIndex": 1,
+          "color": "#FFB300"
+        },
+        {
+          "id": "building",
+          "name": "Building",
+          "labelIndex": 12,
+          "color": "#FFD600"
+        },
+        {
+          "id": "road",
+          "name": "Road",
+          "labelIndex": 20,
+          "color": "#FFD600"
+        },
+        {
+          "id": "civilian-vehicle",
+          "name": "Civilian vehicle",
+          "labelIndex": 21,
+          "color": "#4B0082"
+        },
+        {
+          "id": "wall",
+          "name": "Wall",
+          "labelIndex": 23,
+          "color": "#FF00D4"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 25,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "pavement",
+          "name": "Pavement",
+          "labelIndex": 27,
+          "color": "#FF00D4"
+        },
+        {
+          "id": "barrier",
+          "name": "Barrier",
+          "labelIndex": 33,
+          "color": "#FFB300"
+        }
+      ],
+      "summary": "8 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 8,
+        "labeledPixels": 163977,
+        "coverage": 0.534
+      }
+    },
+    {
+      "id": "inc1m-06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479",
+      "sceneOrder": 3,
+      "title": "Scene 06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg",
+      "rawImageAvailable": true,
+      "width": 736,
+      "height": 1107,
+      "dimensions": "736 x 1107",
+      "groundTruth": [
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 271648
+        },
+        {
+          "labelIndex": 8,
+          "className": "Flame",
+          "pixelCount": 2527
+        },
+        {
+          "labelIndex": 12,
+          "className": "Building",
+          "pixelCount": 503039
+        },
+        {
+          "labelIndex": 15,
+          "className": "Debris",
+          "pixelCount": 23413
+        },
+        {
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 34337
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 7,
+            "className": "Destroyed vehicle",
+            "pixelCount": 8059
+          },
+          {
+            "labelIndex": 8,
+            "className": "Smoke",
+            "pixelCount": 140966
+          },
+          {
+            "labelIndex": 9,
+            "className": "Flame",
+            "pixelCount": 1203
+          },
+          {
+            "labelIndex": 12,
+            "className": "Green plant",
+            "pixelCount": 1493
+          },
+          {
+            "labelIndex": 13,
+            "className": "Building",
+            "pixelCount": 427101
+          },
+          {
+            "labelIndex": 15,
+            "className": "Window",
+            "pixelCount": 336
+          },
+          {
+            "labelIndex": 16,
+            "className": "Debris",
+            "pixelCount": 18426
+          },
+          {
+            "labelIndex": 21,
+            "className": "Road",
+            "pixelCount": 30427
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 3823
+          },
+          {
+            "labelIndex": 34,
+            "className": "Barrier",
+            "pixelCount": 12318
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 10,
+          "labeledPixels": 644152,
+          "coverage": 0.791
+        }
+      },
+      "classNames": [
+        "Destroyed vehicle",
+        "Smoke",
+        "Flame",
+        "Building",
+        "Green plant",
+        "Debris",
+        "Window",
+        "Road",
+        "Pole",
+        "Barrier"
+      ],
+      "classLegend": [
+        {
+          "id": "destroyed-vehicle",
+          "name": "Destroyed vehicle",
+          "labelIndex": 7,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
+          "color": "#FFB300"
+        },
+        {
+          "id": "flame",
+          "name": "Flame",
+          "labelIndex": 8,
+          "color": "#4B0082"
+        },
+        {
+          "id": "building",
+          "name": "Building",
+          "labelIndex": 12,
+          "color": "#FFD600"
+        },
+        {
+          "id": "green-plant",
+          "name": "Green plant",
+          "labelIndex": 12,
+          "color": "#8A00FF"
+        },
+        {
+          "id": "debris",
+          "name": "Debris",
+          "labelIndex": 15,
+          "color": "#FFB300"
+        },
+        {
+          "id": "window",
+          "name": "Window",
+          "labelIndex": 15,
+          "color": "#39FF14"
+        },
+        {
+          "id": "road",
+          "name": "Road",
+          "labelIndex": 20,
+          "color": "#FFD600"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 26,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "barrier",
+          "name": "Barrier",
+          "labelIndex": 34,
+          "color": "#FFB300"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 834964,
+        "coverage": 1.025
+      }
+    },
+    {
+      "id": "inc1m-0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499",
+      "sceneOrder": 4,
+      "title": "Scene 0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499.jpg",
+      "rawImageAvailable": true,
+      "width": 800,
+      "height": 533,
+      "dimensions": "800 x 533",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Green tree",
+          "pixelCount": 36222
+        },
+        {
+          "labelIndex": 12,
+          "className": "Building",
+          "pixelCount": 5416
+        },
+        {
+          "labelIndex": 14,
+          "className": "Window",
+          "pixelCount": 194
+        },
+        {
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 138008
+        },
+        {
+          "labelIndex": 21,
+          "className": "Civilian vehicle",
+          "pixelCount": 580
+        },
+        {
+          "labelIndex": 23,
+          "className": "Citizen",
+          "pixelCount": 32767
+        },
+        {
+          "labelIndex": 24,
+          "className": "Green grass",
+          "pixelCount": 8745
+        },
+        {
+          "labelIndex": 25,
+          "className": "Pole",
+          "pixelCount": 412
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 2,
+            "className": "Green tree",
+            "pixelCount": 46798
+          },
+          {
+            "labelIndex": 15,
+            "className": "Window",
+            "pixelCount": 1262
+          },
+          {
+            "labelIndex": 22,
+            "className": "Civilian vehicle",
+            "pixelCount": 1074
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 621
+          },
+          {
+            "labelIndex": 28,
+            "className": "Pavement",
+            "pixelCount": 130495
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 5,
+          "labeledPixels": 180250,
+          "coverage": 0.423
+        }
+      },
+      "classNames": [
+        "Green tree",
+        "Building",
+        "Window",
+        "Road",
+        "Civilian vehicle",
+        "Citizen",
+        "Green grass",
+        "Pole",
+        "Pavement"
+      ],
+      "classLegend": [
+        {
+          "id": "green-tree",
+          "name": "Green tree",
+          "labelIndex": 1,
+          "color": "#FFB300"
+        },
+        {
+          "id": "building",
+          "name": "Building",
+          "labelIndex": 12,
+          "color": "#FFD600"
+        },
+        {
+          "id": "window",
+          "name": "Window",
+          "labelIndex": 14,
+          "color": "#39FF14"
+        },
+        {
+          "id": "road",
+          "name": "Road",
+          "labelIndex": 20,
+          "color": "#FFD600"
+        },
+        {
+          "id": "civilian-vehicle",
+          "name": "Civilian vehicle",
+          "labelIndex": 21,
+          "color": "#4B0082"
+        },
+        {
+          "id": "citizen",
+          "name": "Citizen",
+          "labelIndex": 23,
+          "color": "#FFD600"
+        },
+        {
+          "id": "green-grass",
+          "name": "Green grass",
+          "labelIndex": 24,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 25,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "pavement",
+          "name": "Pavement",
+          "labelIndex": 28,
+          "color": "#FF00D4"
+        }
+      ],
+      "summary": "8 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 8,
+        "labeledPixels": 222344,
+        "coverage": 0.521
+      }
+    },
+    {
+      "id": "inc1m-1457db88-river_flood_in_dam_FORWARD_SLASH_00464",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "1457db88-river_flood_in_dam_FORWARD_SLASH_00464",
+      "sceneOrder": 5,
+      "title": "Scene 1457db88-river_flood_in_dam_FORWARD_SLASH_00464",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
+      "rawImageAvailable": true,
+      "width": 670,
+      "height": 376,
+      "dimensions": "670 x 376",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Water",
+          "pixelCount": 153007
+        },
+        {
+          "labelIndex": 2,
+          "className": "Fence",
+          "pixelCount": 7517
+        },
+        {
+          "labelIndex": 12,
+          "className": "Building",
+          "pixelCount": 8121
+        },
+        {
+          "labelIndex": 19,
+          "className": "Dry tree",
+          "pixelCount": 32100
+        },
+        {
+          "labelIndex": 26,
+          "className": "Boat",
+          "pixelCount": 6287
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 3,
+            "className": "Fence",
+            "pixelCount": 7360
+          },
+          {
+            "labelIndex": 13,
+            "className": "Building",
+            "pixelCount": 7604
+          },
+          {
+            "labelIndex": 27,
+            "className": "Boat",
+            "pixelCount": 6226
+          },
+          {
+            "labelIndex": 36,
+            "className": "Bag",
+            "pixelCount": 566
+          },
+          {
+            "labelIndex": 37,
+            "className": "Burnt tree",
+            "pixelCount": 4726
+          },
+          {
+            "labelIndex": 45,
+            "className": "Burnt grass",
+            "pixelCount": 8914
+          },
+          {
+            "labelIndex": 51,
+            "className": "Furniture",
+            "pixelCount": 598
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 7,
+          "labeledPixels": 35994,
+          "coverage": 0.143
+        }
+      },
+      "classNames": [
+        "Water",
+        "Fence",
+        "Building",
+        "Dry tree",
+        "Boat",
+        "Bag",
+        "Burnt tree",
+        "Burnt grass",
+        "Furniture"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
+          "id": "fence",
+          "name": "Fence",
+          "labelIndex": 2,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "building",
+          "name": "Building",
+          "labelIndex": 12,
+          "color": "#FFD600"
+        },
+        {
+          "id": "dry-tree",
+          "name": "Dry tree",
+          "labelIndex": 19,
+          "color": "#FFB300"
+        },
+        {
+          "id": "boat",
+          "name": "Boat",
+          "labelIndex": 26,
+          "color": "#FFD600"
+        },
+        {
+          "id": "bag",
+          "name": "Bag",
+          "labelIndex": 36,
+          "color": "#39FF14"
+        },
+        {
+          "id": "burnt-tree",
+          "name": "Burnt tree",
+          "labelIndex": 37,
+          "color": "#FF1744"
+        },
+        {
+          "id": "burnt-grass",
+          "name": "Burnt grass",
+          "labelIndex": 45,
+          "color": "#4B0082"
+        },
+        {
+          "id": "furniture",
+          "name": "Furniture",
+          "labelIndex": 51,
+          "color": "#8A00FF"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 207032,
+        "coverage": 0.822
+      }
+    },
+    {
+      "id": "inc1m-03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424",
+      "sceneOrder": 6,
+      "title": "Scene 03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424.jpg",
+      "rawImageAvailable": true,
+      "width": 1024,
+      "height": 768,
+      "dimensions": "1024 x 768",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Water",
+          "pixelCount": 357962
+        },
+        {
+          "labelIndex": 12,
+          "className": "Building",
+          "pixelCount": 56009
+        },
+        {
+          "labelIndex": 21,
+          "className": "Civilian vehicle",
+          "pixelCount": 34749
+        },
+        {
+          "labelIndex": 22,
+          "className": "Wall",
+          "pixelCount": 167868
+        },
+        {
+          "labelIndex": 25,
+          "className": "Pole",
+          "pixelCount": 1710
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 13,
+            "className": "Building",
+            "pixelCount": 4460
+          },
+          {
+            "labelIndex": 15,
+            "className": "Window",
+            "pixelCount": 1286
+          },
+          {
+            "labelIndex": 22,
+            "className": "Civilian vehicle",
+            "pixelCount": 36829
+          },
+          {
+            "labelIndex": 23,
+            "className": "Wall",
+            "pixelCount": 161536
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 2525
+          },
+          {
+            "labelIndex": 28,
+            "className": "Pavement",
+            "pixelCount": 301528
+          },
+          {
+            "labelIndex": 32,
+            "className": "Door",
+            "pixelCount": 1761
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 7,
+          "labeledPixels": 509925,
+          "coverage": 0.648
+        }
+      },
+      "classNames": [
+        "Water",
+        "Building",
+        "Window",
+        "Civilian vehicle",
+        "Wall",
+        "Pole",
+        "Pavement",
+        "Door"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
+          "id": "building",
+          "name": "Building",
+          "labelIndex": 12,
+          "color": "#FFD600"
+        },
+        {
+          "id": "window",
+          "name": "Window",
+          "labelIndex": 15,
+          "color": "#39FF14"
+        },
+        {
+          "id": "civilian-vehicle",
+          "name": "Civilian vehicle",
+          "labelIndex": 21,
+          "color": "#4B0082"
+        },
+        {
+          "id": "wall",
+          "name": "Wall",
+          "labelIndex": 22,
+          "color": "#FF00D4"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 25,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "pavement",
+          "name": "Pavement",
+          "labelIndex": 28,
+          "color": "#FF00D4"
+        },
+        {
+          "id": "door",
+          "name": "Door",
+          "labelIndex": 32,
+          "color": "#00E676"
+        }
+      ],
+      "summary": "5 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 5,
+        "labeledPixels": 618298,
+        "coverage": 0.786
+      }
+    },
+    {
+      "id": "inc1m-001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331",
+      "sceneOrder": 7,
+      "title": "Scene 001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
+      "rawImageAvailable": true,
+      "width": 4173,
+      "height": 3134,
+      "dimensions": "4173 x 3134",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Green tree",
+          "pixelCount": 430170
+        },
+        {
+          "labelIndex": 15,
+          "className": "Debris",
+          "pixelCount": 4939217
+        },
+        {
+          "labelIndex": 23,
+          "className": "Citizen",
+          "pixelCount": 3168556
+        },
+        {
+          "labelIndex": 28,
+          "className": "Dry grass",
+          "pixelCount": 124315
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 2,
+            "className": "Green tree",
+            "pixelCount": 489275
+          },
+          {
+            "labelIndex": 7,
+            "className": "Destroyed vehicle",
+            "pixelCount": 1162076
+          },
+          {
+            "labelIndex": 16,
+            "className": "Debris",
+            "pixelCount": 1583893
+          },
+          {
+            "labelIndex": 25,
+            "className": "Green grass",
+            "pixelCount": 105467
+          },
+          {
+            "labelIndex": 29,
+            "className": "Dry grass",
+            "pixelCount": 48007
+          },
+          {
+            "labelIndex": 36,
+            "className": "Bag",
+            "pixelCount": 52090
+          },
+          {
+            "labelIndex": 45,
+            "className": "Burnt grass",
+            "pixelCount": 639072
+          },
+          {
+            "labelIndex": 53,
+            "className": "Protective glasses",
+            "pixelCount": 26513
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 8,
+          "labeledPixels": 4106393,
+          "coverage": 0.314
+        }
+      },
+      "classNames": [
+        "Green tree",
+        "Destroyed vehicle",
+        "Debris",
+        "Citizen",
+        "Green grass",
+        "Dry grass",
+        "Bag",
+        "Burnt grass",
+        "Protective glasses"
+      ],
+      "classLegend": [
+        {
+          "id": "green-tree",
+          "name": "Green tree",
+          "labelIndex": 1,
+          "color": "#FFB300"
+        },
+        {
+          "id": "destroyed-vehicle",
+          "name": "Destroyed vehicle",
+          "labelIndex": 7,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "debris",
+          "name": "Debris",
+          "labelIndex": 15,
+          "color": "#FFB300"
+        },
+        {
+          "id": "citizen",
+          "name": "Citizen",
+          "labelIndex": 23,
+          "color": "#FFD600"
+        },
+        {
+          "id": "green-grass",
+          "name": "Green grass",
+          "labelIndex": 25,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "dry-grass",
+          "name": "Dry grass",
+          "labelIndex": 28,
+          "color": "#0047FF"
+        },
+        {
+          "id": "bag",
+          "name": "Bag",
+          "labelIndex": 36,
+          "color": "#39FF14"
+        },
+        {
+          "id": "burnt-grass",
+          "name": "Burnt grass",
+          "labelIndex": 45,
+          "color": "#4B0082"
+        },
+        {
+          "id": "protective-glasses",
+          "name": "Protective glasses",
+          "labelIndex": 53,
+          "color": "#FFB300"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 8662258,
+        "coverage": 0.662
+      }
+    },
+    {
+      "id": "inc1m-08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067",
+      "sceneOrder": 8,
+      "title": "Scene 08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067.jpg",
+      "rawImageAvailable": true,
+      "width": 640,
+      "height": 480,
+      "dimensions": "640 x 480",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Water",
+          "pixelCount": 2396
+        },
+        {
+          "labelIndex": 1,
+          "className": "Green tree",
+          "pixelCount": 40195
+        },
+        {
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 44519
+        },
+        {
+          "labelIndex": 30,
+          "className": "Excavator",
+          "pixelCount": 10301
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 2317
+          },
+          {
+            "labelIndex": 2,
+            "className": "Green tree",
+            "pixelCount": 13975
+          },
+          {
+            "labelIndex": 8,
+            "className": "Smoke",
+            "pixelCount": 1386
+          },
+          {
+            "labelIndex": 12,
+            "className": "Green plant",
+            "pixelCount": 795
+          },
+          {
+            "labelIndex": 21,
+            "className": "Road",
+            "pixelCount": 34424
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 540
+          },
+          {
+            "labelIndex": 31,
+            "className": "Excavator",
+            "pixelCount": 10346
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 7,
+          "labeledPixels": 63783,
+          "coverage": 0.208
+        }
+      },
+      "classNames": [
+        "Water",
+        "Green tree",
+        "Smoke",
+        "Green plant",
+        "Road",
+        "Pole",
+        "Excavator"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
+          "id": "green-tree",
+          "name": "Green tree",
+          "labelIndex": 1,
+          "color": "#FFB300"
+        },
+        {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 8,
+          "color": "#FFB300"
+        },
+        {
+          "id": "green-plant",
+          "name": "Green plant",
+          "labelIndex": 12,
+          "color": "#8A00FF"
+        },
+        {
+          "id": "road",
+          "name": "Road",
+          "labelIndex": 20,
+          "color": "#FFD600"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 26,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "excavator",
+          "name": "Excavator",
+          "labelIndex": 30,
+          "color": "#B6FF00"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 97411,
+        "coverage": 0.317
+      }
+    },
+    {
+      "id": "inc1m-0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056",
+      "sceneOrder": 9,
+      "title": "Scene 0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056.jpg",
+      "rawImageAvailable": true,
+      "width": 823,
+      "height": 516,
+      "dimensions": "823 x 516",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Green tree",
+          "pixelCount": 25000
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 60329
+        },
+        {
+          "labelIndex": 8,
+          "className": "Flame",
+          "pixelCount": 880
+        },
+        {
+          "labelIndex": 12,
+          "className": "Building",
+          "pixelCount": 35013
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 2,
+            "className": "Green tree",
+            "pixelCount": 4546
+          },
+          {
+            "labelIndex": 8,
+            "className": "Smoke",
+            "pixelCount": 43112
+          },
+          {
+            "labelIndex": 9,
+            "className": "Flame",
+            "pixelCount": 965
+          },
+          {
+            "labelIndex": 13,
+            "className": "Building",
+            "pixelCount": 33923
+          },
+          {
+            "labelIndex": 25,
+            "className": "Green grass",
+            "pixelCount": 21880
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 3434
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 6,
+          "labeledPixels": 107860,
+          "coverage": 0.254
+        }
+      },
+      "classNames": [
+        "Green tree",
+        "Smoke",
+        "Flame",
+        "Building",
+        "Green grass",
+        "Pole"
+      ],
+      "classLegend": [
+        {
+          "id": "green-tree",
+          "name": "Green tree",
+          "labelIndex": 1,
+          "color": "#FFB300"
+        },
+        {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
+          "color": "#FFB300"
+        },
+        {
+          "id": "flame",
+          "name": "Flame",
+          "labelIndex": 8,
+          "color": "#4B0082"
+        },
+        {
+          "id": "building",
+          "name": "Building",
+          "labelIndex": 12,
+          "color": "#FFD600"
+        },
+        {
+          "id": "green-grass",
+          "name": "Green grass",
+          "labelIndex": 25,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 26,
+          "color": "#00FFD1"
+        }
+      ],
+      "summary": "4 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 4,
+        "labeledPixels": 121222,
+        "coverage": 0.285
+      }
+    },
+    {
+      "id": "inc1m-0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109",
+      "sceneOrder": 10,
+      "title": "Scene 0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
+      "rawImageAvailable": true,
+      "width": 1024,
+      "height": 576,
+      "dimensions": "1024 x 576",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Water",
+          "pixelCount": 155359
+        },
+        {
+          "labelIndex": 26,
+          "className": "Boat",
+          "pixelCount": 75586
+        },
+        {
+          "labelIndex": 32,
+          "className": "Mud",
+          "pixelCount": 30491
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 1,
+            "className": "Water",
+            "pixelCount": 129537
+          },
+          {
+            "labelIndex": 2,
+            "className": "Green tree",
+            "pixelCount": 1364
+          },
+          {
+            "labelIndex": 8,
+            "className": "Smoke",
+            "pixelCount": 75881
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 3133
+          },
+          {
+            "labelIndex": 27,
+            "className": "Boat",
+            "pixelCount": 69383
+          },
+          {
+            "labelIndex": 45,
+            "className": "Burnt grass",
+            "pixelCount": 30261
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 6,
+          "labeledPixels": 309559,
+          "coverage": 0.525
+        }
+      },
+      "classNames": [
+        "Water",
+        "Green tree",
+        "Smoke",
+        "Boat",
+        "Pole",
+        "Mud",
+        "Burnt grass"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
+          "id": "green-tree",
+          "name": "Green tree",
+          "labelIndex": 2,
+          "color": "#FFB300"
+        },
+        {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 8,
+          "color": "#FFB300"
+        },
+        {
+          "id": "boat",
+          "name": "Boat",
+          "labelIndex": 26,
+          "color": "#FFD600"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 26,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "mud",
+          "name": "Mud",
+          "labelIndex": 32,
+          "color": "#FFD600"
+        },
+        {
+          "id": "burnt-grass",
+          "name": "Burnt grass",
+          "labelIndex": 45,
+          "color": "#4B0082"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 261436,
+        "coverage": 0.443
+      }
+    },
+    {
+      "id": "inc1m-13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155",
+      "sceneOrder": 11,
+      "title": "Scene 13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
+      "rawImageAvailable": true,
+      "width": 590,
+      "height": 392,
+      "dimensions": "590 x 392",
+      "groundTruth": [
+        {
+          "labelIndex": 4,
+          "className": "First responder",
+          "pixelCount": 369
+        },
+        {
+          "labelIndex": 15,
+          "className": "Debris",
+          "pixelCount": 18355
+        },
+        {
+          "labelIndex": 21,
+          "className": "Civilian vehicle",
+          "pixelCount": 9566
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 15,
+            "className": "Window",
+            "pixelCount": 819
+          },
+          {
+            "labelIndex": 25,
+            "className": "Green grass",
+            "pixelCount": 387
+          },
+          {
+            "labelIndex": 26,
+            "className": "Pole",
+            "pixelCount": 50
+          },
+          {
+            "labelIndex": 29,
+            "className": "Dry grass",
+            "pixelCount": 2264
+          },
+          {
+            "labelIndex": 31,
+            "className": "Excavator",
+            "pixelCount": 2158
+          },
+          {
+            "labelIndex": 45,
+            "className": "Burnt grass",
+            "pixelCount": 38835
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 6,
+          "labeledPixels": 44513,
+          "coverage": 0.192
+        }
+      },
+      "classNames": [
+        "First responder",
+        "Debris",
+        "Window",
+        "Civilian vehicle",
+        "Green grass",
+        "Pole",
+        "Dry grass",
+        "Excavator",
+        "Burnt grass"
+      ],
+      "classLegend": [
+        {
+          "id": "first-responder",
+          "name": "First responder",
+          "labelIndex": 4,
+          "color": "#8A00FF"
+        },
+        {
+          "id": "debris",
+          "name": "Debris",
+          "labelIndex": 15,
+          "color": "#FFB300"
+        },
+        {
+          "id": "window",
+          "name": "Window",
+          "labelIndex": 15,
+          "color": "#39FF14"
+        },
+        {
+          "id": "civilian-vehicle",
+          "name": "Civilian vehicle",
+          "labelIndex": 21,
+          "color": "#4B0082"
+        },
+        {
+          "id": "green-grass",
+          "name": "Green grass",
+          "labelIndex": 25,
+          "color": "#FF6D00"
+        },
+        {
+          "id": "pole",
+          "name": "Pole",
+          "labelIndex": 26,
+          "color": "#00FFD1"
+        },
+        {
+          "id": "dry-grass",
+          "name": "Dry grass",
+          "labelIndex": 29,
+          "color": "#0047FF"
+        },
+        {
+          "id": "excavator",
+          "name": "Excavator",
+          "labelIndex": 31,
+          "color": "#B6FF00"
+        },
+        {
+          "id": "burnt-grass",
+          "name": "Burnt grass",
+          "labelIndex": 45,
+          "color": "#4B0082"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 28290,
+        "coverage": 0.122
+      }
+    },
+    {
+      "id": "inc1m-0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316",
+      "sceneOrder": 12,
+      "title": "Scene 0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316.jpg",
+      "rawImageAvailable": true,
+      "width": 1200,
+      "height": 630,
+      "dimensions": "1200 x 630",
+      "groundTruth": [
+        {
+          "labelIndex": 1,
+          "className": "Green tree",
+          "pixelCount": 4392
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 601594
+        },
+        {
+          "labelIndex": 58,
+          "className": "aerial vehicle",
+          "pixelCount": 3138
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316.jpg",
+      "predictions": {
+        "sam3": [
+          {
+            "labelIndex": 2,
+            "className": "Green tree",
+            "pixelCount": 776
+          },
+          {
+            "labelIndex": 8,
+            "className": "Smoke",
+            "pixelCount": 434855
+          },
+          {
+            "labelIndex": 59,
+            "className": "aerial vehicle",
+            "pixelCount": 3166
+          }
+        ]
+      },
+      "predictionImages": {
+        "sam3": "Inc1M/sam3/visualised_samples_with_json/0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316.jpg"
+      },
+      "sceneModelStats": {
+        "sam3": {
+          "classCount": 3,
+          "labeledPixels": 438797,
+          "coverage": 0.58
+        }
+      },
+      "classNames": [
+        "Green tree",
+        "Smoke",
+        "aerial vehicle"
+      ],
+      "classLegend": [
+        {
+          "id": "green-tree",
+          "name": "Green tree",
+          "labelIndex": 1,
+          "color": "#FFB300"
+        },
+        {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
+          "color": "#FFB300"
+        },
+        {
+          "id": "aerial-vehicle",
+          "name": "aerial vehicle",
+          "labelIndex": 58,
+          "color": "#8A00FF"
+        }
+      ],
+      "summary": "3 classes with 1 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 609124,
+        "coverage": 0.806
+      }
+    },
+    {
+      "id": "inc1m-174878c4-flooded_palace_FORWARD_SLASH_00162",
+      "dataset": "Inc1M",
+      "taskType": "semantic-segmentation",
+      "imageId": "174878c4-flooded_palace_FORWARD_SLASH_00162",
+      "sceneOrder": 13,
+      "title": "Scene 174878c4-flooded_palace_FORWARD_SLASH_00162",
+      "location": "Inc1M benchmark sample",
+      "baseImage": "viewer/Inc1M/174878c4-flooded_palace_FORWARD_SLASH_00162.jpg",
+      "sourceImage": "Inc1M/shared_ground_truth_images/174878c4-flooded_palace_FORWARD_SLASH_00162.jpg",
+      "thumbnailImage": "thumbnails/Inc1M/174878c4-flooded_palace_FORWARD_SLASH_00162.jpg",
+      "rawImageAvailable": true,
+      "width": 900,
+      "height": 477,
+      "dimensions": "900 x 477",
+      "groundTruth": [
+        {
+          "labelIndex": 0,
+          "className": "Water",
+          "pixelCount": 47603
+        },
+        {
+          "labelIndex": 14,
+          "className": "Window",
+          "pixelCount": 3305
+        },
+        {
+          "labelIndex": 50,
+          "className": "Furniture",
+          "pixelCount": 26266
+        }
+      ],
+      "groundTruthImage": "Inc1M/shared_samples_gt_with_json/174878c4-flooded_palace_FORWARD_SLASH_00162.jpg",
+      "predictions": {},
+      "predictionImages": {},
+      "sceneModelStats": {},
+      "classNames": [
+        "Water",
+        "Window",
+        "Furniture"
+      ],
+      "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
+          "id": "window",
+          "name": "Window",
+          "labelIndex": 14,
+          "color": "#39FF14"
+        },
+        {
+          "id": "furniture",
+          "name": "Furniture",
+          "labelIndex": 50,
+          "color": "#8A00FF"
+        }
+      ],
+      "summary": "3 classes with 0 model segmentations loaded.",
+      "groundTruthStats": {
+        "classCount": 3,
+        "labeledPixels": 77174,
+        "coverage": 0.18
       }
     },
     {

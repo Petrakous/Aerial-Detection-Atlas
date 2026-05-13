@@ -1,0 +1,50 @@
+{
+  "image_id": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa",
+  "file_name": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa.jpg",
+  "width": 1280,
+  "height": 720,
+  "segments": [
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "pixel_count": 665,
+      "score": 0.9044
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 17544,
+      "score": 0.9152
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 281054,
+      "score": 0.9259
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 66679,
+      "score": 0.6397
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 47654,
+      "score": 0.6439
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 7316,
+      "score": 0.5369
+    },
+    {
+      "label_index": 41,
+      "class_name": "Bicycle",
+      "pixel_count": 1056,
+      "score": 0.6864
+    }
+  ]
+}

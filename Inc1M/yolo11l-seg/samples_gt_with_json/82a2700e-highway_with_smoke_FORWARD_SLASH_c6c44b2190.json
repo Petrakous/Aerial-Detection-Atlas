@@ -1,0 +1,28 @@
+{
+  "image_id": "82a2700e-highway_with_smoke_FORWARD_SLASH_c6c44b2190",
+  "file_name": "82a2700e-highway_with_smoke_FORWARD_SLASH_c6c44b2190.jpg",
+  "width": 213,
+  "height": 160,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 5905
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 7248
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 876
+    },
+    {
+      "label_index": 28,
+      "class_name": "Dry grass",
+      "pixel_count": 5343
+    }
+  ]
+}

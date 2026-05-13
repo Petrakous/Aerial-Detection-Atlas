@@ -1,0 +1,68 @@
+{
+  "image_id": "777b8154-car_disaster_in_embassy_FORWARD_SLASH_149bbd2961",
+  "file_name": "777b8154-car_disaster_in_embassy_FORWARD_SLASH_149bbd2961.jpg",
+  "width": 805,
+  "height": 800,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 35451,
+      "score": 0.9097
+    },
+    {
+      "label_index": 10,
+      "class_name": "Fire hose",
+      "pixel_count": 5994,
+      "score": 0.3892
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 24687,
+      "score": 0.6421
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 92907,
+      "score": 0.46
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 71790,
+      "score": 0.6768
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 8535,
+      "score": 0.3142
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 15340,
+      "score": 0.8403
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 5586,
+      "score": 0.3577
+    },
+    {
+      "label_index": 33,
+      "class_name": "Mud",
+      "pixel_count": 15820,
+      "score": 0.3779
+    },
+    {
+      "label_index": 41,
+      "class_name": "Bicycle",
+      "pixel_count": 1067,
+      "score": 0.6084
+    }
+  ]
+}

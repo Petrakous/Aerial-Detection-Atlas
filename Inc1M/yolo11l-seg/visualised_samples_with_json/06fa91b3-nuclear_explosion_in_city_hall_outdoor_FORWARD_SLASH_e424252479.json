@@ -1,0 +1,38 @@
+{
+  "image_id": "06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479",
+  "file_name": "06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg",
+  "width": 736,
+  "height": 1107,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 147888,
+      "score": 0.8227
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 1404,
+      "score": 0.5389
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 461065,
+      "score": 0.8257
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 34691,
+      "score": 0.3819
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 4739,
+      "score": 0.659
+    }
+  ]
+}

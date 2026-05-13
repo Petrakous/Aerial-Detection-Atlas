@@ -1,0 +1,62 @@
+{
+  "image_id": "63ef9d0e-wild_fire_in_valley_FORWARD_SLASH_00447",
+  "file_name": "63ef9d0e-wild_fire_in_valley_FORWARD_SLASH_00447.jpg",
+  "width": 1024,
+  "height": 695,
+  "segments": [
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "pixel_count": 1084,
+      "score": 0.8848
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 74043,
+      "score": 0.4563
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 41044,
+      "score": 0.6128
+    },
+    {
+      "label_index": 10,
+      "class_name": "Fire hose",
+      "pixel_count": 4840,
+      "score": 0.7109
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 26338,
+      "score": 0.7886
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 5704,
+      "score": 0.3391
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 2077,
+      "score": 0.7246
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 7852,
+      "score": 0.7334
+    },
+    {
+      "label_index": 49,
+      "class_name": "Stairs",
+      "pixel_count": 8527,
+      "score": 0.8945
+    }
+  ]
+}

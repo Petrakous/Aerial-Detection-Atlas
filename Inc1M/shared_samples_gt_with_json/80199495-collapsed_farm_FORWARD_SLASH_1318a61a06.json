@@ -1,0 +1,43 @@
+{
+  "image_id": "80199495-collapsed_farm_FORWARD_SLASH_1318a61a06",
+  "file_name": "80199495-collapsed_farm_FORWARD_SLASH_1318a61a06.jpg",
+  "width": 1023,
+  "height": 369,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 19657
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 54442
+    },
+    {
+      "label_index": 17,
+      "class_name": "Destroyed building",
+      "pixel_count": 17054
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 125619
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 5033
+    },
+    {
+      "label_index": 31,
+      "class_name": "Door",
+      "pixel_count": 457
+    },
+    {
+      "label_index": 42,
+      "class_name": "Silo",
+      "pixel_count": 2531
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "image_id": "c2e2ee21-fog_in_hospital_FORWARD_SLASH_ac89240d02",
+  "file_name": "c2e2ee21-fog_in_hospital_FORWARD_SLASH_ac89240d02.jpg",
+  "width": 962,
+  "height": 606,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 87174,
+      "score": 0.4789
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 71492,
+      "score": 0.8315
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 6654,
+      "score": 0.3773
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 41175,
+      "score": 0.5112
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 12870,
+      "score": 0.6108
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "pixel_count": 239,
+      "score": 0.3981
+    }
+  ]
+}

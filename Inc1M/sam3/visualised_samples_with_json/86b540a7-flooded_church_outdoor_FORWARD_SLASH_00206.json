@@ -1,0 +1,32 @@
+{
+  "image_id": "86b540a7-flooded_church_outdoor_FORWARD_SLASH_00206",
+  "file_name": "86b540a7-flooded_church_outdoor_FORWARD_SLASH_00206.jpg",
+  "width": 1024,
+  "height": 682,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 198728,
+      "score": 0.9043
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 79829,
+      "score": 0.435
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 4493,
+      "score": 0.6396
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 18714,
+      "score": 0.3529
+    }
+  ]
+}

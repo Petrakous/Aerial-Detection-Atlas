@@ -1,0 +1,44 @@
+{
+  "image_id": "8bdcd611-tornado_in_industrial_area_FORWARD_SLASH_00124",
+  "file_name": "8bdcd611-tornado_in_industrial_area_FORWARD_SLASH_00124.jpg",
+  "width": 1763,
+  "height": 1175,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 662182,
+      "score": 0.9722
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 352138,
+      "score": 0.4279
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 227631,
+      "score": 0.7259
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 2561,
+      "score": 0.3149
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 860,
+      "score": 0.3729
+    },
+    {
+      "label_index": 42,
+      "class_name": "Tower",
+      "pixel_count": 2636,
+      "score": 0.646
+    }
+  ]
+}

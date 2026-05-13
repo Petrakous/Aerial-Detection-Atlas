@@ -1,0 +1,50 @@
+{
+  "image_id": "08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067",
+  "file_name": "08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067.jpg",
+  "width": 640,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 2317,
+      "score": 0.792
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 13975,
+      "score": 0.3548
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 1386,
+      "score": 0.353
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 795,
+      "score": 0.4622
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 34424,
+      "score": 0.9038
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 540,
+      "score": 0.7637
+    },
+    {
+      "label_index": 31,
+      "class_name": "Excavator",
+      "pixel_count": 10346,
+      "score": 0.4204
+    }
+  ]
+}

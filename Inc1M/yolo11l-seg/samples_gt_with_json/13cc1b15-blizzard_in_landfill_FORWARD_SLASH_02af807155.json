@@ -1,0 +1,23 @@
+{
+  "image_id": "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155",
+  "file_name": "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
+  "width": 590,
+  "height": 392,
+  "segments": [
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 369
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 18355
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 9566
+    }
+  ]
+}

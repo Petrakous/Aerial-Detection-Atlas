@@ -1,0 +1,32 @@
+{
+  "image_id": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473",
+  "file_name": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473.jpg",
+  "width": 1200,
+  "height": 1690,
+  "segments": [
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 144670,
+      "score": 0.8736
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 56628,
+      "score": 0.4426
+    },
+    {
+      "label_index": 16,
+      "class_name": "Dirt road",
+      "pixel_count": 97560,
+      "score": 0.3743
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 440886,
+      "score": 0.8509
+    }
+  ]
+}

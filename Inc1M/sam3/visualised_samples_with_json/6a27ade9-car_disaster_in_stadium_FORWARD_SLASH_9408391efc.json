@@ -1,0 +1,38 @@
+{
+  "image_id": "6a27ade9-car_disaster_in_stadium_FORWARD_SLASH_9408391efc",
+  "file_name": "6a27ade9-car_disaster_in_stadium_FORWARD_SLASH_9408391efc.jpg",
+  "width": 615,
+  "height": 615,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 38037,
+      "score": 0.772
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 3861,
+      "score": 0.3797
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 45206,
+      "score": 0.9253
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 16213,
+      "score": 0.3977
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 116550,
+      "score": 0.5513
+    }
+  ]
+}

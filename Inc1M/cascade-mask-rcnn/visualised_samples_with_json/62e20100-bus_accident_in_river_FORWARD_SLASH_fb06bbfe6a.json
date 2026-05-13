@@ -1,0 +1,32 @@
+{
+  "image_id": "62e20100-bus_accident_in_river_FORWARD_SLASH_fb06bbfe6a",
+  "file_name": "62e20100-bus_accident_in_river_FORWARD_SLASH_fb06bbfe6a.jpg",
+  "width": 660,
+  "height": 371,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 3387,
+      "score": 0.8868
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 36463,
+      "score": 0.8489
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 119717,
+      "score": 0.9862
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 9339,
+      "score": 0.8384
+    }
+  ]
+}

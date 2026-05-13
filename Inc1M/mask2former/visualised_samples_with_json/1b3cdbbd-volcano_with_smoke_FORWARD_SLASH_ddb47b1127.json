@@ -1,0 +1,20 @@
+{
+  "image_id": "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127",
+  "file_name": "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127.jpg",
+  "width": 975,
+  "height": 1390,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 1010527,
+      "score": 0.9233
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 52087,
+      "score": 0.4086
+    }
+  ]
+}

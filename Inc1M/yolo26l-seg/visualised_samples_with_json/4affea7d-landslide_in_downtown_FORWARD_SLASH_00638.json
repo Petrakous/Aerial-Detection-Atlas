@@ -1,0 +1,38 @@
+{
+  "image_id": "4affea7d-landslide_in_downtown_FORWARD_SLASH_00638",
+  "file_name": "4affea7d-landslide_in_downtown_FORWARD_SLASH_00638.jpg",
+  "width": 900,
+  "height": 1200,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 521366,
+      "score": 0.9158
+    },
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 19684,
+      "score": 0.7529
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 109501,
+      "score": 0.6965
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 18165,
+      "score": 0.3537
+    },
+    {
+      "label_index": 26,
+      "class_name": "Boat",
+      "pixel_count": 112482,
+      "score": 0.5457
+    }
+  ]
+}

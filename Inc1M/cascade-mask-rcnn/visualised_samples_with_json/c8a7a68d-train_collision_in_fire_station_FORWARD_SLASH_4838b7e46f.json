@@ -1,0 +1,68 @@
+{
+  "image_id": "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f",
+  "file_name": "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f.jpg",
+  "width": 1080,
+  "height": 810,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 3880,
+      "score": 0.7318
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 2059,
+      "score": 0.6539
+    },
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 149940,
+      "score": 0.8623
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 184425,
+      "score": 0.9942
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 1331,
+      "score": 0.9639
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 4560,
+      "score": 0.9206
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 317919,
+      "score": 0.611
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 1408,
+      "score": 0.3559
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 6689,
+      "score": 0.6576
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 24611,
+      "score": 0.7174
+    }
+  ]
+}

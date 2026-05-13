@@ -1,0 +1,26 @@
+{
+  "image_id": "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267",
+  "file_name": "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267.jpg",
+  "width": 620,
+  "height": 350,
+  "segments": [
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 3943,
+      "score": 0.7552
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 71435,
+      "score": 0.7876
+    },
+    {
+      "label_index": 38,
+      "class_name": "Fire truck",
+      "pixel_count": 66234,
+      "score": 0.9811
+    }
+  ]
+}

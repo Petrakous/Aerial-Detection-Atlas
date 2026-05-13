@@ -1,0 +1,14 @@
+{
+  "image_id": "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127",
+  "file_name": "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127.jpg",
+  "width": 975,
+  "height": 1390,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 1033339,
+      "score": 0.8124
+    }
+  ]
+}

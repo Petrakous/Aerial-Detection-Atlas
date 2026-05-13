@@ -1,0 +1,44 @@
+{
+  "image_id": "a49f19c3-nuclear_explosion_in_river_FORWARD_SLASH_cf2b436483",
+  "file_name": "a49f19c3-nuclear_explosion_in_river_FORWARD_SLASH_cf2b436483.jpg",
+  "width": 300,
+  "height": 225,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 2186,
+      "score": 0.7291
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 12464,
+      "score": 0.8336
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 3485,
+      "score": 0.5803
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 1294,
+      "score": 0.5954
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 2372,
+      "score": 0.8578
+    },
+    {
+      "label_index": 26,
+      "class_name": "Boat",
+      "pixel_count": 1332,
+      "score": 0.7876
+    }
+  ]
+}

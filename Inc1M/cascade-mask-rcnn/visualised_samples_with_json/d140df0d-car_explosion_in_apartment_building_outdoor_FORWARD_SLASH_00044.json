@@ -1,0 +1,44 @@
+{
+  "image_id": "d140df0d-car_explosion_in_apartment_building_outdoor_FORWARD_SLASH_00044",
+  "file_name": "d140df0d-car_explosion_in_apartment_building_outdoor_FORWARD_SLASH_00044.jpg",
+  "width": 600,
+  "height": 399,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 8299,
+      "score": 0.8887
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 7147,
+      "score": 0.9513
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 103580,
+      "score": 0.9993
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 704,
+      "score": 0.6308
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 5638,
+      "score": 0.6145
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "pixel_count": 158,
+      "score": 0.985
+    }
+  ]
+}

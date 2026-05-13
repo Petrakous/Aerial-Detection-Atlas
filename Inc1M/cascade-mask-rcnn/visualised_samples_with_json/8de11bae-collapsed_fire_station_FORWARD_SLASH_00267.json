@@ -1,0 +1,44 @@
+{
+  "image_id": "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267",
+  "file_name": "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267.jpg",
+  "width": 620,
+  "height": 350,
+  "segments": [
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 2353,
+      "score": 0.9841
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 98223,
+      "score": 0.9975
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 5435,
+      "score": 0.9642
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 1249,
+      "score": 0.8822
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 9816,
+      "score": 0.9154
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "pixel_count": 40114,
+      "score": 0.6314
+    }
+  ]
+}

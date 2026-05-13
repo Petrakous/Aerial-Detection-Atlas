@@ -1,0 +1,26 @@
+{
+  "image_id": "6539428b-ship_crash_in_desert_sand_FORWARD_SLASH_167dbb167b",
+  "file_name": "6539428b-ship_crash_in_desert_sand_FORWARD_SLASH_167dbb167b.jpg",
+  "width": 640,
+  "height": 446,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 2002,
+      "score": 0.9311
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 33500,
+      "score": 0.3544
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 27051,
+      "score": 0.8675
+    }
+  ]
+}

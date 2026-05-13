@@ -1,0 +1,50 @@
+{
+  "image_id": "03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424",
+  "file_name": "03bfb424-flood_in_parking_lot_FORWARD_SLASH_00424.jpg",
+  "width": 1024,
+  "height": 768,
+  "segments": [
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 4460,
+      "score": 0.3949
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 1286,
+      "score": 0.7344
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 36829,
+      "score": 0.7618
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 161536,
+      "score": 0.4909
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 2525,
+      "score": 0.3521
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 301528,
+      "score": 0.8833
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 1761,
+      "score": 0.7166
+    }
+  ]
+}

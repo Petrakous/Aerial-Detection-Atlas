@@ -1,0 +1,32 @@
+{
+  "image_id": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa",
+  "file_name": "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa.jpg",
+  "width": 1280,
+  "height": 720,
+  "segments": [
+    {
+      "label_index": 3,
+      "class_name": "Helmet",
+      "pixel_count": 1106,
+      "score": 0.524
+    },
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 29674,
+      "score": 0.8177
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 13722,
+      "score": 0.6137
+    },
+    {
+      "label_index": 56,
+      "class_name": "Police vehicle",
+      "pixel_count": 65062,
+      "score": 0.9885
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "image_id": "93b68b9a-earthquake_in_power_line_FORWARD_SLASH_23fbf8e5d2",
+  "file_name": "93b68b9a-earthquake_in_power_line_FORWARD_SLASH_23fbf8e5d2.jpg",
+  "width": 2048,
+  "height": 1365,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 62614,
+      "score": 0.5935
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 182973,
+      "score": 0.8241
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 38785,
+      "score": 0.8091
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 40559,
+      "score": 0.9732
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 5274,
+      "score": 0.5133
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 96509,
+      "score": 0.7147
+    },
+    {
+      "label_index": 33,
+      "class_name": "Mud",
+      "pixel_count": 506003,
+      "score": 0.8832
+    }
+  ]
+}

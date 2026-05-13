@@ -1,0 +1,32 @@
+{
+  "image_id": "63ef9d0e-wild_fire_in_valley_FORWARD_SLASH_00447",
+  "file_name": "63ef9d0e-wild_fire_in_valley_FORWARD_SLASH_00447.jpg",
+  "width": 1024,
+  "height": 695,
+  "segments": [
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 27898,
+      "score": 0.9995
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 182427,
+      "score": 0.8786
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 1515,
+      "score": 0.9861
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 44934,
+      "score": 0.3164
+    }
+  ]
+}

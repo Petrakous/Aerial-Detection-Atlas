@@ -1,0 +1,74 @@
+{
+  "image_id": "3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30",
+  "file_name": "3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
+  "width": 962,
+  "height": 640,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 31133,
+      "score": 0.3921
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "pixel_count": 2403,
+      "score": 0.8833
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 47968,
+      "score": 0.3743
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 76872,
+      "score": 0.5806
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 21212,
+      "score": 0.4241
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 1162,
+      "score": 0.7754
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 4824,
+      "score": 0.6694
+    },
+    {
+      "label_index": 37,
+      "class_name": "Burnt tree",
+      "pixel_count": 28335,
+      "score": 0.5078
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 99047,
+      "score": 0.9048
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "pixel_count": 824,
+      "score": 0.4055
+    },
+    {
+      "label_index": 61,
+      "class_name": "Extinguisher",
+      "pixel_count": 2837,
+      "score": 0.9053
+    }
+  ]
+}

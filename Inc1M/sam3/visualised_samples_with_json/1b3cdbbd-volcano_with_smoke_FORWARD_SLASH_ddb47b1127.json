@@ -1,0 +1,20 @@
+{
+  "image_id": "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127",
+  "file_name": "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127.jpg",
+  "width": 975,
+  "height": 1390,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 217252,
+      "score": 0.7074
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 47669,
+      "score": 0.835
+    }
+  ]
+}

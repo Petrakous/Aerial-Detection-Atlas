@@ -1,0 +1,26 @@
+{
+  "image_id": "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308",
+  "file_name": "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308.jpg",
+  "width": 1200,
+  "height": 799,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 68800,
+      "score": 0.7447
+    },
+    {
+      "label_index": 14,
+      "class_name": "Window",
+      "pixel_count": 6786,
+      "score": 0.3953
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 31743,
+      "score": 0.9053
+    }
+  ]
+}

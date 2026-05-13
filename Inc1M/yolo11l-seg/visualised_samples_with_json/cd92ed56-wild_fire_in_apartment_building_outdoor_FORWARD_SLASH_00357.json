@@ -1,0 +1,14 @@
+{
+  "image_id": "cd92ed56-wild_fire_in_apartment_building_outdoor_FORWARD_SLASH_00357",
+  "file_name": "cd92ed56-wild_fire_in_apartment_building_outdoor_FORWARD_SLASH_00357.jpg",
+  "width": 1200,
+  "height": 675,
+  "segments": [
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 459122,
+      "score": 0.393
+    }
+  ]
+}

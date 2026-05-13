@@ -1,0 +1,38 @@
+{
+  "image_id": "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775",
+  "file_name": "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775.jpg",
+  "width": 652,
+  "height": 367,
+  "segments": [
+    {
+      "label_index": 6,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 9687
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 56637
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 5863
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 58924
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 7551
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 2798
+    }
+  ]
+}

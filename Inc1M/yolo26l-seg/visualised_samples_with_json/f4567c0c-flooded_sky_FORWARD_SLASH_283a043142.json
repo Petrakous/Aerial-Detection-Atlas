@@ -1,0 +1,32 @@
+{
+  "image_id": "f4567c0c-flooded_sky_FORWARD_SLASH_283a043142",
+  "file_name": "f4567c0c-flooded_sky_FORWARD_SLASH_283a043142.jpg",
+  "width": 680,
+  "height": 383,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 26694,
+      "score": 0.6066
+    },
+    {
+      "label_index": 2,
+      "class_name": "Fence",
+      "pixel_count": 10883,
+      "score": 0.7636
+    },
+    {
+      "label_index": 19,
+      "class_name": "Dry tree",
+      "pixel_count": 7396,
+      "score": 0.8358
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 16124,
+      "score": 0.5118
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "image_id": "d9e272df-demolition_in_motel_FORWARD_SLASH_5536afcb9e",
+  "file_name": "d9e272df-demolition_in_motel_FORWARD_SLASH_5536afcb9e.jpg",
+  "width": 600,
+  "height": 450,
+  "segments": [
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 10279,
+      "score": 0.7109
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 79333,
+      "score": 0.7863
+    },
+    {
+      "label_index": 17,
+      "class_name": "Destroyed building",
+      "pixel_count": 87330,
+      "score": 0.9293
+    }
+  ]
+}

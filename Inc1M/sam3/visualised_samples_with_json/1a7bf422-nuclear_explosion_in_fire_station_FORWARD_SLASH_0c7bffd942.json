@@ -1,0 +1,38 @@
+{
+  "image_id": "1a7bf422-nuclear_explosion_in_fire_station_FORWARD_SLASH_0c7bffd942",
+  "file_name": "1a7bf422-nuclear_explosion_in_fire_station_FORWARD_SLASH_0c7bffd942.jpg",
+  "width": 615,
+  "height": 652,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 67221,
+      "score": 0.4489
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 2963,
+      "score": 0.7104
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 32608,
+      "score": 0.5259
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 3063,
+      "score": 0.5559
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 19261,
+      "score": 0.3943
+    }
+  ]
+}

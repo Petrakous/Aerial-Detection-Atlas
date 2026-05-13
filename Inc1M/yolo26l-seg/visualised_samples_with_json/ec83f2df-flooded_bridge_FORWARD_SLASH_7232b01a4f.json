@@ -1,0 +1,26 @@
+{
+  "image_id": "ec83f2df-flooded_bridge_FORWARD_SLASH_7232b01a4f",
+  "file_name": "ec83f2df-flooded_bridge_FORWARD_SLASH_7232b01a4f.jpg",
+  "width": 800,
+  "height": 600,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 84795,
+      "score": 0.6854
+    },
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 108406,
+      "score": 0.7978
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 66734,
+      "score": 0.8025
+    }
+  ]
+}

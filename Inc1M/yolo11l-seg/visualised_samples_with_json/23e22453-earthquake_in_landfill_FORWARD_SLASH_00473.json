@@ -1,0 +1,14 @@
+{
+  "image_id": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473",
+  "file_name": "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473.jpg",
+  "width": 1200,
+  "height": 1690,
+  "segments": [
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 1079458,
+      "score": 0.8499
+    }
+  ]
+}

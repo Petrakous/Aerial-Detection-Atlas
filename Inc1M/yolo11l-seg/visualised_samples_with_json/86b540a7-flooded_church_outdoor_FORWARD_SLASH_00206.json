@@ -1,0 +1,20 @@
+{
+  "image_id": "86b540a7-flooded_church_outdoor_FORWARD_SLASH_00206",
+  "file_name": "86b540a7-flooded_church_outdoor_FORWARD_SLASH_00206.jpg",
+  "width": 1024,
+  "height": 682,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 221230,
+      "score": 0.9539
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 81870,
+      "score": 0.9376
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "image_id": "5535e502-heavy_rain_in_apartment_building_outdoor_FORWARD_SLASH_00216",
+  "file_name": "5535e502-heavy_rain_in_apartment_building_outdoor_FORWARD_SLASH_00216.jpg",
+  "width": 920,
+  "height": 601,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 222213,
+      "score": 0.9456
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 209743,
+      "score": 0.8068
+    }
+  ]
+}

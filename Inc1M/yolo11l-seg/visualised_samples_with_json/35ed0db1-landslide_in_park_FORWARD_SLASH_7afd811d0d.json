@@ -1,0 +1,20 @@
+{
+  "image_id": "35ed0db1-landslide_in_park_FORWARD_SLASH_7afd811d0d",
+  "file_name": "35ed0db1-landslide_in_park_FORWARD_SLASH_7afd811d0d.jpg",
+  "width": 360,
+  "height": 240,
+  "segments": [
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 29870,
+      "score": 0.6852
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 11178,
+      "score": 0.7358
+    }
+  ]
+}

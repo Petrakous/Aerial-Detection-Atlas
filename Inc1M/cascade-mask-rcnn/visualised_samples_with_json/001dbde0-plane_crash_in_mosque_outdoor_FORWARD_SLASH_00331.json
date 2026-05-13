@@ -1,0 +1,26 @@
+{
+  "image_id": "001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331",
+  "file_name": "001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
+  "width": 4173,
+  "height": 3134,
+  "segments": [
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 715972,
+      "score": 0.9965
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 4796177,
+      "score": 0.9627
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 2431564,
+      "score": 0.9442
+    }
+  ]
+}

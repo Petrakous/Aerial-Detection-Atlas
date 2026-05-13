@@ -1,0 +1,14 @@
+{
+  "image_id": "1457db88-river_flood_in_dam_FORWARD_SLASH_00464",
+  "file_name": "1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
+  "width": 670,
+  "height": 376,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 165198,
+      "score": 0.9412
+    }
+  ]
+}

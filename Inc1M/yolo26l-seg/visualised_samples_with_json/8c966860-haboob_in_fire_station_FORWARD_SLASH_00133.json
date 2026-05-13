@@ -1,0 +1,26 @@
+{
+  "image_id": "8c966860-haboob_in_fire_station_FORWARD_SLASH_00133",
+  "file_name": "8c966860-haboob_in_fire_station_FORWARD_SLASH_00133.jpg",
+  "width": 640,
+  "height": 360,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 7986,
+      "score": 0.9185
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 67529,
+      "score": 0.8576
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 86275,
+      "score": 0.9624
+    }
+  ]
+}

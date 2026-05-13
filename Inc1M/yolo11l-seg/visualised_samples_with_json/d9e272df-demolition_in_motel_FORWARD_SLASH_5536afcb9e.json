@@ -1,0 +1,20 @@
+{
+  "image_id": "d9e272df-demolition_in_motel_FORWARD_SLASH_5536afcb9e",
+  "file_name": "d9e272df-demolition_in_motel_FORWARD_SLASH_5536afcb9e.jpg",
+  "width": 600,
+  "height": 450,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 1765,
+      "score": 0.8649
+    },
+    {
+      "label_index": 14,
+      "class_name": "Window",
+      "pixel_count": 187,
+      "score": 0.3224
+    }
+  ]
+}

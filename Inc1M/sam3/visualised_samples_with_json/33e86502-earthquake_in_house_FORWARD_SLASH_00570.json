@@ -1,0 +1,62 @@
+{
+  "image_id": "33e86502-earthquake_in_house_FORWARD_SLASH_00570",
+  "file_name": "33e86502-earthquake_in_house_FORWARD_SLASH_00570.jpg",
+  "width": 992,
+  "height": 744,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 24123,
+      "score": 0.5927
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 2542,
+      "score": 0.4308
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 3398,
+      "score": 0.9233
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 37160,
+      "score": 0.4191
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 30209,
+      "score": 0.4917
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 88939,
+      "score": 0.4761
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 19076,
+      "score": 0.5007
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 4198,
+      "score": 0.4661
+    },
+    {
+      "label_index": 51,
+      "class_name": "Furniture",
+      "pixel_count": 26491,
+      "score": 0.5369
+    }
+  ]
+}

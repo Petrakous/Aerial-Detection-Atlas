@@ -1,0 +1,38 @@
+{
+  "image_id": "f4e964c0-dirty_landfill_FORWARD_SLASH_00050",
+  "file_name": "f4e964c0-dirty_landfill_FORWARD_SLASH_00050.jpg",
+  "width": 608,
+  "height": 342,
+  "segments": [
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 3028,
+      "score": 0.4391
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 203,
+      "score": 0.7942
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 16419,
+      "score": 0.4109
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 2009,
+      "score": 0.3735
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 6092,
+      "score": 0.5097
+    }
+  ]
+}

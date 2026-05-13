@@ -1,0 +1,26 @@
+{
+  "image_id": "c43251f0-earthquake_in_village_FORWARD_SLASH_00111",
+  "file_name": "c43251f0-earthquake_in_village_FORWARD_SLASH_00111.jpg",
+  "width": 992,
+  "height": 558,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 12467,
+      "score": 0.9927
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 237944,
+      "score": 0.9776
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 30123,
+      "score": 0.9992
+    }
+  ]
+}

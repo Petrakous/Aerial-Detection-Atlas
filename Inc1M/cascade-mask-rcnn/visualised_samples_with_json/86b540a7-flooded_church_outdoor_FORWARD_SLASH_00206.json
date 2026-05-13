@@ -1,0 +1,32 @@
+{
+  "image_id": "86b540a7-flooded_church_outdoor_FORWARD_SLASH_00206",
+  "file_name": "86b540a7-flooded_church_outdoor_FORWARD_SLASH_00206.jpg",
+  "width": 1024,
+  "height": 682,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 211215,
+      "score": 0.9998
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 30889,
+      "score": 0.959
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 17593,
+      "score": 0.5356
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 47905,
+      "score": 0.9991
+    }
+  ]
+}

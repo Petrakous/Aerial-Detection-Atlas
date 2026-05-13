@@ -1,0 +1,50 @@
+{
+  "image_id": "a49f19c3-nuclear_explosion_in_river_FORWARD_SLASH_cf2b436483",
+  "file_name": "a49f19c3-nuclear_explosion_in_river_FORWARD_SLASH_cf2b436483.jpg",
+  "width": 300,
+  "height": 225,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 13472,
+      "score": 0.9997
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 327,
+      "score": 0.7243
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 16064,
+      "score": 0.9994
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 526,
+      "score": 0.9922
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "pixel_count": 1783,
+      "score": 0.3217
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 1651,
+      "score": 0.9976
+    },
+    {
+      "label_index": 44,
+      "class_name": "Military personnel",
+      "pixel_count": 637,
+      "score": 0.5141
+    }
+  ]
+}

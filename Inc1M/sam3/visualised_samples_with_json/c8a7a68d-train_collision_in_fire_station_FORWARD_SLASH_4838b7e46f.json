@@ -1,0 +1,74 @@
+{
+  "image_id": "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f",
+  "file_name": "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f.jpg",
+  "width": 1080,
+  "height": 810,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 5220,
+      "score": 0.5325
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "pixel_count": 102,
+      "score": 0.4607
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 10674,
+      "score": 0.4856
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 16582,
+      "score": 0.5948
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 1008,
+      "score": 0.4565
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 4541,
+      "score": 0.7793
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 16503,
+      "score": 0.8796
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 65029,
+      "score": 0.3648
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 20025,
+      "score": 0.5452
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 2341,
+      "score": 0.6982
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 11218,
+      "score": 0.938
+    }
+  ]
+}

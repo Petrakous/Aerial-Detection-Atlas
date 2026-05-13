@@ -1,0 +1,20 @@
+{
+  "image_id": "f4e964c0-dirty_landfill_FORWARD_SLASH_00050",
+  "file_name": "f4e964c0-dirty_landfill_FORWARD_SLASH_00050.jpg",
+  "width": 608,
+  "height": 342,
+  "segments": [
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 645,
+      "score": 0.8457
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 10282,
+      "score": 0.9692
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "image_id": "6539428b-ship_crash_in_desert_sand_FORWARD_SLASH_167dbb167b",
+  "file_name": "6539428b-ship_crash_in_desert_sand_FORWARD_SLASH_167dbb167b.jpg",
+  "width": 640,
+  "height": 446,
+  "segments": [
+    {
+      "label_index": 26,
+      "class_name": "Boat",
+      "pixel_count": 242493,
+      "score": 0.9061
+    }
+  ]
+}

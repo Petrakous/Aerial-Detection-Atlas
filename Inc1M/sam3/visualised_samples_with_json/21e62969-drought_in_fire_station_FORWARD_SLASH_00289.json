@@ -1,0 +1,56 @@
+{
+  "image_id": "21e62969-drought_in_fire_station_FORWARD_SLASH_00289",
+  "file_name": "21e62969-drought_in_fire_station_FORWARD_SLASH_00289.jpg",
+  "width": 900,
+  "height": 675,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 66325,
+      "score": 0.4249
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 81501,
+      "score": 0.6489
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 10838,
+      "score": 0.4789
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 17795,
+      "score": 0.345
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 59817,
+      "score": 0.8828
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 5821,
+      "score": 0.5879
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "pixel_count": 53472,
+      "score": 0.7893
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 35797,
+      "score": 0.3784
+    }
+  ]
+}

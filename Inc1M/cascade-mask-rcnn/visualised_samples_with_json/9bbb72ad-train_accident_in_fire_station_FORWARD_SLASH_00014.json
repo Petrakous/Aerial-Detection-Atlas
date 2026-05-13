@@ -1,0 +1,38 @@
+{
+  "image_id": "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014",
+  "file_name": "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014.jpg",
+  "width": 640,
+  "height": 360,
+  "segments": [
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 6620,
+      "score": 0.9859
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 84834,
+      "score": 0.9913
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 2289,
+      "score": 0.3377
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 25651,
+      "score": 0.5503
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "pixel_count": 789,
+      "score": 0.4946
+    }
+  ]
+}

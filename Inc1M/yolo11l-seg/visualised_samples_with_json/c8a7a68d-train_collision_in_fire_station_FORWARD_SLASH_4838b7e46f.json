@@ -1,0 +1,50 @@
+{
+  "image_id": "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f",
+  "file_name": "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f.jpg",
+  "width": 1080,
+  "height": 810,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 3490,
+      "score": 0.6618
+    },
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 2298,
+      "score": 0.5673
+    },
+    {
+      "label_index": 6,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 149036,
+      "score": 0.5185
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 157742,
+      "score": 0.867
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 4908,
+      "score": 0.8252
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 2072,
+      "score": 0.5635
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 20376,
+      "score": 0.5886
+    }
+  ]
+}

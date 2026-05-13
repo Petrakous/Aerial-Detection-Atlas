@@ -1,0 +1,50 @@
+{
+  "image_id": "d9e272df-demolition_in_motel_FORWARD_SLASH_5536afcb9e",
+  "file_name": "d9e272df-demolition_in_motel_FORWARD_SLASH_5536afcb9e.jpg",
+  "width": 600,
+  "height": 450,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 1654,
+      "score": 0.835
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "pixel_count": 944,
+      "score": 0.5088
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 6438,
+      "score": 0.5111
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 10292,
+      "score": 0.6733
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 33417,
+      "score": 0.3788
+    },
+    {
+      "label_index": 18,
+      "class_name": "Destroyed building",
+      "pixel_count": 14651,
+      "score": 0.647
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 51740,
+      "score": 0.7009
+    }
+  ]
+}

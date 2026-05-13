@@ -1,0 +1,20 @@
+{
+  "image_id": "dc9ca70c-coastal_flood_in_bridge_FORWARD_SLASH_00012",
+  "file_name": "dc9ca70c-coastal_flood_in_bridge_FORWARD_SLASH_00012.jpg",
+  "width": 1280,
+  "height": 837,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 793981,
+      "score": 0.9999
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 1272,
+      "score": 0.568
+    }
+  ]
+}

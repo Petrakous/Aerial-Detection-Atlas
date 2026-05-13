@@ -1,0 +1,26 @@
+{
+  "image_id": "174878c4-flooded_palace_FORWARD_SLASH_00162",
+  "file_name": "174878c4-flooded_palace_FORWARD_SLASH_00162.jpg",
+  "width": 900,
+  "height": 477,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 48311,
+      "score": 0.9407
+    },
+    {
+      "label_index": 14,
+      "class_name": "Window",
+      "pixel_count": 5765,
+      "score": 0.738
+    },
+    {
+      "label_index": 31,
+      "class_name": "Door",
+      "pixel_count": 11480,
+      "score": 0.7113
+    }
+  ]
+}

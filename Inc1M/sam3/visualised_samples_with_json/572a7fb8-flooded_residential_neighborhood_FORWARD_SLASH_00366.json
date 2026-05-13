@@ -1,0 +1,74 @@
+{
+  "image_id": "572a7fb8-flooded_residential_neighborhood_FORWARD_SLASH_00366",
+  "file_name": "572a7fb8-flooded_residential_neighborhood_FORWARD_SLASH_00366.jpg",
+  "width": 1920,
+  "height": 1080,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 5158,
+      "score": 0.3604
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 245824,
+      "score": 0.565
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 19553,
+      "score": 0.3608
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 5841,
+      "score": 0.4929
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 217843,
+      "score": 0.6589
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 1798,
+      "score": 0.4624
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 9293,
+      "score": 0.372
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 110454,
+      "score": 0.5636
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 6855,
+      "score": 0.5113
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 4606,
+      "score": 0.4312
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 26118,
+      "score": 0.4071
+    }
+  ]
+}

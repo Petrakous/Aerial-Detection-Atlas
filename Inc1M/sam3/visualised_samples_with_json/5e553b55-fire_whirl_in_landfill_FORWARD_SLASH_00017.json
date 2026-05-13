@@ -1,0 +1,14 @@
+{
+  "image_id": "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017",
+  "file_name": "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017.jpg",
+  "width": 675,
+  "height": 900,
+  "segments": [
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 77859,
+      "score": 0.7144
+    }
+  ]
+}

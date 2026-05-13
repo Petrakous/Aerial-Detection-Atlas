@@ -1,0 +1,26 @@
+{
+  "image_id": "5535e502-heavy_rain_in_apartment_building_outdoor_FORWARD_SLASH_00216",
+  "file_name": "5535e502-heavy_rain_in_apartment_building_outdoor_FORWARD_SLASH_00216.jpg",
+  "width": 920,
+  "height": 601,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 220131,
+      "score": 0.9696
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 8749,
+      "score": 0.9656
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 167968,
+      "score": 0.9149
+    }
+  ]
+}

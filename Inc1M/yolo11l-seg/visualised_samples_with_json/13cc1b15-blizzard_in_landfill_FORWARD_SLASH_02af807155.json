@@ -1,0 +1,26 @@
+{
+  "image_id": "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155",
+  "file_name": "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
+  "width": 590,
+  "height": 392,
+  "segments": [
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 14544,
+      "score": 0.8491
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 8251,
+      "score": 0.9099
+    },
+    {
+      "label_index": 30,
+      "class_name": "Excavator",
+      "pixel_count": 1880,
+      "score": 0.8834
+    }
+  ]
+}

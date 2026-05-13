@@ -1,0 +1,20 @@
+{
+  "image_id": "887251e0-river_flood_in_ocean_FORWARD_SLASH_cd6f15b85f",
+  "file_name": "887251e0-river_flood_in_ocean_FORWARD_SLASH_cd6f15b85f.jpg",
+  "width": 852,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 272865,
+      "score": 0.968
+    },
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 117116,
+      "score": 0.6809
+    }
+  ]
+}

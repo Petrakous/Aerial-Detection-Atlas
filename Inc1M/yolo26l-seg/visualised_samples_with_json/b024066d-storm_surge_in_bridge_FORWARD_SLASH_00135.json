@@ -1,0 +1,20 @@
+{
+  "image_id": "b024066d-storm_surge_in_bridge_FORWARD_SLASH_00135",
+  "file_name": "b024066d-storm_surge_in_bridge_FORWARD_SLASH_00135.jpg",
+  "width": 1141,
+  "height": 1258,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Fence",
+      "pixel_count": 76955,
+      "score": 0.9557
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 75785,
+      "score": 0.9469
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "image_id": "c41cf413-bicycle_disaster_in_museum_outdoor_FORWARD_SLASH_00303",
+  "file_name": "c41cf413-bicycle_disaster_in_museum_outdoor_FORWARD_SLASH_00303.jpg",
+  "width": 771,
+  "height": 535,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 139026,
+      "score": 0.9652
+    },
+    {
+      "label_index": 11,
+      "class_name": "Green plant",
+      "pixel_count": 1573,
+      "score": 0.7708
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 28063,
+      "score": 0.6302
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 18365,
+      "score": 0.4752
+    },
+    {
+      "label_index": 16,
+      "class_name": "Dirt road",
+      "pixel_count": 11629,
+      "score": 0.4989
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 30763,
+      "score": 0.8279
+    },
+    {
+      "label_index": 30,
+      "class_name": "Excavator",
+      "pixel_count": 1590,
+      "score": 0.4311
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "image_id": "5b8fc890-river_flood_in_alley_FORWARD_SLASH_150da0e83c",
+  "file_name": "5b8fc890-river_flood_in_alley_FORWARD_SLASH_150da0e83c.jpg",
+  "width": 1600,
+  "height": 1067,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 851704,
+      "score": 0.9975
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 19463,
+      "score": 0.7007
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 922,
+      "score": 0.3315
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 83541,
+      "score": 0.8594
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 3557,
+      "score": 0.492
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 100931,
+      "score": 0.3219
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 8126,
+      "score": 0.3816
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 25373,
+      "score": 0.714
+    },
+    {
+      "label_index": 48,
+      "class_name": "Crane",
+      "pixel_count": 3705,
+      "score": 0.3498
+    }
+  ]
+}

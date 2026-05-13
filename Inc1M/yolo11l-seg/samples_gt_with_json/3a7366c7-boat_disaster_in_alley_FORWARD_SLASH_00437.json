@@ -1,0 +1,43 @@
+{
+  "image_id": "3a7366c7-boat_disaster_in_alley_FORWARD_SLASH_00437",
+  "file_name": "3a7366c7-boat_disaster_in_alley_FORWARD_SLASH_00437.jpg",
+  "width": 1786,
+  "height": 1160,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 282453
+    },
+    {
+      "label_index": 4,
+      "class_name": "First responder",
+      "pixel_count": 69255
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 1273414
+    },
+    {
+      "label_index": 14,
+      "class_name": "Window",
+      "pixel_count": 155625
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 70157
+    },
+    {
+      "label_index": 26,
+      "class_name": "Boat",
+      "pixel_count": 228377
+    },
+    {
+      "label_index": 31,
+      "class_name": "Door",
+      "pixel_count": 59540
+    }
+  ]
+}

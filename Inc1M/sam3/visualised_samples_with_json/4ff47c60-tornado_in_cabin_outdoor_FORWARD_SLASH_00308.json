@@ -1,0 +1,32 @@
+{
+  "image_id": "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308",
+  "file_name": "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308.jpg",
+  "width": 1200,
+  "height": 799,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 89416,
+      "score": 0.6497
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "pixel_count": 1198,
+      "score": 0.8955
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 5314,
+      "score": 0.6885
+    },
+    {
+      "label_index": 63,
+      "class_name": "Chainsaw",
+      "pixel_count": 3089,
+      "score": 0.8896
+    }
+  ]
+}

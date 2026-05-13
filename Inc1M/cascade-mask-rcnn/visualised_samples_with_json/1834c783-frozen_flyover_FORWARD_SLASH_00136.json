@@ -1,0 +1,26 @@
+{
+  "image_id": "1834c783-frozen_flyover_FORWARD_SLASH_00136",
+  "file_name": "1834c783-frozen_flyover_FORWARD_SLASH_00136.jpg",
+  "width": 768,
+  "height": 1150,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 66906,
+      "score": 0.8492
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "pixel_count": 132660,
+      "score": 0.6976
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 17604,
+      "score": 0.533
+    }
+  ]
+}

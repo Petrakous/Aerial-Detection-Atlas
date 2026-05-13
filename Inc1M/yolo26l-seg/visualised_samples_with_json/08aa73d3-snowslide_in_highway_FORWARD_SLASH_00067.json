@@ -1,0 +1,32 @@
+{
+  "image_id": "08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067",
+  "file_name": "08aa73d3-snowslide_in_highway_FORWARD_SLASH_00067.jpg",
+  "width": 640,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 39529,
+      "score": 0.7696
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 123579,
+      "score": 0.5485
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 49859,
+      "score": 0.9565
+    },
+    {
+      "label_index": 30,
+      "class_name": "Excavator",
+      "pixel_count": 10559,
+      "score": 0.9613
+    }
+  ]
+}

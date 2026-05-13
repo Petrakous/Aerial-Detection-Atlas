@@ -1,0 +1,38 @@
+{
+  "image_id": "b893b49d-demolition_in_river_FORWARD_SLASH_00205",
+  "file_name": "b893b49d-demolition_in_river_FORWARD_SLASH_00205.jpg",
+  "width": 1300,
+  "height": 954,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 109055,
+      "score": 0.8608
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 4522,
+      "score": 0.4617
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 247748,
+      "score": 0.6707
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 27858,
+      "score": 0.4152
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 48154,
+      "score": 0.4607
+    }
+  ]
+}

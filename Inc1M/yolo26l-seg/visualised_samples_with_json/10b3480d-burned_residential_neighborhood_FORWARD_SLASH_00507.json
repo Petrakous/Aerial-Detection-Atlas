@@ -1,0 +1,38 @@
+{
+  "image_id": "10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507",
+  "file_name": "10b3480d-burned_residential_neighborhood_FORWARD_SLASH_00507.jpg",
+  "width": 1024,
+  "height": 768,
+  "segments": [
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 105237,
+      "score": 0.7762
+    },
+    {
+      "label_index": 19,
+      "class_name": "Dry tree",
+      "pixel_count": 49795,
+      "score": 0.8092
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 43135,
+      "score": 0.9534
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 6483,
+      "score": 0.8063
+    },
+    {
+      "label_index": 38,
+      "class_name": "Fire truck",
+      "pixel_count": 109780,
+      "score": 0.8489
+    }
+  ]
+}

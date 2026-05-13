@@ -1,0 +1,43 @@
+{
+  "image_id": "27a489d4-bicycle_disaster_in_street_FORWARD_SLASH_00146",
+  "file_name": "27a489d4-bicycle_disaster_in_street_FORWARD_SLASH_00146.jpg",
+  "width": 1063,
+  "height": 1690,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 684339
+    },
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 220035
+    },
+    {
+      "label_index": 3,
+      "class_name": "Helmet",
+      "pixel_count": 3584
+    },
+    {
+      "label_index": 12,
+      "class_name": "Building",
+      "pixel_count": 208075
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 32190
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 11639
+    },
+    {
+      "label_index": 40,
+      "class_name": "Bicycle",
+      "pixel_count": 1125
+    }
+  ]
+}

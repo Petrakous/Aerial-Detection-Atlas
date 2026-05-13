@@ -1,0 +1,14 @@
+{
+  "image_id": "185c759c-under_construction_landfill_FORWARD_SLASH_00101",
+  "file_name": "185c759c-under_construction_landfill_FORWARD_SLASH_00101.jpg",
+  "width": 852,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 373505,
+      "score": 0.9997
+    }
+  ]
+}

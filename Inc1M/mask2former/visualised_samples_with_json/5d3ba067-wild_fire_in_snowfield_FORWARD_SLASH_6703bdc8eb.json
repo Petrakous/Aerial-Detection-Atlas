@@ -1,0 +1,56 @@
+{
+  "image_id": "5d3ba067-wild_fire_in_snowfield_FORWARD_SLASH_6703bdc8eb",
+  "file_name": "5d3ba067-wild_fire_in_snowfield_FORWARD_SLASH_6703bdc8eb.jpg",
+  "width": 403,
+  "height": 284,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 1455,
+      "score": 0.9401
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "pixel_count": 321,
+      "score": 0.6881
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 36309,
+      "score": 0.8397
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 9747,
+      "score": 0.9726
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "pixel_count": 1145,
+      "score": 0.526
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "pixel_count": 3280,
+      "score": 0.6166
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 3350,
+      "score": 0.8439
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 9806,
+      "score": 0.9401
+    }
+  ]
+}

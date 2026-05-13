@@ -1,0 +1,23 @@
+{
+  "image_id": "0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316",
+  "file_name": "0844a786-dust_storm_in_police_station_FORWARD_SLASH_00316.jpg",
+  "width": 1200,
+  "height": 630,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 4392
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 601594
+    },
+    {
+      "label_index": 58,
+      "class_name": "aerial vehicle",
+      "pixel_count": 3138
+    }
+  ]
+}

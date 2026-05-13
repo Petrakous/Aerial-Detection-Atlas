@@ -1,0 +1,56 @@
+{
+  "image_id": "094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640",
+  "file_name": "094925ca-river_flood_in_city_hall_outdoor_FORWARD_SLASH_ceb9496640.jpg",
+  "width": 640,
+  "height": 480,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "pixel_count": 58880,
+      "score": 0.9465
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 13086,
+      "score": 0.9282
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 29513,
+      "score": 0.8446
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 54934,
+      "score": 0.6614
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 448,
+      "score": 0.9066
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 3691,
+      "score": 0.7847
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 24138,
+      "score": 0.7223
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "pixel_count": 77,
+      "score": 0.3801
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "image_id": "6a27ade9-car_disaster_in_stadium_FORWARD_SLASH_9408391efc",
+  "file_name": "6a27ade9-car_disaster_in_stadium_FORWARD_SLASH_9408391efc.jpg",
+  "width": 615,
+  "height": 615,
+  "segments": [
+    {
+      "label_index": 6,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 55246,
+      "score": 0.6329
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 9371,
+      "score": 0.4637
+    }
+  ]
+}

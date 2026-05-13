@@ -1,0 +1,14 @@
+{
+  "image_id": "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308",
+  "file_name": "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308.jpg",
+  "width": 1200,
+  "height": 799,
+  "segments": [
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 729217,
+      "score": 0.9936
+    }
+  ]
+}

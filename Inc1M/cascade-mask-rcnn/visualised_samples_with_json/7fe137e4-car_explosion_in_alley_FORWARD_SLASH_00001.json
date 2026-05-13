@@ -1,0 +1,20 @@
+{
+  "image_id": "7fe137e4-car_explosion_in_alley_FORWARD_SLASH_00001",
+  "file_name": "7fe137e4-car_explosion_in_alley_FORWARD_SLASH_00001.jpg",
+  "width": 1200,
+  "height": 680,
+  "segments": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 205985,
+      "score": 0.9993
+    },
+    {
+      "label_index": 10,
+      "class_name": "Fire hose",
+      "pixel_count": 11884,
+      "score": 0.6983
+    }
+  ]
+}

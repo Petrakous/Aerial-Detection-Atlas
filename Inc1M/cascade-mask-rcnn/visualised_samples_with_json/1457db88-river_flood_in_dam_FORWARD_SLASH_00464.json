@@ -1,0 +1,32 @@
+{
+  "image_id": "1457db88-river_flood_in_dam_FORWARD_SLASH_00464",
+  "file_name": "1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
+  "width": 670,
+  "height": 376,
+  "segments": [
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "pixel_count": 14435,
+      "score": 0.738
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 699,
+      "score": 0.338
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "pixel_count": 6743,
+      "score": 0.9996
+    },
+    {
+      "label_index": 51,
+      "class_name": "Furniture",
+      "pixel_count": 12394,
+      "score": 0.8417
+    }
+  ]
+}

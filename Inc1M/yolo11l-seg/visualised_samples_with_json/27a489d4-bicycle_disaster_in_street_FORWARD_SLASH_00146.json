@@ -1,0 +1,20 @@
+{
+  "image_id": "27a489d4-bicycle_disaster_in_street_FORWARD_SLASH_00146",
+  "file_name": "27a489d4-bicycle_disaster_in_street_FORWARD_SLASH_00146.jpg",
+  "width": 1063,
+  "height": 1690,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 634553,
+      "score": 0.97
+    },
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 238224,
+      "score": 0.6201
+    }
+  ]
+}

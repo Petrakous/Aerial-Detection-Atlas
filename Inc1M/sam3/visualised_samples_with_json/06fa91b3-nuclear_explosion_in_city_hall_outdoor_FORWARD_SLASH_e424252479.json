@@ -1,0 +1,68 @@
+{
+  "image_id": "06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479",
+  "file_name": "06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg",
+  "width": 736,
+  "height": 1107,
+  "segments": [
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 8059,
+      "score": 0.4019
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 140966,
+      "score": 0.609
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "pixel_count": 1203,
+      "score": 0.6714
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 1493,
+      "score": 0.3833
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 427101,
+      "score": 0.7505
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 336,
+      "score": 0.5117
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 18426,
+      "score": 0.3525
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 30427,
+      "score": 0.8794
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 3823,
+      "score": 0.508
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "pixel_count": 12318,
+      "score": 0.3281
+    }
+  ]
+}

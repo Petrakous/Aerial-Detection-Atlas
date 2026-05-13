@@ -1,0 +1,32 @@
+{
+  "image_id": "0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499",
+  "file_name": "0056acfd-destroyed_inn_outdoor_FORWARD_SLASH_00499.jpg",
+  "width": 800,
+  "height": 533,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 130188,
+      "score": 0.8858
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 130528,
+      "score": 0.9787
+    },
+    {
+      "label_index": 23,
+      "class_name": "Citizen",
+      "pixel_count": 31035,
+      "score": 0.9231
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 10026,
+      "score": 0.3901
+    }
+  ]
+}

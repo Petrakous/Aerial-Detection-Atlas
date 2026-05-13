@@ -1,0 +1,28 @@
+{
+  "image_id": "33e86502-earthquake_in_house_FORWARD_SLASH_00570",
+  "file_name": "33e86502-earthquake_in_house_FORWARD_SLASH_00570.jpg",
+  "width": 992,
+  "height": 744,
+  "segments": [
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 23520
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 312903
+    },
+    {
+      "label_index": 17,
+      "class_name": "Destroyed building",
+      "pixel_count": 354773
+    },
+    {
+      "label_index": 50,
+      "class_name": "Furniture",
+      "pixel_count": 1879
+    }
+  ]
+}

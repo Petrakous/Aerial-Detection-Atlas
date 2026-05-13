@@ -1,0 +1,26 @@
+{
+  "image_id": "36277461-burned_sports_field_FORWARD_SLASH_00268",
+  "file_name": "36277461-burned_sports_field_FORWARD_SLASH_00268.jpg",
+  "width": 1200,
+  "height": 1005,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 223995,
+      "score": 0.9425
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "pixel_count": 791809,
+      "score": 0.9693
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "pixel_count": 123432,
+      "score": 0.974
+    }
+  ]
+}

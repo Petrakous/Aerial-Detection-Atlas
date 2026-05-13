@@ -1,0 +1,62 @@
+{
+  "image_id": "da53784b-flooded_bazaar_outdoor_FORWARD_SLASH_30b87aecf5",
+  "file_name": "da53784b-flooded_bazaar_outdoor_FORWARD_SLASH_30b87aecf5.jpg",
+  "width": 634,
+  "height": 404,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 17164,
+      "score": 0.6014
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "pixel_count": 5232,
+      "score": 0.5836
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 3000,
+      "score": 0.6152
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "pixel_count": 21460,
+      "score": 0.6116
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 298,
+      "score": 0.3196
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 14676,
+      "score": 0.554
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "pixel_count": 4668,
+      "score": 0.3984
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "pixel_count": 723,
+      "score": 0.4202
+    },
+    {
+      "label_index": 62,
+      "class_name": "Burnt plant",
+      "pixel_count": 2533,
+      "score": 0.4968
+    }
+  ]
+}

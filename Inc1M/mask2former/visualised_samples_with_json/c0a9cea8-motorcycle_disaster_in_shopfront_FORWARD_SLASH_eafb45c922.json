@@ -1,0 +1,26 @@
+{
+  "image_id": "c0a9cea8-motorcycle_disaster_in_shopfront_FORWARD_SLASH_eafb45c922",
+  "file_name": "c0a9cea8-motorcycle_disaster_in_shopfront_FORWARD_SLASH_eafb45c922.jpg",
+  "width": 920,
+  "height": 1227,
+  "segments": [
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 727056,
+      "score": 0.9235
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 21830,
+      "score": 0.4964
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "pixel_count": 339313,
+      "score": 0.9403
+    }
+  ]
+}

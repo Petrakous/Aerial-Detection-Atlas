@@ -1,0 +1,38 @@
+{
+  "image_id": "80199495-collapsed_farm_FORWARD_SLASH_1318a61a06",
+  "file_name": "80199495-collapsed_farm_FORWARD_SLASH_1318a61a06.jpg",
+  "width": 1023,
+  "height": 369,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 18337,
+      "score": 0.895
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "pixel_count": 56696,
+      "score": 0.7558
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 17939,
+      "score": 0.8976
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 118713,
+      "score": 0.9706
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "pixel_count": 5522,
+      "score": 0.951
+    }
+  ]
+}

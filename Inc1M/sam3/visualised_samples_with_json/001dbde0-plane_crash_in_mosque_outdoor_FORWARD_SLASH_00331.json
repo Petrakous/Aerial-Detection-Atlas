@@ -1,0 +1,56 @@
+{
+  "image_id": "001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331",
+  "file_name": "001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
+  "width": 4173,
+  "height": 3134,
+  "segments": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "pixel_count": 489275,
+      "score": 0.6419
+    },
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "pixel_count": 1162076,
+      "score": 0.5219
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "pixel_count": 1583893,
+      "score": 0.4207
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "pixel_count": 105467,
+      "score": 0.6948
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "pixel_count": 48007,
+      "score": 0.3647
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "pixel_count": 52090,
+      "score": 0.8271
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "pixel_count": 639072,
+      "score": 0.8125
+    },
+    {
+      "label_index": 53,
+      "class_name": "Protective glasses",
+      "pixel_count": 26513,
+      "score": 0.654
+    }
+  ]
+}
