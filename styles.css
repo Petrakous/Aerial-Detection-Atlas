@@ -2612,7 +2612,7 @@ body[data-mode="split"] .split-selectors {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 680px) {
   .landing-header,
   .landing-section,
   .landing-footer,
