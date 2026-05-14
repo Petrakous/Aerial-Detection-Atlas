@@ -150,6 +150,7 @@ const datasetDescriptions = {
     task: "Object Detection",
     useCase: "Human Detection",
     summary: "Drone-based pedestrian detection dataset for search-and-rescue scenarios, containing aerial images with bounding-box annotations for the pedestrian class.",
+    previewImage: "thumbnails/LADD/1324.jpg",
     sourceUrl: "https://github.com/lacmus-foundation/ladd-utils",
     sourceLabel: "Original dataset"
   },
@@ -172,15 +173,68 @@ const datasetDescriptions = {
     sourceLabel: "Original dataset"
   },
   Inc1M: {
-    title: "Inc1M",
-    task: "Semantic Segmentation",
+    title: "Incidents1M-Seg",
+    task: "Instance Segmentation",
     useCase: "Multi-hazard",
-    summary: "Multi-class disaster segmentation benchmark slice with ground and elevated-view scenes, showing class-rich ground-truth masks.",
-    previewImage: "thumbnails/Inc1M/001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
-    sourceUrl: "https://github.com/ethanweber/IncidentsDataset",
-    sourceLabel: "Original Dataset"
+    summary: "Curated multi-hazard incident benchmark slice for instance segmentation, highlighting responder activity, fire, smoke, destruction, and other incident-relevant scene elements.",
+    previewImage: "thumbnails/Inc1M/3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
+    sourceUrl: "https://roc-hci.github.io/NADBenchmarks/Incidents1M.html",
+    sourceLabel: "Original dataset"
   }
 };
+
+const curatedInc1MImageIds = new Set([
+  "3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30",
+  "04f856fa-drought_in_fire_station_FORWARD_SLASH_00191",
+  "e406384b-bus_explosion_in_mausoleum_FORWARD_SLASH_b5de9d9370",
+  "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f",
+  "63ef9d0e-wild_fire_in_valley_FORWARD_SLASH_00447",
+  "a49f19c3-nuclear_explosion_in_river_FORWARD_SLASH_cf2b436483",
+  "21e62969-drought_in_fire_station_FORWARD_SLASH_00289",
+  "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa",
+  "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775",
+  "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014",
+  "d748566f-plane_accident_in_house_FORWARD_SLASH_8920c996cb",
+  "5d3ba067-wild_fire_in_snowfield_FORWARD_SLASH_6703bdc8eb",
+  "1cf03b16-burned_farm_FORWARD_SLASH_00221",
+  "24b0cd93-wild_fire_in_pavilion_FORWARD_SLASH_cf1dceb2fd",
+  "06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479",
+  "5c18c849-parking_lot_on_fire_FORWARD_SLASH_00495",
+  "8c966860-haboob_in_fire_station_FORWARD_SLASH_00133",
+  "7fe137e4-car_explosion_in_alley_FORWARD_SLASH_00001",
+  "001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331",
+  "7859a819-earthquake_in_diner_outdoor_FORWARD_SLASH_00006",
+  "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085",
+  "6318df7b-fire_whirl_in_building_facade_FORWARD_SLASH_00249",
+  "c41cf413-bicycle_disaster_in_museum_outdoor_FORWARD_SLASH_00303",
+  "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017",
+  "6a27ade9-car_disaster_in_stadium_FORWARD_SLASH_9408391efc",
+  "aeaf667b-earthquake_in_schoolhouse_FORWARD_SLASH_4b86fdfb17",
+  "fbe97915-burned_port_FORWARD_SLASH_00008",
+  "0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056",
+  "1a7bf422-nuclear_explosion_in_fire_station_FORWARD_SLASH_0c7bffd942",
+  "5ceb7a2d-wild_fire_in_ocean_FORWARD_SLASH_662bc42d28",
+  "d6b28f6e-plane_incident_in_valley_FORWARD_SLASH_00435",
+  "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267",
+  "c43251f0-earthquake_in_village_FORWARD_SLASH_00111",
+  "e8e486d0-wild_fire_in_rope_bridge_FORWARD_SLASH_58a00df8f4",
+  "82a2700e-highway_with_smoke_FORWARD_SLASH_c6c44b2190",
+  "443b5ad3-typhoon_in_field_road_FORWARD_SLASH_00221",
+  "35ed0db1-landslide_in_park_FORWARD_SLASH_7afd811d0d",
+  "da53784b-flooded_bazaar_outdoor_FORWARD_SLASH_30b87aecf5",
+  "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155",
+  "c48fa562-wild_fire_in_schoolhouse_FORWARD_SLASH_00391",
+  "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109",
+  "b893b49d-demolition_in_river_FORWARD_SLASH_00205",
+  "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127",
+  "3a7366c7-boat_disaster_in_alley_FORWARD_SLASH_00437",
+  "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308",
+  "777b8154-car_disaster_in_embassy_FORWARD_SLASH_149bbd2961",
+  "c2e2ee21-fog_in_hospital_FORWARD_SLASH_ac89240d02",
+  "1457db88-river_flood_in_dam_FORWARD_SLASH_00464",
+  "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473",
+  "84896714-mudflow_in_police_station_FORWARD_SLASH_85d0d716aa"
+]);
 
 const landingCollections = [
   {
@@ -444,7 +498,7 @@ function appMenuItems() {
     ...datasetOptions().map((dataset) => ({
       id: dataset.id,
       label: dataset.label || dataset.id,
-      meta: `${dataset.count} scenes · ${formatTaskType(dataset.taskType)}`,
+      meta: `${dataset.count} scenes · ${displayTaskLabelForDataset(dataset.id, dataset.taskType)}`,
       active: state.route === "dataset" && state.datasetId === dataset.id,
       action: () => {
         closeViewerOverlay({ updateHash: false });
@@ -505,6 +559,12 @@ function currentDataset() {
   return data.datasets?.find((dataset) => dataset.id === state.datasetId) || null;
 }
 
+function datasetDisplayName(datasetId = state.datasetId) {
+  return datasetDescriptions[datasetId]?.title
+    || data.datasets?.find((dataset) => dataset.id === datasetId)?.name
+    || datasetId;
+}
+
 function currentTaskType(scene = currentScene()) {
   return scene?.taskType || currentDataset()?.taskType || "object-detection";
 }
@@ -522,6 +582,10 @@ function datasetModels(datasetId = state.datasetId) {
 
 function formatTaskType(taskType) {
   return data.taskTypes?.find((item) => item.id === taskType)?.name || taskType.replace(/-/g, " ");
+}
+
+function displayTaskLabelForDataset(datasetId = state.datasetId, fallbackTaskType = currentDataset()?.taskType || "object-detection") {
+  return datasetDescriptions[datasetId]?.task || formatTaskType(fallbackTaskType);
 }
 
 function formatSceneTitle(title = "") {
@@ -723,8 +787,8 @@ function datasetInstructionsMarkup({ datasetTitle, taskLabel, sceneCount, modelC
     : "compare model detections, split views, focus inspection, and ground-truth bounding boxes";
   const taskSpecific = segmentation
     ? `
-      <li><strong>Semantic classes:</strong> Use the classes panel on the right to inspect the annotated scene categories and compare model coverage against the ground truth.</li>
-      <li><strong>Ground Truth:</strong> Toggle the <strong>Ground Truth</strong> control to view the reference segmentation mask and check where each model agrees or diverges.</li>
+      <li><strong>Annotated classes:</strong> Use the classes panel on the right to inspect the incident-relevant categories present in the scene and compare model coverage against the reference annotation.</li>
+      <li><strong>Ground Truth:</strong> Toggle the <strong>Ground Truth</strong> control to view the reference mask and check where each model agrees or diverges.</li>
     `
     : `
       <li><strong>Detections:</strong> Use the viewer to inspect predicted bounding boxes, class labels, and confidence values across the available models.</li>
@@ -747,7 +811,7 @@ function renderDatasetPageHeader() {
   const dataset = currentDataset();
   const meta = datasetDescriptions[state.datasetId] || {};
   const scenes = visibleScenes();
-  const taskLabel = meta.task || formatTaskType(dataset?.taskType || "object-detection");
+  const taskLabel = meta.task || displayTaskLabelForDataset(state.datasetId, dataset?.taskType || "object-detection");
   const modelCount = datasetPageModelCount(state.datasetId);
   const datasetTitle = meta.title || dataset?.name || state.datasetId;
   const segmentation = (dataset?.taskType || "").includes("segmentation");
@@ -816,9 +880,11 @@ function renderGallery() {
 }
 
 function visibleScenes() {
-  return state.datasetId
+  const scenes = state.datasetId
     ? data.scenes.filter((scene) => scene.dataset === state.datasetId)
     : data.scenes;
+
+  return scenes.filter((scene) => scene.dataset !== "Inc1M" || curatedInc1MImageIds.has(String(scene.imageId)));
 }
 
 function dfireSceneGroup(scene) {
@@ -928,18 +994,13 @@ function visibleSelectedModels(scene = currentScene()) {
 }
 
 function displayedModels(scene = currentScene()) {
+  if (state.hoveredModel) {
+    const hovered = readyModels(scene).find((model) => model.id === state.hoveredModel);
+    if (hovered) return [hovered];
+  }
   const selectedModels = visibleSelectedModels(scene);
   if (selectedModels.length) {
-    if (!isSegmentationScene(scene) && state.hoveredModel) {
-      const hovered = readyModels(scene).find((model) => model.id === state.hoveredModel);
-      if (hovered && !selectedModels.some((model) => model.id === hovered.id)) {
-        return [...selectedModels, hovered];
-      }
-    }
     return selectedModels;
-  }
-  if (state.hoveredModel) {
-    return readyModels(scene).filter((model) => model.id === state.hoveredModel);
   }
   return [];
 }
@@ -2132,7 +2193,7 @@ function renderSummary() {
     : totalPredictionCount(visibleModels, scene);
 
   els.sceneTitle.textContent = formatSceneTitle(scene.title);
-  els.sceneMeta.textContent = `${scene.dataset} / ${scene.dimensions}`;
+  els.sceneMeta.textContent = `${datasetDisplayName(scene.dataset)} / ${scene.dimensions}`;
   els.activeModelLabel.textContent = state.mode === "split" ? "Split models" : "Visible models";
   els.activeModelCount.textContent = state.mode === "split"
     ? `${leftChoice.showGroundTruth ? "GT" : leftChoice.models.length} / ${rightChoice.showGroundTruth ? "GT" : rightChoice.models.length}`
@@ -2166,7 +2227,7 @@ function renderMode() {
   els.selectAll.textContent = allReadySelected ? "Deselect all" : "Select all";
   els.selectAll.disabled = sceneModels.length === 0;
   els.clearAll.disabled = sceneModels.length === 0;
-  els.taskLabel.textContent = formatTaskType(currentTaskType(scene));
+  els.taskLabel.textContent = displayTaskLabelForDataset(scene.dataset, currentTaskType(scene));
   els.toggleGroundTruth.classList.toggle("is-active", state.showGroundTruth);
   els.toggleGroundTruth.classList.toggle("is-hovered", state.mode !== "split" && state.hoveredGroundTruth);
   els.toggleGroundTruth.setAttribute("aria-pressed", String(state.showGroundTruth));
