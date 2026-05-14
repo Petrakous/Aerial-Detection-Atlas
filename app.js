@@ -2034,6 +2034,12 @@ function renderModels() {
   const splitMode = state.mode === "split";
   const segmentationScene = isSegmentationScene(scene);
   const sceneModels = readyModels(scene);
+  const splitActiveModelIds = splitMode
+    ? new Set([
+      ...modelsForSplitChoice(state.splitA, state.splitB, scene).map((model) => model.id),
+      ...modelsForSplitChoice(state.splitB, state.splitA, scene).map((model) => model.id)
+    ])
+    : new Set();
   normalizeHoveredModel(scene);
   syncHoveredModelFromPointer(scene);
   const activeHoverModel = effectiveHoverModel(scene);
@@ -2041,10 +2047,11 @@ function renderModels() {
   datasetModels(scene.dataset).forEach((model) => {
     const sceneStats = modelStatsForScene(scene, model.id);
     const hasSceneOutput = sceneModels.some((item) => item.id === model.id);
+    const isSplitActive = splitMode && splitActiveModelIds.has(model.id);
     const row = document.createElement("button");
     row.type = "button";
     row.dataset.modelId = model.id;
-    row.className = `model-row${state.selected.has(model.id) ? " is-selected" : ""}${activeHoverModel === model.id ? " is-hovered" : ""}${splitMode ? " is-readonly" : ""}${hasSceneOutput ? "" : " is-pending"}`;
+    row.className = `model-row${state.selected.has(model.id) || isSplitActive ? " is-selected" : ""}${activeHoverModel === model.id ? " is-hovered" : ""}${splitMode ? " is-readonly" : ""}${hasSceneOutput ? "" : " is-pending"}`;
     row.style.setProperty("--model-color", model.color);
     row.disabled = !hasSceneOutput && !splitMode;
 
@@ -2211,6 +2218,10 @@ function renderMode() {
   if (!scene) return;
   const sceneModels = readyModels(scene);
   const segmentationScene = isSegmentationScene(scene);
+  const splitGtActive = state.mode === "split" && (
+    splitChoiceConfig(state.splitA, state.splitB, scene).showGroundTruth
+    || splitChoiceConfig(state.splitB, state.splitA, scene).showGroundTruth
+  );
   const allReadySelected = sceneModels.length > 0 && sceneModels.every((model) => state.selected.has(model.id));
 
   document.body.dataset.mode = state.mode;
@@ -2228,9 +2239,10 @@ function renderMode() {
   els.selectAll.disabled = sceneModels.length === 0;
   els.clearAll.disabled = sceneModels.length === 0;
   els.taskLabel.textContent = displayTaskLabelForDataset(scene.dataset, currentTaskType(scene));
-  els.toggleGroundTruth.classList.toggle("is-active", state.showGroundTruth);
+  els.toggleGroundTruth.classList.toggle("is-active", state.showGroundTruth || splitGtActive);
   els.toggleGroundTruth.classList.toggle("is-hovered", state.mode !== "split" && state.hoveredGroundTruth);
-  els.toggleGroundTruth.setAttribute("aria-pressed", String(state.showGroundTruth));
+  els.toggleGroundTruth.setAttribute("aria-pressed", String(state.showGroundTruth || splitGtActive));
+  els.toggleGroundTruth.disabled = state.mode === "split";
   els.groundTruthText.textContent = "Ground Truth";
 }
 
