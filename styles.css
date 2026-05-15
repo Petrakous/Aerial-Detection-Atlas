@@ -2597,7 +2597,7 @@ body[data-mode="split"] .split-selectors {
 .segmentation-badge.is-ground-truth {
   left: 14px;
   right: auto;
-  --badge-accent: #ffffff;
+  --badge-accent: #ff5d5d;
 }
 
 .segmentation-badge-title {
