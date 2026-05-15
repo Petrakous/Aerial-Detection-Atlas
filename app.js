@@ -880,7 +880,12 @@ function renderGallery() {
           </span>
         </span>
       `;
-    setImageSourceWithFallback(card.querySelector(".gallery-card-image img"), assetCandidates(scene.thumbnailImage || scene.baseImage));
+    const previewImage = card.querySelector(".gallery-card-image img");
+    if (previewImage) {
+      previewImage.draggable = false;
+      previewImage.addEventListener("dragstart", (event) => event.preventDefault());
+      setImageSourceWithFallback(previewImage, assetCandidates(scene.thumbnailImage || scene.baseImage));
+    }
     card.addEventListener("click", () => openViewerForScene(index));
     fragment.append(card);
   });
@@ -1338,9 +1343,13 @@ function chooseLabelPosition(scene, box, kind, modelLabel, detailLabel, occupied
   const marginY = 0.45;
   const stackIndex = occupiedLabels.length;
   const verticalStep = rect.height + 0.25;
+  const outsideLeft = -rect.width + 1.2;
+  const outsideTop = -rect.height - 0.8;
+  const outsideRight = 98.8;
+  const outsideBottom = 98.8;
   const selected = {
-    left: clamp(rect.boxLeft, 0, 100 - rect.width),
-    top: clamp(rect.boxTop - rect.height - marginY + (stackIndex * verticalStep), 0, 100 - rect.height),
+    left: clamp(rect.boxLeft, outsideLeft, outsideRight),
+    top: clamp(rect.boxTop - rect.height - marginY + (stackIndex * verticalStep), outsideTop, outsideBottom),
     width: rect.width,
     height: rect.height
   };
@@ -1694,10 +1703,10 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
       label.textContent = entry.className;
 
       row.append(label);
-      if (options.kind === "ground-truth" || typeof entry.score === "number") {
+      if (options.kind !== "ground-truth" && typeof entry.score === "number") {
         const confidence = document.createElement("span");
         confidence.className = "segmentation-badge-score";
-        confidence.textContent = options.kind === "ground-truth" ? "GT" : formatConfidence(entry.score);
+        confidence.textContent = formatConfidence(entry.score);
         row.append(confidence);
       }
       list.append(row);
