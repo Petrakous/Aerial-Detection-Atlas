@@ -1341,6 +1341,40 @@ button {
   min-width: 0;
 }
 
+.brand-home-button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  transition: transform 180ms ease, filter 180ms ease;
+  transform-origin: center;
+}
+
+.brand-home-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  filter: brightness(1.04);
+}
+
+.brand-home-button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent), white 16%);
+  outline-offset: 2px;
+}
+
+.dataset-home-button {
+  padding: 6px 10px;
+}
+
+.viewer-home-button {
+  padding: 8px 12px;
+}
+
 .back-button {
   flex: 0 0 34px;
 }

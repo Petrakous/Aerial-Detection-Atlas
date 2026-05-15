@@ -56,6 +56,7 @@ const els = {
   menuThemeToggle: document.querySelector("#menuThemeToggle"),
   landingMenuButton: document.querySelector("#landingMenuButton"),
   datasetMenuButton: document.querySelector("#datasetMenuButton"),
+  datasetHomeButton: document.querySelector("#datasetHomeButton"),
   landingPage: document.querySelector("#landingPage"),
   datasetPage: document.querySelector("#datasetPage"),
   datasetSourceLink: document.querySelector("#datasetSourceLink"),
@@ -77,6 +78,7 @@ const els = {
   sceneTitle: document.querySelector("#sceneTitle"),
   sceneMeta: document.querySelector("#sceneMeta"),
   sceneCount: document.querySelector("#sceneCount"),
+  viewerHomeButton: document.querySelector("#viewerHomeButton"),
   sceneList: document.querySelector("#sceneList"),
   modelList: document.querySelector("#modelList"),
   viewerFrame: document.querySelector("#viewerFrame"),
@@ -2470,6 +2472,14 @@ els.modeButtons.forEach((button) => {
 
 els.landingMenuButton?.addEventListener("click", openAppMenu);
 els.datasetMenuButton?.addEventListener("click", openAppMenu);
+els.datasetHomeButton?.addEventListener("click", () => {
+  closeViewerOverlay({ updateHash: false });
+  setRoute("home");
+});
+els.viewerHomeButton?.addEventListener("click", () => {
+  closeViewerOverlay({ updateHash: false });
+  setRoute("home");
+});
 els.appMenuClose?.addEventListener("click", closeAppMenu);
 els.datasetInstructionsButton?.addEventListener("click", openInstructionsModal);
 els.appMenuOverlay?.addEventListener("click", (event) => {
