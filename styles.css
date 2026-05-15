@@ -544,6 +544,8 @@ button {
 }
 
 .gallery-card {
+  appearance: none;
+  -webkit-appearance: none;
   display: grid;
   gap: 12px;
   padding: 14px;
@@ -581,6 +583,7 @@ button {
   border-radius: 8px;
   aspect-ratio: 1.18;
   background: var(--panel);
+  isolation: isolate;
 }
 
 .gallery-card.is-image-only .gallery-card-image {
@@ -590,6 +593,8 @@ button {
 }
 
 .gallery-card-image img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
