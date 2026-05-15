@@ -77,7 +77,8 @@ const FALLBACK_SEGMENTATION_CLASS_COLORS = [
 const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD", "DFire"];
 const DATASET_SCENE_LIMITS = {
   FloodNetPlus: 50,
-  RescueNet: 50
+  RescueNet: 50,
+  Inc1M: 50
 };
 
 const IGNORED_DIRS = new Set([
@@ -207,6 +208,10 @@ function slugify(value) {
 function preferredDatasetOrder(name) {
   const explicitIndex = DATASET_ORDER.indexOf(name);
   return explicitIndex === -1 ? DATASET_ORDER.length : explicitIndex;
+}
+
+function datasetDisplayName(name) {
+  return name === "Inc1M" ? "Incidents1M-Seg" : name;
 }
 
 function assignDetectionClassColors(names) {
@@ -699,7 +704,8 @@ function buildSegmentationScene({ datasetName, sceneId, sceneOrder = null, scene
     const segments = (prediction.segments || []).map((segment) => ({
       labelIndex: Number(segment.label_index),
       className: segment.class_name,
-      pixelCount: Number(segment.pixel_count)
+      pixelCount: Number(segment.pixel_count),
+      score: segment.score == null ? null : round(Number(segment.score), 4)
     })).sort((a, b) => a.labelIndex - b.labelIndex);
 
     predictions[modelId] = segments;
@@ -820,7 +826,7 @@ function buildDatasets() {
 
       datasets.push({
         id: datasetName,
-        name: datasetName,
+        name: datasetDisplayName(datasetName),
         taskType,
         sceneCount: sceneFiles.length,
         modelIds: modelDirs
@@ -895,7 +901,7 @@ function buildDatasets() {
 
     datasets.push({
       id: datasetName,
-      name: datasetName,
+      name: datasetDisplayName(datasetName),
       taskType,
       sceneCount: selectedSceneCandidates.length,
       modelIds: modelDirs

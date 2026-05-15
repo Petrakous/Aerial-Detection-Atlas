@@ -131,6 +131,7 @@ let viewerRefreshTimer = 0;
 let focusLensRefreshFrame = 0;
 let resetSceneListScroll = false;
 const preloadedImages = new Map();
+const segmentationScoreLoads = new Map();
 let preloadSceneTimer = 0;
 let appMenuHideTimer = 0;
 let scrollLockY = 0;
@@ -626,13 +627,19 @@ function detectionClassColor(className, scene = currentScene()) {
 
 function datasetOptions() {
   if (Array.isArray(data.datasets) && data.datasets.length) {
-    return data.datasets.map((dataset) => ({
-      id: dataset.id,
-      label: dataset.name || dataset.id,
-      count: dataset.sceneCount,
-      taskType: dataset.taskType,
-      taskTypes: [dataset.taskType]
-    }));
+    return [...data.datasets]
+      .sort((a, b) => {
+        if (a.id === "Inc1M" && b.id !== "Inc1M") return -1;
+        if (b.id === "Inc1M" && a.id !== "Inc1M") return 1;
+        return 0;
+      })
+      .map((dataset) => ({
+        id: dataset.id,
+        label: dataset.name || dataset.id,
+        count: dataset.sceneCount,
+        taskType: dataset.taskType,
+        taskTypes: [dataset.taskType]
+      }));
   }
   return availableDatasets.map((datasetId) => {
     const scenes = data.scenes.filter((scene) => scene.dataset === datasetId);
@@ -701,7 +708,7 @@ function datasetCardMarkup(dataset) {
         </div>
         <div class="dataset-actions">
           <button class="dataset-open" type="button" data-dataset-id="${dataset.id}">
-            Open dataset
+            Explore demo
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
           </button>
           <a class="dataset-source" href="${dataset.sourceUrl || "#"}" target="_blank" rel="noreferrer">
@@ -1242,6 +1249,69 @@ function compactModelLabel(name = "") {
   return name.replace(/\s+/g, " ");
 }
 
+function formatConfidence(value) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "";
+  return `${Math.round(value * 100)}%`;
+}
+
+function segmentationPredictionJsonPath(scene, modelId) {
+  if (!scene?.dataset || !modelId || !scene?.imageId) return "";
+  return `${scene.dataset}/${modelId}/visualised_samples_with_json/${scene.imageId}.json`;
+}
+
+function mergeSegmentationScores(scene, modelId, prediction) {
+  const sceneSegments = scene?.predictions?.[modelId];
+  const predictionSegments = prediction?.segments;
+  if (!sceneSegments?.length || !Array.isArray(predictionSegments)) return false;
+
+  const scoreByKey = new Map(
+    predictionSegments.map((segment) => [
+      `${Number(segment.label_index)}:${segment.class_name}`,
+      segment.score == null ? null : Number(segment.score)
+    ])
+  );
+
+  let changed = false;
+  sceneSegments.forEach((segment) => {
+    const key = `${Number(segment.labelIndex)}:${segment.className}`;
+    const nextScore = scoreByKey.get(key);
+    if (nextScore == null || !Number.isFinite(nextScore) || segment.score === nextScore) return;
+    segment.score = nextScore;
+    changed = true;
+  });
+  return changed;
+}
+
+function ensureSegmentationScores(scene, model) {
+  if (!scene || !model?.id || !isSegmentationScene(scene)) return;
+  const segments = scene.predictions?.[model.id];
+  if (!segments?.length || segments.some((segment) => typeof segment.score === "number")) return;
+
+  const jsonPath = segmentationPredictionJsonPath(scene, model.id);
+  if (!jsonPath) return;
+
+  const cacheKey = `${scene.id}:${model.id}`;
+  if (segmentationScoreLoads.has(cacheKey)) return;
+
+  const load = fetch(jsonPath)
+    .then((response) => {
+      if (!response.ok) throw new Error(`Failed to load ${jsonPath}`);
+      return response.json();
+    })
+    .then((prediction) => {
+      const changed = mergeSegmentationScores(scene, model.id, prediction);
+      if (changed && currentScene()?.id === scene.id) {
+        state.skipNextViewerAnimation = true;
+        renderViewer(true);
+      }
+    })
+    .catch(() => {
+      // Keep badges useful even if the raw prediction JSON is unavailable from the current host.
+    });
+
+  segmentationScoreLoads.set(cacheKey, load);
+}
+
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
@@ -1595,7 +1665,70 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
   if (options.isDimmed) img.classList.add("is-dimmed");
   if (options.isEmphasized) img.classList.add("is-emphasized");
   layer.append(img);
+
+  const annotations = options.annotations || [];
+  if (annotations.length) {
+    const badge = document.createElement("div");
+    badge.className = `segmentation-badge${options.kind === "ground-truth" ? " is-ground-truth" : ""}`;
+    if (options.model?.color) {
+      badge.style.setProperty("--badge-accent", options.model.color);
+    }
+
+    const title = document.createElement("div");
+    title.className = "segmentation-badge-title";
+    title.textContent = options.kind === "ground-truth"
+      ? "Ground Truth"
+      : (options.model?.shortName || options.model?.name || "Prediction");
+    badge.append(title);
+
+    const list = document.createElement("div");
+    list.className = "segmentation-badge-list";
+    annotations.forEach((entry) => {
+      const row = document.createElement("div");
+      row.className = "segmentation-badge-row";
+
+      const label = document.createElement("span");
+      label.className = "segmentation-badge-class";
+      label.textContent = entry.className;
+
+      row.append(label);
+      if (options.kind === "ground-truth" || typeof entry.score === "number") {
+        const confidence = document.createElement("span");
+        confidence.className = "segmentation-badge-score";
+        confidence.textContent = options.kind === "ground-truth" ? "GT" : formatConfidence(entry.score);
+        row.append(confidence);
+      }
+      list.append(row);
+    });
+    badge.append(list);
+    layer.append(badge);
+  }
   return layer;
+}
+
+function segmentationAnnotationEntries(segments = [], { limit = 6, includeScores = true } = {}) {
+  return segments
+    .filter((segment) => segment?.className)
+    .sort((a, b) => {
+      const aScore = typeof a.score === "number" ? a.score : -1;
+      const bScore = typeof b.score === "number" ? b.score : -1;
+      if (aScore !== bScore) return bScore - aScore;
+      return (b.pixelCount || 0) - (a.pixelCount || 0);
+    })
+    .slice(0, limit)
+    .map((segment) => ({
+      className: segment.className,
+      score: includeScores && typeof segment.score === "number" ? segment.score : null
+    }));
+}
+
+function segmentationBadgeEntries(scene, model, options = {}) {
+  if (options.kind === "ground-truth") {
+    return segmentationAnnotationEntries(scene.groundTruth || [], { includeScores: false, limit: 5 });
+  }
+  ensureSegmentationScores(scene, model);
+  const segments = scene.predictions?.[model?.id] || [];
+  return segmentationAnnotationEntries(segments, { includeScores: true, limit: 6 });
 }
 
 function buildSceneLayers(scene, models, options = {}) {
@@ -1611,7 +1744,8 @@ function buildSceneLayers(scene, models, options = {}) {
         kind: "ground-truth",
         opacity: hoverGroundTruth ? 1 : state.overlayOpacity,
         isEmphasized: hoverGroundTruth,
-        zIndex: 12
+        zIndex: 12,
+        annotations: segmentationBadgeEntries(scene, null, { kind: "ground-truth" })
       }));
     }
 
@@ -1629,7 +1763,8 @@ function buildSceneLayers(scene, models, options = {}) {
         opacity,
         isDimmed,
         isEmphasized: isHovered,
-        zIndex: 4 + index
+        zIndex: 4 + index,
+        annotations: segmentationBadgeEntries(scene, model, { kind: "prediction" })
       }));
     });
     return layers;
@@ -2121,16 +2256,8 @@ function renderModels() {
       : hasSceneOutput
         ? isSegmentationScene(scene)
           ? `${sceneStats.classCount || 0} classes`
-          : `${sceneStats.count} detections${sceneStats.maxConfidence != null ? ` / max ${sceneStats.maxConfidence.toFixed(2)}` : ""}`
+          : `${sceneStats.count} detections`
         : "not available in this scene";
-
-    const pill = hasSceneOutput
-      ? isSegmentationScene(scene)
-        ? `${Math.round((sceneStats.coverage || 0) * 100)}%`
-        : sceneStats.avgConfidence != null
-          ? `${Math.round(sceneStats.avgConfidence * 100)}%`
-          : String(sceneStats.count)
-      : "--";
 
     row.innerHTML = `
       <span class="model-swatch" aria-hidden="true"></span>
@@ -2138,7 +2265,7 @@ function renderModels() {
         <span class="model-title">${model.name}</span>
         <span class="model-meta">${meta}</span>
       </span>
-      <span class="metric-pill">${pill}</span>
+      <span class="model-spacer" aria-hidden="true"></span>
     `;
 
     fragment.append(row);
