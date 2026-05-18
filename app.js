@@ -138,6 +138,24 @@ let preloadSceneTimer = 0;
 let appMenuHideTimer = 0;
 let scrollLockY = 0;
 
+function detectClientFormFactor() {
+  const ua = navigator.userAgent || "";
+  const platform = navigator.platform || "";
+  const touchPoints = navigator.maxTouchPoints || 0;
+  const mobileHint = Boolean(navigator.userAgentData?.mobile);
+  const phoneHint = /\b(iPhone|iPod|Android.+Mobile|Windows Phone|Mobile)\b/i.test(ua);
+  const tabletHint = /\b(iPad|Tablet|PlayBook|Silk)\b/i.test(ua) || (/Android/i.test(ua) && !/Mobile/i.test(ua));
+  const ipadDesktopHint = platform === "MacIntel" && touchPoints > 1;
+
+  if (mobileHint || phoneHint) return "mobile";
+  if (tabletHint || ipadDesktopHint) return "tablet";
+  return "desktop";
+}
+
+function isHandheldClient() {
+  return document.body?.dataset.mobileClient === "true";
+}
+
 const datasetDescriptions = {
   DFire: {
     title: "DFire",
@@ -270,22 +288,17 @@ const landingCollections = [
 function updatePageScrollLock() {
   const shouldLock = state.viewerOpen || (els.instructionsModal && !els.instructionsModal.hidden);
   if (shouldLock) {
-    if (!document.body.classList.contains("is-scroll-locked")) {
-      scrollLockY = window.scrollY;
-    }
     document.documentElement.style.overflow = "hidden";
     document.body.classList.add("is-scroll-locked");
     document.body.style.overflow = "hidden";
-    document.body.style.top = `${-scrollLockY}px`;
+    document.body.style.top = "";
     return;
   }
 
-  const restoreY = document.body.classList.contains("is-scroll-locked") ? scrollLockY : window.scrollY;
   document.documentElement.style.overflow = "";
   document.body.classList.remove("is-scroll-locked");
   document.body.style.overflow = "";
   document.body.style.top = "";
-  window.scrollTo(0, restoreY);
 }
 
 function parseRouteHash() {
@@ -424,7 +437,7 @@ function syncRouteFromLocation() {
 
 function updateScenePanelWidth(sceneList = visibleScenes()) {
   if (!els.workspace) return;
-  if (window.matchMedia("(max-width: 1100px)").matches) {
+  if (isHandheldClient() && window.matchMedia("(max-width: 1100px)").matches) {
     els.workspace.style.removeProperty("--scene-panel-width");
     return;
   }
@@ -2084,7 +2097,7 @@ function renderViewer(force = false) {
 function renderScenes() {
   const scenes = visibleScenes();
   updateScenePanelWidth(scenes);
-  const preserveVerticalScroll = !window.matchMedia("(max-width: 760px)").matches;
+  const preserveVerticalScroll = !(isHandheldClient() && window.matchMedia("(max-width: 760px)").matches);
   const targetScrollTop = preserveVerticalScroll && !resetSceneListScroll ? els.sceneList.scrollTop : 0;
   els.sceneCount.textContent = `${scenes.length} samples`;
   const fragment = document.createDocumentFragment();
@@ -2168,7 +2181,7 @@ function renderScenes() {
   resetSceneListScroll = false;
 
   const activeCard = els.sceneList.querySelector(`[data-scene-index="${state.sceneIndex}"]`);
-  if (activeCard && window.matchMedia("(max-width: 760px)").matches) {
+  if (activeCard && isHandheldClient() && window.matchMedia("(max-width: 760px)").matches) {
     activeCard.scrollIntoView({ inline: "center", block: "nearest", behavior: "auto" });
   }
   scenesInitialized = true;
@@ -2711,6 +2724,8 @@ window.addEventListener("hashchange", syncRouteFromLocation);
 
 applyTheme(resolveInitialTheme());
 ensureSceneState();
+document.body.dataset.clientFormFactor = detectClientFormFactor();
+document.body.dataset.mobileClient = String(document.body.dataset.clientFormFactor !== "desktop");
 const initialRoute = parseRouteHash();
 state.route = initialRoute.route;
 if (initialRoute.datasetId && availableDatasets.includes(initialRoute.datasetId)) {

@@ -7,7 +7,7 @@
     <title>Visual Perception Engine</title>
     <link rel="icon" href="assets/brand/atlas-icon-32.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/brand/atlas-icon-256.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260518c">
   </head>
   <body>
     <div id="appMenuOverlay" class="app-menu-overlay" hidden aria-hidden="true">
@@ -142,34 +142,35 @@
       </section>
 
       <div id="viewerOverlay" class="viewer-overlay" hidden aria-hidden="true">
-        <div id="viewerApp" class="app viewer-shell">
-          <header class="topbar">
-            <div class="brand-block">
-              <button id="backButton" class="icon-button back-button" type="button" aria-label="Close viewer" title="Close viewer">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
-              </button>
-              <button id="viewerHomeButton" class="brand-home-button viewer-home-button" type="button" aria-label="Go to home" title="Go to home">
-                <span class="brand-mark" aria-hidden="true"></span>
-                <div class="brand-copy">
-                  <strong class="brand-title">TRIFFID</strong>
-                  <span class="brand-subtitle">Visual Perception Engine</span>
-                </div>
-              </button>
-            </div>
-
-            <div class="scene-summary" aria-live="polite">
-              <strong id="sceneTitle">Loading scene</strong>
-              <span id="sceneMeta">Preparing viewer</span>
-            </div>
-
-            <div class="topbar-controls">
-              <div class="mode-control" role="group" aria-label="Viewer mode">
-                <button class="mode-button is-active" data-mode="overlay" type="button">Overlay</button>
-                <button class="mode-button" data-mode="split" type="button">Split</button>
-                <button class="mode-button" data-mode="focus" type="button">Focus</button>
+        <div class="viewer-scale-frame">
+          <div id="viewerApp" class="app viewer-shell">
+            <header class="topbar">
+              <div class="brand-block">
+                <button id="backButton" class="icon-button back-button" type="button" aria-label="Close viewer" title="Close viewer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+                </button>
+                <button id="viewerHomeButton" class="brand-home-button viewer-home-button" type="button" aria-label="Go to home" title="Go to home">
+                  <span class="brand-mark" aria-hidden="true"></span>
+                  <div class="brand-copy">
+                    <strong class="brand-title">TRIFFID</strong>
+                    <span class="brand-subtitle">Visual Perception Engine</span>
+                  </div>
+                </button>
               </div>
-            </div>
-          </header>
+
+              <div class="scene-summary" aria-live="polite">
+                <strong id="sceneTitle">Loading scene</strong>
+                <span id="sceneMeta">Preparing viewer</span>
+              </div>
+
+              <div class="topbar-controls">
+                <div class="mode-control" role="group" aria-label="Viewer mode">
+                  <button class="mode-button is-active" data-mode="overlay" type="button">Overlay</button>
+                  <button class="mode-button" data-mode="split" type="button">Split</button>
+                  <button class="mode-button" data-mode="focus" type="button">Focus</button>
+                </div>
+              </div>
+            </header>
 
           <main class="workspace">
             <aside class="scene-panel" aria-label="Scenes">
@@ -302,11 +303,12 @@
               </div>
             </section>
           </div>
+          </div>
         </div>
       </div>
     </main>
 
     <script src="data/sample-data.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=20260518c"></script>
   </body>
 </html>
