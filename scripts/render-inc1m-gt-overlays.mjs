@@ -7,12 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const demoRoot = path.resolve(__dirname, "..");
 
-const datasetRoot = path.join(demoRoot, "Inc1M", "sam3");
-const rawDir = path.join(datasetRoot, "ground_truth_images");
-const gtDir = path.join(datasetRoot, "samples_gt_with_json");
-const sourceRoot = path.join(demoRoot, ".tmp", "inc1m-import", "inner", "vis");
-const sourceGtJson = path.join(sourceRoot, "annotations_gt.json");
-const gtBackupDir = path.join(datasetRoot, "samples_gt_with_json_source_export");
+const datasetRoot = path.join(demoRoot, "Inc1M");
+const rawDir = path.join(datasetRoot, "shared_ground_truth_images");
+const gtDir = path.join(datasetRoot, "shared_samples_gt_with_json");
+const sourceGtJson = path.join(demoRoot, "Datasets", "annotations_gt.json");
+const gtBackupDir = path.join(datasetRoot, "shared_samples_gt_with_json_source_export");
 
 const overlayAlpha = 0.42;
 const palette = [

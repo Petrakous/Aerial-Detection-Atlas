@@ -1,0 +1,23 @@
+{
+  "image_id": "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109",
+  "file_name": "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
+  "width": 1024,
+  "height": 576,
+  "segments": [
+    {
+      "label_index": 0,
+      "class_name": "Water",
+      "pixel_count": 155359
+    },
+    {
+      "label_index": 26,
+      "class_name": "Boat",
+      "pixel_count": 75586
+    },
+    {
+      "label_index": 32,
+      "class_name": "Mud",
+      "pixel_count": 30491
+    }
+  ]
+}

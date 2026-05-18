@@ -81,6 +81,59 @@ const DATASET_SCENE_LIMITS = {
   Inc1M: 50
 };
 
+const CURATED_INC1M_SCENE_IDS = [
+  "3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30",
+  "04f856fa-drought_in_fire_station_FORWARD_SLASH_00191",
+  "e406384b-bus_explosion_in_mausoleum_FORWARD_SLASH_b5de9d9370",
+  "c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f",
+  "63ef9d0e-wild_fire_in_valley_FORWARD_SLASH_00447",
+  "a49f19c3-nuclear_explosion_in_river_FORWARD_SLASH_cf2b436483",
+  "21e62969-drought_in_fire_station_FORWARD_SLASH_00289",
+  "ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa",
+  "5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775",
+  "9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014",
+  "d748566f-plane_accident_in_house_FORWARD_SLASH_8920c996cb",
+  "5d3ba067-wild_fire_in_snowfield_FORWARD_SLASH_6703bdc8eb",
+  "1cf03b16-burned_farm_FORWARD_SLASH_00221",
+  "24b0cd93-wild_fire_in_pavilion_FORWARD_SLASH_cf1dceb2fd",
+  "06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479",
+  "5c18c849-parking_lot_on_fire_FORWARD_SLASH_00495",
+  "8c966860-haboob_in_fire_station_FORWARD_SLASH_00133",
+  "7fe137e4-car_explosion_in_alley_FORWARD_SLASH_00001",
+  "001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331",
+  "7859a819-earthquake_in_diner_outdoor_FORWARD_SLASH_00006",
+  "ed6aee85-mountain_on_fire_FORWARD_SLASH_00085",
+  "6318df7b-fire_whirl_in_building_facade_FORWARD_SLASH_00249",
+  "c41cf413-bicycle_disaster_in_museum_outdoor_FORWARD_SLASH_00303",
+  "5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017",
+  "6a27ade9-car_disaster_in_stadium_FORWARD_SLASH_9408391efc",
+  "aeaf667b-earthquake_in_schoolhouse_FORWARD_SLASH_4b86fdfb17",
+  "fbe97915-burned_port_FORWARD_SLASH_00008",
+  "0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056",
+  "1a7bf422-nuclear_explosion_in_fire_station_FORWARD_SLASH_0c7bffd942",
+  "5ceb7a2d-wild_fire_in_ocean_FORWARD_SLASH_662bc42d28",
+  "d6b28f6e-plane_incident_in_valley_FORWARD_SLASH_00435",
+  "8de11bae-collapsed_fire_station_FORWARD_SLASH_00267",
+  "c43251f0-earthquake_in_village_FORWARD_SLASH_00111",
+  "e8e486d0-wild_fire_in_rope_bridge_FORWARD_SLASH_58a00df8f4",
+  "82a2700e-highway_with_smoke_FORWARD_SLASH_c6c44b2190",
+  "443b5ad3-typhoon_in_field_road_FORWARD_SLASH_00221",
+  "35ed0db1-landslide_in_park_FORWARD_SLASH_7afd811d0d",
+  "da53784b-flooded_bazaar_outdoor_FORWARD_SLASH_30b87aecf5",
+  "13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155",
+  "c48fa562-wild_fire_in_schoolhouse_FORWARD_SLASH_00391",
+  "0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109",
+  "b893b49d-demolition_in_river_FORWARD_SLASH_00205",
+  "1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127",
+  "3a7366c7-boat_disaster_in_alley_FORWARD_SLASH_00437",
+  "4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308",
+  "777b8154-car_disaster_in_embassy_FORWARD_SLASH_149bbd2961",
+  "c2e2ee21-fog_in_hospital_FORWARD_SLASH_ac89240d02",
+  "1457db88-river_flood_in_dam_FORWARD_SLASH_00464",
+  "23e22453-earthquake_in_landfill_FORWARD_SLASH_00473",
+  "84896714-mudflow_in_police_station_FORWARD_SLASH_85d0d716aa"
+];
+
 const IGNORED_DIRS = new Set([
   ".git",
   "assets",
@@ -208,6 +261,14 @@ function slugify(value) {
 function preferredDatasetOrder(name) {
   const explicitIndex = DATASET_ORDER.indexOf(name);
   return explicitIndex === -1 ? DATASET_ORDER.length : explicitIndex;
+}
+
+function curatedSceneCandidates(datasetName, sceneCandidates) {
+  if (datasetName !== "Inc1M") return null;
+  const sceneById = new Map(sceneCandidates.map((candidate) => [candidate.sceneId, candidate]));
+  return CURATED_INC1M_SCENE_IDS
+    .map((sceneId) => sceneById.get(sceneId))
+    .filter(Boolean);
 }
 
 function datasetDisplayName(name) {
@@ -884,10 +945,11 @@ function buildDatasets() {
         };
       })
     );
+    const curatedCandidates = curatedSceneCandidates(datasetName, sceneCandidates);
     const sceneLimit = DATASET_SCENE_LIMITS[datasetName] || null;
-    const selectedSceneCandidates = sceneLimit
-      ? sceneCandidates.slice(0, sceneLimit)
-      : sceneCandidates;
+    const selectedSceneCandidates = curatedCandidates?.length
+      ? curatedCandidates
+      : (sceneLimit ? sceneCandidates.slice(0, sceneLimit) : sceneCandidates);
 
     selectedSceneCandidates.forEach(({ sceneId, sceneRoots }, sceneOrder) => {
       if (!sceneRoots.length) return;
