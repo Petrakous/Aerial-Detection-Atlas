@@ -2725,7 +2725,7 @@ window.addEventListener("hashchange", syncRouteFromLocation);
 applyTheme(resolveInitialTheme());
 ensureSceneState();
 document.body.dataset.clientFormFactor = detectClientFormFactor();
-document.body.dataset.mobileClient = String(document.body.dataset.clientFormFactor !== "desktop");
+document.body.dataset.mobileClient = "false";
 const initialRoute = parseRouteHash();
 state.route = initialRoute.route;
 if (initialRoute.datasetId && availableDatasets.includes(initialRoute.datasetId)) {
