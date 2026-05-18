@@ -1943,14 +1943,27 @@ function clampZoom(zoom) {
   return Math.min(maxZoom, Math.max(minZoom, zoom));
 }
 
+function currentViewerShellScale() {
+  if (!els.viewerApp) return 1;
+  const transform = window.getComputedStyle(els.viewerApp).transform;
+  if (!transform || transform === "none") return 1;
+  const match = transform.match(/^matrix\(([^,]+),\s*[^,]+,\s*[^,]+,\s*([^,]+),/);
+  if (!match) return 1;
+  const scaleX = Number.parseFloat(match[1]);
+  const scaleY = Number.parseFloat(match[2]);
+  if (!Number.isFinite(scaleX) || !Number.isFinite(scaleY)) return 1;
+  return Math.max(0.01, Math.min(scaleX, scaleY));
+}
+
 function viewerFrameInnerSize() {
   const bounds = els.viewerFrame.getBoundingClientRect();
   const styles = window.getComputedStyle(els.viewerFrame);
+  const shellScale = currentViewerShellScale();
   const horizontalPadding = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight);
   const verticalPadding = parseFloat(styles.paddingTop) + parseFloat(styles.paddingBottom);
   return {
-    width: Math.max(1, bounds.width - horizontalPadding),
-    height: Math.max(1, bounds.height - verticalPadding)
+    width: Math.max(1, (bounds.width / shellScale) - horizontalPadding),
+    height: Math.max(1, (bounds.height / shellScale) - verticalPadding)
   };
 }
 
