@@ -86,16 +86,19 @@ body {
   overflow: hidden;
 }
 
-body.is-scroll-locked {
-  width: 100%;
-}
-
 body[data-route="home"] {
   overflow: auto;
 }
 
 body[data-route="dataset"] {
   overflow: auto;
+}
+
+body.is-scroll-locked,
+body.is-scroll-locked[data-route="home"],
+body.is-scroll-locked[data-route="dataset"] {
+  width: 100%;
+  overflow: hidden;
 }
 
 button,
@@ -253,6 +256,13 @@ button {
     radial-gradient(circle at top left, rgba(106, 168, 255, 0.12), transparent 28%),
     radial-gradient(circle at top right, rgba(72, 212, 165, 0.08), transparent 24%),
     linear-gradient(180deg, color-mix(in srgb, var(--paper), white 5%), var(--paper));
+}
+
+.dataset-page.is-viewer-locked {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .landing-page {
@@ -665,6 +675,7 @@ button {
   background: rgba(10, 15, 24, 0.58);
   backdrop-filter: blur(10px);
   overflow: auto;
+  overscroll-behavior: contain;
 }
 
 .viewer-overlay[hidden] {
@@ -1428,6 +1439,7 @@ h1 {
   flex-direction: column;
   padding: 22px 12px 22px 18px;
   overflow: hidden;
+  overscroll-behavior: contain;
 }
 
 .dataset-control {
@@ -1478,6 +1490,7 @@ h1 {
 .model-panel {
   padding: 22px 18px;
   overflow: auto;
+  overscroll-behavior: contain;
 }
 
 .panel-heading {

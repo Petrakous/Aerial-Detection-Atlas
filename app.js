@@ -132,12 +132,24 @@ let scenesInitialized = false;
 let viewerRefreshTimer = 0;
 let focusLensRefreshFrame = 0;
 let resetSceneListScroll = false;
+let lastGallerySignature = "";
 const preloadedImages = new Map();
 const segmentationScoreLoads = new Map();
 const segmentationInstanceLoads = new Map();
 let preloadSceneTimer = 0;
 let appMenuHideTimer = 0;
-let scrollLockY = 0;
+let preservedPageScrollY = null;
+
+function restorePageScrollPosition() {
+  if (typeof preservedPageScrollY !== "number") return;
+  const targetY = preservedPageScrollY;
+  const restore = () => window.scrollTo(0, targetY);
+  restore();
+  window.requestAnimationFrame(() => {
+    restore();
+    window.requestAnimationFrame(restore);
+  });
+}
 
 function detectClientFormFactor() {
   const ua = navigator.userAgent || "";
@@ -295,31 +307,32 @@ const landingCollections = [
 ];
 
 function updatePageScrollLock() {
-  const shouldLock = state.viewerOpen || (els.instructionsModal && !els.instructionsModal.hidden);
-  if (shouldLock) {
-    if (!document.body.classList.contains("is-scroll-locked")) {
-      scrollLockY = window.scrollY || window.pageYOffset || 0;
-    }
+  const viewerScrollY = typeof preservedPageScrollY === "number"
+    ? preservedPageScrollY
+    : (window.scrollY || window.pageYOffset || 0);
+  const shouldLockPage = Boolean(
+    (els.instructionsModal && !els.instructionsModal.hidden)
+    || (state.route === "dataset" && state.viewerOpen)
+  );
+
+  if (shouldLockPage) {
     document.documentElement.style.overflow = "hidden";
     document.body.classList.add("is-scroll-locked");
-    document.body.style.position = "fixed";
-    document.body.style.width = "100%";
     document.body.style.overflow = "hidden";
-    document.body.style.top = `-${scrollLockY}px`;
+    if (state.route === "dataset" && state.viewerOpen && els.datasetPage) {
+      els.datasetPage.classList.add("is-viewer-locked");
+      els.datasetPage.style.top = `-${viewerScrollY}px`;
+    }
     return;
   }
 
   document.documentElement.style.overflow = "";
-  const restoreScrollY = scrollLockY;
   document.body.classList.remove("is-scroll-locked");
-  document.body.style.position = "";
-  document.body.style.width = "";
   document.body.style.overflow = "";
-  document.body.style.top = "";
-  if (restoreScrollY) {
-    window.scrollTo(0, restoreScrollY);
+  if (els.datasetPage) {
+    els.datasetPage.classList.remove("is-viewer-locked");
+    els.datasetPage.style.top = "";
   }
-  scrollLockY = 0;
 }
 
 function parseRouteHash() {
@@ -371,8 +384,7 @@ function setRoute(nextRoute, nextDatasetId = state.datasetId, options = {}) {
         : `#dataset/${encodeURIComponent(state.datasetId)}`
       : "#home";
     if (window.location.hash !== nextHash) {
-      window.location.hash = nextHash;
-      return;
+      window.history.pushState({ route: nextRoute, datasetId: state.datasetId, sceneId }, "", nextHash);
     }
   }
 
@@ -394,6 +406,7 @@ function routeDataset(datasetId) {
 function openViewerForScene(sceneIndex, { updateHash = true } = {}) {
   const scenes = visibleScenes();
   if (!scenes[sceneIndex]) return;
+  preservedPageScrollY = window.scrollY || window.pageYOffset || 0;
   state.sceneIndex = sceneIndex;
   state.viewerOpen = true;
   state.hoveredModel = null;
@@ -409,6 +422,7 @@ function openViewerForScene(sceneIndex, { updateHash = true } = {}) {
     viewerOpen: true,
     sceneId: scenes[sceneIndex].imageId
   });
+  restorePageScrollPosition();
 }
 
 function closeViewerOverlay({ updateHash = true } = {}) {
@@ -422,6 +436,8 @@ function closeViewerOverlay({ updateHash = true } = {}) {
     viewerOpen: false,
     sceneId: null
   });
+  restorePageScrollPosition();
+  preservedPageScrollY = null;
 }
 
 function openInstructionsModal() {
@@ -880,12 +896,34 @@ function renderDatasetPageHeader() {
 function renderGallery() {
   if (!els.galleryGrid) return;
   const isDenseView = true;
+  const scenes = visibleScenes();
+  const gallerySignature = [
+    state.datasetId,
+    state.galleryView,
+    scenes.map((scene) => scene.id || scene.imageId).join("|")
+  ].join("::");
+
   state.galleryView = "dense";
   els.galleryGrid.classList.remove("gallery-grid-large");
   els.galleryGrid.classList.add("gallery-grid-dense");
+
+  const syncActiveGalleryCard = () => {
+    const cards = els.galleryGrid.querySelectorAll(".gallery-card");
+    cards.forEach((card) => {
+      const cardIndex = Number(card.dataset.sceneIndex);
+      const isActive = state.viewerOpen && cardIndex === state.sceneIndex;
+      card.classList.toggle("is-active", isActive);
+    });
+  };
+
+  if (gallerySignature === lastGallerySignature && els.galleryGrid.childElementCount === scenes.length) {
+    syncActiveGalleryCard();
+    return;
+  }
+
   const fragment = document.createDocumentFragment();
 
-  visibleScenes().forEach((scene, index) => {
+  scenes.forEach((scene, index) => {
     const card = document.createElement("button");
     const classCount = isSegmentationScene(scene)
       ? (scene.groundTruthStats?.classCount || scene.groundTruth.length)
@@ -925,6 +963,8 @@ function renderGallery() {
   });
 
   els.galleryGrid.replaceChildren(fragment);
+  lastGallerySignature = gallerySignature;
+  syncActiveGalleryCard();
 }
 
 function visibleScenes() {
@@ -3014,6 +3054,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("hashchange", syncRouteFromLocation);
+window.addEventListener("popstate", syncRouteFromLocation);
 
 applyTheme(resolveInitialTheme());
 ensureSceneState();
