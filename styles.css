@@ -2551,14 +2551,14 @@ body[data-mode="split"] .split-selectors {
 }
 
 .segmentation-badge {
-  display: none;
+  display: block;
   position: absolute;
   top: 14px;
   right: 14px;
   z-index: 6;
-  min-width: 188px;
-  max-width: min(280px, calc(100% - 28px));
-  padding: 10px 11px;
+  min-width: 0;
+  max-width: min(220px, calc(100% - 28px));
+  padding: 10px 12px;
   border: 1px solid color-mix(in srgb, var(--badge-accent, #ffffff), white 24%);
   border-radius: 9px;
   color: #fff;
@@ -2576,12 +2576,12 @@ body[data-mode="split"] .split-selectors {
 }
 
 .segmentation-badge-title {
-  margin-bottom: 8px;
-  font-size: 10px;
+  margin-bottom: 0;
+  font-size: 11px;
   font-weight: 850;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.78;
+  opacity: 0.88;
 }
 
 .segmentation-badge-list {

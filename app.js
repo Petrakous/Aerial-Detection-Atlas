@@ -297,17 +297,29 @@ const landingCollections = [
 function updatePageScrollLock() {
   const shouldLock = state.viewerOpen || (els.instructionsModal && !els.instructionsModal.hidden);
   if (shouldLock) {
+    if (!document.body.classList.contains("is-scroll-locked")) {
+      scrollLockY = window.scrollY || window.pageYOffset || 0;
+    }
     document.documentElement.style.overflow = "hidden";
     document.body.classList.add("is-scroll-locked");
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
     document.body.style.overflow = "hidden";
-    document.body.style.top = "";
+    document.body.style.top = `-${scrollLockY}px`;
     return;
   }
 
   document.documentElement.style.overflow = "";
+  const restoreScrollY = scrollLockY;
   document.body.classList.remove("is-scroll-locked");
+  document.body.style.position = "";
+  document.body.style.width = "";
   document.body.style.overflow = "";
   document.body.style.top = "";
+  if (restoreScrollY) {
+    window.scrollTo(0, restoreScrollY);
+  }
+  scrollLockY = 0;
 }
 
 function parseRouteHash() {
@@ -1796,6 +1808,23 @@ function createBoxesLayer(scene, boxes, options = {}) {
     layer.append(boxEl);
   });
 
+  const badgeTitle = options.kind === "ground-truth"
+    ? "Ground Truth"
+    : (options.model?.shortName || options.model?.name || "Prediction");
+  if (options.showCornerBadge !== false && badgeTitle) {
+    const badge = document.createElement("div");
+    badge.className = `segmentation-badge${options.kind === "ground-truth" ? " is-ground-truth" : ""}`;
+    if (options.model?.color) {
+      badge.style.setProperty("--badge-accent", options.model.color);
+    }
+
+    const title = document.createElement("div");
+    title.className = "segmentation-badge-title";
+    title.textContent = badgeTitle;
+    badge.append(title);
+    layer.append(badge);
+  }
+
   return layer;
 }
 
@@ -1955,8 +1984,10 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
     queueMicrotask(() => applyCalloutLayout());
   }
 
-  const annotations = options.annotations || [];
-  if (annotations.length) {
+  const badgeTitle = options.kind === "ground-truth"
+    ? "Ground Truth"
+    : (options.model?.shortName || options.model?.name || "Prediction");
+  if (options.showCornerBadge !== false && badgeTitle) {
     const badge = document.createElement("div");
     badge.className = `segmentation-badge${options.kind === "ground-truth" ? " is-ground-truth" : ""}`;
     if (options.model?.color) {
@@ -1965,31 +1996,8 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
 
     const title = document.createElement("div");
     title.className = "segmentation-badge-title";
-    title.textContent = options.kind === "ground-truth"
-      ? "Ground Truth"
-      : (options.model?.shortName || options.model?.name || "Prediction");
+    title.textContent = badgeTitle;
     badge.append(title);
-
-    const list = document.createElement("div");
-    list.className = "segmentation-badge-list";
-    annotations.forEach((entry) => {
-      const row = document.createElement("div");
-      row.className = "segmentation-badge-row";
-
-      const label = document.createElement("span");
-      label.className = "segmentation-badge-class";
-      label.textContent = entry.className;
-
-      row.append(label);
-      if (options.kind !== "ground-truth" && typeof entry.score === "number") {
-        const confidence = document.createElement("span");
-        confidence.className = "segmentation-badge-score";
-        confidence.textContent = formatConfidence(entry.score);
-        row.append(confidence);
-      }
-      list.append(row);
-    });
-    badge.append(list);
     layer.append(badge);
   }
   return layer;
@@ -2026,6 +2034,8 @@ function buildSceneLayers(scene, models, options = {}) {
   const hoverModel = effectiveHoverModel(scene);
   const hoverGroundTruth = state.mode !== "split" && state.hoveredGroundTruth;
   const showGroundTruth = options.showGroundTruth ?? (state.showGroundTruth || hoverGroundTruth);
+  const showPredictionBadgeByDefault = models.length === 1;
+  const showGroundTruthBadge = showGroundTruth && (hoverGroundTruth || models.length === 0);
 
   if (isSegmentationScene(scene)) {
     if (showGroundTruth && scene.groundTruthImage) {
@@ -2034,7 +2044,8 @@ function buildSceneLayers(scene, models, options = {}) {
         opacity: hoverGroundTruth ? 1 : state.overlayOpacity,
         isEmphasized: hoverGroundTruth,
         zIndex: 12,
-        annotations: segmentationBadgeEntries(scene, null, { kind: "ground-truth" })
+        annotations: segmentationBadgeEntries(scene, null, { kind: "ground-truth" }),
+        showCornerBadge: showGroundTruthBadge
       }));
     }
 
@@ -2054,7 +2065,8 @@ function buildSceneLayers(scene, models, options = {}) {
         isEmphasized: isHovered,
         zIndex: 4 + index,
         annotations: segmentationBadgeEntries(scene, model, { kind: "prediction" }),
-        maskLabels: segmentationMaskEntries(scene, model)
+        maskLabels: segmentationMaskEntries(scene, model),
+        showCornerBadge: isHovered || showPredictionBadgeByDefault
       }));
     });
     return layers;
@@ -2066,7 +2078,8 @@ function buildSceneLayers(scene, models, options = {}) {
       opacity: hoverGroundTruth ? 1 : state.overlayOpacity,
       isEmphasized: hoverGroundTruth,
       zIndex: 12,
-      occupiedLabels
+      occupiedLabels,
+      showCornerBadge: showGroundTruthBadge
     }));
   }
 
@@ -2086,7 +2099,8 @@ function buildSceneLayers(scene, models, options = {}) {
       isEmphasized: isHovered,
       zIndex: 4 + index,
       occupiedLabels,
-      showLabels: !hoverModel || isHovered
+      showLabels: !hoverModel || isHovered,
+      showCornerBadge: isHovered || showPredictionBadgeByDefault
     }));
   });
 
