@@ -5,19 +5,19 @@
   "height": 240,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 28376
+      "pixel_count": 28170
     },
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 23931
+      "pixel_count": 23373
     },
     {
-      "label_index": 59,
+      "label_index": 58,
       "class_name": "aerial vehicle",
-      "pixel_count": 592
+      "pixel_count": 451
     }
   ]
 }

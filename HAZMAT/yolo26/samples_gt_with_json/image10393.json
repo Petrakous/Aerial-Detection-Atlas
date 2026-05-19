@@ -1,0 +1,17 @@
+{
+  "image_id": "image10393",
+  "file_name": "image10393.jpg",
+  "width": 520,
+  "height": 520,
+  "annotations": [
+    {
+      "bbox": [
+        198,
+        150,
+        177,
+        193
+      ],
+      "class_name": "inhalation-hazard"
+    }
+  ]
+}

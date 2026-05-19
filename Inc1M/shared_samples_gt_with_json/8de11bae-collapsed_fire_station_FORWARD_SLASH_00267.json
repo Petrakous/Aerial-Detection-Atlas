@@ -5,39 +5,39 @@
   "height": 350,
   "segments": [
     {
-      "label_index": 5,
+      "label_index": 4,
       "class_name": "First responder",
-      "pixel_count": 3351
+      "pixel_count": 3044
     },
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 100899
+      "pixel_count": 96383
+    },
+    {
+      "label_index": 11,
+      "class_name": "Green plant",
+      "pixel_count": 2176
     },
     {
       "label_index": 12,
-      "class_name": "Green plant",
-      "pixel_count": 3217
-    },
-    {
-      "label_index": 13,
       "class_name": "Building",
-      "pixel_count": 5197
+      "pixel_count": 5024
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 507
+      "pixel_count": 447
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 9449
+      "pixel_count": 9314
     },
     {
-      "label_index": 39,
+      "label_index": 38,
       "class_name": "Fire truck",
-      "pixel_count": 64403
+      "pixel_count": 66125
     }
   ]
 }

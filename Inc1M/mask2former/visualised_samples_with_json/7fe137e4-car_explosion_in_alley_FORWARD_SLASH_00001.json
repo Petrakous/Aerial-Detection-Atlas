@@ -10,5 +10,35 @@
       "pixel_count": 31360,
       "score": 0.9376
     }
+  ],
+  "instances": [
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "bbox": [
+        408,
+        263,
+        245,
+        235
+      ],
+      "area": 31360,
+      "score": 0.9376108050346375,
+      "anchor": [
+        530.5,
+        380.5
+      ],
+      "anchor_normalized": [
+        0.44208,
+        0.55956
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          680,
+          1200
+        ],
+        "counts": "[\\_86md08K4N001O1O002N101O13L10O1OO01N100O2N100O1O1O1O2O000O101O0O2O1O1N11OQOSOc]Om0[b0YOa]Og0]b0]Oa]Oc0^b0_Ob]O`0ja07S^OIka0<R^OEla0?Q^OAna0c0o]O^Ooa0d0P^O\\OPb0e0o]O[OPb0f0o]O[OQb0l1200O10O001N2O001O1N2O1N2N2O1N2O100O100O1O1000000O1000000000O10000000000000000O1000001O001O000O10RNWM\\Aj2b>\\MZAd2d>`MZA`2d>cMZA^2d>fMZAZ2e>hMZAX2d>lMZAT2d>oMZAR2e>QNYAo1e>UNYAj1g>YNWAg1g>^NVAb1g>cNWA]1f>hNWAX1h>kNVAV1h>mNVAT1h>g2O0O2N2N20O0100O2O0O1O101N101N101O0O101O001O0O2O1O001O001O0O101O00000010O0001O001O1O01O01O0001O010O1O1O1O1O1O1O1N2N2M3N2M5M5J4M3L3M3L:G7G6I6L3M2N3N2M2O2N2N2N101N101O1N3N1O1O1N101O0O2O1O0O2N2O1N2_Og^OQM[a0l2h^OQM[a0l2g^ORM]a0k2d^OSM_a0j2c^OUM_a0i2b0M3N2M2O1N2O1N3N1O1O0O2O2M3M4L2N2N2N2M3M3N2N2N3M2M3L5L3H9L3M6GfkZ;"
+      }
+    }
   ]
 }

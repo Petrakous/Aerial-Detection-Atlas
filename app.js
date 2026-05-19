@@ -134,6 +134,7 @@ let focusLensRefreshFrame = 0;
 let resetSceneListScroll = false;
 const preloadedImages = new Map();
 const segmentationScoreLoads = new Map();
+const segmentationInstanceLoads = new Map();
 let preloadSceneTimer = 0;
 let appMenuHideTimer = 0;
 let scrollLockY = 0;
@@ -195,11 +196,19 @@ const datasetDescriptions = {
   },
   Inc1M: {
     title: "Incidents1M-Seg",
-    task: "Instance Segmentation",
+    task: "Panoptic Segmentation",
     useCase: "Multi-hazard",
-    summary: "Curated multi-hazard incident benchmark slice for instance segmentation, highlighting responder activity, fire, smoke, destruction, and other incident-relevant scene elements.",
+    summary: "Curated multi-hazard incident benchmark slice for panoptic segmentation, highlighting responder activity, fire, smoke, destruction, and other incident-relevant scene elements.",
     previewImage: "thumbnails/Inc1M/3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
     sourceUrl: "https://roc-hci.github.io/NADBenchmarks/Incidents1M.html",
+    sourceLabel: "Original dataset"
+  },
+  HAZMAT: {
+    title: "HAZMAT13",
+    task: "Object Detection",
+    useCase: "Hazmat Placards",
+    summary: "Hazardous-material placard detection benchmark with 13 classes, supporting close-range recognition and comparison of model predictions against annotated reference boxes.",
+    sourceUrl: "https://github.com/mrl-amrl/HAZMAT13",
     sourceLabel: "Original dataset"
   }
 };
@@ -261,9 +270,9 @@ const landingCollections = [
   {
     id: "ground-level",
     title: "Ground-level",
-    summary: "Our internally curated scene-understanding benchmark from terrestrial and close-range disaster imagery.",
+    summary: "Ground-level and close-range incident benchmarks spanning scene understanding and hazardous-material recognition.",
     note: "CV group dataset",
-    datasetIds: ["Inc1M"],
+    datasetIds: ["Inc1M", "HAZMAT"],
     variant: "featured"
   },
   {
@@ -781,7 +790,7 @@ function renderLanding() {
 
     if (collection.variant === "featured") {
       body.classList.add("landing-collection-featured-body");
-      datasets.forEach((dataset) => body.append(buildLandingDatasetCard(dataset, { featured: true })));
+      datasets.forEach((dataset) => body.append(buildLandingDatasetCard(dataset, { compact: true })));
     } else if (collection.variant === "grid") {
       body.classList.add("landing-collection-grid-body");
       datasets.forEach((dataset) => body.append(buildLandingDatasetCard(dataset, { compact: true })));
@@ -936,6 +945,7 @@ function resolveAssetPath(path) {
 
   const viewerMatch = path.match(/^viewer\/([^/]+)\/(.+)$/);
   if (viewerMatch) {
+    if (viewerMatch[1] === "HAZMAT") return path;
     const base = viewerMatch[1] === "DFire"
       ? releaseBases.coreDFire
       : viewerMatch[1] === "Inc1M"
@@ -946,6 +956,7 @@ function resolveAssetPath(path) {
 
   const thumbMatch = path.match(/^thumbnails\/([^/]+)\/(.+)$/);
   if (thumbMatch) {
+    if (thumbMatch[1] === "HAZMAT") return path;
     return `${releaseBases.thumbnails}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
   }
 
@@ -967,6 +978,7 @@ function resolveAssetPath(path) {
 
   const segmentationPredMatch = path.match(/^([^/]+)\/([^/]+)\/visualised_samples_with_json\/(.+)$/);
   if (segmentationPredMatch) {
+    if (segmentationPredMatch[1] === "HAZMAT") return path;
     const base = segmentationPredMatch[1] === "Inc1M"
       ? releaseBases.segmentationPredInc1M
       : releaseBases.segmentationPred;
@@ -1332,6 +1344,136 @@ function ensureSegmentationScores(scene, model) {
   segmentationScoreLoads.set(cacheKey, load);
 }
 
+function normalizeSegmentationInstances(prediction, scene) {
+  if (!prediction?.instances || !scene?.width || !scene?.height) return [];
+
+  return prediction.instances
+    .map((instance, index) => {
+      let xPercent = null;
+      let yPercent = null;
+
+      const anchor = Array.isArray(instance.anchor)
+        ? instance.anchor.map((value) => Number(value))
+        : null;
+      const normalizedAnchor = Array.isArray(instance.anchor_normalized)
+        ? instance.anchor_normalized.map((value) => Number(value))
+        : null;
+
+      if (normalizedAnchor?.length === 2 && normalizedAnchor.every(Number.isFinite)) {
+        xPercent = normalizedAnchor[0] * 100;
+        yPercent = normalizedAnchor[1] * 100;
+      } else if (anchor?.length === 2 && anchor.every(Number.isFinite)) {
+        xPercent = (anchor[0] / scene.width) * 100;
+        yPercent = (anchor[1] / scene.height) * 100;
+      } else if (Array.isArray(instance.bbox) && instance.bbox.length === 4) {
+        const [x, y, width, height] = instance.bbox.map((value) => Number(value));
+        xPercent = ((x + (width / 2)) / scene.width) * 100;
+        yPercent = ((y + (height / 2)) / scene.height) * 100;
+      }
+
+      const score = instance.score == null ? null : Number(instance.score);
+      if (!Number.isFinite(xPercent) || !Number.isFinite(yPercent) || !Number.isFinite(score)) return null;
+
+      return {
+        id: `${instance.label_index ?? "label"}:${instance.class_name ?? "mask"}:${index}`,
+        className: instance.class_name,
+        labelIndex: Number(instance.label_index),
+        score,
+        area: Number(instance.area) || 0,
+        xPercent: clamp(xPercent, 0.5, 99.5),
+        yPercent: clamp(yPercent, 0.5, 99.5),
+        xNormalized: clamp(xPercent / 100, 0.005, 0.995),
+        yNormalized: clamp(yPercent / 100, 0.005, 0.995),
+        bbox: Array.isArray(instance.bbox) && instance.bbox.length === 4
+          ? instance.bbox.map((value) => Number(value))
+          : null,
+        type: instance.type || null,
+        polygon: Array.isArray(instance.polygon) ? instance.polygon.map(([x, y]) => [Number(x), Number(y)]) : null
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => (b.area || 0) - (a.area || 0));
+}
+
+function containRect(containerWidth, containerHeight, contentWidth, contentHeight) {
+  if (!containerWidth || !containerHeight || !contentWidth || !contentHeight) {
+    return { left: 0, top: 0, width: containerWidth || 0, height: containerHeight || 0 };
+  }
+
+  const containerRatio = containerWidth / containerHeight;
+  const contentRatio = contentWidth / contentHeight;
+
+  if (contentRatio > containerRatio) {
+    const width = containerWidth;
+    const height = width / contentRatio;
+    return {
+      left: 0,
+      top: (containerHeight - height) / 2,
+      width,
+      height
+    };
+  }
+
+  const height = containerHeight;
+  const width = height * contentRatio;
+  return {
+    left: (containerWidth - width) / 2,
+    top: 0,
+    width,
+    height
+  };
+}
+
+function pointInPolygon(pointX, pointY, polygon = []) {
+  let inside = false;
+  for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i, i += 1) {
+    const [xi, yi] = polygon[i];
+    const [xj, yj] = polygon[j];
+    const intersects = ((yi > pointY) !== (yj > pointY))
+      && (pointX < (((xj - xi) * (pointY - yi)) / ((yj - yi) || 1e-9)) + xi);
+    if (intersects) inside = !inside;
+  }
+  return inside;
+}
+
+function ensureSegmentationInstances(scene, model) {
+  if (!scene || !model?.id || !isSegmentationScene(scene)) return;
+  if (scene.predictionInstances?.[model.id]?.length) return;
+
+  const jsonPath = segmentationPredictionJsonPath(scene, model.id);
+  if (!jsonPath) return;
+
+  const cacheKey = `${scene.id}:${model.id}`;
+  if (segmentationInstanceLoads.has(cacheKey)) return;
+
+  const load = fetch(jsonPath)
+    .then((response) => {
+      if (!response.ok) throw new Error(`Failed to load ${jsonPath}`);
+      return response.json();
+    })
+    .then((prediction) => {
+      const instances = normalizeSegmentationInstances(prediction, scene);
+      if (!instances.length) return;
+      if (!scene.predictionInstances) scene.predictionInstances = {};
+      scene.predictionInstances[model.id] = instances;
+      if (currentScene()?.id === scene.id) {
+        state.skipNextViewerAnimation = true;
+        renderViewer(true);
+      }
+    })
+    .catch(() => {
+      // Labels are an enhancement; keep the overlay usable if raw instances are unavailable.
+    });
+
+  segmentationInstanceLoads.set(cacheKey, load);
+}
+
+function segmentationMaskEntries(scene, model) {
+  if (!scene || !model?.id) return [];
+  ensureSegmentationInstances(scene, model);
+  return scene.predictionInstances?.[model.id] || [];
+}
+
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
@@ -1690,6 +1832,129 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
   if (options.isEmphasized) img.classList.add("is-emphasized");
   layer.append(img);
 
+  const maskLabels = options.maskLabels || [];
+  if (options.kind !== "ground-truth" && maskLabels.length) {
+    const labelLayer = document.createElement("div");
+    labelLayer.className = "segmentation-mask-label-layer";
+    const callouts = [];
+
+    maskLabels.forEach((entry) => {
+      const callout = document.createElement("div");
+      callout.className = "segmentation-mask-callout";
+      callout.dataset.offsetX = "-48";
+      callout.dataset.offsetY = "-30";
+      callout.dataset.instanceId = entry.id;
+      if (options.model?.color) {
+        callout.style.setProperty("--mask-label-accent", options.model.color);
+      }
+      const classColor = detectionClassColor(entry.className, scene);
+      callout.style.setProperty("--mask-label-text", classColor);
+
+      const connector = document.createElement("div");
+      connector.className = "segmentation-mask-connector";
+
+      const pill = document.createElement("div");
+      pill.className = "segmentation-mask-label";
+      pill.textContent = formatConfidence(entry.score);
+
+      callout.append(connector, pill);
+      labelLayer.append(callout);
+      callouts.push({ callout, connector, pill, entry });
+    });
+
+    layer.append(labelLayer);
+    const applyCalloutLayout = () => {
+      const imageBox = containRect(layer.clientWidth, layer.clientHeight, scene.width, scene.height);
+      callouts.forEach(({ callout, connector, pill, entry }) => {
+        const offsetX = Number(callout.dataset.offsetX || -52);
+        const offsetY = Number(callout.dataset.offsetY || -34);
+        const anchorX = imageBox.left + (entry.xNormalized * imageBox.width);
+        const anchorY = imageBox.top + (entry.yNormalized * imageBox.height);
+
+        callout.style.left = `${anchorX}px`;
+        callout.style.top = `${anchorY}px`;
+
+        pill.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+
+        const pillWidth = pill.offsetWidth;
+        const pillHeight = pill.offsetHeight;
+        const attachX = offsetX + pillWidth - 10;
+        const attachY = offsetY + pillHeight - 5;
+        const length = Math.hypot(attachX, attachY);
+        const angle = Math.atan2(attachY, attachX) * (180 / Math.PI);
+
+        connector.style.width = `${length.toFixed(2)}px`;
+        connector.style.transform = `rotate(${angle.toFixed(2)}deg)`;
+      });
+      return imageBox;
+    };
+
+    let activeCalloutId = null;
+    const setActiveCallout = (instanceId) => {
+      if (activeCalloutId === instanceId) return;
+      activeCalloutId = instanceId;
+      callouts.forEach(({ callout, entry }) => {
+        callout.classList.toggle("is-active", entry.id === instanceId);
+      });
+    };
+
+    const hitTestInstance = (sceneX, sceneY) => {
+      const polygonMatches = [];
+      const fallbackMatches = [];
+
+      for (const item of callouts) {
+        const { entry } = item;
+        if (entry.type === "polygon" && entry.polygon?.length >= 3) {
+          if (pointInPolygon(sceneX, sceneY, entry.polygon)) {
+            polygonMatches.push(entry);
+          }
+          continue;
+        }
+
+        if (Array.isArray(entry.bbox) && entry.bbox.length === 4) {
+          const [x, y, width, height] = entry.bbox;
+          if (sceneX >= x && sceneX <= x + width && sceneY >= y && sceneY <= y + height) {
+            fallbackMatches.push(entry);
+          }
+        }
+      }
+
+      if (polygonMatches.length) {
+        polygonMatches.sort((a, b) => (a.area || Number.POSITIVE_INFINITY) - (b.area || Number.POSITIVE_INFINITY));
+        return polygonMatches[0]?.id || null;
+      }
+
+      if (!fallbackMatches.length) return null;
+      fallbackMatches.sort((a, b) => (a.area || Number.POSITIVE_INFINITY) - (b.area || Number.POSITIVE_INFINITY));
+      return fallbackMatches[0]?.id || null;
+    };
+
+    const syncHoverLabel = (event) => {
+      const layerRect = layer.getBoundingClientRect();
+      const imageBox = containRect(layerRect.width, layerRect.height, scene.width, scene.height);
+      const localX = event.clientX - layerRect.left;
+      const localY = event.clientY - layerRect.top;
+
+      if (
+        localX < imageBox.left
+        || localY < imageBox.top
+        || localX > imageBox.left + imageBox.width
+        || localY > imageBox.top + imageBox.height
+      ) {
+        setActiveCallout(null);
+        return;
+      }
+
+      const sceneX = ((localX - imageBox.left) / imageBox.width) * scene.width;
+      const sceneY = ((localY - imageBox.top) / imageBox.height) * scene.height;
+      setActiveCallout(hitTestInstance(sceneX, sceneY));
+    };
+
+    layer.addEventListener("pointermove", syncHoverLabel);
+    layer.addEventListener("pointerleave", () => setActiveCallout(null));
+    queueMicrotask(() => applyCalloutLayout());
+  }
+
   const annotations = options.annotations || [];
   if (annotations.length) {
     const badge = document.createElement("div");
@@ -1788,7 +2053,8 @@ function buildSceneLayers(scene, models, options = {}) {
         isDimmed,
         isEmphasized: isHovered,
         zIndex: 4 + index,
-        annotations: segmentationBadgeEntries(scene, model, { kind: "prediction" })
+        annotations: segmentationBadgeEntries(scene, model, { kind: "prediction" }),
+        maskLabels: segmentationMaskEntries(scene, model)
       }));
     });
     return layers;

@@ -1,0 +1,18 @@
+{
+  "image_id": "image10345",
+  "file_name": "image10345.jpg",
+  "width": 448,
+  "height": 336,
+  "detections": [
+    {
+      "bbox": [
+        0,
+        119.13248443603516,
+        448,
+        153.20201873779297
+      ],
+      "class_name": "spontaneously-combustible",
+      "confidence": 0.7042012214660645
+    }
+  ]
+}

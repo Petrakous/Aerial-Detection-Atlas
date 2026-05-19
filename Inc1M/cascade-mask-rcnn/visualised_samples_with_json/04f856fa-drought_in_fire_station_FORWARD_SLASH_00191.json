@@ -40,5 +40,455 @@
       "pixel_count": 2163,
       "score": 0.9764
     }
+  ],
+  "instances": [
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        379,
+        161,
+        40,
+        87
+      ],
+      "area": 1829,
+      "score": 0.9960766434669495,
+      "anchor": [
+        399,
+        204.5
+      ],
+      "anchor_normalized": [
+        0.80769,
+        0.5527
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "]TY48Y;1N1O1O1O001O2O0O20:aEEQ9a0eFFY9[1N1O1O1OOI0610O24M?A00000000M5K5K=[O<K6K5L4J5K7M5K3L6K4Jmlj0"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        132,
+        245,
+        31,
+        47
+      ],
+      "area": 1194,
+      "score": 0.9910338521003723,
+      "anchor": [
+        147.5,
+        268.5
+      ],
+      "anchor_normalized": [
+        0.29858,
+        0.72568
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "Sn_1h0i:`0@2N2O0O1000000001O000000000N100O110O1O3L4L3M3N^E[OY:e0gE\\OY:c0eE@[:l00@fEF\\:6fEI^:Kl[g3"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        218,
+        190,
+        52,
+        153
+      ],
+      "area": 4554,
+      "score": 0.984125018119812,
+      "anchor": [
+        244,
+        266.5
+      ],
+      "anchor_normalized": [
+        0.49393,
+        0.72027
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "^P_2;T;3M4N1M4N0O1M4cGUOe5X1VJoNh5Q1UJTOi5k0eII[66XI8h6GQIa0o6@lHd0T7@[Hm0d7a100O1N2_O_LnHc3P7>2O0I9M3C=M3L4O1O11O2N2O1O10gNQHnNm7o0VHROh7XOVHQ14Ie7RO[HP140R8MRH7LgN[7o0lH?^OhNe7h0nHn0S7nNQIR1o6kNSIU1n6hNUIW1l6gNVIX1j6hNVIX1j6fNZIX1f6gN]IW1d6gNnIh0R6WOUJc0m5XOaJ<c5^OoJ1ok`2"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        92,
+        196,
+        49,
+        155
+      ],
+      "area": 3959,
+      "score": 0.9833738803863525,
+      "anchor": [
+        116.5,
+        273.5
+      ],
+      "anchor_normalized": [
+        0.23583,
+        0.73919
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "j_Q19[;M^f0KRoN0d:7SNLfF;e0K^8`0hGAU8>mGCP8>RHCl7<THFl78THJl76[GA0;f8l1O00002N:F7I9hHfLf5`3PJfLn5b3dIeL[6Y4001O2M4M2N4M1N2N10O1O010O001O01O1N2bLfIb1[6_NaK_Oc4b0W3O102M1O1N:A^Zo3"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        335,
+        131,
+        31,
+        48
+      ],
+      "area": 746,
+      "score": 0.9725048542022705,
+      "anchor": [
+        350.5,
+        155
+      ],
+      "anchor_normalized": [
+        0.70951,
+        0.41892
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "[Vi33^;2O0O2O0O2N100]OKhE6V:3bEN^:k0G3N2N2N1O0100N2M3H8L5M3M3N2M2O100O1O005HZS^1"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        2,
+        217,
+        12,
+        107
+      ],
+      "area": 522,
+      "score": 0.9654951691627502,
+      "anchor": [
+        8,
+        270.5
+      ],
+      "anchor_normalized": [
+        0.01619,
+        0.73108
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "mP19m:<D=E;G8E8G0M1235D`0D<XOoW]5"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        248,
+        241,
+        34,
+        38
+      ],
+      "area": 969,
+      "score": 0.9618546962738037,
+      "anchor": [
+        265,
+        260
+      ],
+      "anchor_normalized": [
+        0.53644,
+        0.7027
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "^ki28X;3O1kD1e:>000000N2M3L4N2000000000000001O1O1O1O001N1O1O1K5O1O1O101K5I8Jb[\\2"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        355,
+        108,
+        16,
+        35
+      ],
+      "area": 326,
+      "score": 0.9381836652755737,
+      "anchor": [
+        363,
+        125.5
+      ],
+      "anchor_normalized": [
+        0.73482,
+        0.33919
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "T\\P44];3N6Ib0_O1O1O1001N3L3K5K4M3M5L6JWZ\\1"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        73,
+        29,
+        69,
+        85
+      ],
+      "area": 4134,
+      "score": 0.9072831869125366,
+      "anchor": [
+        107.5,
+        71.5
+      ],
+      "anchor_normalized": [
+        0.21761,
+        0.19324
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "P_j04Z;:H4L3M3N2RO[OkFh0Q9B\\FB5P1[9n0J7L3N3M3N1O1O100O1000000O01O10000O01000O1O100O100O1O101N100O1O1O2N1O1O100O1O2N100O2N2N2O0O1O2N2M2M4M2K5L6L3N2M3N2O2L4M3L`To3"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        46,
+        215,
+        18,
+        89
+      ],
+      "area": 607,
+      "score": 0.8588463068008423,
+      "anchor": [
+        55,
+        259.5
+      ],
+      "anchor_normalized": [
+        0.11134,
+        0.70135
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "Rm`0:o:9K5H8K5J6K4KO01ON4NM3204I8H8I7J6H]Uk4"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        325,
+        0,
+        47,
+        39
+      ],
+      "area": 1617,
+      "score": 0.7169605493545532,
+      "anchor": [
+        348.5,
+        19.5
+      ],
+      "anchor_normalized": [
+        0.70547,
+        0.0527
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "`^e35X;:J3C<N3M1O2O0O1O101O000000000000O11O00O100001O0000O10000000000000000O100O100O1O100O1O3K4K9DcR\\1"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        345,
+        166,
+        28,
+        84
+      ],
+      "area": 1583,
+      "score": 0.5995678305625916,
+      "anchor": [
+        359,
+        208
+      ],
+      "anchor_normalized": [
+        0.72672,
+        0.56216
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "Tkl3>l::L3N2Mi0YO3L8H6I2N2J6M3000000000O1H8H8L6L<D5M1O2H7N3L?Bk`[1"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        153,
+        192,
+        6,
+        49
+      ],
+      "area": 160,
+      "score": 0.5692161321640015,
+      "anchor": [
+        156,
+        216.5
+      ],
+      "anchor_normalized": [
+        0.31579,
+        0.58514
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "Q`g1b0d:<C;LK;E;Amkh3"
+      }
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "bbox": [
+        121,
+        158,
+        87,
+        28
+      ],
+      "area": 1255,
+      "score": 0.5380401015281677,
+      "anchor": [
+        164.5,
+        172
+      ],
+      "anchor_normalized": [
+        0.333,
+        0.46486
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "Pl[18Z;1O1O2N3M3M2N100O000000000001O00002N4L1O100O00001O0001O00001O001O000000001O0000000O100000000O10000O1000000000000001O00010O00001O00001O0O101N1O1O101O0000000O100000000O101O1N^UW3"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        113,
+        78,
+        131,
+        90
+      ],
+      "area": 7608,
+      "score": 0.5167316794395447,
+      "anchor": [
+        178.5,
+        123
+      ],
+      "anchor_normalized": [
+        0.36134,
+        0.33243
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "WoX13X;:K3N1N3N1N2O1N2O1O100O1O1O100O100O2N101N1O1O2M200O2N2N2N2N2O0O2N3M1O1O1M3N2O1O1N2L4N2O1O1K5K5O1O0100000O10O1000000O100000010O00000000001O001O001O00001O001O0O2O00001O0O2O1O00001O1O001O001O1O1O1O1O1O1O1O1O3M3M2N2N2N3L2O1O1O1O1N2O001N2O1O1N2O1N3N1O1N2O2M3M2N2N4I[Vj2"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        174,
+        184,
+        5,
+        65
+      ],
+      "area": 225,
+      "score": 0.38016730546951294,
+      "anchor": [
+        176.5,
+        216.5
+      ],
+      "anchor_normalized": [
+        0.35729,
+        0.58514
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          370,
+          494
+        ],
+        "counts": "^Ro1W1b9i0OO2A`0kNaea3"
+      }
+    }
   ]
 }

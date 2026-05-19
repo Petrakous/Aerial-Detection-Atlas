@@ -5,34 +5,34 @@
   "height": 394,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 17249
+      "pixel_count": 14378
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 51696
     },
     {
       "label_index": 21,
-      "class_name": "Road",
-      "pixel_count": 52248
-    },
-    {
-      "label_index": 22,
       "class_name": "Civilian vehicle",
-      "pixel_count": 21265
+      "pixel_count": 15209
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 9725
+      "pixel_count": 7697
     },
     {
-      "label_index": 28,
+      "label_index": 27,
       "class_name": "Pavement",
-      "pixel_count": 19654
+      "pixel_count": 19405
     },
     {
-      "label_index": 34,
+      "label_index": 33,
       "class_name": "Barrier",
-      "pixel_count": 43428
+      "pixel_count": 42729
     }
   ]
 }

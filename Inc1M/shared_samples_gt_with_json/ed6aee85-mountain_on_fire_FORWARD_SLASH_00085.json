@@ -5,19 +5,19 @@
   "height": 2592,
   "segments": [
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 548556
+      "pixel_count": 384465
     },
     {
-      "label_index": 9,
+      "label_index": 8,
       "class_name": "Flame",
-      "pixel_count": 86849
+      "pixel_count": 85516
     },
     {
-      "label_index": 12,
+      "label_index": 11,
       "class_name": "Green plant",
-      "pixel_count": 1497769
+      "pixel_count": 1490100
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "image_id": "image10434",
+  "file_name": "image10434.jpg",
+  "width": 1000,
+  "height": 1000,
+  "detections": [
+    {
+      "bbox": [
+        343.8774108886719,
+        242.5259552001953,
+        344.3742980957031,
+        346.53379821777344
+      ],
+      "class_name": "inhalation-hazard",
+      "confidence": 0.9414380192756653
+    }
+  ]
+}

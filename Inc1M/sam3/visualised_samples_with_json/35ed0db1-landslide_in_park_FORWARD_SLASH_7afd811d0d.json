@@ -28,5 +28,875 @@
       "pixel_count": 1531,
       "score": 0.9351
     }
+  ],
+  "instances": [
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        262,
+        38,
+        51,
+        54
+      ],
+      "area": 1531,
+      "score": 0.93505859375,
+      "anchor": [
+        287.5,
+        65
+      ],
+      "anchor_normalized": [
+        0.79861,
+        0.27083
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "Z_m14Y75L4L4J7J5L4M1O2N010O1O001M3M3N2O1M3O0012N6J3M2O0O2N1O1O001O0O2O001N100000000O100O001K4L5M2L4N2N3N2Mmn:"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        190,
+        83,
+        55,
+        40
+      ],
+      "area": 1083,
+      "score": 0.91650390625,
+      "anchor": [
+        217.5,
+        103
+      ],
+      "anchor_normalized": [
+        0.60417,
+        0.42917
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "`d\\16X73N2N1O2O0O2O0000001O0000000000O1000000O1000O100O100N2N2N2N1M4M3L4N2001O1O1O001N2N2N1O2L3N3N1N2O1O2N1O1O1O2Ndkj0"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        225,
+        121,
+        55,
+        38
+      ],
+      "area": 1129,
+      "score": 0.91162109375,
+      "anchor": [
+        252.5,
+        140
+      ],
+      "anchor_normalized": [
+        0.70139,
+        0.58333
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "Rld16X74M2O1N101O001N100000001N10O10O1O100O10O01O10O10O1O00100H]OaIe0\\68101O001N2O00000O101O00000O2O0O1O1O1O1L3J7N2O002MUdb0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        187,
+        208,
+        29,
+        27
+      ],
+      "area": 413,
+      "score": 0.66064453125,
+      "anchor": [
+        201.5,
+        221.5
+      ],
+      "anchor_normalized": [
+        0.55972,
+        0.92292
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "TQ\\12[76M1N200O100O1O1N2O1O3M001O1O11N10001N100O1N2N2M3N3M2N1OQaQ1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        105,
+        170,
+        20,
+        19
+      ],
+      "area": 253,
+      "score": 0.57763671875,
+      "anchor": [
+        115,
+        179.5
+      ],
+      "anchor_normalized": [
+        0.31944,
+        0.74792
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "ohh05[72M2O2M2N2N2N2O0000000002M5L1N1O2N2N2Nmlf1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        287,
+        94,
+        14,
+        27
+      ],
+      "area": 275,
+      "score": 0.57568359375,
+      "anchor": [
+        294,
+        107.5
+      ],
+      "anchor_normalized": [
+        0.81667,
+        0.44792
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "T\\S21Q7`0K3L5O0O10010OO2O1N2M3H9M\\g="
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        113,
+        98,
+        28,
+        26
+      ],
+      "area": 498,
+      "score": 0.5263671875,
+      "anchor": [
+        127,
+        111
+      ],
+      "anchor_normalized": [
+        0.35278,
+        0.4625
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "Pcj01]74M3L3N2N2N1O2N2N101O0O101N1000O0100000O2N2N2N2N3M2N3KXWc1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        208,
+        80,
+        8,
+        9
+      ],
+      "area": 59,
+      "score": 0.48974609375,
+      "anchor": [
+        212,
+        84.5
+      ],
+      "anchor_normalized": [
+        0.58889,
+        0.35208
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "cj`14Z73N10001O00O2N`eQ1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        116,
+        13,
+        62,
+        27
+      ],
+      "area": 926,
+      "score": 0.489013671875,
+      "anchor": [
+        147,
+        26.5
+      ],
+      "anchor_normalized": [
+        0.40833,
+        0.11042
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "eVk05[71N2O000O100000000O101O000O2O0000O11N5L1O1O1O1O1N2O000000O010GZIGg6`010O01O10000O1O100O1O2O0O103M2MN2O20O1O001O100O100O2O0O1O2NbdZ1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        81,
+        0,
+        18,
+        15
+      ],
+      "area": 188,
+      "score": 0.487060546875,
+      "anchor": [
+        90,
+        7.5
+      ],
+      "anchor_normalized": [
+        0.25,
+        0.03125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "dob01]74M1O2O1O1O1O2N1O1O00000001O2M2M4K]Um1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        151,
+        53,
+        22,
+        19
+      ],
+      "area": 122,
+      "score": 0.482177734375,
+      "anchor": [
+        162,
+        62.5
+      ],
+      "anchor_normalized": [
+        0.45,
+        0.26042
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "d^S14[7001O0010O0001O001O001O01O00001O0O101O101Mlh[1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        81,
+        61,
+        36,
+        25
+      ],
+      "area": 631,
+      "score": 0.48095703125,
+      "anchor": [
+        99,
+        73.5
+      ],
+      "anchor_normalized": [
+        0.275,
+        0.30625
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "dQc04Z76K3L3N2N2O2O0O10O001O0001O00000000000001O001O001O001N2O1O1N2O2N1N3N1NSlh1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        0,
+        45,
+        74,
+        39
+      ],
+      "area": 2166,
+      "score": 0.476318359375,
+      "anchor": [
+        37,
+        64.5
+      ],
+      "anchor_normalized": [
+        0.10278,
+        0.26875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "S2=R71O100O1O1N2N2O100O101N10000O10000O10001N1000000O1000001N1000000O10000O1000000000001O0O1000000O1000000O10000000O1000O11O0O100O2O1O0O2O2N2M4\\OYI9o602K6JnnR2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        104,
+        53,
+        31,
+        14
+      ],
+      "area": 241,
+      "score": 0.47216796875,
+      "anchor": [
+        119.5,
+        60
+      ],
+      "anchor_normalized": [
+        0.33194,
+        0.25
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "n]h03]71N1O2O0O10O10O100O00100O100000O10000O10O10O1000O100001O2N2Nfed1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        135,
+        51,
+        15,
+        13
+      ],
+      "area": 148,
+      "score": 0.46337890625,
+      "anchor": [
+        142.5,
+        57.5
+      ],
+      "anchor_normalized": [
+        0.39583,
+        0.23958
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "Ufo04[74M2N0O2O010O0001O001O001O2LYUa1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        207,
+        65,
+        12,
+        7
+      ],
+      "area": 62,
+      "score": 0.43896484375,
+      "anchor": [
+        213,
+        68.5
+      ],
+      "anchor_normalized": [
+        0.59167,
+        0.28542
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "cb`12]73N0O101O01O00001O1O1O[oP1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        83,
+        35,
+        39,
+        23
+      ],
+      "area": 604,
+      "score": 0.430908203125,
+      "anchor": [
+        102.5,
+        46.5
+      ],
+      "anchor_normalized": [
+        0.28472,
+        0.19375
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "o_c04[72N1O100O1O1O100O1O1O2O1N2O1O0O2O00001O0O11O0000001O000O100O101ASI8n6HSI6n661N3N5J3Lbgg1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        0,
+        82,
+        76,
+        49
+      ],
+      "area": 3391,
+      "score": 0.43017578125,
+      "anchor": [
+        38,
+        106.5
+      ],
+      "anchor_normalized": [
+        0.10556,
+        0.44375
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "o2=35[6KeI5n5@VJ0KP1o5QOTJ1Ln0P6QORJV1n5600000000000000000000000001O0001O00000O11OPOPJ`0P6@PJ`0Q6_OoIa0Q6_OoIa0Q6_OPJ`0P6@PJ`0P6@PJ`0P6@PJ`0P6@PJ`0P6@oIa0Q6?0000001O000001O00000000000000000000000000000001O000000000000001O000000000O1I8TOmIJjeR2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        83,
+        51,
+        14,
+        10
+      ],
+      "area": 107,
+      "score": 0.427001953125,
+      "anchor": [
+        90,
+        56
+      ],
+      "anchor_normalized": [
+        0.25,
+        0.23333
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "V`c05Z72N1000000O20O0000001O0O3Klbm1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        23,
+        0,
+        69,
+        52
+      ],
+      "area": 2344,
+      "score": 0.423583984375,
+      "anchor": [
+        57.5,
+        26
+      ],
+      "anchor_normalized": [
+        0.15972,
+        0.10833
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "f]53Z74L5M3M1O20O0000CAiI?T6DlI<Q6FoI:o5IQJ5P6LPJMS66iIEJ5\\68jILV64jIMT64mILODk5?XJ5g5KYJ5g5KYJ5g5KYJ5g5KYJ4h5LXJ4h5LWJ5j5EoII6b0l5DoIJ3d0n5BoII4e0m5CmII5e0n5FQJ:P6EPJ<P6DoI=R6BlI`0T6>O10000000000000BnI^OR6b0nI_OQ6b0mI_OS6P1O0O3N002N1O1OO100000001O6H3N1N3N1N3N2N2K5M3N3^OSI<U7Dain1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        121,
+        36,
+        12,
+        16
+      ],
+      "area": 151,
+      "score": 0.4228515625,
+      "anchor": [
+        127,
+        44
+      ],
+      "anchor_normalized": [
+        0.35278,
+        0.18333
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "i\\l03[78I2N100O2O00O100O2M3N[Ue1"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        161,
+        0,
+        5,
+        24
+      ],
+      "area": 69,
+      "score": 0.412109375,
+      "anchor": [
+        163.5,
+        12
+      ],
+      "anchor_normalized": [
+        0.45417,
+        0.05
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "ThU14Q7;G90I7HX_]1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        324,
+        83,
+        14,
+        7
+      ],
+      "area": 67,
+      "score": 0.395263671875,
+      "anchor": [
+        331,
+        86.5
+      ],
+      "anchor_normalized": [
+        0.91944,
+        0.36042
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "gP\\21]73O0O101N10O1000001O001N10[R5"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        192,
+        64,
+        14,
+        9
+      ],
+      "area": 112,
+      "score": 0.38720703125,
+      "anchor": [
+        199,
+        68.5
+      ],
+      "anchor_normalized": [
+        0.55278,
+        0.28542
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "RR]16Y72O0O10000000000001O001O1MoPT1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        190,
+        74,
+        8,
+        7
+      ],
+      "area": 48,
+      "score": 0.3671875,
+      "anchor": [
+        194,
+        77.5
+      ],
+      "anchor_normalized": [
+        0.53889,
+        0.32292
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "[c\\15[71N10000001N1OflU1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        134,
+        40,
+        12,
+        7
+      ],
+      "area": 68,
+      "score": 0.353759765625,
+      "anchor": [
+        140,
+        43.5
+      ],
+      "anchor_normalized": [
+        0.38889,
+        0.18125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "Z^o05Z710000O100001O00001N2NfSb1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        0,
+        1,
+        20,
+        34
+      ],
+      "area": 538,
+      "score": 0.340087890625,
+      "anchor": [
+        10,
+        18
+      ],
+      "anchor_normalized": [
+        0.02778,
+        0.075
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "54<:V6HeIKJ>_6a0O1000000O1000O101N102N3L3N3M2M3M4L^e_2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        14,
+        0,
+        23,
+        14
+      ],
+      "area": 245,
+      "score": 0.339111328125,
+      "anchor": [
+        25.5,
+        7
+      ],
+      "anchor_normalized": [
+        0.07083,
+        0.02917
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "QY35[71O2N1O1O1N101O1O00000000O1000000O1O1M3O1O1Oaf[2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        321,
+        89,
+        18,
+        15
+      ],
+      "area": 218,
+      "score": 0.33837890625,
+      "anchor": [
+        330,
+        96.5
+      ],
+      "anchor_normalized": [
+        0.91667,
+        0.40208
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "^Z[25Z73M2N2N101O00000O100000O100O1O1N2Lkj4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        110,
+        0,
+        8,
+        20
+      ],
+      "area": 94,
+      "score": 0.330078125,
+      "anchor": [
+        114,
+        10
+      ],
+      "anchor_normalized": [
+        0.31667,
+        0.04167
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "Pii06Z73M5K3O11L3M5Jcfh1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        167,
+        58,
+        21,
+        21
+      ],
+      "area": 331,
+      "score": 0.32861328125,
+      "anchor": [
+        177.5,
+        68.5
+      ],
+      "anchor_normalized": [
+        0.49306,
+        0.28542
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "`VW1=R72M3N1O1000000000O010N2O1O1N200O2N1O2N2NTXX1"
+      }
+    }
   ]
 }

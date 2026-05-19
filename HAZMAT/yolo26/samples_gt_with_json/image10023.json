@@ -1,0 +1,17 @@
+{
+  "image_id": "image10023",
+  "file_name": "image10023.jpg",
+  "width": 448,
+  "height": 336,
+  "annotations": [
+    {
+      "bbox": [
+        33,
+        110,
+        233,
+        104
+      ],
+      "class_name": "oxygen"
+    }
+  ]
+}

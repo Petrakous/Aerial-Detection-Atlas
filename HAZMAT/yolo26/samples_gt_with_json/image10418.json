@@ -1,0 +1,17 @@
+{
+  "image_id": "image10418",
+  "file_name": "image10418.jpg",
+  "width": 562,
+  "height": 1000,
+  "annotations": [
+    {
+      "bbox": [
+        250,
+        473,
+        122,
+        152
+      ],
+      "class_name": "flammable"
+    }
+  ]
+}

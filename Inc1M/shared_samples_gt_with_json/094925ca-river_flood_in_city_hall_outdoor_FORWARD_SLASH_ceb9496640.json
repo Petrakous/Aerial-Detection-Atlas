@@ -5,44 +5,44 @@
   "height": 480,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 52544
+      "pixel_count": 30267
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 13714
+      "pixel_count": 13311
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 33842
+      "pixel_count": 25459
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 54786
     },
     {
       "label_index": 21,
-      "class_name": "Road",
-      "pixel_count": 55385
-    },
-    {
-      "label_index": 22,
       "class_name": "Civilian vehicle",
-      "pixel_count": 268
+      "pixel_count": 229
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 1934
+      "pixel_count": 1520
     },
     {
-      "label_index": 28,
+      "label_index": 27,
       "class_name": "Pavement",
-      "pixel_count": 21867
+      "pixel_count": 15236
     },
     {
-      "label_index": 34,
+      "label_index": 33,
       "class_name": "Barrier",
-      "pixel_count": 25413
+      "pixel_count": 23169
     }
   ]
 }

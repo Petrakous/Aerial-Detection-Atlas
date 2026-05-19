@@ -5,19 +5,19 @@
   "height": 558,
   "segments": [
     {
-      "label_index": 7,
+      "label_index": 6,
       "class_name": "Destroyed vehicle",
-      "pixel_count": 12410
+      "pixel_count": 12157
     },
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 483748
+      "pixel_count": 532624
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 30258
+      "pixel_count": 29816
     }
   ]
 }

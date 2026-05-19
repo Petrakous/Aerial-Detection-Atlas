@@ -1,0 +1,18 @@
+{
+  "image_id": "image10218",
+  "file_name": "image10218.jpg",
+  "width": 1000,
+  "height": 1000,
+  "detections": [
+    {
+      "bbox": [
+        351.79864501953125,
+        501.0145263671875,
+        214.1588134765625,
+        216.4571533203125
+      ],
+      "class_name": "radioactive",
+      "confidence": 0.9398347735404968
+    }
+  ]
+}

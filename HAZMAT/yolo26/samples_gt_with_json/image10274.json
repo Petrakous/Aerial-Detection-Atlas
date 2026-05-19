@@ -1,0 +1,26 @@
+{
+  "image_id": "image10274",
+  "file_name": "image10274.jpg",
+  "width": 520,
+  "height": 520,
+  "annotations": [
+    {
+      "bbox": [
+        208,
+        199,
+        60,
+        56
+      ],
+      "class_name": "corrosive"
+    },
+    {
+      "bbox": [
+        245,
+        369,
+        65,
+        68
+      ],
+      "class_name": "corrosive"
+    }
+  ]
+}

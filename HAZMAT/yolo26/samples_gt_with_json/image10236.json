@@ -1,0 +1,35 @@
+{
+  "image_id": "image10236",
+  "file_name": "image10236.jpg",
+  "width": 520,
+  "height": 520,
+  "annotations": [
+    {
+      "bbox": [
+        159,
+        285,
+        101,
+        88
+      ],
+      "class_name": "radioactive"
+    },
+    {
+      "bbox": [
+        298,
+        186,
+        52,
+        49
+      ],
+      "class_name": "radioactive"
+    },
+    {
+      "bbox": [
+        444,
+        322,
+        61,
+        63
+      ],
+      "class_name": "radioactive"
+    }
+  ]
+}

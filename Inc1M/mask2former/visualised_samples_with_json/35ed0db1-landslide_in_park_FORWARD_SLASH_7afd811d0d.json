@@ -28,5 +28,175 @@
       "pixel_count": 264,
       "score": 0.3937
     }
+  ],
+  "instances": [
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        225,
+        125,
+        55,
+        34
+      ],
+      "area": 1070,
+      "score": 0.9231879115104675,
+      "anchor": [
+        252.5,
+        142
+      ],
+      "anchor_normalized": [
+        0.70139,
+        0.59167
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "Rld14[73L4N1N2O001N101O0000001N100O10O0100O1O10O10O10O010O01O1JZOaIg0^666IK\\O_Ie0a65001O0O100000000O101N100O1O1N2M3N2I70OO200NTdb0"
+      }
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "bbox": [
+        0,
+        131,
+        91,
+        109
+      ],
+      "area": 8948,
+      "score": 0.9225360751152039,
+      "anchor": [
+        45.5,
+        185.5
+      ],
+      "anchor_normalized": [
+        0.12639,
+        0.77292
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "S4\\3T41O0000O1000000000000000001O00000000000000000001O000000000000000001O0000000000000000000000000000000000001O000000000O1001O0001O000O1000000000001O0N2N2L5L3N3L3K6L3N2K6K4J7L5G8gNTJf0_6J6J7Ieln1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        0,
+        0,
+        189,
+        183
+      ],
+      "area": 16514,
+      "score": 0.8595242500305176,
+      "anchor": [
+        94.5,
+        91.5
+      ],
+      "anchor_normalized": [
+        0.2625,
+        0.38125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "Q2d03^O1O]6d0`ID_6g0O1O1O0O01O101L40O1IVOgIk0X6700bNPO\\LP1c3SO[Lm0e3UOXLl0h3UOVLl0j3VOiKT1X4QO[KW1e4j00001O000000000000000000000000000000000000000000001O00000000001O0000000000001O00000000000000000000001O00002N1]KYM[4l3RO2N2N2N1O001O00^OjLkLU3U3kLkLU3U3lLjLT3V3lLjLT3V3lLkLS3j3O00O10000O10000O2O1O0001O001NDlL^LS3c3mL]LS3c3mL]LS3c3mL^LR3a3oLULN8R3c3PMULN9Q3a3RMcLm2]3SMXLM6P3a3TMYLM5o2b3TMXLN7n2j1PM@4`NO5o2h1RMA0cNL6T3c1QMC0POS3X1oL=V3]OmL`0T3@QMIAUO_3Q1QM;o2EQM;b0VNW1^1XN<_OTN]3`1UM=j2CWM;k2EUM;]OUN\\3_1XM>h2BXM?g2AYM?OSNR2^1oMH\\O^Oc0[OS2_1nMH_O[OX3m0YMH@YOW3P1YMG@YOW3P1YMG_OXOZ3Q1WMH^OWOZ3R1XM:h2FXM9i2HVM8j2HVM8j2HVM8j2HVM7k2IUM7j2JVM5k2KUM3m2NRM1o2OQML^O`Nd3d1nLJU38jLGW3;gLEY3=eLUOEUOl3g1_LQOGWOk3h1^LPOGZOj3f1`LmNG^Oi3e0RL3?HG]Ok3g0RL2>GF_Ok3g0VLNT1]Of2d0ZLKQ1Ae2c0]LJn0Bf2c0`LHj0Ef2c0aLFj0Gd2c0cLFi0Hc2b0dLFi0Hd2`0cLIi0Fe2a0bLIh0Gf2>cLMc0Hj2;cLOa0Fk2;dL3=CP38dL7:AR38cL8:AS36dL:8AS35eL;7@VOFh3?kL<6_OU34gL<4@U32jL=2@SOHm3:QM<OBSOGo39PM=OCROGo39QM<OCPOIP47RM<OGo2LSM<ODnNKQ43SM=OIY46hKIY46iKHX47iKIX45jKIW46jKIW47jKGW48kKFX46c1NdPX1"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        213,
+        94,
+        32,
+        28
+      ],
+      "area": 498,
+      "score": 0.7512202262878418,
+      "anchor": [
+        229,
+        108
+      ],
+      "anchor_normalized": [
+        0.63611,
+        0.45
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "VQb13[72O2EKUI9i68N2O1O10000000000001O001N001O1N2N2N101N01000O20ON3O102Lbkj0"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        288,
+        95,
+        14,
+        26
+      ],
+      "area": 264,
+      "score": 0.39368969202041626,
+      "anchor": [
+        295,
+        108
+      ],
+      "anchor_normalized": [
+        0.81944,
+        0.45
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "YcS2282f6?M2N2N201O0001O1N2N3G9L4Kk_="
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        190,
+        105,
+        26,
+        18
+      ],
+      "area": 377,
+      "score": 0.31467515230178833,
+      "anchor": [
+        203,
+        114
+      ],
+      "anchor_normalized": [
+        0.56389,
+        0.475
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          360
+        ],
+        "counts": "ad\\15X75M2N1O2O0O10001O00000000000000O1000000000OO2M3N4LgdQ1"
+      }
+    }
   ]
 }

@@ -64,5 +64,2191 @@
       "pixel_count": 2135,
       "score": 0.5774
     }
+  ],
+  "instances": [
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        0,
+        0,
+        344,
+        188
+      ],
+      "area": 48822,
+      "score": 0.94091796875,
+      "anchor": [
+        172,
+        94
+      ],
+      "anchor_normalized": [
+        0.26875,
+        0.19583
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "a07;K0OI2O4Q1KQOU1h:PO^EK0OI2O4Q1KQOU1e:VO]EHOn04nNNa1Y:_NeEa0LF1o00QO1[1Z:cNeET4Z:900010OO1O2O1M2000001O0000001O00000000001O000010O1N1O1O1O100O1O1O100O1O1O100OjEaKm9_4PFdKP:[4PFgKn9Y4RFhKm9Y4SFgKm9Y4RFhKn9X4QFjKn9U4RFlKn9U4QFjKP:V4oEkKQ:U4oEjKR:b40O1O1O100O1O1O1O1ORF_K_9a4_FbK`9]4`FeK_9Z4aFgK_9Y4_FjK`9U4_FmKa9R4_FoKa9P4^FRLb9m3^FULa9j3_FWLa9h3_FZL`9e3`F\\L`9d3`F\\L`9c3`F^L`9a3`FaL_9^3aFcL_9\\3bFeL]9Z3bFhL^9W3bFkL]9T3cFmL]9S3bFoL]9P3cFQM]9n2cFTM\\9k2eFUM[9j2eFXMZ9g2fFZMZ9e2fF\\MZ9c2fF_MY9`2gFaMY9^2hFbMX9^2gFcMY9\\2gFeMY9Z2hFgMW9Y2hFhMX9W2iFiMW9V2iFkMW9T2iFmMW9R2kFmMU9R2lFnMT9Q2nFnMR9R2nFnMR9S2hFRNX9o1dFjL5d0V9[3cFSL00]9Q501O00001O001O1O1O1O001O001O001O000000001O00000000000000000000000000O10000O1000000O100J6\\Od0N2O1O1J6M300O10000O1000000O100O2N001O1O1000000000000001O1O1O3`EeKU:e4N2N3M7I000000O1O1O1N2M3N2O1O1O100O1O100O100O100O1000000000000000000O2L3N2O1O2N100O100O100O10000O11O1O001O1O1O001M201^EdK^:\\43O100O1L4M3N2O1O1000000000000001O00001O1O000000000000000000000002M10000O2O00O100000001O00001O1O2M`NbE`N]:^1iE_NW:a1kE]NU:b1oE[NQ:d1QF[No9d1SFWNUO]Og:\\2WFRNUO@e:^2ZFmMm9S2`10000001O001O1O1O1O1O2N2N001O001O00001oCVMj;j2VDVMj;i2XDUMi;k26O1O1O1O3L2O100O1O1O1N3N100O2O3L7I5K:Gb0^O3M8C^fZ4"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        346,
+        0,
+        209,
+        96
+      ],
+      "area": 11650,
+      "score": 0.91552734375,
+      "anchor": [
+        450.5,
+        48
+      ],
+      "anchor_normalized": [
+        0.70391,
+        0.1
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "VWR59f>9G=D5J4M9F7J1O1N1O1nBVNn<j13N3M2M4O0O2O1O00010O1O0010O10O0101N100O2O0O2O1N2O4K3N3L3N2M2O1N101N2O0O2O0OO2O0K6O0O2O010O10O010O1O1O10O10O1000O010O0100O01000O00^N\\Cj0d<UO_Ch0b<WO`Cg0a<XObCf0^<YOdCe0]<[OdCc0]<]OeC`0\\<@eC>\\<BeC;]<FcC8^<IcC4^<McC1]<0bCO_<2bCL^<5bCH`<9`CEa<=^CBb<>`C_Oa<b0_C]Oa<e0^CXOd<i0\\CUOe<l0g02N1O1O1O1O1O1O1O2N1O1O2N2N1O2N00001O0000000000000000001O0000001O00001O00001O000000001O000000001O00000000001O0001O1O00001O001O0010O01O010O010O001O0010O00010O01O1O010O001O001O010O001O01O01O001O001O001O010O1O00104K6J5K4UOmAa0a>H3MRiW1"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        549,
+        0,
+        91,
+        118
+      ],
+      "area": 7224,
+      "score": 0.88330078125,
+      "anchor": [
+        594.5,
+        59
+      ],
+      "anchor_normalized": [
+        0.92891,
+        0.12292
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "P[Q8:f>7I5K5K9G8H5K5K8H4L6J2N1O000000000000O1000000001O001O001O001O00001O00001O00000000001O000000001O00001O00001O00001O02N01O0000001O001N1O101O00001O00001O1O1O1O1O2^DQMo:Q3lDSMS;P3gDTMX;[3O^MfD_1Y;_NjD`1V;_NlD`1T;`NTEX1l:gNVEICc0X;CWEDHCHm0Z;JYEBOc0h:KYEBOc0g:"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        43,
+        190,
+        24,
+        14
+      ],
+      "area": 241,
+      "score": 0.87646484375,
+      "anchor": [
+        55,
+        197
+      ],
+      "anchor_normalized": [
+        0.08594,
+        0.41042
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Y[d03l>1N2N2N2O1O1O1000O0100000001O01O001O1O2N3M2N2Mg\\\\8"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        366,
+        252,
+        20,
+        17
+      ],
+      "area": 282,
+      "score": 0.86865234375,
+      "anchor": [
+        376,
+        260.5
+      ],
+      "anchor_normalized": [
+        0.5875,
+        0.54271
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Sj[59d>4N1O1O10000O10000000000001O0O2N3M2N5Jmif3"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        223,
+        360,
+        25,
+        17
+      ],
+      "area": 291,
+      "score": 0.8671875,
+      "anchor": [
+        235.5,
+        368.5
+      ],
+      "anchor_normalized": [
+        0.36797,
+        0.76771
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "dlX33i>6L1O2O00100O10O10O1000000001O0001O01O1O1O1O3M3K_\\g5"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        267,
+        410,
+        37,
+        34
+      ],
+      "area": 976,
+      "score": 0.86669921875,
+      "anchor": [
+        285.5,
+        427
+      ],
+      "anchor_normalized": [
+        0.44609,
+        0.88958
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "]bm38a>8L4N2N1O2N1O1O1O2O0O101O000O10000000O1010O0001O0010O01O1O1O0O3GlA@W>>jAAY><9L4LfRm4"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        441,
+        228,
+        16,
+        12
+      ],
+      "area": 152,
+      "score": 0.8623046875,
+      "anchor": [
+        449,
+        234
+      ],
+      "anchor_normalized": [
+        0.70156,
+        0.4875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Zn^65i>3M200O1O1000000001O001O1N3N2Lgae2"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        339,
+        241,
+        19,
+        16
+      ],
+      "area": 220,
+      "score": 0.8505859375,
+      "anchor": [
+        348.5,
+        249
+      ],
+      "anchor_normalized": [
+        0.54453,
+        0.51875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "fTo46i>1N3N10000O2O0000001O01O010O00101N3LXnS4"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        75,
+        384,
+        26,
+        17
+      ],
+      "area": 320,
+      "score": 0.845703125,
+      "anchor": [
+        88,
+        392.5
+      ],
+      "anchor_normalized": [
+        0.1375,
+        0.81771
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "YaS15i>4L3N1O1O100O01000O010000000001N10001O001O1O2N1N3NgXl7"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        315,
+        218,
+        22,
+        16
+      ],
+      "area": 254,
+      "score": 0.84423828125,
+      "anchor": [
+        326,
+        226
+      ],
+      "anchor_normalized": [
+        0.50938,
+        0.47083
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Slc42l>4K4N2N010O1000000O2O01O000010O01O1O1N3N2Mni]4"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        388,
+        226,
+        15,
+        14
+      ],
+      "area": 178,
+      "score": 0.8408203125,
+      "anchor": [
+        395.5,
+        233
+      ],
+      "anchor_normalized": [
+        0.61797,
+        0.48542
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "VSf58f>3N101O0O10000001O000O2O1N2Nkk^3"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        66,
+        291,
+        22,
+        15
+      ],
+      "area": 243,
+      "score": 0.83544921875,
+      "anchor": [
+        77,
+        298.5
+      ],
+      "anchor_normalized": [
+        0.12031,
+        0.62187
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "[Wo04j>3N2N2N1O100O10O10O100000O101O001O001N3N2Mg^R8"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        538,
+        287,
+        23,
+        22
+      ],
+      "area": 352,
+      "score": 0.8310546875,
+      "anchor": [
+        549.5,
+        298
+      ],
+      "anchor_normalized": [
+        0.85859,
+        0.62083
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Z_l71k>7K2O1O2N1O2O001N3N1O00010O00O2O001O1N3M3M2LkgT1"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        454,
+        325,
+        13,
+        19
+      ],
+      "area": 201,
+      "score": 0.81591796875,
+      "anchor": [
+        460.5,
+        334.5
+      ],
+      "anchor_normalized": [
+        0.71953,
+        0.69688
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "YTe6?^>3O100001O001O1N2O1N3N2Mch`2"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        619,
+        381,
+        21,
+        40
+      ],
+      "area": 637,
+      "score": 0.80859375,
+      "anchor": [
+        629.5,
+        401
+      ],
+      "anchor_normalized": [
+        0.98359,
+        0.83542
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "gaR96e>8J3I8K4O1O2N1O2N101N101O0O10O1L5M2O6J10mC"
+      }
+    },
+    {
+      "label_index": 14,
+      "class_name": "Mask",
+      "bbox": [
+        138,
+        386,
+        18,
+        11
+      ],
+      "area": 146,
+      "score": 0.802734375,
+      "anchor": [
+        147,
+        391.5
+      ],
+      "anchor_normalized": [
+        0.22969,
+        0.81563
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "URQ21m>5L3N010O001O0001O000000000O100O2Nl_R7"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        363,
+        320,
+        26,
+        21
+      ],
+      "area": 347,
+      "score": 0.783203125,
+      "anchor": [
+        376,
+        330.5
+      ],
+      "anchor_normalized": [
+        0.5875,
+        0.68854
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "X_Z56i>1O1N110O1O1O10000O101O1O1O100O0010O010O100O1O1O2LiZe3"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        60,
+        396,
+        17,
+        37
+      ],
+      "area": 480,
+      "score": 0.77587890625,
+      "anchor": [
+        68.5,
+        414.5
+      ],
+      "anchor_normalized": [
+        0.10703,
+        0.86354
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "m`l02g>>E7K6J5L100O2O00O10001O2N6I7I6HS`W8"
+      }
+    },
+    {
+      "label_index": 35,
+      "class_name": "Hole in the ground",
+      "bbox": [
+        539,
+        228,
+        21,
+        17
+      ],
+      "area": 253,
+      "score": 0.7626953125,
+      "anchor": [
+        549.5,
+        236.5
+      ],
+      "anchor_normalized": [
+        0.85859,
+        0.49271
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Zll74k>3N1N2N101N2N101N11O00001O001O1O1N2O1N3MdXU1"
+      }
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "bbox": [
+        0,
+        258,
+        54,
+        177
+      ],
+      "area": 7663,
+      "score": 0.76123046875,
+      "anchor": [
+        27,
+        346.5
+      ],
+      "anchor_normalized": [
+        0.04219,
+        0.72188
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "S8m17jN>1MNn8W1gFjN>1MNn8X1eFkN=2NLP9X1cFmN<9FDZ9Z2kFQOU9S1eFoN[9Z31K5M3I8N1O1O2M3N1O101O00001O1O00000001O001O1O100O001O1O1O2O2M1O005K10I6N3M3K6L6G>BR1POb0QO\\C`Nl<Z1a0K7G;nNXB8Sib8"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        228,
+        188,
+        14,
+        12
+      ],
+      "area": 98,
+      "score": 0.7412109375,
+      "anchor": [
+        235,
+        194
+      ],
+      "anchor_normalized": [
+        0.36719,
+        0.40417
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "oQ[32m>2N101O000O2O100O1000O1O2Nn[j5"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        345,
+        150,
+        15,
+        9
+      ],
+      "area": 108,
+      "score": 0.724609375,
+      "anchor": [
+        352.5,
+        154.5
+      ],
+      "anchor_normalized": [
+        0.55078,
+        0.32188
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "ikQ55j>101N100O10000001O00002N1O1NVSS4"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        546,
+        281,
+        18,
+        17
+      ],
+      "area": 125,
+      "score": 0.71826171875,
+      "anchor": [
+        555,
+        289.5
+      ],
+      "anchor_normalized": [
+        0.86719,
+        0.60313
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "mVP81n>2N100O10001O0O20O01O100O2O1O10M4JQ[S1"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        224,
+        194,
+        16,
+        14
+      ],
+      "area": 171,
+      "score": 0.70556640625,
+      "anchor": [
+        232,
+        201
+      ],
+      "anchor_normalized": [
+        0.3625,
+        0.41875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "WVY36h>4M1O1O2O000001O0O101O1N2O0O2MkYk5"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        364,
+        332,
+        16,
+        30
+      ],
+      "area": 334,
+      "score": 0.7041015625,
+      "anchor": [
+        372,
+        347
+      ],
+      "anchor_normalized": [
+        0.58125,
+        0.72292
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "`nZ53k>9H4M2N4K5L1O0100O001O2O0O3L8^OeAOaoi3"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        411,
+        217,
+        14,
+        9
+      ],
+      "area": 95,
+      "score": 0.6904296875,
+      "anchor": [
+        418,
+        221.5
+      ],
+      "anchor_normalized": [
+        0.65312,
+        0.46146
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "mkP64j>3N100O10O10000O101O001O1OTbT3"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        612,
+        285,
+        26,
+        22
+      ],
+      "area": 383,
+      "score": 0.6806640625,
+      "anchor": [
+        625,
+        296
+      ],
+      "anchor_normalized": [
+        0.97656,
+        0.61667
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "SUo81n>4L3M3M4M2M101O2M1000O1N2O1O1O100O100O110O001O1N5Kmd0"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        415,
+        230,
+        16,
+        15
+      ],
+      "area": 180,
+      "score": 0.673828125,
+      "anchor": [
+        423,
+        237.5
+      ],
+      "anchor_normalized": [
+        0.66094,
+        0.49479
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "YhR64k>3M4L2O001O001OO10001N2O1N102MfgQ3"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        151,
+        220,
+        17,
+        12
+      ],
+      "area": 150,
+      "score": 0.6416015625,
+      "anchor": [
+        159.5,
+        226
+      ],
+      "anchor_normalized": [
+        0.24922,
+        0.47083
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "PPW26i>2N1O2N01O1000000000010O1O002L4LPQm6"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        191,
+        185,
+        15,
+        13
+      ],
+      "area": 140,
+      "score": 0.6337890625,
+      "anchor": [
+        198.5,
+        191.5
+      ],
+      "anchor_normalized": [
+        0.31016,
+        0.39896
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "mfi26i>3M1O100O2OO100O100O2N1O2O1MVX[6"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        332,
+        268,
+        27,
+        48
+      ],
+      "area": 516,
+      "score": 0.62255859375,
+      "anchor": [
+        345.5,
+        292
+      ],
+      "anchor_normalized": [
+        0.53984,
+        0.60833
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "nlk48e>5L4M4M1MBmA4Q>KRB7i=JXB8e=G^B9_=GcB;Y=FhB=U=BlB>S=APC?o<@RCa0l<^OVCb0k<\\OVCc0d=O100O2O1O1O2N1N2O005I`]S4"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        464,
+        347,
+        18,
+        10
+      ],
+      "area": 124,
+      "score": 0.61767578125,
+      "anchor": [
+        473,
+        352
+      ],
+      "anchor_normalized": [
+        0.73906,
+        0.73333
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "mji63l>101O1N101O00001O0010O001O1O002N2MofY2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        598,
+        173,
+        42,
+        39
+      ],
+      "area": 1225,
+      "score": 0.59228515625,
+      "anchor": [
+        619,
+        192.5
+      ],
+      "anchor_normalized": [
+        0.96719,
+        0.40104
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "U`h82k>7K3N1N2N2N1N3M2O2N1O2N1N2O2N1O1O1O100O10O01000O100O100O10000O1000001O1O1O1O1N2N10]J"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        237,
+        406,
+        20,
+        31
+      ],
+      "area": 331,
+      "score": 0.58349609375,
+      "anchor": [
+        247,
+        421.5
+      ],
+      "anchor_normalized": [
+        0.38594,
+        0.87813
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "W`_34e>:J4L4M3N1O2O001O0102WOSB9\\>N1N1N2011O0001LcSc5"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        101,
+        397,
+        9,
+        17
+      ],
+      "area": 124,
+      "score": 0.55078125,
+      "anchor": [
+        105.5,
+        405.5
+      ],
+      "anchor_normalized": [
+        0.16484,
+        0.84479
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "]g_1a0_>0001O1O1O2N1O3J]Qh7"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        132,
+        363,
+        23,
+        17
+      ],
+      "area": 262,
+      "score": 0.5478515625,
+      "anchor": [
+        143.5,
+        371.5
+      ],
+      "anchor_normalized": [
+        0.22422,
+        0.77396
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "cWn14j>5K3N1O2N10O1O010O1O10000O10001N10001O001N3N`oR7"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        0,
+        219,
+        32,
+        29
+      ],
+      "area": 175,
+      "score": 0.546875,
+      "anchor": [
+        16,
+        233.5
+      ],
+      "anchor_normalized": [
+        0.025,
+        0.48646
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "k67i>0101N010O100O01000O0101N100O11O0O100O1000O10O1001O00O10000O2M[hl8"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        332,
+        232,
+        15,
+        13
+      ],
+      "area": 127,
+      "score": 0.53564453125,
+      "anchor": [
+        339.5,
+        238.5
+      ],
+      "anchor_normalized": [
+        0.53047,
+        0.49688
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "^kk45j>1N2O1O101N2OO1O2N10001N2N2NeSY4"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        451,
+        350,
+        27,
+        57
+      ],
+      "area": 1027,
+      "score": 0.53564453125,
+      "anchor": [
+        464.5,
+        378.5
+      ],
+      "anchor_normalized": [
+        0.72578,
+        0.78854
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Vhc61j>a0C5K3N6J;D3N1O1O1O00100O01O0100O01000O10O0YOkBCV=7WCBi<6V1K4Mib[2"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        177,
+        180,
+        12,
+        12
+      ],
+      "area": 101,
+      "score": 0.5322265625,
+      "anchor": [
+        183,
+        186
+      ],
+      "anchor_normalized": [
+        0.28594,
+        0.3875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "iTc26g>4N100O0100O2O001N2N2L[Wc6"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        494,
+        166,
+        35,
+        14
+      ],
+      "area": 328,
+      "score": 0.5322265625,
+      "anchor": [
+        511.5,
+        173
+      ],
+      "anchor_normalized": [
+        0.79922,
+        0.36042
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "]gW72m>2N2O0O101N101N10000O1000001N1000O1000001O000O100O101N100O100O101N2Ngkc1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        574,
+        144,
+        35,
+        24
+      ],
+      "area": 449,
+      "score": 0.51318359375,
+      "anchor": [
+        591.5,
+        156
+      ],
+      "anchor_normalized": [
+        0.92422,
+        0.325
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "oV]84j>4L2M4N1O1O2N2O0O100000O1M3K401000000000O1000O0100000O1O1O100O2M3N2M_\\>"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        557,
+        165,
+        38,
+        20
+      ],
+      "area": 399,
+      "score": 0.498779296875,
+      "anchor": [
+        576,
+        175
+      ],
+      "anchor_normalized": [
+        0.9,
+        0.36458
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "XXU81n>2N2N2O1O001O1O001O1O001O10O010O01O0100O001O01O010O010O01O1O1O001O1O1O002M]md0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        399,
+        176,
+        37,
+        20
+      ],
+      "area": 544,
+      "score": 0.476318359375,
+      "anchor": [
+        417.5,
+        186
+      ],
+      "anchor_normalized": [
+        0.65234,
+        0.3875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "iVk57g>3N3M1O100O2O0000000000000O1000000O0100000O10O2O0O101O0O101N101N101N2N3MY^o2"
+      }
+    },
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "bbox": [
+        515,
+        347,
+        27,
+        15
+      ],
+      "area": 238,
+      "score": 0.47265625,
+      "anchor": [
+        528.5,
+        354.5
+      ],
+      "anchor_normalized": [
+        0.82578,
+        0.73854
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "lga74k>3OO01O00000010O01O1O2N1O01O000001O01O001O001O0O2N2Nnb]1"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        285,
+        391,
+        32,
+        32
+      ],
+      "area": 561,
+      "score": 0.467529296875,
+      "anchor": [
+        301,
+        407
+      ],
+      "anchor_normalized": [
+        0.47031,
+        0.84792
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "eoU44i>4L3O1N3N1O1N3O1N2O001O1O001O2O00O100O3M2N3M2N2O1N1O2N1O101M3Moof4"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        328,
+        383,
+        19,
+        11
+      ],
+      "area": 139,
+      "score": 0.4638671875,
+      "anchor": [
+        337.5,
+        388.5
+      ],
+      "anchor_normalized": [
+        0.52734,
+        0.80937
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "UTj44k>2N1O001O010O0100000000001O01O1O102LlnX4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        423,
+        190,
+        42,
+        21
+      ],
+      "area": 708,
+      "score": 0.454345703125,
+      "anchor": [
+        444,
+        200.5
+      ],
+      "anchor_normalized": [
+        0.69375,
+        0.41771
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "U_V65j>4K201N101N2O0O101O000O101O00000000001O000000000000000000O100O101O0O100O1O2N2M3M5Jnja2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        588,
+        163,
+        32,
+        16
+      ],
+      "area": 377,
+      "score": 0.45068359375,
+      "anchor": [
+        604,
+        171
+      ],
+      "anchor_normalized": [
+        0.94375,
+        0.35625
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Yic84j>4L3O0O2O00000O2O00000000O100010O1O00000001N1O1O1O101N101N1O3MhV9"
+      }
+    },
+    {
+      "label_index": 35,
+      "class_name": "Hole in the ground",
+      "bbox": [
+        522,
+        273,
+        22,
+        22
+      ],
+      "area": 314,
+      "score": 0.438720703125,
+      "anchor": [
+        533,
+        284
+      ],
+      "anchor_normalized": [
+        0.83281,
+        0.59167
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "hnd78e>4M3N2O0O101O00010O10O010N2O1O1L4N2N2N2N3MTg\\1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        374,
+        173,
+        30,
+        20
+      ],
+      "area": 409,
+      "score": 0.41943359375,
+      "anchor": [
+        389,
+        183
+      ],
+      "anchor_normalized": [
+        0.60781,
+        0.38125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "b__51n>2N3N1N3N2N2N1N2O2N000000000O01000000O10000O1O2N1M3M4N1O2Na^^3"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        514,
+        97,
+        18,
+        16
+      ],
+      "area": 185,
+      "score": 0.39892578125,
+      "anchor": [
+        523,
+        105
+      ],
+      "anchor_normalized": [
+        0.81719,
+        0.21875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "ZQa74k>3L3N1O1O1O10O01O01O100O2N1O2N2O1Mm`b1"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        429,
+        220,
+        16,
+        17
+      ],
+      "area": 189,
+      "score": 0.392333984375,
+      "anchor": [
+        437,
+        228.5
+      ],
+      "anchor_normalized": [
+        0.68281,
+        0.47604
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "PZY67g>3N2N2O1O001O01O0010ON3L4N1O2NPVk2"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        276,
+        173,
+        17,
+        35
+      ],
+      "area": 507,
+      "score": 0.391357421875,
+      "anchor": [
+        284.5,
+        190.5
+      ],
+      "anchor_normalized": [
+        0.44453,
+        0.39687
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "`aQ42c08]=M\\B7b=d0O1000000000000001O1N101N3G:Fb_R5"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        591,
+        221,
+        40,
+        57
+      ],
+      "area": 1165,
+      "score": 0.38525390625,
+      "anchor": [
+        611,
+        249.5
+      ],
+      "anchor_normalized": [
+        0.95469,
+        0.51979
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "PXe85j>5K5L2M4M2N1O2N1O2N2N2N3N0O0100O1001O1O1WBkNd=Y100001N2N2O1O1N12ON2N2N2N2N3M2N2N1IfAF]>1jANo\\4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        463,
+        105,
+        23,
+        12
+      ],
+      "area": 167,
+      "score": 0.383056640625,
+      "anchor": [
+        474.5,
+        111
+      ],
+      "anchor_normalized": [
+        0.74141,
+        0.23125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "aTi61n>2O0O2O0O101N1O100O10000O0100O010O10001N2N2NeRX2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        462,
+        202,
+        38,
+        17
+      ],
+      "area": 541,
+      "score": 0.379150390625,
+      "anchor": [
+        481,
+        210.5
+      ],
+      "anchor_normalized": [
+        0.75156,
+        0.43854
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "bhh61k>8K3M1O2N10000000000001O0001O000000000000000000000000000000O2O001O1O1O2M2N_]Q2"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        319,
+        288,
+        14,
+        49
+      ],
+      "area": 395,
+      "score": 0.36962890625,
+      "anchor": [
+        326,
+        312.5
+      ],
+      "anchor_normalized": [
+        0.50938,
+        0.65104
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "lje4;c>8H4M2N2YO]OdBNOh0]=c02N1O0SOcB7_=EhB5]=FkB2X=KkB1X=Mbd_4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        190,
+        206,
+        78,
+        31
+      ],
+      "area": 1225,
+      "score": 0.368408203125,
+      "anchor": [
+        229,
+        221.5
+      ],
+      "anchor_normalized": [
+        0.35781,
+        0.46146
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "_Xi24k>101O00001O000000001O010O0010O01000O10O100O0000001O001O001N10001N2N1000001O001O001O0010O01O010O0000010O1O010O00010O001O0O100O1O1O01O0O20O010O01O1O1M3M3N5JaU^5"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        101,
+        292,
+        27,
+        28
+      ],
+      "area": 588,
+      "score": 0.360107421875,
+      "anchor": [
+        114.5,
+        306
+      ],
+      "anchor_normalized": [
+        0.17891,
+        0.6375
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "]d_17h>4M1N4L3M101N2N2O0O1O100O10000000O100O101O1O0O2N3L`0@[f_7"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        367,
+        180,
+        18,
+        36
+      ],
+      "area": 430,
+      "score": 0.35595703125,
+      "anchor": [
+        376,
+        198
+      ],
+      "anchor_normalized": [
+        0.5875,
+        0.4125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "jV\\59f>4K4M3M2N3N6J2N100000N3N1O2M5K5I8HjZg3"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        334,
+        157,
+        13,
+        9
+      ],
+      "area": 88,
+      "score": 0.355224609375,
+      "anchor": [
+        340.5,
+        161.5
+      ],
+      "anchor_normalized": [
+        0.53203,
+        0.33646
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Rgl43k>3N100O1000000O02O001O0ORVY4"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        39,
+        216,
+        36,
+        51
+      ],
+      "area": 671,
+      "score": 0.353759765625,
+      "anchor": [
+        57,
+        241.5
+      ],
+      "anchor_normalized": [
+        0.08906,
+        0.50313
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "S`b0<_>7LFkA0Q>OVB0d=1]B;W=DnB8R=FWC4g<L]CKSO2`=3bCL^<4bCL^<3cCM^<2bCO]<1Z100O001O03N0bA6f=KSB;m=>M6K01N101O1N10001N2M4M3M5I4M4JTcX8"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        421,
+        99,
+        9,
+        27
+      ],
+      "area": 151,
+      "score": 0.352783203125,
+      "anchor": [
+        425.5,
+        112.5
+      ],
+      "anchor_normalized": [
+        0.66484,
+        0.23438
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "T^U62m>8]AIP>d0O11O001L4L5JeZR3"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        384,
+        210,
+        20,
+        17
+      ],
+      "area": 270,
+      "score": 0.34912109375,
+      "anchor": [
+        394,
+        218.5
+      ],
+      "anchor_normalized": [
+        0.61562,
+        0.45521
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "gVd54k>3L4N2N0O2O00000O100000000010O001O1M6JY]^3"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        143,
+        224,
+        9,
+        11
+      ],
+      "area": 81,
+      "score": 0.347900390625,
+      "anchor": [
+        147.5,
+        229.5
+      ],
+      "anchor_normalized": [
+        0.23047,
+        0.47813
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "UXS26h>2O1O100O10O1O1OQaT7"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        178,
+        198,
+        11,
+        11
+      ],
+      "area": 88,
+      "score": 0.34765625,
+      "anchor": [
+        183.5,
+        203.5
+      ],
+      "anchor_normalized": [
+        0.28672,
+        0.42396
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "Zdc27g>200O0010O100O101N3NgVc6"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        495,
+        104,
+        16,
+        13
+      ],
+      "area": 147,
+      "score": 0.34326171875,
+      "anchor": [
+        503,
+        110.5
+      ],
+      "anchor_normalized": [
+        0.78594,
+        0.23021
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "ZTX76i>2O1O2M2O000000O1O2O0O1O2N2N2Mf[l1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        93,
+        179,
+        21,
+        16
+      ],
+      "area": 250,
+      "score": 0.342041015625,
+      "anchor": [
+        103.5,
+        187
+      ],
+      "anchor_normalized": [
+        0.16172,
+        0.38958
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "eh[1;d>2O1N10000010N1000001O00000O2O001N2N2N4LU\\f7"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        459,
+        97,
+        23,
+        17
+      ],
+      "area": 253,
+      "score": 0.3369140625,
+      "anchor": [
+        470.5,
+        105.5
+      ],
+      "anchor_normalized": [
+        0.73516,
+        0.21979
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "ZXg64k>4L2N1O1O100N200O0100O100O00101N101N1O2O1N2OjnY2"
+      }
+    },
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        193,
+        366,
+        17,
+        10
+      ],
+      "area": 132,
+      "score": 0.335205078125,
+      "anchor": [
+        201.5,
+        371
+      ],
+      "anchor_normalized": [
+        0.31484,
+        0.77292
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "ajj24j>2O2O00001O000000000010O1O001O4K\\VY6"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        359,
+        297,
+        10,
+        30
+      ],
+      "area": 194,
+      "score": 0.33349609375,
+      "anchor": [
+        364,
+        312
+      ],
+      "anchor_normalized": [
+        0.56875,
+        0.65
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "\\bX5<c>4L5L7H20N3M4M<C5JSgn3"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        371,
+        123,
+        20,
+        31
+      ],
+      "area": 467,
+      "score": 0.32275390625,
+      "anchor": [
+        381,
+        138.5
+      ],
+      "anchor_normalized": [
+        0.59531,
+        0.28854
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "SQ^51n>3SA:X>=K2O0001O000000O10O1O1O1N1O1O4M4K4LPcd3"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        209,
+        168,
+        13,
+        35
+      ],
+      "area": 228,
+      "score": 0.321044921875,
+      "anchor": [
+        215.5,
+        185.5
+      ],
+      "anchor_normalized": [
+        0.33672,
+        0.38646
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "UUR36d>6N001J6O1N2O1O1000O1I9NhhS6"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        329,
+        172,
+        25,
+        31
+      ],
+      "area": 596,
+      "score": 0.320556640625,
+      "anchor": [
+        341.5,
+        187.5
+      ],
+      "anchor_normalized": [
+        0.53359,
+        0.39063
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "k\\j48b>9I6L3N1O2N2O000001O000000001O1N102M2N102J6K4M3NYlU4"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        242,
+        425,
+        16,
+        14
+      ],
+      "area": 157,
+      "score": 0.31591796875,
+      "anchor": [
+        250,
+        432
+      ],
+      "anchor_normalized": [
+        0.39063,
+        0.9
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "\\ka34k>3M2N2O1O0010O0000001O100O1M4Kcdb5"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        268,
+        206,
+        8,
+        12
+      ],
+      "area": 72,
+      "score": 0.302734375,
+      "anchor": [
+        272,
+        212
+      ],
+      "anchor_normalized": [
+        0.425,
+        0.44167
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          480,
+          640
+        ],
+        "counts": "`jm38f>4OO001O1O1N3M]]Z5"
+      }
+    }
   ]
 }

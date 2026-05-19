@@ -5,29 +5,29 @@
   "height": 1175,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 696927
+      "pixel_count": 701934
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 646457
+      "pixel_count": 643684
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 61908
+      "pixel_count": 57910
     },
     {
-      "label_index": 30,
+      "label_index": 29,
       "class_name": "Animal",
-      "pixel_count": 8646
+      "pixel_count": 7841
     },
     {
-      "label_index": 42,
+      "label_index": 41,
       "class_name": "Tower",
-      "pixel_count": 174103
+      "pixel_count": 172525
     }
   ]
 }

@@ -28,5 +28,763 @@
       "pixel_count": 16881,
       "score": 0.6992
     }
+  ],
+  "instances": [
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        951,
+        610,
+        96,
+        82
+      ],
+      "area": 3142,
+      "score": 0.8994140625,
+      "anchor": [
+        999,
+        651
+      ],
+      "anchor_normalized": [
+        0.53652,
+        0.62118
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "gl]n09^P14L2O2M2N3N001N2O1O1N3N2N2N2M2O001O0O2O001O0O2O2N1OO1O001O1N2O0O2O1N200O1O100O00100O1O100O100O010O_QOXOTm0g0lRO[OSm0e0mRO\\ORm0c0nRO_OQm0`0PSOAol0?PSOCol0<RSOEml0:TSOFll0:SSOGml08TSOHll07TSOJll05SSOMml02SSOOml0OTSO2ll0MTSO3ml0LSSO5ml0JTSO6ml0IRSO8ol0FRSO:Pm0DoRO=Sm0AlRO?Wm0^OiROc0dn02N2O1O1O1O01000000000000000001O4L3M3M2M3N2N2N2M3NP^Qj0"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        574,
+        668,
+        66,
+        88
+      ],
+      "area": 4118,
+      "score": 0.73486328125,
+      "anchor": [
+        607,
+        712
+      ],
+      "anchor_normalized": [
+        0.32599,
+        0.67939
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "nS\\b02eP16J4L6J7I6J7J5K3L3N1O1O1N2O3UQOYN_n0S2M2M7J1O0O10000O10000O10000O1000000O10O1000O1000O010O10O01000O10O1000001N103M4Kb0_O4K5L4L7H:F3M3M2M4K5KimQW1"
+      }
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "bbox": [
+        1184,
+        551,
+        204,
+        192
+      ],
+      "area": 16881,
+      "score": 0.69921875,
+      "anchor": [
+        1286,
+        647
+      ],
+      "anchor_normalized": [
+        0.69066,
+        0.61737
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "fYlU11bP18K4M5K4L3N2M2O1O2M2O2N2M3N2M3N2N1O2N2N2N3L4M2N2N2N00010O0010O01O01O01O01O006J2N1O1O1O1O1O000000PRO^Nkl0a1RSOfNjl0Z1SSOjNll0V1SSOmNkl0S1TSOPOjl0P1USOSOil0n0VSOUOgl0k0XSOXOgl0g0XSO[Ohl0d0XSO]Ogl0c0XSO@gl0?YSOBgl0=XSOFgl09YSOIgl05YSOLgl03XSO0ml0ISSO9kl0GUSO;jl0DUSO>jl0BVSO?jl0@USOc0il0]OWSOd0il0[OVSOh0il0WOWSOk0il0SOVSOQ1kl0kNUSOW1kl0gNTSO]1jl0bNVSO`1il0^NXSOd1gl0[NYSOf1gl0YNXSOi1ll0QNUSOP2ol0kMQSOV2Qm0gMoRO[2Pm0cMQSO_2nl0_MSSOc2ll0\\MSSOh2kl0VMVSOm2Ym02N1O1O1O2N1PNjL[VOX3ci0iL]VOX3ai0iL_VOX3_i0jL`VOW3_i0iLaVOW3^i0jLbVOW3]i0iLbVOX3]i0iLcVOW3]i0iLbVOX3]i0iLcVOW3]i0iLcVOW3]i0jLaVOW3_i0iLaVOW3^i0jLaVOW3_i0iLaVOW3`i0hL`VOX3`i0hL_VOY3bi0fL^VOZ3bi0fL^VOZ3ci0eLaUOOL\\3dj0dL_UO1L\\3ej0cL^UO3LZ3gj0bL]UO4LZ3gj0bL\\UO5MY3hj0aLZUO7NX3bk0iL\\TOX3\\k0]LXTO<<W3\\k0`LUTO9?W3\\k0PMdTOP3[k0RMdTOn2\\k0RMdTOn2\\k0RMdTOn2\\k0RMdTOn2\\k0SMcTOl2^k0TMbTOl2_k0SM`TOn2gk0kLYTOU3hk0jLXTOV3ik0iLWTOW3jk0hLVTOX3kk0gLUTOY3kk0gLUTOY3lk0fLTTOZ3lk0fLTTOZ3mk0eLSTOZ3Pl0cLQTO]3Pl0aLQTO_3Pl0^LRTOb3bl0O10000O10001N102N1O1N2O1N2O1O0O2O1N3N1N4M1N2O1N102M2O2N2M2O2N1O7H2O1O1O0O2O6J2N1O1O1O001O00001O2N2N3M2N1O1O1O1O1O1O3L4L3M4L6J7IS]T?"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1059,
+        897,
+        803,
+        44
+      ],
+      "area": 29650,
+      "score": 0.494873046875,
+      "anchor": [
+        1460.5,
+        919
+      ],
+      "anchor_normalized": [
+        0.78437,
+        0.87691
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "_flQ11fP16K1O2N2M2O1O2N1O1O1O1O1O1O2N1O2N1O1O1O001O1O1O1O1O1O00001O0000000000000001O0000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000O10000000O1000001O000000000000000000000O10000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000001O0000O100000000000001O0000O10000000000000000000000000000000000000000000000000000000000O10000000000000O100000000000000000000000000000000000000000000000000000000000O10000000000000000000000001O0000000000000000000000001O000001O00000000000O10001O000000000000010O000000000000001O0000001O001OO1O1O10000O10000000000000O0100000000O1000000000O2O000000000O100001O0000000O101O00000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000001O000000000000000000O10000000000000O100000000000000000000000000000O1000000000000000000000000000000000000001OO1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000O1001O00000000000000000000000000O100000000O11O0000000000001O0O100000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000001O0000000000000O100000000000000O10000000000000000000000O10001O00001O0O2O0000001N1000O10000000000O10000001O000000000000001O00000001O0000000000000000001N100000000000000000000000000000000000000000000IROdPOn0\\o0SOcPOm0]o0SOcPOm0]o0TOaPOm0_o0SOaPOm0_o0SOaPOm0_o0TO`POl0`o0UO_POk0ao0510000000000000000000001N10000000000000nSO"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        418,
+        822,
+        318,
+        192
+      ],
+      "area": 6399,
+      "score": 0.493896484375,
+      "anchor": [
+        577,
+        918
+      ],
+      "anchor_normalized": [
+        0.30988,
+        0.87595
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "Qi\\=4bP13M20000O1O1O1O1O1O1O1O0100O001O000000001O001O1O1O001O0000010O010O010O00O20O010O01O1000O01O1O100O100O1O100O010O1O100O010O1O10O000100O010O1O010O100O010OO20O001O010N20O01OO101O00O20O0100O10O1O0010O001O010O1000O001O001O01O0010O010O1O1O010O01O001O10O10O01O00000001O01O010O0010O001O00010O0010O010O000010O00010O0100O001O000010O010O10O01O0010O0000010O01O1O01O0O1O010O1O2O001O001N2O010O00001O001O10O0100O10O10O10O1O010O100O2O0O1O100O1O1O1O001O1N200O010O100O010ON2O1O20O010O10O10O1O010O001O01O01O01O10O0000000010O01O0010O010O010O001O01O10O10O10O10O01O10O0100O010O00000010O001O010O0001O00000010O001O10O2O0O2N1O2N1O101N1O2O0010O02N100O001O010N5LZboS1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1714,
+        1011,
+        70,
+        37
+      ],
+      "area": 1057,
+      "score": 0.48681640625,
+      "anchor": [
+        1749,
+        1029.5
+      ],
+      "anchor_normalized": [
+        0.93931,
+        0.98235
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "WUkf13dP12O1N2O1N2O0O2O1O001O1O001O10O01O1O010O1O0100O010O1000O01000O1000O10O10O10O010O3NO001O001O1O001O001O001O001O001O1O001O001O001O1O1O2N1O001Oki^2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        292,
+        938,
+        205,
+        80
+      ],
+      "area": 4314,
+      "score": 0.460693359375,
+      "anchor": [
+        394.5,
+        978
+      ],
+      "anchor_normalized": [
+        0.21187,
+        0.93321
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "hj[91bP15O101O0O100O10000O10O0100O100O1000O010O10O1O10O01O1000O0100O10O01O100O001000O0100O010O100O010O10O10O10O10O100O0100O010O10O0010000O01000000O01000O100O010O10O10O10O00100O1O010O1O010O001O010O1O1O010O10O10O100O010O10O010000O010O100000O0100000000O0100000O10O1000O010O01000O010O1000O100000O01000000O10O1000O0100O10O010000O01000O01000O010O10O10O01O100O01000O10O1000O100O00100O01000O100O2O0O2O0O1O1O2O000O2N2O2L4K4NURd[1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1071,
+        867,
+        75,
+        32
+      ],
+      "area": 1714,
+      "score": 0.455810546875,
+      "anchor": [
+        1108.5,
+        883
+      ],
+      "anchor_normalized": [
+        0.59533,
+        0.84256
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "lnXR13cP14L4M2O1N2O001O0O101O00001O0O2O0000001O000000000O10000O100O100O100O100O100O100O1000000O1000000001O00001O001O00001O001O1N101O1O1N101O0O2N2N1O2N3M3K4M]mkf0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        868,
+        901,
+        63,
+        55
+      ],
+      "area": 2743,
+      "score": 0.446533203125,
+      "anchor": [
+        899.5,
+        928.5
+      ],
+      "anchor_normalized": [
+        0.48308,
+        0.88597
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "UXik04_P17J6J6L5K4L4M2N1O1O2N1O1O1O1O2N100O10001N10001O000O10001O00000000000000000000O100O2N100O100O101O0O2O1N101N2N2N3N2M3M3M3K4K:F_mgm0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1807,
+        1004,
+        55,
+        44
+      ],
+      "area": 1962,
+      "score": 0.44287109375,
+      "anchor": [
+        1834.5,
+        1026
+      ],
+      "anchor_normalized": [
+        0.98523,
+        0.97901
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "[[ji17_P13L3O2N2N2M3M3M3L4O000O10001N1O1O1O101O000100O03M01O00000000O100O100O1000000O1000000000M300O100O100O10000000dPO"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        741,
+        972,
+        47,
+        48
+      ],
+      "area": 1695,
+      "score": 0.439697265625,
+      "anchor": [
+        764.5,
+        996
+      ],
+      "anchor_normalized": [
+        0.41058,
+        0.95038
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "Q[gg0;YP16K4K5L3M4L3O1N2O2N100O1000000O2O00000000001N10O1000000O10000O010N3K4M4M2O1O2N1O2O0O2O2M4K8BlVZR1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        181,
+        1008,
+        104,
+        22
+      ],
+      "area": 1209,
+      "score": 0.434326171875,
+      "anchor": [
+        233,
+        1019
+      ],
+      "anchor_normalized": [
+        0.12513,
+        0.97233
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "lWj51fP11O101N100O100O100O10000O1000O1000O1000000O10O10O10000O100000O01000000O1000000000O01000000O100000000000000O010000000000000O100000000000000O1000000000000000000O1000O1000000000O100000O1000000O10000O1O2O0O2M3KYo\\b1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        480,
+        1011,
+        92,
+        37
+      ],
+      "area": 2568,
+      "score": 0.423583984375,
+      "anchor": [
+        526,
+        1029.5
+      ],
+      "anchor_normalized": [
+        0.28249,
+        0.98235
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "YX\\?1fP12L5L4K4M3N2N2O1N101N103L100O100O100O10000O1000000O1000000O100000000000000000M3000001O000O100000001O0000000000000000000000001N100000001O00000O101O001O001O001O1O001O0O2O001N2O1O1N2M3M^WWY1"
+      }
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "bbox": [
+        225,
+        584,
+        98,
+        182
+      ],
+      "area": 11609,
+      "score": 0.41748046875,
+      "anchor": [
+        274,
+        675
+      ],
+      "anchor_normalized": [
+        0.14715,
+        0.64408
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "]oV7<PP1e0C?C4M3L3K5K5J5L5POP1L3L4M3M3M2N3M3N1N3L4K5K4O2N2M3N1O2M3M3N2L3N3O100O010O0100O0100O10O10000O2O000O10000O1YObTOSL_k0c40O1O100O10000O1[KcTOo3]k0oKeTOP4]k0nKfTOo3[k0PLgTOo3Yk0PLiTOn3Xk0QLjTOn3Vk0QLmTOm3Sk0SLoTOj3Rk0ULQUOi3oj0WLTUOf3lj0ZLVUOd3jj0[LYUOc3hj0\\LaUOZ3aj0dLgUOU3Rl0ZObROjMdm0o1^ROPNgm0k1ZROSNkm0h1VROXNmm0e1TROYNom0e1QRO[NRn0a1oQO_NSn0_1mQO`NWn0]1jQOaNan0U1_QOjNen0S1c0M2N2N2N1O1O2N5K3L4M3LP\\Va1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        791,
+        967,
+        66,
+        44
+      ],
+      "area": 1868,
+      "score": 0.4130859375,
+      "anchor": [
+        824,
+        989
+      ],
+      "anchor_normalized": [
+        0.44253,
+        0.9437
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "h_Zi02cP14M4N1N2O1N2O1N3N4L4K5L2N2N1O1O1O001O1O001O010O000001O00001O0000001N100O2N100O2N1N2O1O2N10001O0O10001N10000O2O0O2N2N1O2O0O2N1O2O1MScSP1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        599,
+        988,
+        89,
+        60
+      ],
+      "area": 2988,
+      "score": 0.410888671875,
+      "anchor": [
+        643.5,
+        1018
+      ],
+      "anchor_normalized": [
+        0.3456,
+        0.97137
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "gQVc01gP11N101N1N3M2O1N3M2O1O1O1O2N1O1N5L1O1N2O100O1O100O1O1O1O1O1O1O1O1O100O100O1O1O1ON21O100O010O001O01O0010O01O1O010O100O1O010O1O010O1O100O1O101M2O1O1O1O100O1O1O2N1O1O1O2N1N3M3M4M5J[a`U1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        94,
+        907,
+        378,
+        110
+      ],
+      "area": 9024,
+      "score": 0.40478515625,
+      "anchor": [
+        283,
+        962
+      ],
+      "anchor_normalized": [
+        0.15199,
+        0.91794
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "mUQ31gP10O2O00001O00001O00001coNKTP1=00O1O1O1O10000O10000O0100O010O0100O10O010000O01000O010000O01000O0100O01000O100000O0100000O10O100000000O01000O10000O10000O10000000000O1000000000O100000000O100000000O01000O100000O01000000O1O10O0100O1000O100000000000000000000000000O010000000O10O10000O010O100O10O10O0100O1O10O01N2O100O10O00100O010O10O100O10O01000O10O10O100O010O10O100O010O100O10O10000000000O1000000O100O10O10O100000000O1000O10000O10O0100O100O10O0100O0010O01O10000000O10O10000O10O10O10000000O1000O10O100O10O10O1000O1000O0100O1O100O0010000O0100O0100000O10O1000O10000O010O10O01O010O010O10O010O01O010O0010O1O010O1O001O00100O01O010000O10O10O100000O010000000001O00000O11O0000010O001O01O00010O00001O0001O01O0000000001O000000000000001N1000001N101O0O10001N2O1N102M2O1O0O2O001Nde]\\1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1449,
+        944,
+        173,
+        47
+      ],
+      "area": 3182,
+      "score": 0.393798828125,
+      "anchor": [
+        1535.5,
+        967.5
+      ],
+      "anchor_normalized": [
+        0.82465,
+        0.92319
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "\\l[^11gP1001N2O2M2O1O0O2O001O1N101O1O0010O01O00001O0000001O01O01O001O0001O01O00000001O01O000001O001O01O000001O00000000010O00000001O0001O0001O000001O0001O01O00000010O00001O00010O00001O00001O01O0001O000001O01O00000010O0000010O01O000010O0000001O01O0001O00000000010O00000001O0001O0001O01O01O00001O0010O0O10001O00000000001O0O10001N10001N10001O0O101O1N1O2O6I[ed7"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        850,
+        992,
+        50,
+        15
+      ],
+      "area": 647,
+      "score": 0.38330078125,
+      "anchor": [
+        875,
+        999.5
+      ],
+      "anchor_normalized": [
+        0.46992,
+        0.95372
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "glVk02dP14M2N1O2N101O00000O100000000000001O000000000000000000000000000000000000O10001O0000000000000O2N3L4M[bgn0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1548,
+        994,
+        53,
+        48
+      ],
+      "area": 1245,
+      "score": 0.383056640625,
+      "anchor": [
+        1574.5,
+        1018
+      ],
+      "anchor_normalized": [
+        0.8456,
+        0.97137
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "RYaa16`P15K3N2N2N2N1O2O0O1O2N100O2N100O1O100O1O1O100O1O1O10O0100O00^ObPOL]o04fPOIZo07hPOFZo09jPOBWo0?`001O100O001O100O0010O01O1O2N1O1N3M3NdTZ8"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1417,
+        794,
+        72,
+        106
+      ],
+      "area": 1905,
+      "score": 0.367919921875,
+      "anchor": [
+        1453,
+        847
+      ],
+      "anchor_normalized": [
+        0.78034,
+        0.80821
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "hR[]12eP11O2N2N1O1O1O1O1N2N2N2M3M3N2N2N1O2N1O2N01O0010O1O1O0000010O00O1O11O01000000000N200O01O1O001O000N2N21O010O1O0010O1O1O1O1O10000O10002M2N4L3M4K8Hfnl;"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        201,
+        747,
+        180,
+        218
+      ],
+      "area": 23118,
+      "score": 0.35009765625,
+      "anchor": [
+        291,
+        856
+      ],
+      "anchor_normalized": [
+        0.15628,
+        0.81679
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "ad^62eP14K4UMInTO<ej03SUO2_j0=\\UOG_j0?]UODaj0>]UOBdj0?[UOAdj0b0YUO_Ofj0f0iSO_NP1l0Vk0j0cSO]NV1i0Wk0T1fTOnNYk0S1cTOQO\\k0Q1`TORO_k0o0ZTOXOek0i0WTOZOjk0g0QTO]Onk0e0mSO_OSl0c2O10O0100O100nNPL\\UOP4cj0QL\\UOo3ej0QL[UOo3fj0oKZUOR4fj0mKZUOS4gj0kKZUOV4dk0OjNgKnUOZ4Rj0hKlUOW4Tj0jKlUOV4Sj0kKmUOU4Sj0lKlUOT4Tj0lKkUOU4Tj0mKkUOS4Uj0mKkUOR4Uj0PLjUOP4Uj0QLkUOo3Tj0RLlUOn3Tj0SLjUOn3Uj0SLkUOm3Uj0SLVUOB5NL^4ij0[LZUOYOK\\4jj0\\LcUOc3]j0]LeUOa3[j0`LgUO]3Yj0cLiUO[3Wj0eLkUOX3Vj0hLmUOU3Rj0lLPVOR3oi0oLRVOP3mi0QMTVOn2li0RMTVOn2li0RMUVOm2ki0RMVVOn2ii0SMWVOm2ii0SMWVOl2ji0TMVVOl2ji0`LVUO78C9f3Yj0_LXUO66F9d3Yj0aLYUO45H8c3Zj0`LZUOMLO819b3Yj0aL[UOKNO547a3\\j0aLZUOJO0349a3[j0aLZUOJ0O259`3\\j0bLZUOH01069`3]j0aLZUOH02O5:`3]j0`L[UOH12L6;`3^j0`L[UOG05I4>a3^j0_LeUO8LZ3_j0^LeUO7LR2CdNlj0SOgUO6JR2EdNjj0TOgUO6BAOb2ObNhj0VOhUO5BAOc2MbNhj0WOjUO3AB0b2LbNjj0WOjUO2@DOh3hj0bLkUO0]OG0f3ij0cLmUOMYOLOd3lj0cLnUOLUOO0a3mj0eLoUOJSO20^3oj0fLoUOl3Rj0TLoUOk3Pj0VLQVOV3ROjLnj00nUOj3Rj0VL^UODLW4gj0UL]UOFGW4mj0SL[UOX4fj0gK[UOW4fj0jKZUOU4gj0kKXUOU4hj0lKXUOS4ij0lKXUOT4gj0mKYUOS4fj0oKYUOQ4gj0oKYUOQ4gj0oKYUOQ4gj0PLXUOP4hj0PLWUOQ4ij0oKWUOQ4ij0oKWUOQ4hj0QLVUOP4jj0PLUUOQ4kj0oKUUOQ4kj0oKUUOR4ij0oKWUOQ4ij0oKWUOQ4ij0oKWUO\\OM]4kj0XLbUOf3^j0ZLdUOd3[j0]LeUOd3Yj0]LgUOc3Xj0^LiUOa3Vj0`LjUO`3Vj0`LjUO`3Vj0_LjUOa3Wj0^LjUOb3Vj0]LkUOb3Vj0^LjUOa3Wj0^LiUOc3Xj0\\LhUOc3Yj0]LgUOb3Zj0]LgUOb3Zj0^LeUOc3]j0[LbUOe3bj0XL]UOh3ej0XLPUOQ4Rk0nKlTOS4Uk0mKhTOT4[k0lKbTOU4_k0kK`TOU4bk0jK]TOV4dk0?0O3M7SKXTO\\4Ul0L3M5K4M6K4K3M3N2M5K4L4L9G4M0O2N2O001N3N3L4L3kN\\QO2gn0KYQO4kn0HWQO6ln0GVQO8mn0ETQO9on0DTQO:mn0DTQO;fo0O1N1N3M3N2O0O2N2N102K]kZ_1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        498,
+        786,
+        218,
+        107
+      ],
+      "area": 14396,
+      "score": 0.344970703125,
+      "anchor": [
+        607,
+        839.5
+      ],
+      "anchor_normalized": [
+        0.32599,
+        0.80105
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "[_n?<XP1`0Bg0[O6I4L2O0O2O0O2O0O101O00000O101O00001O0000000O1000000000000O10000000O1000O10O10000000O1000O10000000000000000000000000000000000000O01000000000000000O100000000000000000000000000000000O1000O10000000O010000000O0100000O10O10000000O010000O10000O10000O100O10O01O100O1O100O1O100O010O100O100O010O1O1O1O1O10O010000O10O01O1O100O001O1O1O010O1O001M201N1100SROcN^l0]1_SOhN`l0X1]SOlNbl0T1ZSOPOel0P1[SOQOel0o0[SOQOel0n0[SOSOdl0n0[SOSOel0m0[SOTOcl0m0\\SOTOcl0l0]SOUOcl0k0]SOUObl0l0]SOVObl0i0_SOWOal0i0_SOXO`l0h0`SOYO_l0f0bSOZO]l0f0dSOZO\\l0f0cSO[O]l0e0cSO[O]l0d0dSO]O[l0c0dSO^O[l0c0eSO]O\\l0a0eSO_O[l0a0eSO_O[l0a0eSO^O\\l0a0dSO@\\l0`0dSO@\\l0?eSOA[l0?eSOA[l0>fSOA[l0?eSOA[l0>fSOA\\l0>eSO_O]l0a0cSO^O_l0`0cSO^Oal0?`SO_Ocl0>_SOAhl08YSOFml04USOKml03TSOLnl01TSOMnl02TSOLol0OWSOKnl0OnSdT1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        767,
+        895,
+        61,
+        61
+      ],
+      "area": 2367,
+      "score": 0.339111328125,
+      "anchor": [
+        797.5,
+        925.5
+      ],
+      "anchor_normalized": [
+        0.4283,
+        0.88311
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "okah01aP17M4L4K4I7K5N2O1O1O1O001O2N1O1O2N010O1O1O1O1O1O1O101N2OO1010OO10O01O10O01O1O001O1O1O1O1O1O1O1O1N2O1O0O2N2O3L4M2M2O1N2N4H_ZQQ1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1329,
+        941,
+        44,
+        36
+      ],
+      "area": 895,
+      "score": 0.32666015625,
+      "anchor": [
+        1351,
+        959
+      ],
+      "anchor_normalized": [
+        0.72556,
+        0.91508
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "lRaZ12fP11N2N101N101N1O2O001N100O1O2N1O1O1O2N1O1O2N1O2N1O1O1O2O0O100O10000000\\O`PO0`o0LePO3[o0LhPO2Xo0MjPO1Xo0MjPO2Vo0MlPO2To0NmPO0To0MPQO2lo0M``c?"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1606,
+        953,
+        104,
+        34
+      ],
+      "area": 2159,
+      "score": 0.321533203125,
+      "anchor": [
+        1658,
+        970
+      ],
+      "anchor_normalized": [
+        0.89044,
+        0.92557
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "_b\\c11eP13N2N2N2N2O1O1O1O00001O001O001O010O001O1O1O2N100O1O00100O1O1O001O010O00001O000000O1000000000000O1000000O100000000O100000001O0O100O1000000O1000000000O01000001O00000O1000001N100O100O2O0O100O101O000O2O0O2M3M3Nlcj4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        1460,
+        975,
+        94,
+        50
+      ],
+      "area": 1609,
+      "score": 0.318115234375,
+      "anchor": [
+        1507,
+        1000
+      ],
+      "anchor_normalized": [
+        0.80934,
+        0.9542
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          1048,
+          1862
+        ],
+        "counts": "`Ug^12eP12O1O1O2N1O1O1O1O1O1O1O1O10O0100000O0100O1O100O010O010O010O1O100O00010O010O01000O1000O010O100O10O010O10O010O0010O0100O010O01O010O000001O01O0001O01O01O001O0000001O0000001N1O101N2N2N3N1N2NYWj9"
+      }
+    }
   ]
 }

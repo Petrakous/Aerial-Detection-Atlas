@@ -88,5 +88,1239 @@
       "pixel_count": 529,
       "score": 0.8862
     }
+  ],
+  "instances": [
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "bbox": [
+        364,
+        263,
+        22,
+        47
+      ],
+      "area": 529,
+      "score": 0.88623046875,
+      "anchor": [
+        375,
+        286.5
+      ],
+      "anchor_normalized": [
+        0.51867,
+        0.78065
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "WhR41\\;3M2J6L4K5C=L4K5N2O1001O2N4L4L`0A4K6J3M2M2O\\_h3"
+      }
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "bbox": [
+        362,
+        281,
+        361,
+        86
+      ],
+      "area": 27696,
+      "score": 0.875,
+      "anchor": [
+        542.5,
+        324
+      ],
+      "anchor_normalized": [
+        0.75035,
+        0.88283
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "eQR4^1^9cNoFc1]9100O1000000000000000000000O10000001UObNcG^1\\8hN_GY1`8jN]GV1b8mN\\GS1d8nN[GR1d8oN\\GP1e8ROXGo0g8SOVGn0k8k0O10000001O00001O000000000000001O0000000000000001OO10000000000000000000000000000000O10O101O0000000001O0000000000000O100001O2N004L3M001O000000000000000000000000O1O1M3N20000000000O100000000O1MbMUG_2j8`MWG`2l800000000000000000000O2O0000000000000000O100000000000000000O100000O11O01O01O00O1000000000000O1000000001O000000001O000000001O3M2N1O1O0000000000000000000000O100O1N101M4N1O1000000001O0O1000000000000001O0000000O1001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000O100000010OO10000001N10000000O10000001O000000O1001O001O00001O0N2O11O1O1O0000000000000000O11O00001O000000000000000001O00001O001O001O00001O0VNmFX1S9hNmFX1S9gNoFX1Q9gNPGY1P9eNRG[1b9O0O2hNZFFN>OA03i98ZFFN>OA030"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        140,
+        0,
+        41,
+        26
+      ],
+      "area": 1022,
+      "score": 0.8525390625,
+      "anchor": [
+        160.5,
+        13
+      ],
+      "anchor_normalized": [
+        0.22199,
+        0.03542
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "TVb12P;c0H3N2O0000000000000000000000000000000000000000000000000000000000000000000000O3]OZE2mbR6"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        19,
+        0,
+        42,
+        27
+      ],
+      "area": 1111,
+      "score": 0.84619140625,
+      "anchor": [
+        40,
+        13.5
+      ],
+      "anchor_normalized": [
+        0.05533,
+        0.03678
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "Rj6b0h:8M1O000000000000000000000000000000000000000000000000000000000000000000000000O107FVX]7"
+      }
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "bbox": [
+        30,
+        251,
+        125,
+        28
+      ],
+      "area": 3315,
+      "score": 0.8232421875,
+      "anchor": [
+        92.5,
+        265
+      ],
+      "anchor_normalized": [
+        0.12794,
+        0.72207
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "YP;<n:6K5O00001O000O101O0000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000001N3N5JVZ[6"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        486,
+        0,
+        49,
+        16
+      ],
+      "area": 765,
+      "score": 0.79931640625,
+      "anchor": [
+        510.5,
+        8
+      ],
+      "anchor_normalized": [
+        0.70609,
+        0.0218
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "jU^5<S;2N1O1O000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1O3IW\\S2"
+      }
+    },
+    {
+      "label_index": 33,
+      "class_name": "Mud",
+      "bbox": [
+        0,
+        269,
+        357,
+        96
+      ],
+      "area": 28270,
+      "score": 0.79443359375,
+      "anchor": [
+        178.5,
+        317
+      ],
+      "anchor_normalized": [
+        0.24689,
+        0.86376
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "h::U;0I8_NAQGNG0O73?l8]OoF56NJV1o8VOSGT1m8nNPGT1o8f001O00000000001O00000000001O00001O0000010O00_OZGZNf8f1YG[Nf8e1[GZNe8f1[G[Nd8e1\\G[Nd8g1ZGYNf8h1ZGWNf8i1ZGWNg8h1ZGWNf8j1YGVNg8j1YGVNg8j1YGVNg8j1YGVNg8j1XGWNh8i1XGWNh8i1WGXNi8h1WGXNj8g1UGZNk8U200000000000000000000000O10000O010O100O10000O1N2O1O10000O2O000EkF]NT9c1lF]NT9c1lF]NT9o100000000000DlF]NT9b1mF^NS9b1mF^NS9b1mF^NS9b1mF^NS9b1lF_NT9n10000O1000000000000000001O01O000000000000O100000000000001O0000001O1O1O1N2O1O0000000000000000000000000000000000000000000O10000O010O1M300O0100000000O1000O10000001O0001O000001OO1000iN\\GCd8<_GBa8=aGA`8=dGA\\8>fGAZ8>gGBY8>hGAX8?hGAX8>jGAV8?iGCU8>kGBU8>kGBU8=lGCT8=lGCT8=mGBS8?lGAT8?lGAT8`0mG^OS8b0nG]OR8d0nG[OS8f0kGZOT8h0kGXOU8h0lGWOT8i0lGWOT8i0lGWOT8j0kGVOU8j0kGVOU8k0jGUOV8k0kGTOU8l0lG`N@?c8S1QHlNo7T1RHjNo7V1QHjNo7V1QHjNo7V1RHjNn7V1QHjNo7V1QHjNo7V1RHiNn7W1RHiNn7W1RHiNn7W1SHhNm7W1THiNl7W1UHhNk7X1UHhNk7W1VHhNk7X1UHhNk7X1UHhNk7X1UHhNk7X1UHhNk7Y1THgNl7Y1UHfNk7Z1VHeNj7[1VHeNk7Y1UHhNk7X1UHhNk7W1UHkNj7U1VHkNj7T1XHkNh7U1XHkNg7U1ZHlNe7T1[HlNe7T1ZHmNf7R1[HnNe7R1[HnNe7Q1\\HoNd7Q1\\HoNd7Q1\\HoNc7Q1^HoNb7Q1^HoNb7Q1^HPOa7P1^HQOb7P1]HPOc7P1]HPOc7P1]HPOc7P1]HoNd7Q1\\HoNd7R1[HnNe7R1[HnNe7R1[HnNe7S1ZHmNf7T1XHmNh7T1UH^NYO>b8U1THmNl7T1SHlNm7U1RHkNn7U1QHlNo7U1PHkNP8V1oGjNQ8W1nGiNR8Y1lGgNS8\\1kGdNU8]1jGcNV8]1jGcNV8]1jGcNV8]1iGdNW8]1hGcNX8]1dGgN\\8V21O00000000000000000000000000000000O2O000000000000000000000000000000000000O11O0000000000000000001O00000000000000O1000000000000001OO1000O1000010O0000O101]NfGNm8kNXH7gTS4"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        422,
+        181,
+        38,
+        68
+      ],
+      "area": 1846,
+      "score": 0.77294921875,
+      "anchor": [
+        441,
+        215
+      ],
+      "anchor_normalized": [
+        0.60996,
+        0.58583
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "g^g46c:1kE1S:6bE0\\:c0O1N1O2GnNQFV1k9`0H1N1O2O001N101O3L1000000000O10000dNjF?W9@jF?V9@kF`0V9_OjFa0W9^OjFa0V9_OjF`0X9_OhF`0Z9_OfF=_9BbFOm90UFDV:;`0M7IXRn2"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        641,
+        171,
+        63,
+        73
+      ],
+      "area": 2923,
+      "score": 0.73876953125,
+      "anchor": [
+        672.5,
+        207.5
+      ],
+      "anchor_normalized": [
+        0.93015,
+        0.5654
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "UmU71Y;?E2N5[E^OS:R1M2N101O001O0000001OO10001N10000O10001O0O101O00000010O0VFPOU9Q1gFSOY9P1_FTOa9^1`FVNY9R2OO001O0O2O001O000M4M3O0O101O1O001O1O001O1O1O2N1O2N2M5Boc6"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        362,
+        0,
+        30,
+        17
+      ],
+      "area": 452,
+      "score": 0.69189453125,
+      "anchor": [
+        377,
+        8.5
+      ],
+      "anchor_normalized": [
+        0.52144,
+        0.02316
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "igQ4;Q;5N0000000000000000000000000000001O00000000000000O100N2D<OVdf3"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        660,
+        18,
+        63,
+        28
+      ],
+      "area": 855,
+      "score": 0.64794921875,
+      "anchor": [
+        691.5,
+        32
+      ],
+      "anchor_normalized": [
+        0.95643,
+        0.08719
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "\\b\\73Y;4N10001O00000001O00010O000102M2N1O010O000000O10000O1O1N1011N1O1O101N101N2O00001O00000N2M3N20O01001N2N2O1N3N1O2M2O2N1O2M2N10nN"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        658,
+        0,
+        46,
+        34
+      ],
+      "area": 1419,
+      "score": 0.62109375,
+      "anchor": [
+        681,
+        17
+      ],
+      "anchor_normalized": [
+        0.94191,
+        0.04632
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "aj[774Ll:>N9F4M1O1N1000001O000000O1000000001O000000000000000000000000O10001N1O1O100O002O0000001O1\\O[E;`T7"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        486,
+        25,
+        28,
+        13
+      ],
+      "area": 261,
+      "score": 0.59326171875,
+      "anchor": [
+        500,
+        31.5
+      ],
+      "anchor_normalized": [
+        0.69156,
+        0.08583
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "lV^53Y;3M3N3O0O100001O000000001O001O1O001N1000O100001O00001MRlZ2"
+      }
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "bbox": [
+        284,
+        0,
+        34,
+        36
+      ],
+      "area": 1136,
+      "score": 0.58154296875,
+      "anchor": [
+        301,
+        18
+      ],
+      "anchor_normalized": [
+        0.41632,
+        0.04905
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "TiU3<S;=QE[OZ:n0O0000000000O11O0000001O00001O000000000000000000O1O100O100O100FhE\\OT_a4"
+      }
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "bbox": [
+        588,
+        0,
+        33,
+        38
+      ],
+      "area": 1147,
+      "score": 0.57666015625,
+      "anchor": [
+        604.5,
+        19
+      ],
+      "anchor_normalized": [
+        0.8361,
+        0.05177
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "ggb67W;k0TO3O0000000000001O000000000000000000000000000000000000O100O2YOh0DoD0nlT1"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        364,
+        174,
+        59,
+        55
+      ],
+      "area": 2760,
+      "score": 0.5712890625,
+      "anchor": [
+        393.5,
+        201.5
+      ],
+      "anchor_normalized": [
+        0.54426,
+        0.54905
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "cdR44X;8VEJP:=dE^O1:W:m0L2O1N2N1O100O1O100O1O10000O100O10000O10000O100000000000000000000001O001O001O001O1O1O001O1O1O1O2N1O2N1O1N4J6Hd0^OSZ[3"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        463,
+        13,
+        16,
+        22
+      ],
+      "area": 230,
+      "score": 0.5556640625,
+      "anchor": [
+        471,
+        24
+      ],
+      "anchor_normalized": [
+        0.65145,
+        0.0654
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "bnU53[;3M2O1N2O4K7J01O00001O1N2N6K3Ke]g2"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        523,
+        20,
+        30,
+        17
+      ],
+      "area": 458,
+      "score": 0.55419921875,
+      "anchor": [
+        538,
+        28.5
+      ],
+      "anchor_normalized": [
+        0.74412,
+        0.07766
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "n^k5<R;1O100O10000O1000000000000000000000000000000O10000001N1O2IVml1"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        287,
+        27,
+        71,
+        24
+      ],
+      "area": 959,
+      "score": 0.55224609375,
+      "anchor": [
+        322.5,
+        39
+      ],
+      "anchor_normalized": [
+        0.44606,
+        0.10627
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "dlV34Y;3O000O2O00010O00100O1O2N10O00001OO10O1O100O01000O02O0O101O0O101O0O1O1O1O11O0000001O001O10O00101N00N2O1O100O10000O010000O10O1000000000001M7GSiR4"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        31,
+        163,
+        43,
+        46
+      ],
+      "area": 1661,
+      "score": 0.55029296875,
+      "anchor": [
+        52.5,
+        186
+      ],
+      "anchor_normalized": [
+        0.07261,
+        0.50681
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "ZY;361d:g0G5L3O1M201N00100O100O100O100O100O10000000000001O00001O1O001O1O1O002N1O1O1O2N2N3M2Ma]X7"
+      }
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "bbox": [
+        223,
+        0,
+        29,
+        41
+      ],
+      "area": 1035,
+      "score": 0.544921875,
+      "anchor": [
+        237.5,
+        20.5
+      ],
+      "anchor_normalized": [
+        0.32849,
+        0.05586
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "fm_25U;o0VO3M001O001O0000000000000000000000000001O1lNjEm0W:POlEo0[:O1N102D`EBm:O^iX5"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        172,
+        28,
+        36,
+        15
+      ],
+      "area": 452,
+      "score": 0.5263671875,
+      "anchor": [
+        190,
+        35.5
+      ],
+      "anchor_normalized": [
+        0.26279,
+        0.09673
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "hem15V;5N2O0O10000O1000000000000000000000000O10000000O1000001O00001O2N2N3M2MWah5"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        361,
+        15,
+        28,
+        20
+      ],
+      "area": 425,
+      "score": 0.5244140625,
+      "anchor": [
+        375,
+        25
+      ],
+      "anchor_normalized": [
+        0.51867,
+        0.06812
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "Q]Q43W;:J2O0O1000000O1O1O100O10000001O1O001N2O001N1O001O1N3KRfg3"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        142,
+        34,
+        24,
+        10
+      ],
+      "area": 188,
+      "score": 0.5146484375,
+      "anchor": [
+        154,
+        39
+      ],
+      "anchor_normalized": [
+        0.213,
+        0.10627
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "imb13Z;3N1O1O101O0000000001O00001O00000000000O2O1O1MnbW6"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        138,
+        161,
+        108,
+        71
+      ],
+      "area": 7157,
+      "score": 0.5087890625,
+      "anchor": [
+        192,
+        196.5
+      ],
+      "anchor_normalized": [
+        0.26556,
+        0.53542
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "[da17Q;_1hN1N1N3N101N1O1O2N1000000O10000O10O10000000O10000000000O10000000000000000000000000000000001O0O1000O10000000000000000000000000000000000000001O000000000000000000000001O000000000001O000O2O0000001N101N102M1O2N3N5J3L2WOoE1US[5"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        66,
+        357,
+        63,
+        10
+      ],
+      "area": 550,
+      "score": 0.493896484375,
+      "anchor": [
+        97.5,
+        362
+      ],
+      "anchor_normalized": [
+        0.13485,
+        0.98638
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "\\Ph01[;3O100O10000O100O1000000O10000000000O100000000000000000000000000000000000000000000000000000000000000000000001O0000002N1O1O2NRad6"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        539,
+        174,
+        93,
+        103
+      ],
+      "area": 6351,
+      "score": 0.48828125,
+      "anchor": [
+        585.5,
+        225.5
+      ],
+      "anchor_normalized": [
+        0.80982,
+        0.61444
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "W[Q61];100O10000000001O00001O00001O0O2O001O1O2N1O1O2N2M3N3M2N1oFYOX7g0fG]OAIa07V8d0fGGKMZ8<iGj0Q8WOnGm0n7SOQHo0n7QORHo0n7QORHo0n7QORHP1m7QOQHP1o7POQHP1o7POPHQ1P8POnGQ1R8POlGQ1U8T100000000000001O01O00000000000000000000001O0000000000001O000000000000001O00001O00001O1O00002N2N3M1N5aMVGKNd04[O40J7QgP1"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        0,
+        28,
+        62,
+        33
+      ],
+      "area": 1021,
+      "score": 0.477783203125,
+      "anchor": [
+        31,
+        44.5
+      ],
+      "anchor_normalized": [
+        0.04288,
+        0.12125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "U1:U;001O0000001O1O2O5J1N2O001O00000O1000000O100O01DdED\\:<;010O10O10O1000000O01000000000O1000000000000000000000O10001O0O10001N100Nok\\7"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        450,
+        180,
+        127,
+        112
+      ],
+      "area": 10520,
+      "score": 0.469482421875,
+      "anchor": [
+        513.5,
+        236
+      ],
+      "anchor_normalized": [
+        0.71024,
+        0.64305
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "Z_Q51^;1O2N1O0b13dMY1TOd0A6E:N2O2L3M3M3N2N1O2N01N3N1O1010O0100O100O0010000000000O10000000000000000000000000000000000000O10000000000000000000000000000000000000000000000001O00000001O000000000000000001O00000O1010O1O2bGPMZ8X3J2OO100O1O3M3M2N5K3L6K0OOiMXGd03Go8AS2000000000000000002MoSd1"
+      }
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "bbox": [
+        0,
+        13,
+        74,
+        30
+      ],
+      "area": 1763,
+      "score": 0.42724609375,
+      "anchor": [
+        37,
+        28
+      ],
+      "anchor_normalized": [
+        0.05118,
+        0.07629
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": ">h0g:0O10001O001O00001O00O100000001O0000013L100O1O00010O00001O0000000000O1000000000000000000000000000000O0O200000000O1O1N2O1O100000000000000001O0L_EYOb:d0=EfbX7"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        123,
+        25,
+        14,
+        16
+      ],
+      "area": 143,
+      "score": 0.42236328125,
+      "anchor": [
+        130,
+        33
+      ],
+      "anchor_normalized": [
+        0.17981,
+        0.08992
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "aS\\11\\;3O2M2O5K2N1O01O001N3N2M5Jeoa6"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        75,
+        168,
+        41,
+        56
+      ],
+      "area": 1727,
+      "score": 0.410400390625,
+      "anchor": [
+        95.5,
+        196
+      ],
+      "anchor_normalized": [
+        0.13209,
+        0.53406
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "oQk03W;g0]O2L4K5N101N2N2O1N2O2N3L2O1O001O00001O01O001N101N2O1O1O1N2O1O1O0O2O1N1[OiE0Z:OiELY:3c0L5In[i6"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        361,
+        233,
+        24,
+        50
+      ],
+      "area": 869,
+      "score": 0.40771484375,
+      "anchor": [
+        373,
+        258
+      ],
+      "anchor_normalized": [
+        0.51591,
+        0.703
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "UdQ45:OP:MjES1P:;K2O001O00O1N2L5M2N4I5M4O20O3M2N1O2O01N2M6Falh3"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        267,
+        168,
+        89,
+        78
+      ],
+      "area": 4607,
+      "score": 0.40283203125,
+      "anchor": [
+        311.5,
+        207
+      ],
+      "anchor_normalized": [
+        0.43084,
+        0.56403
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "^lo24W;7L6K0O5K3M2N1N3O0O2M2N2O1O1O2N1N3N10O10000000O2RFcNg9c1N2O1O1O002O0O1O11O01O00010O1O3M2O0O2O0O1O1O1O002N00000O1O1O1O100001O1O1O1N2O1O1O1N2K4N3M3M3N1O3N3M2N1N3N5L1N1O011O0O010O4L3M2@\\E1ReS4"
+      }
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "bbox": [
+        283,
+        10,
+        74,
+        28
+      ],
+      "area": 1871,
+      "score": 0.386962890625,
+      "anchor": [
+        320,
+        24
+      ],
+      "anchor_normalized": [
+        0.4426,
+        0.0654
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "Z^U33S;b0G4K100000001O00000000O1000000000000000000000000000O1000O100000000O10000000000001O0000000000000000000000000000000000000000O100000000O10000000001K[US4"
+      }
+    },
+    {
+      "label_index": 30,
+      "class_name": "Animal",
+      "bbox": [
+        602,
+        79,
+        72,
+        37
+      ],
+      "area": 483,
+      "score": 0.37646484375,
+      "anchor": [
+        638,
+        97.5
+      ],
+      "anchor_normalized": [
+        0.88243,
+        0.26567
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "ejg63\\;00100O0010O010O01O00001O01O0001O0001O0001O01O010O0100jDNm::10O010O01O1O101N1O1O000000000010OO1000001O00010O1001O001O01O00000O10O01O1O0000000O2O00^^a0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        0,
+        356,
+        30,
+        11
+      ],
+      "area": 255,
+      "score": 0.365234375,
+      "anchor": [
+        15,
+        361.5
+      ],
+      "anchor_normalized": [
+        0.02075,
+        0.98501
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "T;;T;00000001O00000000001O000000001O0000001O000000001O00001O00aPh7"
+      }
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "bbox": [
+        376,
+        230,
+        69,
+        44
+      ],
+      "area": 2260,
+      "score": 0.337646484375,
+      "anchor": [
+        410.5,
+        252
+      ],
+      "anchor_normalized": [
+        0.56777,
+        0.68665
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "`oV45Y;2O2M2O1O1O3M3M3M2N;E2N1O2N3M000000000000001O00000000000000000000000000000000000000000000O10001O001O1O3M6I2O1O0O2N101N2N3N1M2J7N100O2O2M]\\S3"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        30,
+        215,
+        21,
+        23
+      ],
+      "area": 346,
+      "score": 0.336669921875,
+      "anchor": [
+        40.5,
+        226.5
+      ],
+      "anchor_normalized": [
+        0.05602,
+        0.61717
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "on:5W;=D4M1000000001O2N1O1O1O0O2O001N2N2O1N4Jnc`7"
+      }
+    },
+    {
+      "label_index": 30,
+      "class_name": "Animal",
+      "bbox": [
+        638,
+        74,
+        50,
+        15
+      ],
+      "area": 274,
+      "score": 0.326904296875,
+      "anchor": [
+        663,
+        81.5
+      ],
+      "anchor_normalized": [
+        0.91701,
+        0.22207
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "hgT73\\;0O100O010O1O010O001O0010O1O010O1000001O01O2N1O000O1O100OO2O1O001O1O10001O000000000001O00000000O2NR_<"
+      }
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "bbox": [
+        636,
+        211,
+        39,
+        68
+      ],
+      "area": 2042,
+      "score": 0.31982421875,
+      "anchor": [
+        655.5,
+        245
+      ],
+      "anchor_normalized": [
+        0.90664,
+        0.66757
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "RUT72f04FNc92ZFMN520\\9:\\F50[O3:^9d1L2O0002N1O01O01O1O0000000010O0001O001\\N^FY1c9eN^F[1k9000000000001O1N3M2N2N1N3M2TOgE`0]:ZOhE9fYa0"
+      }
+    },
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "bbox": [
+        154,
+        244,
+        183,
+        27
+      ],
+      "area": 3407,
+      "score": 0.318359375,
+      "anchor": [
+        245.5,
+        257.5
+      ],
+      "anchor_normalized": [
+        0.33956,
+        0.70163
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "P^g11];4M3L:G5J11O0O1N2O10000000000000O10000000001O001N1000000000000000000O100000000O100000000000000000000000000000000000000000000000000000000000000000000000001O000001O010OO1000000000000001O0O2O1N100000000000001O000000001O0000001O1O001O000O10000000001O0000000000000000001O00001O0000000000000O100000000001O000000O1001O01O000000000000O100000O10O1001O0000000000001O1O1O1O5JfRZ4"
+      }
+    },
+    {
+      "label_index": 30,
+      "class_name": "Animal",
+      "bbox": [
+        237,
+        76,
+        61,
+        30
+      ],
+      "area": 385,
+      "score": 0.31591796875,
+      "anchor": [
+        267.5,
+        91
+      ],
+      "anchor_normalized": [
+        0.36999,
+        0.24796
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "_Pe21^;1O1O1O010O00010O001O00000010O0000010O00010O0106I10O010O00010O2N1O1O001O00000000001O0010O10000001O0000000O001O0000001O0OQWh4"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        238,
+        224,
+        18,
+        18
+      ],
+      "area": 235,
+      "score": 0.31396484375,
+      "anchor": [
+        247,
+        233
+      ],
+      "anchor_normalized": [
+        0.34163,
+        0.63488
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "i`e23Y;5L3N2O002N1N11O00100O001O1O000O2MiTW5"
+      }
+    }
   ]
 }

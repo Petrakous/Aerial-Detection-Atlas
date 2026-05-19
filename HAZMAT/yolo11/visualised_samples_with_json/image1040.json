@@ -1,0 +1,18 @@
+{
+  "image_id": "image1040",
+  "file_name": "image1040.jpg",
+  "width": 1000,
+  "height": 485,
+  "detections": [
+    {
+      "bbox": [
+        429.9312744140625,
+        254.8377685546875,
+        143.59661865234375,
+        114.70062255859375
+      ],
+      "class_name": "dangerous",
+      "confidence": 0.9094863533973694
+    }
+  ]
+}

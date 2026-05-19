@@ -1,0 +1,26 @@
+{
+  "image_id": "image10321",
+  "file_name": "image10321.jpg",
+  "width": 1000,
+  "height": 750,
+  "annotations": [
+    {
+      "bbox": [
+        450,
+        411,
+        104,
+        92
+      ],
+      "class_name": "inhalation-hazard"
+    },
+    {
+      "bbox": [
+        437,
+        180,
+        112,
+        113
+      ],
+      "class_name": "non-flammable-gas"
+    }
+  ]
+}

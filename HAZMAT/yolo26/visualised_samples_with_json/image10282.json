@@ -1,0 +1,18 @@
+{
+  "image_id": "image10282",
+  "file_name": "image10282.jpg",
+  "width": 1000,
+  "height": 485,
+  "detections": [
+    {
+      "bbox": [
+        471.41180419921875,
+        175.54551696777344,
+        205.01934814453125,
+        178.00111389160156
+      ],
+      "class_name": "infectious-substance",
+      "confidence": 0.956057608127594
+    }
+  ]
+}

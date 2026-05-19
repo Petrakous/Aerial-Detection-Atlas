@@ -40,5 +40,231 @@
       "pixel_count": 158,
       "score": 0.985
     }
+  ],
+  "instances": [
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        74,
+        15,
+        500,
+        294
+      ],
+      "area": 103580,
+      "score": 0.9993119239807129,
+      "anchor": [
+        324,
+        162
+      ],
+      "anchor_normalized": [
+        0.54,
+        0.40602
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          399,
+          600
+        ],
+        "counts": "Snl0c0f;l1XN9H<D4L3N2M3M2O2M4L3M4L4L3N3L3M3M3M2N3N1N2O1N2N2O0O2O1N1O2O1N101N2O0O2O1O0O2O1O0O2O001N10O0100O001O100O010O100O10O10O1000O01000O010O01O010O001O00010O010O01O100000000O0100000000000O1000000000000O1000000000000000000000000O1000000000O2O1O001O1O1N2O1O2N1O2M3N2N2M2O1O1N2O1N2O1N2O2N4K4M4L3L4M2N2N1N3N1O1O001N2O001N2O1N2O0O2N2N1O2O0O2N100O2O000O10001N10000O1O100O1O101N1O100O100O10001O0O1000000O2O0000000O2O0000001N10000O10000O2O0O100O100O100O1000001O00O101O00001O1O0O2O001O001O0O101O00001N101O001O1N2O1O1O1O1N2O1O001O001N10001O001O1O001O1O1O1O1O001O0O2O00001O00001O001O1O001O1O1O001O1O00001O00001O00001O00001O001O1O001O1O1O001O00001O000O101O000000001O0O10001O0000001N101O0O2O1O1N101N101N10001O0O101O000O101O001O001N101O1O1O1O1N101O001O00000O2O0000001O0O101O00001N101O001N101O001N10001N10001N1000001N100000001O0O101O00001O1O001O1O1N2O001O001O00001O000O10001O0000001O000O2O00001O001O001N101O0O2O00001N100O2O000O101O0O10001O0O2O001N101O1N2O1O1N101O0O2O001N10001N101N2O0O2N5K4L5L2M3M3M2N2O1N2N2N5I6K7H7D=QN^P:"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        47,
+        268,
+        66,
+        43
+      ],
+      "area": 2371,
+      "score": 0.9929088354110718,
+      "anchor": [
+        80,
+        289.5
+      ],
+      "anchor_normalized": [
+        0.13333,
+        0.72556
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          399,
+          600
+        ],
+        "counts": "Tcb0;Q<7H6M1N2O1O1N2O0O2O1O100O100O1000000O10000O100000000000001O0000001O00000001O0001O0001O01O00000001O00000O1000010O000O2O00001N2[OiD0X;HQE4h;Mo^m5"
+      }
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "bbox": [
+        511,
+        293,
+        12,
+        23
+      ],
+      "area": 158,
+      "score": 0.9850085973739624,
+      "anchor": [
+        517,
+        304.5
+      ],
+      "anchor_normalized": [
+        0.86167,
+        0.76316
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          399,
+          600
+        ],
+        "counts": "X]W63Z<3I6G9O2O01O1O8H4L4K3M[fm0"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        0,
+        75,
+        68,
+        159
+      ],
+      "area": 8008,
+      "score": 0.9528281092643738,
+      "anchor": [
+        34,
+        154.5
+      ],
+      "anchor_normalized": [
+        0.05667,
+        0.38722
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          399,
+          600
+        ],
+        "counts": "\\2f4h76K1O01O2N1O1O0001O000001O01O01O1O2N001O0000001N100O2N3N1N2O001O003M2N2N2N1O1O0O2O2N2N001O2N3M3hLUGf2f9D2N2N001O000O2O0ZNUFh0m9oN[FP1c:N100O2O0O2M4M4J8F^S_6"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        1,
+        231,
+        103,
+        73
+      ],
+      "area": 4776,
+      "score": 0.9096707701683044,
+      "anchor": [
+        52.5,
+        267.5
+      ],
+      "anchor_normalized": [
+        0.0875,
+        0.67043
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          399,
+          600
+        ],
+        "counts": "hd0T1Y;5M0O1O100O1O1N2J6J6M3O1O100O10000O10000O10000O100O100O010O01O1O001O100O1O100O1O1O1O100O0O2O2N1N2N2O001O1N2O1O1O1O100O100O100O2N1000000O100000001O0000001O0O101O10O01O1O1O1O1O1O0010O01O00001N101O001N2K5J7KhPQ6"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        574,
+        195,
+        20,
+        18
+      ],
+      "area": 291,
+      "score": 0.824579656124115,
+      "anchor": [
+        584,
+        204
+      ],
+      "anchor_normalized": [
+        0.97333,
+        0.51128
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          399,
+          600
+        ],
+        "counts": "Zko6<R<2N100O1O1O10000001O001N2O001O001O2M4M]T2"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        559,
+        247,
+        41,
+        25
+      ],
+      "area": 704,
+      "score": 0.6308263540267944,
+      "anchor": [
+        579.5,
+        259.5
+      ],
+      "anchor_normalized": [
+        0.96583,
+        0.65038
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          399,
+          600
+        ],
+        "counts": "URj6;S<2O0O1000000O1000O1000O10O01N2N2O001000000O0100000000O10O1000O1000000O100000001NYH"
+      }
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "bbox": [
+        2,
+        310,
+        253,
+        49
+      ],
+      "area": 5638,
+      "score": 0.6145452857017517,
+      "anchor": [
+        128.5,
+        334.5
+      ],
+      "anchor_normalized": [
+        0.21417,
+        0.83835
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          399,
+          600
+        ],
+        "counts": "hR1V1V;9J1N1000000000000000000000000000000001O0000000O100O1O2N1O1O1N2O100O2N1O1O1O2O1O0O1000001N1000000O101OO1000000000O1000000000000000000O1000000000000000O01000000000000000000000000O0100000000000O10000000000000000000000O1000000000000O100000000000000000001O000000000001O0000DWD2i;NWD3h;LYD4g;LYD4g;LZD4e;L[D5d;K]D5a;L_D6_;JaD6_;JaD7^;IcD6];JcD6];JcD5^;KbD5^;LaD4_;LaD4_;LaD4_;LbD3^;MbD3^;MbD3^;MbD3^;MbD3^;MbD3^;MbD3^;MbD3^;MbD3^;MbD3^;MbD3^;MbD3^;McD2];NcD2^;MbD3^;MbD3^;MbD3^;MbD3^;MbD3_;LaD4_;LaD4_;LaD4_;LaD4_;LbD3^;MbD3^;MbD3_;LaD4_;LaD4_;LaD4_;LaD4_;LaD4_;LaD4_;LaD4_;LaD4_;LaD4_;LaD4_;M`D3`;M`D3`;M`D3`;M`D3`;M`D3`;M`D3`;LbD3^;MbD2_;NaD2_;NaD2_;NaD2_;NbD1^;ObD1^;ObD1^;NcD1^;ObD1^;OcDO^;1bDN_;1cDM^;2cDM^;3?00O100000000000000O10O2O00000O100O1000000000000000O1000000000001O0000000O1000000O101O00kSV4"
+      }
+    }
   ]
 }

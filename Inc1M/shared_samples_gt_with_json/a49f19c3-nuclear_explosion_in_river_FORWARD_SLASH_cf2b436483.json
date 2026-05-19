@@ -5,39 +5,39 @@
   "height": 225,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 14217
+      "pixel_count": 12523
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 2730
+      "pixel_count": 2216
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 13141
     },
     {
       "label_index": 8,
-      "class_name": "Smoke",
-      "pixel_count": 13878
-    },
-    {
-      "label_index": 9,
       "class_name": "Flame",
-      "pixel_count": 3004
+      "pixel_count": 2651
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 697
+      "pixel_count": 683
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 2368
+      "pixel_count": 2208
     },
     {
-      "label_index": 27,
+      "label_index": 26,
       "class_name": "Boat",
-      "pixel_count": 1536
+      "pixel_count": 1405
     }
   ]
 }

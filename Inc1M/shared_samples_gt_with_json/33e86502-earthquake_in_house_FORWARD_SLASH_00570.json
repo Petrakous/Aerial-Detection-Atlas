@@ -5,24 +5,24 @@
   "height": 744,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 26567
+      "pixel_count": 23520
     },
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 315033
+      "pixel_count": 312903
     },
     {
-      "label_index": 18,
+      "label_index": 17,
       "class_name": "Destroyed building",
-      "pixel_count": 357005
+      "pixel_count": 354773
     },
     {
-      "label_index": 51,
+      "label_index": 50,
       "class_name": "Furniture",
-      "pixel_count": 2115
+      "pixel_count": 1879
     }
   ]
 }

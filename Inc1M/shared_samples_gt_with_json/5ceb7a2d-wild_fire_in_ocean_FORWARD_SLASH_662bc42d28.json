@@ -5,19 +5,19 @@
   "height": 480,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 138237
+      "pixel_count": 138037
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 157997
     },
     {
       "label_index": 8,
-      "class_name": "Smoke",
-      "pixel_count": 159037
-    },
-    {
-      "label_index": 9,
       "class_name": "Flame",
-      "pixel_count": 25532
+      "pixel_count": 24110
     }
   ]
 }

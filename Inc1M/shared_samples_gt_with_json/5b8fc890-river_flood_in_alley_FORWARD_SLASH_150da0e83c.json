@@ -5,39 +5,39 @@
   "height": 1067,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 950544
+      "pixel_count": 918019
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 11994
+      "pixel_count": 9096
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 142201
+      "pixel_count": 122927
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 85823
     },
     {
       "label_index": 25,
-      "class_name": "Green grass",
-      "pixel_count": 121102
+      "class_name": "Pole",
+      "pixel_count": 17992
     },
     {
-      "label_index": 26,
-      "class_name": "Pole",
-      "pixel_count": 19748
+      "label_index": 30,
+      "class_name": "Excavator",
+      "pixel_count": 9151
     },
     {
       "label_index": 31,
-      "class_name": "Excavator",
-      "pixel_count": 9703
-    },
-    {
-      "label_index": 32,
       "class_name": "Door",
-      "pixel_count": 4388
+      "pixel_count": 4199
     }
   ]
 }

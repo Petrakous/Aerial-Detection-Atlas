@@ -5,29 +5,29 @@
   "height": 1107,
   "segments": [
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 273433
+      "pixel_count": 271648
     },
     {
-      "label_index": 9,
+      "label_index": 8,
       "class_name": "Flame",
-      "pixel_count": 2667
+      "pixel_count": 2527
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 514348
+      "pixel_count": 503039
     },
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 23911
+      "pixel_count": 23413
     },
     {
-      "label_index": 21,
+      "label_index": 20,
       "class_name": "Road",
-      "pixel_count": 34628
+      "pixel_count": 34337
     }
   ]
 }

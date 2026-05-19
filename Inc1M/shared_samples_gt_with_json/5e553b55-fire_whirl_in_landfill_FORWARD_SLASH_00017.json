@@ -5,14 +5,14 @@
   "height": 900,
   "segments": [
     {
-      "label_index": 9,
+      "label_index": 8,
       "class_name": "Flame",
-      "pixel_count": 106313
+      "pixel_count": 108217
     },
     {
-      "label_index": 23,
+      "label_index": 22,
       "class_name": "Wall",
-      "pixel_count": 409926
+      "pixel_count": 601445
     }
   ]
 }

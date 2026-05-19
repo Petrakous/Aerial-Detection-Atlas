@@ -1,0 +1,17 @@
+{
+  "image_id": "image10099",
+  "file_name": "image10099.jpg",
+  "width": 750,
+  "height": 1000,
+  "annotations": [
+    {
+      "bbox": [
+        267,
+        410,
+        178,
+        211
+      ],
+      "class_name": "flammable"
+    }
+  ]
+}

@@ -5,34 +5,34 @@
   "height": 1512,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 706568
+      "pixel_count": 712630
     },
     {
-      "label_index": 3,
+      "label_index": 2,
       "class_name": "Fence",
-      "pixel_count": 295873
+      "pixel_count": 167992
     },
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 7245
+      "pixel_count": 6759
     },
     {
-      "label_index": 18,
+      "label_index": 17,
       "class_name": "Destroyed building",
-      "pixel_count": 1081833
+      "pixel_count": 1079753
     },
     {
-      "label_index": 23,
+      "label_index": 22,
       "class_name": "Wall",
-      "pixel_count": 287143
+      "pixel_count": 286087
     },
     {
-      "label_index": 31,
+      "label_index": 30,
       "class_name": "Excavator",
-      "pixel_count": 90709
+      "pixel_count": 49883
     }
   ]
 }

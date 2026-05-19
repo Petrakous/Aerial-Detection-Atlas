@@ -5,24 +5,24 @@
   "height": 480,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 2546
+      "pixel_count": 2396
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 41157
+      "pixel_count": 40195
     },
     {
-      "label_index": 21,
+      "label_index": 20,
       "class_name": "Road",
-      "pixel_count": 46157
+      "pixel_count": 44519
     },
     {
-      "label_index": 31,
+      "label_index": 30,
       "class_name": "Excavator",
-      "pixel_count": 10475
+      "pixel_count": 10301
     }
   ]
 }

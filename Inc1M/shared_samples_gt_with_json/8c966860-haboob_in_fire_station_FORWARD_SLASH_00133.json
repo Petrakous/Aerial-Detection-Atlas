@@ -5,29 +5,29 @@
   "height": 360,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 3264
+      "pixel_count": 3065
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 7400
+      "pixel_count": 7098
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 77891
     },
     {
       "label_index": 8,
-      "class_name": "Smoke",
-      "pixel_count": 80153
-    },
-    {
-      "label_index": 9,
       "class_name": "Flame",
-      "pixel_count": 36264
+      "pixel_count": 34998
     },
     {
-      "label_index": 18,
+      "label_index": 17,
       "class_name": "Destroyed building",
-      "pixel_count": 96622
+      "pixel_count": 91061
     }
   ]
 }

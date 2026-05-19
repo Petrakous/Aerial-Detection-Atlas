@@ -1,0 +1,18 @@
+{
+  "image_id": "image10112",
+  "file_name": "image10112.jpg",
+  "width": 252,
+  "height": 520,
+  "detections": [
+    {
+      "bbox": [
+        83.29460906982422,
+        292.8306579589844,
+        66.33992767333984,
+        62.843963623046875
+      ],
+      "class_name": "dangerous",
+      "confidence": 0.8608810305595398
+    }
+  ]
+}

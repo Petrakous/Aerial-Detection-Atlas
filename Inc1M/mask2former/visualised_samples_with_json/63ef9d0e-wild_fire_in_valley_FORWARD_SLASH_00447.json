@@ -40,5 +40,231 @@
       "pixel_count": 61049,
       "score": 0.4235
     }
+  ],
+  "instances": [
+    {
+      "label_index": 4,
+      "class_name": "Helmet",
+      "bbox": [
+        352,
+        286,
+        54,
+        35
+      ],
+      "area": 1358,
+      "score": 0.9524226784706116,
+      "anchor": [
+        379,
+        303.5
+      ],
+      "anchor_normalized": [
+        0.37012,
+        0.43669
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          695,
+          1024
+        ],
+        "counts": "fV_76_e03M2N3N1O1O2O0O2N2N1N2O1O1O001O010O10O01O100O0100000O1000001O000000000001O00010O001O1O1O1O101N2O0O2N5I8I3L_TS="
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        0,
+        0,
+        197,
+        693
+      ],
+      "area": 111004,
+      "score": 0.9486503601074219,
+      "anchor": [
+        98.5,
+        346.5
+      ],
+      "anchor_normalized": [
+        0.09619,
+        0.49856
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          695,
+          1024
+        ],
+        "counts": "0de0300000000001O00000000000000000000000000000000000000000000000000O1000000000000000000000000000000001O0000000000000000000000000000000000000000000000O100000000000000000000O1000000000000000000000000000000000000000000000000000000O1000000O1N2L4L4G9M3M3N2bN^Oe]Od0ma0Nm]O4Pb05e]O0Xb0i1M3L4L4B>O1N2O1N2M3N2M3N2N2O1N2O1N2N2N2N2L4J6WOUKW@Z5\\?g0J6M3K5N2N2O1M3M3K5E;POP1D<VI^G5l8G^GVO_9f0gFcNn9X1_FnMS:j1]FhMi9R2`GfKe9U4fF`K_9[4T4I8J=A7J5L4M3L5J7J6J5L5K6J4L4L4L:G5J7I4L5J6K5K6J8GUVaa0"
+      }
+    },
+    {
+      "label_index": 10,
+      "class_name": "Fire hose",
+      "bbox": [
+        338,
+        442,
+        193,
+        253
+      ],
+      "area": 3240,
+      "score": 0.8077511191368103,
+      "anchor": [
+        434.5,
+        568.5
+      ],
+      "anchor_normalized": [
+        0.42432,
+        0.81799
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          695,
+          1024
+        ],
+        "counts": "jmU78Ue0o0VO^1fN7V]O_MUb0T3R^OdL\\a0R4K3024XL[^Om2bb0FO4ML7SMo]Of1Uc0L3M3M2N3M3M`0@<D6J3M4LY^i10gaVN0dZO3od0MmZO7Re0IlZO;`3CQ>b0mA@Q>`0oABQ><nAES>:mAGS>8mAHS>8mAHT>7lAIT>7lAIT>8kAHV>8iAHW>9hAGY>8gAHZ>7fAIZ>8eAH\\>7dAI]>7aAJ`>6_AJb>5^AKb>6]AJd>5\\AKe>5ZAKg>4YALh>4WALi>5VAKk>4UALk>5SALn>4QALP?3PAMQ?3n@MS?2l@OU?2i@NX?2f@O[?0d@1\\?0c@O_?0a@0`?0^@1c?0[@Og?2W@Ni?3U@Mn?2Q@NP`03m_OMT`05j_OJX`07e_OJ[`07d_OH^`07b_OH``08^_OIc`07\\_OIe`06[_OIg`06Y_OJi`05V_OKl`04R_OMPa03n^OLTa04k^OLVa04h^OMZa02e^ON\\a01d^OO]a00c^O0`a0N^^O3cc000000O01000O100O0nNFi\\O:Xc0Ff\\O:\\d00OO10O100000000010N4KWR^:"
+      }
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "bbox": [
+        938,
+        107,
+        74,
+        47
+      ],
+      "area": 2001,
+      "score": 0.7802941203117371,
+      "anchor": [
+        975,
+        130.5
+      ],
+      "anchor_normalized": [
+        0.95215,
+        0.18777
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          695,
+          1024
+        ],
+        "counts": "hglc05be02M2O001U[OOnc03i[O5Vd0Nd[O6[d0d0O0000000001O000O2O00000000001O000000001O00001O00001O1O1O1O1O0O10000O100O101N10001N100O1O100O101O0OFA^[O?ad0C^[O<cd0E][O:cd0G\\[O8ed0H[[O8dd0J[[O6dd0K][O3cd0N^[O1`d00e[OJ\\d07a01001N2N2N2N3MTQ8"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        536,
+        392,
+        488,
+        303
+      ],
+      "area": 128087,
+      "score": 0.6956394910812378,
+      "anchor": [
+        780,
+        543.5
+      ],
+      "anchor_normalized": [
+        0.76172,
+        0.78201
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          695,
+          1024
+        ],
+        "counts": "dV\\;V15I6UOma0j3P^OXLj`0d4H6L3N001O00010O000000000001N1000001O0100O101N3L3N1O2M101N10000O11O001O1O1O1O1O00001O0000001O000001N101O1O1N2O2M4M5I5L2M3O1N1O2O0000000001O00000010O000001O0001O01O01O001O010O001O1O001O1O1O1O1O2N2N6Jc0^O7H2O1N2O000000O0100O001O10O01O010O1O001O01O010O01O0010O010O10O001O1O001O1O1N2O1O1O001O1O1O0O2N1N3O1N102O1N2N4L1O1O00100O00001O01O0001O0000001O00000001O000O10000000000000O101O00000O10000000000000000000000000000000000000000000000O10000000000000000000000000000O100000000000000000000O100000000000000O1000000000000O1000000000000000000000000O1000000000000000000O1000000000000000000000000000000000000000000O100000000000000000000000O100000000O100000O10O10000000000000000000O1000001O000000000000001O00000001N1000001O000000001N10000000001O0000000000000000000000010O000000001O0000001O0000001O00000O100000001O0000000000001O000001O00000000000001O0000000000001O00000O10001O000O10000000000000000000000000001O01O000000000001O0000001O00001O00001O001O001O0000001O000000000000000O2O0O1O1O10mB"
+      }
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "bbox": [
+        175,
+        379,
+        93,
+        89
+      ],
+      "area": 3492,
+      "score": 0.6308366060256958,
+      "anchor": [
+        221.5,
+        423.5
+      ],
+      "anchor_normalized": [
+        0.21631,
+        0.60935
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          695,
+          1024
+        ],
+        "counts": "WWg33ce02O01M`h6=RWI4L4M2O2N1N2O2N1O1O1O1O100O100O100O1O2N101O0O101O000O2O000O2N1N2M4I6N2N3N1BmMW]OT2hb0oMU]OS2jb0mMV]OS2ib0oMU]OR2kb0>O00010O_MW]OT2jb0jMX]OU2ib0hMZ]OX2Sc0O1N3N2N8G2O3M2N3L4M1O1O001N1_Oc[OH^d06d[OI]d03g[OL[d00g[O0\\d0Kf[O5od0O01O01O0O2O001O001N2MUeP`0"
+      }
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "bbox": [
+        124,
+        524,
+        558,
+        171
+      ],
+      "area": 61049,
+      "score": 0.4235020577907562,
+      "anchor": [
+        403,
+        609.5
+      ],
+      "anchor_normalized": [
+        0.39355,
+        0.87698
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          695,
+          1024
+        ],
+        "counts": "[jd26[e09J5K4K4M4K6SOl0G8@iM]]OZ2[b0e0N2N2O1N2N2O1N2N2N2M3M3N2N2O1O1N2O1M3M3N2N2N2M3N2O1N2O1O1O1O1O1000000O10000000000O100000000O10000000000000000000000001O00001O0000001O00000000001O0000000000001O00000000O100000000001O00001O001O001O001O001O001O001O1O1O1O000000000000O10000O1O10000000000O1O1O1O1O100O10000O10000000000001O2N4L3M2N1O2N2N000000000000FkKQ_OV4n`0lKP_OU4o`0:O1O10000O1000000O100000000O1000000O100000000000000000000000000001O0000001O002N5K3M5K6J4L7I>\\Lf]Oo2Qc0ZMo\\Of1gc0J4L7I9G<Be0YOci84XVG>@=I6K4L2M3N2N0001O00000000000000O10000000000O1000000O1dMlNU@T1i?MW_O4g`0c0b^O_O]a0^2O1001O1O001O2N3M4L3M3M4L6J5K4L2N2N4L3M2N2N1O2N1O1O3M1O2N1O001O1O00001O0000000000O1000000WMoMlAQ2Q>UNlAk1R>`NeA`1Y>fNcAZ1\\>jNbAU1]>TO[Al0e>XOWAh0h>\\Oc_OTOl0`1a?6Z@Ke?<T@El?`0n_OAR`0R300O11O0000000000000000000000O1000000O100000000000000000YLe_OR2[`0mMf_OS2[`0lMe_OT2[`0lMe_OT2[`0lMe_OT2[`0lMe_OT2[`0kMf_OU2Z`0kMf_OU2Z`0kMf_OU2Z`0kMf_OU2Z`0kMf_OU2Z`0kMe_OV2\\`0b100001RLc_O`2]`0_Me_O`2\\`0_Md_Oa2\\`0^Me_Ob2[`0]Mf_Oc2[`0\\Me_Od2[`0\\Me_Od2[`0[Mf_Oe2[`0ZMe_Of2[`0ZMe_Of2[`0YMf_Og2[`0XMe_Oh2\\`0WMd_Oi2]`0UMd_Ok2]`0TMc_Ol2^`0SMb_Om2_`0QMb_Oo2_`0PMa_OP3``0oL`_OQ3a`0nL__OR3a`0mL`_OS3a`0lL__OT3b`0jL^_OW3c`0hL]_OX3c`0gL^_OY3c`0eL^_O[3c`0cL^_O]3h`0[LZ_Oe3\\a00000000O10000O10000000000001O001O001O0000001O00001O00001O0000001O001O1O1O001O00000000001O001O001O000000001O001O1O1O1[Me]Ol1[b0SNf]Om1[b0QNg]On1Zb0mMj]OS2Wb0`MV^O_2cb0N1O001O4L2N001O1O1O1O000000OWN^\\O_1bc0aNa\\O\\1^c0eNc\\OZ1]c0gNc\\OX1]c0iNb\\OW1^c0iNb\\OW1]c0kNb\\OU1^c0kNb\\OU1^c0kNc\\OT1^c0jNc\\OV1]c0iNd\\OW1\\c0iNe\\OV1[c0iNf\\OW1[c0hNf\\OW1Zc0hNg\\OX1Zc0gNf\\OY1Zc0gNf\\OY1[c0eNf\\O[1[c0dNe\\O\\1kc0000000000O1O1N2M300000000001O6J1O001O00001O001O1O001O1O001O001O001O001O1O001O001O001O001O001O001O001O00001O001O001O1O1O1O1O1O1O1O1N2M3N3Kd^W7"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        706,
+        381,
+        22,
+        28
+      ],
+      "area": 412,
+      "score": 0.30601027607917786,
+      "anchor": [
+        717,
+        395
+      ],
+      "anchor_normalized": [
+        0.7002,
+        0.56835
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          695,
+          1024
+        ],
+        "counts": "oao>3be03M3L4M2K6L3N201N1000000001O2N2N5K3L4M3M5JT`X6"
+      }
+    }
   ]
 }

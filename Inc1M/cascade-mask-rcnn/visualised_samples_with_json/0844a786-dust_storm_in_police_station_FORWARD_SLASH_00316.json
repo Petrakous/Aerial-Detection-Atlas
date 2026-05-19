@@ -16,5 +16,119 @@
       "pixel_count": 3495,
       "score": 0.9981
     }
+  ],
+  "instances": [
+    {
+      "label_index": 59,
+      "class_name": "aerial vehicle",
+      "bbox": [
+        1002,
+        43,
+        121,
+        103
+      ],
+      "area": 3495,
+      "score": 0.9981189370155334,
+      "anchor": [
+        1062.5,
+        94.5
+      ],
+      "anchor_normalized": [
+        0.88542,
+        0.15
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "mbXc04ac02O001O1O110N3N1N1O00001O00O1O1O10O01000O10O10O10O1000000O10000000O10000O100O1O1O1M201O1M2K5000010O00001O010N2O10O01O001O01O01N20O01O001O00001I7N200O10000O10O01O100O100O1N3N1O1O1ObNW^OQ1ha0nN[^OQ1ea0oN\\^OP1ca0PO^^OP1aa0oNa^OQ1]a0POd^OP1[a0POg^Oo0Ya0POh^OP1Wa0POj^OP1Ua0POl^Oo0Ta0ROl^On0Sa0ROn^On0Qa0SOP_Ol0o`0SOS_Ol0l`0UOU_Oj0k`0VOV_Oj0i`0VOY_Oh0h`0WOY_Oi0e`0XO\\_Og0d`0YO^_Of0b`0ZO^_Oe0b`0[O`_Oc0``0\\Oc_Ob0]`0^Od_Oa0\\`0_Of_O>\\`0Ae_O=]`0Cd_O:^`0Ed_O7``0Ha_O6``0Ib_O5Qb0MRY_1"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        458,
+        581,
+        168,
+        49
+      ],
+      "area": 4766,
+      "score": 0.8150789737701416,
+      "anchor": [
+        542,
+        605.5
+      ],
+      "anchor_normalized": [
+        0.45167,
+        0.96111
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "`\\j81dc02O0O10000000000O10000O100O10000000000000000001O00001O001O1O001N10a^:1\\aE6J2YOh0N100O100N2N2O100O100N2N2O100O100000000O100001O0000000000001O001O0000000000000000000000000000000000000000001O0000001O001O1O00001O001O1O1O000000000000000000O100O1000000O1000000001O001O1O00001O2N3M1O001O1O2N1O1O00001O1O1O1N2O1O4J_aP;"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        908,
+        606,
+        26,
+        24
+      ],
+      "area": 511,
+      "score": 0.7043196558952332,
+      "anchor": [
+        921,
+        618
+      ],
+      "anchor_normalized": [
+        0.7675,
+        0.98095
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "_W_a03`c08J6K2M1O100O10000O100O100001O000000001O1O1O2N2Ak\\ON09`c0K[QS5"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        863,
+        618,
+        12,
+        12
+      ],
+      "area": 102,
+      "score": 0.6024448275566101,
+      "anchor": [
+        869,
+        624
+      ],
+      "anchor_normalized": [
+        0.72417,
+        0.99048
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "mac`03^c05M3O1001O001O1O2N2N2NkZW6"
+      }
+    }
   ]
 }

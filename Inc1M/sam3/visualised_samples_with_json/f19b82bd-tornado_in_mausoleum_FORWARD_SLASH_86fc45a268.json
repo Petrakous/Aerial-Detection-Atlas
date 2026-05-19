@@ -22,5 +22,175 @@
       "pixel_count": 3615,
       "score": 0.6772
     }
+  ],
+  "instances": [
+    {
+      "label_index": 18,
+      "class_name": "Destroyed building",
+      "bbox": [
+        0,
+        0,
+        315,
+        283
+      ],
+      "area": 64445,
+      "score": 0.87939453125,
+      "anchor": [
+        157.5,
+        141.5
+      ],
+      "anchor_normalized": [
+        0.49528,
+        0.47167
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          300,
+          318
+        ],
+        "counts": "\\1g01[O1Of15h4n0cJQOoN;f0Bk4[1bJ81iNa0E]O19NDO42011NNOl2k3ZMWLM;4g04POj1j3nMjL3b0JXOM^On1c6UNnIn1R6PNPJP2P6PN`I19o1W6ZNdIEIP2b6`N^IA0R2c6d01bM]IP2f6hMaIW2j6kMoHo1Q7PNPIo1W701O1O5J2O1N2O0O2O00O0TO]N[I0O04i1Q5WNVL`0bN@1h1X5XNTL:bNj1_6mMfIb2Z6`MaIc2^6510000O1000000O10001O2M100O01001N01001O0O1000oN_MWKa2j5O1000002M10000O104L0O2OKiMTIX2l6iMSIV2n6iMSIW2m6310000OO2O00100O1O1O010000O10000O1000001N10000O2O00000O1000001N010O101O1O2M4M3M2M2O3L2O2N1O2M101OO0100O10GgN_HY1a7801:F1N1000000O2O00000001O01O0O1000000000000000000000[KQO^LM\\4R1SOmNdL2MO\\4R1SOmNdL2MO\\4Q1TOnNdL1L0\\4Q1TOnNdL1L0\\4Q1ZOROe0o0UOmNdL4W4P1TOmNdL2Y4Q1SOlNdL3[4P1QOmNeL1[4R1POmNeL0\\4S1oNmNeL0\\4R1VOoNh0R1i31O000WKlNY1U1fNlNZ1T1fNlNZ1T1fNkNZ1V1fNjNY1W1\\32O1N2\\KdNW1]1[3101N10O10O100N2L4N2dKZNQ1g1nN[NP1f1POYNP1i1oNWNQ1i1oNVNQ1l1nNTNQ1n1nNQN[MOW3S2c31O2O000hKkMW1V2hNjMY1V2fNjMZ1V2gNiMY1X2n20N2O1O2N001O2M2O1aK^MR2c2mM^MQ2d2PN[Mn1g2RNXMn1i2PNZMn1g2PN[Mo1g2mM]MQ2d2mM]MR2e2nMZMR2g2iMPMXN9o3h2hMQMXN7o3i2hMoLZN7o3k2fMmL\\N7o3m2dMlL]N6P4o2gMoL[2R3eMmLZ2V3bMnL]2R3`MQM]2R3cMlL\\2W3dMhLX2\\3lM]LQ2j3g12O2M2O1M3N1M5N002N1O1N2O100O1O19G2NO1N2O1O1M3N2M3N2N2N2O1M3N2N2O2N1O1O1O2N1O1O10O11N001O1O2N100O1O1O100O1O2O0002N1O0000O100000000001O1O000000O2N1O1O1O1O1O1O1O1O1O1ZOVJhMl5IPJ45Gj0<\\OKfm0"
+      }
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "bbox": [
+        0,
+        277,
+        318,
+        23
+      ],
+      "area": 3615,
+      "score": 0.67724609375,
+      "anchor": [
+        159,
+        288.5
+      ],
+      "anchor_normalized": [
+        0.5,
+        0.96167
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          300,
+          318
+        ],
+        "counts": "V93Y91O0O100000000O1000001OO10000001OO10010O0O100000001N2O01\\e9NdZF2N1O2O0N201OO10000000000000010O0O1001O00O10O10001O0000O100000000O10000001O0000000O11N1O02O0001O0001N100000000001O01OO02O00O100000000000O0100000000001OO1001O1O000000000000O1001O0000O10001OO1001OO010000000010N10000001O00000000O010O0100O1000000O2O1O0000000000000O1000000O10000000O11N100000000000001O0O10000000O1000000O100O02O0000O1000O100000001N1000O1000000001O0O101O00000000000000000000000000000000000O011O0001O00001O00000000000000O1000000O10O1000001O000MZG@f8c000000NYG_Og8c00N3O001O01O00000000000000001N100000O10001N101HTGN3"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        166,
+        273,
+        12,
+        17
+      ],
+      "area": 159,
+      "score": 0.4599609375,
+      "anchor": [
+        172,
+        281.5
+      ],
+      "anchor_normalized": [
+        0.54088,
+        0.93833
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          300,
+          318
+        ],
+        "counts": "ml`1;P92L301O0001N102N1O2L3MjgX1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        145,
+        272,
+        24,
+        16
+      ],
+      "area": 302,
+      "score": 0.3681640625,
+      "anchor": [
+        157,
+        280
+      ],
+      "anchor_normalized": [
+        0.49371,
+        0.93333
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          300,
+          318
+        ],
+        "counts": "ngZ18T93M002M2O00000000O100001O0000O1000O0100O1L5K4M^\\[1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        70,
+        275,
+        18,
+        12
+      ],
+      "area": 180,
+      "score": 0.341796875,
+      "anchor": [
+        79,
+        281
+      ],
+      "anchor_normalized": [
+        0.24843,
+        0.93667
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          300,
+          318
+        ],
+        "counts": "lhd06V93L1000001O0000001O000000O1O1O1O2MfSS2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        110,
+        265,
+        36,
+        22
+      ],
+      "area": 416,
+      "score": 0.33203125,
+      "anchor": [
+        128,
+        276
+      ],
+      "anchor_normalized": [
+        0.40252,
+        0.92
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          300,
+          318
+        ],
+        "counts": "b_P13X92O001O0000010O001O2N1O100O1O015J0001O010O000010O0001O001O00001O0O2O3LkSb1"
+      }
+    }
   ]
 }

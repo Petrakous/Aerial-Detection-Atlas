@@ -34,5 +34,1043 @@
       "pixel_count": 6092,
       "score": 0.5097
     }
+  ],
+  "instances": [
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        396,
+        293,
+        68,
+        43
+      ],
+      "area": 2293,
+      "score": 0.87353515625,
+      "anchor": [
+        430,
+        314.5
+      ],
+      "anchor_normalized": [
+        0.70724,
+        0.91959
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "PbT4`0j9FZF>b9=N2O0O2O001O000010O00000000000000000000O10000000000O10000O2O000000000O1000000001O00000O1O2N1O2N1O1O2N2N2O2M3N1O1N3N001O1N2O1N102M4LUi_1"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        8,
+        131,
+        11,
+        13
+      ],
+      "area": 101,
+      "score": 0.82421875,
+      "anchor": [
+        13.5,
+        137.5
+      ],
+      "anchor_normalized": [
+        0.0222,
+        0.40205
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "di24a:7J1O10O001O1O2N2N4L`bT6"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        0,
+        131,
+        8,
+        14
+      ],
+      "area": 102,
+      "score": 0.76416015625,
+      "anchor": [
+        4,
+        138
+      ],
+      "anchor_normalized": [
+        0.00658,
+        0.40351
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "S4>X:0000000002N5JWXX6"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        142,
+        144,
+        31,
+        13
+      ],
+      "area": 295,
+      "score": 0.66748046875,
+      "anchor": [
+        157.5,
+        150.5
+      ],
+      "anchor_normalized": [
+        0.25905,
+        0.44006
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "^b_12c:1O1O2N1O1O1O100O100O1000000O1000000000000001O002N2N1O1O1N2OYTa4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        72,
+        248,
+        28,
+        25
+      ],
+      "area": 453,
+      "score": 0.59814453125,
+      "anchor": [
+        86,
+        260.5
+      ],
+      "anchor_normalized": [
+        0.14145,
+        0.7617
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "kYh03`:4N1O2N1N2O1O2N1N2M3N200O1000O100O2N1O1O1O1N2O1M4N1N2Ma]Y5"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        0,
+        279,
+        58,
+        63
+      ],
+      "area": 2598,
+      "score": 0.53955078125,
+      "anchor": [
+        29,
+        310.5
+      ],
+      "anchor_normalized": [
+        0.0477,
+        0.90789
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "g8X12WOk8i0UGWOk8\\1N1O1O001O0010N2O00001O1O00100O1O1O1O001O1O001O1O00001O1O003M2N1O1O1O1O001O1O1O1O001O1O001O1O1O1M202M2N2N6J6J6Ji[g5"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        16,
+        212,
+        46,
+        30
+      ],
+      "area": 1004,
+      "score": 0.52294921875,
+      "anchor": [
+        39,
+        227
+      ],
+      "anchor_normalized": [
+        0.06414,
+        0.66374
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Wb56^:4M2O0O1O1O001N1O0N3O2O10001O00001O00010O00001O0010O010OO101N1O1000O1O00100000000O3N4L4K3N\\Tf5"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        495,
+        234,
+        30,
+        17
+      ],
+      "area": 402,
+      "score": 0.509765625,
+      "anchor": [
+        510,
+        242.5
+      ],
+      "anchor_normalized": [
+        0.83882,
+        0.70906
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "laU55[:9M1N10000000000000O100O0100000O10000O1000000000001O1O2M5Ka_k0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        252,
+        136,
+        22,
+        17
+      ],
+      "area": 147,
+      "score": 0.47314453125,
+      "anchor": [
+        263,
+        144.5
+      ],
+      "anchor_normalized": [
+        0.43257,
+        0.42251
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "mYd23b:1N2O2N100O100O01N10001O010O000O2O001O1O1O]]_3"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        21,
+        162,
+        69,
+        49
+      ],
+      "area": 2481,
+      "score": 0.471435546875,
+      "anchor": [
+        55.5,
+        186.5
+      ],
+      "anchor_normalized": [
+        0.09128,
+        0.54532
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "]V74`:6K4I7M1N2M3O0O10001O00000O100O1M3O01000O2O000O2M2O1O2N1O1O010O1O100O10O10000000000000000000000O2O0O1O1O100O2O0O101N1O2O1N1O2N2N3M3M3M5Kbj\\5"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        158,
+        202,
+        27,
+        17
+      ],
+      "area": 289,
+      "score": 0.4580078125,
+      "anchor": [
+        171.5,
+        210.5
+      ],
+      "anchor_normalized": [
+        0.28207,
+        0.6155
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Zod13a:3N2O0O1O1O100O1O100O010O10O010000O0100O1N2O1O1O1O3M_R]4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        199,
+        142,
+        19,
+        15
+      ],
+      "area": 218,
+      "score": 0.45556640625,
+      "anchor": [
+        208.5,
+        149.5
+      ],
+      "anchor_normalized": [
+        0.34293,
+        0.43713
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "\\cR2:Y:4N100001O001OO0100O100O1O010O2N1N4LeSR4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        550,
+        259,
+        22,
+        20
+      ],
+      "area": 264,
+      "score": 0.436767578125,
+      "anchor": [
+        561,
+        269
+      ],
+      "anchor_normalized": [
+        0.9227,
+        0.78655
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "cng52`:7K3N2N2N1O1O10O010O1O1N2O2N1O2N1O2N1O2O1Mbh;"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        290,
+        288,
+        23,
+        16
+      ],
+      "area": 311,
+      "score": 0.430419921875,
+      "anchor": [
+        301.5,
+        296
+      ],
+      "anchor_normalized": [
+        0.49589,
+        0.8655
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "_TQ3:Z:3N2O00000000010O00000001O00001O00001O0O2O1OdWR3"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        411,
+        232,
+        38,
+        26
+      ],
+      "area": 497,
+      "score": 0.42041015625,
+      "anchor": [
+        430,
+        245
+      ],
+      "anchor_normalized": [
+        0.70724,
+        0.71637
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "k_Y45a:1N2O001O100O0000001O0001O01O001O0010O01O101N2N00100O001O10O00010O0N3L3O2Mkkd1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        575,
+        227,
+        21,
+        19
+      ],
+      "area": 308,
+      "score": 0.420166015625,
+      "anchor": [
+        585.5,
+        236.5
+      ],
+      "anchor_normalized": [
+        0.96299,
+        0.69152
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "gXP66]:6L100O1000000000000O100O1O1O100O1001N4KSi3"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        0,
+        232,
+        11,
+        17
+      ],
+      "area": 150,
+      "score": 0.418701171875,
+      "anchor": [
+        5.5,
+        240.5
+      ],
+      "anchor_normalized": [
+        0.00905,
+        0.70322
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Y7`0V:000O1000O2N2O1N2N4LPUW6"
+      }
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "bbox": [
+        21,
+        153,
+        157,
+        14
+      ],
+      "area": 1436,
+      "score": 0.416015625,
+      "anchor": [
+        99.5,
+        160
+      ],
+      "anchor_normalized": [
+        0.16365,
+        0.46784
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "_U72b:3M3M201N100O2O0000000000000000O1000000000000O100000000N2O100O100000000000001O0O10000O11O010N1000000000001O000000000000000000001O000000000000O2O000001O000000000000000000000O2O0000001O000001O0000000001O0000000000010O000000000000000000000000000001O00000000001O000000000000000000000O10000O10000O1000000O10000O2O0O10e^_4"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        584,
+        325,
+        18,
+        17
+      ],
+      "area": 222,
+      "score": 0.40380859375,
+      "anchor": [
+        593,
+        333.5
+      ],
+      "anchor_normalized": [
+        0.97533,
+        0.97515
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "S\\S63_:4N2N2O1N2O100N2000000001O3M2N3M3Kee1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        541,
+        211,
+        17,
+        21
+      ],
+      "area": 260,
+      "score": 0.4033203125,
+      "anchor": [
+        549.5,
+        221.5
+      ],
+      "anchor_normalized": [
+        0.90378,
+        0.64766
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Smd51b:4G8N2O2M20O01O100000O100O2N3M4Ke_`0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        176,
+        198,
+        104,
+        82
+      ],
+      "area": 6067,
+      "score": 0.3974609375,
+      "anchor": [
+        228,
+        239
+      ],
+      "anchor_normalized": [
+        0.375,
+        0.69883
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "jPk19[:4L5H7^Ob0K3J7N1O1O1000000000000001O000001O000001O01O01O00000001O0000DSGoNm8^1O00000001O01O00001O01O0001O0000000O2O000O10000O1000000O2O0O100O1O2N1O1O100O10000O001O1L4O01000O1000000001O01O02O0O2O3L6J9G;E:F2N3M8G5CoELW:LaY]3"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        507,
+        203,
+        17,
+        16
+      ],
+      "area": 161,
+      "score": 0.389892578125,
+      "anchor": [
+        515.5,
+        211
+      ],
+      "anchor_normalized": [
+        0.84786,
+        0.61696
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "PaY54`:3N2O1O001O10000O10O1O10O01N2L4MWkk0"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        188,
+        148,
+        12,
+        9
+      ],
+      "area": 75,
+      "score": 0.38671875,
+      "anchor": [
+        194,
+        152.5
+      ],
+      "anchor_normalized": [
+        0.31908,
+        0.44591
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Pnn13b:2N100O10000O101OO2O2KlSX4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        245,
+        279,
+        46,
+        15
+      ],
+      "area": 434,
+      "score": 0.3759765625,
+      "anchor": [
+        268,
+        286.5
+      ],
+      "anchor_normalized": [
+        0.44079,
+        0.83772
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "[Sb23c:1N100O2O0O1O2O000O2N10001O0000000010O1O00003M00000000001O0000000O10000000000000000O101N2MQcY3"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        526,
+        217,
+        19,
+        13
+      ],
+      "area": 172,
+      "score": 0.369140625,
+      "anchor": [
+        535.5,
+        223.5
+      ],
+      "anchor_normalized": [
+        0.88076,
+        0.65351
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "dl_51c:4M2M3O0O10001OO010000001O001N2N2O2L]jd0"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        207,
+        160,
+        12,
+        11
+      ],
+      "area": 101,
+      "score": 0.367431640625,
+      "anchor": [
+        213,
+        165.5
+      ],
+      "anchor_normalized": [
+        0.35033,
+        0.48392
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "`YU22`:6L3O000000O101O001N3K]hQ4"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        335,
+        313,
+        35,
+        29
+      ],
+      "area": 618,
+      "score": 0.367431640625,
+      "anchor": [
+        352.5,
+        327.5
+      ],
+      "anchor_normalized": [
+        0.57977,
+        0.9576
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "bV`31d:3N2M3M2N3L2O2N2M3M3N1O100O10000001WOYFa0o9O1O001O001O00001O001O1O1O1O3M2MVU_2"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        450,
+        284,
+        36,
+        23
+      ],
+      "area": 559,
+      "score": 0.3642578125,
+      "anchor": [
+        468,
+        295.5
+      ],
+      "anchor_normalized": [
+        0.76974,
+        0.86404
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "dbf41c:3O2N2M3N001O1O1O0O1000O10O10O1000O100O2O0O100O100O100O2N100001O001N3Mm^X1"
+      }
+    },
+    {
+      "label_index": 36,
+      "class_name": "Bag",
+      "bbox": [
+        440,
+        325,
+        26,
+        17
+      ],
+      "area": 361,
+      "score": 0.3642578125,
+      "anchor": [
+        453,
+        333.5
+      ],
+      "anchor_normalized": [
+        0.74507,
+        0.97515
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "QYc45_:2O1O1O1O1O1O100N200O1000000O1000000000000001O1O2M\\S_1"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        172,
+        150,
+        11,
+        8
+      ],
+      "area": 67,
+      "score": 0.3486328125,
+      "anchor": [
+        177.5,
+        154
+      ],
+      "anchor_normalized": [
+        0.29194,
+        0.45029
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Qci13b:2N100O2O00000001N4K^i]4"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        363,
+        244,
+        60,
+        56
+      ],
+      "area": 2471,
+      "score": 0.347412109375,
+      "anchor": [
+        393,
+        272
+      ],
+      "anchor_normalized": [
+        0.64638,
+        0.79532
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "^`i38Z:8J3M2N3M2N3L3M3L4N200O10000O2O000000O0100000000O0100O1O00100O11N10000O100O1O1O1O1O10000O100O1000000001O1O1N2O3L3L4L4VO]F8mjm1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        62,
+        296,
+        13,
+        10
+      ],
+      "area": 90,
+      "score": 0.33544921875,
+      "anchor": [
+        68.5,
+        301
+      ],
+      "anchor_normalized": [
+        0.11266,
+        0.88012
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "QPe02b:3O1N1O101N1000O101N2N2NTga5"
+      }
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "bbox": [
+        0,
+        161,
+        27,
+        29
+      ],
+      "area": 573,
+      "score": 0.3310546875,
+      "anchor": [
+        13.5,
+        175.5
+      ],
+      "anchor_normalized": [
+        0.0222,
+        0.51316
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Q5j0l9001O1O1O00000000O1N2O2N1O10001N2O1N1O100O2N1O2N1O2MXlQ6"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        497,
+        294,
+        39,
+        20
+      ],
+      "area": 365,
+      "score": 0.324951171875,
+      "anchor": [
+        516.5,
+        304
+      ],
+      "anchor_normalized": [
+        0.84951,
+        0.88889
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "[YV52b:3O1N2O000O10000O010O0100000O01000O010O1O1M30O0100O10O10001N101N1O2O1O1N1O2NUhg0"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        444,
+        182,
+        16,
+        8
+      ],
+      "area": 110,
+      "score": 0.3212890625,
+      "anchor": [
+        452,
+        186
+      ],
+      "anchor_normalized": [
+        0.74342,
+        0.54386
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Q_d44a:1O2O0O1000000000000001O001N2OoWa1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        0,
+        262,
+        21,
+        21
+      ],
+      "area": 279,
+      "score": 0.318359375,
+      "anchor": [
+        10.5,
+        272.5
+      ],
+      "anchor_normalized": [
+        0.01727,
+        0.79678
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Y8<Z:0N2O2O0001O010O00010O0010001N1O2O0O2M3LohS6"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        424,
+        264,
+        87,
+        31
+      ],
+      "area": 1417,
+      "score": 0.313232421875,
+      "anchor": [
+        467.5,
+        279.5
+      ],
+      "anchor_normalized": [
+        0.76891,
+        0.81725
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          342,
+          608
+        ],
+        "counts": "Xl]49\\:2O1N10000O2O0000000O1000000O2O000O101O0O2O000O100O10O1000O01000000O01000000000O01000O100O100O010O1O100O10O10O100O1O1O1000O010000O1O100O100O100O100O1O01000O100O100O100O1N2O_TP1"
+      }
+    }
   ]
 }

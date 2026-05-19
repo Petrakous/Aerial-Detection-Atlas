@@ -1,0 +1,26 @@
+{
+  "image_id": "image10252",
+  "file_name": "image10252.jpg",
+  "width": 1000,
+  "height": 749,
+  "annotations": [
+    {
+      "bbox": [
+        432,
+        195,
+        118,
+        122
+      ],
+      "class_name": "dangerous"
+    },
+    {
+      "bbox": [
+        418,
+        439,
+        130,
+        145
+      ],
+      "class_name": "dangerous"
+    }
+  ]
+}

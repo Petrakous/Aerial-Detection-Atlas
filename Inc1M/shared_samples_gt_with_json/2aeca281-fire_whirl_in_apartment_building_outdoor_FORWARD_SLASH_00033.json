@@ -5,19 +5,19 @@
   "height": 1048,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 321482
+      "pixel_count": 324974
     },
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 1011446
+      "pixel_count": 1075751
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 30046
+      "pixel_count": 29315
     }
   ]
 }

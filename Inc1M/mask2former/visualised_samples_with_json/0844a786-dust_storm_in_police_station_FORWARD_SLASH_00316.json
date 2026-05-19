@@ -16,5 +16,147 @@
       "pixel_count": 4450,
       "score": 0.9718
     }
+  ],
+  "instances": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        507,
+        581,
+        118,
+        49
+      ],
+      "area": 4616,
+      "score": 0.9837414026260376,
+      "anchor": [
+        566,
+        605.5
+      ],
+      "anchor_normalized": [
+        0.47167,
+        0.96111
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "n`h93cc01N3N1N2O0\\O3^]OO^b07]]OKbb0e0O2N1O1O100O1O1M3O1O100O10000O10000000000001O00001O00000000000000O1000000001O00000000000000000000000000001O00001O1O001O1O00001O00001O00001O00000000000000O10000O1000000001O00001O001O1O1O001O1O2N2N2N1O1O001O000O101O2M5L7GQUQ;"
+      }
+    },
+    {
+      "label_index": 59,
+      "class_name": "aerial vehicle",
+      "bbox": [
+        913,
+        42,
+        211,
+        504
+      ],
+      "area": 4450,
+      "score": 0.9717704057693481,
+      "anchor": [
+        1018.5,
+        294
+      ],
+      "anchor_normalized": [
+        0.84875,
+        0.46667
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "^Wba07Yc08J4O2N100O100O10O1O0000002N2N4KTRZ1FWneN101O2N1N2O1O100O3M3M2N0001N100O2O00O10O0100O0100000000O10000O100O100O0100O1O2N100O100O1O010G@[]Oa0db081O0000O100010O01O1O1O1O00100O001O1O00001O00001O1O1N2O1N2O1O1O1O101N1O2N1O1O001N2O1O101N1O2M2O2N01YNc^OT1]a0kNf^OS1Ya0nNh^OQ1Xa0oNj^OP1Ua0QOk^On0Ua0ROl^On0Sa0QOo^Oo0Pa0QOQ_On0o`0ROR_On0m`0ROT_Om0l`0SOU_Om0j`0SOW_Ol0j`0SOX_Ok0h`0UOZ_Oi0f`0WO[_Oi0c`0XO__Of0a`0ZOa_Oe0_`0ZOb_Of0]`0ZOe_Od0\\`0[Of_Oc0[`0\\Og_Ob0Y`0^Oh_O`0Z`0_Oh_O?Y`0@i_O=Y`0Bh_O8_`0Fc_O6``0Ib_O4a`0Jbh^1"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        908,
+        606,
+        27,
+        24
+      ],
+      "area": 533,
+      "score": 0.9256556034088135,
+      "anchor": [
+        921.5,
+        618
+      ],
+      "anchor_normalized": [
+        0.76792,
+        0.98095
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "^W_a0;Zc04L1O2N2N1O100O10000O10000000000001O001O1O2N2N2N7I3Kg]R5"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        458,
+        621,
+        32,
+        9
+      ],
+      "area": 202,
+      "score": 0.4947216510772705,
+      "anchor": [
+        474,
+        625.5
+      ],
+      "anchor_normalized": [
+        0.395,
+        0.99286
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "_\\j81dc02O001O000O100O100O1O1O1000000000000001O0000001O00001O1O001O1McVd="
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        864,
+        619,
+        11,
+        11
+      ],
+      "area": 95,
+      "score": 0.3205008804798126,
+      "anchor": [
+        869.5,
+        624.5
+      ],
+      "anchor_normalized": [
+        0.72458,
+        0.99127
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "_Ud`05^c05M100001O001O1O2N1NnZW6"
+      }
+    }
   ]
 }

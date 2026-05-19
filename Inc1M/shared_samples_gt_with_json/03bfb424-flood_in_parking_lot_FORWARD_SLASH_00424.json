@@ -5,29 +5,29 @@
   "height": 768,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 358911
+      "pixel_count": 357962
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 60039
+      "pixel_count": 56009
+    },
+    {
+      "label_index": 21,
+      "class_name": "Civilian vehicle",
+      "pixel_count": 34749
     },
     {
       "label_index": 22,
-      "class_name": "Civilian vehicle",
-      "pixel_count": 36799
-    },
-    {
-      "label_index": 23,
       "class_name": "Wall",
-      "pixel_count": 169308
+      "pixel_count": 167868
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 2793
+      "pixel_count": 1710
     }
   ]
 }

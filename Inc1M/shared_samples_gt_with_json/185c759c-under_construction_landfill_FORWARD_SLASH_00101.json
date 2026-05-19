@@ -5,19 +5,19 @@
   "height": 480,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 20307
+      "pixel_count": 10218
     },
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 372314
+      "pixel_count": 374442
     },
     {
-      "label_index": 50,
+      "label_index": 49,
       "class_name": "Dry plant",
-      "pixel_count": 4965
+      "pixel_count": 4817
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "image_id": "image10130",
+  "file_name": "image10130.jpg",
+  "width": 485,
+  "height": 1000,
+  "detections": [
+    {
+      "bbox": [
+        111.47604370117188,
+        393.4185791015625,
+        253.58978271484375,
+        283.09173583984375
+      ],
+      "class_name": "non-flammable-gas",
+      "confidence": 0.9418364763259888
+    }
+  ]
+}

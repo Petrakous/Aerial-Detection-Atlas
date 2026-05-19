@@ -5,14 +5,14 @@
   "height": 675,
   "segments": [
     {
-      "label_index": 28,
+      "label_index": 27,
       "class_name": "Pavement",
-      "pixel_count": 494945
+      "pixel_count": 418117
     },
     {
-      "label_index": 37,
+      "label_index": 36,
       "class_name": "Burnt tree",
-      "pixel_count": 222197
+      "pixel_count": 218496
     }
   ]
 }

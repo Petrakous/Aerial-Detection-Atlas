@@ -1,0 +1,17 @@
+{
+  "image_id": "image10305",
+  "file_name": "image10305.jpg",
+  "width": 252,
+  "height": 520,
+  "annotations": [
+    {
+      "bbox": [
+        80,
+        231,
+        89,
+        91
+      ],
+      "class_name": "dangerous"
+    }
+  ]
+}

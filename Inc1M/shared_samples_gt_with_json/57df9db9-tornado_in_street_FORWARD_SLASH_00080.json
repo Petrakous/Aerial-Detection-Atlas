@@ -5,39 +5,39 @@
   "height": 470,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 32970
+      "pixel_count": 21030
     },
     {
-      "label_index": 3,
+      "label_index": 2,
       "class_name": "Fence",
-      "pixel_count": 4534
+      "pixel_count": 4296
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 5488
+      "pixel_count": 3811
     },
     {
-      "label_index": 15,
+      "label_index": 14,
       "class_name": "Window",
-      "pixel_count": 106
+      "pixel_count": 80
     },
     {
-      "label_index": 21,
+      "label_index": 20,
       "class_name": "Road",
-      "pixel_count": 78068
+      "pixel_count": 77051
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 2845
     },
     {
       "label_index": 25,
-      "class_name": "Green grass",
-      "pixel_count": 2989
-    },
-    {
-      "label_index": 26,
       "class_name": "Pole",
-      "pixel_count": 545
+      "pixel_count": 445
     }
   ]
 }

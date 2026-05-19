@@ -5,19 +5,19 @@
   "height": 477,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 63443
+      "pixel_count": 47603
     },
     {
-      "label_index": 15,
+      "label_index": 14,
       "class_name": "Window",
-      "pixel_count": 3399
+      "pixel_count": 3305
     },
     {
-      "label_index": 51,
+      "label_index": 50,
       "class_name": "Furniture",
-      "pixel_count": 26662
+      "pixel_count": 26266
     }
   ]
 }

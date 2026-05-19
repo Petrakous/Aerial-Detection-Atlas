@@ -1,0 +1,18 @@
+{
+  "image_id": "image10243",
+  "file_name": "image10243.jpg",
+  "width": 388,
+  "height": 520,
+  "detections": [
+    {
+      "bbox": [
+        186.57632446289062,
+        259.9820861816406,
+        142.1842041015625,
+        155.40231323242188
+      ],
+      "class_name": "explosive",
+      "confidence": 0.9123678207397461
+    }
+  ]
+}

@@ -5,34 +5,34 @@
   "height": 371,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 3363
+      "pixel_count": 2193
     },
     {
-      "label_index": 7,
+      "label_index": 6,
       "class_name": "Destroyed vehicle",
-      "pixel_count": 26659
+      "pixel_count": 26314
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 145848
+      "pixel_count": 144830
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 7348
     },
     {
       "label_index": 21,
-      "class_name": "Road",
-      "pixel_count": 7708
-    },
-    {
-      "label_index": 22,
       "class_name": "Civilian vehicle",
-      "pixel_count": 20959
+      "pixel_count": 20350
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 7836
+      "pixel_count": 7186
     }
   ]
 }

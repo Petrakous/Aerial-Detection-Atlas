@@ -1,0 +1,26 @@
+{
+  "image_id": "image10433",
+  "file_name": "image10433.jpg",
+  "width": 750,
+  "height": 1000,
+  "annotations": [
+    {
+      "bbox": [
+        232,
+        331,
+        139,
+        126
+      ],
+      "class_name": "dangerous"
+    },
+    {
+      "bbox": [
+        236,
+        589,
+        146,
+        155
+      ],
+      "class_name": "flammable-solid"
+    }
+  ]
+}

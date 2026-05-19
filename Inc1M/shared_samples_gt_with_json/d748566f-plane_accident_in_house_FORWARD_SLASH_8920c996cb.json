@@ -5,34 +5,34 @@
   "height": 404,
   "segments": [
     {
-      "label_index": 4,
+      "label_index": 3,
       "class_name": "Helmet",
-      "pixel_count": 1106
+      "pixel_count": 999
     },
     {
-      "label_index": 5,
+      "label_index": 4,
       "class_name": "First responder",
-      "pixel_count": 28364
+      "pixel_count": 27033
+    },
+    {
+      "label_index": 16,
+      "class_name": "Dirt road",
+      "pixel_count": 22182
     },
     {
       "label_index": 17,
-      "class_name": "Dirt road",
-      "pixel_count": 22549
-    },
-    {
-      "label_index": 18,
       "class_name": "Destroyed building",
-      "pixel_count": 53283
+      "pixel_count": 38227
     },
     {
-      "label_index": 20,
+      "label_index": 19,
       "class_name": "Dry tree",
-      "pixel_count": 18413
+      "pixel_count": 17882
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 2044
+      "pixel_count": 1951
     }
   ]
 }

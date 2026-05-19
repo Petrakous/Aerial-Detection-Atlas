@@ -40,5 +40,259 @@
       "pixel_count": 40114,
       "score": 0.6314
     }
+  ],
+  "instances": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "bbox": [
+        3,
+        2,
+        431,
+        312
+      ],
+      "area": 98223,
+      "score": 0.9975084066390991,
+      "anchor": [
+        218.5,
+        158
+      ],
+      "anchor_normalized": [
+        0.35242,
+        0.45143
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "QQ1^8_2=C5L4K4L3N1N3N1O00000000001O0000000000001O00000000001O000000001O0000001O000000001O000000001O0000000000001O0000000000000000O10000000000O100000000O1000000O10000O10000O1000000O1000000O1000000O1000000O1000000O1000000O1000000000000000000000000000000000000001O000000001O000000001O0000000000000000000000000000000000000000O1000000O10000O100O10000O100O100O100O1O1O100O1N2O1O1N2O1N2N2O1O1N2O1O1O1N2O1N2M3N2L4M3M3M3O1N2O1O100O1O1O1O1O1O1N2N2M3N2N2N2O1O1O1O100O100O1O1O1O1O1O1O1O1O1O1O100O100O100O100O100O1O1O1O1O1O100O100O100O1000000O10000O100O100O100O1O100O1O1000000O10000O100000000O10000000000O1000000O10000O10000O100O1O100O100O100O10000O10000O1000000O1000000O100O100O100O1O1O1O100O1O100O10000O1000000O1000000O1000000O10000O100O100O1O1O101N1O100O10000O10000O2O00001SLjIo2X6nLkIQ3U6lLPJR3Q6kLSJR3P7M2M2O1N2O0O2O0O2N100O2O0O101N101N2N101N2N2O1N2N101N1O2M3N1O2M3M3M3K5J6J7K5K5L3M4L3N2M3N3M4L4K5Ld_o1"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        102,
+        288,
+        27,
+        62
+      ],
+      "area": 1182,
+      "score": 0.9898985028266907,
+      "anchor": [
+        115.5,
+        319
+      ],
+      "anchor_normalized": [
+        0.18629,
+        0.91143
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "^US1<^:7J4M3M4CXO^Fo0[9b0H6J10000000000001O1XNQG_1X9O1O1O0O1J7L4L4L5]OTFHV:2SaW5"
+      }
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "bbox": [
+        205,
+        146,
+        279,
+        204
+      ],
+      "area": 39103,
+      "score": 0.9897710084915161,
+      "anchor": [
+        344.5,
+        248
+      ],
+      "anchor_normalized": [
+        0.55565,
+        0.70857
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "d[V29_:8J7I7lNU1C<J4N3N0O2N2O1N3L4L4M3L4M2N2N101N1O2N1O2N1N3N1O101N1O010O1N2O1O1O010O100O010O1O001O1O01000O100O10O01O1O1O100O10000O010000000000000000000000000O10000000000O100O1O2N1O100O1000001N101O001O1O0O2O001N100O1O1O100O10001O0O1000000000000O1000000O100O1O1O100O100O10000O10000O1O1O1O100O1000000O1000000000000O10000O1O010O1O1O100O100000000000O1000O100000000O100O100O1O100O10000O10000O100000000O100O100O1O1O100O100000000000O10000000O11O0O1N2N2O1N2N2lMeKcM]4d1PK]MP1IPOf0S5Q2SKXM]1<f3[2g2M2N3N1O3M1O2M3N101N1O2O0O1O2N1O2N2M2O2N100O1000000O10000O100O100O00100O010O1O010O10000O101O0O10000O103J7@hZ^1"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        172,
+        285,
+        26,
+        65
+      ],
+      "area": 1171,
+      "score": 0.9782388210296631,
+      "anchor": [
+        185,
+        317.5
+      ],
+      "anchor_normalized": [
+        0.29839,
+        0.90714
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "iRk13h:6K3N2M7Ka0^O`0_O2J6N2O1000O1D<N2021O:EO1O00O11O001]NdGOAMQ91oo_4"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        414,
+        90,
+        121,
+        62
+      ],
+      "area": 5435,
+      "score": 0.9642335176467896,
+      "anchor": [
+        474.5,
+        121
+      ],
+      "anchor_normalized": [
+        0.76532,
+        0.34571
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "hc]4:c:2O1N4L9G3N1O0O2N10000O100O101N1O100O101N1O2O0O1O2O1O1N2N101N2N100O100O100O1000O0100O10O10000O1000O100000O100000O11O00000000001O0000000O10000O2O00001O0O10000O101O001O000000001O0000001O0000001O0000000000001O1O00000001O01O001ZOfFE[97mFES9:oFDS9:oFDR9;j0M201N3K]nl0"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        540,
+        0,
+        52,
+        230
+      ],
+      "area": 9816,
+      "score": 0.9153973460197449,
+      "anchor": [
+        566,
+        115
+      ],
+      "anchor_normalized": [
+        0.9129,
+        0.32857
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "Tch5e0U:9G;Fl0VOR1lNe0ZOb0_O6H9L1N2O1O2lJaKe3d4PLjKh3i5M2N1O1O1O1O000000000000O1O10000O1001O000000100002M3N0O1O101N1O1O101N7nImLl3a5@R1nNP^9"
+      }
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "bbox": [
+        5,
+        294,
+        39,
+        56
+      ],
+      "area": 1249,
+      "score": 0.8821982741355896,
+      "anchor": [
+        24.5,
+        322
+      ],
+      "anchor_normalized": [
+        0.03952,
+        0.92
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "_P2:b:2O1O001000O1O2N2N1O1O01O1O001mE7Q9HmF<P9FmF=S9GeF=Z9d0O100O1O100O1O100O1O100O100O11O0O2_OlFROY91gF<j9^O]F8_lT6"
+      }
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "bbox": [
+        124,
+        322,
+        32,
+        28
+      ],
+      "area": 797,
+      "score": 0.5824673771858215,
+      "anchor": [
+        140,
+        336
+      ],
+      "anchor_normalized": [
+        0.22581,
+        0.96
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "mfZ17c:5K5H7N200O100000000O1000O100000000000000000000001O00O2O0O2M6HlXn4"
+      }
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "bbox": [
+        70,
+        342,
+        27,
+        8
+      ],
+      "area": 214,
+      "score": 0.3220968544483185,
+      "anchor": [
+        83.5,
+        346
+      ],
+      "anchor_normalized": [
+        0.13468,
+        0.98857
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          350,
+          620
+        ],
+        "counts": "[Xh06g:2O0000000000000000000000000000000000000000000000000d]b5"
+      }
+    }
   ]
 }

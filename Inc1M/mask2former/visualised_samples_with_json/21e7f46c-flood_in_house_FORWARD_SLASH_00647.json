@@ -34,5 +34,203 @@
       "pixel_count": 4292,
       "score": 0.9227
     }
+  ],
+  "instances": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "bbox": [
+        0,
+        158,
+        310,
+        257
+      ],
+      "area": 70799,
+      "score": 0.9888966679573059,
+      "anchor": [
+        155,
+        286.5
+      ],
+      "anchor_normalized": [
+        0.5,
+        0.69036
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "X5g7X5000000000000000000000001O000000000000000000001O00O1O1O100O1000000000000O100000000000000O100O1O10000000000000000000000O100000000001O0000000000000000002N2N:F6J1OO1K5O100O10000000000O1000000000000001O00001O00001O00O1O100O1001O001O3M00000000O1O100001]IkJZ5U5^JUK`5m4XJ[Kf5Q6N3M1OO100O100O1000000O100000000O10000O100001O00001O000000000000001O00O1000000O100bNQJkKP6T4VJgKj5X4XJfKi5X4\\JdKe5Y4dJaK\\5_4fJ_KZ5a4hJ]KX5c4hJ]KX5c4hJ]KX5c4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4iJ\\KW5d4hJ]KX5c4hJ]KX5c4hJ]KX5b4iJ^KW5b4iJ^KW5b4iJ^KW5b4iJ^KW5b4iJ^KW5b4jJ]KV5d4iJ\\KW5d4iJ\\KW5d4jJ[KV5e4\\JgJNd0f5e4\\JgJNd0f5e4[JhJOc0f5e4[JhJ0b0e5f4[JhJ0b0e5f4[JhJ0b0e5e4\\JjJO`0e5f4\\JjJO`0e5f4\\JjJO`0e5f4\\JjJO`0e5f4[JkJ1>d5g4[JkJ1>d5g4[JkJ2=c5h4[JkJ2=c5h4[JkJ2=c5i4ZJjJ3=c5i4ZJjJ3=c5j4YJjJ3<d5k4XJiJ5;c5l4XJiJ5;c5m4WJhJ6;c5m4WJhJ7;a5m4XJhJ7;a5m4XJhJ8:`5n4XJhJ8:`5n4XJhJ8:`5n4XJhJ99_5P5WJgJ:9_5P5WJgJ:9_5P5WJgJ:9_5P5WJgJ:9_5P5WJgJ;8^5Q5WJgJ;8^5Q5WJgJ<6^5T5UJfJ>5]5U5UJfJb00Z5Z5TJfJk6Z5UIgJj6Y5VIgJj6Y5VIgJj6Y5VIgJj6Y5UIhJk6X5TIjJk6V5TIkJl6U5TIkJl6U5PIoJP7`50000000000000000000000000000000000000001O00000000000000000000000000000000000000001O^OWInJi6i4aIVK_6h4cIXK]6h4cIXK]6g4dIYK\\6g4dIYK\\6f4eIZK[6e4fI[KZ6c4hI^KW6b4iI^KW6c4hI^KW6c4hI]KX6c4gI^KY6b4gI^KY6c4[IPK2>b6b4ZITK2:d6b4YIVK19f6a4ZITK1:f6a4ZITK2:c6Q5XIQKd6i5TJUJ\\OE21K_4"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        71,
+        41,
+        221,
+        143
+      ],
+      "area": 18669,
+      "score": 0.9717239737510681,
+      "anchor": [
+        181.5,
+        112.5
+      ],
+      "anchor_normalized": [
+        0.58548,
+        0.27108
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "Pkl02j<5M2O0O2O3L2O2eCCP<i0M`0@Q1oN2M101N10000O0100O0N3N2N110O1O100N1N3N2O001O10O10000O100000000O1000000O10001O001N101N102M01O1M2CcEYN^:e1gEUN\\:j1=N2O00100O010000O101O0O2O1O2M3N1O1O1N3N1O1N2N3N1N2O1O001O010O100O100O2N3N2M3M5L4K2N2N1O2`FcL[9`301O001O0010O00001O0000001O00000N3K40000001O0001N1O1000010O01O1O1O10O0000010O01O00O2O0O1O1O10001O00001O00001O00000000001O0O1000001O00001O0O101O00001O001N100000eFVMa8j2^GWMb8i2ZG[Mf8e2XG]Mh8c2XG]Mi8b2WGXMB0W9h2WGXMCOV9i2VGXMEOU9i2VGXMEOU9h2WGYMENT9i2VGYMFNU9i2TGZMGMV9g2UG[MENV9g2WGXMR9g2c00bFYMd8g2[G[Me8c2\\G]Md8c2WGbMj8]2nF_MH4[9\\2mF_MK2Z9^2WG^Mk8b2i001O1O1O001N101M2XN^EEOQ1h:TOj1M2O2N4KmV7"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        41,
+        94,
+        39,
+        64
+      ],
+      "area": 2026,
+      "score": 0.9429112672805786,
+      "anchor": [
+        60.5,
+        126
+      ],
+      "anchor_normalized": [
+        0.19516,
+        0.30361
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "`g`056MMOX<h0I7J6J4L2O1N11O000000000000BjNSEV1l:mNRES1m:QOoDP1Q;?0000O1000000O10000000O10O0100O1O2N102L;DcSm2"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        0,
+        0,
+        299,
+        93
+      ],
+      "area": 17657,
+      "score": 0.9345266222953796,
+      "anchor": [
+        149.5,
+        46.5
+      ],
+      "anchor_normalized": [
+        0.48226,
+        0.11205
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "0Y1P1ZOS9g0kFZOU9f0jF[OV9g0gF[OX9f0]FdNJf0i9h0ZFeNKc0k9i0YFfNJa0m9m0UFcNLa0o9l0UF]Ol9c0TFbNJd0R:j0TFbNLb0P:l0TFbNLb0P:l0TFcNL`0P:m0QFgNO<o9n0PFgN1:P:V2000000000001O00O1000000CPFkMP:U2QFiMP:X2nEiMR:a21M3002N1O0000000000O100N2000000O1N2O11O1OO100000000001O3M0000CmEgMZ:U2:O100O100O100O1O100O100O100000000O1000000O100O10000O10000O100O10000000000O1000000O10000O10000O10000000000O100O10000O1000000O10000O100000000O1000000O10000O10000O10000O100O1000000O100O1O100O1000000001O001O001O001O00001O001O000000001O000000001O0000001O0000001O0000001O0000000000001O000000001O0000001O00001O000000000000001O0000001O00001O0000001O00000000001O000000001O00000000001O000000VOSEoN`;o09O10000003Mh0XO2N1O001O001O001O00000000003M001O1O0000O1CZE`Ng:_1ZE_Nh:`1ZE]Nh:`1=M3O1O1L8J4M1O3M2N1N3M2O2ClCKY<0c^4"
+      }
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "bbox": [
+        123,
+        104,
+        48,
+        119
+      ],
+      "area": 4292,
+      "score": 0.9227160811424255,
+      "anchor": [
+        147,
+        163.5
+      ],
+      "anchor_normalized": [
+        0.47419,
+        0.39398
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "ooa14d<;J3L4J;gDD\\9d0]FDn8\\OeFT1M2Z9nNcFf2[9`0N2O010O10000000000000O2N2M3F<L4M1003M3M3M00O2N1O1O001O1O001O1O1O1N2`NPFOR:NRFNS:MWFFR:3aFUOg9f0c1@WVh1"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        0,
+        94,
+        44,
+        71
+      ],
+      "area": 2119,
+      "score": 0.9123712778091431,
+      "anchor": [
+        22,
+        129.5
+      ],
+      "anchor_normalized": [
+        0.07097,
+        0.31205
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "P3h0W<1N4M4L1O1O2N2N1N3N2O3aDbNO0Q;k1N1O2N1O3M1O1O000000O1O1N200O20O00O2N1O2N3N:E6J3I7L6J2O1N3K4M5Kke[3"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        287,
+        99,
+        23,
+        42
+      ],
+      "area": 875,
+      "score": 0.7023259997367859,
+      "anchor": [
+        298.5,
+        120
+      ],
+      "anchor_normalized": [
+        0.9629,
+        0.28916
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "[]d35h<n0TO1N2O00000O1000000O10000O10000000000O1000OnL"
+      }
+    }
   ]
 }

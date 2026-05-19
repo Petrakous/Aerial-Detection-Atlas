@@ -5,44 +5,44 @@
   "height": 768,
   "segments": [
     {
-      "label_index": 3,
+      "label_index": 2,
       "class_name": "Fence",
-      "pixel_count": 10253
+      "pixel_count": 7942
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 123133
+      "pixel_count": 104388
     },
     {
-      "label_index": 15,
+      "label_index": 14,
       "class_name": "Window",
-      "pixel_count": 10539
+      "pixel_count": 9946
     },
     {
-      "label_index": 20,
+      "label_index": 19,
       "class_name": "Dry tree",
-      "pixel_count": 68167
+      "pixel_count": 57293
     },
     {
-      "label_index": 22,
+      "label_index": 21,
       "class_name": "Civilian vehicle",
-      "pixel_count": 41813
+      "pixel_count": 41473
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 15787
+      "pixel_count": 14526
     },
     {
-      "label_index": 39,
+      "label_index": 38,
       "class_name": "Fire truck",
-      "pixel_count": 79345
+      "pixel_count": 78338
     },
     {
-      "label_index": 48,
+      "label_index": 47,
       "class_name": "Crane",
-      "pixel_count": 32996
+      "pixel_count": 32320
     }
   ]
 }

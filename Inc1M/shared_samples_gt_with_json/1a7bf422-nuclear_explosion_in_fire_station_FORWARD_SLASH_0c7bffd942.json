@@ -5,19 +5,19 @@
   "height": 652,
   "segments": [
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 87396
+      "pixel_count": 49163
     },
     {
-      "label_index": 9,
+      "label_index": 8,
       "class_name": "Flame",
-      "pixel_count": 2797
+      "pixel_count": 2736
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 51232
+      "pixel_count": 50775
     }
   ]
 }

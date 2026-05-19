@@ -5,29 +5,29 @@
   "height": 1080,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 702861
+      "pixel_count": 806256
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 509973
+      "pixel_count": 449786
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 182083
+      "pixel_count": 176014
+    },
+    {
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 59869
     },
     {
       "label_index": 21,
-      "class_name": "Road",
-      "pixel_count": 73701
-    },
-    {
-      "label_index": 22,
       "class_name": "Civilian vehicle",
-      "pixel_count": 7212
+      "pixel_count": 6654
     }
   ]
 }

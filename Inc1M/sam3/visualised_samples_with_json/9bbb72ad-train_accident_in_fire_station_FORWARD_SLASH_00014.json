@@ -40,5 +40,623 @@
       "pixel_count": 161,
       "score": 0.416
     }
+  ],
+  "instances": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "bbox": [
+        227,
+        1,
+        408,
+        204
+      ],
+      "area": 55147,
+      "score": 0.94775390625,
+      "anchor": [
+        431,
+        103
+      ],
+      "anchor_normalized": [
+        0.67344,
+        0.28611
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "do_21U;4M4L2N2N101O000O100NA[E`0c:3O2N2N2N1MVOhEk0U:6APO`FT1_9;O1N2O0O2O1O2L3M3O1O1N2O1N3M2O1O1O1N2O1O100POfMQI[2n6jMnHW2o6lMPIT2o6mMPIT2o6nMPIR2o6oMQIQ2n6QNPIP2P7QNoHo1Q7QNoHo1P7SNoHm1Q7SNnHn1R7RNoHl1Q7VNPIh1P7YNoHg1Q7[NnHd1Q7^NnHb1R7^NoHa1Q7`NoH_1P7cNPI\\1o6fNQIY1n6hNSIW1m6jNSIT1m6mNSIS1l6PORIP1n6QORIn0m6SOSIm0m6TOSIj0n6VOSIi0m6XORIh0m6ZOSIe0m6\\ORId0n6]ORIb0n6_OQI`0P7API>P7BSI;l6GTI7m6ITI6l6JTI6l6JTI6l6KSI5l6LUI3k6NTI1m6OSI1m60SIOm61SIOm61SIOm63QIMc6ZN[Il13Ga6_N[Ik13FX6]NeI4Ni16EW6_NaI72d16FV6aN`I73c17EU6oNdI\\18DT6POdI]17CT6QOeI^16AR6POdI@2P29_OP6QOfIg1:WOP6`1oI_NP6c1oI]No5e1RJZNn5h1QJWNn5k1RJVMH=V6]2SJTMI=T6`2TJRMI<T6c2RJQMJ=S6b2TJPMJ=Q6d2UJoLJ=Q6e2UJmLK=Q6f2TJlLL<Q6i2SJjLM<P6j2TJiLM<k5P3XJdLL<l5P3YJeLK9k5T3ZJcLK8k5V3YJaLM8k5X3XJZLE2::h5[3lJdLT5]3^JXLK:g5_3\\JYLL9g5_3\\JYLL8h5`3ZJZLM6i5a3ZJXLM7h5c3[JULM8h5d3ZJSL08f5e3ZJSL08f5f3ZJQL09f5g3YJQL08g5g3YJQL17f5j3[JnKN6h5l3YJoKN4j5m3XJoKO3j5n3dJQL]5o3n0010O01O1JlHVLT7i36O010O2O0O2O1N10000000O1O10000O10010O110O0O:F2N2N10001N5K4L2N1OO2O0000000001O01O000L4N101O[OfK_JV4c5lK\\JR4f5oKYJP4h5PLXJP4h5QLWJn3j5RLVJn3i5ULVJj3i5YLUJg3j5[LVJd3i5^L\\J\\3d5dL\\JI^OY3U6oL]JG^OZ3U6PM]JE^O[3R6SMaJA]O]3Q6RMaJB^O\\3P6SMbJZO@2Ob3l5UMdJWOFd3f5UMdJWOFe3g5RMcJYOFg3e5PMeJZOEh3d5oLfJXOHl3^5nLhJVOJn3]5mLQKT3n4mLQKS3o4mLQKT3n4mLPKT3P5mLlJROBQ4b5mLlJROBo110`5oNPKP1B0^5POQKo0B0]5QOQKn0D0[5ROQKo0DN[5TOPKn0FNY5UOPKm0JLU5ZOmJk0OJT5[OmJl0OGU5]OkJm00FU5]OjJo01CU5_OiJo01BV5_OiJo01BU5@iJo03@U5@hJQ12_OV5lN`J26e14\\OX5iNaJ52g15[OY5eNcJHI?5k17VOY5hNeJ6Km17TOY5iNeJ6Kn17QOZ5kNdJ6Ln17oNY5mNdJ7Lm16nN\\5mN_J;Ok16jN_5oN\\J<Ol15hNb5oNZJ=Ol17eN`5SOYJ=Oo16_N^5POXJ74<MQ29ZNZ5SO\\JOO82GOd01Q2:XNY5VO[J:5R35]M[5XO[J96R33\\M\\5IaJl23YMZ5WO^Jd06k23XMZ5YO]Jd05n23TM[5ZO]J9O15Y35QMZ5\\O]J9O14[37lLZ5_O\\J536O[38jLZ5@\\J545N]38gL[5B[J466KNNV3;nL_5G_J6INOX3:kLa5G]J9I_3:`Ll51jI`3;[Lm56fIa3<XLo5W4PJgKR6Y4>1O1O1O100O2N1O2O0O1O1O10O100O10N101O1O1O001O1O0O1O10O10O0O2M3O010N2O2O0O1N2O2L301O1O1O1O2N3M2L4M2O1N2O1O1O00001O00001O0000000000000000000000000000000000O1000000000000000O100000000000000000000000O101N1000000O1000000O10000O2O0O100O10000O101N1gJfJNMV4]5dKgJH58LX4Y5fKTKOF2Jm3\\5QLeKNSOP4Y5QLPLm3R4QLQLl3k5K0O1O2N1M4K4M3N2K5J6M3J6G:I6H7J6K5N3jNYF=U:AmE;V:ElE0]:0eEO[:NkEMW:3>N]f1"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        133,
+        73,
+        62,
+        41
+      ],
+      "area": 2141,
+      "score": 0.88232421875,
+      "anchor": [
+        164,
+        93.5
+      ],
+      "anchor_normalized": [
+        0.25625,
+        0.25972
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "[k^14_:i0I4M3O0000000000001O00000000000001O01O0000000001O0000000001O01O000000000000001O0001O00000001O00000001O01O0000001O0O2M5I=^Od[l4"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        81,
+        65,
+        52,
+        44
+      ],
+      "area": 1974,
+      "score": 0.880859375,
+      "anchor": [
+        107,
+        87
+      ],
+      "anchor_normalized": [
+        0.16719,
+        0.24167
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "]bl02X:OjEm0Q:7O101N100001O000001O00000000000001O01O00000000000001O01O00000001O000000001O000000001O0000010O001N1JeUb5"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        28,
+        59,
+        53,
+        45
+      ],
+      "area": 2125,
+      "score": 0.875,
+      "anchor": [
+        54.5,
+        81.5
+      ],
+      "anchor_normalized": [
+        0.08516,
+        0.22639
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "lm92\\:m0I5M3O0O2O00000000001O0000000000000010O0000000000001O01O0000000000000001O000001O01O0000000000001N100M4Lj^T6"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        0,
+        53,
+        28,
+        46
+      ],
+      "area": 1185,
+      "score": 0.87060546875,
+      "anchor": [
+        14,
+        76
+      ],
+      "anchor_normalized": [
+        0.02187,
+        0.21111
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "f1[1m900000O10010O000000000001O0001O000001O00001O0O101N2N7ETSg6"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        381,
+        206,
+        24,
+        76
+      ],
+      "area": 1217,
+      "score": 0.73681640625,
+      "anchor": [
+        393,
+        244
+      ],
+      "anchor_normalized": [
+        0.61406,
+        0.67778
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "fVV48k:7D;B=K5H8E;I7M4N1000O10O10M3K6J5M4K5J5I8K6^Ob0B^]b2"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        196,
+        81,
+        37,
+        34
+      ],
+      "area": 1001,
+      "score": 0.720703125,
+      "anchor": [
+        214.5,
+        98
+      ],
+      "anchor_normalized": [
+        0.33516,
+        0.27222
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "coT29;1n9e0O2O001O00000000000000O2N100O100O1001O0000O2N1O1O100O10001N100O2M2L4J8IVP_4"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        609,
+        60,
+        31,
+        178
+      ],
+      "area": 2337,
+      "score": 0.68505859375,
+      "anchor": [
+        624.5,
+        149
+      ],
+      "anchor_normalized": [
+        0.97578,
+        0.41389
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "`Zf62P;7L3J7H7L4J7I6K5M3L4H8G9L5H7H8J6J5H9I30N10N04M12K5L14G6]N[HdN0d0_7d0aH`Na0NCe0b7m0ZH`Na0NCe0f5"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        456,
+        249,
+        16,
+        28
+      ],
+      "area": 375,
+      "score": 0.60107421875,
+      "anchor": [
+        464,
+        263
+      ],
+      "anchor_normalized": [
+        0.725,
+        0.73056
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "XbP5<d:9L3N2N2000000000O1N2O1O2N2M4LUjj1"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        503,
+        224,
+        6,
+        11
+      ],
+      "area": 50,
+      "score": 0.595703125,
+      "anchor": [
+        506,
+        229.5
+      ],
+      "anchor_normalized": [
+        0.79063,
+        0.6375
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "kQa52T;6K3N01O1Ngj]1"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        470,
+        252,
+        16,
+        29
+      ],
+      "area": 359,
+      "score": 0.576171875,
+      "anchor": [
+        478,
+        266.5
+      ],
+      "anchor_normalized": [
+        0.74687,
+        0.74028
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "T`U54R;3H7F:K5000000000000000O2L3I:Hele1"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        504,
+        256,
+        13,
+        23
+      ],
+      "area": 229,
+      "score": 0.57373046875,
+      "anchor": [
+        510.5,
+        267.5
+      ],
+      "anchor_normalized": [
+        0.79766,
+        0.74306
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "]^a59l:4F9O010000O100O2N1O2M4JhoZ1"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        203,
+        0,
+        11,
+        36
+      ],
+      "area": 324,
+      "score": 0.52587890625,
+      "anchor": [
+        208.5,
+        18
+      ],
+      "anchor_normalized": [
+        0.32578,
+        0.05
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "h[W2:33[:d0I2N1O0000O1O1M3EmE]O[:3ohe4"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        524,
+        261,
+        12,
+        10
+      ],
+      "area": 105,
+      "score": 0.505859375,
+      "anchor": [
+        530,
+        266
+      ],
+      "anchor_normalized": [
+        0.82813,
+        0.73889
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "X_h53S;4M2O00001O0000000001NkYT1"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        412,
+        246,
+        12,
+        16
+      ],
+      "area": 174,
+      "score": 0.44677734375,
+      "anchor": [
+        418,
+        254
+      ],
+      "anchor_normalized": [
+        0.65312,
+        0.70556
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "gRa4>j:0O2O000000000001O00:EPf[2"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        525,
+        219,
+        5,
+        5
+      ],
+      "area": 17,
+      "score": 0.40625,
+      "anchor": [
+        527.5,
+        221.5
+      ],
+      "anchor_normalized": [
+        0.82422,
+        0.61528
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "Tih52U;2O1OO2Ne^V1"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        438,
+        237,
+        10,
+        17
+      ],
+      "area": 139,
+      "score": 0.4033203125,
+      "anchor": [
+        443,
+        245.5
+      ],
+      "anchor_normalized": [
+        0.69219,
+        0.68194
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "TWj451Og:<O100000O101N2L5M`XS2"
+      }
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "bbox": [
+        603,
+        327,
+        37,
+        33
+      ],
+      "area": 882,
+      "score": 0.361083984375,
+      "anchor": [
+        621.5,
+        343.5
+      ],
+      "anchor_normalized": [
+        0.97109,
+        0.95417
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "jZd64Q;5L2O1O1O1N2O1O1O1O100O100O100O1O100O1O1L4N200O100000000000O100O100N2N20iE"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        430,
+        213,
+        9,
+        6
+      ],
+      "area": 41,
+      "score": 0.337890625,
+      "anchor": [
+        434.5,
+        216
+      ],
+      "anchor_normalized": [
+        0.67891,
+        0.6
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "W\\g42U;2N2O00000001N3Ma^V2"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        468,
+        272,
+        15,
+        10
+      ],
+      "area": 130,
+      "score": 0.3369140625,
+      "anchor": [
+        475.5,
+        277
+      ],
+      "anchor_normalized": [
+        0.74297,
+        0.76944
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "eiT53S;3N1O2N1000000001O0000O1001Nhmf1"
+      }
+    },
+    {
+      "label_index": 47,
+      "class_name": "Glove",
+      "bbox": [
+        485,
+        215,
+        9,
+        8
+      ],
+      "area": 53,
+      "score": 0.323974609375,
+      "anchor": [
+        489.5,
+        219
+      ],
+      "anchor_normalized": [
+        0.76484,
+        0.60833
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "PgZ54T;1N2O1O00O2O0O2NhSc1"
+      }
+    },
+    {
+      "label_index": 11,
+      "class_name": "Boot",
+      "bbox": [
+        351,
+        230,
+        16,
+        15
+      ],
+      "area": 187,
+      "score": 0.322021484375,
+      "anchor": [
+        359,
+        237.5
+      ],
+      "anchor_normalized": [
+        0.56094,
+        0.65972
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "Vdk34R;3L4N1O2N100000000000O1O2N3M5Klgo2"
+      }
+    }
   ]
 }

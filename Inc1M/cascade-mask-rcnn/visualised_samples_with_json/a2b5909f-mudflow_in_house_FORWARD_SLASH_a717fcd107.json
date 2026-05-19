@@ -40,5 +40,259 @@
       "pixel_count": 560,
       "score": 0.7994
     }
+  ],
+  "instances": [
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        454,
+        182,
+        114,
+        112
+      ],
+      "area": 10738,
+      "score": 0.99319988489151,
+      "anchor": [
+        511,
+        238
+      ],
+      "anchor_normalized": [
+        0.70678,
+        0.6485
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "mnR57U;6J9dNd1^O5M3L4G9M3N1N2N2N2N20O00001O001O0N2O2O100O100O100O100000000O100000000000000000000000000O11O0000000000000000000000000000000000000000000000000000000000000000000000000000000000001O001O1O1O3M6J2OO002O2M1O1O3M4L2N2M3M:E6K5J=[NhF8kcg1"
+      }
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "bbox": [
+        366,
+        280,
+        354,
+        86
+      ],
+      "area": 28226,
+      "score": 0.9903731346130371,
+      "anchor": [
+        543,
+        323
+      ],
+      "anchor_normalized": [
+        0.75104,
+        0.88011
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "__S4Z1R:8J2N100O101O000O10000O1\\OcNUG^1i8gNTGY1k8jNRGW1n8e0O100O10000O1000000O1000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000001O0000001O00001O00001O001O001O2N1O1O1O0000001OO100000000000000O100000000O100O100O1N2N200O10000O10000000000O100000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000001O00001O1O2N3M1O2N00001O0000001O0000001O00001O00000000O100O1O1O1M3O1O1O1O100O100000000O10000000000O11O0000000000001O000000000000000000001O00000000000000000000000000000000O10000001O0000000000000000000000000000000000000000000000000000000000001O00000000000000001O000000000000000000001O0000000000000000000000001O00000000000000000000001O0000000QNoF`1R9_NoF`1Q9_NQG`1o8`NQG`1o8`NRG_1n8`NSG`1n8_NRGa1n8_NSG`1n8^NSGa1P9[NSGd1\\901O3Leh0"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        424,
+        180,
+        36,
+        70
+      ],
+      "area": 1950,
+      "score": 0.9712414741516113,
+      "anchor": [
+        442,
+        215
+      ],
+      "anchor_normalized": [
+        0.61134,
+        0.58583
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "bUh4;a:d0N2O0O2M4E<L6K1N2N2O1O0O3N1O001N1O01O1O10001O10O1O01N2O1N1O2K5_Ob0I7I8@dRn2"
+      }
+    },
+    {
+      "label_index": 33,
+      "class_name": "Mud",
+      "bbox": [
+        1,
+        253,
+        357,
+        113
+      ],
+      "area": 34439,
+      "score": 0.9285261631011963,
+      "anchor": [
+        179.5,
+        309.5
+      ],
+      "anchor_normalized": [
+        0.24827,
+        0.84332
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "]d0<2V1R9S1YO`0K3M201N10000000000001O0000000000001O4L3M7I2N1O1O1O001O0000001O000000001O00000000001O00000000000000001O000000000000000000001O00000000000000000000O100000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000O100000000000000000000000000000000000000000000O10000O100O1N2L4F:N2N2O1O100O100O10000000000O1000000000000000000000eNSHTOm7l0SHTOm7k0THUOl7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7i0VHWOj7k0THUOl7l0RHUOn7V200000000000000000000000000000000000000001O000000000000000eNRHUOn7k0RHUOn7j0SHVOm7j0SHVOm7j0SHVOm7j0SHVOm7i0THWOm7h0SHXOm7h0SHXOm7h0SHXOm7h0SHXOm7h0SHXOm7h0SHXOm7g0THYOm7f0SHZOm7f0SHZOm7g0RHYOn7g0RHYOn7g0RHYOn7h0QHXOP8g0PHYOP8h0oGXOQ8h0oGXOQ8h0oGYOP8g0PHYOP8S21O000000000000000000001O00000000001O00001O0000001O0000000000001O000000000000000000001O000000001O00000000001O00000000000000000000000000001O0000001O000000001O0000001N101O001O001O001`N_G0a80`GOa8OfGK[83gGL\\80gGN[8OhGN]8LhG1]8VOoF<n06TiR4"
+      }
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "bbox": [
+        366,
+        264,
+        20,
+        47
+      ],
+      "area": 560,
+      "score": 0.7993844151496887,
+      "anchor": [
+        376,
+        287.5
+      ],
+      "anchor_normalized": [
+        0.52006,
+        0.78338
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "R_S45W;4K4L5G8G9G9M3000O10010O1O9G?A7I5K3L4L\\_h3"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        295,
+        31,
+        63,
+        26
+      ],
+      "area": 853,
+      "score": 0.6471180319786072,
+      "anchor": [
+        326.5,
+        44
+      ],
+      "anchor_normalized": [
+        0.45159,
+        0.11989
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "\\hY36Y;1O100O3M100O0001O0000O0100O01O100O100O10001O000000001N100O10000001O001OVEBd:e00O1O1N10000O0LWECj:<410O10000O10000O1O01000O0100O0003LTiR4"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        19,
+        1,
+        43,
+        32
+      ],
+      "area": 1302,
+      "score": 0.5414858460426331,
+      "anchor": [
+        40.5,
+        17
+      ],
+      "anchor_normalized": [
+        0.05602,
+        0.04632
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "oi655=]:=N001O0000000000000000000000O100000000000000O10000000000O1000000000000001O00O100O1Okl\\7"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        464,
+        15,
+        15,
+        20
+      ],
+      "area": 201,
+      "score": 0.4817633330821991,
+      "anchor": [
+        471.5,
+        25
+      ],
+      "anchor_normalized": [
+        0.65214,
+        0.06812
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "QZV53[;2O1N2O2N6lDBk:b0O0001O001O1O5J4Lc]g2"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        658,
+        1,
+        48,
+        37
+      ],
+      "area": 1604,
+      "score": 0.4342018663883209,
+      "anchor": [
+        682,
+        19.5
+      ],
+      "anchor_normalized": [
+        0.94329,
+        0.05313
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          367,
+          723
+        ],
+        "counts": "_j[7S1\\:001O00000000000000001O0000000000O1000000O1000000000000001O00O1O1O1O100O1O10000000000O100O2Og0WOXR6"
+      }
+    }
   ]
 }

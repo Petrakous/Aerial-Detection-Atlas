@@ -1,0 +1,44 @@
+{
+  "image_id": "image10010",
+  "file_name": "image10010.jpg",
+  "width": 1000,
+  "height": 485,
+  "annotations": [
+    {
+      "bbox": [
+        337,
+        288,
+        51,
+        62
+      ],
+      "class_name": "flammable"
+    },
+    {
+      "bbox": [
+        359,
+        9,
+        64,
+        69
+      ],
+      "class_name": "flammable"
+    },
+    {
+      "bbox": [
+        507,
+        270,
+        66,
+        71
+      ],
+      "class_name": "flammable"
+    },
+    {
+      "bbox": [
+        397,
+        437,
+        54,
+        48
+      ],
+      "class_name": "flammable"
+    }
+  ]
+}

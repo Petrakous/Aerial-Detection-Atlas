@@ -5,19 +5,19 @@
   "height": 320,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 19840
+      "pixel_count": 19627
     },
     {
-      "label_index": 20,
+      "label_index": 19,
       "class_name": "Dry tree",
-      "pixel_count": 62010
+      "pixel_count": 61079
     },
     {
-      "label_index": 29,
+      "label_index": 28,
       "class_name": "Dry grass",
-      "pixel_count": 42841
+      "pixel_count": 25057
     }
   ]
 }

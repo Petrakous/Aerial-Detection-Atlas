@@ -252,6 +252,31 @@ function polygonArea(points) {
   return Math.abs(area) / 2;
 }
 
+function polygonCentroid(points) {
+  if (!Array.isArray(points) || points.length < 3) return null;
+
+  let areaAccumulator = 0;
+  let xAccumulator = 0;
+  let yAccumulator = 0;
+
+  for (let index = 0; index < points.length; index += 1) {
+    const [x1, y1] = points[index];
+    const [x2, y2] = points[(index + 1) % points.length];
+    const cross = (x1 * y2) - (x2 * y1);
+    areaAccumulator += cross;
+    xAccumulator += (x1 + x2) * cross;
+    yAccumulator += (y1 + y2) * cross;
+  }
+
+  const area = areaAccumulator / 2;
+  if (!Number.isFinite(area) || Math.abs(area) < 1e-7) return null;
+
+  return [
+    xAccumulator / (6 * area),
+    yAccumulator / (6 * area)
+  ];
+}
+
 function summarizeSegments(items) {
   const grouped = new Map();
 
@@ -420,6 +445,48 @@ function normalizePolygonPrediction(fileName, prediction) {
     area: polygonArea(polygon),
     score: Number(prediction.confidence) || 0
   };
+}
+
+function anchorFromItem(item) {
+  if (item.type === "polygon") {
+    const centroid = polygonCentroid(item.polygon);
+    if (centroid) return centroid;
+  }
+
+  const [x, y, width, height] = item.bbox || [0, 0, 0, 0];
+  return [x + (width / 2), y + (height / 2)];
+}
+
+function serializePredictionInstance(item, scene) {
+  const [anchorX, anchorY] = anchorFromItem(item);
+  const normalized = {
+    label_index: item.classId,
+    class_name: item.className,
+    bbox: item.bbox.map((value) => Number(value)),
+    area: Number(item.area) || 0,
+    score: Number(item.score) || 0,
+    anchor: [
+      Number(anchorX.toFixed(2)),
+      Number(anchorY.toFixed(2))
+    ],
+    anchor_normalized: [
+      Number((anchorX / scene.width).toFixed(5)),
+      Number((anchorY / scene.height).toFixed(5))
+    ]
+  };
+
+  if (item.type === "polygon") {
+    normalized.type = "polygon";
+    normalized.polygon = item.polygon.map(([x, y]) => [
+      Number(x.toFixed(2)),
+      Number(y.toFixed(2))
+    ]);
+  } else if (item.type === "rle") {
+    normalized.type = "rle";
+    normalized.segmentation = item.segmentation;
+  }
+
+  return normalized;
 }
 
 function buildSharedGroundTruth(bundleRoot) {
@@ -595,7 +662,8 @@ function main() {
         file_name: fileName,
         width: scene.width,
         height: scene.height,
-        segments: summarizeSegments(filteredPredictions)
+        segments: summarizeSegments(filteredPredictions),
+        instances: filteredPredictions.map((item) => serializePredictionInstance(item, scene))
       });
 
       sceneReport.push({

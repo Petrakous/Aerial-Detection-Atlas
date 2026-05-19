@@ -1,0 +1,26 @@
+{
+  "image_id": "image10394",
+  "file_name": "image10394.jpg",
+  "width": 1000,
+  "height": 750,
+  "annotations": [
+    {
+      "bbox": [
+        290,
+        170,
+        179,
+        177
+      ],
+      "class_name": "explosive"
+    },
+    {
+      "bbox": [
+        468,
+        357,
+        187,
+        177
+      ],
+      "class_name": "spontaneously-combustible"
+    }
+  ]
+}

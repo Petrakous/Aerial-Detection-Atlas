@@ -5,29 +5,29 @@
   "height": 280,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 4018
+      "pixel_count": 3509
+    },
+    {
+      "label_index": 11,
+      "class_name": "Green plant",
+      "pixel_count": 666
     },
     {
       "label_index": 12,
-      "class_name": "Green plant",
-      "pixel_count": 700
-    },
-    {
-      "label_index": 13,
       "class_name": "Building",
-      "pixel_count": 833
+      "pixel_count": 735
     },
     {
-      "label_index": 21,
+      "label_index": 20,
       "class_name": "Road",
-      "pixel_count": 10459
+      "pixel_count": 9590
     },
     {
-      "label_index": 40,
+      "label_index": 39,
       "class_name": "Cone",
-      "pixel_count": 2040
+      "pixel_count": 1791
     }
   ]
 }

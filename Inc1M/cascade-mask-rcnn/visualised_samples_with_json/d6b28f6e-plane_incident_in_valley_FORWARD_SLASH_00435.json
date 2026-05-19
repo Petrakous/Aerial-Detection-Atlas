@@ -10,5 +10,35 @@
       "pixel_count": 769,
       "score": 0.9908
     }
+  ],
+  "instances": [
+    {
+      "label_index": 59,
+      "class_name": "aerial vehicle",
+      "bbox": [
+        9,
+        10,
+        65,
+        31
+      ],
+      "area": 769,
+      "score": 0.9908170700073242,
+      "anchor": [
+        41.5,
+        25.5
+      ],
+      "anchor_normalized": [
+        0.12969,
+        0.10625
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          320
+        ],
+        "counts": "ST22^71O001O0000010oHMc63\\IOd60[I3c6M\\I5c6L\\I4d6L[I5e6K[I5f6JZI6f6KXI6h6JXI5i6KVI6k6JSI6n6600DAgI>Y6EeI;[6K^I6b6<004L2N5K1N2O000O10O0010O10O010O100O010OHPI2o6NRI2n6NRI2m6NTI2l6MVI2j6MWI3i6KYI4R70000000O001O001M30O100O101Kadi1"
+      }
+    }
   ]
 }

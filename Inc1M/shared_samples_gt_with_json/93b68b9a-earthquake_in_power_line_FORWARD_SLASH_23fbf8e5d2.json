@@ -5,44 +5,44 @@
   "height": 1365,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 117861
+      "pixel_count": 92480
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 402159
+      "pixel_count": 316750
+    },
+    {
+      "label_index": 14,
+      "class_name": "Window",
+      "pixel_count": 50094
     },
     {
       "label_index": 15,
-      "class_name": "Window",
-      "pixel_count": 52661
-    },
-    {
-      "label_index": 16,
       "class_name": "Debris",
-      "pixel_count": 491375
+      "pixel_count": 478998
     },
     {
-      "label_index": 18,
+      "label_index": 17,
       "class_name": "Destroyed building",
-      "pixel_count": 129404
+      "pixel_count": 105648
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 36916
+      "pixel_count": 36334
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 96705
+      "pixel_count": 86823
     },
     {
-      "label_index": 33,
+      "label_index": 32,
       "class_name": "Mud",
-      "pixel_count": 525297
+      "pixel_count": 524321
     }
   ]
 }

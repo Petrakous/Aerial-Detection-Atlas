@@ -5,14 +5,14 @@
   "height": 2048,
   "segments": [
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 855042
+      "pixel_count": 840680
     },
     {
-      "label_index": 45,
+      "label_index": 44,
       "class_name": "Burnt grass",
-      "pixel_count": 696849
+      "pixel_count": 450365
     }
   ]
 }

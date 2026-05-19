@@ -1,0 +1,28 @@
+{
+  "image_id": "image10245",
+  "file_name": "image10245.jpg",
+  "width": 388,
+  "height": 520,
+  "detections": [
+    {
+      "bbox": [
+        111.5623550415039,
+        227.34506225585938,
+        84.45699310302734,
+        81.619140625
+      ],
+      "class_name": "infectious-substance",
+      "confidence": 0.9317090511322021
+    },
+    {
+      "bbox": [
+        109.43622589111328,
+        111.79126739501953,
+        74.7391586303711,
+        64.18596649169922
+      ],
+      "class_name": "infectious-substance",
+      "confidence": 0.922730565071106
+    }
+  ]
+}

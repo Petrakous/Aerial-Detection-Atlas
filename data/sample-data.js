@@ -72,6 +72,16 @@ window.DETECTION_ATLAS_DATA = {
         "yolo11n",
         "yolo12n"
       ]
+    },
+    {
+      "id": "HAZMAT",
+      "name": "HAZMAT",
+      "taskType": "object-detection",
+      "sceneCount": 50,
+      "modelIds": [
+        "yolo11",
+        "yolo26"
+      ]
     }
   ],
   "classes": {
@@ -82,14 +92,79 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#FF69B4"
       },
       {
+        "id": "corrosive",
+        "name": "corrosive",
+        "color": "#FFD60A"
+      },
+      {
+        "id": "dangerous",
+        "name": "dangerous",
+        "color": "#00FFE6"
+      },
+      {
+        "id": "explosive",
+        "name": "explosive",
+        "color": "#FF1744"
+      },
+      {
         "id": "fire",
         "name": "fire",
         "color": "#FF5A36"
       },
       {
+        "id": "flammable",
+        "name": "flammable",
+        "color": "#39FF14"
+      },
+      {
+        "id": "flammable-solid",
+        "name": "flammable-solid",
+        "color": "#0047FF"
+      },
+      {
+        "id": "infectious-substance",
+        "name": "infectious-substance",
+        "color": "#FFB300"
+      },
+      {
+        "id": "inhalation-hazard",
+        "name": "inhalation-hazard",
+        "color": "#FF69B4"
+      },
+      {
+        "id": "non-flammable-gas",
+        "name": "non-flammable-gas",
+        "color": "#FFD60A"
+      },
+      {
+        "id": "organic-peroxide",
+        "name": "organic-peroxide",
+        "color": "#00FFE6"
+      },
+      {
+        "id": "oxygen",
+        "name": "oxygen",
+        "color": "#FF1744"
+      },
+      {
+        "id": "poison",
+        "name": "poison",
+        "color": "#8A00FF"
+      },
+      {
+        "id": "radioactive",
+        "name": "radioactive",
+        "color": "#39FF14"
+      },
+      {
         "id": "smoke",
         "name": "smoke",
         "color": "#7C3AED"
+      },
+      {
+        "id": "spontaneously-combustible",
+        "name": "spontaneously-combustible",
+        "color": "#FFB300"
       }
     ],
     "semantic-segmentation": [
@@ -520,7 +595,7 @@ window.DETECTION_ATLAS_DATA = {
       "id": "cascade-mask-rcnn",
       "name": "Cascade Mask Rcnn",
       "shortName": "Cascade Mask Rcnn",
-      "color": "#d946ef",
+      "color": "#14b8a6",
       "datasets": [
         "Inc1M"
       ],
@@ -582,7 +657,7 @@ window.DETECTION_ATLAS_DATA = {
       "id": "mask2former",
       "name": "MASK2FORMER",
       "shortName": "MASK2FORMER",
-      "color": "#ef4444",
+      "color": "#a855f7",
       "datasets": [
         "Inc1M"
       ],
@@ -643,7 +718,7 @@ window.DETECTION_ATLAS_DATA = {
       "id": "sam3",
       "name": "SAM3",
       "shortName": "SAM3",
-      "color": "#14b8a6",
+      "color": "#f97316",
       "datasets": [
         "Inc1M"
       ],
@@ -671,6 +746,21 @@ window.DETECTION_ATLAS_DATA = {
       }
     },
     {
+      "id": "yolo11",
+      "name": "YOLO11",
+      "shortName": "YOLO11",
+      "color": "#d946ef",
+      "datasets": [
+        "HAZMAT"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
+      "stats": {
+        "scenes": 50
+      }
+    },
+    {
       "id": "yolo11l",
       "name": "YOLO11L",
       "shortName": "YOLO11L",
@@ -690,7 +780,7 @@ window.DETECTION_ATLAS_DATA = {
       "id": "yolo11l-seg",
       "name": "YOLO11L Seg",
       "shortName": "YOLO11L Seg",
-      "color": "#a855f7",
+      "color": "#36c3a0",
       "datasets": [
         "Inc1M"
       ],
@@ -732,6 +822,21 @@ window.DETECTION_ATLAS_DATA = {
       }
     },
     {
+      "id": "yolo26",
+      "name": "YOLO26",
+      "shortName": "YOLO26",
+      "color": "#ef4444",
+      "datasets": [
+        "HAZMAT"
+      ],
+      "taskTypes": [
+        "object-detection"
+      ],
+      "stats": {
+        "scenes": 50
+      }
+    },
+    {
       "id": "yolo26l",
       "name": "YOLO26L",
       "shortName": "YOLO26L",
@@ -750,7 +855,7 @@ window.DETECTION_ATLAS_DATA = {
       "id": "yolo26l-seg",
       "name": "YOLO26L Seg",
       "shortName": "YOLO26L Seg",
-      "color": "#f97316",
+      "color": "#4d8cff",
       "datasets": [
         "Inc1M"
       ],
@@ -66113,6 +66218,4659 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [],
       "summary": "1 ground-truth box with 5 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image1",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image1",
+      "title": "Image image1",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image1.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image1.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image1.jpg",
+      "rawImageAvailable": true,
+      "width": 388,
+      "height": 520,
+      "dimensions": "388 x 520",
+      "groundTruth": [
+        {
+          "className": "corrosive",
+          "bbox": [
+            205,
+            220,
+            53,
+            52
+          ]
+        },
+        {
+          "className": "corrosive",
+          "bbox": [
+            105,
+            223,
+            49,
+            45
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "corrosive",
+            "confidence": 0.9184,
+            "bbox": [
+              104.86,
+              222.93,
+              49.99,
+              46.18
+            ]
+          },
+          {
+            "className": "corrosive",
+            "confidence": 0.9085,
+            "bbox": [
+              204.38,
+              220.56,
+              54.1,
+              51.76
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "corrosive",
+            "confidence": 0.9459,
+            "bbox": [
+              204.98,
+              220.71,
+              53.36,
+              50.9
+            ]
+          },
+          {
+            "className": "corrosive",
+            "confidence": 0.9426,
+            "bbox": [
+              105.29,
+              223.14,
+              49.54,
+              46.07
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image1.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image1.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.918,
+          "avgConfidence": 0.913
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.946,
+          "avgConfidence": 0.944
+        }
+      },
+      "classNames": [
+        "corrosive"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image104",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image104",
+      "title": "Image image104",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image104.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image104.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image104.jpg",
+      "rawImageAvailable": true,
+      "width": 520,
+      "height": 520,
+      "dimensions": "520 x 520",
+      "groundTruth": [
+        {
+          "className": "spontaneously-combustible",
+          "bbox": [
+            165,
+            334,
+            82,
+            75
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9227,
+            "bbox": [
+              164.25,
+              334.41,
+              83.37,
+              73.24
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9464,
+            "bbox": [
+              164.94,
+              334.16,
+              82.77,
+              73.32
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image104.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image104.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.923,
+          "avgConfidence": 0.923
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.946,
+          "avgConfidence": 0.946
+        }
+      },
+      "classNames": [
+        "spontaneously-combustible"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image1027",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image1027",
+      "title": "Image image1027",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image1027.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image1027.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image1027.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 485,
+      "dimensions": "1000 x 485",
+      "groundTruth": [
+        {
+          "className": "oxygen",
+          "bbox": [
+            292,
+            70,
+            342,
+            350
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9311,
+            "bbox": [
+              289.93,
+              69.78,
+              345.19,
+              349.96
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9508,
+            "bbox": [
+              289.53,
+              72.21,
+              346.82,
+              345.46
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image1027.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image1027.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.931,
+          "avgConfidence": 0.931
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.951,
+          "avgConfidence": 0.951
+        }
+      },
+      "classNames": [
+        "oxygen"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image1028",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image1028",
+      "title": "Image image1028",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image1028.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image1028.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image1028.jpg",
+      "rawImageAvailable": true,
+      "width": 252,
+      "height": 520,
+      "dimensions": "252 x 520",
+      "groundTruth": [
+        {
+          "className": "radioactive",
+          "bbox": [
+            51,
+            190,
+            151,
+            145
+          ]
+        },
+        {
+          "className": "oxygen",
+          "bbox": [
+            20,
+            0,
+            155,
+            130
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9472,
+            "bbox": [
+              20.63,
+              0.06,
+              155.05,
+              129.45
+            ]
+          },
+          {
+            "className": "radioactive",
+            "confidence": 0.9406,
+            "bbox": [
+              50.17,
+              189.94,
+              151.8,
+              146.08
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9572,
+            "bbox": [
+              20.5,
+              0,
+              154.53,
+              129.25
+            ]
+          },
+          {
+            "className": "radioactive",
+            "confidence": 0.9369,
+            "bbox": [
+              50.77,
+              189.78,
+              150.76,
+              145.73
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image1028.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image1028.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.947,
+          "avgConfidence": 0.944
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.957,
+          "avgConfidence": 0.947
+        }
+      },
+      "classNames": [
+        "radioactive",
+        "oxygen"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image1031",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image1031",
+      "title": "Image image1031",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image1031.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image1031.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image1031.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            335,
+            167,
+            163,
+            167
+          ]
+        },
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            280,
+            538,
+            145,
+            135
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9281,
+            "bbox": [
+              330.92,
+              165.05,
+              162.44,
+              170.48
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9206,
+            "bbox": [
+              277.43,
+              537.68,
+              147.08,
+              143.12
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9435,
+            "bbox": [
+              328.86,
+              165.21,
+              163.27,
+              170.09
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9365,
+            "bbox": [
+              276.59,
+              535.72,
+              148.17,
+              140.72
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image1031.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image1031.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.928,
+          "avgConfidence": 0.924
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.944,
+          "avgConfidence": 0.94
+        }
+      },
+      "classNames": [
+        "non-flammable-gas"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10008",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10008",
+      "title": "Image image10008",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10008.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10008.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10008.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 485,
+      "dimensions": "1000 x 485",
+      "groundTruth": [
+        {
+          "className": "corrosive",
+          "bbox": [
+            571,
+            143,
+            287,
+            301
+          ]
+        },
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            175,
+            240,
+            163,
+            221
+          ]
+        },
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            1,
+            259,
+            63,
+            156
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "corrosive",
+            "confidence": 0.9571,
+            "bbox": [
+              570.63,
+              144.8,
+              286.26,
+              298.8
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9422,
+            "bbox": [
+              174.88,
+              238.95,
+              163.04,
+              221.59
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9146,
+            "bbox": [
+              0,
+              255.54,
+              63.26,
+              159.96
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9474,
+            "bbox": [
+              175.11,
+              240.01,
+              162.85,
+              218.63
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.935,
+            "bbox": [
+              0,
+              257.08,
+              64.04,
+              157.69
+            ]
+          },
+          {
+            "className": "corrosive",
+            "confidence": 0.82,
+            "bbox": [
+              572.14,
+              144.29,
+              285.62,
+              298.43
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10008.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10008.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 3,
+          "maxConfidence": 0.957,
+          "avgConfidence": 0.938
+        },
+        "yolo26": {
+          "count": 3,
+          "maxConfidence": 0.947,
+          "avgConfidence": 0.901
+        }
+      },
+      "classNames": [
+        "corrosive",
+        "infectious-substance"
+      ],
+      "classLegend": [],
+      "summary": "3 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10021",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10021",
+      "title": "Image image10021",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10021.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10021.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10021.jpg",
+      "rawImageAvailable": true,
+      "width": 252,
+      "height": 520,
+      "dimensions": "252 x 520",
+      "groundTruth": [
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            52,
+            223,
+            151,
+            146
+          ]
+        },
+        {
+          "className": "explosive",
+          "bbox": [
+            1,
+            0,
+            95,
+            121
+          ]
+        },
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            154,
+            0,
+            97,
+            85
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9534,
+            "bbox": [
+              51.97,
+              222.93,
+              151.18,
+              146.81
+            ]
+          },
+          {
+            "className": "explosive",
+            "confidence": 0.9393,
+            "bbox": [
+              1.37,
+              0.08,
+              95.68,
+              120.63
+            ]
+          },
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9269,
+            "bbox": [
+              153.63,
+              0.18,
+              97.15,
+              84.96
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "explosive",
+            "confidence": 0.9634,
+            "bbox": [
+              1.26,
+              0.05,
+              95.65,
+              119.48
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9484,
+            "bbox": [
+              51.76,
+              222.15,
+              151.41,
+              146.95
+            ]
+          },
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9435,
+            "bbox": [
+              153.59,
+              0.27,
+              97.09,
+              84.42
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10021.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10021.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 3,
+          "maxConfidence": 0.953,
+          "avgConfidence": 0.94
+        },
+        "yolo26": {
+          "count": 3,
+          "maxConfidence": 0.963,
+          "avgConfidence": 0.952
+        }
+      },
+      "classNames": [
+        "non-flammable-gas",
+        "explosive",
+        "inhalation-hazard"
+      ],
+      "classLegend": [],
+      "summary": "3 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10022",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10022",
+      "title": "Image image10022",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10022.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10022.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10022.jpg",
+      "rawImageAvailable": true,
+      "width": 520,
+      "height": 252,
+      "dimensions": "520 x 252",
+      "groundTruth": [
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            224,
+            59,
+            149,
+            133
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9307,
+            "bbox": [
+              228.27,
+              59.5,
+              146.15,
+              131.84
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9542,
+            "bbox": [
+              228.7,
+              59.59,
+              144.63,
+              131.41
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10022.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10022.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.931,
+          "avgConfidence": 0.931
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.954,
+          "avgConfidence": 0.954
+        }
+      },
+      "classNames": [
+        "infectious-substance"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10068",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10068",
+      "title": "Image image10068",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10068.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10068.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10068.jpg",
+      "rawImageAvailable": true,
+      "width": 485,
+      "height": 1000,
+      "dimensions": "485 x 1000",
+      "groundTruth": [
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            70,
+            374,
+            275,
+            259
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.94,
+            "bbox": [
+              68.08,
+              376.77,
+              276.43,
+              257.61
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9486,
+            "bbox": [
+              68.29,
+              369.8,
+              276.3,
+              263.97
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10068.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10068.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.94,
+          "avgConfidence": 0.94
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.949,
+          "avgConfidence": 0.949
+        }
+      },
+      "classNames": [
+        "inhalation-hazard"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10081",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10081",
+      "title": "Image image10081",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10081.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10081.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10081.jpg",
+      "rawImageAvailable": true,
+      "width": 448,
+      "height": 336,
+      "dimensions": "448 x 336",
+      "groundTruth": [
+        {
+          "className": "flammable-solid",
+          "bbox": [
+            160,
+            177,
+            288,
+            75
+          ]
+        },
+        {
+          "className": "radioactive",
+          "bbox": [
+            1,
+            51,
+            85,
+            39
+          ]
+        },
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            1,
+            0,
+            140,
+            19
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "radioactive",
+            "confidence": 0.8948,
+            "bbox": [
+              0,
+              50.29,
+              83.73,
+              40.1
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.8758,
+            "bbox": [
+              0,
+              0,
+              149.19,
+              20.52
+            ]
+          },
+          {
+            "className": "flammable-solid",
+            "confidence": 0.8591,
+            "bbox": [
+              157.87,
+              178.22,
+              290.13,
+              74.76
+            ]
+          },
+          {
+            "className": "radioactive",
+            "confidence": 0.7037,
+            "bbox": [
+              238.18,
+              298.55,
+              209.82,
+              37.44
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "radioactive",
+            "confidence": 0.9321,
+            "bbox": [
+              0.04,
+              50.49,
+              83.72,
+              39.47
+            ]
+          },
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9259,
+            "bbox": [
+              157.28,
+              179.11,
+              290.33,
+              72.82
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.8991,
+            "bbox": [
+              0.81,
+              0,
+              143.19,
+              20.57
+            ]
+          },
+          {
+            "className": "radioactive",
+            "confidence": 0.5709,
+            "bbox": [
+              239.26,
+              298.78,
+              208.74,
+              37.22
+            ]
+          },
+          {
+            "className": "radioactive",
+            "confidence": 0.5076,
+            "bbox": [
+              238.56,
+              296.86,
+              209.44,
+              39.14
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10081.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10081.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 4,
+          "maxConfidence": 0.895,
+          "avgConfidence": 0.833
+        },
+        "yolo26": {
+          "count": 5,
+          "maxConfidence": 0.932,
+          "avgConfidence": 0.767
+        }
+      },
+      "classNames": [
+        "flammable-solid",
+        "radioactive",
+        "infectious-substance"
+      ],
+      "classLegend": [],
+      "summary": "3 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10084",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10084",
+      "title": "Image image10084",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10084.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10084.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10084.jpg",
+      "rawImageAvailable": true,
+      "width": 750,
+      "height": 1000,
+      "dimensions": "750 x 1000",
+      "groundTruth": [
+        {
+          "className": "corrosive",
+          "bbox": [
+            254,
+            422,
+            124,
+            120
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "corrosive",
+            "confidence": 0.9338,
+            "bbox": [
+              255.35,
+              422.32,
+              122.48,
+              121.27
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "corrosive",
+            "confidence": 0.962,
+            "bbox": [
+              255.18,
+              422.76,
+              122.55,
+              119.31
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10084.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10084.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.934,
+          "avgConfidence": 0.934
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.962,
+          "avgConfidence": 0.962
+        }
+      },
+      "classNames": [
+        "corrosive"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10085",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10085",
+      "title": "Image image10085",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10085.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10085.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10085.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "spontaneously-combustible",
+          "bbox": [
+            180,
+            100,
+            193,
+            184
+          ]
+        },
+        {
+          "className": "spontaneously-combustible",
+          "bbox": [
+            273,
+            338,
+            132,
+            139
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9219,
+            "bbox": [
+              275.63,
+              349.11,
+              129.61,
+              123.25
+            ]
+          },
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9217,
+            "bbox": [
+              187.93,
+              99.82,
+              187.59,
+              171.66
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.954,
+            "bbox": [
+              276.66,
+              349.54,
+              127.91,
+              121.2
+            ]
+          },
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9507,
+            "bbox": [
+              188.79,
+              100.71,
+              186.31,
+              169.33
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10085.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10085.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.922,
+          "avgConfidence": 0.922
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.954,
+          "avgConfidence": 0.952
+        }
+      },
+      "classNames": [
+        "spontaneously-combustible"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10087",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10087",
+      "title": "Image image10087",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10087.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10087.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10087.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "flammable-solid",
+          "bbox": [
+            235,
+            416,
+            122,
+            120
+          ]
+        },
+        {
+          "className": "flammable-solid",
+          "bbox": [
+            504,
+            92,
+            183,
+            159
+          ]
+        },
+        {
+          "className": "flammable-solid",
+          "bbox": [
+            478,
+            544,
+            118,
+            119
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9235,
+            "bbox": [
+              476.69,
+              544.53,
+              118.71,
+              119.02
+            ]
+          },
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9225,
+            "bbox": [
+              235.38,
+              414.47,
+              122.03,
+              120.97
+            ]
+          },
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9095,
+            "bbox": [
+              503.14,
+              88.69,
+              181.91,
+              163.37
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9497,
+            "bbox": [
+              235.18,
+              414.83,
+              121.4,
+              120.1
+            ]
+          },
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9491,
+            "bbox": [
+              478.07,
+              545.4,
+              116.85,
+              116.93
+            ]
+          },
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9301,
+            "bbox": [
+              503.61,
+              89.85,
+              181.94,
+              160.68
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10087.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10087.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 3,
+          "maxConfidence": 0.924,
+          "avgConfidence": 0.919
+        },
+        "yolo26": {
+          "count": 3,
+          "maxConfidence": 0.95,
+          "avgConfidence": 0.943
+        }
+      },
+      "classNames": [
+        "flammable-solid"
+      ],
+      "classLegend": [],
+      "summary": "3 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10099",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10099",
+      "title": "Image image10099",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10099.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10099.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10099.jpg",
+      "rawImageAvailable": true,
+      "width": 750,
+      "height": 1000,
+      "dimensions": "750 x 1000",
+      "groundTruth": [
+        {
+          "className": "flammable",
+          "bbox": [
+            267,
+            410,
+            178,
+            211
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "flammable",
+            "confidence": 0.9163,
+            "bbox": [
+              266.43,
+              409.88,
+              178.22,
+              210.27
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "flammable",
+            "confidence": 0.9457,
+            "bbox": [
+              265.71,
+              409.96,
+              176.84,
+              208.39
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10099.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10099.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.916,
+          "avgConfidence": 0.916
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.946,
+          "avgConfidence": 0.946
+        }
+      },
+      "classNames": [
+        "flammable"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10110",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10110",
+      "title": "Image image10110",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10110.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10110.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10110.jpg",
+      "rawImageAvailable": true,
+      "width": 485,
+      "height": 1000,
+      "dimensions": "485 x 1000",
+      "groundTruth": [
+        {
+          "className": "dangerous",
+          "bbox": [
+            139,
+            496,
+            181,
+            179
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "dangerous",
+            "confidence": 0.9355,
+            "bbox": [
+              137.73,
+              495.52,
+              180.88,
+              180.8
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "dangerous",
+            "confidence": 0.9571,
+            "bbox": [
+              138.16,
+              496.99,
+              179.93,
+              178.83
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10110.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10110.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.936,
+          "avgConfidence": 0.936
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.957,
+          "avgConfidence": 0.957
+        }
+      },
+      "classNames": [
+        "dangerous"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10114",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10114",
+      "title": "Image image10114",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10114.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10114.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10114.jpg",
+      "rawImageAvailable": true,
+      "width": 750,
+      "height": 1000,
+      "dimensions": "750 x 1000",
+      "groundTruth": [
+        {
+          "className": "explosive",
+          "bbox": [
+            384,
+            238,
+            142,
+            148
+          ]
+        },
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            371,
+            496,
+            133,
+            127
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "explosive",
+            "confidence": 0.9159,
+            "bbox": [
+              383.76,
+              238.36,
+              141.85,
+              147.26
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9138,
+            "bbox": [
+              371.23,
+              495.06,
+              132.64,
+              128.71
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "explosive",
+            "confidence": 0.9506,
+            "bbox": [
+              383.32,
+              236.42,
+              141.42,
+              147.83
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9429,
+            "bbox": [
+              370.92,
+              494.48,
+              133.58,
+              128.39
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10114.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10114.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.916,
+          "avgConfidence": 0.915
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.951,
+          "avgConfidence": 0.947
+        }
+      },
+      "classNames": [
+        "explosive",
+        "non-flammable-gas"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10130",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10130",
+      "title": "Image image10130",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10130.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10130.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10130.jpg",
+      "rawImageAvailable": true,
+      "width": 485,
+      "height": 1000,
+      "dimensions": "485 x 1000",
+      "groundTruth": [
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            110,
+            393,
+            254,
+            282
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9418,
+            "bbox": [
+              111.48,
+              393.42,
+              253.59,
+              283.09
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9604,
+            "bbox": [
+              112.14,
+              391.03,
+              252.19,
+              283.32
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10130.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10130.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.942,
+          "avgConfidence": 0.942
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.96,
+          "avgConfidence": 0.96
+        }
+      },
+      "classNames": [
+        "non-flammable-gas"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10139",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10139",
+      "title": "Image image10139",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10139.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10139.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10139.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 1000,
+      "dimensions": "1000 x 1000",
+      "groundTruth": [
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            343,
+            245,
+            351,
+            355
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9187,
+            "bbox": [
+              345.15,
+              242.99,
+              346.86,
+              352.23
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9408,
+            "bbox": [
+              344.33,
+              243.39,
+              343.99,
+              347.23
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10139.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10139.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.919,
+          "avgConfidence": 0.919
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.941,
+          "avgConfidence": 0.941
+        }
+      },
+      "classNames": [
+        "inhalation-hazard"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10147",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10147",
+      "title": "Image image10147",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10147.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10147.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10147.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 1000,
+      "dimensions": "1000 x 1000",
+      "groundTruth": [
+        {
+          "className": "spontaneously-combustible",
+          "bbox": [
+            423,
+            424,
+            176,
+            156
+          ]
+        },
+        {
+          "className": "spontaneously-combustible",
+          "bbox": [
+            848,
+            232,
+            152,
+            186
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9272,
+            "bbox": [
+              847.44,
+              230.91,
+              152.56,
+              193.91
+            ]
+          },
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9239,
+            "bbox": [
+              422.7,
+              423.86,
+              176.7,
+              156.52
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9538,
+            "bbox": [
+              422.04,
+              424.44,
+              176.76,
+              155.5
+            ]
+          },
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9535,
+            "bbox": [
+              848.65,
+              232.22,
+              151.2,
+              192.39
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10147.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10147.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.927,
+          "avgConfidence": 0.926
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.954,
+          "avgConfidence": 0.954
+        }
+      },
+      "classNames": [
+        "spontaneously-combustible"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10154",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10154",
+      "title": "Image image10154",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10154.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10154.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10154.jpg",
+      "rawImageAvailable": true,
+      "width": 485,
+      "height": 1000,
+      "dimensions": "485 x 1000",
+      "groundTruth": [
+        {
+          "className": "oxygen",
+          "bbox": [
+            45,
+            235,
+            243,
+            190
+          ]
+        },
+        {
+          "className": "radioactive",
+          "bbox": [
+            61,
+            524,
+            284,
+            268
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9435,
+            "bbox": [
+              43.71,
+              234.84,
+              244.22,
+              190.06
+            ]
+          },
+          {
+            "className": "radioactive",
+            "confidence": 0.9297,
+            "bbox": [
+              59.48,
+              523.33,
+              284.7,
+              270.12
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9579,
+            "bbox": [
+              42.47,
+              234.94,
+              245.73,
+              189.92
+            ]
+          },
+          {
+            "className": "radioactive",
+            "confidence": 0.9467,
+            "bbox": [
+              59.86,
+              522.11,
+              284.66,
+              269.06
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10154.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10154.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.944,
+          "avgConfidence": 0.937
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.958,
+          "avgConfidence": 0.952
+        }
+      },
+      "classNames": [
+        "oxygen",
+        "radioactive"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10176",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10176",
+      "title": "Image image10176",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10176.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10176.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10176.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            17,
+            140,
+            135,
+            122
+          ]
+        },
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            256,
+            11,
+            128,
+            134
+          ]
+        },
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            494,
+            379,
+            105,
+            96
+          ]
+        },
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            375,
+            535,
+            111,
+            117
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9264,
+            "bbox": [
+              374.12,
+              535.02,
+              111.73,
+              116.94
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9195,
+            "bbox": [
+              17.35,
+              141.45,
+              135.75,
+              121.69
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9174,
+            "bbox": [
+              255.71,
+              9.24,
+              127.91,
+              138
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9158,
+            "bbox": [
+              494.47,
+              379.09,
+              104.47,
+              96.44
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9511,
+            "bbox": [
+              374.33,
+              535.35,
+              111.16,
+              115.69
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9497,
+            "bbox": [
+              494.79,
+              379.39,
+              104.37,
+              96.62
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9382,
+            "bbox": [
+              18.61,
+              140.95,
+              133.62,
+              121.13
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.935,
+            "bbox": [
+              255.7,
+              10.79,
+              127.48,
+              134
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10176.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10176.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 4,
+          "maxConfidence": 0.926,
+          "avgConfidence": 0.92
+        },
+        "yolo26": {
+          "count": 4,
+          "maxConfidence": 0.951,
+          "avgConfidence": 0.944
+        }
+      },
+      "classNames": [
+        "infectious-substance"
+      ],
+      "classLegend": [],
+      "summary": "4 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10179",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10179",
+      "title": "Image image10179",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10179.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10179.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10179.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 750,
+      "dimensions": "1000 x 750",
+      "groundTruth": [
+        {
+          "className": "explosive",
+          "bbox": [
+            300,
+            177,
+            172,
+            171
+          ]
+        },
+        {
+          "className": "spontaneously-combustible",
+          "bbox": [
+            471,
+            359,
+            175,
+            175
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9376,
+            "bbox": [
+              470.09,
+              359.37,
+              175.29,
+              174.71
+            ]
+          },
+          {
+            "className": "explosive",
+            "confidence": 0.9276,
+            "bbox": [
+              299.6,
+              177.46,
+              171.27,
+              171.01
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "explosive",
+            "confidence": 0.9563,
+            "bbox": [
+              300.34,
+              178.38,
+              170,
+              169.46
+            ]
+          },
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9535,
+            "bbox": [
+              471.69,
+              359.3,
+              173,
+              174.25
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10179.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10179.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.938,
+          "avgConfidence": 0.933
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.956,
+          "avgConfidence": 0.955
+        }
+      },
+      "classNames": [
+        "explosive",
+        "spontaneously-combustible"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10186",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10186",
+      "title": "Image image10186",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10186.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10186.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10186.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "poison",
+          "bbox": [
+            293,
+            581,
+            146,
+            135
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "poison",
+            "confidence": 0.9196,
+            "bbox": [
+              293.51,
+              581.41,
+              146.82,
+              134.94
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "poison",
+            "confidence": 0.9467,
+            "bbox": [
+              294.88,
+              582.21,
+              144.69,
+              131.85
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10186.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10186.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.92,
+          "avgConfidence": 0.92
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.947,
+          "avgConfidence": 0.947
+        }
+      },
+      "classNames": [
+        "poison"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10200",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10200",
+      "title": "Image image10200",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10200.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10200.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10200.jpg",
+      "rawImageAvailable": true,
+      "width": 485,
+      "height": 1000,
+      "dimensions": "485 x 1000",
+      "groundTruth": [
+        {
+          "className": "dangerous",
+          "bbox": [
+            194,
+            364,
+            150,
+            141
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "dangerous",
+            "confidence": 0.9251,
+            "bbox": [
+              194.42,
+              363.86,
+              148.06,
+              141.12
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "dangerous",
+            "confidence": 0.9626,
+            "bbox": [
+              194.72,
+              364.15,
+              147.89,
+              139.8
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10200.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10200.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.925,
+          "avgConfidence": 0.925
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.963,
+          "avgConfidence": 0.963
+        }
+      },
+      "classNames": [
+        "dangerous"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10216",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10216",
+      "title": "Image image10216",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10216.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10216.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10216.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "poison",
+          "bbox": [
+            260,
+            345,
+            102,
+            110
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "poison",
+            "confidence": 0.9203,
+            "bbox": [
+              261.18,
+              344.66,
+              100.15,
+              110.26
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "poison",
+            "confidence": 0.9472,
+            "bbox": [
+              260.89,
+              345.02,
+              100.43,
+              109.49
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10216.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10216.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.92,
+          "avgConfidence": 0.92
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.947,
+          "avgConfidence": 0.947
+        }
+      },
+      "classNames": [
+        "poison"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10218",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10218",
+      "title": "Image image10218",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10218.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10218.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10218.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 1000,
+      "dimensions": "1000 x 1000",
+      "groundTruth": [
+        {
+          "className": "radioactive",
+          "bbox": [
+            352,
+            501,
+            213,
+            219
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "radioactive",
+            "confidence": 0.9398,
+            "bbox": [
+              351.8,
+              501.01,
+              214.16,
+              216.46
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "radioactive",
+            "confidence": 0.9573,
+            "bbox": [
+              351.36,
+              501.13,
+              213.24,
+              215.85
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10218.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10218.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.94,
+          "avgConfidence": 0.94
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.957,
+          "avgConfidence": 0.957
+        }
+      },
+      "classNames": [
+        "radioactive"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10233",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10233",
+      "title": "Image image10233",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10233.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10233.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10233.jpg",
+      "rawImageAvailable": true,
+      "width": 750,
+      "height": 1000,
+      "dimensions": "750 x 1000",
+      "groundTruth": [
+        {
+          "className": "radioactive",
+          "bbox": [
+            174,
+            439,
+            191,
+            180
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "radioactive",
+            "confidence": 0.9248,
+            "bbox": [
+              174.49,
+              438.83,
+              190.61,
+              181.57
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "radioactive",
+            "confidence": 0.9416,
+            "bbox": [
+              175.02,
+              440.37,
+              188.97,
+              176.81
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10233.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10233.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.925,
+          "avgConfidence": 0.925
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.942,
+          "avgConfidence": 0.942
+        }
+      },
+      "classNames": [
+        "radioactive"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10245",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10245",
+      "title": "Image image10245",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10245.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10245.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10245.jpg",
+      "rawImageAvailable": true,
+      "width": 388,
+      "height": 520,
+      "dimensions": "388 x 520",
+      "groundTruth": [
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            110,
+            112,
+            74,
+            64
+          ]
+        },
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            111,
+            228,
+            84,
+            81
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9317,
+            "bbox": [
+              111.56,
+              227.35,
+              84.46,
+              81.62
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9227,
+            "bbox": [
+              109.44,
+              111.79,
+              74.74,
+              64.19
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9502,
+            "bbox": [
+              111.47,
+              227.16,
+              84.06,
+              81.7
+            ]
+          },
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9478,
+            "bbox": [
+              109.61,
+              111.37,
+              74.54,
+              64.32
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10245.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10245.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.932,
+          "avgConfidence": 0.927
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.95,
+          "avgConfidence": 0.949
+        }
+      },
+      "classNames": [
+        "infectious-substance"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10268",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10268",
+      "title": "Image image10268",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10268.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10268.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10268.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            310,
+            261,
+            161,
+            156
+          ]
+        },
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            176,
+            594,
+            154,
+            144
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.93,
+            "bbox": [
+              310.79,
+              259.42,
+              159.94,
+              159.25
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9253,
+            "bbox": [
+              173.65,
+              592.69,
+              156.04,
+              145.28
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9434,
+            "bbox": [
+              310.12,
+              259.82,
+              160.04,
+              157.83
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9422,
+            "bbox": [
+              174.05,
+              593.01,
+              155.62,
+              140.62
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10268.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10268.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.93,
+          "avgConfidence": 0.928
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.943,
+          "avgConfidence": 0.943
+        }
+      },
+      "classNames": [
+        "non-flammable-gas"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10271",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10271",
+      "title": "Image image10271",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10271.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10271.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10271.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "explosive",
+          "bbox": [
+            339,
+            432,
+            165,
+            212
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "explosive",
+            "confidence": 0.9184,
+            "bbox": [
+              338.75,
+              431.76,
+              165.37,
+              212.43
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "explosive",
+            "confidence": 0.9429,
+            "bbox": [
+              338.51,
+              431.08,
+              164.13,
+              211.71
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10271.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10271.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.918,
+          "avgConfidence": 0.918
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.943,
+          "avgConfidence": 0.943
+        }
+      },
+      "classNames": [
+        "explosive"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10280",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10280",
+      "title": "Image image10280",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10280.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10280.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10280.jpg",
+      "rawImageAvailable": true,
+      "width": 520,
+      "height": 520,
+      "dimensions": "520 x 520",
+      "groundTruth": [
+        {
+          "className": "oxygen",
+          "bbox": [
+            192,
+            211,
+            168,
+            160
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9192,
+            "bbox": [
+              194.77,
+              209.39,
+              165.74,
+              158.23
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9486,
+            "bbox": [
+              194.73,
+              209.95,
+              165.54,
+              157.39
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10280.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10280.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.919,
+          "avgConfidence": 0.919
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.949,
+          "avgConfidence": 0.949
+        }
+      },
+      "classNames": [
+        "oxygen"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10282",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10282",
+      "title": "Image image10282",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10282.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10282.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10282.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 485,
+      "dimensions": "1000 x 485",
+      "groundTruth": [
+        {
+          "className": "infectious-substance",
+          "bbox": [
+            471,
+            176,
+            205,
+            179
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9437,
+            "bbox": [
+              471.85,
+              175.61,
+              204.49,
+              178.52
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "infectious-substance",
+            "confidence": 0.9561,
+            "bbox": [
+              471.41,
+              175.55,
+              205.02,
+              178
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10282.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10282.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.944,
+          "avgConfidence": 0.944
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.956,
+          "avgConfidence": 0.956
+        }
+      },
+      "classNames": [
+        "infectious-substance"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10287",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10287",
+      "title": "Image image10287",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10287.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10287.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10287.jpg",
+      "rawImageAvailable": true,
+      "width": 388,
+      "height": 520,
+      "dimensions": "388 x 520",
+      "groundTruth": [
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            216,
+            89,
+            82,
+            83
+          ]
+        },
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            82,
+            238,
+            103,
+            98
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9282,
+            "bbox": [
+              80.89,
+              237.95,
+              103.97,
+              97.48
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9275,
+            "bbox": [
+              216.56,
+              89.47,
+              81.62,
+              82.26
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9554,
+            "bbox": [
+              81.22,
+              237.89,
+              104.07,
+              97.17
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.949,
+            "bbox": [
+              216.19,
+              89.45,
+              81.85,
+              82.7
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10287.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10287.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.928,
+          "avgConfidence": 0.928
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.955,
+          "avgConfidence": 0.952
+        }
+      },
+      "classNames": [
+        "non-flammable-gas"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10299",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10299",
+      "title": "Image image10299",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10299.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10299.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10299.jpg",
+      "rawImageAvailable": true,
+      "width": 520,
+      "height": 520,
+      "dimensions": "520 x 520",
+      "groundTruth": [
+        {
+          "className": "radioactive",
+          "bbox": [
+            180,
+            256,
+            136,
+            134
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "radioactive",
+            "confidence": 0.9292,
+            "bbox": [
+              178.95,
+              254.23,
+              137.37,
+              136.14
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "radioactive",
+            "confidence": 0.953,
+            "bbox": [
+              178.95,
+              254.19,
+              136.54,
+              136.03
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10299.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10299.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.929,
+          "avgConfidence": 0.929
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.953,
+          "avgConfidence": 0.953
+        }
+      },
+      "classNames": [
+        "radioactive"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10321",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10321",
+      "title": "Image image10321",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10321.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10321.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10321.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 750,
+      "dimensions": "1000 x 750",
+      "groundTruth": [
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            450,
+            411,
+            104,
+            92
+          ]
+        },
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            437,
+            180,
+            112,
+            113
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9284,
+            "bbox": [
+              437.12,
+              178.72,
+              111.04,
+              114.23
+            ]
+          },
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9207,
+            "bbox": [
+              449.53,
+              411.62,
+              104.97,
+              92.41
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9523,
+            "bbox": [
+              437.38,
+              179.02,
+              111.72,
+              113.57
+            ]
+          },
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9485,
+            "bbox": [
+              450.41,
+              411.9,
+              103.29,
+              91.57
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10321.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10321.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.928,
+          "avgConfidence": 0.925
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.952,
+          "avgConfidence": 0.95
+        }
+      },
+      "classNames": [
+        "inhalation-hazard",
+        "non-flammable-gas"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10322",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10322",
+      "title": "Image image10322",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10322.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10322.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10322.jpg",
+      "rawImageAvailable": true,
+      "width": 520,
+      "height": 252,
+      "dimensions": "520 x 252",
+      "groundTruth": [
+        {
+          "className": "oxygen",
+          "bbox": [
+            195,
+            96,
+            205,
+            144
+          ]
+        },
+        {
+          "className": "flammable",
+          "bbox": [
+            4,
+            53,
+            160,
+            107
+          ]
+        },
+        {
+          "className": "organic-peroxide",
+          "bbox": [
+            194,
+            1,
+            126,
+            39
+          ]
+        },
+        {
+          "className": "flammable",
+          "bbox": [
+            422,
+            14,
+            96,
+            72
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "oxygen",
+            "confidence": 0.932,
+            "bbox": [
+              194.39,
+              95.19,
+              205.36,
+              146.14
+            ]
+          },
+          {
+            "className": "flammable",
+            "confidence": 0.9113,
+            "bbox": [
+              0.63,
+              53.74,
+              162.14,
+              105.63
+            ]
+          },
+          {
+            "className": "organic-peroxide",
+            "confidence": 0.9009,
+            "bbox": [
+              195.84,
+              1.34,
+              121.33,
+              39.39
+            ]
+          },
+          {
+            "className": "flammable",
+            "confidence": 0.9002,
+            "bbox": [
+              422.94,
+              14.08,
+              96.96,
+              73.38
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9493,
+            "bbox": [
+              193.37,
+              95.5,
+              207.2,
+              146.31
+            ]
+          },
+          {
+            "className": "flammable",
+            "confidence": 0.9221,
+            "bbox": [
+              0.71,
+              53.58,
+              162.4,
+              106.06
+            ]
+          },
+          {
+            "className": "organic-peroxide",
+            "confidence": 0.9207,
+            "bbox": [
+              195.5,
+              1.38,
+              121.63,
+              38.94
+            ]
+          },
+          {
+            "className": "flammable",
+            "confidence": 0.9136,
+            "bbox": [
+              423.51,
+              13.58,
+              95.65,
+              74.35
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10322.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10322.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 4,
+          "maxConfidence": 0.932,
+          "avgConfidence": 0.911
+        },
+        "yolo26": {
+          "count": 4,
+          "maxConfidence": 0.949,
+          "avgConfidence": 0.926
+        }
+      },
+      "classNames": [
+        "oxygen",
+        "flammable",
+        "organic-peroxide"
+      ],
+      "classLegend": [],
+      "summary": "4 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10323",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10323",
+      "title": "Image image10323",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10323.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10323.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10323.jpg",
+      "rawImageAvailable": true,
+      "width": 388,
+      "height": 520,
+      "dimensions": "388 x 520",
+      "groundTruth": [
+        {
+          "className": "poison",
+          "bbox": [
+            144,
+            217,
+            66,
+            60
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "poison",
+            "confidence": 0.9253,
+            "bbox": [
+              144.29,
+              218.51,
+              65.95,
+              58.76
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "poison",
+            "confidence": 0.9514,
+            "bbox": [
+              144.15,
+              218.11,
+              66.43,
+              58.93
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10323.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10323.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.925,
+          "avgConfidence": 0.925
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.951,
+          "avgConfidence": 0.951
+        }
+      },
+      "classNames": [
+        "poison"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10337",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10337",
+      "title": "Image image10337",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10337.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10337.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10337.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 750,
+      "dimensions": "1000 x 750",
+      "groundTruth": [
+        {
+          "className": "explosive",
+          "bbox": [
+            295,
+            167,
+            177,
+            171
+          ]
+        },
+        {
+          "className": "spontaneously-combustible",
+          "bbox": [
+            471,
+            350,
+            189,
+            181
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9328,
+            "bbox": [
+              478.63,
+              353.41,
+              182.73,
+              178.91
+            ]
+          },
+          {
+            "className": "explosive",
+            "confidence": 0.9246,
+            "bbox": [
+              289.23,
+              167.41,
+              176.63,
+              170.72
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "explosive",
+            "confidence": 0.956,
+            "bbox": [
+              289.45,
+              167.23,
+              175.67,
+              170.17
+            ]
+          },
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9497,
+            "bbox": [
+              478.25,
+              354.69,
+              182.64,
+              176.73
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10337.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10337.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.933,
+          "avgConfidence": 0.929
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.956,
+          "avgConfidence": 0.953
+        }
+      },
+      "classNames": [
+        "explosive",
+        "spontaneously-combustible"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10363",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10363",
+      "title": "Image image10363",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10363.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10363.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10363.jpg",
+      "rawImageAvailable": true,
+      "width": 388,
+      "height": 520,
+      "dimensions": "388 x 520",
+      "groundTruth": [
+        {
+          "className": "flammable",
+          "bbox": [
+            126,
+            259,
+            67,
+            69
+          ]
+        },
+        {
+          "className": "flammable",
+          "bbox": [
+            7,
+            174,
+            84,
+            79
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "flammable",
+            "confidence": 0.9318,
+            "bbox": [
+              8.12,
+              174.49,
+              82.76,
+              78.73
+            ]
+          },
+          {
+            "className": "flammable",
+            "confidence": 0.9146,
+            "bbox": [
+              127.48,
+              259.06,
+              65.74,
+              68.72
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "flammable",
+            "confidence": 0.9471,
+            "bbox": [
+              8.2,
+              174.29,
+              82.84,
+              77.84
+            ]
+          },
+          {
+            "className": "flammable",
+            "confidence": 0.9389,
+            "bbox": [
+              127.2,
+              259.62,
+              66.23,
+              67.45
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10363.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10363.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.932,
+          "avgConfidence": 0.923
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.947,
+          "avgConfidence": 0.943
+        }
+      },
+      "classNames": [
+        "flammable"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10382",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10382",
+      "title": "Image image10382",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10382.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10382.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10382.jpg",
+      "rawImageAvailable": true,
+      "width": 252,
+      "height": 520,
+      "dimensions": "252 x 520",
+      "groundTruth": [
+        {
+          "className": "flammable-solid",
+          "bbox": [
+            33,
+            195,
+            171,
+            139
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9321,
+            "bbox": [
+              32.26,
+              194.67,
+              172.29,
+              141.29
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9539,
+            "bbox": [
+              32.84,
+              195.14,
+              171.41,
+              141.88
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10382.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10382.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.932,
+          "avgConfidence": 0.932
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.954,
+          "avgConfidence": 0.954
+        }
+      },
+      "classNames": [
+        "flammable-solid"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10387",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10387",
+      "title": "Image image10387",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10387.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10387.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10387.jpg",
+      "rawImageAvailable": true,
+      "width": 749,
+      "height": 1000,
+      "dimensions": "749 x 1000",
+      "groundTruth": [
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            162,
+            470,
+            144,
+            139
+          ]
+        },
+        {
+          "className": "non-flammable-gas",
+          "bbox": [
+            428,
+            463,
+            221,
+            207
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9356,
+            "bbox": [
+              430.39,
+              464.4,
+              218.36,
+              205.56
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.93,
+            "bbox": [
+              162.34,
+              470.89,
+              142.42,
+              138.55
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.9543,
+            "bbox": [
+              430.75,
+              464.5,
+              216.14,
+              205.16
+            ]
+          },
+          {
+            "className": "non-flammable-gas",
+            "confidence": 0.952,
+            "bbox": [
+              163.21,
+              471.69,
+              141.13,
+              134.11
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10387.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10387.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.936,
+          "avgConfidence": 0.933
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.954,
+          "avgConfidence": 0.953
+        }
+      },
+      "classNames": [
+        "non-flammable-gas"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10394",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10394",
+      "title": "Image image10394",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10394.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10394.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10394.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 750,
+      "dimensions": "1000 x 750",
+      "groundTruth": [
+        {
+          "className": "explosive",
+          "bbox": [
+            290,
+            170,
+            179,
+            177
+          ]
+        },
+        {
+          "className": "spontaneously-combustible",
+          "bbox": [
+            468,
+            357,
+            187,
+            177
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.9369,
+            "bbox": [
+              467.83,
+              356.32,
+              185.76,
+              176.83
+            ]
+          },
+          {
+            "className": "explosive",
+            "confidence": 0.9248,
+            "bbox": [
+              288.34,
+              174.18,
+              178.49,
+              173.59
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "explosive",
+            "confidence": 0.9538,
+            "bbox": [
+              289.13,
+              174.89,
+              176.6,
+              172.81
+            ]
+          },
+          {
+            "className": "spontaneously-combustible",
+            "confidence": 0.951,
+            "bbox": [
+              469.01,
+              357.15,
+              184.22,
+              175.6
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10394.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10394.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.937,
+          "avgConfidence": 0.931
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.954,
+          "avgConfidence": 0.952
+        }
+      },
+      "classNames": [
+        "explosive",
+        "spontaneously-combustible"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10398",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10398",
+      "title": "Image image10398",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10398.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10398.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10398.jpg",
+      "rawImageAvailable": true,
+      "width": 750,
+      "height": 1000,
+      "dimensions": "750 x 1000",
+      "groundTruth": [
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            250,
+            435,
+            147,
+            184
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9261,
+            "bbox": [
+              249.8,
+              434.54,
+              148.94,
+              183.74
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9481,
+            "bbox": [
+              249.79,
+              434.82,
+              148.66,
+              182.92
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10398.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10398.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.926,
+          "avgConfidence": 0.926
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.948,
+          "avgConfidence": 0.948
+        }
+      },
+      "classNames": [
+        "inhalation-hazard"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10400",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10400",
+      "title": "Image image10400",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10400.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10400.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10400.jpg",
+      "rawImageAvailable": true,
+      "width": 388,
+      "height": 520,
+      "dimensions": "388 x 520",
+      "groundTruth": [
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            66,
+            228,
+            73,
+            71
+          ]
+        },
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            215,
+            219,
+            73,
+            67
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9131,
+            "bbox": [
+              65.77,
+              228.61,
+              73.43,
+              69.34
+            ]
+          },
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9116,
+            "bbox": [
+              215.34,
+              219.51,
+              72.65,
+              66.73
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9465,
+            "bbox": [
+              65.88,
+              228.1,
+              72.84,
+              69.09
+            ]
+          },
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9417,
+            "bbox": [
+              214.95,
+              219.02,
+              72.39,
+              66.27
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10400.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10400.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.913,
+          "avgConfidence": 0.912
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.947,
+          "avgConfidence": 0.944
+        }
+      },
+      "classNames": [
+        "inhalation-hazard"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10409",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10409",
+      "title": "Image image10409",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10409.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10409.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10409.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 485,
+      "dimensions": "1000 x 485",
+      "groundTruth": [
+        {
+          "className": "oxygen",
+          "bbox": [
+            359,
+            231,
+            324,
+            237
+          ]
+        },
+        {
+          "className": "organic-peroxide",
+          "bbox": [
+            67,
+            37,
+            261,
+            121
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9399,
+            "bbox": [
+              359.03,
+              232.21,
+              323.78,
+              236.23
+            ]
+          },
+          {
+            "className": "organic-peroxide",
+            "confidence": 0.9315,
+            "bbox": [
+              66.05,
+              36.04,
+              261.56,
+              120.94
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "oxygen",
+            "confidence": 0.9484,
+            "bbox": [
+              359.16,
+              231.72,
+              323.25,
+              233.98
+            ]
+          },
+          {
+            "className": "organic-peroxide",
+            "confidence": 0.9217,
+            "bbox": [
+              65.95,
+              36.4,
+              262.52,
+              119.91
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10409.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10409.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.94,
+          "avgConfidence": 0.936
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.948,
+          "avgConfidence": 0.935
+        }
+      },
+      "classNames": [
+        "oxygen",
+        "organic-peroxide"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10418",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10418",
+      "title": "Image image10418",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10418.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10418.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10418.jpg",
+      "rawImageAvailable": true,
+      "width": 562,
+      "height": 1000,
+      "dimensions": "562 x 1000",
+      "groundTruth": [
+        {
+          "className": "flammable",
+          "bbox": [
+            250,
+            473,
+            122,
+            152
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "flammable",
+            "confidence": 0.9166,
+            "bbox": [
+              250.42,
+              472.49,
+              120.41,
+              152.34
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "flammable",
+            "confidence": 0.946,
+            "bbox": [
+              251.06,
+              473.08,
+              121.21,
+              151.74
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10418.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10418.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.917,
+          "avgConfidence": 0.917
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.946,
+          "avgConfidence": 0.946
+        }
+      },
+      "classNames": [
+        "flammable"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10428",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10428",
+      "title": "Image image10428",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10428.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10428.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10428.jpg",
+      "rawImageAvailable": true,
+      "width": 388,
+      "height": 520,
+      "dimensions": "388 x 520",
+      "groundTruth": [
+        {
+          "className": "poison",
+          "bbox": [
+            154,
+            302,
+            77,
+            74
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "poison",
+            "confidence": 0.9282,
+            "bbox": [
+              153.73,
+              302.64,
+              77.52,
+              73.02
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "poison",
+            "confidence": 0.9537,
+            "bbox": [
+              153.87,
+              302.69,
+              77.93,
+              72.78
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10428.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10428.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.928,
+          "avgConfidence": 0.928
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.954,
+          "avgConfidence": 0.954
+        }
+      },
+      "classNames": [
+        "poison"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10433",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10433",
+      "title": "Image image10433",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10433.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10433.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10433.jpg",
+      "rawImageAvailable": true,
+      "width": 750,
+      "height": 1000,
+      "dimensions": "750 x 1000",
+      "groundTruth": [
+        {
+          "className": "dangerous",
+          "bbox": [
+            232,
+            331,
+            139,
+            126
+          ]
+        },
+        {
+          "className": "flammable-solid",
+          "bbox": [
+            236,
+            589,
+            146,
+            155
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "flammable-solid",
+            "confidence": 0.901,
+            "bbox": [
+              237.48,
+              591.46,
+              141.88,
+              149.29
+            ]
+          },
+          {
+            "className": "dangerous",
+            "confidence": 0.897,
+            "bbox": [
+              233.96,
+              334.12,
+              131.6,
+              122.32
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "flammable-solid",
+            "confidence": 0.9341,
+            "bbox": [
+              237.71,
+              591.64,
+              141.82,
+              149.62
+            ]
+          },
+          {
+            "className": "dangerous",
+            "confidence": 0.9301,
+            "bbox": [
+              234.77,
+              334.62,
+              128.92,
+              121.63
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10433.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10433.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 2,
+          "maxConfidence": 0.901,
+          "avgConfidence": 0.899
+        },
+        "yolo26": {
+          "count": 2,
+          "maxConfidence": 0.934,
+          "avgConfidence": 0.932
+        }
+      },
+      "classNames": [
+        "dangerous",
+        "flammable-solid"
+      ],
+      "classLegend": [],
+      "summary": "2 ground-truth boxes with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10434",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10434",
+      "title": "Image image10434",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10434.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10434.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10434.jpg",
+      "rawImageAvailable": true,
+      "width": 1000,
+      "height": 1000,
+      "dimensions": "1000 x 1000",
+      "groundTruth": [
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            343,
+            245,
+            351,
+            355
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9156,
+            "bbox": [
+              345.26,
+              242.11,
+              346.96,
+              353.15
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9414,
+            "bbox": [
+              343.88,
+              242.53,
+              344.37,
+              346.53
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10434.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10434.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.916,
+          "avgConfidence": 0.916
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.941,
+          "avgConfidence": 0.941
+        }
+      },
+      "classNames": [
+        "inhalation-hazard"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
+    },
+    {
+      "id": "hazmat-image10450",
+      "dataset": "HAZMAT",
+      "taskType": "object-detection",
+      "imageId": "image10450",
+      "title": "Image image10450",
+      "location": "HAZMAT benchmark sample",
+      "baseImage": "viewer/HAZMAT/image10450.jpg",
+      "sourceImage": "HAZMAT/yolo11/ground_truth_images/image10450.jpg",
+      "thumbnailImage": "thumbnails/HAZMAT/image10450.jpg",
+      "rawImageAvailable": true,
+      "width": 252,
+      "height": 520,
+      "dimensions": "252 x 520",
+      "groundTruth": [
+        {
+          "className": "inhalation-hazard",
+          "bbox": [
+            34,
+            115,
+            179,
+            176
+          ]
+        }
+      ],
+      "predictions": {
+        "yolo11": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9288,
+            "bbox": [
+              34.86,
+              116.08,
+              178.48,
+              176
+            ]
+          }
+        ],
+        "yolo26": [
+          {
+            "className": "inhalation-hazard",
+            "confidence": 0.9296,
+            "bbox": [
+              34.88,
+              115.45,
+              178.12,
+              175.48
+            ]
+          }
+        ]
+      },
+      "predictionImages": {
+        "yolo11": "HAZMAT/yolo11/visualised_samples_with_json/image10450.jpg",
+        "yolo26": "HAZMAT/yolo26/visualised_samples_with_json/image10450.jpg"
+      },
+      "sceneModelStats": {
+        "yolo11": {
+          "count": 1,
+          "maxConfidence": 0.929,
+          "avgConfidence": 0.929
+        },
+        "yolo26": {
+          "count": 1,
+          "maxConfidence": 0.93,
+          "avgConfidence": 0.93
+        }
+      },
+      "classNames": [
+        "inhalation-hazard"
+      ],
+      "classLegend": [],
+      "summary": "1 ground-truth box with 2 model outputs loaded."
     }
   ]
 };

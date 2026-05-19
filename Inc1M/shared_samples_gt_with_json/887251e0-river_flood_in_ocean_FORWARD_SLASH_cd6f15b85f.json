@@ -5,14 +5,14 @@
   "height": 480,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 272482
+      "pixel_count": 270973
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 119976
+      "pixel_count": 118338
     }
   ]
 }

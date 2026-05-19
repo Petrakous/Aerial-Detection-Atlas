@@ -5,14 +5,14 @@
   "height": 557,
   "segments": [
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 221996
+      "pixel_count": 177800
     },
     {
-      "label_index": 45,
+      "label_index": 44,
       "class_name": "Burnt grass",
-      "pixel_count": 261954
+      "pixel_count": 284357
     }
   ]
 }

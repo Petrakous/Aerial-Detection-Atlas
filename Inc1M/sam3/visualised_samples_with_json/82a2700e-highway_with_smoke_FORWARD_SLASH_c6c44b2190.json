@@ -40,5 +40,203 @@
       "pixel_count": 1464,
       "score": 0.3152
     }
+  ],
+  "instances": [
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "bbox": [
+        86,
+        0,
+        127,
+        99
+      ],
+      "area": 7326,
+      "score": 0.96044921875,
+      "anchor": [
+        149.5,
+        49.5
+      ],
+      "anchor_normalized": [
+        0.70188,
+        0.30938
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          160,
+          213
+        ],
+        "counts": "``=59OS45fK0Y4=N1O10O01000O01N101N101N2N2O010000000001O00001N101O1O00O100N2O1O0O2N2L4O001XOlNcMU1[2SO^Mn0a2VOUMP1k2b01N2N20O0100O11O001O0O101N100000O1000001O001O0O100O100O10001O001O1O1O1N@_NcMa1[2cNbM^1]2dNaM]1^2eN_M]1`2a001O2N1O2O001O2M0100O100000000O10001N100000O1000O100000000000000000000001O001O01O003K3jM`M6L40J1G0122MM01c2"
+      }
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "bbox": [
+        174,
+        120,
+        39,
+        40
+      ],
+      "area": 810,
+      "score": 0.88623046875,
+      "anchor": [
+        193.5,
+        140
+      ],
+      "anchor_normalized": [
+        0.90845,
+        0.875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          160,
+          213
+        ],
+        "counts": "nZk01n42N1O1O1O1O100O1O1O1O1O1O1O1O1O1O1O1O1O1O1O1O0O3OON4N1N200N2O001O1N200O1001OWL"
+      }
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "bbox": [
+        0,
+        124,
+        173,
+        35
+      ],
+      "area": 3227,
+      "score": 0.77001953125,
+      "anchor": [
+        86.5,
+        141.5
+      ],
+      "anchor_normalized": [
+        0.4061,
+        0.88438
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          160,
+          213
+        ],
+        "counts": "^4`0_4101OO11O01OO100000000000000O10000000000000000O100000000O10000000000000000O1000000000000000000000000O1000000000000O100000000000O10000000O1000001N1000000000000000000000000O10O10000O11O000000O1O001O1001OO1000O01O100N2N20O010000N200O001O1000O01O10000000O100000O1001O0000000O10000000000000O11O00000`KB^4`00O1O1H`K0`4NbK2^4NbK2^4McK3]4McK2^4McK3\\4NdK2\\4NdK2\\4MeK4Z4LfK4Z4KgK5Y4KgK5Y4KhK4X4LgK5Y4KhK4X4LhK5X4JhK6a4O2O001O3MeS6"
+      }
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "bbox": [
+        172,
+        119,
+        28,
+        15
+      ],
+      "area": 217,
+      "score": 0.51123046875,
+      "anchor": [
+        186,
+        126.5
+      ],
+      "anchor_normalized": [
+        0.87324,
+        0.79063
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          160,
+          213
+        ],
+        "counts": "moj09f4100000O10O0100000000O001N11O100O0100O1000000O100O100OZm1"
+      }
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "bbox": [
+        151,
+        131,
+        45,
+        29
+      ],
+      "area": 313,
+      "score": 0.325439453125,
+      "anchor": [
+        173.5,
+        145.5
+      ],
+      "anchor_normalized": [
+        0.81455,
+        0.90938
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          160,
+          213
+        ],
+        "counts": "ngg01m43N10000O1000000O10000O100BJRL6m3KRL5n3LRL4m3MSL3m3MSL2n3NRL0P40PLOQ41nKOS41mKOS41mKNS43lKLV44;1O000000000O2O0000O1O1O1O00100O0O2O1On`2"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        125,
+        91,
+        22,
+        16
+      ],
+      "area": 209,
+      "score": 0.31689453125,
+      "anchor": [
+        136,
+        99
+      ],
+      "anchor_normalized": [
+        0.6385,
+        0.61875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          160,
+          213
+        ],
+        "counts": "Qdc02m44L3N2M2O0O1000O0O2O1O010O2O00000O101O1O1NRW:"
+      }
+    },
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "bbox": [
+        5,
+        133,
+        185,
+        27
+      ],
+      "area": 1151,
+      "score": 0.304931640625,
+      "anchor": [
+        97.5,
+        146.5
+      ],
+      "anchor_normalized": [
+        0.45775,
+        0.91563
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          160,
+          213
+        ],
+        "counts": "nm01o4000O1000000O10000O100000000N3N100001O1OO100O011OO11O0O01000O100000001N1001O00O100000I\\K2d442O000000000000O01O10000O10O01O01000000000ON3N2O010O0NJ_K3`4MaK2`4N`K0a42^KNc49M10HaKN`41aKO_41aKO_40bK0_4OaK2f4000L31OOI[K7e4I[K7b4L^K3c4MbKM_437000UKMi423O10000001O1ONR50PK0O101O0000000000000000000O1000001OO11O01O0000000000000000000O100001O000000000000000000001OO10fKMg33YLMg33YLMg33c00hKLd34[LMe33[LMe33ZLNf32\\LLd35c00001O01OO10000000000000000000O1001O0000O12N0O001O1Oj^3"
+      }
+    }
   ]
 }

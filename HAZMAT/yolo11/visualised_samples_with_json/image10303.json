@@ -1,0 +1,18 @@
+{
+  "image_id": "image10303",
+  "file_name": "image10303.jpg",
+  "width": 485,
+  "height": 1000,
+  "detections": [
+    {
+      "bbox": [
+        216.6197052001953,
+        405.7602844238281,
+        75.12889099121094,
+        72.43862915039062
+      ],
+      "class_name": "corrosive",
+      "confidence": 0.9013939499855042
+    }
+  ]
+}

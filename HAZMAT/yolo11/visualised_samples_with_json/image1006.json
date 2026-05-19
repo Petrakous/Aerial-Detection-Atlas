@@ -1,0 +1,28 @@
+{
+  "image_id": "image1006",
+  "file_name": "image1006.jpg",
+  "width": 1000,
+  "height": 1000,
+  "detections": [
+    {
+      "bbox": [
+        479.74700927734375,
+        587.1044311523438,
+        178.9886474609375,
+        173.597900390625
+      ],
+      "class_name": "spontaneously-combustible",
+      "confidence": 0.9264528155326843
+    },
+    {
+      "bbox": [
+        0,
+        706.8444213867188,
+        104.19277954101562,
+        293.15557861328125
+      ],
+      "class_name": "spontaneously-combustible",
+      "confidence": 0.8224746584892273
+    }
+  ]
+}

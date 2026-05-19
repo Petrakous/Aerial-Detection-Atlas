@@ -1,0 +1,17 @@
+{
+  "image_id": "image10243",
+  "file_name": "image10243.jpg",
+  "width": 388,
+  "height": 520,
+  "annotations": [
+    {
+      "bbox": [
+        187,
+        260,
+        145,
+        154
+      ],
+      "class_name": "explosive"
+    }
+  ]
+}

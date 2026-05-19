@@ -28,5 +28,175 @@
       "pixel_count": 41040,
       "score": 0.7377
     }
+  ],
+  "instances": [
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        0,
+        218,
+        292,
+        64
+      ],
+      "area": 15548,
+      "score": 0.9644269943237305,
+      "anchor": [
+        146,
+        250
+      ],
+      "anchor_normalized": [
+        0.48667,
+        0.70028
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          357,
+          300
+        ],
+        "counts": "\\7T1o95L2N101O00000000000000000000000000001O000000000000000000000000001O000000000000000000001O00000000000000000O2O00000000000000000000000000001O0000000001O000000000000000000001O000000O10000O100O100O100O10000O100O100O10000O10000O1000000O1000000O10000000000000000000000000000000000000000000000000000O100000000000000000000000O100000000000000O1000000O100000000O10000000001O000O101O001O001O3L2O1O1ON2O1O1N200O100O100O10000O100000000O10000000000000000O100000O1001O00000001O00000000000000000000000001O0000000000000000000000001O000000000000000000001O0001O0BjFmNV9R1lFmNT9R1oFlNQ9T1oFlNQ9S1QGlNo8T1QGlNo8o0hFmN:4n8n0iFnN94n8m0jFoN84n8h0hFUO3N75n8h0hFUO3N75n8h0hFTO4O65n8g0jFTO2065n8d0gFXO3O`04f8e0hFWO20`04f8e0hFWOg04a8e0bG[O_8b0S1HcEDb:0ib2"
+      }
+    },
+    {
+      "label_index": 17,
+      "class_name": "Dirt road",
+      "bbox": [
+        0,
+        250,
+        300,
+        105
+      ],
+      "area": 22951,
+      "score": 0.8486948013305664,
+      "anchor": [
+        150,
+        302.5
+      ],
+      "anchor_normalized": [
+        0.5,
+        0.84734
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          357,
+          300
+        ],
+        "counts": "j8W2l83N1O101O00000000000000000000000000000000000000000001O00000000000000000000001O000000001O0000001O00000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000001O0000000000001O0000000000000000000000000000O100O1000000O1000000O100O10000O100000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000_OgMVHY2j7hMUHX2k7hMVHW2j7jMUHV2j7lMUHT2k7lMUHT2k7mMTHS2l7mMUHR2k7oMTHQ2l7oMTHQ2k7PNUHP2k7PNUHP2k7QNTHo1l7QNTHo1k7SNTHm1l7SNTHm1l7SNTHm1k7UNTHk1k7VNUHj1j7WNVHi1h7YNXHg1g7ZNYHf1f7\\NYHd1g7\\NYHd1g7\\NZHc1f7]NZHc1f7]NZHc1f7]NZHc1f7]NZHc1f7]NZHc1f7]NZHc1e7^N[Hb1e7^N[Hb1e7^N[Hb1e7^N[Hb1e7^N[Hb1e7^N[Hb1e7^N[Hb1d7_N\\Ha1d7_N\\Ha1d7_N\\Ha1c7`N]H`1c7`N]H`1c7`N]H`1c7`N]H`1c7`N]H`1c7`N]H`1c7`N]H`1c7`N^H_1b7aN^H_1b7aN^H_1b7aN^H_1b7aN^H_1c7`N]H`1c7`N]H`1h7[NXHe1k7WNWHg1m7UNUHj1e8Na0^O`F"
+      }
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "bbox": [
+        163,
+        2,
+        108,
+        213
+      ],
+      "area": 15010,
+      "score": 0.7497844099998474,
+      "anchor": [
+        217,
+        108.5
+      ],
+      "anchor_normalized": [
+        0.72333,
+        0.30392
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          357,
+          300
+        ],
+        "counts": "hkh16_2?P5a0cHQOT1Z1g5S3B`0A8I3L1N2O1N200O010O010O001N101N2N1O20O0100O10O100000000000O101O0000001O001O1O2N2N2N3M3M2N1O001O00001O0000001OPMVLeNj3U1iL]NX3[1QMdNo2Y1VMeNj2X1[MfNe2`0jKUNd1[1b2=YNBg1<]NBc1=_NBa1=cN@]1?jN[OV1d0TOSOl0m0YOnNg0Q1\\OmNd0S1^OkNb0S1@mN`0R1AnN?Q1BoN>P1DPO;o0InN7R1NhN3W1OhN1X1OhN1W11hNOX11hNOY10gN0Y10gN0Y10gN0Z10eN0[1OgN0Z1OfN1[1NeN2\\1MdN3\\1MdN3]1LcN4]1LcN4]1LdN3\\1MdN3\\1MdN3[1NeN2Z1OfN1Y10gN0X11hNOW12iNNU14kNMR15nNKo08QOHl0<SOFg0?UOJ8nX:"
+      }
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "bbox": [
+        0,
+        0,
+        133,
+        228
+      ],
+      "area": 26030,
+      "score": 0.7256947159767151,
+      "anchor": [
+        66.5,
+        114
+      ],
+      "anchor_normalized": [
+        0.22167,
+        0.31933
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          357,
+          300
+        ],
+        "counts": "3>d1f3Z3e2\\O5M00000000000000000000001O1O1O001O1O00001O000000000000O10000O10000O100O100O1O1O100001O000000O1O10000TNhKjLY4V3gKiLZ4W3fKeL^4o42O1O1hNjK]KZ4`4YLlJk3S5T1011N3M4L=D6I7JO010O2OO2N2O1N1O1O2N101N1O1O1O0000001OO1O100O100O1O100O2N11O000000010O0001O002O0O1O101M3M4L5K5L4K5K3L6B>I7Ie0QO>YOf0H9L4K4I8^Ob0_Oa0K6K7EgTj1"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        222,
+        67,
+        77,
+        149
+      ],
+      "area": 10206,
+      "score": 0.6110069751739502,
+      "anchor": [
+        260.5,
+        141.5
+      ],
+      "anchor_normalized": [
+        0.86833,
+        0.39636
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          357,
+          300
+        ],
+        "counts": "c`]27e:i0YO<gGfN[6b1XIfNe6`1SIeNi6i1kHYNS7Q2bHQN[7o2N1N3N1O2N1O101N100O10000O101N1O1O100O100O1N2O1O1N2O1N2O1O1O1N2O10000O100000000000000000000001O000000000000000000000000000000000000001O001NP9"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        150,
+        0,
+        15,
+        208
+      ],
+      "area": 2160,
+      "score": 0.5147810578346252,
+      "anchor": [
+        157.5,
+        104
+      ],
+      "anchor_normalized": [
+        0.525,
+        0.29132
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          357,
+          300
+        ],
+        "counts": "aYd1f2]87J<E<D6J8H7I`0@f0ZOa0_O<D3MO3J^5^Jol^1"
+      }
+    }
   ]
 }

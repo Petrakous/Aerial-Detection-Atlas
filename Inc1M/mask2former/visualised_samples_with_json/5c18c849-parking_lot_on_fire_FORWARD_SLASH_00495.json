@@ -34,5 +34,735 @@
       "pixel_count": 1251,
       "score": 0.5163
     }
+  ],
+  "instances": [
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        1064,
+        481,
+        136,
+        108
+      ],
+      "area": 10453,
+      "score": 0.9733688235282898,
+      "anchor": [
+        1132,
+        535
+      ],
+      "anchor_normalized": [
+        0.94333,
+        0.84921
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "mS_d07]c04M2M3M3N2M4M2N3M3M4M2M2N2O0O2N2N2N1O2O0O101N1O101N101N2O1N2O0O101N1O1O2O00001O001O1O1N2O1O2N2N2N1N2O1O1N3M3M3N0O2O001N101O00000O1000O1000O100000000O010000000O10O10O10000O01000000O10000O1000001N100O2O001N2O1O2M2O6J1O1O0O2O000O101O000O10001O001O1O2M2O1O002M2N2N3M2N2N1000n_O"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        661,
+        372,
+        179,
+        161
+      ],
+      "area": 18403,
+      "score": 0.9652823805809021,
+      "anchor": [
+        750.5,
+        452.5
+      ],
+      "anchor_normalized": [
+        0.62542,
+        0.71825
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "\\Rg<j0hb07L2O2M3N2M3N1N2N2N2N1O2N1O2N2M4M4L4L3L4M3L3M3N3M2N2O001N2O1N1O2O1O1N101N2O1O1N2O1N2O1O1N2O1N2O1N2O1N2O0O2O001O10O010O0100O00010O00010O00100O2N3M4L3N0O1O1O0010O1O100O1000O1O010O01O00100O001O1O001O001O2N1O001O1O1O1O1O001N2O001N2O2M101O1O1O1N101O2N1O2N1O1O1O1O1N2O1O001O1O001O1O1O1O3M2N1O2N001O1N2O2N1O1O0000000O101O00001O1N3kMf^Oj1ga0L2M3M3L3N2N3M2N3M4L5K3L4L4M4J8IQPm6"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        815,
+        522,
+        171,
+        107
+      ],
+      "area": 14107,
+      "score": 0.9565386772155762,
+      "anchor": [
+        900.5,
+        575.5
+      ],
+      "anchor_normalized": [
+        0.75042,
+        0.91349
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "bne?9Wc09J5L3O1N2N2N3M4L6J5K4L3M3M3M2O1N2O1O1N2O1O1N2O001O1O001O001O1O1O2N1N3N1O1N2O1O001N101O1O1O0O2O00001O00001O001O1O001O00000000000000O100000000001O0O101O000000000000000000000000000001O0000000000000000001O0000000O101O001O1O1O001O1O1O1O1O001O001O001O001O100O1O001O1O1O1O1O1O001O1O1O1O1O1O1O001O1O2N1O1O1O2N101N1O2N3M1O3M2N1O2N2M3N2N1O2Ma0_O6I4K5JRRS4"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        433,
+        433,
+        146,
+        146
+      ],
+      "area": 14153,
+      "score": 0.9542805552482605,
+      "anchor": [
+        506,
+        506
+      ],
+      "anchor_normalized": [
+        0.42167,
+        0.80317
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "`kZ8;Qc0a0E7L3L4M2M3M3N3S^O_Naa0l1N2N2M3M3N2N2N1O2N2O1N2O1N2O2M2O1N2O0O2O1O1N2O1O1O1O1O1O1O1O1N101O2N1O1O000000O100001O00001O001O1O1O6T@ZL\\?Q4O1O1O001O0010O010O002OO0100O001O010O1O1O1O1O100O1O1O1N101N2O001N3N1O1O1O001O2N1O1O1O1O1O2M4M3M2M2O2N1O1O1O1O1N2O1O2N3M1O2M2O2N0O2O1O0O2O3M4L2N1N3N1O4K4M2M2N3N2M3M6J6K8G7Hg`m;"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        15,
+        197,
+        455,
+        233
+      ],
+      "area": 81420,
+      "score": 0.945530891418457,
+      "anchor": [
+        242.5,
+        313.5
+      ],
+      "anchor_normalized": [
+        0.20208,
+        0.49762
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "lb9<Vc07G9A=K6SOPOf^O\\1T`0`N[@Z2`?nMY@V2b?R1K5L5L4M2N2O1N2N2O1N101N101N2O0O2O1O001O001N2O1O001O1O0O2O001N100O2O0O100O2N100O100O00100O1O1O00100O1O100O1O101N101N101O001O1N10001O0O2O001N101N10001N1000000O1000000O10000000O10O100000O10000O100O100O10O010O010OO2M2O2N101O000010O010O0100O100O100O100O100O100O10O10O10O0100O0100O00100O0010O10O10O1000O10O100000O10001N100O101O000O2O00001O0O10001O0000000000000000000000000000O1000000O100O100O1O100O1O1O100O100O100O1O100O00100O1O001O1O1O1O001O10000O01000O10O10O1000O1000O1000000001O01O0000000000000001O001O1O001O1O1O1O1O1O2N2O1N1O1O1O1O1O100O1O2N1O100O001O0000000000000000000000000000000O01000000000000O100000000O2O0O100O1O100O10000000001O00000O100000O10001O000O1000000O100O100O1O100O1000000000000000000001O0000000O2O00001O0O100O1O1O1O100O1O10O01O1O2N10000O1000000001O0O10O1000000000O100000000O11O0000000000000000000000001O000O101N2N2N2O1N1O2O1N1O2N1O2N2N1N3N2M2O2N1B`0L4L5L3N2M3M3M4M5J4M1N4K9WOW_OTNca0P1k0F:GPkP>"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        432,
+        587,
+        140,
+        43
+      ],
+      "area": 5153,
+      "score": 0.9411146640777588,
+      "anchor": [
+        502,
+        608.5
+      ],
+      "anchor_normalized": [
+        0.41833,
+        0.96587
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "_\\Z84Sc0`0L3N2O2N1O101N1O1O100O100O100O100O100O10000000000000000000000O1000000O10000000000000000O1000000000000O1000000O1000000000000000000000000000000000000000000000000000000000000001O00000000000000000000001O00000000001O0000001O001O001O001O1O00001O00001O1O1O1N3N1O1O2N1O1O1O1O1N3N2N2M4M\\hQ<"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        916,
+        354,
+        168,
+        134
+      ],
+      "area": 15180,
+      "score": 0.9398674368858337,
+      "anchor": [
+        1000,
+        421
+      ],
+      "anchor_normalized": [
+        0.83333,
+        0.66825
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "Snca07[c0c0^O:E9H6L3N1N2O1O0O2O1N1N3M2N3M2N3N1N2O1O1O1O2O000O1O2O0O101N101O001O001O001O001O001N2O1O1O001O1O001N2O1O1O00001O001O1O001O1O1O1O1O1O2N2N3M2O1N001O100O001O01O01O0010O00001O001O001O001O1O1O1O001O1O1N2O1O1O001O1O1O001O1O10O01O1O00100O100O1O1O1O1N2O1O1N2O1N2O1N2O1O1O2N1O1O1O1O1O1O1N2O2N2N2M3N2M2O1N3N2N2N1O1N2O1O1N2M4M2N2M3N2L5K5L5L3M4LhmV2"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        14,
+        173,
+        122,
+        72
+      ],
+      "area": 5976,
+      "score": 0.9398453831672668,
+      "anchor": [
+        75,
+        209
+      ],
+      "anchor_normalized": [
+        0.0625,
+        0.33175
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "]j83Zc0=I4M3H8L4L3O2N100O2O0O100O1O100O100O101N3N3L7J1N2N100O1O100O101O0000000000O1O1O1O1O100O100O10000O1O1O10O010000O1000000O100O10000O100O100O100O1O10000000000000000000O0100000001N10000O2O1N2O1N101N2O001N101O00001O001O010N2O1O0O2O1O1O2M5L3L3M4M2LT]^d0"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        169,
+        486,
+        142,
+        142
+      ],
+      "area": 14559,
+      "score": 0.932494044303894,
+      "anchor": [
+        240,
+        557
+      ],
+      "anchor_normalized": [
+        0.2,
+        0.88413
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "V_X37\\c0a0_O5I7M2N2N3L6Kc0]O2O2N1N3N1N2O1N4M4K8H2O1O00000O10001O001N2O1O001N101O001O1O007I2N4M6I2N1O1N2O1O1O1O00001O00001O000000000010O00001O000001O01O0000001O00001O00001O1N2O001O1O1N2O2N1O1O1O1O1N3N1O1O1N2O2N1O2N1N101O1O2N1N2O1O1O2N1O1N3N1O1O1O1O1O1N3N1O2N2M3N2N1N2O2M2O1N2O1N2N3M2N3M4M2jNl]Oe0db0N3JR\\Ra0"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        294,
+        458,
+        157,
+        142
+      ],
+      "area": 15048,
+      "score": 0.9310311079025269,
+      "anchor": [
+        372.5,
+        529
+      ],
+      "anchor_normalized": [
+        0.31042,
+        0.83968
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "a[e5?Pc0>Ca0B5N2N1O1O1N3N1O1N101O0O2O1N2O1N2N101N2O001O1N2O2N0O2O1O1N2N2O1N2N1O2N3M3M2O1O1O1N2O2N1O1O1N2O1O100O2N101N2O1N1O100O1O1O10O01O10O01O1O100O010O010O000001O0000001O0000001O001O1O1O1O100O1O2N1O1O1O1O1O1O1N2O001O1O1O00100O001O1O1N3N1O1O1O1O1O1O1O1O1N2O001O1O001N1O2O0O2O002M3N1N2N2N2N2O1N2N1O2O0N4I7K4M3N2M4M6H9E9GoX\\>"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        564,
+        547,
+        282,
+        83
+      ],
+      "area": 17509,
+      "score": 0.9269714951515198,
+      "anchor": [
+        705,
+        588.5
+      ],
+      "anchor_normalized": [
+        0.5875,
+        0.93413
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "Wbk:7]c04K6L2N2O2M2N3M2N3M3M3N2M5L3L2O0O1O2O0O1O1000001N1000000O100O100O010O1000000O10000000001O000001O00000000000000O1000000000000000000000000O10000001O0000O1000000000001O0000000000000O100000000O10000000000000000000000O10000O10000O1000000O1000000O100O100O10000O100000000O10000000000O100000000000000000000000000O10O01O100O100O10000000000O10000000O1000000000001O001O00001O0000000001O01O1O1O001O001O000000000000000O1000000000001O00000000000000001O001O001O00001O1O002N001O1O1O001O1O010O000000001O00001N101O1O2N3M2N2N1O1O3M2N2N2N1O1O1O2N1O1O1O1O1O1O1O1O1O1O2N2N1O1O1O2N2M4LoUi6"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        0,
+        0,
+        86,
+        146
+      ],
+      "area": 8201,
+      "score": 0.9165199995040894,
+      "anchor": [
+        43,
+        73
+      ],
+      "anchor_normalized": [
+        0.03583,
+        0.11587
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "0S3c`000001O00001O000000000000000000000000000000000000O100001O0000000000001O00001O001O002N1O2N2N2N2N3M=C2N1O2N2N2N3M30L4I6H:I6K4_O?L5J5J7M3N2O0O2O1N2O2M2O1N3M3M6I8H8F7J4N3M3L;CnY]e0"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        913,
+        83,
+        87,
+        62
+      ],
+      "area": 3965,
+      "score": 0.898453414440155,
+      "anchor": [
+        956.5,
+        114
+      ],
+      "anchor_normalized": [
+        0.79708,
+        0.18095
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "_jaa03ac07I3O1O1N2O1M3L5L3M4L3N2N1O2N100O1O2N1O1N2N2O1O1O10000000000000001N10000000000000000000000000O01000000O1O100O01000O10000O1001O0000001N102N1O1O1N101N1N3M4L3M3N2N2N5J6K4K5L5HPnj3"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        766,
+        72,
+        135,
+        86
+      ],
+      "area": 8716,
+      "score": 0.8980264067649841,
+      "anchor": [
+        833.5,
+        115
+      ],
+      "anchor_normalized": [
+        0.69458,
+        0.18254
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "d[g>4\\c07L5M3L4M1N3N2O1N2N2N2O1O1N3N2N2M2O2N0O2O1O2M2O2N2N2N1O2N1N101O00001O001O1O100O2N001O001O01O01O00001O00001O001O0O2O00001O0O10001O0001O01O00001O000000000O10000000000001O0000000O2O00000000001O1O1N2O1O1O1O1O1O001O1O1O1O1O1O1O001O1O002N1O2N2N1N3N2N2N1N101M3M3M4L3M3N2K6D=Injg5"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        583,
+        85,
+        209,
+        101
+      ],
+      "area": 15536,
+      "score": 0.8899039626121521,
+      "anchor": [
+        687.5,
+        135.5
+      ],
+      "anchor_normalized": [
+        0.57292,
+        0.21508
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "jhV;4bc01O1b]OOVa00f^O5Ya0Lc^O9[a0I^^O>aa0B[^Oe0aa0\\O]^Oh0`a0YO^^Oj0`a0WO_^Oj0aa0WO\\^Ok0ca0ZOW^Oh0ha0e0N1O1M3N2M3N2N2O2M2O1O1O1O1O1O1O1N3N1O1O001O1O001O000O10001O000O1000000O0100O100O0010000O100O1000000O1000O10000000000001O0000001O0O2O001O2N1O1O2N1O001O1O1O001O1O0O101N10000O0100O1O00100O10000O100O10O1O010O1O001N2O1O1O100O11O0000000O2O00001O00000O2O001O001O000000000000000000000000000000O10000000000000000000001O0000010O001O1O1O001O1O1N2O1O1O1N2O001O1O1O1N3N1O1O1O1O1O2N1O1O1O1N3N3L4L2N3M3M4K7GVlj7"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        557,
+        423,
+        144,
+        130
+      ],
+      "area": 12907,
+      "score": 0.8701725006103516,
+      "anchor": [
+        629,
+        488
+      ],
+      "anchor_normalized": [
+        0.52417,
+        0.7746
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "ZTg:a0mb0;G8K4M4M3N2M7J2M2O1N2N2N1O2N1O2O0O1O2O0O101N2O1O1O1O2N1O1O2M2O3M1O1O0O2O1O001O1N2O1O1N2O1O1O1O001O1O1O1O1O1O1O3M2M2O2N1O1O001O00001O000001O100O001O001O001O1O001O1O1O00100O002N1O1O1O001O1O2N1O001O1O002N1O2N1N3N1O2N2N2N1O1N3N3M2N10O01N2O1O1O1O2M2O1O2M3N1O001N2O2M4M2M3N1N3N2M5K3M2N3M2M9AS`b9"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        221,
+        0,
+        393,
+        75
+      ],
+      "area": 21177,
+      "score": 0.8203177452087402,
+      "anchor": [
+        417.5,
+        37.5
+      ],
+      "anchor_normalized": [
+        0.34792,
+        0.05952
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "noW43]c0>Cc0A4K4K5L3M4K4K5K40001O000000001O0000000000000000000000000000000000000000000000000000000000O10000000000000000O100000000000000O10000000000000000O10000000000000000O1000000O10000O100O10000O100000000O10000O100000000000000000000O1000000000000000000O100000000O1000000O100O1000000O10000000000001O0000000000001O0000000000000000000000000000000000000000000000000000000000001OO1000000000000O10000O100000000O1000000000000O10000000000000000O100000000O100000000O10000O100000000O1000000O100O1L4M3N2O1O10000001O0000001O0000001O00000000000000000000001O00001O00001O1O1O2N<D?A1O1O001O0000000000001O000000O100000000O1O10000O100O1O1O1O100O1O100O1O100O1O1O1N2O100O1O1O100O100O1O1O1O1O1O1O1O100O1O100O100O10000O100000000000000000000000000O100O1O1O1N2O1O1O1O100O1O100O100O1O1O1O100O1O1O1N2O1O1N2N2O1O1O1M3Nn`X;"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        1032,
+        350,
+        168,
+        124
+      ],
+      "area": 12922,
+      "score": 0.8201910853385925,
+      "anchor": [
+        1116,
+        412
+      ],
+      "anchor_normalized": [
+        0.93,
+        0.65397
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "QYkc01ac0:H6K2O1N2O2M2N2O1N2N2N2O2M2O1O0O2O1O1N2O001O1N3N1O2N1N3N1O2N1O2N2N1O2N1O1N3N2N1O1O2N1O1O2N1O1O2N2N2N2N2O1N1O2N2N1O100O1O1O1O1O1O001O2N1O001O00001O00000010O000001O0001O0000001O01O010O0100O00100O010O1O1O1O1O1O001O1O1O1O1O1O1O1O2N1N2O1O1N2O1O1N2O1O1N3N1O1O1O1O1O2N2N1O1O1O1O1O1N2O1O2M2O1O1O1N2O1N2O1N2O1O2M2O1O1N2O1O1N2N1O3L3N2N2N2N1000`B"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        1097,
+        16,
+        103,
+        98
+      ],
+      "area": 7320,
+      "score": 0.7836541533470154,
+      "anchor": [
+        1148.5,
+        65
+      ],
+      "anchor_normalized": [
+        0.95708,
+        0.10317
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "gnRe06\\c08I6K4M3M2N4M6J2M3N0O2O0O1O100O2O0O1000001N1000001O0O2O001N2O001N10001O0O10001O000O2O1O1O1O1O0O2O1O1O1N101O001O001O001N2O1O1N2O1O001O001O00001O000O10001O00000000001N1000000O10000O2O0O100001O1O001N2O000000\\O"
+      }
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "bbox": [
+        671,
+        182,
+        284,
+        170
+      ],
+      "area": 26050,
+      "score": 0.7760013341903687,
+      "anchor": [
+        813,
+        267
+      ],
+      "anchor_normalized": [
+        0.6775,
+        0.42381
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "TTm<3`c06I6J7K5K2N3M2O2L3L5L4M2M4N1N3N1O2N100O2N1O101N1O1O2O0O2N100O2N1O1O1O2N1O2N1O2N1O1O2N101N1O2O0O101N100O2O0O101N101N10000O10O10O10000O2O00000O100O010O100O1O2N1O1O1N2O1N2O1M3N2N101N2N2N2N101O1O001O001O1O010O010O10000O100000000000000000mMl@ET?6RAHn>6VAIi>6bAA]>>fAAY>>jABU><mADR><PBCP>;QBEo=;RBDo=;SBBn=>SBAn==UBAk=?VB_Ol=a0TB^Om=a0SB]OP>b0PB]OR>c0nAXNkNl0Y?k0TBROo=m0QBROQ>m0oASOR>l0nATOS>k0mATOU>j0lAVOU>i0kAWOV>h0jAWOX>i0gAWOY>i0hAVOY>j0gAUOZ>j0gAUOZ>j0gATO[>k0eAUO[>l0eASO\\>l0dATO]>k0dATO\\>l0dATO]>l0cARO_>m0bAQO^>P1T20O1O2O0O1O0O2N1N3N2O1O100O2N1OHZ^ObNh0Om?i1Q@[Nm?f1h_OUNF9_`0c1i_OhNU`0Y1j_OiNT`0Y1h_OlNU`0\\2N2N01O0001N101O2N4L3M2N1O1O10O01O10O0101N100O2O00000O10000000O101O000O1000100O10O100O0100O001O001O001O0O101N101O1N2O1O1N2O3Ml0TO3L3N2N3M2N1N2Of^OoMo`0Q2Q_OoMPa0P2P_OQNo`0o1Q_OQNPa0m1Q_OSNo`0m1Q_ORNQa0l1P_OTNPa0k1Q_OTNPa0k1?O0O2O1N2N1oNQ^O:Qb0CR^O;Pb0BS^O<oa0[OY^Od0^b0M3L5I6N25K3]O_Ok]Ob0Qb0Ao]O?oa0AR^O?na0@R^O`0bb0N3N2N2N2O1N2N2N2OW^f4"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        0,
+        204,
+        26,
+        79
+      ],
+      "area": 1317,
+      "score": 0.6993367075920105,
+      "anchor": [
+        13,
+        243.5
+      ],
+      "anchor_normalized": [
+        0.01083,
+        0.38651
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "\\6_2Wa0000000O2M2O1N2O1O2M4M6J:F4L3M2M3K5M2N3N2M3N2M4L3JlQbf0"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        416,
+        72,
+        192,
+        139
+      ],
+      "area": 16971,
+      "score": 0.5329595804214478,
+      "anchor": [
+        512,
+        141.5
+      ],
+      "anchor_normalized": [
+        0.42667,
+        0.2246
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "bRP83bc02i\\O4bb0MZ]O9cb0H[]O:db0F[]O>ab0C^]O?ab0B^]O`0`b0@_]Ob0`b0^O`]Oc0_b0]Ob]Oc0]b0]Oc]Od0\\b0\\Od]Od0\\b0\\Od]Oe0[b0;O2N2N2N3M2O1N2N2N1O2N101N101O0O2O1O1N2O001O1N101O1N102N001N2O0000ZOP_OeNQa0X1\\_O^Nd`0a1^_O^Nb`0b1`_O[N``0f1h00\\^O\\NVa0e1h^O]NWa0d1g^O^NWa0d1g^O]Nd`0Hl_Ol1_O]Nc`0Hn_Ok1_O]Nc`0Hm_Ok1A^N``0Im_Oj1C]N_`0Jm_Oi1F\\N[`0Mn_Oh1G\\NX`0Oo_Oe1J\\NW`0Oo_Oe1J]NU`0OQ@d1J^NR`01S@a1K`Nn?1W@_1L`Nj?4Y@\\1M`Nj?4Y@[1NbNg?4[@X11cNc?6\\@V13dN`?6^@S15fN\\?8_@P17hNY?9`@o07iNW?:a@l09jNT?=b@i0:jNS??a@h0<iNQ?c0_@f0`0gNQ?^2PAcMn>^2RAbMn>]2SAcMm>]2SAcMm>\\2UAcMj>]2WAcMi>\\2XAdMh>[2YAeMg>[2ZAcMg>]2XAdMg>]2YAbMh>_2WAaMi>_2WAaMi>`2VA_Mk>b2TA^Ml>c2SA]Mm>d2RA\\Mn>e2RAYMo>h2PAXMP?i2o@WMQ?j2n@VMR?k2m@UMS?^1^@B?POS?^1_@B=POT?]1b@B9ROT?\\1d@B7ROT?]1e@B6QOU?]1f@A5ROU?]1f@@6SOS?^1g@_O6SOS?]1i@_O3UOS?]1j@^O3UOS?^1i@]O4UOS?^1j@\\O3VOR?`1j@[O3TOT?a1k@ZO0UOU?b1k@YOOUOU?j1f@PO5VOU?k1e@PO5UOV?k1e@QO3UOX?k1d@QO2UOZ?j1e@C[?>d@B\\?>d@B\\?>d@B\\??c@A\\?`0d@@\\?`0d@[NO>]?W1d@ZN1>[?X1d@XN4?X?Z1c@VN7?V?o1j@PNV?P2k@oMU?b1g@jM3d0V?a1k@hMOg0V?a1l@gMNh0V?b1l@dM0i0T?c1[A]Ne>d1ZA[Ng>e1ZAZNf>g1YAYNg>h1YAWNg>i1ZAVNf>j1[AUNe>l1[ASNf>l1[ASNe>m1\\AQNe>P2ZAPNg>o1YAQNg>o1XARNi>l1XATNi>k1VAUNl>j1a@bM9e0W?h1_@fM7c0Z?S2d@nM]?V2\\@lMe?R30O2O1O1O1O1N101N2N1N3N1O2N2N1O2O0O2O1N2O1O001O1O1O1[NX_O:i`0DY_O;h`0CZ_O<f`0B]_O<e`0B]_O2IUOk`0g0__O2GVOl`0e0`_OCBN4Ik`0c0Y@]OmNNl`0b0f@^O[?=j@BW?;k@EV?9k@GY?3dU\\;"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        805,
+        0,
+        81,
+        77
+      ],
+      "area": 1251,
+      "score": 0.5163082480430603,
+      "anchor": [
+        845.5,
+        38.5
+      ],
+      "anchor_normalized": [
+        0.70458,
+        0.06111
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "PZ_?4]b06[^OO`a09X^OK]a0\\10O100000000O10000XO[^O_Oea03m^OHdb0M3KnZo0?ddPO5l]OFc`0=V_OGj`0`0h^OFYa0[11O010N3L3L5F9J7]Od0IdUQ6"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        775,
+        66,
+        221,
+        66
+      ],
+      "area": 5212,
+      "score": 0.4638567566871643,
+      "anchor": [
+        885.5,
+        99
+      ],
+      "anchor_normalized": [
+        0.73792,
+        0.15714
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "\\ll>:[c02N1000K5N10100O10000O100O100000000O0100O2O0O100O1000001O0O100001O0000001O000010O0001O000O2O0O2OSkQ16bTnN7K4N2N2N2N2N2O1N2N2O0O2O1N2O1N2N2O1N101O1N2O1O1N2O1O1O1O1N2O001O1O1O1O1O001O000000000000O1O1N2O1N2N2O1O1N3N1O100O1O1O1O1O1O100O10O0100O100O1O100000000000001N1000001O000001O001O1O0001O000O2O1O100O2O0O1O1O2N4K5L1O1O1O100O2OQ]OFab0h0000Na0_O3Jh\\m3"
+      }
+    },
+    {
+      "label_index": 3,
+      "class_name": "Fence",
+      "bbox": [
+        0,
+        49,
+        493,
+        131
+      ],
+      "area": 20382,
+      "score": 0.37947437167167664,
+      "anchor": [
+        246.5,
+        114.5
+      ],
+      "anchor_normalized": [
+        0.20542,
+        0.18175
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "]3V2`a000000O100O1O10000000001O0000000000O1000000O2O000O2C`^ObN`a0^1a^O`N`a0`1`^O_Nba0`1^^O_Nca0a1]^O_Nca0a1]^O^Nda0b1\\^O^Nea0a1[^O^Nfa0b1Z^O^Nga0a1Y^O^Nia0a1W^O_Nja0`1W^O^Nka0a16O8H:E;F5J2O1O1O00001O001O2M3N2LcY45WfK4I6J7I6M3M3B>N2N2O1O001O1O1O100O100O10O10000000O1000000O10000000000O1000000000O1000000O10O1000O10000O1000000O10O10000000O010000000000000000000000000000000000000000000000000O1000001N10000000000O2O0O101N10001N1000001O0O2O1O1O1O1O001O1O1O6J1O1N10001O00001O1O3L7J7G5JTk11mTN1E;L5M3N1M4M2N2N2N2N101N2M2CiNY^O[1fa0hNU^O[1ka080O01000000000O100000O100000O1000O010000O01000O10000O100O2N1N2N2O1O1O1O1O2N1N2Ce]O[O_b0`0?F9M3O100O101N1Odoo0O\\PPO4M4L3M4M2^]OI`a0:X^OLha05R^O1ma0l001N1000000000O1000000O2O000000O010O100O100O1O100O100O10000000O1001O00000O1000000001O0000000000000WOS^OIma07T^OHla0Q10001O0000000000000000O10000O100O1O1O1O1O1O1M2O2O1O100O10000O10000000000O100000O10000000000O101O000O101O0O10000000O1000000000O100000O100000000O0100000000O100000O010O0100O101N100000O001O1N2N2N2M3M3N2O1O1O100O100O101N100O1O1O1O1O2N2M4K5M[mb="
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        137,
+        138,
+        320,
+        262
+      ],
+      "area": 13395,
+      "score": 0.3083682656288147,
+      "anchor": [
+        297,
+        269
+      ],
+      "anchor_normalized": [
+        0.2475,
+        0.42698
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          630,
+          1200
+        ],
+        "counts": "\\`d21dc02N1N3N1O1O1O1O1O2N01000O01O1O001000O100O1O1O1O1O1O1O100O2N101N1O2O0O1000000O100000O10O10O1001N10001N10000000000O10O10000O010O100O10001N1000000000000000O100O010O01000000000000O01000000O100O100O101N100O10000000000000000000000000O010000000000O0100000000010O0000010O01O01O01O0010O00010O001O10O01O1O001O000000000000010O00000000O101OZBROd8n0YGVOf8i0[GYOb8h0^GYOa8g0`GXO`8h0aGXO]8i0cGWO]8i0cGWO]8h0eGWOZ8j0fGVOZ8j0fGVOZ8j0fGVOY8k0gGTOZ8l0fGTOZ8l0fGTOY8n0fGQO[8o0fGoN[8Q1U500000O2O0000000O2OO1000000000O100O1_OeNf^O\\1Ya0gNd^OZ1\\a0hNa^OY1_a0iN^^OX1ba0jN\\^OV1da0>1O0O10O10000O10O100000000O01000000000O100001N10001N100O2N1O2L3N3M2AkM[_OX2c`0>00O2O000000000000000000000O100001O0000001O00001O2N1N3N1O1N3N2N2N3L4M2M3M3M2O1N2N2N4M4K4L3K4M3M3O1N3M2O0O101O0000000O2O1O1O1O2M4M2O0O1O1O0010O010O1O1000O1O2M3KXmX>"
+      }
+    }
   ]
 }

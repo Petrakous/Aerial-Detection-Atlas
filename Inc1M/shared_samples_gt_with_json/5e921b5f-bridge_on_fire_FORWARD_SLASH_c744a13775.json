@@ -5,34 +5,34 @@
   "height": 367,
   "segments": [
     {
-      "label_index": 7,
+      "label_index": 6,
       "class_name": "Destroyed vehicle",
-      "pixel_count": 21735
+      "pixel_count": 9687
+    },
+    {
+      "label_index": 7,
+      "class_name": "Smoke",
+      "pixel_count": 56637
     },
     {
       "label_index": 8,
-      "class_name": "Smoke",
-      "pixel_count": 58987
+      "class_name": "Flame",
+      "pixel_count": 5863
     },
     {
-      "label_index": 9,
-      "class_name": "Flame",
-      "pixel_count": 10015
+      "label_index": 20,
+      "class_name": "Road",
+      "pixel_count": 58924
     },
     {
       "label_index": 21,
-      "class_name": "Road",
-      "pixel_count": 76471
-    },
-    {
-      "label_index": 22,
       "class_name": "Civilian vehicle",
-      "pixel_count": 8079
+      "pixel_count": 7551
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 2963
+      "pixel_count": 2798
     }
   ]
 }

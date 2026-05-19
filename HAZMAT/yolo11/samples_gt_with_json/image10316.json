@@ -1,0 +1,26 @@
+{
+  "image_id": "image10316",
+  "file_name": "image10316.jpg",
+  "width": 749,
+  "height": 1000,
+  "annotations": [
+    {
+      "bbox": [
+        423,
+        507,
+        99,
+        99
+      ],
+      "class_name": "radioactive"
+    },
+    {
+      "bbox": [
+        571,
+        645,
+        83,
+        84
+      ],
+      "class_name": "radioactive"
+    }
+  ]
+}

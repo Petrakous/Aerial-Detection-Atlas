@@ -5,49 +5,49 @@
   "height": 512,
   "segments": [
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 84864
+      "pixel_count": 28498
+    },
+    {
+      "label_index": 8,
+      "class_name": "Flame",
+      "pixel_count": 9067
     },
     {
       "label_index": 9,
-      "class_name": "Flame",
-      "pixel_count": 10179
-    },
-    {
-      "label_index": 10,
       "class_name": "Fire hose",
-      "pixel_count": 686
+      "pixel_count": 553
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 31306
+      "pixel_count": 29113
     },
     {
-      "label_index": 20,
+      "label_index": 19,
       "class_name": "Dry tree",
-      "pixel_count": 90035
+      "pixel_count": 88886
     },
     {
-      "label_index": 22,
+      "label_index": 21,
       "class_name": "Civilian vehicle",
-      "pixel_count": 3245
+      "pixel_count": 3169
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 47825
+      "pixel_count": 46469
     },
     {
-      "label_index": 32,
+      "label_index": 31,
       "class_name": "Door",
-      "pixel_count": 3562
+      "pixel_count": 3413
     },
     {
-      "label_index": 42,
+      "label_index": 41,
       "class_name": "Tower",
-      "pixel_count": 443
+      "pixel_count": 377
     }
   ]
 }

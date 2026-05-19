@@ -34,5 +34,259 @@
       "pixel_count": 789,
       "score": 0.4946
     }
+  ],
+  "instances": [
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        357,
+        159,
+        35,
+        75
+      ],
+      "area": 1593,
+      "score": 0.9959937334060669,
+      "anchor": [
+        374.5,
+        196.5
+      ],
+      "anchor_normalized": [
+        0.58516,
+        0.54583
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "\\gm32R;6K4M3L3M3N2QO_OSGe0l8]OPGf0o8[OnFg0S9YOkFh0V9ZOfFf0Z9d010O1F:N2O100O3M2O1N2O00O2O0O2O1N>A4B=_Oa0I8K7IZPg2"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        501,
+        180,
+        36,
+        81
+      ],
+      "area": 1853,
+      "score": 0.9953302145004272,
+      "anchor": [
+        519,
+        220.5
+      ],
+      "anchor_normalized": [
+        0.81094,
+        0.6125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "\\Z`5`0e:5M3N<C5L3L3`FmNf8l1N1O1O1O1O1O1O00M3M4I7I8O10O2O13O2NN2N3OM5[NgFo0l9M3M3M3M3M4L9GlnS1"
+      }
+    },
+    {
+      "label_index": 8,
+      "class_name": "Smoke",
+      "bbox": [
+        94,
+        0,
+        539,
+        207
+      ],
+      "area": 84834,
+      "score": 0.9913260340690613,
+      "anchor": [
+        363.5,
+        103.5
+      ],
+      "anchor_normalized": [
+        0.56797,
+        0.2875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "dQQ11V;`1aN3L3N1O1N101O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000001O000000001O000000001O00001O0000001O000O10000000001O000000000000000000000000000000000000000000000000000000000000000cJTN^1l1`NYN]1g1aN\\N^1c1bN_N]1a1bNaN]1_1aNdN^1\\1aNfN^1Z1aNhN^1X1aNjN^1U1bNlN^1T1`NnN`1Q1_NRO`1m0`NTO`1k0_NWOa1h0]N[Oc1d0\\N^Od1a0[NBd1=[NEe1;XNHh17WNKi15TNNl12SNOm11RN1m1ORN2n1MRN4n1LQN5o1KPN6P2JPN6P2JoM7Q2InM8R2HnM8R2HmM9S2GkM;U2EjM<V2CWLkN1c1h3BPLTO4\\1l3@PLVO1[1o3_OoKBCS1^4[OoKHZOP1g4XOnKZ2R4fMnKZ2R4fMnKZ2R4fMmK[2S4eMmK[2S4eMmK[2S4eMlK\\2T4dMlK\\2T4dMlK\\2T4dMlK\\2T4dMkK]2U4cMkK]2U4cMkK]2U4cMkK]2U4dMjK\\2V4dMiK]2W4cMiK]2W4cMiK]2W4cMiK]2W4cMiK]2W4dMgK]2Y4cMgK]2Y4cMgK]2Y4cMfK^2Z4bMfK^2Z4bMeK_2[4bMdK^2\\4bMcK_2]4cM`K^2`4cM^K^2b4dM[K\\2f4eMXK\\2h4R200000000000000000O1000000000000000000000000000000O100000000000000000000001O00000000000000000000001O00000000000000O100000000000000O100000000000000O100O100O100O1O100O1O1N2K5F:J6N2O1O1O1000000000000001O00000000000000000000001O001O001O1O1O1O2N1O1O1O001O001O00001O000000001O0000001O0000001O0000001O00001O0000001O00001O001O00001O001O1O001O001O00000000O10000O100O100O100O100O100O10000O1O1O1O1O1O1O1O1N2O1O100O1O1O100O10000O11O00001O00001O0000001O0000001O000000001O001O001O1O1O1O1O1O2N1O1O001O1O00001O001O001O001O001O1O001O001O001O00001O00000000000000000000000000000000000000000000000000000000000000000000000000O100000000000000000000O100000000000000O100000000O100O100O1O1O1O1O1N2O1D<L4I7M3N2N2O2M2O1O1N3M2L5J5J8@Q_2"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        464,
+        176,
+        34,
+        76
+      ],
+      "area": 1703,
+      "score": 0.9898779392242432,
+      "anchor": [
+        481,
+        214
+      ],
+      "anchor_normalized": [
+        0.75156,
+        0.59444
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "U[S5`0g9EjFg0S9^OhFe0U9@dFd0[9f0N1N2O10N1K4O3N2?A1O000O1O2N0N3N20K5E;L4M5L3M4L3M5K3G9B=M3Ngga1"
+      }
+    },
+    {
+      "label_index": 5,
+      "class_name": "First responder",
+      "bbox": [
+        406,
+        180,
+        33,
+        82
+      ],
+      "area": 1471,
+      "score": 0.9624633193016052,
+      "anchor": [
+        422.5,
+        221
+      ],
+      "anchor_normalized": [
+        0.66016,
+        0.61389
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "Yn^46o:7_O`0K5K7J8H>C2M1O3D:O1O1O100000@dGRN^8i1c0M4K5M3M2M>\\O:M2O3N0O2O1O1O1N3Nm^V2"
+      }
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "bbox": [
+        457,
+        247,
+        18,
+        29
+      ],
+      "area": 422,
+      "score": 0.5944440960884094,
+      "anchor": [
+        466,
+        261.5
+      ],
+      "anchor_normalized": [
+        0.72813,
+        0.72639
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "_mP5:f::K3N2O1O2O0O10O2O000O2O1O1O1O1N2Gbhi1"
+      }
+    },
+    {
+      "label_index": 27,
+      "class_name": "Boat",
+      "bbox": [
+        0,
+        51,
+        246,
+        126
+      ],
+      "area": 25651,
+      "score": 0.5502870082855225,
+      "anchor": [
+        123,
+        114
+      ],
+      "anchor_normalized": [
+        0.19219,
+        0.31667
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "k1U3P8?B5L2N1O11O000000000000000000000000001O0000000000000000000000001O1O1O001O00000O2O0001O000000000000000001O000000000000001O0001O0001O00001O00001O00000000001O0000000000000000000000001O000000001O0000001O0000001O00000000000000001O000000000000000000000000000000000000000000000000000000000000000000001O000000000O100000000000000000001O00000000001O00000000000000001O0000000000000000000010O00O100000000000000000000000000O10000O1\\OmGRNU8l1mGRNT8m1oGPNR8o1PHgMNOS8Y2d0O100O1O1O1O1O100O101N100O100O101N100O2O001N100O2M2O3Mh0WO8I5I6GP]Z4"
+      }
+    },
+    {
+      "label_index": 40,
+      "class_name": "Cone",
+      "bbox": [
+        402,
+        222,
+        10,
+        52
+      ],
+      "area": 367,
+      "score": 0.394845187664032,
+      "anchor": [
+        407,
+        248
+      ],
+      "anchor_normalized": [
+        0.63594,
+        0.68889
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "`a]4d0b:9QFWOQ9Q1_FWOb9W12N2M5K4J6J7Ajm_2"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        611,
+        58,
+        29,
+        180
+      ],
+      "area": 2289,
+      "score": 0.337740957736969,
+      "anchor": [
+        625.5,
+        148
+      ],
+      "anchor_normalized": [
+        0.97734,
+        0.41111
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          360,
+          640
+        ],
+        "counts": "kPg69j:6J6I6J6J6J6L4L4K5H8G9I7I7J6J5J6K2N2O0N020OO01O01O03K261VN"
+      }
+    }
   ]
 }

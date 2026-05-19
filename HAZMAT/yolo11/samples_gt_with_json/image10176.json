@@ -1,0 +1,44 @@
+{
+  "image_id": "image10176",
+  "file_name": "image10176.jpg",
+  "width": 749,
+  "height": 1000,
+  "annotations": [
+    {
+      "bbox": [
+        17,
+        140,
+        135,
+        122
+      ],
+      "class_name": "infectious-substance"
+    },
+    {
+      "bbox": [
+        256,
+        11,
+        128,
+        134
+      ],
+      "class_name": "infectious-substance"
+    },
+    {
+      "bbox": [
+        494,
+        379,
+        105,
+        96
+      ],
+      "class_name": "infectious-substance"
+    },
+    {
+      "bbox": [
+        375,
+        535,
+        111,
+        117
+      ],
+      "class_name": "infectious-substance"
+    }
+  ]
+}

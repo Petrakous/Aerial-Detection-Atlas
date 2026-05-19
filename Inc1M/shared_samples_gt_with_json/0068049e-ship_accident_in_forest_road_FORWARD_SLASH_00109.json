@@ -5,19 +5,19 @@
   "height": 576,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 156195
+      "pixel_count": 155359
     },
     {
-      "label_index": 27,
+      "label_index": 26,
       "class_name": "Boat",
-      "pixel_count": 77092
+      "pixel_count": 75586
     },
     {
-      "label_index": 33,
+      "label_index": 32,
       "class_name": "Mud",
-      "pixel_count": 30841
+      "pixel_count": 30491
     }
   ]
 }

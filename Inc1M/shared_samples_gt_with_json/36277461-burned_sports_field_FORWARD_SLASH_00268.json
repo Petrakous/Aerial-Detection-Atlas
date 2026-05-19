@@ -5,29 +5,29 @@
   "height": 1005,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 223842
+      "pixel_count": 196381
     },
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 823963
+      "pixel_count": 821231
     },
     {
-      "label_index": 21,
+      "label_index": 20,
       "class_name": "Road",
-      "pixel_count": 128219
+      "pixel_count": 127428
+    },
+    {
+      "label_index": 24,
+      "class_name": "Green grass",
+      "pixel_count": 8791
     },
     {
       "label_index": 25,
-      "class_name": "Green grass",
-      "pixel_count": 8962
-    },
-    {
-      "label_index": 26,
       "class_name": "Pole",
-      "pixel_count": 1741
+      "pixel_count": 1415
     }
   ]
 }

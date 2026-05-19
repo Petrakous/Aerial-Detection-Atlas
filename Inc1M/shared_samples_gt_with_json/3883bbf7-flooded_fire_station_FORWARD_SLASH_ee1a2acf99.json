@@ -5,29 +5,29 @@
   "height": 337,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 90539
+      "pixel_count": 111617
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 35325
+      "pixel_count": 34289
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 1056
+      "pixel_count": 913
     },
     {
-      "label_index": 33,
+      "label_index": 32,
       "class_name": "Mud",
-      "pixel_count": 46157
+      "pixel_count": 45256
     },
     {
-      "label_index": 39,
+      "label_index": 38,
       "class_name": "Fire truck",
-      "pixel_count": 7055
+      "pixel_count": 6844
     }
   ]
 }

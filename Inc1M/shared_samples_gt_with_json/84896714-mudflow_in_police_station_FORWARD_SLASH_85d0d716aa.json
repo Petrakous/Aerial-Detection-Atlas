@@ -5,24 +5,24 @@
   "height": 720,
   "segments": [
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 185591
+      "pixel_count": 191679
     },
     {
-      "label_index": 22,
+      "label_index": 21,
       "class_name": "Civilian vehicle",
-      "pixel_count": 11860
+      "pixel_count": 11661
     },
     {
-      "label_index": 25,
+      "label_index": 24,
       "class_name": "Green grass",
-      "pixel_count": 40912
+      "pixel_count": 39635
     },
     {
-      "label_index": 33,
+      "label_index": 32,
       "class_name": "Mud",
-      "pixel_count": 406811
+      "pixel_count": 382011
     }
   ]
 }

@@ -5,34 +5,34 @@
   "height": 415,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 71542
+      "pixel_count": 70397
     },
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 18313
+      "pixel_count": 17664
+    },
+    {
+      "label_index": 11,
+      "class_name": "Green plant",
+      "pixel_count": 4222
     },
     {
       "label_index": 12,
-      "class_name": "Green plant",
-      "pixel_count": 4492
-    },
-    {
-      "label_index": 13,
       "class_name": "Building",
-      "pixel_count": 18748
+      "pixel_count": 18438
     },
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 1689
+      "pixel_count": 1061
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 4142
+      "pixel_count": 4001
     }
   ]
 }

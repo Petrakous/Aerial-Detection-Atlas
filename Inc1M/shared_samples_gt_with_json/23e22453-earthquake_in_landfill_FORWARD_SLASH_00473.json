@@ -5,29 +5,29 @@
   "height": 1690,
   "segments": [
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 143420
+      "pixel_count": 142805
+    },
+    {
+      "label_index": 15,
+      "class_name": "Debris",
+      "pixel_count": 910969
     },
     {
       "label_index": 16,
-      "class_name": "Debris",
-      "pixel_count": 914479
-    },
-    {
-      "label_index": 17,
       "class_name": "Dirt road",
-      "pixel_count": 94925
+      "pixel_count": 94169
     },
     {
-      "label_index": 20,
+      "label_index": 19,
       "class_name": "Dry tree",
-      "pixel_count": 8059
+      "pixel_count": 7838
     },
     {
-      "label_index": 22,
+      "label_index": 21,
       "class_name": "Civilian vehicle",
-      "pixel_count": 295753
+      "pixel_count": 293531
     }
   ]
 }

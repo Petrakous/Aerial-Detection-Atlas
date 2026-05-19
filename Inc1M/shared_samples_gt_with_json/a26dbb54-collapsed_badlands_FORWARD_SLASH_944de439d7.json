@@ -5,14 +5,14 @@
   "height": 475,
   "segments": [
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 258540
+      "pixel_count": 257840
     },
     {
-      "label_index": 21,
+      "label_index": 20,
       "class_name": "Road",
-      "pixel_count": 27570
+      "pixel_count": 26771
     }
   ]
 }

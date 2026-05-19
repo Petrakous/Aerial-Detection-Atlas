@@ -5,14 +5,14 @@
   "height": 1390,
   "segments": [
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 196127
+      "pixel_count": 196450
     },
     {
-      "label_index": 17,
+      "label_index": 16,
       "class_name": "Dirt road",
-      "pixel_count": 129682
+      "pixel_count": 127687
     }
   ]
 }

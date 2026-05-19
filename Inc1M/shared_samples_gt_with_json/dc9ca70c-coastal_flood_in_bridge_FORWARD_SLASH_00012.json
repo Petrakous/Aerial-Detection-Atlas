@@ -5,14 +5,14 @@
   "height": 837,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 784355
+      "pixel_count": 783201
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 26293
+      "pixel_count": 25139
     }
   ]
 }

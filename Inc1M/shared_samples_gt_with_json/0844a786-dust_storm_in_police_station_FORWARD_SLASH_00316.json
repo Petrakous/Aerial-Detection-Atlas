@@ -5,19 +5,19 @@
   "height": 630,
   "segments": [
     {
-      "label_index": 2,
+      "label_index": 1,
       "class_name": "Green tree",
-      "pixel_count": 4660
+      "pixel_count": 4392
     },
     {
-      "label_index": 8,
+      "label_index": 7,
       "class_name": "Smoke",
-      "pixel_count": 606662
+      "pixel_count": 601594
     },
     {
-      "label_index": 59,
+      "label_index": 58,
       "class_name": "aerial vehicle",
-      "pixel_count": 3306
+      "pixel_count": 3138
     }
   ]
 }

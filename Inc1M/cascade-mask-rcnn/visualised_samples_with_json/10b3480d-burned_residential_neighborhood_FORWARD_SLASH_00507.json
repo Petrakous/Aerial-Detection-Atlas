@@ -40,5 +40,427 @@
       "pixel_count": 30298,
       "score": 0.8849
     }
+  ],
+  "instances": [
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        287,
+        637,
+        402,
+        131
+      ],
+      "area": 42781,
+      "score": 0.9996160268783569,
+      "anchor": [
+        488,
+        702.5
+      ],
+      "anchor_normalized": [
+        0.47656,
+        0.91471
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "Vog6d0Xg07J4M2O2N1O100O1O1M3L4K5G:L3O1O1O1O100O10000O100O1O100O1O100O100O10000O10000O1000000O100000000O100000000000000O10000000000O10000000000000000000000000000000000000000000000001O000000000000O10000O100O1000000O10000O10000O1O1O1O1O1N2O1N2O100O10000O100O1O1O1O1N2O1N2O1O100O10000O100O1O1O100O100O100O10000O10000O1000000O1000000000000O1000000000000O1000000O10000O100000000O100000000000000O1000000000000O1000000O1000000O1000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000001O0000001O00001O000000001O000000001O0000001O00001N10001O0O101N100O2O0O101N10001N101N2O1O3L4M1O0O2O001N101O1O0O3N1N5L=C7H4M2N2M2O2N0O2O1O1N4L5K9G?\\OYaj7"
+      }
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "bbox": [
+        117,
+        474,
+        201,
+        256
+      ],
+      "area": 23322,
+      "score": 0.9909517765045166,
+      "anchor": [
+        217.5,
+        602
+      ],
+      "anchor_normalized": [
+        0.2124,
+        0.78385
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "YXh21ig0?C8J4M4L4L5L3L4L3N2M101N101N1O2O0O1O2O1N101N2O2N1N2N2O0O2N1N3N1O101N101N2O0O2O2N2N2N3L5L3M2N2M4L3N3L3M4L2N2ON101O1O001O1O10000O10O10O100;E=C9G8H6J7d^OeJe?c5^_O\\KX`0X6N2N2N4L3M4K2O00J6J6K5K5F:[Oe0M3K5K5K5M3N2N2O1N2O1N2N2N2N2O1O1N2O1M3N2M4M2O1O1O1O1O1O1O1O100O1O100O100O1O100O2N100O1O1N2M3N2M3M3N2O1O1O1O1O1O1O1O100O1O10000O101N10001O1N101O1O1N101O001O001O0O2O001O1O1O1N2O1N2N2O1N2N2N101M3N2N2N3M2N2N2N2M3L4M4L4K5L5K9Ego``0"
+      }
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "bbox": [
+        761,
+        610,
+        259,
+        158
+      ],
+      "area": 37356,
+      "score": 0.9907768964767456,
+      "anchor": [
+        890.5,
+        689
+      ],
+      "anchor_normalized": [
+        0.86963,
+        0.89714
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "X^ka03ef0:SZOKfe0\\1L6kYOcN^e0R2M2N2M3N2M4J5L5M3L4M3M2N1O2M2N2N2N3N1O1O101O0O100O2N1O100O10001N101O0000001N100000000000000000001O0O1000000000000O10000000000000000000000O1000000000000000000000000O100000000000000O10000000000O10000000000O10000000000000000O10000000000000000000000000000000000O100000001O000000O100000O100000000000000000000000000O10000000000000000000000000000000000O1000000000000O100000000O1000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000O100001O00000000001O00001N2N2L4K9^OP]2"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        387,
+        212,
+        100,
+        464
+      ],
+      "area": 5535,
+      "score": 0.9715502858161926,
+      "anchor": [
+        437,
+        444
+      ],
+      "anchor_normalized": [
+        0.42676,
+        0.57813
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "mkR9h0af0R1WO`0@?C=D;mLSNg_OW2Z?f3G9M3H7YOe0K6O1JE5WOR1XOj0OJ1HL?iLk@_Lf`0\\3R2B>fNZ1I8K5H8J6L4M2K6M3M3N2LI1730O0100O001O0M4K5NO1L5N20100O1O100O2N1O3M4JbW21_hM2N2N101N1O100O1O0N2J600000N201O0001000O1000000O01000000001N1000001N1O2N2N3MWab<"
+      }
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "bbox": [
+        352,
+        415,
+        149,
+        250
+      ],
+      "area": 13106,
+      "score": 0.9544802308082581,
+      "anchor": [
+        426.5,
+        540
+      ],
+      "anchor_normalized": [
+        0.4165,
+        0.70313
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "R^X8R1hf0;I4K6K6K6J9G2N3M3N3L4M1N2N2O2M2N2O0O101N101O001O001O00000001N10a^O]Ma=b2^BfM]=W2cBlM\\=R2dBPN]=o1_BUNa=j1YB]Nh=a1QBgNo=V1lAROV>?TBDo=N[B3i=]ObBc0]b01OO2M3K6J5K6iNgYO3MJdf0O]g02]YO>UOd0SNm1E:F;I6M3N3N1O2N3M2N2O0O2O1O1N101O2N2N3M2M4M4Le0[O:F5K4LaMg^OYNWa0R1c_OkN[`0o0X@gNd?S1f@kNY?n0PAQOo>l0WAROh>i0eAoN[>n0iAROU>m0oAPOR>n0QBQOo=m0TBQOm=m0VBROi=n0YBPOh=o0gBVNf=i1Y4O001N2N2N2M2O2N2O1O1O100O1N101O100O1O100O10000O10000O1O100O1O1O1O100O2O0O1O100O2O0O101N2O2M2N3M2M4L6J7I^jW<"
+      }
+    },
+    {
+      "label_index": 20,
+      "class_name": "Dry tree",
+      "bbox": [
+        825,
+        414,
+        198,
+        195
+      ],
+      "area": 26307,
+      "score": 0.9498093724250793,
+      "anchor": [
+        924,
+        511.5
+      ],
+      "anchor_normalized": [
+        0.90234,
+        0.66602
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "bW[c0d0Ug0c0A7J4L3N3^Oc0K4L3M4M2O1O1N2O2N2N1N2O1O001N2O1O1O1N2N2L5I6A`0K4N2N2M3M3M4L3M2O2O1N101N2O1O1O1N101O0000001O000001O000000000001O000001O000010O01O1O10O010O0100O010O100O1O010O010O01O01000000O10O01O010O001O01O01O100O1O1O10O01O100O1O2N101N1O1O1O1O100O1O001O1O1O1O1O001O001O1O100O1O001O1O001O1O2N1O1O001O001O001O001O1O1O1O1O001O1O0O2O1O1O1N2O1O1N2N3L4L3M4M2M3M2O2M3M3O0O2N2O0O2O1N2O1N100O2O0O2O0O2O1M4K6Hj7"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        277,
+        288,
+        97,
+        377
+      ],
+      "area": 9222,
+      "score": 0.9198865294456482,
+      "anchor": [
+        325.5,
+        476.5
+      ],
+      "anchor_normalized": [
+        0.31787,
+        0.62044
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "oR`62ig0:@?^Ob0H6J5@a0G7N3N1\\C`Mh3a2eKWNU4i1SKQOk4o0oJXOP5g0nJ[OS5e0iJ_OW5`0gJCY5<eJG[59bJI_56]JOc50ZJ4f5LYJ4h5eNWD]Oo5o1k5\\NfD]O\\5Y2P6VNmD[OP5a2U6RNkD^Ol4b2\\6mMhDCf4b2i6fM`DLk15lNU2n<hMPDd0cNa1d=kMcCR1\\NR1W>lMRCm4W=SK^Bo4^=_K[B`4a=lKSBX4o=nKdAo3j>TLn@P4S?\\22M4M3L3K6G9L4N1M4PMe_OnMh`0c1[@_Mo?Z2`@YMe?_2R3I7K5K5L4L4M3M4K4M3N2N2O1N2N3M2N3N1O100O10001N3N1O000000001N2O1O1OO10O10001N1O1O1N2N1O2N3N1O2N2N5IdUW?"
+      }
+    },
+    {
+      "label_index": 48,
+      "class_name": "Crane",
+      "bbox": [
+        491,
+        113,
+        529,
+        386
+      ],
+      "area": 30298,
+      "score": 0.8849458694458008,
+      "anchor": [
+        755.5,
+        306
+      ],
+      "anchor_normalized": [
+        0.73779,
+        0.39844
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "V\\`;4hg08J6I6K4L4L3O0O2O0O101O0O2O0O101O000O101O000O101O000000000000000000000000000000000000001O000001O00000010O0001O000010O01O001O010O1O10O0100O10O10O10O10O010O010O0010O01O010O100O100O1O1000O0100O0100O010O1O10O0100O010O10O100O100O1O100O10O01O10O01O010O0100O01000O2O000001O000O1000O0100O01O010O010O100O1O100O2O0O10O01000O01000O100O0100000000O101N10000O100O010O0010O100O100O100O1000O10000O100O10O01O10O010O01000O01001O00001O0000O2O00O0100O010O010O10O10O100001N1001O00000O1000O01O010O1O00100O00100O1O100O1O100O1O100O0100O100O1O100O0010O01O010O001O01O01O010O0100O0100001O01O00000000000O0100O010O0010O0100O100O101O00O1000000O10O0100O01O010O10O0100O101N100O100O10000O0100O100O010000O10000O2O0O2N100O100O1O010O1O01000O1000001O2O0O1O1O1O1O1N100O100O010O10O0100000000001O0001O1O0O101O0O1O10O00010O00010O010O010O0010O0100O100O001000O010O01O010O010O01O01O01O01O01O01O010O10O0100O100O2O00O10O1000O100O100O00100O010O100O100O2O001O001O0000000O100O01O010O01O010O010O010O010O1O101N100O10000000000O10000000O010O010O0010O010O01O010O001O010O1O1O100O1O1O10O01O1O010O1N2M3M3M3M4E>@e0ZOeb2"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        74,
+        375,
+        92,
+        98
+      ],
+      "area": 5665,
+      "score": 0.8324804902076721,
+      "anchor": [
+        120,
+        424
+      ],
+      "anchor_normalized": [
+        0.11719,
+        0.55208
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "okg1g0Wg03M3L301N2O001O00000000001O001O1O01O2N2OO0O3N1N101N101O1N2O001O2O0O1O2N2N1O1O101N001O1O001O0010O000001UZOSNae0m1]ZOUNde0j1ZZOZNde0R2O1O@\\ZOdNde0\\1\\ZOeN6DSe0Y2jZOkMSe0b2O00001O00001O01O01O000000000001O1O1O001O001O1O001O0O1O1O1N3C<L7DPTSd0"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        535,
+        541,
+        24,
+        39
+      ],
+      "area": 879,
+      "score": 0.7703636288642883,
+      "anchor": [
+        547,
+        560.5
+      ],
+      "anchor_normalized": [
+        0.53418,
+        0.72982
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "Yia<?Xg0d0D2O000O100000000000000O100000O100000000O1O2NSWl:"
+      }
+    },
+    {
+      "label_index": 39,
+      "class_name": "Fire truck",
+      "bbox": [
+        0,
+        400,
+        127,
+        366
+      ],
+      "area": 41465,
+      "score": 0.7573766112327576,
+      "anchor": [
+        63.5,
+        583
+      ],
+      "anchor_normalized": [
+        0.06201,
+        0.75911
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "ob0W3e>h7TN:L3O00001O0O10000000000001O000000O100000000001O00000000001O000000000000001O0000001O000000001O0000001O000000001O0000001O000000001O0000000000001O00001O0000001O001O1O1O1O001O001O1O1O001O001O0000001O001O1O2N1O3M3M2M3SFlBj8V=oFTCl8X>G;E?A6J5kN]@dIi?S6^1^Oh0SOb0F:Fb0\\Ol0QOa0B;F:G9D?@oTPe0"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        506,
+        487,
+        14,
+        35
+      ],
+      "area": 456,
+      "score": 0.7241341471672058,
+      "anchor": [
+        513,
+        504.5
+      ],
+      "anchor_normalized": [
+        0.50098,
+        0.6569
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "`ok;j0Qg05N200O1O100000000000O2N5Gi`i;"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        505,
+        548,
+        13,
+        34
+      ],
+      "area": 403,
+      "score": 0.713121771812439,
+      "anchor": [
+        511.5,
+        565
+      ],
+      "anchor_normalized": [
+        0.49951,
+        0.73568
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "YYk;m0Pg03O1O10000000000000O2O5VO[oj;"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        205,
+        394,
+        54,
+        86
+      ],
+      "area": 3769,
+      "score": 0.6609663367271423,
+      "anchor": [
+        232,
+        437
+      ],
+      "anchor_normalized": [
+        0.22656,
+        0.56901
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "^Vj48ag09D;H8D;K5I7J7G8M3N2O100O1001O0000001O01O0000001O000001O01O0000001O01O01O01O00000000000O1M3L5K4K5J6H9I6H:_OQYOAhRna0"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        537,
+        476,
+        24,
+        39
+      ],
+      "area": 866,
+      "score": 0.604001522064209,
+      "anchor": [
+        549,
+        495.5
+      ],
+      "anchor_normalized": [
+        0.53613,
+        0.64518
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          768,
+          1024
+        ],
+        "counts": "TWc<n0of04N100O10000O10000O0100000O1000O100000000O102LTij:"
+      }
+    }
   ]
 }

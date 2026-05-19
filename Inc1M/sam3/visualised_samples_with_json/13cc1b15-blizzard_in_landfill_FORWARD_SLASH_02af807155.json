@@ -40,5 +40,175 @@
       "pixel_count": 38835,
       "score": 0.6875
     }
+  ],
+  "instances": [
+    {
+      "label_index": 45,
+      "class_name": "Burnt grass",
+      "bbox": [
+        0,
+        300,
+        588,
+        90
+      ],
+      "area": 38835,
+      "score": 0.6875,
+      "anchor": [
+        294,
+        345
+      ],
+      "anchor_normalized": [
+        0.49831,
+        0.8801
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          392,
+          590
+        ],
+        "counts": "Z:4d0c0U:]OkEc0T:_OfEh0W:\\O\\Eo0c:<O1O0O1000016I000O10O2O000EfEhNZ:W1gEiNY:W1gEiNY:W1gEjNX:V1iEiNW:W1iEiNW:W1iEiNW:X1hEgNY:Y1gEgNZ:X1fEhNZ:X1fEgN[:Y1eEhNZ:X1fEhN[:W1eEiN[:W1dEiN]:X1bEhN_:_1100O101O000000000001O0001N10000001O1O001O1O0000000000001O000000DbEnN^:^100000O2O00000001O00O100O11O0O1000001OO100O100001O00001O00000O100000000O10000000000O1000O10000O1O1O1O10000N2O101O000fN]ER1`:mNbER1^:nNbER1^:nNbER1^:oNaEQ1_:<000000000000001O1O00000001O003M0000N2O10000000O3M2M2O1L4M3O10O1O011O00001O001O0011N00000000O1000O2O000000000000001O01O0000000000001O001O0000001O00000O10001O0000000O100O10000O10000001O001O00000000000000001O0O10000000000000001O01O0[OkEVOV:j0kEUOU:j0mEVOR:j0oEUOQ:j0PFVOQ:j0nEVOR:j0oEUOQ:k0oEUOQ:l0mEUOS:k0mETOT:l0lETOT:m0jESOV:P1hEPOX:`1000O01O00001O01001O001O100O10O0010O00000000000000000000O100000000001O000O10O10O1000000000O0100000O11O00000O100000000O10000O100000000O100O10O10O100O10JRFRNn9j1WFUNi9j1XFTNj9c1SF^NX:_1:O002O01O000O2O0cEaNQ:`1nE`NR:a1lEaNR:l1O002N7I00000O100000000010O00O2O00000000O02N10eMXFV2h9iM[FU2e9kM]FS2c9mM]FS2b9nM^FR2b9nM^FR2b9nM^FR2a9oM_FQ2a9PN^FP2b9RN[Fo1e991000000001O0000000000000000001OO10000O20O0000000000O2N100O110O00000010O000001O001O000000001O00000000000010O0000O100001O000001O001O0O101O10O000001O0000000000O1000000000O2O0000000O100000O0100001N1000000000O1000O1000001N1OSNUF_1j9aNXF^1g9cNYF]1g9cNYF]1g9cNYF]1f9dNZF[1g9fNXF[1g9eNYF\\1f9dNZF]1e9dNZF\\1f9dNZF[1g9fNXFZ1h9hNUFY1k9b000000O1000O2O1N10N0MYFiMa9]2`FbM_9_2410000000000[FbM`9c201N11N1O100001O10O0000000000000000O2O000000000O11O000000000000000mNdFZO\\9e0eF[O[9e0fFZOZ9g0eFYO]9e0cF[O[9g0fFXOZ9h0fFXOZ9f0bF^N4k0Z9g0iFYOW9e0kF[OU9c0mF\\OT9c0lF\\OV9c0kF]OU9b0lF]OU9c0kF]OU9c0kF\\OV9d0iF]OW9d0hF\\OX9e0fF[O[9f0`F^O`9d0]F\\Od9d10000001O0010O10SOZFVOg9h0]FeN02f9g0VF[Oh0Fe91XF1Si0"
+      }
+    },
+    {
+      "label_index": 31,
+      "class_name": "Excavator",
+      "bbox": [
+        172,
+        226,
+        92,
+        48
+      ],
+      "area": 2158,
+      "score": 0.55322265625,
+      "anchor": [
+        218,
+        250
+      ],
+      "anchor_normalized": [
+        0.36949,
+        0.63776
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          392,
+          590
+        ],
+        "counts": "`RR25R<3L3O2M5K6K2M3M2O000O1O10O1000O100O010O1O1O0101O002N0O2O00000001O1N101O1O0O2O001O01O2N102M2O1N;F1OO10O0001O000000000000O11O000000O100000010O0000010O1O001O0010OO101N101N1O100O1O2N2N1N\\al3"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        88,
+        255,
+        48,
+        20
+      ],
+      "area": 819,
+      "score": 0.41064453125,
+      "anchor": [
+        112,
+        265
+      ],
+      "anchor_normalized": [
+        0.18983,
+        0.67602
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          392,
+          590
+        ],
+        "counts": "XnQ19k;5N2N1000000000O10O1000000O100000000000000000000O10000000O100000000000000000001O0000001O0O2O3L\\a]5"
+      }
+    },
+    {
+      "label_index": 29,
+      "class_name": "Dry grass",
+      "bbox": [
+        426,
+        274,
+        164,
+        19
+      ],
+      "area": 2264,
+      "score": 0.396240234375,
+      "anchor": [
+        508,
+        283.5
+      ],
+      "anchor_normalized": [
+        0.86102,
+        0.72321
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          392,
+          590
+        ],
+        "counts": "T[S54S<2O00000O101O00001O00001O1O010O1O1O1O1O00001O0000O10000O1000000O100010O000O101O0000000000001O000000001O000001O00000001O00O10O1000O100O1O2O00O2O001O0000000000000000000000O100000000000000O100000000O10000000000O10000000001O0001O00000O2O0000001O00000000001O00000000O1000000O01000O1000001O0O1000000000O101O000000000000000001O001O00\\G"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        118,
+        201,
+        3,
+        22
+      ],
+      "area": 50,
+      "score": 0.35595703125,
+      "anchor": [
+        119.5,
+        212
+      ],
+      "anchor_normalized": [
+        0.20254,
+        0.54082
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          392,
+          590
+        ],
+        "counts": "o[]1247c;9K3P[c5"
+      }
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "bbox": [
+        0,
+        228,
+        59,
+        8
+      ],
+      "area": 387,
+      "score": 0.33203125,
+      "anchor": [
+        29.5,
+        232
+      ],
+      "anchor_normalized": [
+        0.05,
+        0.59184
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          392,
+          590
+        ],
+        "counts": "W75S<000O1000000000000000000000000000000000000O1001O00000000O100000000000000O1000000000000000O10000000000000000000001O1NcQ[6"
+      }
+    }
   ]
 }

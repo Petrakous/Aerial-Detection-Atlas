@@ -28,5 +28,119 @@
       "pixel_count": 3244,
       "score": 0.9091
     }
+  ],
+  "instances": [
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        554,
+        121,
+        46,
+        48
+      ],
+      "area": 1675,
+      "score": 0.9488364458084106,
+      "anchor": [
+        577,
+        145
+      ],
+      "anchor_normalized": [
+        0.96167,
+        0.32222
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          450,
+          600
+        ],
+        "counts": "Xcc7=b=6K2O2N100O1O1O2M200O1O10001O0O1000001O00010O01O1OI7L4N2O1000000001O1O0000000O01O10000O12KXL"
+      }
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "bbox": [
+        0,
+        253,
+        50,
+        69
+      ],
+      "area": 3244,
+      "score": 0.9090777635574341,
+      "anchor": [
+        25,
+        287.5
+      ],
+      "anchor_normalized": [
+        0.04167,
+        0.63889
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          450,
+          600
+        ],
+        "counts": "n7d1]<4M1O4L4L1O1O001O001O00000000000000000000O1000000O10000000000O100O100000000O1000000O10000O100O2N2[OQ_a7"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        22,
+        238,
+        575,
+        210
+      ],
+      "area": 83234,
+      "score": 0.8585937023162842,
+      "anchor": [
+        309.5,
+        343
+      ],
+      "anchor_normalized": [
+        0.51583,
+        0.76222
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          450,
+          600
+        ],
+        "counts": "kQ:f0Q=c0D6J6J6J5L5K4L4N1O100O1O100O100O1O100O100O10000O100O10000O1O100O100O100O100O10000O10000O2O00000O10000O10000O01000O100O10000O100O10000O100O1000000000000000000O1000000000000000000fNgLkGY3U8hLjGX3U8jLiGW3W8iLiGW3W8iLiGW3W8jLhGV3X8jLhGV3X8jLhGV3X8kLgGU3Y8kLfGU3[8kLeGU3[8lLdGT3\\8lLdGT3[8nLcGS3]8mLcGS3]8nLbGR3^8nLbGR3^8nLaGS3_8nL`GR3`8nL`GR3`8nL`GR3`8nL_GS3a8mL_GS3a8mL_GS3a8mL_GS3a8mL_GS3a8mL_GS3a8mL_GS3a8mL_GS3a8mL_GS3a8mL_GS3a8mL_GS3b8lL^GT3b8lL]GU3c8kL]GU3c8kL]GU3c8kL]GU3c8kL]GU3c8lL\\GT3d8lL\\GU3c8kL]GU3c8kL]GU3c8kL]GU3c8kL]GU3c8kL\\GV3d8jL\\GV3d8jL\\GV3c8lL\\GT3d8lL\\GT3d8lL[GU3e8kL[GU3e8kL[GU3e8lLZGT3f8lLZGT3f8lLYGV3f8jLZGV3f8kLYGU3g8kLYGU3g8kLYGU3f8lLZGT3f8lLPGGH^3X9lLoF]3Q9cLnF^3R9bLmF_3S9aLmF_3S9aLmF`3R9`LnF`3R9`LmFa3T9^LlFb3T9^LlFb3T9^LlFb3T9^LlFb3T9^LlFc3S9]LlFd3T9\\LlFd3T9\\LlFd3T9\\LlFd3T9\\LlFe3S9[LmFe3S9[LmFe3S9[LmFe3S9[LmFe3S9[LlFf3U9YLkFh3T9YLkFg3U9YLjFh3V9b0O1000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000001O0000001O1O1O1O100O001O1O001O001O0000000000001O0000000000000000001O00000000O1000000000000000000O1000000000000000000000000000000O100000000000000000000000000000000001O0000000000001O00000001O000001O0000000000000000000000001O000000000000000000000000001O000000000000000O10001O00000000000000000000O10000000000000000000000000000O100000000O100000000O1000000000000O100000000O2O000O100O100O100O100O100O100O100O100O100O10000O10000O100O10000O100O100O100O100O100O100O1O100O1O100O1O1O10000O100O10000O10000O100O100O100O1N2O1O00100O1O1O100O10000O10000O100O100O10000O100O1O100O100O1000000O10000O100O10000O1O100O100O100O1000000O1000000000000O100000000O100000000O10000001O1O1N2O1N4M7H6Ej1gMUQ1"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        0,
+        180,
+        89,
+        110
+      ],
+      "area": 8028,
+      "score": 0.8299052119255066,
+      "anchor": [
+        44.5,
+        235
+      ],
+      "anchor_normalized": [
+        0.07417,
+        0.52222
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          450,
+          600
+        ],
+        "counts": "h5`2`;l0VO0O100O0100ZOfEbM\\:^2d000O1000000O101O1O00001O00000000000000000000000O100000000000000000000001O001O1O4L2N4L3M2N00001O00000000001O00001O000000001O0000000010O0001O00001O00N2N2lN]EgNe:h0QFPOS:j0f1J6KW\\P7"
+      }
+    }
   ]
 }

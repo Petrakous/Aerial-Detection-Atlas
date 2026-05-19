@@ -1,0 +1,17 @@
+{
+  "image_id": "image10353",
+  "file_name": "image10353.jpg",
+  "width": 448,
+  "height": 336,
+  "annotations": [
+    {
+      "bbox": [
+        181,
+        132,
+        193,
+        114
+      ],
+      "class_name": "spontaneously-combustible"
+    }
+  ]
+}

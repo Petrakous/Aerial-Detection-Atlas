@@ -1,0 +1,17 @@
+{
+  "image_id": "image10216",
+  "file_name": "image10216.jpg",
+  "width": 749,
+  "height": 1000,
+  "annotations": [
+    {
+      "bbox": [
+        260,
+        345,
+        102,
+        110
+      ],
+      "class_name": "poison"
+    }
+  ]
+}

@@ -34,5 +34,203 @@
       "pixel_count": 5042,
       "score": 0.6554
     }
+  ],
+  "instances": [
+    {
+      "label_index": 1,
+      "class_name": "Water",
+      "bbox": [
+        1,
+        155,
+        306,
+        258
+      ],
+      "area": 70693,
+      "score": 0.9995360374450684,
+      "anchor": [
+        154,
+        284
+      ],
+      "anchor_normalized": [
+        0.49677,
+        0.68434
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "ab0W7d55M3N2N2N10000000000000000O100000000000000000000O1000000O10000O10000O100000000000000O10000000000000000000000000000000000001O00000000000000000000001O001O001O001O001O00001O0000001O0000001O000000000000000000000000000000001O00000000001O001`IhJW5Y5cJnJ[5U5]JQKb5Q5WJVKg5m4SJXKk5o5O1O1O0000001O000000001O00000000000000O100000000000000O100O100O100O100O100O1000000O100jNTJYKl5c4ZJ[Kf5c4^JZKc5e4_JZKa5f4`JYK`5g4aJXK_5g4bJYK^5g4cJXK]5h4dJWK\\5h4eJXK[5h4fJWKZ5i4gJUKZ5j4gJVKY5j4hJUKX5k4hJUKX5k4hJUKX5k4hJUKX5k4hJUKX5j4iJVKW5j4iJVKW5j4iJVKW5j4jJUKV5k4jJUKV5k4jJUKV5k4jJUKV5k4jJUKV5k4jJUKV5k4jJUKV5k4jJUKV5k4jJUKV5k4jJUKV5k4kJTKU5l4kJSKV5m4jJSKV5n4iJRKW5n4iJRKW5n4iJRKW5n4iJRKW5n4iJRKW5n4jJQKV5o4jJQKV5o4jJQKV5o4jJQKV5o4jJQKV5o4jJQKV5o4jJQKV5o4jJQKV5o4kJPKU5P5kJoJV5Q5jJoJV5Q5kJnJU5R5mJkJT5U5RKdJo4\\5Z100O10000001O00000000000000000000001O000000001O00001O001O1O1O1O001O1O001O1O001O001O1O001O00001O0000001O0000001O0000001OO1000000TOWIbKi6[4\\IcKd6\\4^IbKc6^4^IaKb6^4aI`K_6`4bI_K^6a4cI]K^6c4eIZK[6f4hIVKY6i4kITKU6l4o000000000000000001N2O5bHYKY6o5GeP1"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        75,
+        43,
+        214,
+        122
+      ],
+      "area": 18219,
+      "score": 0.9975430965423584,
+      "anchor": [
+        182,
+        104
+      ],
+      "anchor_normalized": [
+        0.5871,
+        0.2506
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "m^n04h<7K4M2M101N2O3L`1`N6K2M2O1O0O01O1N10001O001O1O1N2O0O2O1O100O1000O100O100O1000001N2O1O1O001O000O01N2O1N2O001O1BZE\\Nl:d18M20100O010O11O0O101N2N101N101O1O0O3N2N2M2O001O1O002N1O1O001O00100O2N3M100O1O002O0O2O8H3L4M1N1O00000000001O00000001O00000000000100O01O10O000010O0000000001O00000001O00001O010O00001N10000000000000001O000O1000001O00001O001N100000000O10000O011O00001O000O2O00001O1O001O001O00001O001O1O00001O0000001N101O0O2O001N1O2M3VNiEBGn0e:TOQ2Mk]8"
+      }
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "bbox": [
+        123,
+        105,
+        48,
+        117
+      ],
+      "area": 4264,
+      "score": 0.9884498119354248,
+      "anchor": [
+        147,
+        163.5
+      ],
+      "anchor_normalized": [
+        0.47419,
+        0.39398
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "moa1:a<9G6I5QE[Oa9i0XFA_9f0UFIR9SOlFZ1IIW9VOfFc2X9c0O100000000000000000O1O3L4L4J6L3O2N10O5L1O2OO0O00002N1O1O00001O2N1O1^NRF0R:KUFNo9O\\FDk96d1J7GTVh1"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        0,
+        3,
+        298,
+        141
+      ],
+      "area": 19480,
+      "score": 0.9350708723068237,
+      "anchor": [
+        149,
+        73.5
+      ],
+      "anchor_normalized": [
+        0.48065,
+        0.17711
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "5`02KP<P1[DCk9m1QFdMS9`2eFiMU9U3L7I1O001O1O001O00001O001O001O001O1O0000000000000000bN`G\\Na8b1bG]N^8a1eG]N\\8c1dG\\N]8c1eG\\N[8d1fGZN[8e1gGRNE[Od8c2hGoMH[Oa8f2gGkMf8U2[GfMi8Z2YG\\Mo8c2SGYMP9g2d000000000O10000000000000000O1000000O10YF_MP9a2iFgMV9n1_FoM:6V9j1bFoM6:W9f1eFoM3<X9d1gFnM1`0W9a1iFoMOb0W9_1kFnMMj0R9W1RGnMMl0P9U1`GgNb8Y1`G_Nf8`1]G]Nd8b1`GZNa8e1]100O1O100O100O10000O100O1O100O100O100000000O10000000000O10000O100O100O10000O100000000000000O100000000O10000O100O100O1000000O100000000O1000000O100O100O100O10000O10000001O00000000000000001O001O001O1O00001O000000000000001O00000000001O001O001O0000001O0000000000000000001O000000001O001O001O001O00000000000000001O00000000000000000000000000000000000000000000000000001O001O001O001O00001O00001O00001O0000000000O10000O1O1O1O1O1N2N2N2M3N2O2M2O1O1O101N1O3L5K\\k4"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        288,
+        100,
+        22,
+        41
+      ],
+      "area": 860,
+      "score": 0.4889151155948639,
+      "anchor": [
+        299,
+        120.5
+      ],
+      "anchor_normalized": [
+        0.96452,
+        0.29036
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "Yjd3R1l;2O1O0O1000000O10000O10000O10000000000000OmL"
+      }
+    },
+    {
+      "label_index": 12,
+      "class_name": "Green plant",
+      "bbox": [
+        44,
+        112,
+        28,
+        46
+      ],
+      "area": 1090,
+      "score": 0.34083181619644165,
+      "anchor": [
+        58,
+        135
+      ],
+      "anchor_normalized": [
+        0.1871,
+        0.3253
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "Zna0j0T<6J5K3M2O1O00001O000000O2O01O0O1N2003M6J1O2N1O00000N2^OWDKafP3"
+      }
+    },
+    {
+      "label_index": 24,
+      "class_name": "Citizen",
+      "bbox": [
+        92,
+        126,
+        32,
+        45
+      ],
+      "area": 778,
+      "score": 0.3223234713077545,
+      "anchor": [
+        108,
+        148.5
+      ],
+      "anchor_normalized": [
+        0.34839,
+        0.35783
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          415,
+          310
+        ],
+        "counts": "a]U11m<4L2N2OL[C0c<N]C5`0I_;3QD51IU<OnC2OON69I];4ZDO1O322N_;9\\DLNO30`;6^D`0a;?000O0L5M3N2O1O100001O2N2NVOXD>h;AYD?f;@]D7k;HVD2o;Mc0O0O3MTX[2"
+      }
+    }
   ]
 }

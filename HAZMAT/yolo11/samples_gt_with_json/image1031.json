@@ -1,0 +1,26 @@
+{
+  "image_id": "image1031",
+  "file_name": "image1031.jpg",
+  "width": 749,
+  "height": 1000,
+  "annotations": [
+    {
+      "bbox": [
+        335,
+        167,
+        163,
+        167
+      ],
+      "class_name": "non-flammable-gas"
+    },
+    {
+      "bbox": [
+        280,
+        538,
+        145,
+        135
+      ],
+      "class_name": "non-flammable-gas"
+    }
+  ]
+}

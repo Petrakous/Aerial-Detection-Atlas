@@ -1,0 +1,26 @@
+{
+  "image_id": "image10114",
+  "file_name": "image10114.jpg",
+  "width": 750,
+  "height": 1000,
+  "annotations": [
+    {
+      "bbox": [
+        384,
+        238,
+        142,
+        148
+      ],
+      "class_name": "explosive"
+    },
+    {
+      "bbox": [
+        371,
+        496,
+        133,
+        127
+      ],
+      "class_name": "non-flammable-gas"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "image_id": "image10363",
+  "file_name": "image10363.jpg",
+  "width": 388,
+  "height": 520,
+  "annotations": [
+    {
+      "bbox": [
+        126,
+        259,
+        67,
+        69
+      ],
+      "class_name": "flammable"
+    },
+    {
+      "bbox": [
+        7,
+        174,
+        84,
+        79
+      ],
+      "class_name": "flammable"
+    }
+  ]
+}

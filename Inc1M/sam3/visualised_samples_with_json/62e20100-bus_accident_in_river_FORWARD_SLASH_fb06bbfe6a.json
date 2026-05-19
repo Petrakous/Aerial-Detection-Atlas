@@ -40,5 +40,343 @@
       "pixel_count": 1701,
       "score": 0.3638
     }
+  ],
+  "instances": [
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "bbox": [
+        0,
+        58,
+        94,
+        20
+      ],
+      "area": 481,
+      "score": 0.859375,
+      "anchor": [
+        47,
+        68
+      ],
+      "anchor_normalized": [
+        0.07121,
+        0.18329
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "o1?T;00000000000000000000000000HPEMP;1:Njjb01WU]O3M2N2M3N00O1000000O100O10000O100000000O1O100N3MYP]6"
+      }
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "bbox": [
+        0,
+        81,
+        111,
+        34
+      ],
+      "area": 563,
+      "score": 0.82470703125,
+      "anchor": [
+        55.5,
+        98
+      ],
+      "anchor_normalized": [
+        0.08409,
+        0.26415
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "T3?T;00000O01000000O1000000O100000O01000O02O0N4Mkga0LYX^O2N10O01O10000O10O100000O10O1000000O10O1000O0100O10O10O1000O10000O10000O101N^jV6"
+      }
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "bbox": [
+        482,
+        67,
+        178,
+        70
+      ],
+      "area": 7135,
+      "score": 0.810546875,
+      "anchor": [
+        571,
+        102
+      ],
+      "anchor_normalized": [
+        0.86515,
+        0.27493
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "df^5>T;2O1O00001O0000001O00001O0000001O0000010O01O0001O0000001O00001O000000001O00001O0000001N1000001O0O100N3N1M3M301N10000010O002N2N100O2N1O2OO01O000010O01O0010O01O0010O01O0010O0000001O001O0000001O0000001N1000001N100O1N2N3M2N2M3O2N100O101O001O000O2O0000001O0000001O0O100000001O0000001N1000001O00001O0000001O0000010O0000001N10000100O1O1O1O101N1O1O10O01O00000@YFTOg9l0YFTOX7"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        262,
+        37,
+        24,
+        12
+      ],
+      "area": 221,
+      "score": 0.57861328125,
+      "anchor": [
+        274,
+        43
+      ],
+      "anchor_normalized": [
+        0.41515,
+        0.1159
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "inn24_;1N101O1O1N10001O00001O0000000000O1O101N101N2Nk^W4"
+      }
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "bbox": [
+        161,
+        266,
+        209,
+        105
+      ],
+      "area": 9515,
+      "score": 0.51220703125,
+      "anchor": [
+        265.5,
+        318.5
+      ],
+      "anchor_normalized": [
+        0.40227,
+        0.85849
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "dcj1b0P;<D:G4M3L9G5K6J<D2N1O1O000000000O1O1O100000000001O0000000000000lNTGAl8<ZGAf8>\\GAd8;aGD_85iGIX83mGLR80SH0j7N\\H1d7JbH5]7HgH8]7@hH?V9000001O000000001O000000000O1000001O00000000000000O1000000O1000000O1000000000000000000000001O0000001O0000000000000000000000000O10000000000000000000000O1000000000000O10O100000O1000O10000000O1000000O10000O100O10000O100O10000O100O1O100O100O100O1O2N1O2O0O1O1O100O1O1N2O1O1N2B\\NbFo1^8SNmG2EW2\\8i000O100O100000000000000000000000000O1001O2N2N>B;^MlFn1d9VNYFZ1U:Kb0gN\\E>W;EnfX3"
+      }
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "bbox": [
+        218,
+        67,
+        87,
+        48
+      ],
+      "area": 1904,
+      "score": 0.425048828125,
+      "anchor": [
+        261.5,
+        91
+      ],
+      "anchor_normalized": [
+        0.39621,
+        0.24528
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "mQ_24Z;9K6J3N1O3M5ZEVOX:V1M1O0000000O10O100O1N1M4N2O1N2N200N2N1O2N2O100O1000000O100O100000O101O00O2O0O1O0O200O10000O1000000000000000000000000000000000000O1000000000000O100000001O001N2NdaP4"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        127,
+        24,
+        35,
+        21
+      ],
+      "area": 435,
+      "score": 0.41943359375,
+      "anchor": [
+        144.5,
+        34.5
+      ],
+      "anchor_normalized": [
+        0.21894,
+        0.09299
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "`Q^14^;1O2N2O0O1O1O1O010O1O100O101O001N2O1O001O00O2M2O2O1N2O1O1O1O2N3M0O2Nb\\d5"
+      }
+    },
+    {
+      "label_index": 52,
+      "class_name": "Tank",
+      "bbox": [
+        478,
+        0,
+        71,
+        28
+      ],
+      "area": 1701,
+      "score": 0.36376953125,
+      "anchor": [
+        513.5,
+        14
+      ],
+      "anchor_normalized": [
+        0.77803,
+        0.03774
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "lU]54^;5K4M4L:F00000000000000000000001O0000000000O1001O0000O10000000000O100000000000000O1000000000000O100O10000O100000000O10000000000000000O1O1N4JoVX1"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        243,
+        41,
+        13,
+        12
+      ],
+      "area": 118,
+      "score": 0.33642578125,
+      "anchor": [
+        249.5,
+        47
+      ],
+      "anchor_normalized": [
+        0.37803,
+        0.12668
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "eRh24^;3M2N2O001O00O101N101N1NcZb4"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        0,
+        28,
+        8,
+        17
+      ],
+      "area": 116,
+      "score": 0.331787109375,
+      "anchor": [
+        4,
+        36.5
+      ],
+      "anchor_normalized": [
+        0.00606,
+        0.09838
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "l0a0R;0001O0O2O1N4LSV\\7"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        104,
+        23,
+        22,
+        21
+      ],
+      "area": 326,
+      "score": 0.325927734375,
+      "anchor": [
+        115,
+        33.5
+      ],
+      "anchor_normalized": [
+        0.17424,
+        0.0903
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "gfU11^;9J2N2N2O000O1000000001O010O01O10O10O02N6GR^Q6"
+      }
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "bbox": [
+        12,
+        222,
+        156,
+        149
+      ],
+      "area": 13187,
+      "score": 0.3017578125,
+      "anchor": [
+        90,
+        296.5
+      ],
+      "anchor_normalized": [
+        0.13636,
+        0.79919
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          371,
+          660
+        ],
+        "counts": "cf44^;1O1N2N2O1O0O2O1O1N200O1N2N2O1O1N2N2O001N2O1O1O1O1O1O1N2O001O1N110O2L3N3O0N2N2O1O2O1M@]FTOb9m0^FSOa9n0_FRO_9P1aFPO^9Q1bFoN^9Q1aFPO]9R1cFmN\\9V1cFjN\\9W1dFiN[9X1eFhNY9Y1hFfNX9[1hFeNW9]1hFdNV9^1iFbNV9_1jFbNT9o1O1O1O1O1N2N2N200N2O1N2O1N2O1O1O1N2O1O1O1N200O1N2O1O1O1N2O1O1O1N200O1N2O1O1O1O1O1O1N2O1N2O1N200O1N2O100N10100O100M4OO10O1O10010O0001N1000001N3N1O1O1O1O1O4M5J2N5K6J7J3L7I5K3M9G>B3M8H7I9G5K5K8H6J8Fkla5"
+      }
+    }
   ]
 }

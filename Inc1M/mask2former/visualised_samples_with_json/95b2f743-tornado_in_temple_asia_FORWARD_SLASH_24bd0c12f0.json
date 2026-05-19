@@ -46,5 +46,483 @@
       "pixel_count": 44262,
       "score": 0.779
     }
+  ],
+  "instances": [
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        540,
+        202,
+        117,
+        76
+      ],
+      "area": 6730,
+      "score": 0.9727269411087036,
+      "anchor": [
+        598.5,
+        240
+      ],
+      "anchor_normalized": [
+        0.855,
+        0.60914
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "XP`61W<5K3N2N2N1O2N2O1O0O100O2O0O1O2O0_O_OXEb0f:b0O101N100O2O0O2O:F1O1O1O1O001O000O101O001O1O0000000000001O0O1000000000001O0000000001O000000000000000001O0001O000000000001O000000001N1000000001O0O101O1O001O1O1O1O1O1N101O2N3L3N3M3L2N2O2M2O1O2M3N8G4JjY`0"
+      }
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "bbox": [
+        0,
+        251,
+        700,
+        142
+      ],
+      "area": 73504,
+      "score": 0.9668901562690735,
+      "anchor": [
+        350,
+        322
+      ],
+      "anchor_normalized": [
+        0.5,
+        0.81726
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "R9W3S90O10000O10000O100000000000000001O00001O001O001O001O000000001O0O10O101O0O100000000O10000000000000O100000O2O00000000000000000000O010001N1000O100001O00000001O0O01000000O10001O0O1000000000000001O000O10000001O0000000000000000000O100000000000000000000O10000000000000000000000000000000000001O0000000000000000000000001O0000001O0000000000O1001O0000O100001O000O1010O0001O001O00001O00001O00000O100000000001O00000000000000000001O0000000000000000000000001O0000000000000000O10000000000000O1001O00000000000O10000000000000000000000000000O1000000000000000000000000000000000000000000O1000O2O000000O10000000001O000000000000000000000000000000000O10000000000000000000000000000001O000000000O1000000000000001O000000000000000000O1000O100000000000000000000O100000000001O0000000000000000O1001O0001O000000000O10000000000000O1000000000000010O000O1001O00000000000000000000000000000000000000000O10000001O0000O100000000000000000000000000000000000O10000001O0000000000000000000000000000000000000000000001O00000000O1001O0000O2O00000000O10001O000000000000000000000000000000000001OO1000O101O00000000000000000000000000000000000000000O1000O10KnFRMR9n2nFRMR9n2nFSMQ9m2oFRMR9n2nFRMR9n2nFRMR9n2mFSMS9S3O00O10OLnFRMR9n2oFQMQ9o2oFQMQ9o2oFQMQ9o2nFRMR9S300O10000000000O101N1000000O10000O1000KTGkLm8T3TGlLl8T3TGlLl8S3VGlLj8S3WGmLi8R3XGnLh8R3XGnLh8Q3YGoLg8Q3YGoLg8Q3YGoLg8R3XGnLh8S3WGmLi8T3VGlLj8T3VGlLi8U3WGkLi8U3WGkLi8U3WGkLi8U3VGlLj8T3VGlLj8U3UGkLk8U3UGkLl8T3TGmLk8S3UGmLl8R3TGnLl8R3TGmLm8S3SGmLm8S3SGmLm8S3SGmLm8S3SGmLl8U3SGlLl8S3UGmLk8S3UGlLl8T3TGlLl8T3TGlLl8T3TGlLm8R3TGnLm8Q3SGoLm8Q3SGoLm8Q3SGPMl8P3TGPMl8o2UGQMj8o2WGPMj8P3WGoLi8P3XGPMg8Q3YGoLf8S3ZGlLe8U381O01ORGkLh8U3VGlLi8U3WGkLi8U3WGkLh8W3VGjLj8V3VGjLj8V3VGjLi8V3YGiLg8W3YGiLg8W3YGiLf8X3ZGhLf8W3[GiLd8X3\\GhLd8X3\\GhLd8X3[GiLd8X3\\GhLe8X3ZGhLg8X3XGhLi8X3VGhLk8[3O100O1M3NM\\GdLc8\\3_GcLa8\\3`GdL_8]3bGbL^8^3bGbL]8_3dG`L\\8`3dG`L\\8`3dG`L[8a3eG_L[8a3dG`L\\8`3dG`L[8a3eG_L[8a3eG_LZ8b3fG^LY8c3gG]LW8e3jGZLo7m352kGRLn7m3SHSLl7n3THRLk7o3UHQLk7o3UHQLj7P4WHoKi7Q4WHoKi7Q4WHoKi7Q4WHoKi7R4VHnKk7Q47001O000O2O1mGkKo7U431N100O1UH"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        515,
+        0,
+        19,
+        184
+      ],
+      "area": 2773,
+      "score": 0.9607060551643372,
+      "anchor": [
+        524.5,
+        92
+      ],
+      "anchor_normalized": [
+        0.74929,
+        0.2335
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "fUV64c;i0RG@a5c4TO8H5K2N1O2N2N1O1O001O1O000Q1oNk1^KTG3F\\1[;QOnfo1"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        0,
+        0,
+        313,
+        75
+      ],
+      "area": 11411,
+      "score": 0.9562492966651917,
+      "anchor": [
+        156.5,
+        37.5
+      ],
+      "anchor_normalized": [
+        0.22357,
+        0.09518
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "0a1i:0000001O000000O1001O1O1O1O3M4L1O1O1O1O1O1O1O001O001OO100N2M3L4M3N20000O11O2N8H5K1O1O1O1O00001O00000000O1000000O1000000000000001O001O1O000000O100O100O1O100O1O1N2B>O1000000000000O1O1O100O1000000O10000O1O10000O1O100O1M3I7ChD@`;>7O1O1O100O1O10000000000001O001O001O001O1O001O1O001O00001O00001O001O1O001O001O1O1O1O0000O1O1O1M3O12N1O1O3M4L2N2N3M1O2N1O1O2N4L>B1O1O1O1O001O1O001O00N2M3N2N2N2O1O1O100O10000O11O000000001O000000000000001O00000000001O00O100SOiEFX:8nEDY:OnEOY;N1O1N2N3N0O2O0O100O1000_Xa01`g^O1O1O1O1O1O1O1O00000000001O002N1O000004J4L`h0OcWO1O00O100001O0nld4"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        261,
+        0,
+        14,
+        214
+      ],
+      "area": 2345,
+      "score": 0.9479438662528992,
+      "anchor": [
+        268,
+        107
+      ],
+      "anchor_normalized": [
+        0.38286,
+        0.27157
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "b]T3U1j0nN^9n3TFWLY7Q5`HPKMJ34m5]6D1O1O000000O5LT2kMe1gK_F`2d:POn[S5"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        83,
+        208,
+        92,
+        73
+      ],
+      "area": 4694,
+      "score": 0.9456683397293091,
+      "anchor": [
+        129,
+        244.5
+      ],
+      "anchor_normalized": [
+        0.18429,
+        0.62056
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "QUP1f0];d0^O:\\E_NT:n1N1N2O00000O100000O1000O01000000O001O1O1O1O10O01O10000O010O2N100O1O10O0100O1O1O1O1O10000000000000000O10000O100O100O1O100O1O100O10000O101N100O100O100O101N100O101N1O2M4M3M2N2M4M4JViY6"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        642,
+        0,
+        58,
+        126
+      ],
+      "area": 5084,
+      "score": 0.9159420728683472,
+      "anchor": [
+        671,
+        63
+      ],
+      "anchor_normalized": [
+        0.95857,
+        0.1599
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "gPg7n0Y;f0]O5K3M2N2N2N7I2UFhM`9Z2]FRNX9b2N000000N2M3O6lMPGE6HV[3l0ZoL`1kDaM_9k2Jc0]O7I3M00O1O1001O001O001O00001O1O1O00001O0000O100O1O1O10000"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        660,
+        0,
+        14,
+        264
+      ],
+      "area": 1909,
+      "score": 0.9033717513084412,
+      "anchor": [
+        667,
+        132
+      ],
+      "anchor_normalized": [
+        0.95286,
+        0.33503
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "Xnm74i04XO0k:\\2jN<D3M7YG_OW5X4VKWI\\3j6WL_IY4P7Q1dH\\JP6e6ZOa0^Ob0UK]H>j0LQO\\1h:C8HSi9"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        623,
+        0,
+        22,
+        212
+      ],
+      "area": 3240,
+      "score": 0.8973062038421631,
+      "anchor": [
+        634,
+        106
+      ],
+      "anchor_normalized": [
+        0.90571,
+        0.26904
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "ff_7f0;BNMZ:P2fERNJK]9V3B1QHRMWOHl6W3iIdNT5\\1lJfNR5Z1nJgNQ5Y1nJhNR5X1nJhNR5Y1mJhNR5X1nJhNR5Y1lJiNS5W1mJjNR5W1lJkNS5V1lJkNS5U1lJmNS5T1kJnNT5S1kJnNT63jIOk6ZOWIf0o6eMmHd0a0^1b:^N\\od0"
+      }
+    },
+    {
+      "label_index": 25,
+      "class_name": "Green grass",
+      "bbox": [
+        253,
+        134,
+        447,
+        113
+      ],
+      "area": 12876,
+      "score": 0.8753694295883179,
+      "anchor": [
+        476.5,
+        190.5
+      ],
+      "anchor_normalized": [
+        0.68071,
+        0.4835
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "SaQ3340j;;M3L3N12C[DMlX7j0ZRI8I3N2M2O101O0O1000000O100O100O10O0100O1O2N100O1O2O0N2O2N1O2O0O101O0O2O01O0001O01O001O100O2O7H2N0010O0000000001O0O100O1O100O10000O10000O2O00000O2O0O3ZOVE\\OZlh10h_WN0O2N2O0O101N1O1O1O2N1013Jj^8Z1m_G4M2N1O1O001O01O01O100O1O1O001O1O1O1O0000000001N10000O1000001O0000O10000O010O1000000000000000O1000001O1O1N5L4L=C1O1O1O002M2O2M3L6IiQ3Q1VmL4M3O000000001N100000O4M6HeR8hN^nGS1SOc0]O;F5K2N101N1N2O1O1O2N1O15Je1YNmU4P1PiK:J7I<D:G1000O01O0000O100O1O1000000oLnFi2S9WMoFg2R9WMoFh2]9M1O1O1N1000QK"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        0,
+        228,
+        27,
+        35
+      ],
+      "area": 675,
+      "score": 0.8243281245231628,
+      "anchor": [
+        13.5,
+        245.5
+      ],
+      "anchor_normalized": [
+        0.01929,
+        0.6231
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "T7S1W;01O1O001N101O2N0O2O001O1O000O2O000010O000001N2N3M:DafR8"
+      }
+    },
+    {
+      "label_index": 2,
+      "class_name": "Green tree",
+      "bbox": [
+        0,
+        76,
+        10,
+        52
+      ],
+      "area": 254,
+      "score": 0.7997269630432129,
+      "anchor": [
+        5,
+        102
+      ],
+      "anchor_normalized": [
+        0.00714,
+        0.25888
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "\\2d1f:O3L9F7lNQEc0];L5L3N3M2J^\\Y8"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        30,
+        102,
+        68,
+        182
+      ],
+      "area": 1999,
+      "score": 0.7865427136421204,
+      "anchor": [
+        64,
+        193
+      ],
+      "anchor_normalized": [
+        0.09143,
+        0.48985
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "nh;5T<1O1SDKa02[:OoE1W[;3foD7M2M3N3L4M3N1N2O1N2N2O1N4ZFjN<3f5`1fHZN=S3U6b2M0000O2O0fK`JNUO7]6GgJnNQO1]8o0Y2O2O1O0O2M3O1N2M3N2N3L6Hb`W7"
+      }
+    },
+    {
+      "label_index": 34,
+      "class_name": "Barrier",
+      "bbox": [
+        114,
+        112,
+        454,
+        178
+      ],
+      "area": 44262,
+      "score": 0.77898108959198,
+      "anchor": [
+        341,
+        201
+      ],
+      "anchor_normalized": [
+        0.48714,
+        0.51015
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "WT\\13V<101N1N2O1O1O1N2O001O2N100O010O010000001O000O100O101N100O1O2O0O1O100O2O0O100O100O100O100O101N100O1O100O001QN]OXG^O?W1W8NeG3Z8OdG1\\81aG1]83_GO`84[GOc8m1O2N1O101N1O2N2N2N2N1O2N1O2N1O1O100O100O1O1O100O10000O100000O10001O010O1O1O2N1O2N2N2N1O100O1O1O1O1O2N100O1O1O2N7H;F2N2M2O1O2N2N3M2N1O00000000001N10000000001O001O000000001O000000000000000O1000O1000000O1000000000000000000000001O0000000000000O10000000O101O001O001O00001O001O0000001O0O1000001O00001O001N10001O01O00000000000O100O1O10001N10000O100000000O100O010CnM`FT2Y9b0L4O0O2O1N2O1O1M3DlL]GY3`8:N2O010O100O100O10000O2O0O10000000000000000O100O1O001O10000O0101O001O1O001O000000000000O2O000O1O10001N1QOmKgIS4V6ULdIl3[6ZL_Ig3`6]L[Ie3e6]LXId3h6_LSIc3m6m000001O1O1O2M3N2N1O3M2N3L3N3_K^HT4n7N1O001O00000000000000000000O1N2M300O1N2O1L4E;J6L4N2O1O100000O101O001O1O1O001O1O1O100O1O1O1O1O1O1O2O0O2N3M1O2N4L2N1O1O1O001O001O1N2O001O0O1000001O0000010O001O1O2N2N7I3M2N2N2N1O1O1O1O1O1O010O1O1O2O0O2N1O1O1O1O001_NdF2\\9MfF2[9MgF2X9MjF2W9LjF3X9KjF4W9JkF5V9IlF6U9HmF7T9GmF9V9ClF<U9AmF?V9\\OlFc0Z9TOjFl0Z:000000O2O0O101O0O2O1O7H7Jm`b1"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        341,
+        11,
+        60,
+        55
+      ],
+      "area": 3162,
+      "score": 0.6269596815109253,
+      "anchor": [
+        371,
+        38.5
+      ],
+      "anchor_normalized": [
+        0.53,
+        0.09772
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "RWS4^1k:2N2O001O0O1000001N10000000000000000000000000000000000000000000O1000000000000000000000000000O100000000000000001N2O2M;EfPc3"
+      }
+    },
+    {
+      "label_index": 22,
+      "class_name": "Civilian vehicle",
+      "bbox": [
+        15,
+        138,
+        148,
+        117
+      ],
+      "area": 6345,
+      "score": 0.6207619309425354,
+      "anchor": [
+        89,
+        196.5
+      ],
+      "anchor_normalized": [
+        0.12714,
+        0.49873
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "^m51Y<1O1O1jCOQ<6N3N3M01C[D1PP52XQKh0W8]OeGg0X8]OdGd0\\8C`FI;e0T98gFIX9e10001N101N2O0O1O1N101O100O10O10O010L301O0010OO2M2OBVGWMO3j8f2aGWM_8i2cGTM_8k2a00eF\\Mo8P31O4L0O2M:@^FdM]:U1j0ROi0L08H4J7nNT1F8K3N01O2N1O10001N10000000000O1000000O100000000O1000000O1000000O2O000WOoEXOS:b0UFTO^O3]:9kFEn:OXP?1go@0X]^6"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        598,
+        107,
+        12,
+        94
+      ],
+      "area": 795,
+      "score": 0.359919935464859,
+      "anchor": [
+        604,
+        154
+      ],
+      "anchor_normalized": [
+        0.86286,
+        0.39086
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          394,
+          700
+        ],
+        "counts": "eVV71W<7JY1dN?iEUNU9e2J40O5K1O1O2N2jMZGb0UiR1"
+      }
+    }
   ]
 }

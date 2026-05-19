@@ -5,44 +5,44 @@
   "height": 3930,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 8458580
+      "pixel_count": 9976214
     },
     {
-      "label_index": 12,
+      "label_index": 11,
       "class_name": "Green plant",
-      "pixel_count": 1544087
+      "pixel_count": 1500674
     },
     {
-      "label_index": 22,
+      "label_index": 21,
       "class_name": "Civilian vehicle",
-      "pixel_count": 70370
+      "pixel_count": 69568
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 8331
+      "pixel_count": 8234
     },
     {
-      "label_index": 26,
+      "label_index": 25,
       "class_name": "Pole",
-      "pixel_count": 1442727
+      "pixel_count": 1411537
     },
     {
-      "label_index": 44,
+      "label_index": 43,
       "class_name": "Military personnel",
-      "pixel_count": 71330
+      "pixel_count": 70101
     },
     {
-      "label_index": 57,
+      "label_index": 56,
       "class_name": "Police vehicle",
-      "pixel_count": 422042
+      "pixel_count": 424911
     },
     {
-      "label_index": 60,
+      "label_index": 59,
       "class_name": "Army vehicle",
-      "pixel_count": 893460
+      "pixel_count": 891428
     }
   ]
 }

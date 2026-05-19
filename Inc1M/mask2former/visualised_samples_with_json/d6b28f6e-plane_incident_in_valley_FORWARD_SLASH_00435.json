@@ -16,5 +16,63 @@
       "pixel_count": 988,
       "score": 0.9392
     }
+  ],
+  "instances": [
+    {
+      "label_index": 59,
+      "class_name": "aerial vehicle",
+      "bbox": [
+        9,
+        9,
+        67,
+        38
+      ],
+      "area": 988,
+      "score": 0.9391694664955139,
+      "anchor": [
+        42.5,
+        28
+      ],
+      "anchor_normalized": [
+        0.13281,
+        0.11667
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          320
+        ],
+        "counts": "ST23]7000O10001O0QIMa64]INb62^IOb61\\I2c6M]I4b6L]I5d6J\\I7d6IZI8f6HZI7g6IXI8h6HXI7i6JUI7k6ITI7n6501B_OkIc0R6AkIb0R6DhI=W6>1O4EbI\\Oa6`0bI^Oa6?;M1O0000O01O00O10010O1000O1FPI4o6LRI3o6MQI3n680000O10000001O1O001BQI8o64100O101OO0101OOJmH0T7O8N_Ui1"
+      }
+    },
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "bbox": [
+        148,
+        85,
+        23,
+        21
+      ],
+      "area": 324,
+      "score": 0.7460959553718567,
+      "anchor": [
+        159.5,
+        95.5
+      ],
+      "anchor_normalized": [
+        0.49844,
+        0.39792
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          240,
+          320
+        ],
+        "counts": "QiR14[73M1O1O2M2N2O2M201N1000000001O1O2N2M4M2M2N4K^jR1"
+      }
+    }
   ]
 }

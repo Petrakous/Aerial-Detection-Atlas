@@ -22,5 +22,119 @@
       "pixel_count": 15847,
       "score": 0.6289
     }
+  ],
+  "instances": [
+    {
+      "label_index": 9,
+      "class_name": "Flame",
+      "bbox": [
+        246,
+        163,
+        55,
+        98
+      ],
+      "area": 2967,
+      "score": 0.9183378219604492,
+      "anchor": [
+        273.5,
+        212
+      ],
+      "anchor_normalized": [
+        0.44472,
+        0.32515
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          652,
+          615
+        ],
+        "counts": "Sjl41Yd05K4L3N1O2M2O2N2M3N3M2M3N2O0O2O1g]OPOTa0P1k^OTORa0m0l^ODd`0=[_OCe`0=[_ODd`0<\\_ODd`0=[_OCd`0>\\_OBd`0>\\_OAe`0`0Z_O@f`0a0Y_O_Og`0a0Z_O^Oe`0d0Z_O[Og`0e0Y_O[Og`0e0X_O\\Og`0f0X_OZOg`0g0Y_OYOg`0g0Y_OYOg`0g0Y_OYOg`0g0Y_OXOh`0i0W_OWOj`0h0V_OXOj`0i0U_OWOk`0i0U_OWOk`0i0U_OWOk`0j0T_OVOm`0i0S_OWOm`0i0S_OWOm`0i0R_OXOo`0g0Q_OYOPa0f0P_OZOPa0e0Q_O[OPa0d0P_O\\OPa0d0Q_O[OQa0b0P_O^OQa0`0R_O^OPa02\\^OAh09Qa0M_^OEo00g`0OZjW6"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        0,
+        212,
+        345,
+        311
+      ],
+      "area": 78680,
+      "score": 0.7860451340675354,
+      "anchor": [
+        172.5,
+        367.5
+      ],
+      "anchor_normalized": [
+        0.28049,
+        0.56365
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          652,
+          615
+        ],
+        "counts": "_9S6Y>0O2N2N101O001O010O010O01N2O1O00001O000000000001O001O0SBnI_=T6^BnIb=T6\\BlId=U6[BlId=^601O1O0000BbBnI^=Q6dBnI\\=Q6eBoIZ=R6fBnIY=R6hBPJn<JmBU67PJk<OjBR6<lIl<\\6UCbIk<_6a00O0O2O2N1hB[Ig<h6VC[Ii<e6VC\\Ii<f6VCYIj<i6UCWIk<i6UCVIl<j6WCSIj<l6_OYIRDh6i;bIPD`6n;fIlC\\6Q<iIkCY6S<jIkCU6U<P11O100000O2N1O2N2O0N3N1101O00O00OO2JeGYD^8f;6O0001N101O5K3QH\\DP7g;lH]DR7e;iHaDS7^<N2N1O2M2O1O1O1N2L4M4K4L4O1O1O1O2N1OZOTJmBk5Q=YJnBf5Q=]JnBa5R=aJmB]5T=eJlBY5S=jJmBR5U=PKjBn4W=SKjBj4W=XKiBf4W=[KjBc4V=_KjB_4V=bKkB\\4U=eKmBY4R=iKnBV4Q=lKoBR4Q=PLnBh1DWO^=ROmBe1JUOY=XOlBc1KTOY=[OjBc1MPOZ=]OhBe1MmN[=AcBh3]=e1N100O100O101N2O1N;F3M3L2O1O2M2O1O001O000010O0000000001O000000000000O100O1O100O1O1N2O1N2O1O1N2O10O0100000000001O001O001O1O001O001N101O00001O00001O00O100O1000000O100000000O10000001O01O00000O1000O10001O00O10000001O00O1O10000000001O000000000O1000000O100O1000000000000000O2O00O10O01N2O0O200O2N1O1O10O0100000000O100000000O100000001N1000000O1000O0100O100O1O001O1N2M3N2N1N3N2N2N2O1N2N2O1N2O10O0100O010O100O101O1O001O1O1O1O1O3M4oL`AMk>GeAKf>HbA1\\?POWAROoNi0cc0XOf`[5"
+      }
+    },
+    {
+      "label_index": 26,
+      "class_name": "Pole",
+      "bbox": [
+        333,
+        0,
+        56,
+        417
+      ],
+      "area": 15847,
+      "score": 0.6289181709289551,
+      "anchor": [
+        361,
+        208.5
+      ],
+      "anchor_normalized": [
+        0.58699,
+        0.31979
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          652,
+          615
+        ],
+        "counts": "PQd69oc08L2N4Ln0RO?Ah0XOm0SOc0]O?AP1POf0ZOa0_OZ2fMZ1fNY1gN>B=C2N2N2N001O00000000O1M3nNR1E;N2O1N2N2M3K5L4N2N2O1N2O1O1O1O1O1O1O104iEmGk7a;WHgBQ6b?VN^1cNX1eNV1XNVd_4"
+      }
+    },
+    {
+      "label_index": 13,
+      "class_name": "Building",
+      "bbox": [
+        476,
+        215,
+        119,
+        69
+      ],
+      "area": 5725,
+      "score": 0.3238079845905304,
+      "anchor": [
+        535.5,
+        249.5
+      ],
+      "anchor_normalized": [
+        0.87073,
+        0.38267
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          652,
+          615
+        ],
+        "counts": "P[_9171dc08V\\OMmb0W1N2O100O10000O101O0O1000O1000O10O10O01O100O1O1O100O100O10000000O10000000O100000O010000O100O010O1O1O100O1O001O10000O1001O001N101O1O1O001O0O1000000O10000O100000O1000O1000001N100O2O1N101N2O1O001O1O0O101O000000O100O100O100O100O2M2M3G:I9Hi`<"
+      }
+    }
   ]
 }

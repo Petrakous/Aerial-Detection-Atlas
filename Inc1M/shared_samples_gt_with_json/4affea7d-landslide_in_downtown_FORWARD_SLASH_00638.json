@@ -5,39 +5,39 @@
   "height": 1200,
   "segments": [
     {
-      "label_index": 1,
+      "label_index": 0,
       "class_name": "Water",
-      "pixel_count": 522934
+      "pixel_count": 520734
+    },
+    {
+      "label_index": 1,
+      "class_name": "Green tree",
+      "pixel_count": 20160
     },
     {
       "label_index": 2,
-      "class_name": "Green tree",
-      "pixel_count": 20683
-    },
-    {
-      "label_index": 3,
       "class_name": "Fence",
-      "pixel_count": 17441
+      "pixel_count": 17022
     },
     {
-      "label_index": 13,
+      "label_index": 12,
       "class_name": "Building",
-      "pixel_count": 119742
+      "pixel_count": 118581
     },
     {
-      "label_index": 24,
+      "label_index": 23,
       "class_name": "Citizen",
-      "pixel_count": 20864
+      "pixel_count": 20325
+    },
+    {
+      "label_index": 25,
+      "class_name": "Pole",
+      "pixel_count": 294
     },
     {
       "label_index": 26,
-      "class_name": "Pole",
-      "pixel_count": 379
-    },
-    {
-      "label_index": 27,
       "class_name": "Boat",
-      "pixel_count": 111996
+      "pixel_count": 111607
     }
   ]
 }

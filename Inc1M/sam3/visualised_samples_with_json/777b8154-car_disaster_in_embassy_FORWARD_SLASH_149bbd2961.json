@@ -64,5 +64,595 @@
       "pixel_count": 1067,
       "score": 0.6084
     }
+  ],
+  "instances": [
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        63,
+        65,
+        165,
+        127
+      ],
+      "area": 17682,
+      "score": 0.93603515625,
+      "anchor": [
+        145.5,
+        128.5
+      ],
+      "anchor_normalized": [
+        0.18075,
+        0.16062
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "UYa1U1ig0:G_1bNc0\\O7J1O1O00001O0001O00000000000000000000000O101O0000000000000000000000000000000000001O0000001O00001O0000000000001QOhZOTNXe0i1P[ORNPe0m1S[OPNnd0n1V[OPNjd0o1Y[OoMgd0P2\\[OnMdd0R2][OmMcd0R2_[OmMbd0R2_[OlMbd0T2`[OhMbd0X2_[OeMcd0[2Q100010O00001O1O1O002N1O2N3M00100O1O001O1O1O001O1O1O1O1O2N1O3N1N1O5K3M2N0000000000000000000000000001O0000001O0001O01O000000000000001O0000000000001O01O0000000001O0000000000001O00000O2O001Nl2lLjcR>"
+      }
+    },
+    {
+      "label_index": 7,
+      "class_name": "Destroyed vehicle",
+      "bbox": [
+        107,
+        162,
+        354,
+        205
+      ],
+      "area": 35451,
+      "score": 0.90966796875,
+      "anchor": [
+        284,
+        264.5
+      ],
+      "anchor_normalized": [
+        0.3528,
+        0.33063
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "Xlc23jh05N2N0O2O001O1O1O2N2N9F7J4L2N3N1N1N2O001N10001N10001N1O1O1O1L4kNjN[ZO\\1be0R1O101O0O2O001O0000000000000000O1000000O1000O1000O10000O100O1O1O1001N2O2N2N2N101N1O2N1O1O1O1O001O1O1O001O001O1O1O001O0O2O0000001O000000000000000000000000O10000000000000001OO10O10000O01L3N3L3N2K5K6G8O1K4L5L4N2M3O000010N2O00O12O1lL_\\Oh0bc0WOf\\Oa0Zc0_On\\O:Rc0DR]O9ob0EV]O8jb0GZ]O6gb0H]]O5cb0J`]O4`b0Je]O3[b0Kj]O2Vb0Mm]O1Sb0No]O1Qb0NR^OOoa00S^OOma0NX^O0ha0OZ^O0fa0O\\^O0ea0N]^O1ca0N`^O0aa0Na^O1_a0Ob^O0^a0Nf^O0[a0Mh^O2Xa0Nh^O2Xa0Mj^O2Va0Ml^O1Va0Lm^O2Ta0Mn^O1Sa0Oo^ONRa01R_OHRa07S_OVO\\a0i0^300O2O1N10000O2O0O10001O0O2O1O3L6K3K6JRii04_VVO?K4M3N2M2O2O1N101N101o[OPOP`0P1d_O]O[`0d0__OB``0?\\_ODd`0=X_OEi`0<U_ODk`0?P_OCQa0`0j^OAWa0b0c^OA]a0`0a^OA_a0a0]^OAca0b0X^O_Oia0d0S^O]Ona0e0n]O\\ORb0f0j]O\\OVb0h0d]OZO\\b0j0\\]OZOdb0j0T]OZOlb0g0o\\O\\ORc0f0a\\OE_c0m22OO10000000003M2N3M2N2N1O2N1O1O1O2N1O1O001O1O1O01O0001O00000O11O00000000000000000QKm\\O]O5T4nb0^Lo\\OYO7Y4jb0]LQ]OWO6\\4jb0[L_]Oe3ab0ZL_]Og3ab0YL`]Of3`b0ZLa]Oe3`b0ZL`]Of3`b0YLb]Oe3_b0[La]Oe3_b0[Lb]Oc3_b0]La]Oc3_b0]La]Ob3`b0_L_]Oa3ab0_L`]O_3ab0aL_]O^3bb0cL]]O[3eb0eL[]O[3eb0eL[]OY3gb0hLX]OV3jb0kLd\\O[O7i3Vc0mLa\\O^O6c3[c0PM]\\O_O6`3_c0QMZ\\OB4K1S3cc0ZN`\\O`1dc0_N`\\OZ1dc0fNe\\On0^c0ROf\\O9lc0FV\\O7kc0IV\\O5kc0KU\\O5kc0LT\\O4lc0LT\\O4lc0MS\\O3mc0MS\\O3mc0MS\\O3mc0NR\\O2nc0NR\\O2nc0NR\\O2nc0NR\\O2nc0NR\\O1oc00P\\O0Pd00P\\OORd01m[ONTd09e[OE^d0;`[O^Ohd0e0P[OoNae0l1=J6nNT1Db0kNUc\\8"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        776,
+        29,
+        29,
+        48
+      ],
+      "area": 1244,
+      "score": 0.86767578125,
+      "anchor": [
+        790.5,
+        53
+      ],
+      "anchor_normalized": [
+        0.98199,
+        0.06625
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "]Ynb0m0jg0:K5N100O2O00O1000000000O10000000000000000000O100N2\\Od0M30SO"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        596,
+        154,
+        20,
+        37
+      ],
+      "area": 661,
+      "score": 0.8623046875,
+      "anchor": [
+        606,
+        172.5
+      ],
+      "anchor_normalized": [
+        0.7528,
+        0.21563
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "Via>b0Vh0=I3N100O2O00O100000000000001O0O1N2L6E\\`c4"
+      }
+    },
+    {
+      "label_index": 28,
+      "class_name": "Pavement",
+      "bbox": [
+        0,
+        254,
+        704,
+        96
+      ],
+      "area": 15340,
+      "score": 0.84033203125,
+      "anchor": [
+        352,
+        302
+      ],
+      "anchor_normalized": [
+        0.43727,
+        0.3775
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "R9h1Xg0000O010O1000000000O10O100000001O0010OO2O1O001O000000001O0000O100000000000000000000O100000000000001O0O1000000000001O0000000000001O000O3N4L7I3M1O00001O000O01000000O010O10O0100O001O001O001O10O1000002M2O2N001O1N2O1O000O2O001O1N2O6I6J7Fcak7;T^TH2O010O1000000000001O00000O1O1O0O2M3J6F:K5N111O0000000000O1000000000000000000000000O1000001O00000O10001O00000O10001O000O101O00001O0000000000000001O0001O00000000000O2O1O1O1O1O001O1O001N10000000O10000O10O01N2M2O2O10O10O10O1000O10000000000000000O1000000O100000000000000000000000000O100O1M3M3N2O100O1O100000000000000001O00000000000000000000O1000000000O1000O100O1000001N1001O001O0000O0010000O1000000001N100000N2O1O1001N3N1O00c0]O2N2N001O0000001O000O10001O0000000O2O000000001O0000001N1O101N1000000000000O10001O001N101N2O0O2N1000002N1O1Nhc^2"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        535,
+        143,
+        19,
+        41
+      ],
+      "area": 656,
+      "score": 0.72802734375,
+      "anchor": [
+        544.5,
+        163.5
+      ],
+      "anchor_normalized": [
+        0.6764,
+        0.20438
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "_TR=6Zh0a0C=M3O0O10000000000O10O10001N1O2B>GfnS6"
+      }
+    },
+    {
+      "label_index": 21,
+      "class_name": "Road",
+      "bbox": [
+        6,
+        307,
+        794,
+        260
+      ],
+      "area": 71790,
+      "score": 0.6767578125,
+      "anchor": [
+        403,
+        437
+      ],
+      "anchor_normalized": [
+        0.50062,
+        0.54625
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "]R51R1:P2KSa00S\\OK`0<]OFc27YMJjc05[\\OL>b0R2KRa0H^\\OM;b0o1OUa0D`\\ON:`0k14o`0YOi\\O81M:h06UO`0h0Ub0Ii\\OB:k04[O2_OJQ1kb0i1W]OiMKE2l0jb0g1W]OZNN1ib0f1X]O[NN0jb0d1X]O\\NOOib0e1V]O^N2Mhb0d1S]ObN7Hgb0e1o\\OfN:Ffb0U3\\]OiLdb0W3^]OgLcb0X3^]OgLcb0W3`]OUL^O3Sc0h3_]OTLCNgb0GY]OX4=SLEJfb0MV]OW4?QLkb0Ie\\OU4b0QLhb0Ke\\OU4c0oKjb0Kb\\OV4_d0gKc[OY4bd00O1O00100O1000O2M2N2O1O01K500O01O10O10O101N1O1O100O01O010T\\OkKlb0U4U]OkKkb0T4V]OmKib0R4X]OnKgb0R4Z]OnKfb0R4Z]OmKfb0T4R11O10000Y\\OjKeb0U4Z]OmKeb0S4Z]OoKeb0R4Y]OoKgb0Q4Y]OoKgb0R4W]OoKib0S4U]OmKkb0W4Q]OiKnb0Y4l\\OlKTc0U4h\\OnKWc0n40001O1O001O2N2i\\O]Jmb0n5M1O1O00O1O100O1000000000001O00001O0000001N10001N11O01O0hJj\\Of4Vc0ZKj\\Of4Wc0YKi\\Of4Xc0ZKh\\Of4Yc0YKg\\Of4Zc0?1N2ZOf\\OdK\\c0V4k\\OeKYc0X4k\\OeKWc0W4k0M3N2M3N20000000001N10001O0O100O10001O001O001O1N3N3M0O2O000O1000O100001O0000001N10000000O10O1000000O10000O1O1O100N2N2SO]ZO\\Nde0b1_ZO\\Nbe0b1gZOUN[e0h1jZORNZe0l1o0O0O100O1000001N100000000001O001O1O101N1O1O2N1O1N10O100000000O10O1000O010O00100O010N2O1O1O001N2O1O100O010O10O10001N101O0O2N1O1O100O1O10000000000O1000O10000O100O100O1K5M3M3M3^OjXOXOXg0c0f0M5E;_OU_`17n`_N;_WOKgg0i0I8G<F8K2N2OGZYOZNcf0h1_YOWNaf0i1_YOWN`f0j1`YOUN`f0l1`YOSN`f0n1`YOQN`f0P2`YOPN`f0P2`YOPNaf0o1_YOQNaf0o1`YOPNaf0o1_YOQNaf0o1^YORNbf0n1^YOSN`f0o1^YORNbf0W2O000000O100O1I^YOoMcf0P27O1O2N100O2N1M3N2N2N2O1M3O1O1M3L4M4N1O1K5K500O100O2N2O2M1O1O1O1O11N101N101O001O000O1O2O0000000O2O001N2N2N101O1O001O1O001O0O2O1O001O1O2N001N101N2O0O1N2N201N2O1O1O001O1N2O1O00100O1N2O001O0O2O0O2O1N20O01O100N2O0O2O0O2O1N2N1O2O0000001O002N10001O000O1O2O0O001O0JVMVZOk2he07O001O10O100O1N3K5K5N2N1O20O010O0204K01N2N2N1O1O001O001O00001O001O000000O10000000000O110O01O00001O000O110CWMaZOi2_e0XMaZOh2]e0ZMbZOf2]e0ZMdZOg2[e0YMeZOg2[e0XMfZOi2Xe0XMhZOh2We0YMiZOg2Ue0[MkZOe2Se0]MmZOd2Re0VMdZO0;j2Pe0WMfZON:k2Pe0VMhZON8l2Qe0TMiZOO6n2Pe0RMkZO04o2Qe0QMkZO04o2Ye0QMgZOo2Ye0QMgZOn2ee0100000O100000000000ERMdZOn2\\e0RMdZOn2\\e0SMbZOn2^e0RMbZOn2^e0RMbZOn2]e0SMcZOm2]e0SMcZOm2]e0SMcZOm2]e0SMcZOl2^e0TMbZOl2^e0TMbZOk2_e0UMaZOk2_e0TMbZOk2_e0UMaZOk2\\e0TMiZOk2fe0O^OXMnZOh2Qe0ZMnZOf2Re0ZMoZOe2Qe0[MoZOe2Qe0[MoZOe2Qe0ZMoZOg2Qe0YMoZOg2Qe0YMdZOM5j2We0ZMbZOM7j2Ve0^MjZOc2Ue0]MkZOd2Te0\\MlZOX1HI[e0POlZOW1IJZe0oNmZOW1JIYe0POmZOW1JJXe0oNnZOW1JLVe0mNP[OW1JLVe0nNoZOV1KLVe0nNnZOX1JLWe0mNnZOh2Qe0YMoZOg2Qe0YMoZOg2Qe0XMP[Oh2Pe0XMP[Oh2Pe0XMP[Oh2Pe0XMP[Oh2Pe0YMoZOg2Qe0YMoZOg2Qe0YMoZOg2Qe0YMoZOg2Re0XMnZOh2Re0XMnZOh2Re0XMmZOi2Se0VMnZOj2Qe0WMP[Oh2od0YMQ[Og2md0[MS[Of2kd0[MU[Oe2jd0]MU[Oc2kd0^MT[Oc2kd0i0010O2O0O0010O0000001O0O1M3N2O10O1000000000000O1000000bLU[Og2kd0XMV[Oh2jd0XMV[Oh2kd0WMU[Oi2ld0UMU[Ok2kd0UMU[Ol2jd0TMV[Ok2kd0VMT[Oj2ld0VMT[Oj2kd0f01O1aLR[Oj2od0TMR[Ol2od0SMQ[Om2od0SMQ[Om2od0TMP[Ol2Pe0b01N10O100J6OcLW[Od2hd0^MX[Ob2hd0^MX[Ob2hd0^MX[Oa2id0_MW[Oa2id0^MX[Ob2hd0^MX[Ob2hd0]MZ[Ob2fd0^MZ[Oa2gd0^MZ[Ob2fd0^MZ[Ob2fd0^MZ[Ob2fd0]M[[Oc2ed0]M\\[Ob2cd0_M][Oa2cd0^M^[Ob2bd0^M^[Ob2ad0^M`[Oa2ad0TMV[OO:m2`d0^M`[Ob2`d0^M`[Ob2`d0^M`[Ob2ad0]M_[Oc2`d0^M`[Ob2_d0_Ma[O`2_d0aMa[Oo0HHfd0ZOb[Om0KFdd0]Ob[Ok0KHcd0]Oa[Ol0LGbd0^Ob[Ok0LGad0_Oc[Ok0KEbd0Ac[Oj0JFcd0@c[Oj0IGed0_O`[Ol0IFgd0^O`[OY2ad0gM^[OZ2bd0fM^[OZ2bd0fM][O[2cd0fM\\[OZ2dd0fM[[O[2fd0dMZ[O[2gd0eMX[O\\2id0cMW[O]2id0cMW[O^2jd0oL][O0IQ3kd0mL^[O0GS3md0lL\\[O1GR3_e0mLaZOR3ae0lL`ZOS3ge001OWOPMb[OP3]d0QMd[On2\\d0RMe[Om2\\d0RMc[Oo2Ve0001O100GSM`ZOl2\\e0XMfZOf2ld0hMU[OW2jd0jMW[OU2jd0iMW[OW2id0UMV[O92a2hd0UMY[O70c2hd0UMn[Oj2Rd0VMY[O80a2hd0XMU[O:2]2jd0ZMR[O:4\\2jd0oMU[OP2md0PNR[OP2Se0lMlZOT2Ue0kMkZOU2Ve0kMhZOV2Xe0kMgZOU2Ye0jMhZOV2Xe0jMiZOU2We0jMjZOV2Ve0jMkZOU2Ve0iMkZOW2Ue0hMlZOX2Te0gMmZOX2Ue0fMlZOZ2Xe0aMiZO_2Xe0_MjZO`2Xe0\\MjZOd2ie001O0O01\\O`MhZO`2We0cMgZO\\2Ye0eMgZO[2Ze0dMfZO[2[e0eMeZO[2[e0dMeZO[2^e0cMcZO\\2`e0`MbZO`2oe0O100O1O1O1O2XO_YOcN00bf0[1bYObNjf0]1YYO`Nhf0d0nXO5_g0JbXOH1N^g0:bXOF4L^g06Rc3"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        534,
+        20,
+        33,
+        52
+      ],
+      "area": 1341,
+      "score": 0.6259765625,
+      "anchor": [
+        550.5,
+        46
+      ],
+      "anchor_normalized": [
+        0.68385,
+        0.0575
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "gWQ==Yh0<K4M2O1O1N3N1N2M3L4N2O00100O100000O100000000O1000O0100O2M2F;@`0Ddmi5"
+      }
+    },
+    {
+      "label_index": 41,
+      "class_name": "Bicycle",
+      "bbox": [
+        558,
+        214,
+        24,
+        57
+      ],
+      "area": 1067,
+      "score": 0.6083984375,
+      "anchor": [
+        570,
+        242.5
+      ],
+      "anchor_normalized": [
+        0.70807,
+        0.30312
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "aUd=:ah09[Oe0J5K3O2M3N1O1O001O00000001O010O3L9G7J5J6G9G\\o]5"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        646,
+        165,
+        25,
+        35
+      ],
+      "area": 654,
+      "score": 0.60205078125,
+      "anchor": [
+        658.5,
+        182.5
+      ],
+      "anchor_normalized": [
+        0.81801,
+        0.22812
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "lkh?5fh0:E6M4N1N2O1O2M2O10O01000O1O1O1O100O1M3O1N2N3L4HPaX3"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        715,
+        557,
+        23,
+        55
+      ],
+      "area": 717,
+      "score": 0.51513671875,
+      "anchor": [
+        726.5,
+        584.5
+      ],
+      "anchor_normalized": [
+        0.90248,
+        0.73062
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "`T_a04jh0201N2O1dWONhg03VXO4dg0M[XO:^g0G`XO?[g0BdXOa0Zg0BbXO`0\\g0@dXO`0]g0_OcXOb0]g0a00lNcXOc0^g0[OcXOe0`g0WObXOh0`g0TObXOm0ig0O1N3N4L6I5K]hc1"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        170,
+        384,
+        482,
+        384
+      ],
+      "area": 91509,
+      "score": 0.51318359375,
+      "anchor": [
+        411,
+        576
+      ],
+      "anchor_normalized": [
+        0.51056,
+        0.72
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "R\\U48ch08F8K5N2G9G:K3N3L4M3M4L2N2D=_O^M]ZOg2be0[M[ZOh2oe0O10O1O0b[OUMfN0dc0k2R22O1@RMmZOn2Te0SMkZOo2Se0ZMcZOh2\\e0`0N2X\\OdLha0]3W^OcLha0^3X^ObLha0^3Y^ObLfa0^3Z^ObLg`0LV^OLDg3_1bLd`05n]OGLb3b1aLe`09g]Ob3d1RLh`0a4V_O`Kl`0`4o^OeKRa0Y4n^OhKTa0V4l^OjKVa0T4j^OlKVa0T4f^OdKgN6db0U4e^OdKhN8bb0T4f^OdKhN8ab0T4h^ObKiN:_b0S4o^OmKn`0Kb]OR4`1SLn`0Id]OU4]1SLXa0l3_^OlKlN9eb0k3U^OgLma0Y3P^OiLPb0V3o]OkLRb0_2[]OlLc0e0Rb0^2^]OkL?h0Tb0\\2^]OhLIIc0R1Wb0\\2_]OhLGJc0Q1Xb0^2^]OfLGKc0R1Wb0^2^]OdLb0m0Qb0^2]]OeLc0l0Q1TOj>\\3b_OcLe0k0n0YOi>Z3c_ObLf0l0m0WOj>_3`_O]Lk0m0k0TOk>f3\\_OYLo0m0ea0m2Z]OTLT1n0aa0Q3a^OoLX1SOd=o3RAoLZ1ROd=o3RAoLZ1RO[=2Y@m3Q1PM[1QOX=[4]AdL[1QOV=]4aA[L_1WOP=^4cAXLSa0k3n^OSLm`0T4S_OkKl`0W4T_OgKm`0Y4S_OgKm`0o3i]OiKY18n`0o3i]OjKX17o`0o3i]OjKX10jNIUb0j4o^O\\KPOHPb0R5k^OVKUOHPb0S5j^OTKWOIna0U5j^OlJ_ONha0U5i^OlJia0T5Q100001O010O0001O1O01000O1000[\\OnJ[c0R5c\\OPK]c0P5a\\OQK`c0o4_\\OQKbc0V52O0_K]\\Od3cc0YLb\\Oc3ac0YLb\\Oc3cc0QLU\\ON;o3_d0N1N2N200O10Z\\OTLXb0k3_10000O11O1O1O1O10O01O002N010O000001N1K500O1000000000001O00000O2O1O1O2O0O0001S\\O^LZb0c3c]OeLWb0_3c]OeL[b0\\3b]OhL[b0Y3c]OjL]b0U3b]OmL]b0S3c]OmL^b0Q3b]OPM^b0P3`]OSM`b0l2_]OUM`b0l2_]OUMab0l2]]OVMbb0j2\\]OXM]OPOPc0i3`]OZM^OoNQc0h3_]OZM@nNQc0i3\\]O\\MAkNTc0j3Y]O\\MCjNTc0k3V]ObMkb0^2Q]OeMob0V4000001OO1O1000010ZJk\\Oa5Yc001O01N1K6N100O100O100O1M3N2M2L5E<L4K4K6K4L5K4M4L4M3K4K5M4N1O2N2N2O0O2N2N1^ObGa@`8]?eG]@^8_?e0K4L4M3L4M2N3M200O2M2O1O1O1O2N1O101O001O1O001O1O1O100O2O2M10O01O2O0O0001O001O10O1nAVEm=o:O2OO010O1O1O1JSBXEm=g:TBXEm=f:UBYEl=g:QB^En=]9QBgGP>T8TBmGl=R8UBmGk=R8VBoGj=P8WBoGi=Q8XBoGg=P8[BoGf=P8[BQHc=n7_BQHa=n7aBRH^=m7cBTH\\=k7eBWHZ=h7fBXH[=f7gBZHY=d7iB[HW=e7iB^HT=a7nB_HR=_7QC_HP=_7RC`Ho<_7RC[HSOnNl=e8RC]HSOmNk=e8UCaHl<^7UC`Hl<_7XC]Hi<c7ZCZHg<e7[CYHf<e7bCSH`<l7dCoG^<P8dClG_<S8cCkG^<S8fCjG[<U8gChG[<W8fChGZ<X8gCfG[<X8X2O1N1O2O1O0O2O001N2N2O1N2O2M2O2N001O1N2O1O2N1O0O2O1N101N100O1000000O10O000010O100O100O2M2O1O2N10000O2O0000000000000000000O100O1O1M3O100O1O100000000O10000O1O1M3O1A^]O^Jdb0`5c]OZJ_b0e5>01N101O1M3N2M2O2N1N2M4I6O0O2N2N110O1O010O010O0N2O200O01000O100O1O1M3O1000000O10000O1000001O00002M2O0O2N101O1O1O0O2bL_[O[2ge0K3N2M3M3N1O1N3N4L6J3M3M3M1O3M3M<D4L2N1O001O001O1O2N1N2O2N001N2O1O1N4KYof3"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        128,
+        739,
+        26,
+        24
+      ],
+      "area": 465,
+      "score": 0.48486328125,
+      "anchor": [
+        141,
+        751
+      ],
+      "anchor_normalized": [
+        0.17516,
+        0.93875
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "YgT32lh05L2N4L3N1O1O1O1N2O00001O1O00000001O001N3N2N2M3M4Lakk?"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        599,
+        55,
+        42,
+        47
+      ],
+      "area": 1610,
+      "score": 0.39794921875,
+      "anchor": [
+        620,
+        78.5
+      ],
+      "anchor_normalized": [
+        0.77019,
+        0.09813
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "oPd>?_h06L1N2O;E4K2O1O000O2O00O100000000O0100000001O001N10000000000O100000N2O1M3C=M3M4E;I]RP4"
+      }
+    },
+    {
+      "label_index": 10,
+      "class_name": "Fire hose",
+      "bbox": [
+        66,
+        690,
+        319,
+        67
+      ],
+      "area": 5994,
+      "score": 0.38916015625,
+      "anchor": [
+        225.5,
+        723.5
+      ],
+      "anchor_normalized": [
+        0.28012,
+        0.90438
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "lXd1<`h07K3N2M2O2O0000000O0100000000O1000000O10O1000O1000O1000O100000000O10000O10O10O10000000O0100O1000000O100O100000000O10O1000O10000000000000000000O10O10000000000O01000000000O10O10000000000O10O10O100O01000O100000O1000O100O010O100000000O01000000O010O10O10O1000O10O1000O10O1000O10000000O01000000000O10000O1O101N100O2N1O2M3N4Ihii18RVVN5L2N101O0000001O001O00000000001O000001O000000001O0001O00000000001O01O000001O0000010O0001O01O0001O01O01O01O01O01O1\\XO\\Okf0c0QYODlf0=PYOHnf09nXOLQg04lXOOSg03iXO0Vg0n00O01O01O001O1O001O001N101O1N101M3M4K5J5K7Fi]W:"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        519,
+        149,
+        15,
+        30
+      ],
+      "area": 294,
+      "score": 0.385009765625,
+      "anchor": [
+        526.5,
+        164
+      ],
+      "anchor_normalized": [
+        0.65404,
+        0.205
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "Rde<2lh06J4M3L4M2N2N2O1N100O1O20N>WOYbc6"
+      }
+    },
+    {
+      "label_index": 33,
+      "class_name": "Mud",
+      "bbox": [
+        0,
+        568,
+        165,
+        130
+      ],
+      "area": 15820,
+      "score": 0.3779296875,
+      "anchor": [
+        82.5,
+        633
+      ],
+      "anchor_normalized": [
+        0.10248,
+        0.79125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "[c0g1Yg00N2M5L4G?\\ObMSZOf2he0<L2O2M2O0O100O0100000000O01000000O1000O010000O1000000O10O1000O01O100O10O100000000000O1000000O10O10O1000O010000O10000O01000000O10O100O100O100O10000O10O0100O100O010O10O101O00001OO10O1000O1O1O1O1001N10000O10O0100000O10O1000O10O010000O10O100000O1000000O10000O1O100N200O2O0O2O0O2N2N2O1O1O1O2N1O1N2N2QN^YOj0N[Off0I^YOf05[O_f01YYOa0>[O[f0g0UYOXOe0OWf0g0WZOUOje0i0Z1E<HRk0IYUO0b[c?"
+      }
+    },
+    {
+      "label_index": 15,
+      "class_name": "Window",
+      "bbox": [
+        666,
+        52,
+        23,
+        29
+      ],
+      "area": 545,
+      "score": 0.373779296875,
+      "anchor": [
+        677.5,
+        66.5
+      ],
+      "anchor_normalized": [
+        0.84161,
+        0.08313
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "j[X`0d0[h02N2N100O2O00O10O100000O1000000O010O101L3G:Habj2"
+      }
+    },
+    {
+      "label_index": 32,
+      "class_name": "Door",
+      "bbox": [
+        322,
+        90,
+        87,
+        72
+      ],
+      "area": 5586,
+      "score": 0.357666015625,
+      "anchor": [
+        365.5,
+        126
+      ],
+      "anchor_normalized": [
+        0.45404,
+        0.1575
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "iek7f0^g0o0L2N2N2O001O1O00001O001O1O1O100O1O1O001O0000000001O000000000000000000000010O000000000000000000000001O000000001O0000000000000001O01O00000000000000001O000000000000000O2M2oNS1]O]Ye9"
+      }
+    },
+    {
+      "label_index": 16,
+      "class_name": "Debris",
+      "bbox": [
+        294,
+        786,
+        20,
+        14
+      ],
+      "area": 216,
+      "score": 0.32666015625,
+      "anchor": [
+        304,
+        793
+      ],
+      "anchor_normalized": [
+        0.37764,
+        0.99125
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "h^V73kh04M1O4L10000O10000000000001M2O2O0O2O2MZjn;"
+      }
+    },
+    {
+      "label_index": 23,
+      "class_name": "Wall",
+      "bbox": [
+        0,
+        0,
+        42,
+        280
+      ],
+      "area": 8535,
+      "score": 0.314208984375,
+      "anchor": [
+        21,
+        140
+      ],
+      "anchor_normalized": [
+        0.02609,
+        0.175
+      ],
+      "type": "rle",
+      "segmentation": {
+        "size": [
+          800,
+          805
+        ],
+        "counts": "c0`06;n0l1QOFm`0SNT_O;n0l1QOFe`0fMW_Ob028P1m1nNEe`0_O\\@]3a?eL^@\\3`?gL_@Z3]?jLa@W3_?jL`@V3`?kL^@V3b?kL]@V3b?jL^@V3b?kL\\@V3d?kL[@V3d?mLX@T3h?oLP@W3o?kLn_OV3R`0mLi_OU3W`0k2O0000000000UJj_Ol2V`0RMl_On2X`0lLj_OU3Y`0cLj_O^3c`0hKW_OdN8e5g`0XJ__O?8Z5_b0WJj\\O^5_c0]Kd\\O[3`c0RLY]OJUOb3[e0I4M4L>A6K4cMhYOj1]g0YO7H<D<CPkcb0"
+      }
+    }
   ]
 }

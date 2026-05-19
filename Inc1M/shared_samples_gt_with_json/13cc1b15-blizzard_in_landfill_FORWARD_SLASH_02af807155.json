@@ -5,19 +5,19 @@
   "height": 392,
   "segments": [
     {
-      "label_index": 5,
+      "label_index": 4,
       "class_name": "First responder",
-      "pixel_count": 418
+      "pixel_count": 369
     },
     {
-      "label_index": 16,
+      "label_index": 15,
       "class_name": "Debris",
-      "pixel_count": 19041
+      "pixel_count": 18355
     },
     {
-      "label_index": 22,
+      "label_index": 21,
       "class_name": "Civilian vehicle",
-      "pixel_count": 9972
+      "pixel_count": 9566
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "image_id": "image1013",
+  "file_name": "image1013.jpg",
+  "width": 388,
+  "height": 520,
+  "detections": [
+    {
+      "bbox": [
+        131.24964904785156,
+        302.9486083984375,
+        126.91404724121094,
+        127.07272338867188
+      ],
+      "class_name": "organic-peroxide",
+      "confidence": 0.9360882639884949
+    }
+  ]
+}

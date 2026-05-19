@@ -1,0 +1,17 @@
+{
+  "image_id": "image1027",
+  "file_name": "image1027.jpg",
+  "width": 1000,
+  "height": 485,
+  "annotations": [
+    {
+      "bbox": [
+        292,
+        70,
+        342,
+        350
+      ],
+      "class_name": "oxygen"
+    }
+  ]
+}

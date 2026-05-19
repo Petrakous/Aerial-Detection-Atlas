@@ -1,0 +1,18 @@
+{
+  "image_id": "image10382",
+  "file_name": "image10382.jpg",
+  "width": 252,
+  "height": 520,
+  "detections": [
+    {
+      "bbox": [
+        32.83699417114258,
+        195.14166259765625,
+        171.4062156677246,
+        141.87545776367188
+      ],
+      "class_name": "flammable-solid",
+      "confidence": 0.9538993239402771
+    }
+  ]
+}

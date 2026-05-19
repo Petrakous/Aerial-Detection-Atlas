@@ -74,11 +74,12 @@ const FALLBACK_SEGMENTATION_CLASS_COLORS = [
   "#B6FF00"
 ];
 
-const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD", "DFire"];
+const DATASET_ORDER = ["FloodNetPlus", "RescueNet", "LADD", "DFire", "HAZMAT"];
 const DATASET_SCENE_LIMITS = {
   FloodNetPlus: 50,
   RescueNet: 50,
-  Inc1M: 50
+  Inc1M: 50,
+  HAZMAT: 50
 };
 
 const CURATED_INC1M_SCENE_IDS = [
