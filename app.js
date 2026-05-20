@@ -2172,15 +2172,34 @@ function createBoxesLayer(scene, boxes, options = {}) {
       if (options.kind === "ground-truth") {
         label.textContent = labelText;
       } else {
+        label.classList.add("is-detection-chip");
+        const classMeta = classTooltipMetadata(box.className, scene);
+
         const modelLine = document.createElement("span");
         modelLine.className = "box-label-model";
         modelLine.textContent = modelLabelText;
 
+        const detailRow = document.createElement("span");
+        detailRow.className = "box-label-detail-row";
+
         const detailLine = document.createElement("span");
         detailLine.className = "box-label-detail";
-        detailLine.textContent = labelText;
+        detailLine.textContent = classMeta.label;
 
-        label.append(modelLine, detailLine);
+        const confidenceLine = document.createElement("span");
+        confidenceLine.className = "box-label-confidence";
+        confidenceLine.textContent = confidence;
+
+        detailRow.append(createTooltipIconElement(classMeta.iconName, classColor), detailLine, confidenceLine);
+
+        const meter = document.createElement("span");
+        meter.className = "box-label-meter";
+        const meterFill = document.createElement("span");
+        meterFill.className = "box-label-meter-fill";
+        meterFill.style.width = `${clamp((box.confidence || 0) * 100, 4, 100)}%`;
+        meter.append(meterFill);
+
+        label.append(modelLine, detailRow, meter);
       }
       boxEl.append(label);
     }
