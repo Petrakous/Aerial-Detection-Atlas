@@ -1,6 +1,7 @@
 const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.TRIFID_DEMO_DATA;
 const releaseBases = {
   core: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v2/",
+  coreOverflow: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v3/",
   coreDFire: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-dfire-v1/",
   coreHazmat: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-hazmat-v1/",
   coreInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-inc1m-v1/",
@@ -408,10 +409,13 @@ function routeDataset(datasetId) {
   state.hoveredGroundTruth = false;
   state.suppressGroundTruthHover = false;
   state.selected.clear();
+  preservedPageScrollY = null;
   resetView();
   lastViewerSignature = "";
   lastRenderedSceneId = "";
   setRoute("dataset", datasetId, { viewerOpen: false, sceneId: null });
+  window.scrollTo(0, 0);
+  window.requestAnimationFrame(() => window.scrollTo(0, 0));
 }
 
 function openViewerForScene(sceneIndex, { updateHash = true } = {}) {
@@ -696,6 +700,24 @@ function formatPixels(value) {
 }
 
 const tooltipClassMetadata = {
+  "object-detection": {
+    pedestrian: { label: "Pedestrian", color: "#FF69B4", iconName: "tabler:user" },
+    corrosive: { label: "Corrosive", color: "#FFD60A", iconName: "tabler:test-pipe-2" },
+    dangerous: { label: "Dangerous", color: "#00FFE6", iconName: "tabler:alert-triangle" },
+    explosive: { label: "Explosive", color: "#FF1744", iconName: "tabler:alert-octagon" },
+    fire: { label: "Fire", color: "#FF5A36", iconName: "tabler:flame" },
+    flammable: { label: "Flammable", color: "#39FF14", iconName: "tabler:flame" },
+    "flammable-solid": { label: "Flammable Solid", color: "#0047FF", iconName: "tabler:flame" },
+    "infectious-substance": { label: "Infectious Substance", color: "#FFB300", iconName: "tabler:biohazard" },
+    "inhalation-hazard": { label: "Inhalation Hazard", color: "#FF69B4", iconName: "tabler:mask" },
+    "non-flammable-gas": { label: "Non Flammable Gas", color: "#FFD60A", iconName: "tabler:wind" },
+    "organic-peroxide": { label: "Organic Peroxide", color: "#00FFE6", iconName: "tabler:flask" },
+    oxygen: { label: "Oxygen", color: "#FF1744", iconName: "tabler:wind" },
+    poison: { label: "Poison", color: "#8A00FF", iconName: "tabler:skull" },
+    radioactive: { label: "Radioactive", color: "#39FF14", iconName: "tabler:radioactive" },
+    smoke: { label: "Smoke", color: "#7C3AED", iconName: "tabler:cloud" },
+    "spontaneously-combustible": { label: "Spontaneously Combustible", color: "#FFB300", iconName: "tabler:flame" }
+  },
   FloodNetPlus: {
     background: { label: "Background", color: "#000000", iconName: "tabler:minus", hidden: true },
     "building-flooded": { label: "Building Flooded", color: "#00FFD1", iconName: "tabler:building" },
@@ -800,12 +822,14 @@ function formatClassLabel(className = "") {
 function classTooltipMetadata(className, scene = currentScene()) {
   const normalizedKey = normalizeClassKey(className);
   const datasetMeta = tooltipClassMetadata[scene?.dataset]?.[normalizedKey];
+  const genericDetectionMeta = tooltipClassMetadata["object-detection"]?.[normalizedKey];
+  const resolvedMeta = datasetMeta || genericDetectionMeta;
   return {
     key: normalizedKey,
-    label: datasetMeta?.label || formatClassLabel(className),
-    color: datasetMeta?.color || null,
-    iconName: datasetMeta?.iconName || "tabler:package",
-    hidden: Boolean(datasetMeta?.hidden)
+    label: resolvedMeta?.label || formatClassLabel(className),
+    color: resolvedMeta?.color || null,
+    iconName: resolvedMeta?.iconName || "tabler:package",
+    hidden: Boolean(resolvedMeta?.hidden)
   };
 }
 
@@ -1197,14 +1221,16 @@ function resolveAssetPath(path) {
 
   const viewerMatch = path.match(/^viewer\/([^/]+)\/(.+)$/);
   if (viewerMatch) {
-    const base = viewerMatch[1] === "DFire"
+    const primaryBase = viewerMatch[1] === "DFire"
       ? releaseBases.coreDFire
       : viewerMatch[1] === "HAZMAT"
         ? releaseBases.coreHazmat
-      : viewerMatch[1] === "Inc1M"
+        : viewerMatch[1] === "Inc1M"
         ? releaseBases.coreInc1M
         : releaseBases.core;
-    return `${base}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
+    const primary = `${primaryBase}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
+    const overflow = `${releaseBases.coreOverflow}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
+    return primaryBase === releaseBases.core ? [primary, overflow] : primary;
   }
 
   const thumbMatch = path.match(/^thumbnails\/([^/]+)\/(.+)$/);
@@ -1260,7 +1286,20 @@ function uniqueAssetCandidates(paths = []) {
 
 function assetCandidates(path) {
   if (!path) return [];
-  return uniqueAssetCandidates([resolveAssetPath(path), path]);
+  const resolved = resolveAssetPath(path);
+  return uniqueAssetCandidates([
+    ...(Array.isArray(resolved) ? resolved : [resolved]),
+    path
+  ]);
+}
+
+function sceneBaseImageCandidates(scene) {
+  return uniqueAssetCandidates([
+    ...assetCandidates(scene?.baseImage),
+    ...assetCandidates(scene?.thumbnailImage),
+    ...assetCandidates(scene?.groundTruthImage),
+    ...assetCandidates(scene?.sourceImage)
+  ]);
 }
 
 async function fetchJsonWithFallback(path) {
@@ -1302,7 +1341,7 @@ function setImageSourceWithFallback(img, sources) {
 }
 
 function sceneBaseImage(scene) {
-  return assetCandidates(scene.baseImage || scene.sourceImage || scene.thumbnailImage)[0] || "";
+  return sceneBaseImageCandidates(scene)[0] || "";
 }
 
 function readyModels(scene = currentScene()) {
@@ -1877,7 +1916,7 @@ function createImageLayer(src, className) {
 }
 
 function createBaseImageLayer(scene) {
-  const img = createImageLayer(assetCandidates(scene.baseImage || scene.sourceImage || scene.thumbnailImage), "base-layer");
+  const img = createImageLayer(sceneBaseImageCandidates(scene), "base-layer");
   const queueFocusLensRefresh = () => {
     if (state.mode !== "focus") return;
     window.cancelAnimationFrame(focusLensRefreshFrame);
