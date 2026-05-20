@@ -1021,7 +1021,7 @@ button {
 
 .landing-collection-head p {
   margin: 8px 0 0;
-  max-width: 720px;
+  max-width: min(1120px, 100%);
   color: var(--muted);
   font-size: 14px;
   line-height: 1.6;
