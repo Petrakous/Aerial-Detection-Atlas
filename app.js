@@ -86,6 +86,8 @@ const viewerCoreOverflowAssets = {
   ])
 };
 
+const sameOriginSegmentationJsonDatasets = new Set(["FloodNetPlus", "RescueNet"]);
+
 const minZoom = 0.25;
 const maxZoom = 2.4;
 const fitViewPadding = 0.98;
@@ -740,6 +742,11 @@ function alternateViewerReleaseBase(primaryBase) {
   return "";
 }
 
+function sameOriginSegmentationPredictionJsonPath(datasetId, modelId, fileName) {
+  if (!sameOriginSegmentationJsonDatasets.has(datasetId)) return "";
+  return `published-json/${datasetId}/${modelId}/visualised_samples_with_json/${fileName}`;
+}
+
 function normalizeAssetUrl(path) {
   if (!path) return "";
   try {
@@ -1370,6 +1377,15 @@ function resolveAssetPath(path) {
       return `${releaseBases.hazmat}prediction-HAZMAT-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
     }
     const isJson = /\.json$/i.test(segmentationPredMatch[3]);
+    if (isJson) {
+      const sameOriginPath = sameOriginSegmentationPredictionJsonPath(
+        segmentationPredMatch[1],
+        segmentationPredMatch[2],
+        segmentationPredMatch[3]
+      );
+      const releasePath = `${releaseBases.segmentationPredJson}segment-pred-${segmentationPredMatch[1]}-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
+      return sameOriginPath ? [sameOriginPath, releasePath] : releasePath;
+    }
     const base = isJson
       ? releaseBases.segmentationPredJson
       : segmentationPredMatch[1] === "Inc1M"

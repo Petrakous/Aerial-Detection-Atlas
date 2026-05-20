@@ -7,3 +7,6 @@ viewer/FloodNetPlus/
 viewer/RescueNet/
 thumbnails/FloodNetPlus/
 thumbnails/RescueNet/
+!published-json/
+!published-json/**/
+!published-json/**/*.json
