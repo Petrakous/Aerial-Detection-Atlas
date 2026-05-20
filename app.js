@@ -359,7 +359,7 @@ const landingCollections = [
   {
     id: "ground-level",
     title: "Ground-level",
-    summary: "Close-range incident benchmarks with panoptic scene understanding and hazardous-material placard recognition.",
+    summary: "This collection brings together close-range incident benchmarks focused on scene understanding and hazardous-material recognition.",
     note: "CV group dataset",
     datasetIds: ["Inc1M", "HAZMAT"],
     variant: "featured"
@@ -367,7 +367,7 @@ const landingCollections = [
   {
     id: "aerial",
     title: "Aerial",
-    summary: "UAV and airborne benchmarks for flood, damage, pedestrian, fire, and smoke detection or segmentation.",
+    summary: "This collection covers UAV and airborne benchmarks for flood, damage, pedestrian, fire, and smoke analysis across detection and segmentation tasks.",
     note: "Current datasets",
     datasetIds: ["FloodNetPlus", "RescueNet", "LADD", "DFire"],
     variant: "grid"
