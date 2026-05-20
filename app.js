@@ -15,6 +15,77 @@ const releaseBases = {
   segmentationPredJson: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-json-v1/"
 };
 
+// GitHub caps each release at 1000 assets, so these viewer images live in the
+// overflow release and should resolve there directly instead of waiting on a 404.
+const viewerCoreOverflowAssets = {
+  FloodNetPlus: new Set([
+    "6389.jpg",
+    "6717.jpg",
+    "6744.jpg",
+    "6778.jpg",
+    "6831.jpg",
+    "6856.jpg",
+    "6896.jpg",
+    "6979.jpg",
+    "7105.jpg",
+    "7141.jpg",
+    "7253.jpg",
+    "7308.jpg",
+    "7323.jpg",
+    "7577.jpg",
+    "7605.jpg",
+    "7652.jpg",
+    "8401.jpg",
+    "8478.jpg",
+    "8778.jpg",
+    "8930.jpg",
+    "8993.jpg",
+    "9012.jpg",
+    "9035.jpg",
+    "9055.jpg"
+  ]),
+  RescueNet: new Set([
+    "10807.jpg",
+    "10849.jpg",
+    "10957.jpg",
+    "11084.jpg",
+    "11151.jpg",
+    "11236.jpg",
+    "11238.jpg",
+    "11401.jpg",
+    "11627.jpg",
+    "11918.jpg",
+    "12095.jpg",
+    "12172.jpg",
+    "12433.jpg",
+    "13021.jpg",
+    "13342.jpg",
+    "13506.jpg",
+    "13640.jpg",
+    "13762.jpg",
+    "13876.jpg",
+    "13976.jpg",
+    "14059.jpg",
+    "14207.jpg",
+    "14317.jpg",
+    "14800.jpg",
+    "14882.jpg",
+    "14898.jpg",
+    "14939.jpg",
+    "15031.jpg",
+    "15221.jpg",
+    "15226.jpg",
+    "15279.jpg",
+    "15778.jpg",
+    "15799.jpg",
+    "15831.jpg",
+    "16005.jpg",
+    "16067.jpg",
+    "16073.jpg",
+    "16076.jpg"
+  ])
+};
+
 const minZoom = 0.25;
 const maxZoom = 2.4;
 const fitViewPadding = 0.98;
@@ -288,7 +359,7 @@ const landingCollections = [
   {
     id: "ground-level",
     title: "Ground-level",
-    summary: "Ground-level and close-range incident benchmarks spanning scene understanding and hazardous-material recognition.",
+    summary: "This collection brings together close-range incident benchmarks focused on Multi-hazard scene understanding and hazardous-material recognition.",
     note: "CV group dataset",
     datasetIds: ["Inc1M", "HAZMAT"],
     variant: "featured"
@@ -296,7 +367,7 @@ const landingCollections = [
   {
     id: "aerial",
     title: "Aerial",
-    summary: "Airborne benchmark workspaces for detection and segmentation, kept in the current comparative layout.",
+    summary: "This collection covers UAV and airborne benchmarks for flood, damage, pedestrian, fire, and smoke analysis across detection and segmentation tasks.",
     note: "Current datasets",
     datasetIds: ["FloodNetPlus", "RescueNet", "LADD", "DFire"],
     variant: "grid"
@@ -652,6 +723,37 @@ function currentScene() {
 
 function currentDataset() {
   return data.datasets?.find((dataset) => dataset.id === state.datasetId) || null;
+}
+
+function resolveViewerReleaseBase(datasetId, fileName) {
+  if (datasetId === "DFire") return releaseBases.coreDFire;
+  if (datasetId === "HAZMAT") return releaseBases.coreHazmat;
+  if (datasetId === "Inc1M") return releaseBases.coreInc1M;
+  return viewerCoreOverflowAssets[datasetId]?.has(fileName)
+    ? releaseBases.coreOverflow
+    : releaseBases.core;
+}
+
+function alternateViewerReleaseBase(primaryBase) {
+  if (primaryBase === releaseBases.core) return releaseBases.coreOverflow;
+  if (primaryBase === releaseBases.coreOverflow) return releaseBases.core;
+  return "";
+}
+
+function normalizeAssetUrl(path) {
+  if (!path) return "";
+  try {
+    return new URL(path, window.location.href).href;
+  } catch {
+    return path;
+  }
+}
+
+function imageMatchesAssetCandidates(img, candidates = []) {
+  if (!img) return false;
+  const current = normalizeAssetUrl(img.currentSrc || img.src || img.getAttribute("src") || "");
+  if (!current) return false;
+  return candidates.some((candidate) => normalizeAssetUrl(candidate) === current);
 }
 
 function datasetDisplayName(datasetId = state.datasetId) {
@@ -1221,16 +1323,15 @@ function resolveAssetPath(path) {
 
   const viewerMatch = path.match(/^viewer\/([^/]+)\/(.+)$/);
   if (viewerMatch) {
-    const primaryBase = viewerMatch[1] === "DFire"
-      ? releaseBases.coreDFire
-      : viewerMatch[1] === "HAZMAT"
-        ? releaseBases.coreHazmat
-        : viewerMatch[1] === "Inc1M"
-        ? releaseBases.coreInc1M
-        : releaseBases.core;
-    const primary = `${primaryBase}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
-    const overflow = `${releaseBases.coreOverflow}viewer-${viewerMatch[1]}-${viewerMatch[2]}`;
-    return primaryBase === releaseBases.core ? [primary, overflow] : primary;
+    const datasetId = viewerMatch[1];
+    const fileName = viewerMatch[2];
+    const assetName = `viewer-${datasetId}-${fileName}`;
+    const primaryBase = resolveViewerReleaseBase(datasetId, fileName);
+    const primary = `${primaryBase}${assetName}`;
+    const alternateBase = alternateViewerReleaseBase(primaryBase);
+    return alternateBase
+      ? [primary, `${alternateBase}${assetName}`]
+      : primary;
   }
 
   const thumbMatch = path.match(/^thumbnails\/([^/]+)\/(.+)$/);
@@ -2172,15 +2273,34 @@ function createBoxesLayer(scene, boxes, options = {}) {
       if (options.kind === "ground-truth") {
         label.textContent = labelText;
       } else {
+        label.classList.add("is-detection-chip");
+        const classMeta = classTooltipMetadata(box.className, scene);
+
         const modelLine = document.createElement("span");
         modelLine.className = "box-label-model";
         modelLine.textContent = modelLabelText;
 
+        const detailRow = document.createElement("span");
+        detailRow.className = "box-label-detail-row";
+
         const detailLine = document.createElement("span");
         detailLine.className = "box-label-detail";
-        detailLine.textContent = labelText;
+        detailLine.textContent = classMeta.label;
 
-        label.append(modelLine, detailLine);
+        const confidenceLine = document.createElement("span");
+        confidenceLine.className = "box-label-confidence";
+        confidenceLine.textContent = confidence;
+
+        detailRow.append(createTooltipIconElement(classMeta.iconName, classColor), detailLine, confidenceLine);
+
+        const meter = document.createElement("span");
+        meter.className = "box-label-meter";
+        const meterFill = document.createElement("span");
+        meterFill.className = "box-label-meter-fill";
+        meterFill.style.width = `${clamp((box.confidence || 0) * 100, 4, 100)}%`;
+        meter.append(meterFill);
+
+        label.append(modelLine, detailRow, meter);
       }
       boxEl.append(label);
     }
@@ -2533,13 +2653,12 @@ function buildSceneLayers(scene, models, options = {}) {
 }
 
 function renderStack(container, scene, models, options = {}) {
-  const baseImage = sceneBaseImage(scene);
+  const baseImageCandidates = sceneBaseImageCandidates(scene);
+  const baseImage = baseImageCandidates[0] || "";
   const existingBase = container.querySelector(".base-layer");
-  const expectedBaseSrc = baseImage ? new URL(baseImage, window.location.href).href : "";
-  const currentBaseSrc = existingBase?.currentSrc || existingBase?.src || "";
   const shouldPreserveBase = options.preserveBaseImage
     && existingBase
-    && (existingBase.getAttribute("src") === baseImage || currentBaseSrc === expectedBaseSrc);
+    && imageMatchesAssetCandidates(existingBase, baseImageCandidates);
 
   if (!shouldPreserveBase) {
     container.replaceChildren();
