@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "build:iconify-runtime": "esbuild scripts/iconify-runtime.jsx --bundle --format=iife --platform=browser --outfile=assets/generated/iconify-runtime.js"
+  },
+  "dependencies": {
+    "@iconify/react": "^6.0.2",
+    "esbuild": "^0.28.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}

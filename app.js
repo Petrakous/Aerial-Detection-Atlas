@@ -2,12 +2,16 @@ const data = window.DETECTION_ATLAS_DATA || window.TRIFFID_DEMO_DATA || window.T
 const releaseBases = {
   core: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-v2/",
   coreDFire: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-dfire-v1/",
+  coreHazmat: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-hazmat-v1/",
   coreInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-core-inc1m-v1/",
+  hazmat: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-hazmat-v1/",
   thumbnails: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-thumbnails-v3/",
   segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v2/",
   segmentationGtInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-inc1m-v2/",
+  segmentationGtJson: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-json-v1/",
   segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/",
-  segmentationPredInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-inc1m-v1/"
+  segmentationPredInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-inc1m-v1/",
+  segmentationPredJson: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-json-v1/"
 };
 
 const minZoom = 0.25;
@@ -657,6 +661,168 @@ function formatPixels(value) {
   return String(Math.round(value));
 }
 
+const tooltipClassMetadata = {
+  FloodNetPlus: {
+    background: { label: "Background", color: "#000000", iconName: "tabler:minus", hidden: true },
+    "building-flooded": { label: "Building Flooded", color: "#00FFD1", iconName: "tabler:building" },
+    "building-non-flooded": { label: "Building Non-Flooded", color: "#FF1744", iconName: "tabler:building" },
+    grass: { label: "Grass", color: "#39FF14", iconName: "tabler:plant-2" },
+    pool: { label: "Pool", color: "#4B0082", iconName: "tabler:pool" },
+    "road-flooded": { label: "Road Flooded", color: "#8A00FF", iconName: "tabler:road" },
+    "road-non-flooded": { label: "Road Non-Flooded", color: "#FFB300", iconName: "tabler:road" },
+    tree: { label: "Tree", color: "#006400", iconName: "tabler:tree" },
+    vehicle: { label: "Vehicle", color: "#FF00D4", iconName: "tabler:car" },
+    water: { label: "Water", color: "#0047FF", iconName: "tabler:droplet" }
+  },
+  RescueNet: {
+    background: { label: "Background", color: "#000000", iconName: "tabler:minus", hidden: true },
+    "building-major-damage": { label: "Building Major Damage", color: "#FF6D00", iconName: "tabler:building" },
+    "building-minor-damage": { label: "Building Minor Damage", color: "#FFD600", iconName: "tabler:building" },
+    "building-no-damage": { label: "Building No Damage", color: "#00E676", iconName: "tabler:building" },
+    "building-total-destruction": { label: "Building Destroyed", color: "#FF0000", iconName: "tabler:building" },
+    pool: { label: "Pool", color: "#4B0082", iconName: "tabler:pool" },
+    "road-blocked": { label: "Road Blocked", color: "#B6FF00", iconName: "tabler:road-block" },
+    "road-clear": { label: "Road Clear", color: "#C77DFF", iconName: "tabler:road" },
+    tree: { label: "Tree", color: "#006400", iconName: "tabler:tree" },
+    vehicle: { label: "Vehicle", color: "#FF00D4", iconName: "tabler:car" },
+    water: { label: "Water", color: "#0047FF", iconName: "tabler:droplet" }
+  },
+  Inc1M: {
+    "aerial-vehicle": { label: "Aerial Vehicle", color: "#F08080", iconName: "tabler:plane" },
+    "army-vehicle": { label: "Army Vehicle", color: "#F08080", iconName: "tabler:shield" },
+    bag: { label: "Bag", color: "#FFE4B6", iconName: "tabler:briefcase" },
+    barrier: { label: "Barrier", color: "#8B008B", iconName: "tabler:barrier-block" },
+    bicycle: { label: "Bicycle", color: "#FFA503", iconName: "tabler:bike" },
+    boat: { label: "Boat", color: "#1FB3AB", iconName: "tabler:ship" },
+    boot: { label: "Boot", color: "#FF8C03", iconName: "tabler:boot" },
+    building: { label: "Building", color: "#BDB76B", iconName: "tabler:building" },
+    "burnt-grass": { label: "Burnt Grass", color: "#8B0000", iconName: "tabler:plant-2" },
+    "burnt-plant": { label: "Burnt Plant", color: "#A52B2A", iconName: "tabler:plant-2" },
+    "burnt-tree": { label: "Burnt Tree", color: "#800000", iconName: "tabler:tree" },
+    chainsaw: { label: "Chainsaw", color: "#FF6AB4", iconName: "tabler:tool" },
+    citizen: { label: "Citizen", color: "#9371DC", iconName: "tabler:user" },
+    "civilian-vehicle": { label: "Civilian Vehicle", color: "#DAA521", iconName: "tabler:car" },
+    cone: { label: "Cone", color: "#7DFC01", iconName: "tabler:cone-2" },
+    debris: { label: "Debris", color: "#DA70D6", iconName: "tabler:alert-circle" },
+    "destroyed-building": { label: "Destroyed Building", color: "#CD5C5D", iconName: "tabler:building" },
+    "destroyed-vehicle": { label: "Destroyed Vehicle", color: "#E9967A", iconName: "tabler:car-crane" },
+    "dirt-road": { label: "Dirt Road", color: "#DEB988", iconName: "tabler:road" },
+    door: { label: "Door", color: "#B0C5DE", iconName: "tabler:door" },
+    "dry-grass": { label: "Dry Grass", color: "#D2B48C", iconName: "tabler:plant-2" },
+    "dry-plant": { label: "Dry Plant", color: "#808000", iconName: "tabler:plant-2" },
+    "dry-tree": { label: "Dry Tree", color: "#A0522D", iconName: "tabler:tree" },
+    excavator: { label: "Excavator", color: "#BB55D3", iconName: "tabler:bulldozer" },
+    extinguisher: { label: "Extinguisher", color: "#8B0000", iconName: "tabler:fire-extinguisher" },
+    fence: { label: "Fence", color: "#696969", iconName: "tabler:fence" },
+    "fire-hose": { label: "Fire Hose", color: "#708191", iconName: "tabler:tool" },
+    "fire-truck": { label: "Fire Truck", color: "#ADD8E6", iconName: "tabler:firetruck" },
+    "first-responder": { label: "First Responder", color: "#FF6447", iconName: "tabler:users" },
+    flame: { label: "Flame", color: "#D3691E", iconName: "tabler:flame" },
+    furniture: { label: "Furniture", color: "#F0F0D9", iconName: "tabler:armchair-2" },
+    glove: { label: "Glove", color: "#6B5ACD", iconName: "tabler:hand-stop" },
+    "green-grass": { label: "Green Grass", color: "#9ACD33", iconName: "tabler:plant-2" },
+    "green-plant": { label: "Green Plant", color: "#02FF7F", iconName: "tabler:plant-2" },
+    "green-tree": { label: "Green Tree", color: "#238B23", iconName: "tabler:tree" },
+    helmet: { label: "Helmet", color: "#008080", iconName: "tabler:helmet" },
+    "hole-in-the-ground": { label: "Hole in the Ground", color: "#40E0D0", iconName: "tabler:circle-dashed" },
+    ladder: { label: "Ladder", color: "#3BB371", iconName: "tabler:ladder" },
+    mask: { label: "Mask", color: "#4682B4", iconName: "tabler:mask" },
+    "military-personnel": { label: "Military Personnel", color: "#02FFFF", iconName: "tabler:users" },
+    mud: { label: "Mud", color: "#CD853F", iconName: "tabler:mood-empty" },
+    pavement: { label: "Pavement", color: "#808080", iconName: "tabler:road" },
+    pole: { label: "Pole", color: "#6B8E24", iconName: "tabler:line-dashed" },
+    "police-vehicle": { label: "Police Vehicle", color: "#2090FF", iconName: "tabler:car" },
+    "protective-glasses": { label: "Protective Glasses", color: "#EE83EE", iconName: "tabler:eyeglass-2" },
+    road: { label: "Road", color: "#FF1393", iconName: "tabler:road" },
+    scba: { label: "SCBA", color: "#038B8B", iconName: "tabler:shield" },
+    shovel: { label: "Shovel", color: "#DDA1DE", iconName: "tabler:shovel" },
+    smoke: { label: "Smoke", color: "#B22322", iconName: "tabler:cloud" },
+    stairs: { label: "Stairs", color: "#F5A560", iconName: "tabler:stairs" },
+    tank: { label: "Tank", color: "#5F9FA0", iconName: "tabler:tank" },
+    tower: { label: "Tower", color: "#483E8C", iconName: "tabler:building-lighthouse" },
+    wall: { label: "Wall", color: "#FA8172", iconName: "tabler:wall" },
+    water: { label: "Water", color: "#87CEFA", iconName: "tabler:droplet" },
+    window: { label: "Window", color: "#4169E2", iconName: "tabler:window" }
+  }
+};
+
+function normalizeClassKey(value = "") {
+  return String(value)
+    .trim()
+    .toLowerCase()
+    .replace(/[_\s]+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-");
+}
+
+function formatClassLabel(className = "") {
+  return String(className)
+    .replace(/[_-]+/g, " ")
+    .replace(/\bscba\b/gi, "SCBA")
+    .replace(/\b\w/g, (char) => char.toUpperCase())
+    .trim();
+}
+
+function classTooltipMetadata(className, scene = currentScene()) {
+  const normalizedKey = normalizeClassKey(className);
+  const datasetMeta = tooltipClassMetadata[scene?.dataset]?.[normalizedKey];
+  return {
+    key: normalizedKey,
+    label: datasetMeta?.label || formatClassLabel(className),
+    color: datasetMeta?.color || null,
+    iconName: datasetMeta?.iconName || "tabler:package",
+    hidden: Boolean(datasetMeta?.hidden)
+  };
+}
+
+function createTooltipIconElement(iconName, color) {
+  const wrapper = document.createElement("span");
+  wrapper.className = "segmentation-mask-icon";
+  wrapper.style.color = color;
+  wrapper.setAttribute("aria-hidden", "true");
+
+  if (typeof window.createIconifyIcon === "function") {
+    const iconNode = window.createIconifyIcon(iconName, { width: 16, height: 16, color });
+    wrapper.append(iconNode);
+    return wrapper;
+  }
+
+  const fallback = document.createElement("span");
+  fallback.className = "segmentation-mask-icon-fallback";
+  fallback.textContent = "•";
+  wrapper.append(fallback);
+  return wrapper;
+}
+
+function readableIconColor(backgroundColor) {
+  const hex = String(backgroundColor || "").replace("#", "");
+  if (!/^[0-9a-f]{6}$/i.test(hex)) return "#ffffff";
+  const red = Number.parseInt(hex.slice(0, 2), 16);
+  const green = Number.parseInt(hex.slice(2, 4), 16);
+  const blue = Number.parseInt(hex.slice(4, 6), 16);
+  const luminance = ((0.299 * red) + (0.587 * green) + (0.114 * blue)) / 255;
+  return luminance > 0.62 ? "#13202d" : "#ffffff";
+}
+
+function createLegendIconElement(iconName, color) {
+  const wrapper = document.createElement("span");
+  wrapper.className = "class-swatch-icon";
+  wrapper.setAttribute("aria-hidden", "true");
+
+  if (typeof window.createIconifyIcon === "function") {
+    const iconNode = window.createIconifyIcon(iconName, {
+      width: 11,
+      height: 11,
+      color
+    });
+    wrapper.append(iconNode);
+    return wrapper;
+  }
+
+  wrapper.textContent = "•";
+  return wrapper;
+}
+
 function sceneClassLegend(scene = currentScene()) {
   if (isSegmentationScene(scene)) {
     return scene?.classLegend || data.classes?.["semantic-segmentation"] || [];
@@ -671,6 +837,8 @@ function sceneClassLegend(scene = currentScene()) {
 }
 
 function detectionClassColor(className, scene = currentScene()) {
+  const tooltipMeta = classTooltipMetadata(className, scene);
+  if (tooltipMeta.color) return tooltipMeta.color;
   const legendEntry = sceneClassLegend(scene).find((item) => (item.className || item.name) === className);
   if (legendEntry?.color) return legendEntry.color;
   const fallbackEntry = (data.classes?.["object-detection"] || []).find((item) => (item.className || item.name) === className);
@@ -992,14 +1160,13 @@ function dfireSceneGroup(scene) {
 
 function resolveAssetPath(path) {
   if (!path) return path;
-  const isPagesHost = window.location.hostname === "petrakous.github.io";
-  if (!isPagesHost) return path;
 
   const viewerMatch = path.match(/^viewer\/([^/]+)\/(.+)$/);
   if (viewerMatch) {
-    if (viewerMatch[1] === "HAZMAT") return path;
     const base = viewerMatch[1] === "DFire"
       ? releaseBases.coreDFire
+      : viewerMatch[1] === "HAZMAT"
+        ? releaseBases.coreHazmat
       : viewerMatch[1] === "Inc1M"
         ? releaseBases.coreInc1M
         : releaseBases.core;
@@ -1008,32 +1175,45 @@ function resolveAssetPath(path) {
 
   const thumbMatch = path.match(/^thumbnails\/([^/]+)\/(.+)$/);
   if (thumbMatch) {
-    if (thumbMatch[1] === "HAZMAT") return path;
+    if (thumbMatch[1] === "HAZMAT") {
+      return `${releaseBases.coreHazmat}thumbnail-HAZMAT-${thumbMatch[2]}`;
+    }
     return `${releaseBases.thumbnails}thumbnail-${thumbMatch[1]}-${thumbMatch[2]}`;
   }
 
   const segmentationGtMatch = path.match(/^([^/]+)\/([^/]+)\/samples_gt_with_json\/(.+)$/);
   if (segmentationGtMatch) {
-    const base = segmentationGtMatch[1] === "Inc1M"
-      ? releaseBases.segmentationGtInc1M
-      : releaseBases.segmentationGt;
+    const isJson = /\.json$/i.test(segmentationGtMatch[3]);
+    const base = isJson
+      ? releaseBases.segmentationGtJson
+      : segmentationGtMatch[1] === "Inc1M"
+        ? releaseBases.segmentationGtInc1M
+        : releaseBases.segmentationGt;
     return `${base}segment-gt-${segmentationGtMatch[1]}-${segmentationGtMatch[2]}-${segmentationGtMatch[3]}`;
   }
 
   const sharedSegmentationGtMatch = path.match(/^([^/]+)\/shared_samples_gt_with_json\/(.+)$/);
   if (sharedSegmentationGtMatch) {
-    const base = sharedSegmentationGtMatch[1] === "Inc1M"
-      ? releaseBases.segmentationGtInc1M
-      : releaseBases.segmentationGt;
+    const isJson = /\.json$/i.test(sharedSegmentationGtMatch[2]);
+    const base = isJson
+      ? releaseBases.segmentationGtJson
+      : sharedSegmentationGtMatch[1] === "Inc1M"
+        ? releaseBases.segmentationGtInc1M
+        : releaseBases.segmentationGt;
     return `${base}segment-gt-${sharedSegmentationGtMatch[1]}-shared-${sharedSegmentationGtMatch[2]}`;
   }
 
   const segmentationPredMatch = path.match(/^([^/]+)\/([^/]+)\/visualised_samples_with_json\/(.+)$/);
   if (segmentationPredMatch) {
-    if (segmentationPredMatch[1] === "HAZMAT") return path;
-    const base = segmentationPredMatch[1] === "Inc1M"
-      ? releaseBases.segmentationPredInc1M
-      : releaseBases.segmentationPred;
+    if (segmentationPredMatch[1] === "HAZMAT" && !/\.json$/i.test(segmentationPredMatch[3])) {
+      return `${releaseBases.hazmat}prediction-HAZMAT-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
+    }
+    const isJson = /\.json$/i.test(segmentationPredMatch[3]);
+    const base = isJson
+      ? releaseBases.segmentationPredJson
+      : segmentationPredMatch[1] === "Inc1M"
+        ? releaseBases.segmentationPredInc1M
+        : releaseBases.segmentationPred;
     return `${base}segment-pred-${segmentationPredMatch[1]}-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
   }
 
@@ -1047,6 +1227,23 @@ function uniqueAssetCandidates(paths = []) {
 function assetCandidates(path) {
   if (!path) return [];
   return uniqueAssetCandidates([resolveAssetPath(path), path]);
+}
+
+async function fetchJsonWithFallback(path) {
+  const candidates = assetCandidates(path);
+  let lastError = null;
+
+  for (const candidate of candidates) {
+    try {
+      const response = await fetch(candidate);
+      if (!response.ok) throw new Error(`Failed to load ${candidate}`);
+      return await response.json();
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError || new Error(`Failed to load ${path}`);
 }
 
 function setImageSourceWithFallback(img, sources) {
@@ -1377,11 +1574,7 @@ function ensureSegmentationScores(scene, model) {
   const cacheKey = `${scene.id}:${model.id}`;
   if (segmentationScoreLoads.has(cacheKey)) return;
 
-  const load = fetch(jsonPath)
-    .then((response) => {
-      if (!response.ok) throw new Error(`Failed to load ${jsonPath}`);
-      return response.json();
-    })
+  const load = fetchJsonWithFallback(jsonPath)
     .then((prediction) => {
       const changed = mergeSegmentationScores(scene, model.id, prediction);
       if (changed && currentScene()?.id === scene.id) {
@@ -1423,6 +1616,29 @@ function normalizeSegmentationInstances(prediction, scene) {
         yPercent = ((y + (height / 2)) / scene.height) * 100;
       }
 
+      const polygon = Array.isArray(instance.polygon)
+        ? instance.polygon
+          .map((point) => Array.isArray(point) ? [Number(point[0]), Number(point[1])] : null)
+          .filter((point) => point && point.every(Number.isFinite))
+        : null;
+
+      const polygons = Array.isArray(instance.polygons)
+        ? instance.polygons
+          .map((points) => Array.isArray(points)
+            ? points
+              .map((point) => Array.isArray(point) ? [Number(point[0]), Number(point[1])] : null)
+              .filter((point) => point && point.every(Number.isFinite))
+            : [])
+          .filter((points) => points.length >= 3)
+        : null;
+
+      const segmentation = instance.segmentation && typeof instance.segmentation === "object"
+        ? {
+          size: Array.isArray(instance.segmentation.size) ? instance.segmentation.size.map((value) => Number(value)) : null,
+          counts: instance.segmentation.counts == null ? "" : String(instance.segmentation.counts)
+        }
+        : null;
+
       const score = instance.score == null ? null : Number(instance.score);
       if (!Number.isFinite(xPercent) || !Number.isFinite(yPercent) || !Number.isFinite(score)) return null;
 
@@ -1439,8 +1655,10 @@ function normalizeSegmentationInstances(prediction, scene) {
         bbox: Array.isArray(instance.bbox) && instance.bbox.length === 4
           ? instance.bbox.map((value) => Number(value))
           : null,
-        type: instance.type || null,
-        polygon: Array.isArray(instance.polygon) ? instance.polygon.map(([x, y]) => [Number(x), Number(y)]) : null
+        type: instance.type || (segmentation?.counts ? "rle" : (polygon?.length ? "polygon" : null)),
+        polygon: polygon?.length ? polygon : (polygons?.[0] || null),
+        polygons: polygons?.length ? polygons : (polygon?.length ? [polygon] : null),
+        segmentation
       };
     })
     .filter(Boolean)
@@ -1488,6 +1706,58 @@ function pointInPolygon(pointX, pointY, polygon = []) {
   return inside;
 }
 
+function decodeCompressedRle(countsText = "") {
+  const counts = [];
+  let pointer = 0;
+
+  while (pointer < countsText.length) {
+    let shift = 0;
+    let value = 0;
+    let current = 0;
+
+    do {
+      current = countsText.charCodeAt(pointer) - 48;
+      value |= (current & 0x1f) << (5 * shift);
+      pointer += 1;
+      shift += 1;
+    } while (current & 0x20);
+
+    if (current & 0x10) {
+      value |= (-1 << (5 * shift));
+    }
+
+    if (counts.length > 2) {
+      value += counts[counts.length - 2];
+    }
+
+    counts.push(value);
+  }
+
+  return counts;
+}
+
+function pointInRle(pointX, pointY, segmentation, width, height) {
+  if (!segmentation?.counts || !width || !height) return false;
+
+  const column = Math.floor(pointX);
+  const row = Math.floor(pointY);
+  if (column < 0 || column >= width || row < 0 || row >= height) return false;
+
+  const counts = segmentation._decodedCounts || (segmentation._decodedCounts = decodeCompressedRle(segmentation.counts));
+  const targetIndex = (column * height) + row;
+  let cursor = 0;
+  let on = false;
+
+  for (const runLength of counts) {
+    const nextCursor = cursor + runLength;
+    if (targetIndex < nextCursor) return on;
+    cursor = nextCursor;
+    on = !on;
+  }
+
+  return false;
+}
+
 function ensureSegmentationInstances(scene, model) {
   if (!scene || !model?.id || !isSegmentationScene(scene)) return;
   if (scene.predictionInstances?.[model.id]?.length) return;
@@ -1498,11 +1768,7 @@ function ensureSegmentationInstances(scene, model) {
   const cacheKey = `${scene.id}:${model.id}`;
   if (segmentationInstanceLoads.has(cacheKey)) return;
 
-  const load = fetch(jsonPath)
-    .then((response) => {
-      if (!response.ok) throw new Error(`Failed to load ${jsonPath}`);
-      return response.json();
-    })
+  const load = fetchJsonWithFallback(jsonPath)
     .then((prediction) => {
       const instances = normalizeSegmentationInstances(prediction, scene);
       if (!instances.length) return;
@@ -1908,25 +2174,50 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
     const callouts = [];
 
     maskLabels.forEach((entry) => {
+      const classMeta = classTooltipMetadata(entry.className, scene);
+      if (classMeta.hidden) return;
+
       const callout = document.createElement("div");
       callout.className = "segmentation-mask-callout";
-      callout.dataset.offsetX = "-48";
-      callout.dataset.offsetY = "-30";
       callout.dataset.instanceId = entry.id;
-      if (options.model?.color) {
-        callout.style.setProperty("--mask-label-accent", options.model.color);
-      }
-      const classColor = detectionClassColor(entry.className, scene);
-      callout.style.setProperty("--mask-label-text", classColor);
+      const classColor = classMeta.color || detectionClassColor(entry.className, scene);
+      callout.style.setProperty("--mask-label-accent", classColor);
 
       const connector = document.createElement("div");
       connector.className = "segmentation-mask-connector";
 
+      const anchor = document.createElement("div");
+      anchor.className = "segmentation-mask-anchor";
+
       const pill = document.createElement("div");
       pill.className = "segmentation-mask-label";
-      pill.textContent = formatConfidence(entry.score);
+      pill.setAttribute("aria-label", `${classMeta.label} ${formatConfidence(entry.score)}`.trim());
 
-      callout.append(connector, pill);
+      const mainRow = document.createElement("div");
+      mainRow.className = "segmentation-mask-label-main";
+
+      const title = document.createElement("span");
+      title.className = "segmentation-mask-title";
+      title.textContent = classMeta.label;
+
+      const confidence = document.createElement("span");
+      confidence.className = "segmentation-mask-confidence";
+      confidence.textContent = formatConfidence(entry.score);
+
+      mainRow.append(createTooltipIconElement(classMeta.iconName, classColor), title, confidence);
+      pill.append(mainRow);
+
+      if (typeof entry.score === "number" && Number.isFinite(entry.score)) {
+        const meter = document.createElement("div");
+        meter.className = "segmentation-mask-meter";
+        const meterFill = document.createElement("span");
+        meterFill.className = "segmentation-mask-meter-fill";
+        meterFill.style.width = `${clamp(entry.score * 100, 4, 100)}%`;
+        meter.append(meterFill);
+        pill.append(meter);
+      }
+
+      callout.append(connector, anchor, pill);
       labelLayer.append(callout);
       callouts.push({ callout, connector, pill, entry });
     });
@@ -1935,20 +2226,28 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
     const applyCalloutLayout = () => {
       const imageBox = containRect(layer.clientWidth, layer.clientHeight, scene.width, scene.height);
       callouts.forEach(({ callout, connector, pill, entry }) => {
-        const offsetX = Number(callout.dataset.offsetX || -52);
-        const offsetY = Number(callout.dataset.offsetY || -34);
         const anchorX = imageBox.left + (entry.xNormalized * imageBox.width);
         const anchorY = imageBox.top + (entry.yNormalized * imageBox.height);
 
         callout.style.left = `${anchorX}px`;
         callout.style.top = `${anchorY}px`;
 
-        pill.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-
         const pillWidth = pill.offsetWidth;
         const pillHeight = pill.offsetHeight;
-        const attachX = offsetX + pillWidth - 10;
-        const attachY = offsetY + pillHeight - 5;
+        const preferredOffsetX = entry.xNormalized > 0.58 ? -(pillWidth + 18) : 18;
+        const preferredOffsetY = entry.yNormalized > 0.7 ? -(pillHeight + 18) : -(pillHeight + 16);
+        const minOffsetX = imageBox.left + 10 - anchorX;
+        const maxOffsetX = imageBox.left + imageBox.width - pillWidth - 10 - anchorX;
+        const minOffsetY = imageBox.top + 10 - anchorY;
+        const maxOffsetY = imageBox.top + imageBox.height - pillHeight - 10 - anchorY;
+        const offsetX = clamp(preferredOffsetX, minOffsetX, maxOffsetX);
+        const offsetY = clamp(preferredOffsetY, minOffsetY, maxOffsetY);
+
+        pill.style.setProperty("--mask-label-x", `${offsetX}px`);
+        pill.style.setProperty("--mask-label-y", `${offsetY}px`);
+
+        const attachX = offsetX >= 0 ? offsetX + 10 : offsetX + pillWidth - 10;
+        const attachY = offsetY >= 0 ? offsetY + 10 : offsetY + pillHeight - 10;
         const length = Math.hypot(attachX, attachY);
         const angle = Math.atan2(attachY, attachX) * (180 / Math.PI);
 
@@ -1969,13 +2268,21 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
 
     const hitTestInstance = (sceneX, sceneY) => {
       const polygonMatches = [];
+      const rleMatches = [];
       const fallbackMatches = [];
 
       for (const item of callouts) {
         const { entry } = item;
-        if (entry.type === "polygon" && entry.polygon?.length >= 3) {
-          if (pointInPolygon(sceneX, sceneY, entry.polygon)) {
+        if (entry.type === "polygon" && entry.polygons?.length) {
+          if (entry.polygons.some((polygon) => pointInPolygon(sceneX, sceneY, polygon))) {
             polygonMatches.push(entry);
+          }
+          continue;
+        }
+
+        if (entry.type === "rle" && entry.segmentation?.counts) {
+          if (pointInRle(sceneX, sceneY, entry.segmentation, scene.width, scene.height)) {
+            rleMatches.push(entry);
           }
           continue;
         }
@@ -1991,6 +2298,11 @@ function createSegmentationLayer(scene, imagePath, options = {}) {
       if (polygonMatches.length) {
         polygonMatches.sort((a, b) => (a.area || Number.POSITIVE_INFINITY) - (b.area || Number.POSITIVE_INFINITY));
         return polygonMatches[0]?.id || null;
+      }
+
+      if (rleMatches.length) {
+        rleMatches.sort((a, b) => (a.area || Number.POSITIVE_INFINITY) - (b.area || Number.POSITIVE_INFINITY));
+        return rleMatches[0]?.id || null;
       }
 
       if (!fallbackMatches.length) return null;
@@ -2636,12 +2948,19 @@ function renderLegend() {
   const scene = currentScene();
   const fragment = document.createDocumentFragment();
   sceneClassLegend(scene).forEach((item) => {
+    const className = item.className || item.name;
+    const classMeta = classTooltipMetadata(className, scene);
     const row = document.createElement("div");
     row.className = "class-row";
-    row.innerHTML = `
-      <span class="class-swatch" style="background:${item.color}"></span>
-      <span>${item.className || item.name}</span>
-    `;
+    const swatch = document.createElement("span");
+    swatch.className = "class-swatch";
+    swatch.style.background = item.color;
+    swatch.append(createLegendIconElement(classMeta.iconName, readableIconColor(item.color)));
+
+    const label = document.createElement("span");
+    label.textContent = classMeta.label;
+
+    row.append(swatch, label);
     fragment.append(row);
   });
   els.classLegend.replaceChildren(fragment);
