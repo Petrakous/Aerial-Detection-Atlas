@@ -143,6 +143,7 @@ const segmentationInstanceLoads = new Map();
 let preloadSceneTimer = 0;
 let appMenuHideTimer = 0;
 let preservedPageScrollY = null;
+let viewerCloseBackTarget = null;
 
 function restorePageScrollPosition() {
   if (typeof preservedPageScrollY !== "number") return;
@@ -372,7 +373,8 @@ function setRoute(nextRoute, nextDatasetId = state.datasetId, options = {}) {
   const {
     updateHash = true,
     viewerOpen = state.viewerOpen,
-    sceneId = currentSceneId()
+    sceneId = currentSceneId(),
+    historyMode = "push"
   } = options;
   state.route = nextRoute;
   state.viewerOpen = nextRoute === "dataset" ? Boolean(viewerOpen) : false;
@@ -388,7 +390,12 @@ function setRoute(nextRoute, nextDatasetId = state.datasetId, options = {}) {
         : `#dataset/${encodeURIComponent(state.datasetId)}`
       : "#home";
     if (window.location.hash !== nextHash) {
-      window.history.pushState({ route: nextRoute, datasetId: state.datasetId, sceneId }, "", nextHash);
+      const historyState = { route: nextRoute, datasetId: state.datasetId, sceneId };
+      if (historyMode === "replace") {
+        window.history.replaceState(historyState, "", nextHash);
+      } else {
+        window.history.pushState(historyState, "", nextHash);
+      }
     }
   }
 
@@ -411,6 +418,9 @@ function openViewerForScene(sceneIndex, { updateHash = true } = {}) {
   const scenes = visibleScenes();
   if (!scenes[sceneIndex]) return;
   preservedPageScrollY = window.scrollY || window.pageYOffset || 0;
+  viewerCloseBackTarget = updateHash
+    ? { route: "dataset", datasetId: state.datasetId }
+    : null;
   state.sceneIndex = sceneIndex;
   state.viewerOpen = true;
   state.hoveredModel = null;
@@ -430,6 +440,21 @@ function openViewerForScene(sceneIndex, { updateHash = true } = {}) {
 }
 
 function closeViewerOverlay({ updateHash = true } = {}) {
+  const currentRoute = parseRouteHash();
+  const shouldPopViewerHistory = updateHash
+    && currentRoute.route === "dataset"
+    && currentRoute.datasetId === state.datasetId
+    && Boolean(currentRoute.sceneId)
+    && viewerCloseBackTarget?.route === "dataset"
+    && viewerCloseBackTarget.datasetId === state.datasetId;
+
+  viewerCloseBackTarget = null;
+
+  if (shouldPopViewerHistory) {
+    window.history.back();
+    return;
+  }
+
   state.viewerOpen = false;
   state.hoveredModel = null;
   state.hoveredGroundTruth = false;
@@ -438,7 +463,8 @@ function closeViewerOverlay({ updateHash = true } = {}) {
   setRoute("dataset", state.datasetId, {
     updateHash,
     viewerOpen: false,
-    sceneId: null
+    sceneId: null,
+    historyMode: currentRoute.route === "dataset" && Boolean(currentRoute.sceneId) ? "replace" : "push"
   });
   restorePageScrollPosition();
   preservedPageScrollY = null;
@@ -459,6 +485,7 @@ function closeInstructionsModal() {
 }
 
 function syncRouteFromLocation() {
+  const wasViewerOpen = state.route === "dataset" && state.viewerOpen;
   const route = parseRouteHash();
   state.route = route.route;
   state.viewerOpen = route.route === "dataset" && Boolean(route.sceneId);
@@ -473,7 +500,14 @@ function syncRouteFromLocation() {
       state.viewerOpen = false;
     }
   }
+  if (!(route.route === "dataset" && route.sceneId)) {
+    viewerCloseBackTarget = null;
+  }
   render();
+  if (wasViewerOpen && !(state.route === "dataset" && state.viewerOpen)) {
+    restorePageScrollPosition();
+    preservedPageScrollY = null;
+  }
 }
 
 function updateScenePanelWidth(sceneList = visibleScenes()) {
