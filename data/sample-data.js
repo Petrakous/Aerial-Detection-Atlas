@@ -241,16 +241,16 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#FF6D00"
       },
       {
+        "id": "first-responder",
+        "name": "First responder",
+        "labelIndex": 4,
+        "color": "#8A00FF"
+      },
+      {
         "id": "building-total-destruction",
         "name": "Building_Total_Destruction",
         "labelIndex": 5,
         "color": "#FF0000"
-      },
-      {
-        "id": "first-responder",
-        "name": "First responder",
-        "labelIndex": 5,
-        "color": "#8A00FF"
       },
       {
         "id": "vehicle",
@@ -313,21 +313,21 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#4B0082"
       },
       {
+        "id": "boot",
+        "name": "Boot",
+        "labelIndex": 10,
+        "color": "#00E676"
+      },
+      {
         "id": "fire-hose",
         "name": "Fire hose",
         "labelIndex": 10,
         "color": "#4B0082"
       },
       {
-        "id": "boot",
-        "name": "Boot",
-        "labelIndex": 11,
-        "color": "#00E676"
-      },
-      {
         "id": "green-plant",
         "name": "Green plant",
-        "labelIndex": 12,
+        "labelIndex": 11,
         "color": "#8A00FF"
       },
       {
@@ -363,20 +363,20 @@ window.DETECTION_ATLAS_DATA = {
       {
         "id": "destroyed-building",
         "name": "Destroyed building",
-        "labelIndex": 18,
+        "labelIndex": 17,
         "color": "#4B0082"
+      },
+      {
+        "id": "dry-tree",
+        "name": "Dry tree",
+        "labelIndex": 19,
+        "color": "#FFB300"
       },
       {
         "id": "ladder",
         "name": "Ladder",
         "labelIndex": 19,
         "color": "#8A00FF"
-      },
-      {
-        "id": "dry-tree",
-        "name": "Dry tree",
-        "labelIndex": 20,
-        "color": "#FFB300"
       },
       {
         "id": "civilian-vehicle",
@@ -391,16 +391,16 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#FFD600"
       },
       {
+        "id": "citizen",
+        "name": "Citizen",
+        "labelIndex": 23,
+        "color": "#FFD600"
+      },
+      {
         "id": "wall",
         "name": "Wall",
         "labelIndex": 23,
         "color": "#FF00D4"
-      },
-      {
-        "id": "citizen",
-        "name": "Citizen",
-        "labelIndex": 24,
-        "color": "#FFD600"
       },
       {
         "id": "green-grass",
@@ -417,7 +417,7 @@ window.DETECTION_ATLAS_DATA = {
       {
         "id": "boat",
         "name": "Boat",
-        "labelIndex": 27,
+        "labelIndex": 26,
         "color": "#FFD600"
       },
       {
@@ -435,7 +435,7 @@ window.DETECTION_ATLAS_DATA = {
       {
         "id": "excavator",
         "name": "Excavator",
-        "labelIndex": 30,
+        "labelIndex": 31,
         "color": "#B6FF00"
       },
       {
@@ -495,7 +495,7 @@ window.DETECTION_ATLAS_DATA = {
       {
         "id": "tower",
         "name": "Tower",
-        "labelIndex": 42,
+        "labelIndex": 41,
         "color": "#FF6D00"
       },
       {
@@ -519,13 +519,13 @@ window.DETECTION_ATLAS_DATA = {
       {
         "id": "stairs",
         "name": "Stairs",
-        "labelIndex": 49,
+        "labelIndex": 48,
         "color": "#8A00FF"
       },
       {
         "id": "dry-plant",
         "name": "Dry plant",
-        "labelIndex": 50,
+        "labelIndex": 49,
         "color": "#00E676"
       },
       {
@@ -547,6 +547,12 @@ window.DETECTION_ATLAS_DATA = {
         "color": "#FFB300"
       },
       {
+        "id": "barrel",
+        "name": "Barrel",
+        "labelIndex": 53,
+        "color": "#8A00FF"
+      },
+      {
         "id": "shovel",
         "name": "Shovel",
         "labelIndex": 55,
@@ -555,7 +561,7 @@ window.DETECTION_ATLAS_DATA = {
       {
         "id": "police-vehicle",
         "name": "Police vehicle",
-        "labelIndex": 57,
+        "labelIndex": 56,
         "color": "#FF00D4"
       },
       {
@@ -567,13 +573,13 @@ window.DETECTION_ATLAS_DATA = {
       {
         "id": "army-vehicle",
         "name": "Army vehicle",
-        "labelIndex": 60,
+        "labelIndex": 59,
         "color": "#FF1744"
       },
       {
         "id": "extinguisher",
         "name": "Extinguisher",
-        "labelIndex": 61,
+        "labelIndex": 60,
         "color": "#4B0082"
       },
       {
@@ -585,7 +591,7 @@ window.DETECTION_ATLAS_DATA = {
       {
         "id": "chainsaw",
         "name": "Chainsaw",
-        "labelIndex": 63,
+        "labelIndex": 62,
         "color": "#39FF14"
       }
     ]
@@ -30279,44 +30285,44 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "962 x 640",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 134205
+          "pixelCount": 99875
+        },
+        {
+          "labelIndex": 3,
+          "className": "Helmet",
+          "pixelCount": 2352
         },
         {
           "labelIndex": 4,
-          "className": "Helmet",
-          "pixelCount": 2429
-        },
-        {
-          "labelIndex": 5,
           "className": "First responder",
-          "pixelCount": 33078
+          "pixelCount": 32459
         },
         {
-          "labelIndex": 9,
+          "labelIndex": 8,
           "className": "Flame",
-          "pixelCount": 82605
+          "pixelCount": 81432
         },
         {
-          "labelIndex": 11,
+          "labelIndex": 10,
           "className": "Boot",
-          "pixelCount": 3597
+          "pixelCount": 3435
         },
         {
-          "labelIndex": 20,
+          "labelIndex": 19,
           "className": "Dry tree",
-          "pixelCount": 87735
+          "pixelCount": 86830
         },
         {
-          "labelIndex": 29,
+          "labelIndex": 28,
           "className": "Dry grass",
-          "pixelCount": 131905
+          "pixelCount": 130607
         },
         {
-          "labelIndex": 61,
+          "labelIndex": 60,
           "className": "Extinguisher",
-          "pixelCount": 2371
+          "pixelCount": 2289
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
@@ -30461,84 +30467,72 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 1,
-            "className": "Green tree",
-            "pixelCount": 134400,
-            "score": 0.5679
-          },
-          {
-            "labelIndex": 4,
-            "className": "First responder",
-            "pixelCount": 32593,
-            "score": 0.9163
-          },
-          {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 95670,
-            "score": 0.8722
+            "pixelCount": 78860,
+            "score": 0.8704
           },
           {
-            "labelIndex": 28,
-            "className": "Dry grass",
-            "pixelCount": 131520,
-            "score": 0.6669
+            "labelIndex": 19,
+            "className": "Dry tree",
+            "pixelCount": 99266,
+            "score": 0.4574
+          },
+          {
+            "labelIndex": 23,
+            "className": "Citizen",
+            "pixelCount": 35764,
+            "score": 0.7374
           },
           {
             "labelIndex": 35,
             "className": "Bag",
-            "pixelCount": 5079,
-            "score": 0.3377
+            "pixelCount": 4527,
+            "score": 0.3062
           },
           {
-            "labelIndex": 54,
-            "className": "Shovel",
-            "pixelCount": 1300,
-            "score": 0.4018
+            "labelIndex": 36,
+            "className": "Burnt tree",
+            "pixelCount": 33018,
+            "score": 0.9045
+          },
+          {
+            "labelIndex": 44,
+            "className": "Burnt grass",
+            "pixelCount": 131135,
+            "score": 0.8683
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 100791,
-            "score": 0.7754
+            "pixelCount": 131399,
+            "score": 0.4241
           },
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 2559,
-            "score": 0.8775
+            "pixelCount": 2684,
+            "score": 0.4022
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 33109,
-            "score": 0.9484
+            "pixelCount": 31333,
+            "score": 0.9401
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 59707,
-            "score": 0.7799
+            "pixelCount": 109437,
+            "score": 0.8593
           },
           {
-            "labelIndex": 35,
-            "className": "Bag",
-            "pixelCount": 5351,
-            "score": 0.7031
-          },
-          {
-            "labelIndex": 44,
-            "className": "Burnt grass",
-            "pixelCount": 135287,
-            "score": 0.8736
-          },
-          {
-            "labelIndex": 54,
-            "className": "Shovel",
-            "pixelCount": 1171,
-            "score": 0.4417
+            "labelIndex": 28,
+            "className": "Dry grass",
+            "pixelCount": 130197,
+            "score": 0.6182
           }
         ]
       },
@@ -30567,13 +30561,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 6,
-          "labeledPixels": 400562,
-          "coverage": 0.651
+          "labeledPixels": 382570,
+          "coverage": 0.621
         },
         "yolo26l-seg": {
-          "classCount": 7,
-          "labeledPixels": 337975,
-          "coverage": 0.549
+          "classCount": 5,
+          "labeledPixels": 405050,
+          "coverage": 0.658
         }
       },
       "classNames": [
@@ -30586,6 +30580,7 @@ window.DETECTION_ATLAS_DATA = {
         "Green plant",
         "Dirt road",
         "Dry tree",
+        "Citizen",
         "Pole",
         "Dry grass",
         "Bag",
@@ -30629,7 +30624,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "boot",
           "name": "Boot",
-          "labelIndex": 11,
+          "labelIndex": 10,
           "color": "#00E676"
         },
         {
@@ -30647,8 +30642,14 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dry-tree",
           "name": "Dry tree",
-          "labelIndex": 20,
+          "labelIndex": 19,
           "color": "#FFB300"
+        },
+        {
+          "id": "citizen",
+          "name": "Citizen",
+          "labelIndex": 23,
+          "color": "#FFD600"
         },
         {
           "id": "pole",
@@ -30671,7 +30672,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "burnt-tree",
           "name": "Burnt tree",
-          "labelIndex": 37,
+          "labelIndex": 36,
           "color": "#FF1744"
         },
         {
@@ -30689,21 +30690,21 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "shovel",
           "name": "Shovel",
-          "labelIndex": 54,
+          "labelIndex": 55,
           "color": "#FFB300"
         },
         {
           "id": "extinguisher",
           "name": "Extinguisher",
-          "labelIndex": 61,
+          "labelIndex": 60,
           "color": "#4B0082"
         }
       ],
       "summary": "8 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 8,
-        "labeledPixels": 477925,
-        "coverage": 0.776
+        "labeledPixels": 439279,
+        "coverage": 0.713
       }
     },
     {
@@ -30723,64 +30724,64 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "494 x 370",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 13529
+          "pixelCount": 13329
+        },
+        {
+          "labelIndex": 2,
+          "className": "Fence",
+          "pixelCount": 6436
         },
         {
           "labelIndex": 3,
-          "className": "Fence",
-          "pixelCount": 4062
+          "className": "Helmet",
+          "pixelCount": 701
         },
         {
           "labelIndex": 4,
-          "className": "Helmet",
-          "pixelCount": 786
+          "className": "First responder",
+          "pixelCount": 9538
         },
         {
-          "labelIndex": 5,
-          "className": "First responder",
-          "pixelCount": 10418
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 15440
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 18944
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 1230
+          "pixelCount": 1149
         },
         {
-          "labelIndex": 12,
+          "labelIndex": 11,
           "className": "Green plant",
-          "pixelCount": 9868
+          "pixelCount": 9542
         },
         {
-          "labelIndex": 17,
+          "labelIndex": 16,
           "className": "Dirt road",
-          "pixelCount": 44267
+          "pixelCount": 42535
         },
         {
-          "labelIndex": 29,
+          "labelIndex": 28,
           "className": "Dry grass",
-          "pixelCount": 19318
+          "pixelCount": 17093
         },
         {
-          "labelIndex": 36,
+          "labelIndex": 35,
           "className": "Bag",
-          "pixelCount": 3267
+          "pixelCount": 3057
         },
         {
-          "labelIndex": 45,
+          "labelIndex": 44,
           "className": "Burnt grass",
-          "pixelCount": 12823
+          "pixelCount": 10713
         },
         {
-          "labelIndex": 50,
+          "labelIndex": 49,
           "className": "Dry plant",
-          "pixelCount": 4131
+          "pixelCount": 4028
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/04f856fa-drought_in_fire_station_FORWARD_SLASH_00191.jpg",
@@ -30951,82 +30952,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 25416,
-            "score": 0.7188
+            "pixelCount": 33179,
+            "score": 0.6676
           },
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 983,
-            "score": 0.6873
+            "pixelCount": 844,
+            "score": 0.7133
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 11985,
-            "score": 0.8492
+            "pixelCount": 12322,
+            "score": 0.7537
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 1492,
-            "score": 0.8032
-          },
-          {
-            "labelIndex": 11,
-            "className": "Green plant",
-            "pixelCount": 5648,
-            "score": 0.3561
+            "pixelCount": 1341,
+            "score": 0.3277
           },
           {
             "labelIndex": 35,
             "className": "Bag",
-            "pixelCount": 3053,
-            "score": 0.6731
+            "pixelCount": 2572,
+            "score": 0.398
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 18143,
-            "score": 0.5346
+            "pixelCount": 24771,
+            "score": 0.5545
           },
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 967,
-            "score": 0.7035
+            "pixelCount": 856,
+            "score": 0.7326
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 12080,
-            "score": 0.8001
+            "pixelCount": 11098,
+            "score": 0.8431
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 1490,
-            "score": 0.6105
-          },
-          {
-            "labelIndex": 11,
-            "className": "Green plant",
-            "pixelCount": 1789,
-            "score": 0.7486
+            "pixelCount": 1502,
+            "score": 0.3994
           },
           {
             "labelIndex": 35,
             "className": "Bag",
-            "pixelCount": 1851,
-            "score": 0.6977
-          },
-          {
-            "labelIndex": 46,
-            "className": "Glove",
-            "pixelCount": 86,
-            "score": 0.3159
+            "pixelCount": 2718,
+            "score": 0.3864
           }
         ]
       },
@@ -31054,14 +31037,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.296
         },
         "yolo11l-seg": {
-          "classCount": 6,
-          "labeledPixels": 48577,
-          "coverage": 0.266
+          "classCount": 5,
+          "labeledPixels": 50258,
+          "coverage": 0.275
         },
         "yolo26l-seg": {
-          "classCount": 7,
-          "labeledPixels": 36406,
-          "coverage": 0.199
+          "classCount": 5,
+          "labeledPixels": 40945,
+          "coverage": 0.224
         }
       },
       "classNames": [
@@ -31069,8 +31052,8 @@ window.DETECTION_ATLAS_DATA = {
         "Fence",
         "Helmet",
         "First responder",
-        "Flame",
         "Smoke",
+        "Flame",
         "Fire hose",
         "Boot",
         "Green plant",
@@ -31093,7 +31076,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 3,
+          "labelIndex": 2,
           "color": "#FF6D00"
         },
         {
@@ -31109,16 +31092,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#8A00FF"
         },
         {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
+          "color": "#FFB300"
+        },
+        {
           "id": "flame",
           "name": "Flame",
           "labelIndex": 8,
           "color": "#4B0082"
-        },
-        {
-          "id": "smoke",
-          "name": "Smoke",
-          "labelIndex": 8,
-          "color": "#FFB300"
         },
         {
           "id": "fire-hose",
@@ -31141,7 +31124,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dirt-road",
           "name": "Dirt road",
-          "labelIndex": 17,
+          "labelIndex": 16,
           "color": "#FF6D00"
         },
         {
@@ -31153,7 +31136,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dry-grass",
           "name": "Dry grass",
-          "labelIndex": 29,
+          "labelIndex": 28,
           "color": "#0047FF"
         },
         {
@@ -31165,19 +31148,19 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "burnt-grass",
           "name": "Burnt grass",
-          "labelIndex": 45,
+          "labelIndex": 44,
           "color": "#4B0082"
         },
         {
           "id": "glove",
           "name": "Glove",
-          "labelIndex": 46,
+          "labelIndex": 47,
           "color": "#FF1744"
         },
         {
           "id": "dry-plant",
           "name": "Dry plant",
-          "labelIndex": 50,
+          "labelIndex": 49,
           "color": "#00E676"
         },
         {
@@ -31190,8 +31173,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "12 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 12,
-        "labeledPixels": 142643,
-        "coverage": 0.78
+        "labeledPixels": 133561,
+        "coverage": 0.731
       }
     },
     {
@@ -31211,49 +31194,49 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "564 x 423",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 26278
+          "pixelCount": 25421
+        },
+        {
+          "labelIndex": 3,
+          "className": "Helmet",
+          "pixelCount": 1143
         },
         {
           "labelIndex": 4,
-          "className": "Helmet",
-          "pixelCount": 1285
+          "className": "First responder",
+          "pixelCount": 13726
         },
         {
-          "labelIndex": 5,
-          "className": "First responder",
-          "pixelCount": 14186
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 21083
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 21373
+          "className": "Flame",
+          "pixelCount": 7399
         },
         {
-          "labelIndex": 9,
-          "className": "Flame",
-          "pixelCount": 9918
+          "labelIndex": 11,
+          "className": "Green plant",
+          "pixelCount": 503
         },
         {
           "labelIndex": 12,
-          "className": "Green plant",
-          "pixelCount": 547
-        },
-        {
-          "labelIndex": 13,
           "className": "Building",
-          "pixelCount": 96481
+          "pixelCount": 88218
         },
         {
-          "labelIndex": 15,
+          "labelIndex": 14,
           "className": "Window",
-          "pixelCount": 6132
+          "pixelCount": 5855
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 11354
+          "pixelCount": 11160
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/e406384b-bus_explosion_in_mausoleum_FORWARD_SLASH_b5de9d9370.jpg",
@@ -31418,94 +31401,88 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 25562,
-            "score": 0.8419
+            "pixelCount": 25634,
+            "score": 0.862
           },
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 468,
-            "score": 0.767
+            "pixelCount": 529,
+            "score": 0.7299
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 12737,
-            "score": 0.9112
+            "pixelCount": 12813,
+            "score": 0.8854
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 20973,
-            "score": 0.7909
+            "pixelCount": 20791,
+            "score": 0.7851
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 4761,
-            "score": 0.8566
+            "pixelCount": 5014,
+            "score": 0.785
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 81116,
-            "score": 0.9427
+            "pixelCount": 79078,
+            "score": 0.9626
+          },
+          {
+            "labelIndex": 17,
+            "className": "Destroyed building",
+            "pixelCount": 12255,
+            "score": 0.7631
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 11894,
-            "score": 0.6118
+            "pixelCount": 11270,
+            "score": 0.6672
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 31854,
-            "score": 0.738
+            "pixelCount": 24556,
+            "score": 0.7942
           },
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 518,
-            "score": 0.74
+            "pixelCount": 508,
+            "score": 0.7852
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 13675,
-            "score": 0.8334
+            "pixelCount": 13299,
+            "score": 0.8653
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 19541,
-            "score": 0.5979
+            "pixelCount": 21671,
+            "score": 0.8601
           },
           {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 5181,
-            "score": 0.8784
-          },
-          {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 80297,
-            "score": 0.9562
-          },
-          {
-            "labelIndex": 17,
-            "className": "Destroyed building",
-            "pixelCount": 13267,
-            "score": 0.8753
+            "labelIndex": 14,
+            "className": "Window",
+            "pixelCount": 13358,
+            "score": 0.7439
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 11744,
-            "score": 0.9024
+            "pixelCount": 11465,
+            "score": 0.9217
           }
         ]
       },
@@ -31533,14 +31510,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.509
         },
         "yolo11l-seg": {
-          "classCount": 7,
-          "labeledPixels": 157511,
-          "coverage": 0.66
+          "classCount": 8,
+          "labeledPixels": 167384,
+          "coverage": 0.702
         },
         "yolo26l-seg": {
-          "classCount": 8,
-          "labeledPixels": 176077,
-          "coverage": 0.738
+          "classCount": 6,
+          "labeledPixels": 84857,
+          "coverage": 0.356
         }
       },
       "classNames": [
@@ -31550,8 +31527,8 @@ window.DETECTION_ATLAS_DATA = {
         "First responder",
         "Smoke",
         "Flame",
-        "Building",
         "Green plant",
+        "Building",
         "Window",
         "Destroyed building",
         "Dry tree",
@@ -31596,21 +31573,21 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#4B0082"
         },
         {
+          "id": "green-plant",
+          "name": "Green plant",
+          "labelIndex": 11,
+          "color": "#8A00FF"
+        },
+        {
           "id": "building",
           "name": "Building",
           "labelIndex": 12,
           "color": "#FFD600"
         },
         {
-          "id": "green-plant",
-          "name": "Green plant",
-          "labelIndex": 12,
-          "color": "#8A00FF"
-        },
-        {
           "id": "window",
           "name": "Window",
-          "labelIndex": 15,
+          "labelIndex": 14,
           "color": "#39FF14"
         },
         {
@@ -31641,8 +31618,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "9 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 9,
-        "labeledPixels": 187554,
-        "coverage": 0.786
+        "labeledPixels": 174508,
+        "coverage": 0.731
       }
     },
     {
@@ -31662,34 +31639,34 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1080 x 810",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 3076
+          "pixelCount": 2934
+        },
+        {
+          "labelIndex": 3,
+          "className": "Helmet",
+          "pixelCount": 320
         },
         {
           "labelIndex": 4,
-          "className": "Helmet",
-          "pixelCount": 365
+          "className": "First responder",
+          "pixelCount": 3701
         },
         {
-          "labelIndex": 5,
-          "className": "First responder",
-          "pixelCount": 3976
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 149329
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 200589
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 28443
+          "pixelCount": 8937
         },
         {
-          "labelIndex": 26,
+          "labelIndex": 25,
           "className": "Pole",
-          "pixelCount": 38434
+          "pixelCount": 30436
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/c8a7a68d-train_collision_in_fire_station_FORWARD_SLASH_4838b7e46f.jpg",
@@ -31872,94 +31849,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 3490,
-            "score": 0.6618
+            "pixelCount": 3876,
+            "score": 0.4945
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 2298,
-            "score": 0.5673
-          },
-          {
-            "labelIndex": 6,
-            "className": "Destroyed vehicle",
-            "pixelCount": 149036,
-            "score": 0.5185
+            "pixelCount": 1320,
+            "score": 0.7273
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 157742,
-            "score": 0.867
+            "pixelCount": 175696,
+            "score": 0.8603
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 4908,
-            "score": 0.8252
+            "pixelCount": 5148,
+            "score": 0.6926
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 2072,
-            "score": 0.5635
-          },
-          {
-            "labelIndex": 25,
-            "className": "Pole",
-            "pixelCount": 20376,
-            "score": 0.5886
+            "pixelCount": 3314,
+            "score": 0.5064
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 335,
-            "score": 0.622
+            "pixelCount": 351,
+            "score": 0.3707
           },
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 171,
-            "score": 0.5656
+            "pixelCount": 571,
+            "score": 0.4465
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 2838,
-            "score": 0.5759
+            "pixelCount": 3627,
+            "score": 0.6043
           },
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 152566,
-            "score": 0.4113
+            "pixelCount": 144948,
+            "score": 0.5014
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 171844,
-            "score": 0.8351
-          },
-          {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 4806,
-            "score": 0.501
-          },
-          {
-            "labelIndex": 23,
-            "className": "Citizen",
-            "pixelCount": 2064,
-            "score": 0.5251
-          },
-          {
-            "labelIndex": 25,
-            "className": "Pole",
-            "pixelCount": 41351,
-            "score": 0.3912
+            "pixelCount": 175890,
+            "score": 0.8669
           }
         ]
       },
@@ -31987,14 +31934,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.175
         },
         "yolo11l-seg": {
-          "classCount": 7,
-          "labeledPixels": 339922,
-          "coverage": 0.389
+          "classCount": 5,
+          "labeledPixels": 189354,
+          "coverage": 0.216
         },
         "yolo26l-seg": {
-          "classCount": 8,
-          "labeledPixels": 375975,
-          "coverage": 0.43
+          "classCount": 5,
+          "labeledPixels": 325387,
+          "coverage": 0.372
         }
       },
       "classNames": [
@@ -32048,7 +31995,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "flame",
           "name": "Flame",
-          "labelIndex": 9,
+          "labelIndex": 8,
           "color": "#4B0082"
         },
         {
@@ -32109,8 +32056,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "6 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 6,
-        "labeledPixels": 274883,
-        "coverage": 0.314
+        "labeledPixels": 195657,
+        "coverage": 0.224
       }
     },
     {
@@ -32130,59 +32077,59 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1024 x 695",
       "groundTruth": [
         {
-          "labelIndex": 3,
+          "labelIndex": 2,
           "className": "Fence",
-          "pixelCount": 120890
+          "pixelCount": 119923
+        },
+        {
+          "labelIndex": 3,
+          "className": "Helmet",
+          "pixelCount": 958
         },
         {
           "labelIndex": 4,
-          "className": "Helmet",
-          "pixelCount": 1033
+          "className": "First responder",
+          "pixelCount": 22525
         },
         {
-          "labelIndex": 5,
-          "className": "First responder",
-          "pixelCount": 23225
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 139430
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 141273
+          "className": "Flame",
+          "pixelCount": 27583
         },
         {
           "labelIndex": 9,
-          "className": "Flame",
-          "pixelCount": 28444
-        },
-        {
-          "labelIndex": 10,
           "className": "Fire hose",
-          "pixelCount": 2077
+          "pixelCount": 1731
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 76239
+          "pixelCount": 110734
         },
         {
-          "labelIndex": 28,
+          "labelIndex": 27,
           "className": "Pavement",
-          "pixelCount": 49915
+          "pixelCount": 23891
         },
         {
-          "labelIndex": 32,
+          "labelIndex": 31,
           "className": "Door",
-          "pixelCount": 29086
+          "pixelCount": 28479
         },
         {
-          "labelIndex": 45,
+          "labelIndex": 44,
           "className": "Burnt grass",
-          "pixelCount": 8478
+          "pixelCount": 8285
         },
         {
-          "labelIndex": 49,
+          "labelIndex": 48,
           "className": "Stairs",
-          "pixelCount": 9108
+          "pixelCount": 8877
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/63ef9d0e-wild_fire_in_valley_FORWARD_SLASH_00447.jpg",
@@ -32309,66 +32256,60 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 2,
-            "className": "Fence",
-            "pixelCount": 135598,
-            "score": 0.7941
-          },
-          {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 1111,
-            "score": 0.8818
+            "pixelCount": 1095,
+            "score": 0.8745
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 25838,
-            "score": 0.9399
+            "pixelCount": 26023,
+            "score": 0.9198
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 60959,
-            "score": 0.8851
+            "pixelCount": 57588,
+            "score": 0.7637
           },
           {
             "labelIndex": 9,
             "className": "Fire hose",
-            "pixelCount": 1679,
-            "score": 0.5075
+            "pixelCount": 2365,
+            "score": 0.534
           },
           {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 109642,
-            "score": 0.7688
+            "labelIndex": 16,
+            "className": "Dirt road",
+            "pixelCount": 53975,
+            "score": 0.3497
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 1081,
-            "score": 0.9094
+            "pixelCount": 1095,
+            "score": 0.9245
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 25936,
-            "score": 0.9303
+            "pixelCount": 24884,
+            "score": 0.9329
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 46748,
-            "score": 0.5123
+            "pixelCount": 77212,
+            "score": 0.4346
           },
           {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 111528,
-            "score": 0.4121
+            "labelIndex": 17,
+            "className": "Destroyed building",
+            "pixelCount": 105634,
+            "score": 0.3584
           }
         ]
       },
@@ -32396,26 +32337,27 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.241
         },
         "yolo11l-seg": {
-          "classCount": 6,
-          "labeledPixels": 334827,
-          "coverage": 0.47
+          "classCount": 5,
+          "labeledPixels": 141046,
+          "coverage": 0.198
         },
         "yolo26l-seg": {
           "classCount": 4,
-          "labeledPixels": 185293,
-          "coverage": 0.26
+          "labeledPixels": 208825,
+          "coverage": 0.293
         }
       },
       "classNames": [
         "Fence",
         "Helmet",
         "First responder",
-        "Flame",
         "Smoke",
+        "Flame",
         "Fire hose",
         "Building",
         "Window",
         "Dirt road",
+        "Destroyed building",
         "Pole",
         "Pavement",
         "Door",
@@ -32443,16 +32385,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#8A00FF"
         },
         {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
+          "color": "#FFB300"
+        },
+        {
           "id": "flame",
           "name": "Flame",
           "labelIndex": 8,
           "color": "#4B0082"
-        },
-        {
-          "id": "smoke",
-          "name": "Smoke",
-          "labelIndex": 8,
-          "color": "#FFB300"
         },
         {
           "id": "fire-hose",
@@ -32475,8 +32417,14 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dirt-road",
           "name": "Dirt road",
-          "labelIndex": 17,
+          "labelIndex": 16,
           "color": "#FF6D00"
+        },
+        {
+          "id": "destroyed-building",
+          "name": "Destroyed building",
+          "labelIndex": 17,
+          "color": "#4B0082"
         },
         {
           "id": "pole",
@@ -32487,13 +32435,13 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "pavement",
           "name": "Pavement",
-          "labelIndex": 28,
+          "labelIndex": 27,
           "color": "#FF00D4"
         },
         {
           "id": "door",
           "name": "Door",
-          "labelIndex": 32,
+          "labelIndex": 31,
           "color": "#00E676"
         },
         {
@@ -32505,21 +32453,21 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "burnt-grass",
           "name": "Burnt grass",
-          "labelIndex": 45,
+          "labelIndex": 44,
           "color": "#4B0082"
         },
         {
           "id": "stairs",
           "name": "Stairs",
-          "labelIndex": 49,
+          "labelIndex": 48,
           "color": "#8A00FF"
         }
       ],
       "summary": "11 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 11,
-        "labeledPixels": 489768,
-        "coverage": 0.688
+        "labeledPixels": 492416,
+        "coverage": 0.692
       }
     },
     {
@@ -32539,39 +32487,39 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "300 x 225",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 14217
+          "pixelCount": 12523
         },
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 2730
+          "pixelCount": 2216
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 13141
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 13878
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 3004
+          "pixelCount": 2651
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 697
+          "pixelCount": 683
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 2368
+          "pixelCount": 2208
         },
         {
-          "labelIndex": 27,
+          "labelIndex": 26,
           "className": "Boat",
-          "pixelCount": 1536
+          "pixelCount": 1405
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/a49f19c3-nuclear_explosion_in_river_FORWARD_SLASH_cf2b436483.jpg",
@@ -32700,82 +32648,52 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 2186,
-            "score": 0.7291
+            "pixelCount": 313,
+            "score": 0.6682
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 12464,
-            "score": 0.8336
-          },
-          {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 3485,
-            "score": 0.5803
-          },
-          {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 1294,
-            "score": 0.5954
+            "pixelCount": 11895,
+            "score": 0.8251
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 2372,
-            "score": 0.8578
+            "pixelCount": 1634,
+            "score": 0.8822
           },
           {
             "labelIndex": 26,
             "className": "Boat",
-            "pixelCount": 1332,
-            "score": 0.7876
+            "pixelCount": 1227,
+            "score": 0.8643
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 328,
-            "score": 0.3391
-          },
-          {
-            "labelIndex": 3,
-            "className": "Helmet",
-            "pixelCount": 67,
-            "score": 0.6405
+            "pixelCount": 321,
+            "score": 0.5666
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 12403,
-            "score": 0.8656
-          },
-          {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 2830,
-            "score": 0.6801
-          },
-          {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 1578,
-            "score": 0.4645
+            "pixelCount": 15758,
+            "score": 0.7531
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 2283,
-            "score": 0.9232
+            "pixelCount": 2157,
+            "score": 0.9026
           },
           {
             "labelIndex": 26,
             "className": "Boat",
-            "pixelCount": 1384,
-            "score": 0.6351
+            "pixelCount": 1375,
+            "score": 0.4835
           }
         ]
       },
@@ -32803,20 +32721,19 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.413
         },
         "yolo11l-seg": {
-          "classCount": 6,
-          "labeledPixels": 23133,
-          "coverage": 0.343
+          "classCount": 4,
+          "labeledPixels": 15069,
+          "coverage": 0.223
         },
         "yolo26l-seg": {
-          "classCount": 7,
-          "labeledPixels": 20873,
-          "coverage": 0.309
+          "classCount": 4,
+          "labeledPixels": 19611,
+          "coverage": 0.291
         }
       },
       "classNames": [
-        "Green tree",
         "Water",
-        "Helmet",
+        "Green tree",
         "First responder",
         "Smoke",
         "Flame",
@@ -32829,22 +32746,16 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [
         {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
           "id": "green-tree",
           "name": "Green tree",
           "labelIndex": 1,
           "color": "#FFB300"
-        },
-        {
-          "id": "water",
-          "name": "Water",
-          "labelIndex": 1,
-          "color": "#0047FF"
-        },
-        {
-          "id": "helmet",
-          "name": "Helmet",
-          "labelIndex": 3,
-          "color": "#FF6D00"
         },
         {
           "id": "first-responder",
@@ -32904,8 +32815,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "7 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 7,
-        "labeledPixels": 38430,
-        "coverage": 0.569
+        "labeledPixels": 34827,
+        "coverage": 0.516
       }
     },
     {
@@ -32925,44 +32836,44 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "900 x 675",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 187107
+          "pixelCount": 185486
         },
         {
-          "labelIndex": 5,
+          "labelIndex": 4,
           "className": "First responder",
-          "pixelCount": 1289
+          "pixelCount": 1214
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 180661
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 204651
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 25214
+          "pixelCount": 24691
         },
         {
-          "labelIndex": 12,
+          "labelIndex": 11,
           "className": "Green plant",
-          "pixelCount": 115050
+          "pixelCount": 114632
         },
         {
-          "labelIndex": 17,
+          "labelIndex": 16,
           "className": "Dirt road",
-          "pixelCount": 68358
+          "pixelCount": 67718
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 63126
+          "pixelCount": 61738
         },
         {
-          "labelIndex": 39,
+          "labelIndex": 38,
           "className": "Fire truck",
-          "pixelCount": 8765
+          "pixelCount": 8476
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/21e62969-drought_in_fire_station_FORWARD_SLASH_00289.jpg",
@@ -33115,64 +33026,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 69525,
-            "score": 0.879
+            "pixelCount": 174612,
+            "score": 0.6411
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 97217,
-            "score": 0.6695
-          },
-          {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 15732,
-            "score": 0.7693
+            "pixelCount": 116284,
+            "score": 0.5893
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 75307,
-            "score": 0.8482
+            "pixelCount": 68325,
+            "score": 0.7036
+          },
+          {
+            "labelIndex": 21,
+            "className": "Civilian vehicle",
+            "pixelCount": 44686,
+            "score": 0.7889
           },
           {
             "labelIndex": 38,
             "className": "Fire truck",
-            "pixelCount": 54149,
-            "score": 0.9233
+            "pixelCount": 9812,
+            "score": 0.6348
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 237266,
-            "score": 0.5404
+            "pixelCount": 284260,
+            "score": 0.5055
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 98519,
-            "score": 0.7608
+            "pixelCount": 99603,
+            "score": 0.6668
           },
           {
-            "labelIndex": 11,
-            "className": "Green plant",
-            "pixelCount": 53670,
-            "score": 0.5407
+            "labelIndex": 8,
+            "className": "Flame",
+            "pixelCount": 16396,
+            "score": 0.6025
           },
           {
-            "labelIndex": 16,
-            "className": "Dirt road",
-            "pixelCount": 64578,
-            "score": 0.4546
+            "labelIndex": 20,
+            "className": "Road",
+            "pixelCount": 69928,
+            "score": 0.8187
           },
           {
             "labelIndex": 38,
             "className": "Fire truck",
-            "pixelCount": 53954,
-            "score": 0.9055
+            "pixelCount": 54132,
+            "score": 0.8892
           }
         ]
       },
@@ -33201,13 +33112,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 5,
-          "labeledPixels": 311930,
-          "coverage": 0.513
+          "labeledPixels": 413719,
+          "coverage": 0.681
         },
         "yolo26l-seg": {
           "classCount": 5,
-          "labeledPixels": 507987,
-          "coverage": 0.836
+          "labeledPixels": 524319,
+          "coverage": 0.863
         }
       },
       "classNames": [
@@ -33235,7 +33146,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "first-responder",
           "name": "First responder",
-          "labelIndex": 5,
+          "labelIndex": 4,
           "color": "#8A00FF"
         },
         {
@@ -33277,7 +33188,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "civilian-vehicle",
           "name": "Civilian vehicle",
-          "labelIndex": 22,
+          "labelIndex": 21,
           "color": "#4B0082"
         },
         {
@@ -33308,8 +33219,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "8 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 8,
-        "labeledPixels": 673560,
-        "coverage": 1.109
+        "labeledPixels": 644616,
+        "coverage": 1.061
       }
     },
     {
@@ -33329,24 +33240,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1280 x 720",
       "groundTruth": [
         {
-          "labelIndex": 3,
+          "labelIndex": 2,
           "className": "Fence",
-          "pixelCount": 14518
+          "pixelCount": 7123
         },
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 13702
+          "pixelCount": 13384
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 64411
+          "pixelCount": 63773
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 31475
+          "pixelCount": 30749
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/ba7a822d-dam_with_smoke_FORWARD_SLASH_31ed5fc6aa.jpg",
@@ -33479,54 +33390,54 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
+            "labelIndex": 3,
+            "className": "Helmet",
+            "pixelCount": 1917,
+            "score": 0.5503
+          },
+          {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 25366,
-            "score": 0.6713
+            "pixelCount": 9070,
+            "score": 0.6358
           },
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 64244,
-            "score": 0.9183
+            "pixelCount": 58634,
+            "score": 0.9261
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 13572,
-            "score": 0.7676
+            "pixelCount": 12761,
+            "score": 0.8818
           },
           {
-            "labelIndex": 9,
-            "className": "Fire hose",
-            "pixelCount": 3982,
-            "score": 0.5354
+            "labelIndex": 20,
+            "className": "Road",
+            "pixelCount": 352509,
+            "score": 0.4293
           }
         ],
         "yolo26l-seg": [
           {
-            "labelIndex": 3,
-            "className": "Helmet",
-            "pixelCount": 1106,
-            "score": 0.524
-          },
-          {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 29674,
-            "score": 0.8177
+            "pixelCount": 22988,
+            "score": 0.4798
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 13722,
-            "score": 0.6137
+            "pixelCount": 14266,
+            "score": 0.798
           },
           {
             "labelIndex": 56,
             "className": "Police vehicle",
-            "pixelCount": 65062,
-            "score": 0.9885
+            "pixelCount": 59605,
+            "score": 0.9784
           }
         ]
       },
@@ -33554,14 +33465,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.212
         },
         "yolo11l-seg": {
-          "classCount": 4,
-          "labeledPixels": 107164,
-          "coverage": 0.116
+          "classCount": 5,
+          "labeledPixels": 434891,
+          "coverage": 0.472
         },
         "yolo26l-seg": {
-          "classCount": 4,
-          "labeledPixels": 109564,
-          "coverage": 0.119
+          "classCount": 3,
+          "labeledPixels": 96859,
+          "coverage": 0.105
         }
       },
       "classNames": [
@@ -33571,7 +33482,6 @@ window.DETECTION_ATLAS_DATA = {
         "Destroyed vehicle",
         "SCBA",
         "Smoke",
-        "Fire hose",
         "Mask",
         "Window",
         "Dirt road",
@@ -33587,7 +33497,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 3,
+          "labelIndex": 2,
           "color": "#FF6D00"
         },
         {
@@ -33621,12 +33531,6 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FFB300"
         },
         {
-          "id": "fire-hose",
-          "name": "Fire hose",
-          "labelIndex": 9,
-          "color": "#4B0082"
-        },
-        {
           "id": "mask",
           "name": "Mask",
           "labelIndex": 14,
@@ -33647,19 +33551,19 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "road",
           "name": "Road",
-          "labelIndex": 21,
+          "labelIndex": 20,
           "color": "#FFD600"
         },
         {
           "id": "civilian-vehicle",
           "name": "Civilian vehicle",
-          "labelIndex": 22,
+          "labelIndex": 21,
           "color": "#4B0082"
         },
         {
           "id": "citizen",
           "name": "Citizen",
-          "labelIndex": 24,
+          "labelIndex": 23,
           "color": "#FFD600"
         },
         {
@@ -33690,8 +33594,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 124106,
-        "coverage": 0.135
+        "labeledPixels": 115029,
+        "coverage": 0.125
       }
     },
     {
@@ -33711,34 +33615,34 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "652 x 367",
       "groundTruth": [
         {
-          "labelIndex": 7,
+          "labelIndex": 6,
           "className": "Destroyed vehicle",
-          "pixelCount": 21735
+          "pixelCount": 9687
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 56637
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 58987
+          "className": "Flame",
+          "pixelCount": 5863
         },
         {
-          "labelIndex": 9,
-          "className": "Flame",
-          "pixelCount": 10015
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 58924
         },
         {
           "labelIndex": 21,
-          "className": "Road",
-          "pixelCount": 76471
-        },
-        {
-          "labelIndex": 22,
           "className": "Civilian vehicle",
-          "pixelCount": 8079
+          "pixelCount": 7551
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 2963
+          "pixelCount": 2798
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/5e921b5f-bridge_on_fire_FORWARD_SLASH_c744a13775.jpg",
@@ -33891,88 +33795,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 21244,
-            "score": 0.7848
-          },
-          {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 52000,
-            "score": 0.6852
+            "pixelCount": 17364,
+            "score": 0.7769
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 13162,
-            "score": 0.8693
+            "pixelCount": 10855,
+            "score": 0.5387
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 59999,
-            "score": 0.9213
+            "pixelCount": 56123,
+            "score": 0.7716
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 9676,
-            "score": 0.506
+            "pixelCount": 9067,
+            "score": 0.6251
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 3094,
-            "score": 0.7359
-          },
-          {
-            "labelIndex": 39,
-            "className": "Cone",
-            "pixelCount": 3812,
-            "score": 0.7578
+            "pixelCount": 2767,
+            "score": 0.9068
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 2786,
-            "score": 0.8073
-          },
-          {
-            "labelIndex": 6,
-            "className": "Destroyed vehicle",
-            "pixelCount": 4706,
-            "score": 0.5762
+            "pixelCount": 2761,
+            "score": 0.9218
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 52062,
-            "score": 0.8702
+            "pixelCount": 49754,
+            "score": 0.8165
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 13358,
-            "score": 0.4237
+            "pixelCount": 12404,
+            "score": 0.779
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 60610,
-            "score": 0.9424
+            "pixelCount": 56447,
+            "score": 0.9456
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 21854,
-            "score": 0.7204
-          },
-          {
-            "labelIndex": 33,
-            "className": "Barrier",
-            "pixelCount": 4462,
-            "score": 0.397
+            "pixelCount": 20824,
+            "score": 0.6268
           }
         ]
       },
@@ -34000,14 +33880,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.492
         },
         "yolo11l-seg": {
-          "classCount": 7,
-          "labeledPixels": 162987,
-          "coverage": 0.681
+          "classCount": 5,
+          "labeledPixels": 96176,
+          "coverage": 0.402
         },
         "yolo26l-seg": {
-          "classCount": 7,
-          "labeledPixels": 159838,
-          "coverage": 0.668
+          "classCount": 5,
+          "labeledPixels": 142190,
+          "coverage": 0.594
         }
       },
       "classNames": [
@@ -34022,8 +33902,7 @@ window.DETECTION_ATLAS_DATA = {
         "Pole",
         "Pavement",
         "Door",
-        "Barrier",
-        "Cone"
+        "Barrier"
       ],
       "classLegend": [
         {
@@ -34095,21 +33974,15 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "barrier",
           "name": "Barrier",
-          "labelIndex": 33,
+          "labelIndex": 34,
           "color": "#FFB300"
-        },
-        {
-          "id": "cone",
-          "name": "Cone",
-          "labelIndex": 39,
-          "color": "#4B0082"
         }
       ],
       "summary": "6 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 6,
-        "labeledPixels": 178250,
-        "coverage": 0.745
+        "labeledPixels": 141460,
+        "coverage": 0.591
       }
     },
     {
@@ -34129,34 +34002,34 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "640 x 360",
       "groundTruth": [
         {
-          "labelIndex": 4,
+          "labelIndex": 3,
           "className": "Helmet",
-          "pixelCount": 607
+          "pixelCount": 513
         },
         {
-          "labelIndex": 5,
+          "labelIndex": 4,
           "className": "First responder",
-          "pixelCount": 7474
+          "pixelCount": 6892
+        },
+        {
+          "labelIndex": 6,
+          "className": "Destroyed vehicle",
+          "pixelCount": 34865
         },
         {
           "labelIndex": 7,
-          "className": "Destroyed vehicle",
-          "pixelCount": 35352
-        },
-        {
-          "labelIndex": 8,
           "className": "Smoke",
-          "pixelCount": 79270
+          "pixelCount": 78336
         },
         {
-          "labelIndex": 10,
+          "labelIndex": 9,
           "className": "Fire hose",
-          "pixelCount": 4518
+          "pixelCount": 1953
         },
         {
-          "labelIndex": 21,
+          "labelIndex": 20,
           "className": "Road",
-          "pixelCount": 41583
+          "pixelCount": 13054
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/9bbb72ad-train_accident_in_fire_station_FORWARD_SLASH_00014.jpg",
@@ -34279,40 +34152,46 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 6715,
-            "score": 0.8581
+            "pixelCount": 6605,
+            "score": 0.8373
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 77711,
-            "score": 0.9537
+            "pixelCount": 66829,
+            "score": 0.9354
           },
           {
             "labelIndex": 9,
             "className": "Fire hose",
-            "pixelCount": 4151,
-            "score": 0.624
+            "pixelCount": 863,
+            "score": 0.8826
+          },
+          {
+            "labelIndex": 20,
+            "className": "Road",
+            "pixelCount": 8213,
+            "score": 0.5732
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 6751,
-            "score": 0.8732
+            "pixelCount": 4680,
+            "score": 0.6907
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 75769,
-            "score": 0.8374
+            "pixelCount": 75326,
+            "score": 0.7323
           },
           {
             "labelIndex": 9,
             "className": "Fire hose",
-            "pixelCount": 4338,
-            "score": 0.4969
+            "pixelCount": 2769,
+            "score": 0.594
           }
         ]
       },
@@ -34340,20 +34219,20 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.305
         },
         "yolo11l-seg": {
-          "classCount": 3,
-          "labeledPixels": 88577,
-          "coverage": 0.384
+          "classCount": 4,
+          "labeledPixels": 82510,
+          "coverage": 0.358
         },
         "yolo26l-seg": {
           "classCount": 3,
-          "labeledPixels": 86858,
-          "coverage": 0.377
+          "labeledPixels": 82775,
+          "coverage": 0.359
         }
       },
       "classNames": [
         "Water",
-        "First responder",
         "Helmet",
+        "First responder",
         "Destroyed vehicle",
         "Smoke",
         "Fire hose",
@@ -34375,21 +34254,21 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#0047FF"
         },
         {
+          "id": "helmet",
+          "name": "Helmet",
+          "labelIndex": 3,
+          "color": "#FF6D00"
+        },
+        {
           "id": "first-responder",
           "name": "First responder",
           "labelIndex": 4,
           "color": "#8A00FF"
         },
         {
-          "id": "helmet",
-          "name": "Helmet",
-          "labelIndex": 4,
-          "color": "#FF6D00"
-        },
-        {
           "id": "destroyed-vehicle",
           "name": "Destroyed vehicle",
-          "labelIndex": 7,
+          "labelIndex": 6,
           "color": "#FF6D00"
         },
         {
@@ -34419,7 +34298,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "road",
           "name": "Road",
-          "labelIndex": 21,
+          "labelIndex": 20,
           "color": "#FFD600"
         },
         {
@@ -34462,8 +34341,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "6 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 6,
-        "labeledPixels": 168804,
-        "coverage": 0.733
+        "labeledPixels": 135613,
+        "coverage": 0.589
       }
     },
     {
@@ -34483,34 +34362,34 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "537 x 404",
       "groundTruth": [
         {
-          "labelIndex": 4,
+          "labelIndex": 3,
           "className": "Helmet",
-          "pixelCount": 1106
+          "pixelCount": 999
         },
         {
-          "labelIndex": 5,
+          "labelIndex": 4,
           "className": "First responder",
-          "pixelCount": 28364
+          "pixelCount": 27033
+        },
+        {
+          "labelIndex": 16,
+          "className": "Dirt road",
+          "pixelCount": 22182
         },
         {
           "labelIndex": 17,
-          "className": "Dirt road",
-          "pixelCount": 22549
-        },
-        {
-          "labelIndex": 18,
           "className": "Destroyed building",
-          "pixelCount": 53283
+          "pixelCount": 38227
         },
         {
-          "labelIndex": 20,
+          "labelIndex": 19,
           "className": "Dry tree",
-          "pixelCount": 18413
+          "pixelCount": 17882
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 2044
+          "pixelCount": 1951
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/d748566f-plane_accident_in_house_FORWARD_SLASH_8920c996cb.jpg",
@@ -34663,64 +34542,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 966,
-            "score": 0.8728
-          },
-          {
-            "labelIndex": 1,
-            "className": "Green tree",
-            "pixelCount": 14556,
-            "score": 0.8157
+            "pixelCount": 783,
+            "score": 0.8689
           },
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 1780,
-            "score": 0.6296
+            "pixelCount": 1174,
+            "score": 0.6563
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 28219,
-            "score": 0.7443
+            "pixelCount": 24356,
+            "score": 0.8264
+          },
+          {
+            "labelIndex": 19,
+            "className": "Dry tree",
+            "pixelCount": 13635,
+            "score": 0.7941
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 24522,
-            "score": 0.3503
+            "pixelCount": 23153,
+            "score": 0.6419
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 1150,
-            "score": 0.7913
+            "pixelCount": 1114,
+            "score": 0.9002
           },
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 15051,
-            "score": 0.8385
+            "pixelCount": 13684,
+            "score": 0.8502
           },
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 1095,
-            "score": 0.8653
+            "pixelCount": 1163,
+            "score": 0.6913
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 27222,
-            "score": 0.8554
+            "pixelCount": 28583,
+            "score": 0.7762
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 25033,
-            "score": 0.5757
+            "pixelCount": 23221,
+            "score": 0.5296
           }
         ]
       },
@@ -34749,13 +34628,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 5,
-          "labeledPixels": 70043,
-          "coverage": 0.323
+          "labeledPixels": 63101,
+          "coverage": 0.291
         },
         "yolo26l-seg": {
           "classCount": 5,
-          "labeledPixels": 69551,
-          "coverage": 0.321
+          "labeledPixels": 67765,
+          "coverage": 0.312
         }
       },
       "classNames": [
@@ -34841,19 +34720,19 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dirt-road",
           "name": "Dirt road",
-          "labelIndex": 17,
+          "labelIndex": 16,
           "color": "#FF6D00"
         },
         {
           "id": "destroyed-building",
           "name": "Destroyed building",
-          "labelIndex": 18,
+          "labelIndex": 17,
           "color": "#4B0082"
         },
         {
           "id": "dry-tree",
           "name": "Dry tree",
-          "labelIndex": 20,
+          "labelIndex": 19,
           "color": "#FFB300"
         },
         {
@@ -34865,7 +34744,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "citizen",
           "name": "Citizen",
-          "labelIndex": 24,
+          "labelIndex": 23,
           "color": "#FFD600"
         },
         {
@@ -34884,8 +34763,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "6 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 6,
-        "labeledPixels": 125759,
-        "coverage": 0.58
+        "labeledPixels": 108274,
+        "coverage": 0.499
       }
     },
     {
@@ -34905,34 +34784,34 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "403 x 284",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 1405
+          "pixelCount": 1346
         },
         {
-          "labelIndex": 3,
+          "labelIndex": 2,
           "className": "Fence",
-          "pixelCount": 9861
+          "pixelCount": 9676
         },
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 26284
+          "pixelCount": 25864
         },
         {
-          "labelIndex": 20,
+          "labelIndex": 19,
           "className": "Dry tree",
-          "pixelCount": 2968
+          "pixelCount": 2877
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 3984
+          "pixelCount": 3701
         },
         {
-          "labelIndex": 29,
+          "labelIndex": 28,
           "className": "Dry grass",
-          "pixelCount": 11424
+          "pixelCount": 11152
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/5d3ba067-wild_fire_in_snowfield_FORWARD_SLASH_6703bdc8eb.jpg",
@@ -35073,64 +34952,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 10140,
-            "score": 0.463
+            "pixelCount": 9842,
+            "score": 0.4793
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 40815,
-            "score": 0.3325
+            "pixelCount": 41981,
+            "score": 0.4389
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 10478,
-            "score": 0.7228
+            "pixelCount": 9101,
+            "score": 0.7102
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 2955,
-            "score": 0.7773
+            "pixelCount": 2272,
+            "score": 0.8957
           },
           {
             "labelIndex": 28,
             "className": "Dry grass",
-            "pixelCount": 10526,
-            "score": 0.7731
+            "pixelCount": 10847,
+            "score": 0.469
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 1441,
-            "score": 0.7704
+            "pixelCount": 4250,
+            "score": 0.6941
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 31322,
-            "score": 0.6007
+            "pixelCount": 40732,
+            "score": 0.4171
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 9814,
-            "score": 0.9665
+            "pixelCount": 9187,
+            "score": 0.9602
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 2604,
-            "score": 0.8777
+            "pixelCount": 2315,
+            "score": 0.8543
           },
           {
             "labelIndex": 28,
             "className": "Dry grass",
-            "pixelCount": 11366,
-            "score": 0.6711
+            "pixelCount": 9823,
+            "score": 0.7195
           }
         ]
       },
@@ -35159,13 +35038,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 5,
-          "labeledPixels": 74914,
-          "coverage": 0.655
+          "labeledPixels": 74043,
+          "coverage": 0.647
         },
         "yolo26l-seg": {
           "classCount": 5,
-          "labeledPixels": 56547,
-          "coverage": 0.494
+          "labeledPixels": 66307,
+          "coverage": 0.579
         }
       },
       "classNames": [
@@ -35192,7 +35071,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 3,
+          "labelIndex": 2,
           "color": "#FF6D00"
         },
         {
@@ -35228,7 +35107,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dry-tree",
           "name": "Dry tree",
-          "labelIndex": 20,
+          "labelIndex": 19,
           "color": "#FFB300"
         },
         {
@@ -35259,8 +35138,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "6 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 6,
-        "labeledPixels": 55926,
-        "coverage": 0.489
+        "labeledPixels": 54616,
+        "coverage": 0.477
       }
     },
     {
@@ -35280,24 +35159,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "504 x 378",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 2515
+          "pixelCount": 2101
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 18810
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 19289
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 2449
+          "pixelCount": 1309
         },
         {
-          "labelIndex": 29,
+          "labelIndex": 28,
           "className": "Dry grass",
-          "pixelCount": 82601
+          "pixelCount": 81625
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/1cf03b16-burned_farm_FORWARD_SLASH_00221.jpg",
@@ -35370,19 +35249,32 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 1563,
-            "score": 0.407
+            "labelIndex": 1,
+            "className": "Green tree",
+            "pixelCount": 2041,
+            "score": 0.4002
           },
           {
             "labelIndex": 28,
             "className": "Dry grass",
-            "pixelCount": 31636,
-            "score": 0.776
+            "pixelCount": 80184,
+            "score": 0.38
           }
         ],
-        "yolo26l-seg": []
+        "yolo26l-seg": [
+          {
+            "labelIndex": 1,
+            "className": "Green tree",
+            "pixelCount": 878,
+            "score": 0.5198
+          },
+          {
+            "labelIndex": 24,
+            "className": "Green grass",
+            "pixelCount": 83391,
+            "score": 0.6107
+          }
+        ]
       },
       "predictionImages": {
         "cascade-mask-rcnn": "Inc1M/cascade-mask-rcnn/visualised_samples_with_json/1cf03b16-burned_farm_FORWARD_SLASH_00221.jpg",
@@ -35409,20 +35301,21 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 2,
-          "labeledPixels": 33199,
-          "coverage": 0.174
+          "labeledPixels": 82225,
+          "coverage": 0.432
         },
         "yolo26l-seg": {
-          "classCount": 0,
-          "labeledPixels": 0,
-          "coverage": 0
+          "classCount": 2,
+          "labeledPixels": 84269,
+          "coverage": 0.442
         }
       },
       "classNames": [
         "Green tree",
-        "Flame",
         "Smoke",
+        "Flame",
         "Dry tree",
+        "Green grass",
         "Dry grass",
         "Burnt grass"
       ],
@@ -35430,7 +35323,13 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "green-tree",
           "name": "Green tree",
-          "labelIndex": 2,
+          "labelIndex": 1,
+          "color": "#FFB300"
+        },
+        {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
           "color": "#FFB300"
         },
         {
@@ -35440,16 +35339,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#4B0082"
         },
         {
-          "id": "smoke",
-          "name": "Smoke",
-          "labelIndex": 8,
-          "color": "#FFB300"
-        },
-        {
           "id": "dry-tree",
           "name": "Dry tree",
           "labelIndex": 20,
           "color": "#FFB300"
+        },
+        {
+          "id": "green-grass",
+          "name": "Green grass",
+          "labelIndex": 24,
+          "color": "#FF6D00"
         },
         {
           "id": "dry-grass",
@@ -35467,8 +35366,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 106854,
-        "coverage": 0.561
+        "labeledPixels": 103845,
+        "coverage": 0.545
       }
     },
     {
@@ -35488,34 +35387,34 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "700 x 394",
       "groundTruth": [
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 140629
+          "pixelCount": 127656
         },
         {
-          "labelIndex": 12,
+          "labelIndex": 11,
           "className": "Green plant",
-          "pixelCount": 13175
+          "pixelCount": 12626
         },
         {
-          "labelIndex": 20,
+          "labelIndex": 19,
           "className": "Dry tree",
-          "pixelCount": 4648
+          "pixelCount": 4447
         },
         {
-          "labelIndex": 29,
+          "labelIndex": 28,
           "className": "Dry grass",
-          "pixelCount": 24764
+          "pixelCount": 15499
         },
         {
-          "labelIndex": 50,
+          "labelIndex": 49,
           "className": "Dry plant",
-          "pixelCount": 7589
+          "pixelCount": 7438
         },
         {
-          "labelIndex": 59,
+          "labelIndex": 58,
           "className": "aerial vehicle",
-          "pixelCount": 5120
+          "pixelCount": 4886
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/24b0cd93-wild_fire_in_pavilion_FORWARD_SLASH_cf1dceb2fd.jpg",
@@ -35614,64 +35513,58 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 8175,
-            "score": 0.6096
+            "pixelCount": 6553,
+            "score": 0.6741
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 66692,
-            "score": 0.9478
+            "pixelCount": 65653,
+            "score": 0.7371
           },
           {
-            "labelIndex": 19,
-            "className": "Dry tree",
-            "pixelCount": 7883,
-            "score": 0.7019
+            "labelIndex": 11,
+            "className": "Green plant",
+            "pixelCount": 7386,
+            "score": 0.4119
           },
           {
             "labelIndex": 28,
             "className": "Dry grass",
-            "pixelCount": 27931,
-            "score": 0.8395
+            "pixelCount": 19163,
+            "score": 0.8881
           },
           {
             "labelIndex": 58,
             "className": "aerial vehicle",
-            "pixelCount": 5261,
-            "score": 0.969
+            "pixelCount": 5008,
+            "score": 0.9027
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 16100,
-            "score": 0.6877
+            "pixelCount": 14459,
+            "score": 0.7158
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 66566,
-            "score": 0.6486
-          },
-          {
-            "labelIndex": 11,
-            "className": "Green plant",
-            "pixelCount": 7794,
-            "score": 0.3692
+            "pixelCount": 62317,
+            "score": 0.4379
           },
           {
             "labelIndex": 28,
             "className": "Dry grass",
-            "pixelCount": 15107,
-            "score": 0.6988
+            "pixelCount": 15609,
+            "score": 0.3887
           },
           {
             "labelIndex": 58,
             "className": "aerial vehicle",
-            "pixelCount": 5346,
-            "score": 0.9793
+            "pixelCount": 4921,
+            "score": 0.9457
           }
         ]
       },
@@ -35700,19 +35593,19 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 5,
-          "labeledPixels": 115942,
-          "coverage": 0.42
+          "labeledPixels": 103763,
+          "coverage": 0.376
         },
         "yolo26l-seg": {
-          "classCount": 5,
-          "labeledPixels": 110913,
-          "coverage": 0.402
+          "classCount": 4,
+          "labeledPixels": 97306,
+          "coverage": 0.353
         }
       },
       "classNames": [
         "Green tree",
-        "Flame",
         "Smoke",
+        "Flame",
         "Green plant",
         "Dry tree",
         "Dry grass",
@@ -35727,16 +35620,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FFB300"
         },
         {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
+          "color": "#FFB300"
+        },
+        {
           "id": "flame",
           "name": "Flame",
           "labelIndex": 8,
           "color": "#4B0082"
-        },
-        {
-          "id": "smoke",
-          "name": "Smoke",
-          "labelIndex": 8,
-          "color": "#FFB300"
         },
         {
           "id": "green-plant",
@@ -35759,7 +35652,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dry-plant",
           "name": "Dry plant",
-          "labelIndex": 50,
+          "labelIndex": 49,
           "color": "#00E676"
         },
         {
@@ -35772,8 +35665,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "6 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 6,
-        "labeledPixels": 195925,
-        "coverage": 0.71
+        "labeledPixels": 172552,
+        "coverage": 0.626
       }
     },
     {
@@ -35793,29 +35686,29 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "736 x 1107",
       "groundTruth": [
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 273433
+          "pixelCount": 271648
         },
         {
-          "labelIndex": 9,
+          "labelIndex": 8,
           "className": "Flame",
-          "pixelCount": 2667
+          "pixelCount": 2527
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 514348
+          "pixelCount": 503039
         },
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 23911
+          "pixelCount": 23413
         },
         {
-          "labelIndex": 21,
+          "labelIndex": 20,
           "className": "Road",
-          "pixelCount": 34628
+          "pixelCount": 34337
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/06fa91b3-nuclear_explosion_in_city_hall_outdoor_FORWARD_SLASH_e424252479.jpg",
@@ -35950,58 +35843,52 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 147888,
-            "score": 0.8227
+            "pixelCount": 142737,
+            "score": 0.6837
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 1404,
-            "score": 0.5389
+            "pixelCount": 1260,
+            "score": 0.5659
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 461065,
-            "score": 0.8257
+            "pixelCount": 452925,
+            "score": 0.8885
+          },
+          {
+            "labelIndex": 15,
+            "className": "Debris",
+            "pixelCount": 22004,
+            "score": 0.7488
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 34691,
-            "score": 0.3819
+            "pixelCount": 33846,
+            "score": 0.7123
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 4739,
-            "score": 0.659
+            "pixelCount": 4740,
+            "score": 0.5503
           }
         ],
         "yolo26l-seg": [
           {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 141825,
-            "score": 0.8511
-          },
-          {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 520789,
-            "score": 0.7414
+            "pixelCount": 490737,
+            "score": 0.8381
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 35138,
-            "score": 0.8617
-          },
-          {
-            "labelIndex": 21,
-            "className": "Civilian vehicle",
-            "pixelCount": 9760,
-            "score": 0.6541
+            "pixelCount": 34137,
+            "score": 0.811
           }
         ]
       },
@@ -36029,14 +35916,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.791
         },
         "yolo11l-seg": {
-          "classCount": 5,
-          "labeledPixels": 649787,
-          "coverage": 0.798
+          "classCount": 6,
+          "labeledPixels": 657512,
+          "coverage": 0.807
         },
         "yolo26l-seg": {
-          "classCount": 4,
-          "labeledPixels": 707512,
-          "coverage": 0.868
+          "classCount": 2,
+          "labeledPixels": 524874,
+          "coverage": 0.644
         }
       },
       "classNames": [
@@ -36046,8 +35933,8 @@ window.DETECTION_ATLAS_DATA = {
         "Flame",
         "Building",
         "Green plant",
-        "Window",
         "Debris",
+        "Window",
         "Road",
         "Civilian vehicle",
         "Pole",
@@ -36091,16 +35978,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#8A00FF"
         },
         {
+          "id": "debris",
+          "name": "Debris",
+          "labelIndex": 15,
+          "color": "#FFB300"
+        },
+        {
           "id": "window",
           "name": "Window",
           "labelIndex": 15,
           "color": "#39FF14"
-        },
-        {
-          "id": "debris",
-          "name": "Debris",
-          "labelIndex": 16,
-          "color": "#FFB300"
         },
         {
           "id": "road",
@@ -36130,8 +36017,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "5 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 5,
-        "labeledPixels": 848987,
-        "coverage": 1.042
+        "labeledPixels": 834964,
+        "coverage": 1.025
       }
     },
     {
@@ -36151,29 +36038,29 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1200 x 630",
       "groundTruth": [
         {
-          "labelIndex": 3,
+          "labelIndex": 2,
           "className": "Fence",
-          "pixelCount": 50097
+          "pixelCount": 18037
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 9732
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 9963
+          "className": "Flame",
+          "pixelCount": 9912
         },
         {
-          "labelIndex": 9,
-          "className": "Flame",
-          "pixelCount": 13070
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 336256
         },
         {
           "labelIndex": 21,
-          "className": "Road",
-          "pixelCount": 238075
-        },
-        {
-          "labelIndex": 22,
           "className": "Civilian vehicle",
-          "pixelCount": 259325
+          "pixelCount": 184789
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/5c18c849-parking_lot_on_fire_FORWARD_SLASH_00495.jpg",
@@ -36326,46 +36213,46 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 28928,
-            "score": 0.6802
+            "pixelCount": 19698,
+            "score": 0.5848
           },
           {
-            "labelIndex": 15,
-            "className": "Debris",
-            "pixelCount": 37667,
-            "score": 0.7416
+            "labelIndex": 2,
+            "className": "Fence",
+            "pixelCount": 23442,
+            "score": 0.327
+          },
+          {
+            "labelIndex": 19,
+            "className": "Dry tree",
+            "pixelCount": 19255,
+            "score": 0.7316
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 269406,
-            "score": 0.8735
+            "pixelCount": 258975,
+            "score": 0.8295
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 17421,
-            "score": 0.6188
+            "pixelCount": 8422,
+            "score": 0.5308
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 37531,
-            "score": 0.7803
+            "pixelCount": 8780,
+            "score": 0.905
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 190401,
-            "score": 0.9177
-          },
-          {
-            "labelIndex": 38,
-            "className": "Fire truck",
-            "pixelCount": 81978,
-            "score": 0.7895
+            "pixelCount": 256596,
+            "score": 0.8464
           }
         ]
       },
@@ -36393,32 +36280,32 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.456
         },
         "yolo11l-seg": {
-          "classCount": 3,
-          "labeledPixels": 336001,
-          "coverage": 0.444
+          "classCount": 4,
+          "labeledPixels": 321370,
+          "coverage": 0.425
         },
         "yolo26l-seg": {
-          "classCount": 4,
-          "labeledPixels": 327331,
-          "coverage": 0.433
+          "classCount": 3,
+          "labeledPixels": 273798,
+          "coverage": 0.362
         }
       },
       "classNames": [
         "Green tree",
         "Fence",
         "Destroyed vehicle",
-        "Flame",
         "Smoke",
+        "Flame",
         "Green plant",
-        "Debris",
         "Window",
+        "Debris",
+        "Dry tree",
         "Ladder",
-        "Civilian vehicle",
         "Road",
+        "Civilian vehicle",
         "Green grass",
         "Pole",
-        "Door",
-        "Fire truck"
+        "Door"
       ],
       "classLegend": [
         {
@@ -36430,7 +36317,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 3,
+          "labelIndex": 2,
           "color": "#FF6D00"
         },
         {
@@ -36440,16 +36327,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FF6D00"
         },
         {
+          "id": "smoke",
+          "name": "Smoke",
+          "labelIndex": 7,
+          "color": "#FFB300"
+        },
+        {
           "id": "flame",
           "name": "Flame",
           "labelIndex": 8,
           "color": "#4B0082"
-        },
-        {
-          "id": "smoke",
-          "name": "Smoke",
-          "labelIndex": 8,
-          "color": "#FFB300"
         },
         {
           "id": "green-plant",
@@ -36458,16 +36345,22 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#8A00FF"
         },
         {
-          "id": "debris",
-          "name": "Debris",
-          "labelIndex": 15,
-          "color": "#FFB300"
-        },
-        {
           "id": "window",
           "name": "Window",
           "labelIndex": 15,
           "color": "#39FF14"
+        },
+        {
+          "id": "debris",
+          "name": "Debris",
+          "labelIndex": 16,
+          "color": "#FFB300"
+        },
+        {
+          "id": "dry-tree",
+          "name": "Dry tree",
+          "labelIndex": 19,
+          "color": "#FFB300"
         },
         {
           "id": "ladder",
@@ -36476,16 +36369,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#8A00FF"
         },
         {
+          "id": "road",
+          "name": "Road",
+          "labelIndex": 20,
+          "color": "#FFD600"
+        },
+        {
           "id": "civilian-vehicle",
           "name": "Civilian vehicle",
           "labelIndex": 21,
           "color": "#4B0082"
-        },
-        {
-          "id": "road",
-          "name": "Road",
-          "labelIndex": 21,
-          "color": "#FFD600"
         },
         {
           "id": "green-grass",
@@ -36504,19 +36397,13 @@ window.DETECTION_ATLAS_DATA = {
           "name": "Door",
           "labelIndex": 32,
           "color": "#00E676"
-        },
-        {
-          "id": "fire-truck",
-          "name": "Fire truck",
-          "labelIndex": 38,
-          "color": "#0047FF"
         }
       ],
       "summary": "5 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 5,
-        "labeledPixels": 570530,
-        "coverage": 0.755
+        "labeledPixels": 558726,
+        "coverage": 0.739
       }
     },
     {
@@ -36536,29 +36423,29 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "640 x 360",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 3264
+          "pixelCount": 3065
         },
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 7400
+          "pixelCount": 7098
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 77891
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 80153
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 36264
+          "pixelCount": 34998
         },
         {
-          "labelIndex": 18,
+          "labelIndex": 17,
           "className": "Destroyed building",
-          "pixelCount": 96622
+          "pixelCount": 91061
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/8c966860-haboob_in_fire_station_FORWARD_SLASH_00133.jpg",
@@ -36645,40 +36532,40 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 6719,
-            "score": 0.9297
+            "pixelCount": 7695,
+            "score": 0.7338
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 35296,
-            "score": 0.671
+            "pixelCount": 27227,
+            "score": 0.5601
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 95810,
-            "score": 0.906
+            "pixelCount": 83464,
+            "score": 0.9108
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 7986,
-            "score": 0.9185
+            "pixelCount": 6757,
+            "score": 0.8763
           },
           {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 67529,
-            "score": 0.8576
+            "labelIndex": 8,
+            "className": "Flame",
+            "pixelCount": 27426,
+            "score": 0.8808
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 86275,
-            "score": 0.9624
+            "pixelCount": 83416,
+            "score": 0.5543
           }
         ]
       },
@@ -36707,18 +36594,18 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 3,
-          "labeledPixels": 137825,
-          "coverage": 0.598
+          "labeledPixels": 118386,
+          "coverage": 0.514
         },
         "yolo26l-seg": {
           "classCount": 3,
-          "labeledPixels": 161790,
-          "coverage": 0.702
+          "labeledPixels": 117599,
+          "coverage": 0.51
         }
       },
       "classNames": [
-        "Green tree",
         "Water",
+        "Green tree",
         "Smoke",
         "Flame",
         "Building",
@@ -36726,16 +36613,16 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [
         {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
           "id": "green-tree",
           "name": "Green tree",
           "labelIndex": 1,
           "color": "#FFB300"
-        },
-        {
-          "id": "water",
-          "name": "Water",
-          "labelIndex": 1,
-          "color": "#0047FF"
         },
         {
           "id": "smoke",
@@ -36758,15 +36645,15 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "destroyed-building",
           "name": "Destroyed building",
-          "labelIndex": 18,
+          "labelIndex": 17,
           "color": "#4B0082"
         }
       ],
       "summary": "5 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 5,
-        "labeledPixels": 223703,
-        "coverage": 0.971
+        "labeledPixels": 214113,
+        "coverage": 0.929
       }
     },
     {
@@ -36786,29 +36673,29 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1200 x 680",
       "groundTruth": [
         {
-          "labelIndex": 3,
+          "labelIndex": 2,
           "className": "Fence",
-          "pixelCount": 22018
+          "pixelCount": 21813
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 174201
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 173873
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 28113
+          "pixelCount": 27641
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 3362
+          "pixelCount": 3197
         },
         {
-          "labelIndex": 17,
+          "labelIndex": 16,
           "className": "Dirt road",
-          "pixelCount": 161882
+          "pixelCount": 161044
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/7fe137e4-car_explosion_in_alley_FORWARD_SLASH_00001.jpg",
@@ -36869,24 +36756,18 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 206797,
-            "score": 0.9395
-          },
-          {
-            "labelIndex": 20,
-            "className": "Road",
-            "pixelCount": 191667,
-            "score": 0.6951
+            "labelIndex": 8,
+            "className": "Flame",
+            "pixelCount": 28726,
+            "score": 0.7524
           }
         ],
         "yolo26l-seg": [
           {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 199622,
-            "score": 0.9456
+            "labelIndex": 8,
+            "className": "Flame",
+            "pixelCount": 26490,
+            "score": 0.7778
           }
         ]
       },
@@ -36914,14 +36795,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.317
         },
         "yolo11l-seg": {
-          "classCount": 2,
-          "labeledPixels": 398464,
-          "coverage": 0.488
+          "classCount": 1,
+          "labeledPixels": 28726,
+          "coverage": 0.035
         },
         "yolo26l-seg": {
           "classCount": 1,
-          "labeledPixels": 199622,
-          "coverage": 0.245
+          "labeledPixels": 26490,
+          "coverage": 0.032
         }
       },
       "classNames": [
@@ -36931,7 +36812,6 @@ window.DETECTION_ATLAS_DATA = {
         "Fire hose",
         "Building",
         "Dirt road",
-        "Road",
         "Pole",
         "Burnt grass"
       ],
@@ -36939,7 +36819,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 3,
+          "labelIndex": 2,
           "color": "#FF6D00"
         },
         {
@@ -36951,7 +36831,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "flame",
           "name": "Flame",
-          "labelIndex": 9,
+          "labelIndex": 8,
           "color": "#4B0082"
         },
         {
@@ -36963,20 +36843,14 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "building",
           "name": "Building",
-          "labelIndex": 13,
+          "labelIndex": 12,
           "color": "#FFD600"
         },
         {
           "id": "dirt-road",
           "name": "Dirt road",
-          "labelIndex": 17,
+          "labelIndex": 16,
           "color": "#FF6D00"
-        },
-        {
-          "id": "road",
-          "name": "Road",
-          "labelIndex": 20,
-          "color": "#FFD600"
         },
         {
           "id": "pole",
@@ -36994,8 +36868,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "5 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 5,
-        "labeledPixels": 389248,
-        "coverage": 0.477
+        "labeledPixels": 387896,
+        "coverage": 0.475
       }
     },
     {
@@ -37015,24 +36889,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "4173 x 3134",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 501067
+          "pixelCount": 430170
         },
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 5017052
+          "pixelCount": 4939217
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 3182026
+          "pixelCount": 3168556
         },
         {
-          "labelIndex": 29,
+          "labelIndex": 28,
           "className": "Dry grass",
-          "pixelCount": 207708
+          "pixelCount": 124315
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/001dbde0-plane_crash_in_mosque_outdoor_FORWARD_SLASH_00331.jpg",
@@ -37131,52 +37005,46 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 293528,
-            "score": 0.4933
-          },
-          {
-            "labelIndex": 4,
-            "className": "First responder",
-            "pixelCount": 1383471,
-            "score": 0.729
+            "pixelCount": 321003,
+            "score": 0.5878
           },
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 4468961,
-            "score": 0.9338
-          },
-          {
-            "labelIndex": 19,
-            "className": "Dry tree",
-            "pixelCount": 38234,
-            "score": 0.3786
+            "pixelCount": 4077293,
+            "score": 0.9536
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 1717167,
-            "score": 0.7983
+            "pixelCount": 3045860,
+            "score": 0.9107
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 346656,
-            "score": 0.4898
+            "pixelCount": 276006,
+            "score": 0.4625
+          },
+          {
+            "labelIndex": 3,
+            "className": "Helmet",
+            "pixelCount": 92345,
+            "score": 0.637
           },
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 4414697,
-            "score": 0.931
+            "pixelCount": 4120434,
+            "score": 0.8699
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 3147250,
-            "score": 0.866
+            "pixelCount": 2304539,
+            "score": 0.7364
           }
         ]
       },
@@ -37204,22 +37072,22 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.314
         },
         "yolo11l-seg": {
-          "classCount": 5,
-          "labeledPixels": 7901361,
-          "coverage": 0.604
+          "classCount": 3,
+          "labeledPixels": 7444156,
+          "coverage": 0.569
         },
         "yolo26l-seg": {
-          "classCount": 3,
-          "labeledPixels": 7908603,
-          "coverage": 0.605
+          "classCount": 4,
+          "labeledPixels": 6793324,
+          "coverage": 0.519
         }
       },
       "classNames": [
         "Green tree",
+        "Helmet",
         "First responder",
         "Destroyed vehicle",
         "Debris",
-        "Dry tree",
         "Citizen",
         "Green grass",
         "Dry grass",
@@ -37235,9 +37103,15 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FFB300"
         },
         {
+          "id": "helmet",
+          "name": "Helmet",
+          "labelIndex": 3,
+          "color": "#FF6D00"
+        },
+        {
           "id": "first-responder",
           "name": "First responder",
-          "labelIndex": 4,
+          "labelIndex": 5,
           "color": "#8A00FF"
         },
         {
@@ -37250,12 +37124,6 @@ window.DETECTION_ATLAS_DATA = {
           "id": "debris",
           "name": "Debris",
           "labelIndex": 15,
-          "color": "#FFB300"
-        },
-        {
-          "id": "dry-tree",
-          "name": "Dry tree",
-          "labelIndex": 19,
           "color": "#FFB300"
         },
         {
@@ -37273,7 +37141,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dry-grass",
           "name": "Dry grass",
-          "labelIndex": 29,
+          "labelIndex": 28,
           "color": "#0047FF"
         },
         {
@@ -37298,8 +37166,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 8907853,
-        "coverage": 0.681
+        "labeledPixels": 8662258,
+        "coverage": 0.662
       }
     },
     {
@@ -37319,49 +37187,49 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1024 x 512",
       "groundTruth": [
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 84864
+          "pixelCount": 28498
+        },
+        {
+          "labelIndex": 8,
+          "className": "Flame",
+          "pixelCount": 9067
         },
         {
           "labelIndex": 9,
-          "className": "Flame",
-          "pixelCount": 10179
-        },
-        {
-          "labelIndex": 10,
           "className": "Fire hose",
-          "pixelCount": 686
+          "pixelCount": 553
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 31306
+          "pixelCount": 29113
         },
         {
-          "labelIndex": 20,
+          "labelIndex": 19,
           "className": "Dry tree",
-          "pixelCount": 90035
+          "pixelCount": 88886
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 3245
+          "pixelCount": 3169
         },
         {
-          "labelIndex": 26,
+          "labelIndex": 25,
           "className": "Pole",
-          "pixelCount": 47825
+          "pixelCount": 46469
         },
         {
-          "labelIndex": 32,
+          "labelIndex": 31,
           "className": "Door",
-          "pixelCount": 3562
+          "pixelCount": 3413
         },
         {
-          "labelIndex": 42,
+          "labelIndex": 41,
           "className": "Tower",
-          "pixelCount": 443
+          "pixelCount": 377
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/7859a819-earthquake_in_diner_outdoor_FORWARD_SLASH_00006.jpg",
@@ -37466,52 +37334,58 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 118614,
-            "score": 0.9111
+            "pixelCount": 120824,
+            "score": 0.8597
+          },
+          {
+            "labelIndex": 2,
+            "className": "Fence",
+            "pixelCount": 30997,
+            "score": 0.8087
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 130915,
-            "score": 0.6726
+            "pixelCount": 180952,
+            "score": 0.7388
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 5831,
-            "score": 0.5652
-          },
-          {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 30445,
-            "score": 0.7776
+            "pixelCount": 5987,
+            "score": 0.3912
           },
           {
             "labelIndex": 25,
             "className": "Pole",
-            "pixelCount": 51742,
-            "score": 0.6825
+            "pixelCount": 47623,
+            "score": 0.7382
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 118745,
-            "score": 0.9334
+            "pixelCount": 122052,
+            "score": 0.7438
           },
           {
-            "labelIndex": 2,
-            "className": "Fence",
-            "pixelCount": 30221,
-            "score": 0.5809
+            "labelIndex": 7,
+            "className": "Smoke",
+            "pixelCount": 109160,
+            "score": 0.3415
+          },
+          {
+            "labelIndex": 12,
+            "className": "Building",
+            "pixelCount": 27944,
+            "score": 0.836
           },
           {
             "labelIndex": 25,
             "className": "Pole",
-            "pixelCount": 37925,
-            "score": 0.6816
+            "pixelCount": 39975,
+            "score": 0.9126
           }
         ]
       },
@@ -37540,13 +37414,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 5,
-          "labeledPixels": 337547,
-          "coverage": 0.644
+          "labeledPixels": 386383,
+          "coverage": 0.737
         },
         "yolo26l-seg": {
-          "classCount": 3,
-          "labeledPixels": 186891,
-          "coverage": 0.356
+          "classCount": 4,
+          "labeledPixels": 299131,
+          "coverage": 0.571
         }
       },
       "classNames": [
@@ -37590,7 +37464,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fire-hose",
           "name": "Fire hose",
-          "labelIndex": 10,
+          "labelIndex": 9,
           "color": "#4B0082"
         },
         {
@@ -37602,13 +37476,13 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dry-tree",
           "name": "Dry tree",
-          "labelIndex": 20,
+          "labelIndex": 19,
           "color": "#FFB300"
         },
         {
           "id": "civilian-vehicle",
           "name": "Civilian vehicle",
-          "labelIndex": 22,
+          "labelIndex": 21,
           "color": "#4B0082"
         },
         {
@@ -37620,21 +37494,21 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "door",
           "name": "Door",
-          "labelIndex": 32,
+          "labelIndex": 31,
           "color": "#00E676"
         },
         {
           "id": "tower",
           "name": "Tower",
-          "labelIndex": 42,
+          "labelIndex": 41,
           "color": "#FF6D00"
         }
       ],
       "summary": "9 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 9,
-        "labeledPixels": 272145,
-        "coverage": 0.519
+        "labeledPixels": 209545,
+        "coverage": 0.4
       }
     },
     {
@@ -37654,19 +37528,19 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "3888 x 2592",
       "groundTruth": [
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 548556
+          "pixelCount": 384465
         },
         {
-          "labelIndex": 9,
+          "labelIndex": 8,
           "className": "Flame",
-          "pixelCount": 86849
+          "pixelCount": 85516
         },
         {
-          "labelIndex": 12,
+          "labelIndex": 11,
           "className": "Green plant",
-          "pixelCount": 1497769
+          "pixelCount": 1490100
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/ed6aee85-mountain_on_fire_FORWARD_SLASH_00085.jpg",
@@ -37739,30 +37613,24 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 732161,
-            "score": 0.7428
+            "labelIndex": 8,
+            "className": "Flame",
+            "pixelCount": 77289,
+            "score": 0.7809
           },
           {
-            "labelIndex": 11,
-            "className": "Green plant",
-            "pixelCount": 1983141,
-            "score": 0.5698
+            "labelIndex": 24,
+            "className": "Green grass",
+            "pixelCount": 1982060,
+            "score": 0.9137
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 64169,
-            "score": 0.803
-          },
-          {
-            "labelIndex": 24,
-            "className": "Green grass",
-            "pixelCount": 2121252,
-            "score": 0.6515
+            "pixelCount": 73681,
+            "score": 0.4412
           }
         ]
       },
@@ -37791,13 +37659,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 2,
-          "labeledPixels": 2715302,
-          "coverage": 0.269
+          "labeledPixels": 2059349,
+          "coverage": 0.204
         },
         "yolo26l-seg": {
-          "classCount": 2,
-          "labeledPixels": 2185421,
-          "coverage": 0.217
+          "classCount": 1,
+          "labeledPixels": 73681,
+          "coverage": 0.007
         }
       },
       "classNames": [
@@ -37856,8 +37724,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "3 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 3,
-        "labeledPixels": 2133174,
-        "coverage": 0.212
+        "labeledPixels": 1960081,
+        "coverage": 0.194
       }
     },
     {
@@ -37877,14 +37745,14 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1588 x 2048",
       "groundTruth": [
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 855042
+          "pixelCount": 840680
         },
         {
-          "labelIndex": 45,
+          "labelIndex": 44,
           "className": "Burnt grass",
-          "pixelCount": 696849
+          "pixelCount": 450365
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/6318df7b-fire_whirl_in_building_facade_FORWARD_SLASH_00249.jpg",
@@ -37923,22 +37791,16 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 878098,
-            "score": 0.6082
-          },
-          {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 1817382,
-            "score": 0.5749
+            "pixelCount": 1115646,
+            "score": 0.4587
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 983066,
-            "score": 0.6954
+            "pixelCount": 906914,
+            "score": 0.5976
           }
         ]
       },
@@ -37966,20 +37828,19 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.292
         },
         "yolo11l-seg": {
-          "classCount": 2,
-          "labeledPixels": 2695480,
-          "coverage": 0.829
+          "classCount": 1,
+          "labeledPixels": 1115646,
+          "coverage": 0.343
         },
         "yolo26l-seg": {
           "classCount": 1,
-          "labeledPixels": 983066,
-          "coverage": 0.302
+          "labeledPixels": 906914,
+          "coverage": 0.279
         }
       },
       "classNames": [
         "Green tree",
         "Smoke",
-        "Flame",
         "Burnt grass"
       ],
       "classLegend": [
@@ -37996,23 +37857,17 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FFB300"
         },
         {
-          "id": "flame",
-          "name": "Flame",
-          "labelIndex": 8,
-          "color": "#4B0082"
-        },
-        {
           "id": "burnt-grass",
           "name": "Burnt grass",
-          "labelIndex": 45,
+          "labelIndex": 44,
           "color": "#4B0082"
         }
       ],
       "summary": "2 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 2,
-        "labeledPixels": 1551891,
-        "coverage": 0.477
+        "labeledPixels": 1291045,
+        "coverage": 0.397
       }
     },
     {
@@ -38032,44 +37887,44 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "771 x 535",
       "groundTruth": [
         {
-          "labelIndex": 3,
+          "labelIndex": 2,
           "className": "Fence",
-          "pixelCount": 23608
+          "pixelCount": 23020
         },
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 133962
+          "pixelCount": 132842
+        },
+        {
+          "labelIndex": 11,
+          "className": "Green plant",
+          "pixelCount": 1486
         },
         {
           "labelIndex": 12,
-          "className": "Green plant",
-          "pixelCount": 1504
+          "className": "Building",
+          "pixelCount": 3842
         },
         {
-          "labelIndex": 13,
-          "className": "Building",
-          "pixelCount": 4026
+          "labelIndex": 15,
+          "className": "Debris",
+          "pixelCount": 30610
         },
         {
           "labelIndex": 16,
-          "className": "Debris",
-          "pixelCount": 35758
-        },
-        {
-          "labelIndex": 17,
           "className": "Dirt road",
-          "pixelCount": 16647
+          "pixelCount": 9685
         },
         {
-          "labelIndex": 26,
+          "labelIndex": 25,
           "className": "Pole",
-          "pixelCount": 32982
+          "pixelCount": 32305
         },
         {
-          "labelIndex": 31,
+          "labelIndex": 30,
           "className": "Excavator",
-          "pixelCount": 1515
+          "pixelCount": 1447
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/c41cf413-bicycle_disaster_in_museum_outdoor_FORWARD_SLASH_00303.jpg",
@@ -38226,84 +38081,72 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 1,
-            "className": "Green tree",
-            "pixelCount": 1555,
-            "score": 0.7684
-          },
-          {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 138890,
-            "score": 0.9618
-          },
-          {
-            "labelIndex": 11,
-            "className": "Green plant",
-            "pixelCount": 636,
-            "score": 0.5484
+            "pixelCount": 135953,
+            "score": 0.908
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 5826,
-            "score": 0.8767
+            "pixelCount": 5985,
+            "score": 0.9101
           },
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 6465,
-            "score": 0.7061
+            "pixelCount": 5854,
+            "score": 0.8992
+          },
+          {
+            "labelIndex": 16,
+            "className": "Dirt road",
+            "pixelCount": 4714,
+            "score": 0.3103
+          },
+          {
+            "labelIndex": 20,
+            "className": "Road",
+            "pixelCount": 2495,
+            "score": 0.4025
+          },
+          {
+            "labelIndex": 25,
+            "className": "Pole",
+            "pixelCount": 35970,
+            "score": 0.5441
           },
           {
             "labelIndex": 30,
             "className": "Excavator",
-            "pixelCount": 1571,
-            "score": 0.868
+            "pixelCount": 1552,
+            "score": 0.8127
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 139026,
-            "score": 0.9652
+            "pixelCount": 141159,
+            "score": 0.9489
           },
           {
             "labelIndex": 11,
             "className": "Green plant",
-            "pixelCount": 1573,
-            "score": 0.7708
+            "pixelCount": 2182,
+            "score": 0.7513
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 28063,
-            "score": 0.6302
-          },
-          {
-            "labelIndex": 15,
-            "className": "Debris",
-            "pixelCount": 18365,
-            "score": 0.4752
-          },
-          {
-            "labelIndex": 16,
-            "className": "Dirt road",
-            "pixelCount": 11629,
-            "score": 0.4989
+            "pixelCount": 5815,
+            "score": 0.5501
           },
           {
             "labelIndex": 25,
             "className": "Pole",
-            "pixelCount": 30763,
-            "score": 0.8279
-          },
-          {
-            "labelIndex": 30,
-            "className": "Excavator",
-            "pixelCount": 1590,
-            "score": 0.4311
+            "pixelCount": 40132,
+            "score": 0.5499
           }
         ]
       },
@@ -38331,18 +38174,17 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.54
         },
         "yolo11l-seg": {
-          "classCount": 6,
-          "labeledPixels": 154943,
-          "coverage": 0.376
+          "classCount": 7,
+          "labeledPixels": 192523,
+          "coverage": 0.467
         },
         "yolo26l-seg": {
-          "classCount": 7,
-          "labeledPixels": 231009,
-          "coverage": 0.56
+          "classCount": 4,
+          "labeledPixels": 189288,
+          "coverage": 0.459
         }
       },
       "classNames": [
-        "Green tree",
         "Water",
         "Fence",
         "Destroyed vehicle",
@@ -38351,6 +38193,7 @@ window.DETECTION_ATLAS_DATA = {
         "Building",
         "Debris",
         "Dirt road",
+        "Road",
         "Wall",
         "Pole",
         "Excavator",
@@ -38358,12 +38201,6 @@ window.DETECTION_ATLAS_DATA = {
         "Burnt grass"
       ],
       "classLegend": [
-        {
-          "id": "green-tree",
-          "name": "Green tree",
-          "labelIndex": 1,
-          "color": "#FFB300"
-        },
         {
           "id": "water",
           "name": "Water",
@@ -38373,7 +38210,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 3,
+          "labelIndex": 2,
           "color": "#FF6D00"
         },
         {
@@ -38413,6 +38250,12 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FF6D00"
         },
         {
+          "id": "road",
+          "name": "Road",
+          "labelIndex": 20,
+          "color": "#FFD600"
+        },
+        {
           "id": "wall",
           "name": "Wall",
           "labelIndex": 23,
@@ -38446,8 +38289,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "8 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 8,
-        "labeledPixels": 250002,
-        "coverage": 0.606
+        "labeledPixels": 235237,
+        "coverage": 0.57
       }
     },
     {
@@ -38467,14 +38310,14 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "675 x 900",
       "groundTruth": [
         {
-          "labelIndex": 9,
+          "labelIndex": 8,
           "className": "Flame",
-          "pixelCount": 106313
+          "pixelCount": 108217
         },
         {
-          "labelIndex": 23,
+          "labelIndex": 22,
           "className": "Wall",
-          "pixelCount": 409926
+          "pixelCount": 601445
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/5e553b55-fire_whirl_in_landfill_FORWARD_SLASH_00017.jpg",
@@ -38509,26 +38352,19 @@ window.DETECTION_ATLAS_DATA = {
             "score": 0.7144
           }
         ],
-        "yolo11l-seg": [
-          {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 149244,
-            "score": 0.8191
-          }
-        ],
+        "yolo11l-seg": [],
         "yolo26l-seg": [
           {
-            "labelIndex": 6,
-            "className": "Destroyed vehicle",
-            "pixelCount": 63911,
-            "score": 0.6466
-          },
-          {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 122365,
-            "score": 0.7137
+            "pixelCount": 114283,
+            "score": 0.4906
+          },
+          {
+            "labelIndex": 23,
+            "className": "Citizen",
+            "pixelCount": 60685,
+            "score": 0.6515
           }
         ]
       },
@@ -38556,29 +38392,23 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.128
         },
         "yolo11l-seg": {
-          "classCount": 1,
-          "labeledPixels": 149244,
-          "coverage": 0.246
+          "classCount": 0,
+          "labeledPixels": 0,
+          "coverage": 0
         },
         "yolo26l-seg": {
           "classCount": 2,
-          "labeledPixels": 186276,
-          "coverage": 0.307
+          "labeledPixels": 174968,
+          "coverage": 0.288
         }
       },
       "classNames": [
-        "Destroyed vehicle",
         "Flame",
         "Wall",
+        "Citizen",
         "Burnt tree"
       ],
       "classLegend": [
-        {
-          "id": "destroyed-vehicle",
-          "name": "Destroyed vehicle",
-          "labelIndex": 6,
-          "color": "#FF6D00"
-        },
         {
           "id": "flame",
           "name": "Flame",
@@ -38588,8 +38418,14 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "wall",
           "name": "Wall",
-          "labelIndex": 23,
+          "labelIndex": 22,
           "color": "#FF00D4"
+        },
+        {
+          "id": "citizen",
+          "name": "Citizen",
+          "labelIndex": 23,
+          "color": "#FFD600"
         },
         {
           "id": "burnt-tree",
@@ -38601,8 +38437,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "2 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 2,
-        "labeledPixels": 516239,
-        "coverage": 0.85
+        "labeledPixels": 709662,
+        "coverage": 1.168
       }
     },
     {
@@ -38622,24 +38458,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "615 x 615",
       "groundTruth": [
         {
-          "labelIndex": 7,
+          "labelIndex": 6,
           "className": "Destroyed vehicle",
-          "pixelCount": 43523
+          "pixelCount": 43231
+        },
+        {
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 46880
         },
         {
           "labelIndex": 21,
-          "className": "Road",
-          "pixelCount": 47061
-        },
-        {
-          "labelIndex": 22,
           "className": "Civilian vehicle",
-          "pixelCount": 504
+          "pixelCount": 487
         },
         {
-          "labelIndex": 29,
+          "labelIndex": 28,
           "className": "Dry grass",
-          "pixelCount": 58948
+          "pixelCount": 58446
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/6a27ade9-car_disaster_in_stadium_FORWARD_SLASH_9408391efc.jpg",
@@ -38726,28 +38562,22 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 55246,
-            "score": 0.6329
+            "pixelCount": 50792,
+            "score": 0.4747
           },
           {
-            "labelIndex": 15,
-            "className": "Debris",
-            "pixelCount": 9371,
-            "score": 0.4637
+            "labelIndex": 20,
+            "className": "Road",
+            "pixelCount": 48373,
+            "score": 0.3203
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 46594,
-            "score": 0.5298
-          },
-          {
-            "labelIndex": 20,
-            "className": "Road",
-            "pixelCount": 49629,
-            "score": 0.6261
+            "pixelCount": 53532,
+            "score": 0.5518
           }
         ]
       },
@@ -38776,13 +38606,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 2,
-          "labeledPixels": 64617,
-          "coverage": 0.171
+          "labeledPixels": 99165,
+          "coverage": 0.262
         },
         "yolo26l-seg": {
-          "classCount": 2,
-          "labeledPixels": 96223,
-          "coverage": 0.254
+          "classCount": 1,
+          "labeledPixels": 53532,
+          "coverage": 0.142
         }
       },
       "classNames": [
@@ -38792,8 +38622,8 @@ window.DETECTION_ATLAS_DATA = {
         "Debris",
         "Road",
         "Civilian vehicle",
-        "Pavement",
-        "Dry grass"
+        "Dry grass",
+        "Pavement"
       ],
       "classLegend": [
         {
@@ -38817,7 +38647,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "debris",
           "name": "Debris",
-          "labelIndex": 15,
+          "labelIndex": 16,
           "color": "#FFB300"
         },
         {
@@ -38829,27 +38659,27 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "civilian-vehicle",
           "name": "Civilian vehicle",
-          "labelIndex": 22,
+          "labelIndex": 21,
           "color": "#4B0082"
+        },
+        {
+          "id": "dry-grass",
+          "name": "Dry grass",
+          "labelIndex": 28,
+          "color": "#0047FF"
         },
         {
           "id": "pavement",
           "name": "Pavement",
           "labelIndex": 28,
           "color": "#FF00D4"
-        },
-        {
-          "id": "dry-grass",
-          "name": "Dry grass",
-          "labelIndex": 29,
-          "color": "#0047FF"
         }
       ],
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 150036,
-        "coverage": 0.397
+        "labeledPixels": 149044,
+        "coverage": 0.394
       }
     },
     {
@@ -38869,24 +38699,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "640 x 480",
       "groundTruth": [
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 19831
+          "pixelCount": 19192
         },
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 83706
+          "pixelCount": 41126
         },
         {
-          "labelIndex": 18,
+          "labelIndex": 17,
           "className": "Destroyed building",
-          "pixelCount": 50716
+          "pixelCount": 49887
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 15595
+          "pixelCount": 14840
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/aeaf667b-earthquake_in_schoolhouse_FORWARD_SLASH_4b86fdfb17.jpg",
@@ -39009,64 +38839,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 4146,
-            "score": 0.5565
+            "pixelCount": 2190,
+            "score": 0.5341
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 23289,
-            "score": 0.5414
+            "pixelCount": 5552,
+            "score": 0.6041
           },
           {
-            "labelIndex": 22,
-            "className": "Wall",
-            "pixelCount": 7425,
-            "score": 0.7639
+            "labelIndex": 12,
+            "className": "Building",
+            "pixelCount": 7364,
+            "score": 0.577
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 45388,
-            "score": 0.5628
+            "pixelCount": 34963,
+            "score": 0.4931
           },
           {
             "labelIndex": 43,
             "className": "Military personnel",
-            "pixelCount": 1733,
-            "score": 0.5268
+            "pixelCount": 1878,
+            "score": 0.4362
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 3,
             "className": "Helmet",
-            "pixelCount": 3548,
-            "score": 0.7148
+            "pixelCount": 3112,
+            "score": 0.576
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 23649,
-            "score": 0.5741
+            "pixelCount": 20244,
+            "score": 0.5417
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 7444,
-            "score": 0.6714
-          },
-          {
-            "labelIndex": 15,
-            "className": "Debris",
-            "pixelCount": 41087,
-            "score": 0.8863
+            "pixelCount": 7368,
+            "score": 0.4732
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 41209,
-            "score": 0.586
+            "pixelCount": 40889,
+            "score": 0.6141
+          },
+          {
+            "labelIndex": 43,
+            "className": "Military personnel",
+            "pixelCount": 9969,
+            "score": 0.5316
           }
         ]
       },
@@ -39095,13 +38925,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 5,
-          "labeledPixels": 81981,
-          "coverage": 0.267
+          "labeledPixels": 51947,
+          "coverage": 0.169
         },
         "yolo26l-seg": {
           "classCount": 5,
-          "labeledPixels": 116937,
-          "coverage": 0.381
+          "labeledPixels": 81582,
+          "coverage": 0.266
         }
       },
       "classNames": [
@@ -39112,8 +38942,8 @@ window.DETECTION_ATLAS_DATA = {
         "Mask",
         "Debris",
         "Destroyed building",
-        "Wall",
         "Citizen",
+        "Wall",
         "Pole",
         "Hole in the ground",
         "Bag",
@@ -39160,20 +38990,20 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "destroyed-building",
           "name": "Destroyed building",
-          "labelIndex": 18,
+          "labelIndex": 17,
           "color": "#4B0082"
-        },
-        {
-          "id": "wall",
-          "name": "Wall",
-          "labelIndex": 22,
-          "color": "#FF00D4"
         },
         {
           "id": "citizen",
           "name": "Citizen",
           "labelIndex": 23,
           "color": "#FFD600"
+        },
+        {
+          "id": "wall",
+          "name": "Wall",
+          "labelIndex": 23,
+          "color": "#FF00D4"
         },
         {
           "id": "pole",
@@ -39209,8 +39039,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 169848,
-        "coverage": 0.553
+        "labeledPixels": 125045,
+        "coverage": 0.407
       }
     },
     {
@@ -39230,14 +39060,14 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "991 x 557",
       "groundTruth": [
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 221996
+          "pixelCount": 177800
         },
         {
-          "labelIndex": 45,
+          "labelIndex": 44,
           "className": "Burnt grass",
-          "pixelCount": 261954
+          "pixelCount": 284357
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/fbe97915-burned_port_FORWARD_SLASH_00008.jpg",
@@ -39288,30 +39118,23 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 19,
             "className": "Dry tree",
-            "pixelCount": 71807,
-            "score": 0.3806
+            "pixelCount": 72715,
+            "score": 0.3991
+          },
+          {
+            "labelIndex": 36,
+            "className": "Burnt tree",
+            "pixelCount": 3646,
+            "score": 0.4346
           },
           {
             "labelIndex": 44,
             "className": "Burnt grass",
-            "pixelCount": 321498,
-            "score": 0.7914
+            "pixelCount": 314399,
+            "score": 0.925
           }
         ],
-        "yolo26l-seg": [
-          {
-            "labelIndex": 19,
-            "className": "Dry tree",
-            "pixelCount": 120606,
-            "score": 0.7374
-          },
-          {
-            "labelIndex": 44,
-            "className": "Burnt grass",
-            "pixelCount": 354033,
-            "score": 0.9578
-          }
-        ]
+        "yolo26l-seg": []
       },
       "predictionImages": {
         "cascade-mask-rcnn": "Inc1M/cascade-mask-rcnn/visualised_samples_with_json/fbe97915-burned_port_FORWARD_SLASH_00008.jpg",
@@ -39337,14 +39160,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.592
         },
         "yolo11l-seg": {
-          "classCount": 2,
-          "labeledPixels": 393305,
-          "coverage": 0.713
+          "classCount": 3,
+          "labeledPixels": 390760,
+          "coverage": 0.708
         },
         "yolo26l-seg": {
-          "classCount": 2,
-          "labeledPixels": 474639,
-          "coverage": 0.86
+          "classCount": 0,
+          "labeledPixels": 0,
+          "coverage": 0
         }
       },
       "classNames": [
@@ -39364,7 +39187,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "debris",
           "name": "Debris",
-          "labelIndex": 16,
+          "labelIndex": 15,
           "color": "#FFB300"
         },
         {
@@ -39376,7 +39199,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "burnt-tree",
           "name": "Burnt tree",
-          "labelIndex": 37,
+          "labelIndex": 36,
           "color": "#FF1744"
         },
         {
@@ -39389,8 +39212,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "2 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 2,
-        "labeledPixels": 483950,
-        "coverage": 0.877
+        "labeledPixels": 462157,
+        "coverage": 0.837
       }
     },
     {
@@ -39410,24 +39233,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "823 x 516",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 26052
+          "pixelCount": 25000
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 60329
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 60918
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 901
+          "pixelCount": 880
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 37355
+          "pixelCount": 35013
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/0261f979-nuclear_power_plant_on_fire_FORWARD_SLASH_00056.jpg",
@@ -39526,64 +39349,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 29487,
-            "score": 0.8321
+            "pixelCount": 27973,
+            "score": 0.8918
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 51965,
-            "score": 0.9377
-          },
-          {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 907,
-            "score": 0.8104
+            "pixelCount": 48181,
+            "score": 0.8984
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 35508,
-            "score": 0.5639
+            "pixelCount": 3626,
+            "score": 0.8381
           },
           {
-            "labelIndex": 41,
-            "className": "Tower",
-            "pixelCount": 6576,
-            "score": 0.5114
+            "labelIndex": 25,
+            "className": "Pole",
+            "pixelCount": 2351,
+            "score": 0.5901
+          },
+          {
+            "labelIndex": 58,
+            "className": "aerial vehicle",
+            "pixelCount": 2599,
+            "score": 0.3418
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 29472,
-            "score": 0.7368
+            "pixelCount": 27999,
+            "score": 0.8932
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 50865,
-            "score": 0.9489
+            "pixelCount": 48886,
+            "score": 0.9126
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 987,
-            "score": 0.8973
+            "pixelCount": 840,
+            "score": 0.7861
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 26317,
-            "score": 0.682
+            "pixelCount": 4252,
+            "score": 0.6394
           },
           {
             "labelIndex": 25,
             "className": "Pole",
-            "pixelCount": 2318,
-            "score": 0.3158
+            "pixelCount": 2352,
+            "score": 0.4063
           }
         ]
       },
@@ -39612,13 +39435,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 5,
-          "labeledPixels": 124443,
-          "coverage": 0.293
+          "labeledPixels": 84730,
+          "coverage": 0.2
         },
         "yolo26l-seg": {
           "classCount": 5,
-          "labeledPixels": 109959,
-          "coverage": 0.259
+          "labeledPixels": 84329,
+          "coverage": 0.199
         }
       },
       "classNames": [
@@ -39628,7 +39451,7 @@ window.DETECTION_ATLAS_DATA = {
         "Building",
         "Green grass",
         "Pole",
-        "Tower"
+        "aerial vehicle"
       ],
       "classLegend": [
         {
@@ -39668,17 +39491,17 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#00FFD1"
         },
         {
-          "id": "tower",
-          "name": "Tower",
-          "labelIndex": 41,
-          "color": "#FF6D00"
+          "id": "aerial-vehicle",
+          "name": "aerial vehicle",
+          "labelIndex": 58,
+          "color": "#8A00FF"
         }
       ],
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 125226,
-        "coverage": 0.295
+        "labeledPixels": 121222,
+        "coverage": 0.285
       }
     },
     {
@@ -39698,19 +39521,19 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "615 x 652",
       "groundTruth": [
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 87396
+          "pixelCount": 49163
         },
         {
-          "labelIndex": 9,
+          "labelIndex": 8,
           "className": "Flame",
-          "pixelCount": 2797
+          "pixelCount": 2736
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 51232
+          "pixelCount": 50775
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/1a7bf422-nuclear_explosion_in_fire_station_FORWARD_SLASH_0c7bffd942.jpg",
@@ -39785,16 +39608,28 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 65635,
-            "score": 0.587
+            "pixelCount": 73752,
+            "score": 0.6971
+          },
+          {
+            "labelIndex": 12,
+            "className": "Building",
+            "pixelCount": 21852,
+            "score": 0.4359
+          },
+          {
+            "labelIndex": 25,
+            "className": "Pole",
+            "pixelCount": 14465,
+            "score": 0.57
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 72156,
-            "score": 0.7048
+            "pixelCount": 67450,
+            "score": 0.4341
           }
         ]
       },
@@ -39822,14 +39657,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.312
         },
         "yolo11l-seg": {
-          "classCount": 1,
-          "labeledPixels": 65635,
-          "coverage": 0.164
+          "classCount": 3,
+          "labeledPixels": 110069,
+          "coverage": 0.274
         },
         "yolo26l-seg": {
           "classCount": 1,
-          "labeledPixels": 72156,
-          "coverage": 0.18
+          "labeledPixels": 67450,
+          "coverage": 0.168
         }
       },
       "classNames": [
@@ -39850,13 +39685,13 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "flame",
           "name": "Flame",
-          "labelIndex": 9,
+          "labelIndex": 8,
           "color": "#4B0082"
         },
         {
           "id": "building",
           "name": "Building",
-          "labelIndex": 13,
+          "labelIndex": 12,
           "color": "#FFD600"
         },
         {
@@ -39874,15 +39709,15 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "pole",
           "name": "Pole",
-          "labelIndex": 26,
+          "labelIndex": 25,
           "color": "#00FFD1"
         }
       ],
       "summary": "3 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 3,
-        "labeledPixels": 141425,
-        "coverage": 0.353
+        "labeledPixels": 102674,
+        "coverage": 0.256
       }
     },
     {
@@ -39902,19 +39737,19 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "852 x 480",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 138237
+          "pixelCount": 138037
+        },
+        {
+          "labelIndex": 7,
+          "className": "Smoke",
+          "pixelCount": 157997
         },
         {
           "labelIndex": 8,
-          "className": "Smoke",
-          "pixelCount": 159037
-        },
-        {
-          "labelIndex": 9,
           "className": "Flame",
-          "pixelCount": 25532
+          "pixelCount": 24110
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/5ceb7a2d-wild_fire_in_ocean_FORWARD_SLASH_662bc42d28.jpg",
@@ -39983,40 +39818,28 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 137454,
-            "score": 0.962
-          },
-          {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 52189,
-            "score": 0.3892
+            "pixelCount": 134104,
+            "score": 0.9293
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 14605,
-            "score": 0.5748
+            "pixelCount": 8424,
+            "score": 0.5273
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 140811,
-            "score": 0.952
-          },
-          {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 130784,
-            "score": 0.918
+            "pixelCount": 136308,
+            "score": 0.719
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 8394,
-            "score": 0.8688
+            "pixelCount": 4275,
+            "score": 0.5773
           }
         ]
       },
@@ -40044,14 +39867,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.51
         },
         "yolo11l-seg": {
-          "classCount": 3,
-          "labeledPixels": 204248,
-          "coverage": 0.499
+          "classCount": 2,
+          "labeledPixels": 142528,
+          "coverage": 0.349
         },
         "yolo26l-seg": {
-          "classCount": 3,
-          "labeledPixels": 279989,
-          "coverage": 0.685
+          "classCount": 2,
+          "labeledPixels": 140583,
+          "coverage": 0.344
         }
       },
       "classNames": [
@@ -40082,8 +39905,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "3 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 3,
-        "labeledPixels": 322806,
-        "coverage": 0.789
+        "labeledPixels": 320144,
+        "coverage": 0.783
       }
     },
     {
@@ -40103,19 +39926,19 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "320 x 240",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 28376
+          "pixelCount": 28170
         },
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 23931
+          "pixelCount": 23373
         },
         {
-          "labelIndex": 59,
+          "labelIndex": 58,
           "className": "aerial vehicle",
-          "pixelCount": 592
+          "pixelCount": 451
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/d6b28f6e-plane_incident_in_valley_FORWARD_SLASH_00435.jpg",
@@ -40158,24 +39981,18 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 8,
-            "className": "Flame",
-            "pixelCount": 22765,
-            "score": 0.7023
-          },
-          {
             "labelIndex": 58,
             "className": "aerial vehicle",
-            "pixelCount": 655,
-            "score": 0.9697
+            "pixelCount": 633,
+            "score": 0.8012
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 58,
             "className": "aerial vehicle",
-            "pixelCount": 682,
-            "score": 0.971
+            "pixelCount": 632,
+            "score": 0.9158
           }
         ]
       },
@@ -40203,40 +40020,40 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.611
         },
         "yolo11l-seg": {
-          "classCount": 2,
-          "labeledPixels": 23420,
-          "coverage": 0.305
+          "classCount": 1,
+          "labeledPixels": 633,
+          "coverage": 0.008
         },
         "yolo26l-seg": {
           "classCount": 1,
-          "labeledPixels": 682,
-          "coverage": 0.009
+          "labeledPixels": 632,
+          "coverage": 0.008
         }
       },
       "classNames": [
         "Water",
-        "Flame",
         "Smoke",
+        "Flame",
         "aerial vehicle"
       ],
       "classLegend": [
         {
           "id": "water",
           "name": "Water",
-          "labelIndex": 1,
+          "labelIndex": 0,
           "color": "#0047FF"
-        },
-        {
-          "id": "flame",
-          "name": "Flame",
-          "labelIndex": 8,
-          "color": "#4B0082"
         },
         {
           "id": "smoke",
           "name": "Smoke",
-          "labelIndex": 8,
+          "labelIndex": 7,
           "color": "#FFB300"
+        },
+        {
+          "id": "flame",
+          "name": "Flame",
+          "labelIndex": 9,
+          "color": "#4B0082"
         },
         {
           "id": "aerial-vehicle",
@@ -40248,8 +40065,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "3 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 3,
-        "labeledPixels": 52899,
-        "coverage": 0.689
+        "labeledPixels": 51994,
+        "coverage": 0.677
       }
     },
     {
@@ -40269,39 +40086,39 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "620 x 350",
       "groundTruth": [
         {
-          "labelIndex": 5,
+          "labelIndex": 4,
           "className": "First responder",
-          "pixelCount": 3351
+          "pixelCount": 3044
         },
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 100899
+          "pixelCount": 96383
+        },
+        {
+          "labelIndex": 11,
+          "className": "Green plant",
+          "pixelCount": 2176
         },
         {
           "labelIndex": 12,
-          "className": "Green plant",
-          "pixelCount": 3217
-        },
-        {
-          "labelIndex": 13,
           "className": "Building",
-          "pixelCount": 5197
+          "pixelCount": 5024
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 507
+          "pixelCount": 447
         },
         {
-          "labelIndex": 26,
+          "labelIndex": 25,
           "className": "Pole",
-          "pixelCount": 9449
+          "pixelCount": 9314
         },
         {
-          "labelIndex": 39,
+          "labelIndex": 38,
           "className": "Fire truck",
-          "pixelCount": 64403
+          "pixelCount": 66125
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/8de11bae-collapsed_fire_station_FORWARD_SLASH_00267.jpg",
@@ -40418,58 +40235,58 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 2588,
-            "score": 0.6639
+            "pixelCount": 3213,
+            "score": 0.8682
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 96144,
-            "score": 0.9127
+            "pixelCount": 91747,
+            "score": 0.765
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 5382,
-            "score": 0.3566
+            "pixelCount": 14402,
+            "score": 0.7942
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 937,
-            "score": 0.7415
-          },
-          {
-            "labelIndex": 23,
-            "className": "Citizen",
-            "pixelCount": 1150,
-            "score": 0.53
+            "pixelCount": 1209,
+            "score": 0.4386
           },
           {
             "labelIndex": 38,
             "className": "Fire truck",
-            "pixelCount": 66354,
-            "score": 0.9621
+            "pixelCount": 62250,
+            "score": 0.9785
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 3943,
-            "score": 0.7552
+            "pixelCount": 2374,
+            "score": 0.9006
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 71435,
-            "score": 0.7876
+            "pixelCount": 91531,
+            "score": 0.8795
+          },
+          {
+            "labelIndex": 12,
+            "className": "Building",
+            "pixelCount": 15100,
+            "score": 0.4426
           },
           {
             "labelIndex": 38,
             "className": "Fire truck",
-            "pixelCount": 66234,
-            "score": 0.9811
+            "pixelCount": 62413,
+            "score": 0.9836
           }
         ]
       },
@@ -40497,21 +40314,21 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.563
         },
         "yolo11l-seg": {
-          "classCount": 6,
-          "labeledPixels": 172555,
-          "coverage": 0.795
+          "classCount": 5,
+          "labeledPixels": 172821,
+          "coverage": 0.796
         },
         "yolo26l-seg": {
-          "classCount": 3,
-          "labeledPixels": 141612,
-          "coverage": 0.653
+          "classCount": 4,
+          "labeledPixels": 171418,
+          "coverage": 0.79
         }
       },
       "classNames": [
         "First responder",
         "Smoke",
-        "Building",
         "Green plant",
+        "Building",
         "Civilian vehicle",
         "Road",
         "Citizen",
@@ -40536,16 +40353,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FFB300"
         },
         {
+          "id": "green-plant",
+          "name": "Green plant",
+          "labelIndex": 11,
+          "color": "#8A00FF"
+        },
+        {
           "id": "building",
           "name": "Building",
           "labelIndex": 12,
           "color": "#FFD600"
-        },
-        {
-          "id": "green-plant",
-          "name": "Green plant",
-          "labelIndex": 12,
-          "color": "#8A00FF"
         },
         {
           "id": "civilian-vehicle",
@@ -40568,7 +40385,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "pole",
           "name": "Pole",
-          "labelIndex": 26,
+          "labelIndex": 25,
           "color": "#00FFD1"
         },
         {
@@ -40605,8 +40422,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "7 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 7,
-        "labeledPixels": 187023,
-        "coverage": 0.862
+        "labeledPixels": 182513,
+        "coverage": 0.841
       }
     },
     {
@@ -40626,19 +40443,19 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "992 x 558",
       "groundTruth": [
         {
-          "labelIndex": 7,
+          "labelIndex": 6,
           "className": "Destroyed vehicle",
-          "pixelCount": 12410
+          "pixelCount": 12157
         },
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 483748
+          "pixelCount": 532624
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 30258
+          "pixelCount": 29816
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/c43251f0-earthquake_in_village_FORWARD_SLASH_00111.jpg",
@@ -40731,40 +40548,40 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 13500,
-            "score": 0.9268
+            "pixelCount": 12818,
+            "score": 0.9489
           },
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 252311,
-            "score": 0.7884
+            "pixelCount": 227929,
+            "score": 0.5524
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 28879,
-            "score": 0.9472
+            "pixelCount": 29562,
+            "score": 0.9541
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 13731,
-            "score": 0.9605
+            "pixelCount": 12772,
+            "score": 0.9663
           },
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 235902,
-            "score": 0.7486
+            "pixelCount": 165307,
+            "score": 0.8593
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 30886,
-            "score": 0.9649
+            "pixelCount": 26728,
+            "score": 0.9097
           }
         ]
       },
@@ -40793,13 +40610,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 3,
-          "labeledPixels": 294690,
-          "coverage": 0.532
+          "labeledPixels": 270309,
+          "coverage": 0.488
         },
         "yolo26l-seg": {
           "classCount": 3,
-          "labeledPixels": 280519,
-          "coverage": 0.507
+          "labeledPixels": 204807,
+          "coverage": 0.37
         }
       },
       "classNames": [
@@ -40865,8 +40682,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "3 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 3,
-        "labeledPixels": 526416,
-        "coverage": 0.951
+        "labeledPixels": 574597,
+        "coverage": 1.038
       }
     },
     {
@@ -40886,14 +40703,14 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "486 x 754",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 27288
+          "pixelCount": 19253
         },
         {
-          "labelIndex": 9,
+          "labelIndex": 8,
           "className": "Flame",
-          "pixelCount": 136444
+          "pixelCount": 135804
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/e8e486d0-wild_fire_in_rope_bridge_FORWARD_SLASH_58a00df8f4.jpg",
@@ -40962,28 +40779,22 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 106607,
-            "score": 0.9022
-          },
-          {
-            "labelIndex": 44,
-            "className": "Burnt grass",
-            "pixelCount": 103769,
-            "score": 0.383
+            "pixelCount": 70242,
+            "score": 0.5079
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 1636,
-            "score": 0.705
+            "pixelCount": 1658,
+            "score": 0.5375
           },
           {
             "labelIndex": 8,
             "className": "Flame",
-            "pixelCount": 69750,
-            "score": 0.7982
+            "pixelCount": 82542,
+            "score": 0.7596
           }
         ]
       },
@@ -41011,35 +40822,35 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.302
         },
         "yolo11l-seg": {
-          "classCount": 2,
-          "labeledPixels": 210376,
-          "coverage": 0.574
+          "classCount": 1,
+          "labeledPixels": 70242,
+          "coverage": 0.192
         },
         "yolo26l-seg": {
           "classCount": 2,
-          "labeledPixels": 71386,
-          "coverage": 0.195
+          "labeledPixels": 84200,
+          "coverage": 0.23
         }
       },
       "classNames": [
-        "Green tree",
         "Water",
+        "Green tree",
         "Flame",
         "Dry grass",
         "Burnt grass"
       ],
       "classLegend": [
         {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
           "id": "green-tree",
           "name": "Green tree",
           "labelIndex": 1,
           "color": "#FFB300"
-        },
-        {
-          "id": "water",
-          "name": "Water",
-          "labelIndex": 1,
-          "color": "#0047FF"
         },
         {
           "id": "flame",
@@ -41056,15 +40867,15 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "burnt-grass",
           "name": "Burnt grass",
-          "labelIndex": 44,
+          "labelIndex": 45,
           "color": "#4B0082"
         }
       ],
       "summary": "2 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 2,
-        "labeledPixels": 163732,
-        "coverage": 0.447
+        "labeledPixels": 155057,
+        "coverage": 0.423
       }
     },
     {
@@ -41084,24 +40895,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "213 x 160",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 6166
+          "pixelCount": 5905
         },
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 7503
+          "pixelCount": 7248
         },
         {
-          "labelIndex": 21,
+          "labelIndex": 20,
           "className": "Road",
-          "pixelCount": 961
+          "pixelCount": 876
         },
         {
-          "labelIndex": 29,
+          "labelIndex": 28,
           "className": "Dry grass",
-          "pixelCount": 5437
+          "pixelCount": 5343
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/82a2700e-highway_with_smoke_FORWARD_SLASH_c6c44b2190.jpg",
@@ -41200,40 +41011,52 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 6238,
-            "score": 0.9539
+            "pixelCount": 5672,
+            "score": 0.9414
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 8015,
-            "score": 0.9469
+            "pixelCount": 7465,
+            "score": 0.9259
+          },
+          {
+            "labelIndex": 20,
+            "className": "Road",
+            "pixelCount": 781,
+            "score": 0.8228
           },
           {
             "labelIndex": 28,
             "className": "Dry grass",
-            "pixelCount": 5213,
-            "score": 0.9443
+            "pixelCount": 5327,
+            "score": 0.9064
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 6159,
-            "score": 0.9652
+            "pixelCount": 5741,
+            "score": 0.9263
           },
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 7855,
-            "score": 0.9726
+            "pixelCount": 7377,
+            "score": 0.9291
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 6748,
-            "score": 0.707
+            "pixelCount": 779,
+            "score": 0.9136
+          },
+          {
+            "labelIndex": 28,
+            "className": "Dry grass",
+            "pixelCount": 5209,
+            "score": 0.726
           }
         ]
       },
@@ -41261,14 +41084,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.389
         },
         "yolo11l-seg": {
-          "classCount": 3,
-          "labeledPixels": 19466,
-          "coverage": 0.571
+          "classCount": 4,
+          "labeledPixels": 19245,
+          "coverage": 0.565
         },
         "yolo26l-seg": {
-          "classCount": 3,
-          "labeledPixels": 20762,
-          "coverage": 0.609
+          "classCount": 4,
+          "labeledPixels": 19106,
+          "coverage": 0.561
         }
       },
       "classNames": [
@@ -41327,8 +41150,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 20067,
-        "coverage": 0.589
+        "labeledPixels": 19372,
+        "coverage": 0.568
       }
     },
     {
@@ -41348,44 +41171,44 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "5894 x 3930",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 8458580
+          "pixelCount": 9976214
         },
         {
-          "labelIndex": 12,
+          "labelIndex": 11,
           "className": "Green plant",
-          "pixelCount": 1544087
+          "pixelCount": 1500674
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 70370
+          "pixelCount": 69568
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 8331
+          "pixelCount": 8234
         },
         {
-          "labelIndex": 26,
+          "labelIndex": 25,
           "className": "Pole",
-          "pixelCount": 1442727
+          "pixelCount": 1411537
         },
         {
-          "labelIndex": 44,
+          "labelIndex": 43,
           "className": "Military personnel",
-          "pixelCount": 71330
+          "pixelCount": 70101
         },
         {
-          "labelIndex": 57,
+          "labelIndex": 56,
           "className": "Police vehicle",
-          "pixelCount": 422042
+          "pixelCount": 424911
         },
         {
-          "labelIndex": 60,
+          "labelIndex": 59,
           "className": "Army vehicle",
-          "pixelCount": 893460
+          "pixelCount": 891428
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/443b5ad3-typhoon_in_field_road_FORWARD_SLASH_00221.jpg",
@@ -41578,60 +41401,66 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
+            "labelIndex": 0,
+            "className": "Water",
+            "pixelCount": 9319213,
+            "score": 0.9597
+          },
+          {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 1000930,
-            "score": 0.7281
-          },
-          {
-            "labelIndex": 2,
-            "className": "Fence",
-            "pixelCount": 412268,
-            "score": 0.3017
-          },
-          {
-            "labelIndex": 4,
-            "className": "First responder",
-            "pixelCount": 44391,
-            "score": 0.7885
+            "pixelCount": 519059,
+            "score": 0.5051
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 1445613,
-            "score": 0.7887
+            "pixelCount": 83758,
+            "score": 0.7832
           },
           {
             "labelIndex": 25,
             "className": "Pole",
-            "pixelCount": 1430336,
-            "score": 0.4445
+            "pixelCount": 743226,
+            "score": 0.4488
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 101115,
-            "score": 0.4986
+            "pixelCount": 1008840,
+            "score": 0.5576
           },
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 41095,
-            "score": 0.7328
+            "pixelCount": 43719,
+            "score": 0.3866
+          },
+          {
+            "labelIndex": 11,
+            "className": "Green plant",
+            "pixelCount": 185398,
+            "score": 0.6072
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 1440793,
-            "score": 0.815
+            "pixelCount": 1400800,
+            "score": 0.7749
+          },
+          {
+            "labelIndex": 24,
+            "className": "Green grass",
+            "pixelCount": 30712,
+            "score": 0.5311
           },
           {
             "labelIndex": 25,
             "className": "Pole",
-            "pixelCount": 800416,
-            "score": 0.594
+            "pixelCount": 1107077,
+            "score": 0.5673
           }
         ]
       },
@@ -41659,19 +41488,19 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.248
         },
         "yolo11l-seg": {
-          "classCount": 5,
-          "labeledPixels": 4333538,
-          "coverage": 0.187
+          "classCount": 4,
+          "labeledPixels": 10665256,
+          "coverage": 0.46
         },
         "yolo26l-seg": {
-          "classCount": 4,
-          "labeledPixels": 2383419,
-          "coverage": 0.103
+          "classCount": 6,
+          "labeledPixels": 3776546,
+          "coverage": 0.163
         }
       },
       "classNames": [
-        "Green tree",
         "Water",
+        "Green tree",
         "Fence",
         "First responder",
         "Boot",
@@ -41691,21 +41520,21 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [
         {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
+        {
           "id": "green-tree",
           "name": "Green tree",
           "labelIndex": 1,
           "color": "#FFB300"
         },
         {
-          "id": "water",
-          "name": "Water",
-          "labelIndex": 1,
-          "color": "#0047FF"
-        },
-        {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 2,
+          "labelIndex": 3,
           "color": "#FF6D00"
         },
         {
@@ -41723,7 +41552,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "green-plant",
           "name": "Green plant",
-          "labelIndex": 12,
+          "labelIndex": 11,
           "color": "#8A00FF"
         },
         {
@@ -41747,13 +41576,13 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "citizen",
           "name": "Citizen",
-          "labelIndex": 24,
+          "labelIndex": 23,
           "color": "#FFD600"
         },
         {
           "id": "green-grass",
           "name": "Green grass",
-          "labelIndex": 25,
+          "labelIndex": 24,
           "color": "#FF6D00"
         },
         {
@@ -41777,7 +41606,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "military-personnel",
           "name": "Military personnel",
-          "labelIndex": 44,
+          "labelIndex": 43,
           "color": "#FF6D00"
         },
         {
@@ -41789,21 +41618,21 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "police-vehicle",
           "name": "Police vehicle",
-          "labelIndex": 57,
+          "labelIndex": 56,
           "color": "#FF00D4"
         },
         {
           "id": "army-vehicle",
           "name": "Army vehicle",
-          "labelIndex": 60,
+          "labelIndex": 59,
           "color": "#FF1744"
         }
       ],
       "summary": "8 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 8,
-        "labeledPixels": 12910927,
-        "coverage": 0.557
+        "labeledPixels": 14352667,
+        "coverage": 0.62
       }
     },
     {
@@ -41823,39 +41652,39 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "360 x 240",
       "groundTruth": [
         {
-          "labelIndex": 3,
+          "labelIndex": 2,
           "className": "Fence",
-          "pixelCount": 3519
+          "pixelCount": 3381
+        },
+        {
+          "labelIndex": 3,
+          "className": "Helmet",
+          "pixelCount": 141
         },
         {
           "labelIndex": 4,
-          "className": "Helmet",
-          "pixelCount": 166
-        },
-        {
-          "labelIndex": 5,
           "className": "First responder",
-          "pixelCount": 9511
+          "pixelCount": 9160
         },
         {
-          "labelIndex": 11,
+          "labelIndex": 10,
           "className": "Boot",
-          "pixelCount": 3079
+          "pixelCount": 2854
         },
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 26253
+          "pixelCount": 26344
         },
         {
-          "labelIndex": 33,
+          "labelIndex": 32,
           "className": "Mud",
-          "pixelCount": 41074
+          "pixelCount": 31962
         },
         {
-          "labelIndex": 47,
+          "labelIndex": 46,
           "className": "Glove",
-          "pixelCount": 1543
+          "pixelCount": 1448
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/35ed0db1-landslide_in_park_FORWARD_SLASH_7afd811d0d.jpg",
@@ -41940,30 +41769,30 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 15,
-            "className": "Debris",
-            "pixelCount": 29870,
-            "score": 0.6852
+            "labelIndex": 4,
+            "className": "First responder",
+            "pixelCount": 11115,
+            "score": 0.898
           },
           {
-            "labelIndex": 23,
-            "className": "Citizen",
-            "pixelCount": 11178,
-            "score": 0.7358
+            "labelIndex": 27,
+            "className": "Pavement",
+            "pixelCount": 8378,
+            "score": 0.8521
           }
         ],
         "yolo26l-seg": [
           {
-            "labelIndex": 15,
-            "className": "Debris",
-            "pixelCount": 18155,
-            "score": 0.6217
+            "labelIndex": 4,
+            "className": "First responder",
+            "pixelCount": 9205,
+            "score": 0.5144
           },
           {
-            "labelIndex": 23,
-            "className": "Citizen",
-            "pixelCount": 11405,
-            "score": 0.7872
+            "labelIndex": 15,
+            "className": "Debris",
+            "pixelCount": 28361,
+            "score": 0.6147
           }
         ]
       },
@@ -41992,13 +41821,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 2,
-          "labeledPixels": 41048,
-          "coverage": 0.475
+          "labeledPixels": 19493,
+          "coverage": 0.226
         },
         "yolo26l-seg": {
           "classCount": 2,
-          "labeledPixels": 29560,
-          "coverage": 0.342
+          "labeledPixels": 37566,
+          "coverage": 0.435
         }
       },
       "classNames": [
@@ -42007,7 +41836,6 @@ window.DETECTION_ATLAS_DATA = {
         "First responder",
         "Boot",
         "Debris",
-        "Citizen",
         "Pole",
         "Pavement",
         "Mud",
@@ -42017,25 +41845,25 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 3,
+          "labelIndex": 2,
           "color": "#FF6D00"
         },
         {
           "id": "helmet",
           "name": "Helmet",
-          "labelIndex": 4,
+          "labelIndex": 3,
           "color": "#FF6D00"
         },
         {
           "id": "first-responder",
           "name": "First responder",
-          "labelIndex": 5,
+          "labelIndex": 4,
           "color": "#8A00FF"
         },
         {
           "id": "boot",
           "name": "Boot",
-          "labelIndex": 11,
+          "labelIndex": 10,
           "color": "#00E676"
         },
         {
@@ -42043,12 +41871,6 @@ window.DETECTION_ATLAS_DATA = {
           "name": "Debris",
           "labelIndex": 15,
           "color": "#FFB300"
-        },
-        {
-          "id": "citizen",
-          "name": "Citizen",
-          "labelIndex": 23,
-          "color": "#FFD600"
         },
         {
           "id": "pole",
@@ -42059,27 +41881,27 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "pavement",
           "name": "Pavement",
-          "labelIndex": 28,
+          "labelIndex": 27,
           "color": "#FF00D4"
         },
         {
           "id": "mud",
           "name": "Mud",
-          "labelIndex": 33,
+          "labelIndex": 32,
           "color": "#FFD600"
         },
         {
           "id": "glove",
           "name": "Glove",
-          "labelIndex": 47,
+          "labelIndex": 46,
           "color": "#FF1744"
         }
       ],
       "summary": "7 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 7,
-        "labeledPixels": 85145,
-        "coverage": 0.985
+        "labeledPixels": 75290,
+        "coverage": 0.871
       }
     },
     {
@@ -42099,29 +41921,29 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "634 x 404",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 132785
+          "pixelCount": 146889
         },
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 11731
+          "pixelCount": 11389
+        },
+        {
+          "labelIndex": 11,
+          "className": "Green plant",
+          "pixelCount": 996
         },
         {
           "labelIndex": 12,
-          "className": "Green plant",
-          "pixelCount": 1078
-        },
-        {
-          "labelIndex": 13,
           "className": "Building",
-          "pixelCount": 60104
+          "pixelCount": 58628
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 22642
+          "pixelCount": 21946
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/da53784b-flooded_bazaar_outdoor_FORWARD_SLASH_30b87aecf5.jpg",
@@ -42244,64 +42066,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 6276,
-            "score": 0.4514
-          },
-          {
-            "labelIndex": 6,
-            "className": "Destroyed vehicle",
-            "pixelCount": 2542,
-            "score": 0.3184
+            "pixelCount": 19930,
+            "score": 0.3573
           },
           {
             "labelIndex": 11,
             "className": "Green plant",
-            "pixelCount": 6666,
-            "score": 0.6182
+            "pixelCount": 3988,
+            "score": 0.6143
+          },
+          {
+            "labelIndex": 12,
+            "className": "Building",
+            "pixelCount": 15569,
+            "score": 0.8576
           },
           {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 3899,
-            "score": 0.6414
-          },
-          {
-            "labelIndex": 19,
-            "className": "Dry tree",
-            "pixelCount": 866,
-            "score": 0.4541
+            "pixelCount": 7241,
+            "score": 0.7099
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 22146,
-            "score": 0.9326
+            "pixelCount": 24114,
+            "score": 0.8694
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 779,
-            "score": 0.4563
+            "pixelCount": 23432,
+            "score": 0.7065
           },
           {
             "labelIndex": 11,
             "className": "Green plant",
-            "pixelCount": 1137,
-            "score": 0.7472
+            "pixelCount": 2012,
+            "score": 0.6825
           },
           {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 9554,
-            "score": 0.7271
+            "pixelCount": 5997,
+            "score": 0.5928
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 22380,
-            "score": 0.9556
+            "pixelCount": 21806,
+            "score": 0.9123
+          },
+          {
+            "labelIndex": 53,
+            "className": "Barrel",
+            "pixelCount": 393,
+            "score": 0.4228
           }
         ]
       },
@@ -42329,48 +42151,41 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.272
         },
         "yolo11l-seg": {
-          "classCount": 6,
-          "labeledPixels": 42395,
-          "coverage": 0.166
+          "classCount": 5,
+          "labeledPixels": 70842,
+          "coverage": 0.277
         },
         "yolo26l-seg": {
-          "classCount": 4,
-          "labeledPixels": 33850,
-          "coverage": 0.132
+          "classCount": 5,
+          "labeledPixels": 53640,
+          "coverage": 0.209
         }
       },
       "classNames": [
-        "Green tree",
         "Water",
-        "Destroyed vehicle",
+        "Green tree",
         "Green plant",
         "Building",
         "Window",
         "Debris",
-        "Dry tree",
         "Civilian vehicle",
         "Wall",
         "Door",
+        "Barrel",
         "Burnt plant"
       ],
       "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
         {
           "id": "green-tree",
           "name": "Green tree",
           "labelIndex": 1,
           "color": "#FFB300"
-        },
-        {
-          "id": "water",
-          "name": "Water",
-          "labelIndex": 1,
-          "color": "#0047FF"
-        },
-        {
-          "id": "destroyed-vehicle",
-          "name": "Destroyed vehicle",
-          "labelIndex": 6,
-          "color": "#FF6D00"
         },
         {
           "id": "green-plant",
@@ -42381,7 +42196,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "building",
           "name": "Building",
-          "labelIndex": 13,
+          "labelIndex": 12,
           "color": "#FFD600"
         },
         {
@@ -42394,12 +42209,6 @@ window.DETECTION_ATLAS_DATA = {
           "id": "debris",
           "name": "Debris",
           "labelIndex": 16,
-          "color": "#FFB300"
-        },
-        {
-          "id": "dry-tree",
-          "name": "Dry tree",
-          "labelIndex": 19,
           "color": "#FFB300"
         },
         {
@@ -42421,6 +42230,12 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#00E676"
         },
         {
+          "id": "barrel",
+          "name": "Barrel",
+          "labelIndex": 53,
+          "color": "#8A00FF"
+        },
+        {
           "id": "burnt-plant",
           "name": "Burnt plant",
           "labelIndex": 62,
@@ -42430,8 +42245,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "5 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 5,
-        "labeledPixels": 228340,
-        "coverage": 0.891
+        "labeledPixels": 239848,
+        "coverage": 0.936
       }
     },
     {
@@ -42451,19 +42266,19 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "590 x 392",
       "groundTruth": [
         {
-          "labelIndex": 5,
+          "labelIndex": 4,
           "className": "First responder",
-          "pixelCount": 418
+          "pixelCount": 369
         },
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 19041
+          "pixelCount": 18355
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 9972
+          "pixelCount": 9566
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/13cc1b15-blizzard_in_landfill_FORWARD_SLASH_02af807155.jpg",
@@ -42562,46 +42377,34 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 14544,
-            "score": 0.8491
+            "pixelCount": 15769,
+            "score": 0.5708
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 8251,
-            "score": 0.9099
+            "pixelCount": 7781,
+            "score": 0.6388
           },
           {
-            "labelIndex": 30,
-            "className": "Excavator",
-            "pixelCount": 1880,
-            "score": 0.8834
+            "labelIndex": 28,
+            "className": "Dry grass",
+            "pixelCount": 39714,
+            "score": 0.4007
           }
         ],
         "yolo26l-seg": [
           {
-            "labelIndex": 2,
-            "className": "Fence",
-            "pixelCount": 1264,
-            "score": 0.7433
-          },
-          {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 14849,
-            "score": 0.8759
-          },
-          {
-            "labelIndex": 16,
-            "className": "Dirt road",
-            "pixelCount": 46250,
-            "score": 0.7935
+            "pixelCount": 14450,
+            "score": 0.4779
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 8072,
-            "score": 0.9707
+            "pixelCount": 7645,
+            "score": 0.9751
           }
         ]
       },
@@ -42630,17 +42433,16 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 3,
-          "labeledPixels": 24675,
-          "coverage": 0.107
+          "labeledPixels": 63264,
+          "coverage": 0.274
         },
         "yolo26l-seg": {
-          "classCount": 4,
-          "labeledPixels": 70435,
-          "coverage": 0.305
+          "classCount": 2,
+          "labeledPixels": 22095,
+          "coverage": 0.096
         }
       },
       "classNames": [
-        "Fence",
         "First responder",
         "Building",
         "Debris",
@@ -42655,15 +42457,9 @@ window.DETECTION_ATLAS_DATA = {
       ],
       "classLegend": [
         {
-          "id": "fence",
-          "name": "Fence",
-          "labelIndex": 2,
-          "color": "#FF6D00"
-        },
-        {
           "id": "first-responder",
           "name": "First responder",
-          "labelIndex": 5,
+          "labelIndex": 4,
           "color": "#8A00FF"
         },
         {
@@ -42687,7 +42483,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dirt-road",
           "name": "Dirt road",
-          "labelIndex": 16,
+          "labelIndex": 17,
           "color": "#FF6D00"
         },
         {
@@ -42711,13 +42507,13 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "dry-grass",
           "name": "Dry grass",
-          "labelIndex": 29,
+          "labelIndex": 28,
           "color": "#0047FF"
         },
         {
           "id": "excavator",
           "name": "Excavator",
-          "labelIndex": 30,
+          "labelIndex": 31,
           "color": "#B6FF00"
         },
         {
@@ -42730,8 +42526,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "3 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 3,
-        "labeledPixels": 29431,
-        "coverage": 0.127
+        "labeledPixels": 28290,
+        "coverage": 0.122
       }
     },
     {
@@ -42751,24 +42547,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "300 x 357",
       "groundTruth": [
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 18508
+          "pixelCount": 18111
         },
         {
-          "labelIndex": 17,
+          "labelIndex": 16,
           "className": "Dirt road",
-          "pixelCount": 23065
+          "pixelCount": 22759
         },
         {
-          "labelIndex": 20,
+          "labelIndex": 19,
           "className": "Dry tree",
-          "pixelCount": 54674
+          "pixelCount": 29218
         },
         {
-          "labelIndex": 23,
+          "labelIndex": 22,
           "className": "Wall",
-          "pixelCount": 3747
+          "pixelCount": 3552
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/c48fa562-wild_fire_in_schoolhouse_FORWARD_SLASH_00391.jpg",
@@ -42865,42 +42661,42 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 1,
-            "className": "Green tree",
-            "pixelCount": 34932,
-            "score": 0.492
-          },
-          {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 16842,
-            "score": 0.6609
+            "pixelCount": 17038,
+            "score": 0.6884
           },
           {
-            "labelIndex": 16,
-            "className": "Dirt road",
-            "pixelCount": 21335,
-            "score": 0.5196
+            "labelIndex": 19,
+            "className": "Dry tree",
+            "pixelCount": 35874,
+            "score": 0.7873
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 50163,
-            "score": 0.5704
+            "pixelCount": 17641,
+            "score": 0.5923
           },
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 17813,
-            "score": 0.8525
+            "pixelCount": 19714,
+            "score": 0.7802
           },
           {
-            "labelIndex": 17,
-            "className": "Destroyed building",
-            "pixelCount": 3941,
-            "score": 0.5128
+            "labelIndex": 19,
+            "className": "Dry tree",
+            "pixelCount": 22488,
+            "score": 0.5692
+          },
+          {
+            "labelIndex": 20,
+            "className": "Road",
+            "pixelCount": 19272,
+            "score": 0.4088
           }
         ]
       },
@@ -42928,14 +42724,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.49
         },
         "yolo11l-seg": {
-          "classCount": 3,
-          "labeledPixels": 73109,
-          "coverage": 0.683
+          "classCount": 2,
+          "labeledPixels": 52912,
+          "coverage": 0.494
         },
         "yolo26l-seg": {
-          "classCount": 3,
-          "labeledPixels": 71917,
-          "coverage": 0.671
+          "classCount": 4,
+          "labeledPixels": 79115,
+          "coverage": 0.739
         }
       },
       "classNames": [
@@ -42944,6 +42740,7 @@ window.DETECTION_ATLAS_DATA = {
         "Dirt road",
         "Destroyed building",
         "Dry tree",
+        "Road",
         "Wall",
         "Dry grass",
         "Tank"
@@ -42970,19 +42767,25 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "destroyed-building",
           "name": "Destroyed building",
-          "labelIndex": 17,
+          "labelIndex": 18,
           "color": "#4B0082"
         },
         {
           "id": "dry-tree",
           "name": "Dry tree",
-          "labelIndex": 20,
+          "labelIndex": 19,
           "color": "#FFB300"
+        },
+        {
+          "id": "road",
+          "name": "Road",
+          "labelIndex": 20,
+          "color": "#FFD600"
         },
         {
           "id": "wall",
           "name": "Wall",
-          "labelIndex": 23,
+          "labelIndex": 22,
           "color": "#FF00D4"
         },
         {
@@ -43001,8 +42804,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 99994,
-        "coverage": 0.934
+        "labeledPixels": 73640,
+        "coverage": 0.688
       }
     },
     {
@@ -43022,19 +42825,19 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1024 x 576",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 156195
+          "pixelCount": 155359
         },
         {
-          "labelIndex": 27,
+          "labelIndex": 26,
           "className": "Boat",
-          "pixelCount": 77092
+          "pixelCount": 75586
         },
         {
-          "labelIndex": 33,
+          "labelIndex": 32,
           "className": "Mud",
-          "pixelCount": 30841
+          "pixelCount": 30491
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/0068049e-ship_accident_in_forest_road_FORWARD_SLASH_00109.jpg",
@@ -43127,40 +42930,46 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 159879,
-            "score": 0.9659
+            "pixelCount": 150638,
+            "score": 0.9338
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 299,
-            "score": 0.3448
+            "pixelCount": 300,
+            "score": 0.4549
           },
           {
             "labelIndex": 26,
             "className": "Boat",
-            "pixelCount": 80095,
-            "score": 0.6596
+            "pixelCount": 14114,
+            "score": 0.8549
+          },
+          {
+            "labelIndex": 41,
+            "className": "Tower",
+            "pixelCount": 4606,
+            "score": 0.5327
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 154837,
-            "score": 0.9742
+            "pixelCount": 149765,
+            "score": 0.9637
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 293,
-            "score": 0.5378
+            "pixelCount": 317,
+            "score": 0.7528
           },
           {
             "labelIndex": 26,
             "className": "Boat",
-            "pixelCount": 75760,
-            "score": 0.8108
+            "pixelCount": 60293,
+            "score": 0.7652
           }
         ]
       },
@@ -43188,14 +42997,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.525
         },
         "yolo11l-seg": {
-          "classCount": 3,
-          "labeledPixels": 240273,
-          "coverage": 0.407
+          "classCount": 4,
+          "labeledPixels": 169658,
+          "coverage": 0.288
         },
         "yolo26l-seg": {
           "classCount": 3,
-          "labeledPixels": 230890,
-          "coverage": 0.391
+          "labeledPixels": 210375,
+          "coverage": 0.357
         }
       },
       "classNames": [
@@ -43206,6 +43015,7 @@ window.DETECTION_ATLAS_DATA = {
         "Boat",
         "Pole",
         "Mud",
+        "Tower",
         "Burnt grass"
       ],
       "classLegend": [
@@ -43248,8 +43058,14 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "mud",
           "name": "Mud",
-          "labelIndex": 33,
+          "labelIndex": 32,
           "color": "#FFD600"
+        },
+        {
+          "id": "tower",
+          "name": "Tower",
+          "labelIndex": 41,
+          "color": "#FF6D00"
         },
         {
           "id": "burnt-grass",
@@ -43261,8 +43077,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "3 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 3,
-        "labeledPixels": 264128,
-        "coverage": 0.448
+        "labeledPixels": 261436,
+        "coverage": 0.443
       }
     },
     {
@@ -43282,44 +43098,44 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1300 x 954",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 146333
+          "pixelCount": 120099
         },
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 5575
+          "pixelCount": 5478
+        },
+        {
+          "labelIndex": 11,
+          "className": "Green plant",
+          "pixelCount": 27024
         },
         {
           "labelIndex": 12,
-          "className": "Green plant",
-          "pixelCount": 46350
+          "className": "Building",
+          "pixelCount": 44178
         },
         {
-          "labelIndex": 13,
-          "className": "Building",
-          "pixelCount": 44840
+          "labelIndex": 14,
+          "className": "Window",
+          "pixelCount": 23215
         },
         {
           "labelIndex": 15,
-          "className": "Window",
-          "pixelCount": 25004
-        },
-        {
-          "labelIndex": 16,
           "className": "Debris",
-          "pixelCount": 96244
+          "pixelCount": 99787
         },
         {
-          "labelIndex": 18,
+          "labelIndex": 17,
           "className": "Destroyed building",
-          "pixelCount": 228509
+          "pixelCount": 226747
         },
         {
-          "labelIndex": 25,
+          "labelIndex": 24,
           "className": "Green grass",
-          "pixelCount": 31068
+          "pixelCount": 8130
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/b893b49d-demolition_in_river_FORWARD_SLASH_00205.jpg",
@@ -43424,64 +43240,64 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 123748,
-            "score": 0.9499
+            "pixelCount": 28824,
+            "score": 0.9626
           },
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 14757,
-            "score": 0.688
+            "pixelCount": 4488,
+            "score": 0.3247
+          },
+          {
+            "labelIndex": 11,
+            "className": "Green plant",
+            "pixelCount": 10629,
+            "score": 0.3388
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 123124,
-            "score": 0.8127
+            "pixelCount": 261995,
+            "score": 0.7817
           },
           {
-            "labelIndex": 14,
-            "className": "Window",
-            "pixelCount": 22801,
-            "score": 0.6177
-          },
-          {
-            "labelIndex": 15,
-            "className": "Debris",
-            "pixelCount": 39629,
-            "score": 0.3987
+            "labelIndex": 24,
+            "className": "Green grass",
+            "pixelCount": 17521,
+            "score": 0.6824
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 28690,
-            "score": 0.832
+            "pixelCount": 27695,
+            "score": 0.8879
           },
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 4666,
-            "score": 0.6753
+            "pixelCount": 4722,
+            "score": 0.8753
           },
           {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 2410,
-            "score": 0.7235
+            "pixelCount": 123892,
+            "score": 0.6861
           },
           {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 32402,
-            "score": 0.6713
+            "pixelCount": 22225,
+            "score": 0.6506
           },
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 39747,
-            "score": 0.4147
+            "pixelCount": 224172,
+            "score": 0.3997
           }
         ]
       },
@@ -43510,20 +43326,20 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 5,
-          "labeledPixels": 324059,
+          "labeledPixels": 323457,
           "coverage": 0.261
         },
         "yolo26l-seg": {
           "classCount": 5,
-          "labeledPixels": 107915,
-          "coverage": 0.087
+          "labeledPixels": 402706,
+          "coverage": 0.325
         }
       },
       "classNames": [
         "Water",
         "Green tree",
-        "Building",
         "Green plant",
+        "Building",
         "Window",
         "Debris",
         "Destroyed building",
@@ -43544,16 +43360,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FFB300"
         },
         {
+          "id": "green-plant",
+          "name": "Green plant",
+          "labelIndex": 11,
+          "color": "#8A00FF"
+        },
+        {
           "id": "building",
           "name": "Building",
           "labelIndex": 12,
           "color": "#FFD600"
-        },
-        {
-          "id": "green-plant",
-          "name": "Green plant",
-          "labelIndex": 12,
-          "color": "#8A00FF"
         },
         {
           "id": "window",
@@ -43570,13 +43386,13 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "destroyed-building",
           "name": "Destroyed building",
-          "labelIndex": 18,
+          "labelIndex": 17,
           "color": "#4B0082"
         },
         {
           "id": "green-grass",
           "name": "Green grass",
-          "labelIndex": 25,
+          "labelIndex": 24,
           "color": "#FF6D00"
         },
         {
@@ -43589,8 +43405,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "8 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 8,
-        "labeledPixels": 623923,
-        "coverage": 0.503
+        "labeledPixels": 554658,
+        "coverage": 0.447
       }
     },
     {
@@ -43610,14 +43426,14 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "975 x 1390",
       "groundTruth": [
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 196127
+          "pixelCount": 196450
         },
         {
-          "labelIndex": 17,
+          "labelIndex": 16,
           "className": "Dirt road",
-          "pixelCount": 129682
+          "pixelCount": 127687
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/1b3cdbbd-volcano_with_smoke_FORWARD_SLASH_ddb47b1127.jpg",
@@ -43666,24 +43482,24 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 7,
-            "className": "Smoke",
-            "pixelCount": 1015929,
-            "score": 0.9181
+            "labelIndex": 0,
+            "className": "Water",
+            "pixelCount": 52562,
+            "score": 0.3453
           },
           {
-            "labelIndex": 16,
-            "className": "Dirt road",
-            "pixelCount": 56067,
-            "score": 0.4428
+            "labelIndex": 7,
+            "className": "Smoke",
+            "pixelCount": 906618,
+            "score": 0.8085
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 1033339,
-            "score": 0.8124
+            "pixelCount": 855879,
+            "score": 0.8594
           }
         ]
       },
@@ -43712,22 +43528,29 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 2,
-          "labeledPixels": 1071996,
-          "coverage": 0.791
+          "labeledPixels": 959180,
+          "coverage": 0.708
         },
         "yolo26l-seg": {
           "classCount": 1,
-          "labeledPixels": 1033339,
-          "coverage": 0.762
+          "labeledPixels": 855879,
+          "coverage": 0.632
         }
       },
       "classNames": [
+        "Water",
         "Smoke",
         "Dirt road",
         "Mud",
         "Burnt grass"
       ],
       "classLegend": [
+        {
+          "id": "water",
+          "name": "Water",
+          "labelIndex": 0,
+          "color": "#0047FF"
+        },
         {
           "id": "smoke",
           "name": "Smoke",
@@ -43756,8 +43579,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "2 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 2,
-        "labeledPixels": 325809,
-        "coverage": 0.24
+        "labeledPixels": 324137,
+        "coverage": 0.239
       }
     },
     {
@@ -43777,39 +43600,39 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1786 x 1160",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 283486
+          "pixelCount": 282453
         },
         {
-          "labelIndex": 5,
+          "labelIndex": 4,
           "className": "First responder",
-          "pixelCount": 70180
+          "pixelCount": 69255
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 1159121
+          "pixelCount": 1273414
         },
         {
-          "labelIndex": 15,
+          "labelIndex": 14,
           "className": "Window",
-          "pixelCount": 157335
+          "pixelCount": 155625
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 71250
+          "pixelCount": 70157
         },
         {
-          "labelIndex": 27,
+          "labelIndex": 26,
           "className": "Boat",
-          "pixelCount": 229696
+          "pixelCount": 228377
         },
         {
-          "labelIndex": 32,
+          "labelIndex": 31,
           "className": "Door",
-          "pixelCount": 60094
+          "pixelCount": 59540
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/3a7366c7-boat_disaster_in_alley_FORWARD_SLASH_00437.jpg",
@@ -43942,72 +43765,54 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
-            "labelIndex": 0,
-            "className": "Water",
-            "pixelCount": 253932,
-            "score": 0.3088
-          },
-          {
-            "labelIndex": 4,
-            "className": "First responder",
-            "pixelCount": 73841,
-            "score": 0.9013
-          },
-          {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 229776,
-            "score": 0.4257
-          },
-          {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 146603,
-            "score": 0.8322
+            "pixelCount": 148330,
+            "score": 0.8882
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 82287,
-            "score": 0.8382
+            "pixelCount": 154006,
+            "score": 0.8082
           },
           {
             "labelIndex": 26,
             "className": "Boat",
-            "pixelCount": 211827,
-            "score": 0.913
+            "pixelCount": 225256,
+            "score": 0.8768
           },
           {
             "labelIndex": 31,
             "className": "Door",
-            "pixelCount": 60781,
-            "score": 0.5088
+            "pixelCount": 188884,
+            "score": 0.5496
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 4,
             "className": "First responder",
-            "pixelCount": 72694,
-            "score": 0.942
+            "pixelCount": 71330,
+            "score": 0.8971
           },
           {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 147544,
-            "score": 0.6847
+            "pixelCount": 43534,
+            "score": 0.6791
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 77703,
-            "score": 0.9176
+            "pixelCount": 87489,
+            "score": 0.9094
           },
           {
             "labelIndex": 26,
             "className": "Boat",
-            "pixelCount": 229335,
-            "score": 0.9593
+            "pixelCount": 238433,
+            "score": 0.9381
           }
         ]
       },
@@ -44035,14 +43840,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.673
         },
         "yolo11l-seg": {
-          "classCount": 7,
-          "labeledPixels": 1059047,
-          "coverage": 0.511
+          "classCount": 4,
+          "labeledPixels": 716476,
+          "coverage": 0.346
         },
         "yolo26l-seg": {
           "classCount": 4,
-          "labeledPixels": 527276,
-          "coverage": 0.255
+          "labeledPixels": 440786,
+          "coverage": 0.213
         }
       },
       "classNames": [
@@ -44129,8 +43934,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "7 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 7,
-        "labeledPixels": 2031162,
-        "coverage": 0.98
+        "labeledPixels": 2138821,
+        "coverage": 1.032
       }
     },
     {
@@ -44150,34 +43955,34 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1200 x 799",
       "groundTruth": [
         {
-          "labelIndex": 4,
+          "labelIndex": 3,
           "className": "Helmet",
-          "pixelCount": 1146
+          "pixelCount": 1051
         },
         {
-          "labelIndex": 5,
+          "labelIndex": 4,
           "className": "First responder",
-          "pixelCount": 30256
+          "pixelCount": 29708
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 88536
+          "pixelCount": 34412
+        },
+        {
+          "labelIndex": 14,
+          "className": "Window",
+          "pixelCount": 6747
         },
         {
           "labelIndex": 15,
-          "className": "Window",
-          "pixelCount": 6925
-        },
-        {
-          "labelIndex": 16,
           "className": "Debris",
-          "pixelCount": 705164
+          "pixelCount": 701733
         },
         {
-          "labelIndex": 63,
+          "labelIndex": 62,
           "className": "Chainsaw",
-          "pixelCount": 2927
+          "pixelCount": 2776
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/4ff47c60-tornado_in_cabin_outdoor_FORWARD_SLASH_00308.jpg",
@@ -44240,46 +44045,40 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 68800,
-            "score": 0.7447
+            "pixelCount": 120538,
+            "score": 0.566
           },
           {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 6786,
-            "score": 0.3953
+            "pixelCount": 6346,
+            "score": 0.5902
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 31743,
-            "score": 0.9053
+            "pixelCount": 29665,
+            "score": 0.9312
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 1,
             "className": "Green tree",
-            "pixelCount": 113127,
-            "score": 0.6281
-          },
-          {
-            "labelIndex": 3,
-            "className": "Helmet",
-            "pixelCount": 1385,
-            "score": 0.4857
+            "pixelCount": 63733,
+            "score": 0.4996
           },
           {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 6316,
-            "score": 0.7231
+            "pixelCount": 8275,
+            "score": 0.5567
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 29936,
-            "score": 0.9689
+            "pixelCount": 28966,
+            "score": 0.9262
           }
         ]
       },
@@ -44308,13 +44107,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 3,
-          "labeledPixels": 107329,
-          "coverage": 0.112
+          "labeledPixels": 156549,
+          "coverage": 0.163
         },
         "yolo26l-seg": {
-          "classCount": 4,
-          "labeledPixels": 150764,
-          "coverage": 0.157
+          "classCount": 3,
+          "labeledPixels": 100974,
+          "coverage": 0.105
         }
       },
       "classNames": [
@@ -44343,13 +44142,13 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "first-responder",
           "name": "First responder",
-          "labelIndex": 5,
+          "labelIndex": 4,
           "color": "#8A00FF"
         },
         {
           "id": "building",
           "name": "Building",
-          "labelIndex": 13,
+          "labelIndex": 12,
           "color": "#FFD600"
         },
         {
@@ -44361,7 +44160,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "debris",
           "name": "Debris",
-          "labelIndex": 16,
+          "labelIndex": 15,
           "color": "#FFB300"
         },
         {
@@ -44373,15 +44172,15 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "chainsaw",
           "name": "Chainsaw",
-          "labelIndex": 63,
+          "labelIndex": 62,
           "color": "#39FF14"
         }
       ],
       "summary": "6 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 6,
-        "labeledPixels": 834954,
-        "coverage": 0.871
+        "labeledPixels": 776427,
+        "coverage": 0.81
       }
     },
     {
@@ -44401,39 +44200,39 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "805 x 800",
       "groundTruth": [
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 152634
+          "pixelCount": 135921
         },
         {
-          "labelIndex": 16,
+          "labelIndex": 15,
           "className": "Debris",
-          "pixelCount": 129445
+          "pixelCount": 129251
+        },
+        {
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 228853
         },
         {
           "labelIndex": 21,
-          "className": "Road",
-          "pixelCount": 231426
-        },
-        {
-          "labelIndex": 22,
           "className": "Civilian vehicle",
-          "pixelCount": 39682
+          "pixelCount": 21817
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 29371
+          "pixelCount": 28270
         },
         {
-          "labelIndex": 28,
+          "labelIndex": 27,
           "className": "Pavement",
-          "pixelCount": 14004
+          "pixelCount": 7996
         },
         {
-          "labelIndex": 42,
+          "labelIndex": 41,
           "className": "Tower",
-          "pixelCount": 11184
+          "pixelCount": 10880
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/777b8154-car_disaster_in_embassy_FORWARD_SLASH_149bbd2961.jpg",
@@ -44574,70 +44373,58 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 133108,
-            "score": 0.9378
-          },
-          {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 104408,
-            "score": 0.652
+            "pixelCount": 128379,
+            "score": 0.9425
           },
           {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 634,
-            "score": 0.3392
-          },
-          {
-            "labelIndex": 20,
-            "className": "Road",
-            "pixelCount": 6186,
-            "score": 0.7749
+            "pixelCount": 26875,
+            "score": 0.542
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 20125,
-            "score": 0.525
+            "pixelCount": 19656,
+            "score": 0.6869
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 25094,
-            "score": 0.6396
+            "pixelCount": 32175,
+            "score": 0.6892
           },
           {
             "labelIndex": 40,
             "className": "Bicycle",
-            "pixelCount": 995,
-            "score": 0.8247
-          },
-          {
-            "labelIndex": 43,
-            "className": "Military personnel",
-            "pixelCount": 2546,
-            "score": 0.6614
+            "pixelCount": 1094,
+            "score": 0.4098
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 6,
             "className": "Destroyed vehicle",
-            "pixelCount": 136740,
-            "score": 0.7454
+            "pixelCount": 133097,
+            "score": 0.8284
+          },
+          {
+            "labelIndex": 12,
+            "className": "Building",
+            "pixelCount": 106601,
+            "score": 0.8081
           },
           {
             "labelIndex": 14,
             "className": "Window",
-            "pixelCount": 6691,
-            "score": 0.8163
+            "pixelCount": 1826,
+            "score": 0.5554
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 30732,
-            "score": 0.7529
+            "pixelCount": 27530,
+            "score": 0.6988
           }
         ]
       },
@@ -44665,14 +44452,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.43
         },
         "yolo11l-seg": {
-          "classCount": 8,
-          "labeledPixels": 293096,
-          "coverage": 0.455
+          "classCount": 5,
+          "labeledPixels": 208179,
+          "coverage": 0.323
         },
         "yolo26l-seg": {
-          "classCount": 3,
-          "labeledPixels": 174163,
-          "coverage": 0.27
+          "classCount": 4,
+          "labeledPixels": 269054,
+          "coverage": 0.418
         }
       },
       "classNames": [
@@ -44690,8 +44477,7 @@ window.DETECTION_ATLAS_DATA = {
         "Door",
         "Mud",
         "Bicycle",
-        "Tower",
-        "Military personnel"
+        "Tower"
       ],
       "classLegend": [
         {
@@ -44721,7 +44507,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "debris",
           "name": "Debris",
-          "labelIndex": 16,
+          "labelIndex": 15,
           "color": "#FFB300"
         },
         {
@@ -44757,7 +44543,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "pavement",
           "name": "Pavement",
-          "labelIndex": 28,
+          "labelIndex": 27,
           "color": "#FF00D4"
         },
         {
@@ -44781,21 +44567,15 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "tower",
           "name": "Tower",
-          "labelIndex": 42,
-          "color": "#FF6D00"
-        },
-        {
-          "id": "military-personnel",
-          "name": "Military personnel",
-          "labelIndex": 43,
+          "labelIndex": 41,
           "color": "#FF6D00"
         }
       ],
       "summary": "7 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 7,
-        "labeledPixels": 607746,
-        "coverage": 0.944
+        "labeledPixels": 562988,
+        "coverage": 0.874
       }
     },
     {
@@ -44815,39 +44595,39 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "962 x 606",
       "groundTruth": [
         {
-          "labelIndex": 2,
+          "labelIndex": 1,
           "className": "Green tree",
-          "pixelCount": 184286
+          "pixelCount": 170692
         },
         {
-          "labelIndex": 8,
+          "labelIndex": 7,
           "className": "Smoke",
-          "pixelCount": 201067
+          "pixelCount": 198625
         },
         {
-          "labelIndex": 12,
+          "labelIndex": 11,
           "className": "Green plant",
-          "pixelCount": 6355
+          "pixelCount": 5995
+        },
+        {
+          "labelIndex": 20,
+          "className": "Road",
+          "pixelCount": 101538
         },
         {
           "labelIndex": 21,
-          "className": "Road",
-          "pixelCount": 102381
-        },
-        {
-          "labelIndex": 22,
           "className": "Civilian vehicle",
-          "pixelCount": 6757
+          "pixelCount": 6520
         },
         {
-          "labelIndex": 24,
+          "labelIndex": 23,
           "className": "Citizen",
-          "pixelCount": 11295
+          "pixelCount": 10923
         },
         {
-          "labelIndex": 26,
+          "labelIndex": 25,
           "className": "Pole",
-          "pixelCount": 32505
+          "pixelCount": 30969
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/c2e2ee21-fog_in_hospital_FORWARD_SLASH_ac89240d02.jpg",
@@ -44952,58 +44732,58 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 259587,
-            "score": 0.6669
+            "pixelCount": 268216,
+            "score": 0.4326
+          },
+          {
+            "labelIndex": 19,
+            "className": "Dry tree",
+            "pixelCount": 50693,
+            "score": 0.4268
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 107356,
-            "score": 0.9053
+            "pixelCount": 102217,
+            "score": 0.903
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 11789,
-            "score": 0.9487
+            "pixelCount": 11469,
+            "score": 0.9333
           },
           {
             "labelIndex": 25,
             "className": "Pole",
-            "pixelCount": 30161,
-            "score": 0.8289
+            "pixelCount": 38974,
+            "score": 0.6346
           }
         ],
         "yolo26l-seg": [
           {
-            "labelIndex": 1,
-            "className": "Green tree",
-            "pixelCount": 27275,
-            "score": 0.6841
-          },
-          {
             "labelIndex": 7,
             "className": "Smoke",
-            "pixelCount": 281536,
-            "score": 0.8251
+            "pixelCount": 309522,
+            "score": 0.7532
           },
           {
             "labelIndex": 20,
             "className": "Road",
-            "pixelCount": 105515,
-            "score": 0.927
+            "pixelCount": 102413,
+            "score": 0.3957
           },
           {
             "labelIndex": 23,
             "className": "Citizen",
-            "pixelCount": 11862,
-            "score": 0.966
+            "pixelCount": 11357,
+            "score": 0.9596
           },
           {
             "labelIndex": 25,
             "className": "Pole",
-            "pixelCount": 38577,
-            "score": 0.7468
+            "pixelCount": 11622,
+            "score": 0.8265
           }
         ]
       },
@@ -45031,20 +44811,21 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.377
         },
         "yolo11l-seg": {
-          "classCount": 4,
-          "labeledPixels": 408893,
-          "coverage": 0.701
+          "classCount": 5,
+          "labeledPixels": 471569,
+          "coverage": 0.809
         },
         "yolo26l-seg": {
-          "classCount": 5,
-          "labeledPixels": 464765,
-          "coverage": 0.797
+          "classCount": 4,
+          "labeledPixels": 434914,
+          "coverage": 0.746
         }
       },
       "classNames": [
         "Green tree",
         "Smoke",
         "Green plant",
+        "Dry tree",
         "Road",
         "Civilian vehicle",
         "Citizen",
@@ -45069,8 +44850,14 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "green-plant",
           "name": "Green plant",
-          "labelIndex": 12,
+          "labelIndex": 11,
           "color": "#8A00FF"
+        },
+        {
+          "id": "dry-tree",
+          "name": "Dry tree",
+          "labelIndex": 19,
+          "color": "#FFB300"
         },
         {
           "id": "road",
@@ -45081,7 +44868,7 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "civilian-vehicle",
           "name": "Civilian vehicle",
-          "labelIndex": 22,
+          "labelIndex": 21,
           "color": "#4B0082"
         },
         {
@@ -45118,8 +44905,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "7 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 7,
-        "labeledPixels": 544646,
-        "coverage": 0.934
+        "labeledPixels": 525262,
+        "coverage": 0.901
       }
     },
     {
@@ -45139,29 +44926,29 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "670 x 376",
       "groundTruth": [
         {
-          "labelIndex": 1,
+          "labelIndex": 0,
           "className": "Water",
-          "pixelCount": 152858
+          "pixelCount": 153007
         },
         {
-          "labelIndex": 3,
+          "labelIndex": 2,
           "className": "Fence",
-          "pixelCount": 7798
+          "pixelCount": 7517
         },
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 8302
+          "pixelCount": 8121
         },
         {
-          "labelIndex": 20,
+          "labelIndex": 19,
           "className": "Dry tree",
-          "pixelCount": 31710
+          "pixelCount": 32100
         },
         {
-          "labelIndex": 27,
+          "labelIndex": 26,
           "className": "Boat",
-          "pixelCount": 6451
+          "pixelCount": 6287
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/1457db88-river_flood_in_dam_FORWARD_SLASH_00464.jpg",
@@ -45260,22 +45047,28 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 160896,
-            "score": 0.9663
+            "pixelCount": 130638,
+            "score": 0.9027
           },
           {
-            "labelIndex": 22,
-            "className": "Wall",
-            "pixelCount": 8564,
-            "score": 0.4201
+            "labelIndex": 19,
+            "className": "Dry tree",
+            "pixelCount": 29676,
+            "score": 0.6952
           }
         ],
         "yolo26l-seg": [
           {
             "labelIndex": 0,
             "className": "Water",
-            "pixelCount": 165198,
-            "score": 0.9412
+            "pixelCount": 150254,
+            "score": 0.8922
+          },
+          {
+            "labelIndex": 19,
+            "className": "Dry tree",
+            "pixelCount": 11018,
+            "score": 0.7957
           }
         ]
       },
@@ -45304,13 +45097,13 @@ window.DETECTION_ATLAS_DATA = {
         },
         "yolo11l-seg": {
           "classCount": 2,
-          "labeledPixels": 169460,
-          "coverage": 0.673
+          "labeledPixels": 160314,
+          "coverage": 0.636
         },
         "yolo26l-seg": {
-          "classCount": 1,
-          "labeledPixels": 165198,
-          "coverage": 0.656
+          "classCount": 2,
+          "labeledPixels": 161272,
+          "coverage": 0.64
         }
       },
       "classNames": [
@@ -45319,7 +45112,6 @@ window.DETECTION_ATLAS_DATA = {
         "Building",
         "Dry tree",
         "Road",
-        "Wall",
         "Boat",
         "Bag",
         "Burnt tree",
@@ -45336,19 +45128,19 @@ window.DETECTION_ATLAS_DATA = {
         {
           "id": "fence",
           "name": "Fence",
-          "labelIndex": 3,
+          "labelIndex": 2,
           "color": "#FF6D00"
         },
         {
           "id": "building",
           "name": "Building",
-          "labelIndex": 13,
+          "labelIndex": 12,
           "color": "#FFD600"
         },
         {
           "id": "dry-tree",
           "name": "Dry tree",
-          "labelIndex": 20,
+          "labelIndex": 19,
           "color": "#FFB300"
         },
         {
@@ -45358,15 +45150,9 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FFD600"
         },
         {
-          "id": "wall",
-          "name": "Wall",
-          "labelIndex": 22,
-          "color": "#FF00D4"
-        },
-        {
           "id": "boat",
           "name": "Boat",
-          "labelIndex": 27,
+          "labelIndex": 26,
           "color": "#FFD600"
         },
         {
@@ -45397,7 +45183,7 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "5 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 5,
-        "labeledPixels": 207119,
+        "labeledPixels": 207032,
         "coverage": 0.822
       }
     },
@@ -45418,29 +45204,29 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1200 x 1690",
       "groundTruth": [
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 143420
+          "pixelCount": 142805
+        },
+        {
+          "labelIndex": 15,
+          "className": "Debris",
+          "pixelCount": 910969
         },
         {
           "labelIndex": 16,
-          "className": "Debris",
-          "pixelCount": 914479
-        },
-        {
-          "labelIndex": 17,
           "className": "Dirt road",
-          "pixelCount": 94925
+          "pixelCount": 94169
         },
         {
-          "labelIndex": 20,
+          "labelIndex": 19,
           "className": "Dry tree",
-          "pixelCount": 8059
+          "pixelCount": 7838
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 295753
+          "pixelCount": 293531
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/23e22453-earthquake_in_landfill_FORWARD_SLASH_00473.jpg",
@@ -45515,34 +45301,22 @@ window.DETECTION_ATLAS_DATA = {
           {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 1079458,
-            "score": 0.8499
+            "pixelCount": 750533,
+            "score": 0.9052
+          },
+          {
+            "labelIndex": 17,
+            "className": "Destroyed building",
+            "pixelCount": 351078,
+            "score": 0.791
           }
         ],
         "yolo26l-seg": [
           {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 144670,
-            "score": 0.8736
-          },
-          {
             "labelIndex": 15,
             "className": "Debris",
-            "pixelCount": 56628,
-            "score": 0.4426
-          },
-          {
-            "labelIndex": 16,
-            "className": "Dirt road",
-            "pixelCount": 97560,
-            "score": 0.3743
-          },
-          {
-            "labelIndex": 21,
-            "className": "Civilian vehicle",
-            "pixelCount": 440886,
-            "score": 0.8509
+            "pixelCount": 923052,
+            "score": 0.7811
           }
         ]
       },
@@ -45570,14 +45344,14 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.158
         },
         "yolo11l-seg": {
-          "classCount": 1,
-          "labeledPixels": 1079458,
-          "coverage": 0.532
+          "classCount": 2,
+          "labeledPixels": 1101611,
+          "coverage": 0.543
         },
         "yolo26l-seg": {
-          "classCount": 4,
-          "labeledPixels": 739744,
-          "coverage": 0.365
+          "classCount": 1,
+          "labeledPixels": 923052,
+          "coverage": 0.455
         }
       },
       "classNames": [
@@ -45586,6 +45360,7 @@ window.DETECTION_ATLAS_DATA = {
         "Building",
         "Debris",
         "Dirt road",
+        "Destroyed building",
         "Dry tree",
         "Civilian vehicle",
         "Door"
@@ -45622,9 +45397,15 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FF6D00"
         },
         {
+          "id": "destroyed-building",
+          "name": "Destroyed building",
+          "labelIndex": 17,
+          "color": "#4B0082"
+        },
+        {
           "id": "dry-tree",
           "name": "Dry tree",
-          "labelIndex": 20,
+          "labelIndex": 19,
           "color": "#FFB300"
         },
         {
@@ -45643,8 +45424,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "5 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 5,
-        "labeledPixels": 1456636,
-        "coverage": 0.718
+        "labeledPixels": 1449312,
+        "coverage": 0.715
       }
     },
     {
@@ -45664,24 +45445,24 @@ window.DETECTION_ATLAS_DATA = {
       "dimensions": "1280 x 720",
       "groundTruth": [
         {
-          "labelIndex": 13,
+          "labelIndex": 12,
           "className": "Building",
-          "pixelCount": 185591
+          "pixelCount": 191679
         },
         {
-          "labelIndex": 22,
+          "labelIndex": 21,
           "className": "Civilian vehicle",
-          "pixelCount": 11860
+          "pixelCount": 11661
         },
         {
-          "labelIndex": 25,
+          "labelIndex": 24,
           "className": "Green grass",
-          "pixelCount": 40912
+          "pixelCount": 39635
         },
         {
-          "labelIndex": 33,
+          "labelIndex": 32,
           "className": "Mud",
-          "pixelCount": 406811
+          "pixelCount": 382011
         }
       ],
       "groundTruthImage": "Inc1M/shared_samples_gt_with_json/84896714-mudflow_in_police_station_FORWARD_SLASH_85d0d716aa.jpg",
@@ -45814,42 +45595,60 @@ window.DETECTION_ATLAS_DATA = {
         ],
         "yolo11l-seg": [
           {
+            "labelIndex": 11,
+            "className": "Green plant",
+            "pixelCount": 16115,
+            "score": 0.4249
+          },
+          {
             "labelIndex": 12,
             "className": "Building",
-            "pixelCount": 185866,
-            "score": 0.7814
+            "pixelCount": 176923,
+            "score": 0.7565
           },
           {
             "labelIndex": 21,
             "className": "Civilian vehicle",
-            "pixelCount": 12528,
-            "score": 0.9396
+            "pixelCount": 11973,
+            "score": 0.9454
           },
           {
-            "labelIndex": 24,
-            "className": "Green grass",
-            "pixelCount": 18362,
-            "score": 0.3777
-          }
-        ],
-        "yolo26l-seg": [
-          {
-            "labelIndex": 12,
-            "className": "Building",
-            "pixelCount": 177182,
-            "score": 0.9768
+            "labelIndex": 23,
+            "className": "Citizen",
+            "pixelCount": 804,
+            "score": 0.315
           },
           {
             "labelIndex": 28,
             "className": "Dry grass",
-            "pixelCount": 28702,
-            "score": 0.3419
+            "pixelCount": 50940,
+            "score": 0.3559
+          }
+        ],
+        "yolo26l-seg": [
+          {
+            "labelIndex": 4,
+            "className": "First responder",
+            "pixelCount": 1775,
+            "score": 0.5851
           },
           {
-            "labelIndex": 32,
-            "className": "Mud",
-            "pixelCount": 370562,
-            "score": 0.981
+            "labelIndex": 11,
+            "className": "Green plant",
+            "pixelCount": 16503,
+            "score": 0.6561
+          },
+          {
+            "labelIndex": 12,
+            "className": "Building",
+            "pixelCount": 170330,
+            "score": 0.9677
+          },
+          {
+            "labelIndex": 21,
+            "className": "Civilian vehicle",
+            "pixelCount": 12021,
+            "score": 0.901
           }
         ]
       },
@@ -45877,26 +45676,27 @@ window.DETECTION_ATLAS_DATA = {
           "coverage": 0.227
         },
         "yolo11l-seg": {
-          "classCount": 3,
-          "labeledPixels": 216756,
-          "coverage": 0.235
+          "classCount": 5,
+          "labeledPixels": 256755,
+          "coverage": 0.279
         },
         "yolo26l-seg": {
-          "classCount": 3,
-          "labeledPixels": 576446,
-          "coverage": 0.625
+          "classCount": 4,
+          "labeledPixels": 200629,
+          "coverage": 0.218
         }
       },
       "classNames": [
         "Green tree",
+        "First responder",
         "SCBA",
-        "Building",
         "Green plant",
+        "Building",
         "Window",
         "Debris",
         "Civilian vehicle",
-        "Wall",
         "Citizen",
+        "Wall",
         "Green grass",
         "Pole",
         "Dry grass",
@@ -45914,22 +45714,28 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#FFB300"
         },
         {
+          "id": "first-responder",
+          "name": "First responder",
+          "labelIndex": 4,
+          "color": "#8A00FF"
+        },
+        {
           "id": "scba",
           "name": "SCBA",
           "labelIndex": 6,
           "color": "#4B0082"
         },
         {
+          "id": "green-plant",
+          "name": "Green plant",
+          "labelIndex": 11,
+          "color": "#8A00FF"
+        },
+        {
           "id": "building",
           "name": "Building",
           "labelIndex": 12,
           "color": "#FFD600"
-        },
-        {
-          "id": "green-plant",
-          "name": "Green plant",
-          "labelIndex": 12,
-          "color": "#8A00FF"
         },
         {
           "id": "window",
@@ -45950,16 +45756,16 @@ window.DETECTION_ATLAS_DATA = {
           "color": "#4B0082"
         },
         {
+          "id": "citizen",
+          "name": "Citizen",
+          "labelIndex": 23,
+          "color": "#FFD600"
+        },
+        {
           "id": "wall",
           "name": "Wall",
           "labelIndex": 23,
           "color": "#FF00D4"
-        },
-        {
-          "id": "citizen",
-          "name": "Citizen",
-          "labelIndex": 24,
-          "color": "#FFD600"
         },
         {
           "id": "green-grass",
@@ -46013,8 +45819,8 @@ window.DETECTION_ATLAS_DATA = {
       "summary": "4 classes with 5 model segmentations loaded.",
       "groundTruthStats": {
         "classCount": 4,
-        "labeledPixels": 645174,
-        "coverage": 0.7
+        "labeledPixels": 624986,
+        "coverage": 0.678
       }
     },
     {

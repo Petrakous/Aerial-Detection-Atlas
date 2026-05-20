@@ -26,14 +26,18 @@
       "removed_predictions": 402
     },
     "yolo11l-seg": {
-      "original_predictions": 1196,
-      "kept_predictions": 753,
-      "removed_predictions": 443
+      "original_predictions": 1076,
+      "kept_predictions": 678,
+      "removed_predictions": 398
     },
     "yolo26l-seg": {
-      "original_predictions": 1137,
-      "kept_predictions": 801,
-      "removed_predictions": 336
+      "original_predictions": 1042,
+      "kept_predictions": 773,
+      "removed_predictions": 269
     }
+  },
+  "replacements": {
+    "yolo11l-seg": "yolo11l_fixed-20260520T125425Z-3-001.zip",
+    "yolo26l-seg": "yolo26l_fixed-20260520T125427Z-3-001.zip"
   }
 }
