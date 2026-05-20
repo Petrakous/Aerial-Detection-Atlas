@@ -359,7 +359,7 @@ const landingCollections = [
   {
     id: "ground-level",
     title: "Ground-level",
-    summary: "This collection brings together close-range incident benchmarks focused on scene understanding and hazardous-material recognition.",
+    summary: "This collection brings together close-range incident benchmarks focused on Multi-hazard scene understanding and hazardous-material recognition.",
     note: "CV group dataset",
     datasetIds: ["Inc1M", "HAZMAT"],
     variant: "featured"
