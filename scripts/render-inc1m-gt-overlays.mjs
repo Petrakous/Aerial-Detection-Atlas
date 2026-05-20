@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import { inc1mSegmentationColorRgb } from "./inc1m-segmentation-colors.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,21 +15,6 @@ const sourceGtJson = path.join(demoRoot, "Datasets", "annotations_gt.json");
 const gtBackupDir = path.join(datasetRoot, "shared_samples_gt_with_json_source_export");
 
 const overlayAlpha = 0.42;
-const palette = [
-  [0, 255, 209],
-  [255, 23, 68],
-  [138, 0, 255],
-  [255, 179, 0],
-  [57, 255, 20],
-  [0, 71, 255],
-  [255, 0, 212],
-  [75, 0, 130],
-  [255, 214, 0],
-  [255, 109, 0],
-  [0, 230, 118],
-  [182, 255, 0]
-];
-
 function exists(targetPath) {
   return fs.existsSync(targetPath);
 }
@@ -37,12 +23,12 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-function hashColor(name) {
-  let hash = 0;
-  for (const char of String(name || "").toLowerCase()) {
-    hash = ((hash * 31) + char.charCodeAt(0)) >>> 0;
+function colorForClass(name) {
+  const color = inc1mSegmentationColorRgb(name);
+  if (!color) {
+    throw new Error(`Missing Inc1M segmentation color for class: ${name}`);
   }
-  return palette[hash % palette.length];
+  return color;
 }
 
 function decodeCompressedRle(countsText) {
@@ -94,7 +80,7 @@ function renderOverlay({ imagePath, width, height, annotations, categories, outp
     const category = categories.get(Number(annotation.category_id));
     if (!category) continue;
 
-    const [red, green, blue] = hashColor(category.name);
+    const [red, green, blue] = colorForClass(category.name);
     const counts = decodeCompressedRle(annotation.segmentation?.counts || "");
     let cursor = 0;
     let on = false;

@@ -2,6 +2,7 @@ import fs from "node:fs";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { inc1mSegmentationColorHex } from "./inc1m-segmentation-colors.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -284,7 +285,12 @@ function assignDetectionClassColors(names) {
   }));
 }
 
-function segmentationColorFor(className) {
+function segmentationColorFor(className, datasetName = null) {
+  if (datasetName === "Inc1M") {
+    const inc1mColor = inc1mSegmentationColorHex(className);
+    if (inc1mColor) return inc1mColor;
+  }
+
   if (SEGMENTATION_CLASS_COLORS[className]) return SEGMENTATION_CLASS_COLORS[className];
 
   const normalized = String(className || "").trim().toLowerCase();
@@ -296,12 +302,12 @@ function segmentationColorFor(className) {
   return FALLBACK_SEGMENTATION_CLASS_COLORS[hash % FALLBACK_SEGMENTATION_CLASS_COLORS.length] || "#ffffff";
 }
 
-function segmentationLegendFromSegments(segments) {
+function segmentationLegendFromSegments(segments, datasetName = null) {
   return segments.map((segment) => ({
     id: slugify(segment.className),
     name: segment.className,
     labelIndex: segment.labelIndex,
-    color: segmentationColorFor(segment.className)
+    color: segmentationColorFor(segment.className, datasetName)
   }));
 }
 
@@ -318,7 +324,7 @@ function mergeSegmentationLegendEntries(datasetName, segmentsBySource) {
         id: slugify(normalizedName),
         name: normalizedName,
         labelIndex: segment.labelIndex,
-        color: segmentationColorFor(normalizedName)
+        color: segmentationColorFor(normalizedName, datasetName)
       });
       return;
     }

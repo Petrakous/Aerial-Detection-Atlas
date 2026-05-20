@@ -1,8 +1,16 @@
 .DS_Store
-LADD/
+.tmp/
+Datasets/
+Downloads/
+DFire/
 FloodNetPlus/
+HAZMAT/
+Inc1M/
+LADD/
 RescueNet/
 *.zip
+viewer/
+thumbnails/
 viewer/FloodNetPlus/
 viewer/RescueNet/
 thumbnails/FloodNetPlus/

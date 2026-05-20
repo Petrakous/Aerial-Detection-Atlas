@@ -22,6 +22,8 @@ Then open:
 http://localhost:8000
 ```
 
+The checked-in site code is intentionally light. Runtime images, thumbnails, and dataset artifacts are expected to come from GitHub Releases, with the demo falling back to local files only when they exist.
+
 ## Current dataset layout
 
 The generator expects dataset folders like this:
@@ -60,6 +62,8 @@ data/sample-data.js
 ```
 
 The app will automatically pick up all dataset folders it finds at the top level of this demo directory.
+
+If you are only serving the finished demo, you do not need to keep those dataset folders in git. They are only needed when rebuilding `data/sample-data.js` or publishing fresh release assets.
 
 ## Publish on GitHub Pages
 

@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import { inc1mSegmentationColorRgb } from "./inc1m-segmentation-colors.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -62,21 +63,6 @@ const MODEL_SPECS = [
   }
 ];
 
-const palette = [
-  [0, 255, 209],
-  [255, 23, 68],
-  [138, 0, 255],
-  [255, 179, 0],
-  [57, 255, 20],
-  [0, 71, 255],
-  [255, 0, 212],
-  [75, 0, 130],
-  [255, 214, 0],
-  [255, 109, 0],
-  [0, 230, 118],
-  [182, 255, 0]
-];
-
 function ensureDir(targetPath) {
   fs.mkdirSync(targetPath, { recursive: true });
 }
@@ -124,12 +110,12 @@ function extractInnerZip(zipPath, outputDir) {
   unzipArchive(zipPath, outputDir);
 }
 
-function hashColor(name) {
-  let hash = 0;
-  for (const char of String(name || "").toLowerCase()) {
-    hash = ((hash * 31) + char.charCodeAt(0)) >>> 0;
+function colorForClass(name) {
+  const color = inc1mSegmentationColorRgb(name);
+  if (!color) {
+    throw new Error(`Missing Inc1M segmentation color for class: ${name}`);
   }
-  return palette[hash % palette.length];
+  return color;
 }
 
 function decodeCompressedRle(countsText) {
@@ -390,7 +376,7 @@ function renderOverlay({ imagePath, width, height, items, outputPath }) {
 
   const output = Buffer.from(rawBuffer);
   for (const item of items) {
-    const color = hashColor(item.className);
+    const color = colorForClass(item.className);
     if (item.type === "polygon") {
       fillPolygonIntoBuffer(output, width, height, item.polygon, color);
     } else if (item.type === "rle") {
