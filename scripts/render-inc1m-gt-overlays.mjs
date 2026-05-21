@@ -14,7 +14,64 @@ const sourceGtJson = path.join(demoRoot, "Datasets", "annotations_gt.json");
 const gtBackupDir = path.join(datasetRoot, "shared_samples_gt_with_json_source_export");
 
 const overlayAlpha = 0.42;
-const palette = [
+const INC1M_CLASS_COLORS = {
+  "aerial vehicle": "#F08080",
+  "army vehicle": "#F08080",
+  bag: "#FFE4B6",
+  barrier: "#8B008B",
+  bicycle: "#FFA503",
+  boat: "#1FB3AB",
+  boot: "#FF8C03",
+  building: "#BDB76B",
+  "burnt grass": "#8B0000",
+  "burnt plant": "#A52B2A",
+  "burnt tree": "#800000",
+  chainsaw: "#FF6AB4",
+  citizen: "#9371DC",
+  "civilian vehicle": "#DAA521",
+  cone: "#7DFC01",
+  debris: "#DA70D6",
+  "destroyed building": "#CD5C5D",
+  "destroyed vehicle": "#E9967A",
+  "dirt road": "#DEB988",
+  door: "#B0C5DE",
+  "dry grass": "#D2B48C",
+  "dry plant": "#808000",
+  "dry tree": "#A0522D",
+  excavator: "#BB55D3",
+  extinguisher: "#8B0000",
+  fence: "#696969",
+  "fire hose": "#708191",
+  "fire truck": "#ADD8E6",
+  "first responder": "#FF6447",
+  flame: "#D3691E",
+  furniture: "#F0F0D9",
+  glove: "#6B5ACD",
+  "green grass": "#9ACD33",
+  "green plant": "#02FF7F",
+  "green tree": "#238B23",
+  helmet: "#008080",
+  "hole in the ground": "#40E0D0",
+  ladder: "#3BB371",
+  mask: "#4682B4",
+  "military personnel": "#02FFFF",
+  mud: "#CD853F",
+  pavement: "#808080",
+  pole: "#6B8E24",
+  "police vehicle": "#2090FF",
+  "protective glasses": "#EE83EE",
+  road: "#FF1393",
+  scba: "#038B8B",
+  shovel: "#DDA1DE",
+  smoke: "#B22322",
+  stairs: "#F5A560",
+  tank: "#5F9FA0",
+  tower: "#483E8C",
+  wall: "#FA8172",
+  water: "#87CEFA",
+  window: "#4169E2"
+};
+const fallbackPalette = [
   [0, 255, 209],
   [255, 23, 68],
   [138, 0, 255],
@@ -38,11 +95,20 @@ function readJson(filePath) {
 }
 
 function hashColor(name) {
+  const explicit = INC1M_CLASS_COLORS[String(name || "").trim().toLowerCase()];
+  if (explicit) {
+    return [
+      Number.parseInt(explicit.slice(1, 3), 16),
+      Number.parseInt(explicit.slice(3, 5), 16),
+      Number.parseInt(explicit.slice(5, 7), 16)
+    ];
+  }
+
   let hash = 0;
   for (const char of String(name || "").toLowerCase()) {
     hash = ((hash * 31) + char.charCodeAt(0)) >>> 0;
   }
-  return palette[hash % palette.length];
+  return fallbackPalette[hash % fallbackPalette.length];
 }
 
 function decodeCompressedRle(countsText) {

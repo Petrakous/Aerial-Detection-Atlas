@@ -8,7 +8,7 @@ const releaseBases = {
   hazmat: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-hazmat-v1/",
   thumbnails: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-thumbnails-v3/",
   segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v2/",
-  segmentationGtInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-inc1m-v2/",
+  segmentationGtInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-inc1m-v3/",
   segmentationGtJson: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-json-v1/",
   segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/",
   segmentationPredInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-inc1m-v1/",
