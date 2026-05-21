@@ -11,7 +11,10 @@ const demoRoot = path.resolve(__dirname, "..");
 const datasetRoot = path.join(demoRoot, "Inc1M");
 const rawDir = path.join(datasetRoot, "shared_ground_truth_images");
 const gtDir = path.join(datasetRoot, "shared_samples_gt_with_json");
-const sourceGtJson = path.join(demoRoot, "Datasets", "annotations_gt.json");
+const sourceGtJsonCandidates = [
+  path.join(demoRoot, "Datasets", "annotations_gt.json"),
+  path.join(demoRoot, ".tmp", "inc1m-import-all", "inner", "sam3", "vis", "annotations_gt.json")
+];
 const gtBackupDir = path.join(datasetRoot, "shared_samples_gt_with_json_source_export");
 
 const overlayAlpha = 0.42;
@@ -21,6 +24,10 @@ function exists(targetPath) {
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function firstExistingPath(candidates) {
+  return candidates.find((targetPath) => exists(targetPath)) || null;
 }
 
 function colorForClass(name) {
@@ -118,7 +125,8 @@ function renderOverlay({ imagePath, width, height, annotations, categories, outp
 }
 
 function main() {
-  if (!exists(sourceGtJson)) {
+  const sourceGtJson = firstExistingPath(sourceGtJsonCandidates);
+  if (!sourceGtJson) {
     throw new Error("Missing extracted Inc1M GT annotations. Run the import script first.");
   }
 

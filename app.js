@@ -8,7 +8,7 @@ const releaseBases = {
   hazmat: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-hazmat-v1/",
   thumbnails: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-thumbnails-v3/",
   segmentationGt: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-v2/",
-  segmentationGtInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-inc1m-v2/",
+  segmentationGtInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-inc1m-v3/",
   segmentationGtJson: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-gt-json-v1/",
   segmentationPred: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-v2/",
   segmentationPredInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-inc1m-v1/",
@@ -285,9 +285,9 @@ const datasetDescriptions = {
   },
   Inc1M: {
     title: "Incidents1M-Seg",
-    task: "Panoptic Segmentation",
+    task: "Instance Segmentation",
     useCase: "Multi-hazard",
-    summary: "Curated multi-hazard incident benchmark slice for panoptic segmentation, highlighting responder activity, fire, smoke, destruction, and other incident-relevant scene elements.",
+    summary: "Curated multi-hazard incident benchmark slice for instance segmentation, highlighting responder activity, fire, smoke, destruction, and other incident-relevant scene elements.",
     previewImage: "thumbnails/Inc1M/3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
     sourceUrl: "https://roc-hci.github.io/NADBenchmarks/Incidents1M.html",
     sourceLabel: "Original dataset"
@@ -1385,13 +1385,24 @@ function uniqueAssetCandidates(paths = []) {
   return [...new Set(paths.filter(Boolean))];
 }
 
+function isLocalDevHost() {
+  const hostname = window.location.hostname || "";
+  return hostname === "localhost" || hostname === "127.0.0.1" || hostname === "0.0.0.0";
+}
+
+function shouldPreferLocalAsset(path) {
+  if (!isLocalDevHost() || !path) return false;
+  return /\/(?:shared_samples_gt_with_json|samples_gt_with_json|visualised_samples_with_json)\//.test(path)
+    || /^(?:thumbnails|Inc1M\/shared_ground_truth_images)\//.test(path);
+}
+
 function assetCandidates(path) {
   if (!path) return [];
   const resolved = resolveAssetPath(path);
-  return uniqueAssetCandidates([
-    ...(Array.isArray(resolved) ? resolved : [resolved]),
-    path
-  ]);
+  const resolvedCandidates = Array.isArray(resolved) ? resolved : [resolved];
+  return shouldPreferLocalAsset(path)
+    ? uniqueAssetCandidates([path, ...resolvedCandidates])
+    : uniqueAssetCandidates([...resolvedCandidates, path]);
 }
 
 function sceneBaseImageCandidates(scene) {
@@ -1816,7 +1827,7 @@ function normalizeSegmentationInstances(prediction, scene) {
       const score = instance.score == null ? null : Number(instance.score);
       if (!Number.isFinite(xPercent) || !Number.isFinite(yPercent) || !Number.isFinite(score)) return null;
 
-      return {
+      const normalizedInstance = {
         id: `${instance.label_index ?? "label"}:${instance.class_name ?? "mask"}:${index}`,
         className: instance.class_name,
         labelIndex: Number(instance.label_index),
@@ -1834,9 +1845,169 @@ function normalizeSegmentationInstances(prediction, scene) {
         polygons: polygons?.length ? polygons : (polygon?.length ? [polygon] : null),
         segmentation
       };
+
+      const interiorAnchor = computeSegmentationInteriorAnchor(normalizedInstance, scene);
+      if (interiorAnchor) {
+        normalizedInstance.xNormalized = interiorAnchor.xNormalized;
+        normalizedInstance.yNormalized = interiorAnchor.yNormalized;
+        normalizedInstance.xPercent = interiorAnchor.xNormalized * 100;
+        normalizedInstance.yPercent = interiorAnchor.yNormalized * 100;
+      }
+
+      return normalizedInstance;
     })
     .filter(Boolean)
     .sort((a, b) => (b.area || 0) - (a.area || 0));
+}
+
+function segmentationInstanceBounds(entry, scene) {
+  if (Array.isArray(entry?.bbox) && entry.bbox.length === 4) {
+    const [x, y, width, height] = entry.bbox.map((value) => Number(value));
+    if ([x, y, width, height].every(Number.isFinite)) {
+      const minX = clamp(Math.floor(x), 0, Math.max(0, scene.width - 1));
+      const minY = clamp(Math.floor(y), 0, Math.max(0, scene.height - 1));
+      const maxX = clamp(Math.ceil(x + width), minX + 1, scene.width);
+      const maxY = clamp(Math.ceil(y + height), minY + 1, scene.height);
+      return { minX, minY, maxX, maxY };
+    }
+  }
+
+  const points = []
+    .concat(Array.isArray(entry?.polygon) ? entry.polygon : [])
+    .concat(Array.isArray(entry?.polygons) ? entry.polygons.flat() : []);
+
+  if (!points.length) return null;
+
+  let minX = Number.POSITIVE_INFINITY;
+  let minY = Number.POSITIVE_INFINITY;
+  let maxX = Number.NEGATIVE_INFINITY;
+  let maxY = Number.NEGATIVE_INFINITY;
+
+  points.forEach((point) => {
+    const x = Number(point?.[0]);
+    const y = Number(point?.[1]);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+    minX = Math.min(minX, x);
+    minY = Math.min(minY, y);
+    maxX = Math.max(maxX, x);
+    maxY = Math.max(maxY, y);
+  });
+
+  if (![minX, minY, maxX, maxY].every(Number.isFinite)) return null;
+
+  return {
+    minX: clamp(Math.floor(minX), 0, Math.max(0, scene.width - 1)),
+    minY: clamp(Math.floor(minY), 0, Math.max(0, scene.height - 1)),
+    maxX: clamp(Math.ceil(maxX), 1, scene.width),
+    maxY: clamp(Math.ceil(maxY), 1, scene.height)
+  };
+}
+
+function pointInsideSegmentationInstance(entry, sceneX, sceneY, scene) {
+  if (entry.type === "polygon" && entry.polygons?.length) {
+    return entry.polygons.some((polygon) => pointInPolygon(sceneX, sceneY, polygon));
+  }
+
+  if (entry.type === "rle" && entry.segmentation?.counts) {
+    return pointInRle(sceneX, sceneY, entry.segmentation, scene.width, scene.height);
+  }
+
+  if (Array.isArray(entry.bbox) && entry.bbox.length === 4) {
+    const [x, y, width, height] = entry.bbox;
+    return sceneX >= x && sceneX <= x + width && sceneY >= y && sceneY <= y + height;
+  }
+
+  return false;
+}
+
+function computeSegmentationInteriorAnchor(entry, scene) {
+  const bounds = segmentationInstanceBounds(entry, scene);
+  if (!bounds) return null;
+
+  const width = Math.max(1, bounds.maxX - bounds.minX);
+  const height = Math.max(1, bounds.maxY - bounds.minY);
+  const size = width * height;
+  const mask = new Uint8Array(size);
+
+  let filledCount = 0;
+  for (let localY = 0; localY < height; localY += 1) {
+    const sceneY = bounds.minY + localY + 0.5;
+    for (let localX = 0; localX < width; localX += 1) {
+      const sceneX = bounds.minX + localX + 0.5;
+      if (!pointInsideSegmentationInstance(entry, sceneX, sceneY, scene)) continue;
+      mask[(localY * width) + localX] = 1;
+      filledCount += 1;
+    }
+  }
+
+  if (!filledCount) return null;
+
+  const visited = new Uint8Array(size);
+  let largestComponent = null;
+
+  for (let startIndex = 0; startIndex < size; startIndex += 1) {
+    if (!mask[startIndex] || visited[startIndex]) continue;
+
+    const queue = [startIndex];
+    visited[startIndex] = 1;
+    const component = [];
+    let sumX = 0;
+    let sumY = 0;
+
+    while (queue.length) {
+      const index = queue.pop();
+      component.push(index);
+
+      const localX = index % width;
+      const localY = Math.floor(index / width);
+      sumX += localX + 0.5;
+      sumY += localY + 0.5;
+
+      for (let offsetY = -1; offsetY <= 1; offsetY += 1) {
+        for (let offsetX = -1; offsetX <= 1; offsetX += 1) {
+          if (!offsetX && !offsetY) continue;
+          const nextX = localX + offsetX;
+          const nextY = localY + offsetY;
+          if (nextX < 0 || nextX >= width || nextY < 0 || nextY >= height) continue;
+          const nextIndex = (nextY * width) + nextX;
+          if (!mask[nextIndex] || visited[nextIndex]) continue;
+          visited[nextIndex] = 1;
+          queue.push(nextIndex);
+        }
+      }
+    }
+
+    if (!largestComponent || component.length > largestComponent.indices.length) {
+      largestComponent = {
+        indices: component,
+        centroidX: sumX / component.length,
+        centroidY: sumY / component.length
+      };
+    }
+  }
+
+  if (!largestComponent?.indices?.length) return null;
+
+  let bestIndex = largestComponent.indices[0];
+  let bestDistance = Number.POSITIVE_INFINITY;
+
+  largestComponent.indices.forEach((index) => {
+    const localX = (index % width) + 0.5;
+    const localY = Math.floor(index / width) + 0.5;
+    const distance = ((localX - largestComponent.centroidX) ** 2) + ((localY - largestComponent.centroidY) ** 2);
+    if (distance < bestDistance) {
+      bestDistance = distance;
+      bestIndex = index;
+    }
+  });
+
+  const anchorX = bounds.minX + (bestIndex % width) + 0.5;
+  const anchorY = bounds.minY + Math.floor(bestIndex / width) + 0.5;
+
+  return {
+    xNormalized: clamp(anchorX / scene.width, 0.005, 0.995),
+    yNormalized: clamp(anchorY / scene.height, 0.005, 0.995)
+  };
 }
 
 function containRect(containerWidth, containerHeight, contentWidth, contentHeight) {
