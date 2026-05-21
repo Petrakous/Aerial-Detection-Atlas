@@ -287,9 +287,9 @@ const datasetDescriptions = {
   },
   Inc1M: {
     title: "Incidents1M-Seg",
-    task: "Panoptic Segmentation",
+    task: "Instance Segmentation",
     useCase: "Multi-hazard",
-    summary: "Curated multi-hazard incident benchmark slice for panoptic segmentation, highlighting responder activity, fire, smoke, destruction, and other incident-relevant scene elements.",
+    summary: "Curated multi-hazard incident benchmark slice for instance segmentation, highlighting responder activity, fire, smoke, destruction, and other incident-relevant scene elements.",
     previewImage: "thumbnails/Inc1M/3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
     sourceUrl: "https://roc-hci.github.io/NADBenchmarks/Incidents1M.html",
     sourceLabel: "Original dataset"
@@ -1832,7 +1832,7 @@ function normalizeSegmentationInstances(prediction, scene) {
       const score = instance.score == null ? null : Number(instance.score);
       if (!Number.isFinite(xPercent) || !Number.isFinite(yPercent) || !Number.isFinite(score)) return null;
 
-      return {
+      const normalizedEntry = {
         id: `${instance.label_index ?? "label"}:${instance.class_name ?? "mask"}:${index}`,
         className: instance.class_name,
         labelIndex: Number(instance.label_index),
@@ -1850,6 +1850,16 @@ function normalizeSegmentationInstances(prediction, scene) {
         polygons: polygons?.length ? polygons : (polygon?.length ? [polygon] : null),
         segmentation
       };
+
+      const interiorAnchor = computeSegmentationInteriorAnchor(normalizedEntry, scene);
+      if (interiorAnchor) {
+        normalizedEntry.xPercent = interiorAnchor.xNormalized * 100;
+        normalizedEntry.yPercent = interiorAnchor.yNormalized * 100;
+        normalizedEntry.xNormalized = interiorAnchor.xNormalized;
+        normalizedEntry.yNormalized = interiorAnchor.yNormalized;
+      }
+
+      return normalizedEntry;
     })
     .filter(Boolean)
     .sort((a, b) => (b.area || 0) - (a.area || 0));
@@ -1946,6 +1956,86 @@ function pointInRle(pointX, pointY, segmentation, width, height) {
   }
 
   return false;
+}
+
+function pointInsideSegmentationInstance(entry, sceneX, sceneY, scene) {
+  if (!entry || !scene) return false;
+
+  if (entry.type === "polygon" && entry.polygons?.length) {
+    return entry.polygons.some((polygon) => pointInPolygon(sceneX, sceneY, polygon));
+  }
+
+  if (entry.type === "rle" && entry.segmentation?.counts) {
+    return pointInRle(sceneX, sceneY, entry.segmentation, scene.width, scene.height);
+  }
+
+  if (Array.isArray(entry.bbox) && entry.bbox.length === 4) {
+    const [x, y, width, height] = entry.bbox;
+    return sceneX >= x && sceneX <= x + width && sceneY >= y && sceneY <= y + height;
+  }
+
+  return false;
+}
+
+function computeSegmentationInteriorAnchor(entry, scene) {
+  if (!entry || !scene || !Array.isArray(entry.bbox) || entry.bbox.length !== 4) return null;
+
+  const [rawX, rawY, rawWidth, rawHeight] = entry.bbox.map((value) => Number(value));
+  const minX = clamp(Math.floor(rawX), 0, Math.max(0, scene.width - 1));
+  const minY = clamp(Math.floor(rawY), 0, Math.max(0, scene.height - 1));
+  const maxX = clamp(Math.ceil(rawX + rawWidth), minX + 1, scene.width);
+  const maxY = clamp(Math.ceil(rawY + rawHeight), minY + 1, scene.height);
+  const width = Math.max(1, maxX - minX);
+  const height = Math.max(1, maxY - minY);
+
+  const preferredCandidates = [
+    [rawX + (rawWidth / 2), rawY + (rawHeight / 2)],
+    [entry.xNormalized * scene.width, entry.yNormalized * scene.height]
+  ].filter(([x, y]) => Number.isFinite(x) && Number.isFinite(y));
+
+  for (const [candidateX, candidateY] of preferredCandidates) {
+    if (pointInsideSegmentationInstance(entry, candidateX, candidateY, scene)) {
+      return {
+        xNormalized: clamp(candidateX / scene.width, 0.005, 0.995),
+        yNormalized: clamp(candidateY / scene.height, 0.005, 0.995)
+      };
+    }
+  }
+
+  const filled = [];
+  let sumX = 0;
+  let sumY = 0;
+
+  for (let y = minY; y < maxY; y += 1) {
+    for (let x = minX; x < maxX; x += 1) {
+      const sampleX = x + 0.5;
+      const sampleY = y + 0.5;
+      if (!pointInsideSegmentationInstance(entry, sampleX, sampleY, scene)) continue;
+      filled.push({ x: sampleX, y: sampleY });
+      sumX += sampleX;
+      sumY += sampleY;
+    }
+  }
+
+  if (!filled.length) return null;
+
+  const centroidX = sumX / filled.length;
+  const centroidY = sumY / filled.length;
+  let best = filled[0];
+  let bestDistance = Number.POSITIVE_INFINITY;
+
+  filled.forEach((point) => {
+    const distance = ((point.x - centroidX) ** 2) + ((point.y - centroidY) ** 2);
+    if (distance < bestDistance) {
+      bestDistance = distance;
+      best = point;
+    }
+  });
+
+  return {
+    xNormalized: clamp(best.x / scene.width, 0.005, 0.995),
+    yNormalized: clamp(best.y / scene.height, 0.005, 0.995)
+  };
 }
 
 function ensureSegmentationInstances(scene, model) {
@@ -3158,12 +3248,13 @@ function renderLegend() {
   sceneClassLegend(scene).forEach((item) => {
     const className = item.className || item.name;
     const classMeta = classTooltipMetadata(className, scene);
+    const swatchColor = classMeta.color || item.color || detectionClassColor(className, scene);
     const row = document.createElement("div");
     row.className = "class-row";
     const swatch = document.createElement("span");
     swatch.className = "class-swatch";
-    swatch.style.background = item.color;
-    swatch.append(createLegendIconElement(classMeta.iconName, readableIconColor(item.color)));
+    swatch.style.background = swatchColor;
+    swatch.append(createLegendIconElement(classMeta.iconName, readableIconColor(swatchColor)));
 
     const label = document.createElement("span");
     label.textContent = classMeta.label;
