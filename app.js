@@ -2759,6 +2759,7 @@ function buildSceneLayers(scene, models, options = {}) {
 }
 
 function renderStack(container, scene, models, options = {}) {
+  container.dataset.showGroundTruth = String(Boolean(options.showGroundTruth ?? state.showGroundTruth));
   const baseImageCandidates = sceneBaseImageCandidates(scene);
   const baseImage = baseImageCandidates[0] || "";
   const existingBase = container.querySelector(".base-layer");
@@ -2946,6 +2947,7 @@ function zoomReadoutPercent() {
 
 function updateViewerFrame() {
   const scene = currentScene();
+  els.viewerContent.dataset.dataset = scene.dataset;
   const stageSize = viewerStageSize(scene);
   document.body.dataset.mode = state.mode;
   els.viewerContent.style.setProperty("--split", `${state.split}%`);
