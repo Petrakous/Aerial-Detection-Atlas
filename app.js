@@ -1411,14 +1411,6 @@ function assetCandidates(path) {
 }
 
 function sceneBaseImageCandidates(scene) {
-  if (scene?.dataset === "FloodNetPlus" && scene?.sourceImage) {
-    return uniqueAssetCandidates([
-      ...assetCandidates(scene.sourceImage),
-      ...assetCandidates(scene.baseImage),
-      ...assetCandidates(scene.thumbnailImage)
-    ]);
-  }
-
   return uniqueAssetCandidates([
     ...assetCandidates(scene?.baseImage),
     ...assetCandidates(scene?.thumbnailImage),
