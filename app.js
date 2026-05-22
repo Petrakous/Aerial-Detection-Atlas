@@ -287,7 +287,7 @@ const datasetDescriptions = {
   },
   Inc1M: {
     title: "Incidents1M-Seg",
-    task: "Instance Segmentation",
+    task: "Panoptic Segmentation",
     useCase: "Multi-hazard",
     summary: "Curated multi-hazard incident benchmark slice for instance segmentation, highlighting responder activity, fire, smoke, destruction, and other incident-relevant scene elements.",
     previewImage: "thumbnails/Inc1M/3d64028c-valley_on_fire_FORWARD_SLASH_2e449d0c30.jpg",
