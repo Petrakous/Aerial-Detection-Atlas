@@ -14,6 +14,21 @@ const releaseBases = {
   segmentationPredInc1M: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-inc1m-v1/",
   segmentationPredJson: "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-seg-pred-json-v1/"
 };
+const floodNetOverlayFixBase = "https://github.com/Petrakous/Aerial-Detection-Atlas/releases/download/assets-floodnet-fixes-v1/";
+
+const floodNetOverlayFixAssets = new Set([
+  "segment-gt-FloodNetPlus-ccnet-7450.jpg",
+  "segment-pred-FloodNetPlus-ccnet-7450.jpg",
+  "segment-pred-FloodNetPlus-pspnet-7450.jpg",
+  "segment-pred-FloodNetPlus-segformer-7450.jpg",
+  "segment-pred-FloodNetPlus-deeplabv3plus-7450.jpg",
+
+  "segment-gt-FloodNetPlus-ccnet-7577.jpg",
+  "segment-pred-FloodNetPlus-ccnet-7577.jpg",
+  "segment-pred-FloodNetPlus-pspnet-7577.jpg",
+  "segment-pred-FloodNetPlus-segformer-7577.jpg",
+  "segment-pred-FloodNetPlus-deeplabv3plus-7577.jpg"
+]);
 
 // GitHub caps each release at 1000 assets, so these viewer images live in the
 // overflow release and should resolve there directly instead of waiting on a 404.
@@ -1357,7 +1372,9 @@ function resolveAssetPath(path) {
       : segmentationGtMatch[1] === "Inc1M"
         ? releaseBases.segmentationGtInc1M
         : releaseBases.segmentationGt;
-    return `${base}segment-gt-${segmentationGtMatch[1]}-${segmentationGtMatch[2]}-${segmentationGtMatch[3]}`;
+    const assetName = `segment-gt-${segmentationGtMatch[1]}-${segmentationGtMatch[2]}-${segmentationGtMatch[3]}`;
+    if (floodNetOverlayFixAssets.has(assetName)) return `${floodNetOverlayFixBase}${assetName}`;
+    return `${base}${assetName}`;  
   }
 
   const sharedSegmentationGtMatch = path.match(/^([^/]+)\/shared_samples_gt_with_json\/(.+)$/);
@@ -1391,7 +1408,9 @@ function resolveAssetPath(path) {
       : segmentationPredMatch[1] === "Inc1M"
         ? releaseBases.segmentationPredInc1M
         : releaseBases.segmentationPred;
-    return `${base}segment-pred-${segmentationPredMatch[1]}-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
+    const assetName = `segment-pred-${segmentationPredMatch[1]}-${segmentationPredMatch[2]}-${segmentationPredMatch[3]}`;
+    if (floodNetOverlayFixAssets.has(assetName)) return `${floodNetOverlayFixBase}${assetName}`;
+    return `${base}${assetName}`;
   }
 
   return path;
