@@ -3425,3 +3425,8 @@ body[data-mode="split"] .split-selectors {
     text-overflow: ellipsis;
   }
 }
+
+#viewerContent[data-dataset="FloodNetPlus"] .image-stack[data-show-ground-truth="true"] .base-layer {
+  transform: scaleX(-1);
+  transform-origin: center center;
+}
